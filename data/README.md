@@ -1,6 +1,6 @@
 # Data inventory for Paper 4
 
-This inventory points to candidate sources in the existing workspace `G:\Documents\ACIIDS`. It does not authorize copying or publication. Confirm provenance and license before bringing files into this repository.
+This inventory describes candidate source artifacts from the original ACIIDS project. Selected supporting documents are included in [the source snapshots](../references/source_material/README.md); datasets and raw workbooks are not included. Confirm provenance and license before bringing data into this repository.
 
 | Source path relative to ACIIDS | Contents | Baseline handling |
 |---|---|---|

@@ -21,8 +21,8 @@ The candidate plan says Paper 4 can develop in parallel using its own controlled
 
 The main candidate for coverage evaluation is synthetic dynamic data with known generated truth. The existing 14-node, 19-quarter financial case study has no causal ground truth and includes simulated-calibrated banking variables. Do not use it to establish effect-estimator coverage or causal accuracy.
 
-This repository records source paths and evidence limits only. It does not copy raw workbooks or commit new data.
+Selected planning and provenance documents are included under references/source_material. Raw workbooks and data artifacts are not included in this baseline.
 
 ## Provenance
 
-The context was assembled from the ACIIDS workspace at `G:\Documents\ACIIDS`, branch `feat/109-demov6-authors`. Source paths are recorded in the docs. The planning documents in that workspace are intentionally uncommitted; this repository does not edit or replace them.
+The context was assembled from the ACIIDS workspace on branch feat/109-demov6-authors. Tracked source snapshots came from commit 5874b5be1689d596b91c55140a1e837b3e53d980. Selected copies are included under references/source_material. The two planning DOCX copies were uncommitted in ACIIDS at capture time; the originals there remain unchanged.
