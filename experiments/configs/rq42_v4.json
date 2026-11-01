@@ -1,0 +1,63 @@
+{
+  "name": "rq42_v4",
+  "purpose": "Exploratory RQ4.2 comparison, module v4 (module-specific width calibration) against v3 and baselines on D-07 development. Rules in docs/decision_rules.md.",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "T": [
+    40,
+    80,
+    150,
+    300
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "methods": [
+    "oracle",
+    "plugin",
+    "inflate",
+    "lp_allpast",
+    "bagging",
+    "tolerant_v3",
+    "tolerant_v3_cal",
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1
+  },
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261101
+}

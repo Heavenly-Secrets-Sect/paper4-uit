@@ -13,4 +13,8 @@ This inventory describes candidate source artifacts from the original ACIIDS pro
 
 The documented core14 grid spans 14 nodes and 22 quarters, with a 19-quarter defensible window from 2020Q2 through 2024Q4. Seven banking variables are marked simulated-calibrated. It is not suitable as ground truth for interval coverage.
 
-No data are included in this baseline repository.
+## Included data
+
+- `data/topology_bank/`: verbatim copies of the static DAG banks D-07 and D-07H (40 topologies each, 14 nodes, 21 edges), with their manifests. See [PROVENANCE.md](topology_bank/PROVENANCE.md). They define the true graph of each simulated dynamic SEM; they are synthetic and contain no financial data.
+
+No financial or raw data are included.

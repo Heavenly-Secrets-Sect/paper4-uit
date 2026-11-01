@@ -1,0 +1,82 @@
+{
+  "name": "rq42_misstated",
+  "purpose": "Robustness of the v3 module to a wrongly stated damage (D-07 development): stated k = true k x {0, 0.5, 2}, and false alarms on correct skeletons.",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "T": [
+    80,
+    150,
+    300
+  ],
+  "damage": {
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "methods": [
+    "plugin",
+    "lp_allpast",
+    "tolerant_v3",
+    "tolerant_v3_cal"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1
+  },
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261101,
+  "misstated": {
+    "factors": [
+      0.0,
+      0.5,
+      2.0
+    ],
+    "false_alarm": [
+      [
+        "missing",
+        4
+      ],
+      [
+        "reversed",
+        1
+      ],
+      [
+        "reversed",
+        3
+      ]
+    ],
+    "methods": [
+      "tolerant_v3",
+      "tolerant_v3_cal"
+    ]
+  }
+}

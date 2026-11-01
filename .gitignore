@@ -5,3 +5,11 @@
 /.venv/
 __pycache__/
 *.py[cod]
+.DS_Store
+# Raw per-run outputs are large and reproducible from experiments/configs (fixed seeds)
+results/**/runs.jsonl
+results/**/pairs.jsonl
+results/**/skeletons.jsonl
+# Produced by the superseded pilot runner
+results/pilot_rq41/
+results/pilot_rq41_boot/

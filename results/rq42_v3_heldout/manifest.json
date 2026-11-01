@@ -1,0 +1,169 @@
+{
+  "config": {
+    "name": "rq42_v3_heldout",
+    "purpose": "Held-out check of frozen module v3 on the D-07 confirmatory split (never used by Paper 4). Run once. Rules in docs/decision_rules.md.",
+    "bank": "D-07",
+    "split": "confirmatory",
+    "max_topologies": null,
+    "replicates": 3,
+    "T": [
+      40,
+      80,
+      150,
+      300
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "methods": [
+      "oracle",
+      "plugin",
+      "inflate",
+      "lp_allpast",
+      "bagging",
+      "tolerant",
+      "tolerant_v3",
+      "tolerant_v3_cal"
+    ],
+    "calibration": {
+      "bank": "D-07H",
+      "split": "development",
+      "max_topologies": null,
+      "replicates": 1
+    },
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261101
+  },
+  "seconds": 424.0,
+  "n_rows": 13440,
+  "topologies": [
+    {
+      "id": "syn_dag_20",
+      "profile": "erdos_renyi",
+      "sha256": "81b4e8a5c24751b3e4f67aeb17cef9438c852e713cd5b5d5fea7a0f5e33e037b"
+    },
+    {
+      "id": "syn_dag_21",
+      "profile": "erdos_renyi",
+      "sha256": "fd32c55303d8744152dfe4660b5c117ac44bb4782b80eb34d44f967ddab6a219"
+    },
+    {
+      "id": "syn_dag_22",
+      "profile": "erdos_renyi",
+      "sha256": "550185161e4676fc9837f18cc1cf548a926519fa02399e66fc2a86b1a82f6bfc"
+    },
+    {
+      "id": "syn_dag_23",
+      "profile": "erdos_renyi",
+      "sha256": "31fb4b241ac7bef1532bf1344f0a1bc4ccc9746a6dfd65e2a9d4ba19d4e1b50a"
+    },
+    {
+      "id": "syn_dag_24",
+      "profile": "erdos_renyi",
+      "sha256": "9e9a78622d185cdfc0ef9ca0795b6c85fd921d252bd4e3dac98806f697026e42"
+    },
+    {
+      "id": "syn_dag_25",
+      "profile": "erdos_renyi",
+      "sha256": "9c11fd1b53a97d95af054a18e9bb339e233ac9d731dcf564f0216dff6e36de89"
+    },
+    {
+      "id": "syn_dag_26",
+      "profile": "erdos_renyi",
+      "sha256": "91d9e077f47eb6dfb4e8fb49370d1cf7dd0969c2ab31bc338759e349cee57a27"
+    },
+    {
+      "id": "syn_dag_27",
+      "profile": "erdos_renyi",
+      "sha256": "fb5da40f00381cf1a30d8276d94fd273d8b3fefd51232d88e48b1ccd4831e3fb"
+    },
+    {
+      "id": "syn_dag_28",
+      "profile": "erdos_renyi",
+      "sha256": "548548a10295035685ccc5b703ccef90bd3db692b91012bdf6f540009e15ae34"
+    },
+    {
+      "id": "syn_dag_29",
+      "profile": "erdos_renyi",
+      "sha256": "dbe48eec9795664f90c3f7e34074db5413a3bff219498abd32dd3ddf85a9b7d6"
+    },
+    {
+      "id": "syn_dag_30",
+      "profile": "scale_free_hub",
+      "sha256": "4898b58fc549af1bfba37b720fa161f1e4266fd3f830a6fc1d1dfb1c32075540"
+    },
+    {
+      "id": "syn_dag_31",
+      "profile": "scale_free_hub",
+      "sha256": "d57fdfdc1fb662f390cf3afedebb15c748684260ea0bf2eb7e10e0b972561bea"
+    },
+    {
+      "id": "syn_dag_32",
+      "profile": "scale_free_hub",
+      "sha256": "62188a24734de0ea878dc1027d1d3df1871358fe3be3ff4be16c7e70fa48374a"
+    },
+    {
+      "id": "syn_dag_33",
+      "profile": "scale_free_hub",
+      "sha256": "fb64be89227d6a66a4540077b0b3475e068543ff447c8e208c44ec1a48c0ad44"
+    },
+    {
+      "id": "syn_dag_34",
+      "profile": "scale_free_hub",
+      "sha256": "9232debf27696d9e72e7c173bab5f7a027c8c439d6ae7496efaacd40af4987e6"
+    },
+    {
+      "id": "syn_dag_35",
+      "profile": "scale_free_hub",
+      "sha256": "ca199b42e24b37e89c964a82778727ffd51899fc3b2a2834ccc6c7002afe05ba"
+    },
+    {
+      "id": "syn_dag_36",
+      "profile": "scale_free_hub",
+      "sha256": "82b8c3a0bbf135d6f250af1b3250642d956c70f30d03058bd606d1c88d1f70ba"
+    },
+    {
+      "id": "syn_dag_37",
+      "profile": "scale_free_hub",
+      "sha256": "949d915437d257d98ea21be4e6e8e52f39e9ef91efa12cf779eaae21127bffab"
+    },
+    {
+      "id": "syn_dag_38",
+      "profile": "scale_free_hub",
+      "sha256": "199088b33dadef714e79d15af9db97861f2014e7e9981bf51043c00ecd55a8c5"
+    },
+    {
+      "id": "syn_dag_39",
+      "profile": "scale_free_hub",
+      "sha256": "b5ed383bd89461ea1e9f0aed7cd7bdc6990d30e14af2e2781f094706bf405ed4"
+    }
+  ]
+}

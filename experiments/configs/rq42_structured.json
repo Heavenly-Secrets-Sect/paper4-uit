@@ -1,0 +1,68 @@
+{
+  "name": "rq42_structured",
+  "purpose": "Out-of-distribution check of frozen module v4 under structured damage (shortcut, weak_missing, mixed) on D-07 development. Descriptive; see docs/decision_rules.md.",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "T": [
+    40,
+    80,
+    150,
+    300
+  ],
+  "damage": {
+    "kinds": [
+      "shortcut",
+      "weak_missing",
+      "mixed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "methods": [
+    "oracle",
+    "plugin",
+    "inflate",
+    "lp_allpast",
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed",
+      "shortcut",
+      "weak_missing",
+      "mixed"
+    ]
+  },
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261101
+}
