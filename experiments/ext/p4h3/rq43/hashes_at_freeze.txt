@@ -1,0 +1,7 @@
+# P4-H3 RQ4.3 freeze hashes, 2026-11-02T17:41:04Z, written BEFORE any run on P4-H3
+# doc hash covers the first 14496 bytes (through the '---- KẾT QUẢ ----' line). Verify: head -c 14496 docs/ext/p4h3_rq43.md | shasum -a 256
+doc_bytes 14496
+93ddebd8d1d13faf4d0031023fc4d6ba7a7bc5f5ca5fd232bc1dc92d1461e38d  docs/ext/p4h3_rq43.md
+727d74ce8cc3c3a7d260984aae1f126917a7471e9854f211c13bdf38c5c87a67  experiments/ext/p4h3/rq43/analyze_rq43.py
+c3a986f71848f3cc7dec7663fa6374bfb6cfd27bee18b22d513d756d0ac04099  experiments/configs/ext_p4h3_rq43_edgecost.json
+be58a370492c705bc0aa9cdf401f59e714419c7c923fea6a060aa4d978f4628f  experiments/ext/p4h3/rq43/run_edge_cost_p4h3.py

@@ -1,0 +1,51 @@
+{
+  "bank": "P4-H3",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+  "calibration_note": "Frozen v4 factors, no re-calibration.",
+  "name": "ext_p4h3_rq44_dev",
+  "purpose": "P4-H3 sealed confirmatory run of the frozen RQ4.4 flag (docs/ext/p4h3_rq44.md).",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v4"
+  ],
+  "seed_base": 90261104
+}

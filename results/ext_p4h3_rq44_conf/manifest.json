@@ -1,0 +1,159 @@
+{
+  "config": {
+    "bank": "P4-H3",
+    "split": "confirmatory",
+    "max_topologies": null,
+    "replicates": 3,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+    "calibration_note": "Frozen v4 factors, no re-calibration.",
+    "name": "ext_p4h3_rq44_conf",
+    "purpose": "P4-H3 sealed confirmatory run of the frozen RQ4.4 flag (docs/ext/p4h3_rq44.md).",
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "methods": [
+      "tolerant_v4"
+    ],
+    "seed_base": 90261104
+  },
+  "seconds": 94.4,
+  "n_units": 60,
+  "n_pair_rows": 40635,
+  "workers": 4,
+  "topologies": [
+    {
+      "id": "syn_dag_20",
+      "profile": "erdos_renyi",
+      "sha256": "304aeef05dfecaa39da61716ec03e4afb1c84cab1b8d71aefab0ef3406ef5b0a"
+    },
+    {
+      "id": "syn_dag_21",
+      "profile": "erdos_renyi",
+      "sha256": "0278d9b1affc6fae8cdf17114b1b7b825ccda1e67e35b8623579974797343e41"
+    },
+    {
+      "id": "syn_dag_22",
+      "profile": "erdos_renyi",
+      "sha256": "da5110ba661ec2776852d6b39cecf65ce3fb221f8c9eadad8fbe86c8595202cc"
+    },
+    {
+      "id": "syn_dag_23",
+      "profile": "erdos_renyi",
+      "sha256": "df75a435a4ad8677cea2bd4125613f6becdc54ccad5bbfdfd5df0c3b0761072a"
+    },
+    {
+      "id": "syn_dag_24",
+      "profile": "erdos_renyi",
+      "sha256": "323697a6c51038c903f7948de931bca2c8542c8e467d31b00cee16587d3a740d"
+    },
+    {
+      "id": "syn_dag_25",
+      "profile": "erdos_renyi",
+      "sha256": "5ec06b40f1c402a4097ea6e8a8e574a93afe47164da59a01b513c9fdad101677"
+    },
+    {
+      "id": "syn_dag_26",
+      "profile": "erdos_renyi",
+      "sha256": "ad57e4adaeba0b7b15f9060bcf2e19242dd8c9b1a9e1a09c69fe6c3c835c2273"
+    },
+    {
+      "id": "syn_dag_27",
+      "profile": "erdos_renyi",
+      "sha256": "8d43fe6b42c638c529fc15f538d44b483d729abfd25d1f7303256cb9570d5a83"
+    },
+    {
+      "id": "syn_dag_28",
+      "profile": "erdos_renyi",
+      "sha256": "e9a7d081e5abb008412980641aee163e7e5e3f4accf5f9e56e11654a7bdc27d7"
+    },
+    {
+      "id": "syn_dag_29",
+      "profile": "erdos_renyi",
+      "sha256": "7b3950924ac8772ba11ed30b4233ed32c8e83d52368376c709c7b31330a35f02"
+    },
+    {
+      "id": "syn_dag_30",
+      "profile": "scale_free_hub",
+      "sha256": "31eb6879f423b0e64449a468dd711b8e5cabbc243934a68a73774cdcf0e91851"
+    },
+    {
+      "id": "syn_dag_31",
+      "profile": "scale_free_hub",
+      "sha256": "053388ed24f24bbaa0af0da2d26fb5386f75b47d145d2292b60c55bc0d6c3683"
+    },
+    {
+      "id": "syn_dag_32",
+      "profile": "scale_free_hub",
+      "sha256": "99401eea3055ff0d57f159704eb0f5e81269c9bb789bf174cb227c56f48bd53e"
+    },
+    {
+      "id": "syn_dag_33",
+      "profile": "scale_free_hub",
+      "sha256": "13937547ddb4923ecdf5809a2b64d60602cc76ff4a4221744e257211df507605"
+    },
+    {
+      "id": "syn_dag_34",
+      "profile": "scale_free_hub",
+      "sha256": "08009d8976bb2fddf76bcf7fb72ee077ab4d79e2aaa02b9ddd2a9bddd45bf4cb"
+    },
+    {
+      "id": "syn_dag_35",
+      "profile": "scale_free_hub",
+      "sha256": "d8c1f3cacb28d7d3e6c051ad7fd652b4ce1eff294e6bbe01ad206c1d67ba585d"
+    },
+    {
+      "id": "syn_dag_36",
+      "profile": "scale_free_hub",
+      "sha256": "55d7261681efff4746294f609a893ee2ea5c70f2f0453c94c86e7a9c875fbb10"
+    },
+    {
+      "id": "syn_dag_37",
+      "profile": "scale_free_hub",
+      "sha256": "adde4340ca8139cbd04273130d5e0b6dfa5e342114daba1dc796bdaec777b173"
+    },
+    {
+      "id": "syn_dag_38",
+      "profile": "scale_free_hub",
+      "sha256": "80ca3140305280eff9421a606508748bb8b27bf9d7ed90d33910e05a788642ac"
+    },
+    {
+      "id": "syn_dag_39",
+      "profile": "scale_free_hub",
+      "sha256": "051afeba3141241e0904161286c38f1facfb37a1559459fcff3ae7352ec89f17"
+    }
+  ]
+}

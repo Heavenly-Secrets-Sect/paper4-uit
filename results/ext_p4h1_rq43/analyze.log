@@ -1,0 +1,14 @@
+|---|---|---|---|---|---|
+| dev vs con | 1.000 | 12 | [0.951, 1.000] | 1.00 | True |
+| ER vs hub | 0.965 | 12 | [0.902, 0.986] | 0.98 | True |
+| P4-H1 vs D-07 | 0.986 | 12 | [0.965, 1.000] | 1.00 | True |
+
+(c) pass = True; (d) pass = True
+
+## Holm (alpha 0.05) over 12 one-sided bootstrap tests (a: 9, b: 3)
+
+Rejected: 11/12 (a 8/9, b 3/3).
+
+## Verdict: REPLICATES
+
+Criteria: {'a': True, 'b': True, 'c': True, 'd': True}

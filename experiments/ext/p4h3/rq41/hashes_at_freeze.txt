@@ -1,0 +1,5 @@
+frozen 2026-11-02T17:39:56Z
+d343edf7acdd68acde3dbe80431c794a90ac53519866e130b81130ff0146f215  docs/ext/p4h3_rq41.md
+e64e0ae7cf21d6439000e3fb7a2d18412dea1b7ef3af5b36737bda3d6dd4ee2d  experiments/ext/p4h3/rq41/analyze_p4h3_rq41.py
+cec476df1874ddf171514e5deaa1bebff730af31a4cd78fa09d4d84c615a589c  experiments/ext/p4h3/rq41/run_pairs_p4h3.py
+2a1030cbef731e71280bfd2c320022478a4bcca225abde16ccb6772c27a15cfb  experiments/configs/ext_p4h3_rq41_main.json

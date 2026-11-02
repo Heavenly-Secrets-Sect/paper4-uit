@@ -649,3 +649,55 @@ Note: on D-07 development, v4 had lost at T150 missing-0.5. On P4-H2 it does not
 - The main baseline claim (M1) is confirmed for the 27 comparisons and 4 cells of P7-v5_1, also after Bonferroni correction over the two primary claims.
 
 **Split usage.** P4-H2 confirmatory was used once on 2026-11-02. Every split of D-07H, D-07, P4-H1 and P4-H2 confirmatory is now used. Any further confirmatory claim, including P3/P4/P5, needs a new bank. P4-H2 development has never been opened.
+
+## Outcome of the P4-H1 held-out replication of RQ4.1, RQ4.3, RQ4.4 (2026-11-03)
+
+P4-H1 had been used before (v4 held-out on its confirmatory split, group-A checks on its development split), so this is a **held-out replication, not a sealed confirmation**. Rules were registered before each run (hashes in `results/ext_p4h1_<rq>_prereg/hashes.txt`) with thresholds mirroring the D-07 results; verifiers recomputed the main numbers independently. Docs: `docs/ext/p4h1_rq41.md`, `p4h1_rq43.md`, `p4h1_rq44.md`.
+
+| RQ | Verdict | Main numbers |
+|---|---|---|
+| RQ4.1 | **Does not fully replicate**: (a) PASS, (b) PASS, (c) FAIL, (d) PASS | (b) plugin coverage under missing-0.5: 0.361 / 0.343 / 0.321 at T40 / 80 / 150. (c) `tolerant_v4` passes (damaged-pair coverage 0.941–0.950); `tolerant_v5_1` has 0.895 at T80 missing-0.2 (threshold 0.90; CI contains 0.90), 3/4 cells |
+| RQ4.3 | **Replicates**, all 5 criteria | on_path median shift 0.935 / 0.854 / 0.528 (D-07: 0.93 / 0.81 / 0.53); Spearman dev vs conf 1.000, Erdős–Rényi vs hub 0.965, P4-H1 vs D-07 0.986 |
+| RQ4.4 | **Replicates**, F1–F4 all pass (5/5, also after Holm) | AUROC 0.724 at T80/150 and 0.826 at T40 (D-07: 0.730 / 0.824); flagged pairs miss 4.2× more often |
+
+**Disclosed limits.**
+- Some thresholds (3× ratio, ±0.15 tolerance, Spearman 0.9, RQ4.1 80%/25%) were the authors' own choices; D-07 itself would not have met RQ4.1 (a) and (d) under them.
+- RQ4.1 rule (d) excludes the extra cells by a stated interpretive choice.
+- `seed_base` 80261102 was used by all three RQs on the same bank (procedural, no effect on numbers).
+- The three RQs were run in parallel.
+
+Next: one run of the same rules on the sealed bank P4-H3 (specs under `experiments/ext/p4h3/`).
+
+## P4-H3 confirmatory run of RQ4.1, RQ4.3, RQ4.4, recorded before running
+
+**Approval.** The user asked (2026-11-03) to confirm RQ4.1, RQ4.3 and RQ4.4 on a fresh bank and then delegated the choice of how to run it ("cứ theo ý bạn"). Bank P4-H3 (seed 20261104, manifest sha256 `af927e3a62e1d0d44d0aebe23fa2867e11643fe389bfe81590710e8d836ea32e`) was generated for this purpose and sealed.
+
+**Rules.** Unchanged from the P4-H1 replication (docs/ext/p4h1_rq41.md, p4h1_rq43.md, p4h1_rq44.md), with only bank, output names and seeds changed (seed_base 90261102 / 90261103 / 90261104, which overlap by an offset of 1–2 replicate indices across RQs; disclosed). Frozen specs, verified independently: `docs/ext/p4h3_rq41.md`, `p4h3_rq43.md`, `p4h3_rq44.md` with `experiments/ext/p4h3/<rq>/spec_files.json` (49 files each, sha256).
+
+**Known weaknesses stated in advance.**
+- Several thresholds are the authors' own choices; under the RQ4.1 rule D-07 itself fails (a) and (d).
+- RQ4.1 (c) for `tolerant_v5_1` is fragile: 0.895 against the 0.90 cutoff on P4-H1, so a NOT CONFIRMED on RQ4.1 is a realistic outcome.
+- RQ4.1 rule (d) excludes the extra cells by a stated interpretive choice.
+
+**Guard.** `experiments/ext/p4h3/lead_guard.py` (sha256 `f727fd8a121d4f9f5fc372a45aca4499a81115f7c644d3919595e6fd44bb21e7`) checks every frozen hash, the bank manifest hash and that no P4-H3 output exists before the run; the pre phase PASSED. The frozen docs are not appended to; results are recorded only here.
+
+**Commands, in order, each run once.** RQ4.3 runner, RQ4.1 runner, RQ4.4 runner (development, then confirmatory), then the three analyzers after all runs, then the post guard; interpreter `/Users/kietnt/miniconda3/bin/python`, `--workers 4`, `PAPER4_TOPOLOGY_ROOT` and `PAPER4_ACIIDS_ROOT` unset.
+
+**Stop rules.** If a run is interrupted before its output file exists, it is repeated once unchanged and disclosed; a crash makes that RQ NOT CONFIRMED (incomplete); a post-guard failure labels every verdict INVALID (integrity). Results are not read before all runs and analyzers have finished.
+
+## Outcome of the P4-H3 confirmatory run of RQ4.1, RQ4.3, RQ4.4
+
+**Timeline (UTC, 2026-11-02, logs in `results/ext_p4h3_logs/`).** RQ4.3 runner 17:42:43–17:42:46; RQ4.1 runner 17:42:46–17:52:55; RQ4.4 development 17:52:55–17:54:30 and confirmatory 17:54:30–17:56:05; analyzers 17:56:05–17:56:40. Every command exited 0, each ran once, no repeat or interruption. Post guard: `LEAD GUARD POST PASS` (frozen hashes unchanged, exactly the expected P4-H3 manifests).
+
+**Verdicts, verbatim from the analyzers.**
+- **RQ4.3: "Verdict: CONFIRMED on the sealed bank P4-H3".** Criteria (a)–(d) pass; Holm 12/12. on_path median shift: missing contemporaneous 0.952 [0.929, 0.965], missing lagged 0.844 [0.749, 0.895], reversed contemporaneous 0.541 [0.510, 0.574] (D-07: 0.93 / 0.81 / 0.53). Spearman: development vs confirmatory 0.993, Erdős–Rényi vs hub 0.965, P4-H3 vs D-07 1.000.
+- **RQ4.4: "Verdict: CONFIRMED on the sealed bank P4-H3".** F1–F4 all True, 5/5 raw and 5/5 after Holm. Frozen flag (not refitted): AUROC 0.720 [0.698, 0.744] at T80/150 and 0.812 [0.791, 0.832] at T40; advantage over the rel_width comparator +0.089 and +0.220 (CI exclude 0); flagged pairs miss 3.98× (T80/150) and 6.77× (T40) more often.
+- **RQ4.1: "(a) False, (b) True, (c) True, (d) True -> all: False", so NOT CONFIRMED.**
+  - (a) ordering missing > reversed > extra holds in 4/6 cells (threshold 5/6). It fails at both T40 cells, where reversed and extra are not separated: the reversed − extra gap has a CI containing 0 (e.g. −0.037 [−0.382, +0.135]).
+  - (b) plugin coverage under missing-0.5: 0.349 / 0.336 / 0.315 at T40 / 80 / 150, all below 0.60.
+  - (c) both `tolerant_v4` and `tolerant_v5_1` reduce plugin's relative error in 6/6 cells and keep damaged-pair coverage ≥ 0.90 in 4/4 cells (Holm 4/4); the fragility seen on P4-H1 (0.895) did not recur.
+  - (d) plugin mean-lag error does not fall by more than 25% from T40 to T150 in 4/4 primary cells.
+
+**Reading.** The (a) failure was disclosed in advance: D-07 and P4-H1 also gave 4/6, because at T40 the data cannot separate reversed from extra damage. It is therefore a property of the pre-registered threshold rather than a new failure, but the verdict stands as NOT CONFIRMED and is reported as such.
+
+**Split usage.** P4-H3 confirmatory has been used once, on 2026-11-02 (UTC). P4-H3 development was never opened. Seeds 90261102 / 90261103 / 90261104 were used on the same bank (disclosed).

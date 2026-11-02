@@ -1,0 +1,69 @@
+{
+  "config": {
+    "bank": "P4-H1",
+    "split": "development",
+    "max_topologies": 2,
+    "replicates": 1,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+    "calibration_note": "Frozen v4 factors, no re-calibration.",
+    "name": "ext_p4h3_dry_rq44_dev",
+    "purpose": "DRY RUN on P4-H1 only, runnability test; NOT evidence",
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "methods": [
+      "tolerant_v4"
+    ],
+    "seed_base": 90261199
+  },
+  "seconds": 6.3,
+  "n_units": 2,
+  "n_pair_rows": 1806,
+  "workers": 3,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "5b3d87eb7c7aaf44ee6ba8ce5f08b8087129df3ac4f08e8daa0941085044dc22"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "b2fb3a7f32309f1e00f0fe4f2bcb88373d40419c87574c395b83c9b0acdf97ad"
+    }
+  ]
+}

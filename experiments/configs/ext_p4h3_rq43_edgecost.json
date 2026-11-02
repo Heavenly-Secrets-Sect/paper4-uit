@@ -1,0 +1,15 @@
+{
+  "name": "ext_p4h3_rq43_edgecost",
+  "purpose": "ONE confirmatory run of RQ4.3 (edge cost map) on the SEALED bank P4-H3, development + confirmatory splits (40 topologies), with the rule of docs/ext/p4h1_rq43.md unchanged. See docs/ext/p4h3_rq43.md.",
+  "bank": "P4-H3",
+  "splits": ["development", "confirmatory"],
+  "T": 2000,
+  "replicates": 2,
+  "methods": ["plugin"],
+  "skeleton": "true skeleton with one edge damaged (missing; plus reversed for contemporaneous edges)",
+  "seed_base": 90261103,
+  "workers": 4,
+  "runner": "experiments/ext/p4h3/rq43/run_edge_cost_p4h3.py",
+  "analyzer": "experiments/ext/p4h3/rq43/analyze_rq43.py",
+  "output": "results/ext_p4h3_rq43/"
+}

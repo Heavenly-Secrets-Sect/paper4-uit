@@ -18,6 +18,7 @@ BANKS = {
     "D-07H": "D-07H/heldout_manifest.json",
     "P4-H1": "P4-H1/p4h1_manifest.json",   # generated for Paper 4 held-out checks; see PROVENANCE.md
     "P4-H2": "P4-H2/p4h2_manifest.json",   # sealed for the round-2 confirmatory run; see PROVENANCE.md
+    "P4-H3": "P4-H3/p4h3_manifest.json",   # sealed for the RQ4.1/4.3/4.4 confirmatory run; see PROVENANCE.md
 }
 SPLITS = ("development", "confirmatory")
 

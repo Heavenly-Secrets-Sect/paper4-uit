@@ -1,0 +1,14 @@
+|---|---|---|---|---|---|
+| dev vs con | 0.993 | 12 | [0.923, 0.993] | 1.00 | True |
+| ER vs hub | 0.965 | 12 | [0.867, 0.979] | 0.86 | True |
+| P4-H3 vs D-07 | 1.000 | 12 | [0.979, 1.000] | 1.00 | True |
+
+(c) pass = True; (d) pass = True
+
+## Holm (alpha 0.05) over 12 one-sided bootstrap tests (a: 9, b: 3)
+
+Rejected: 12/12 (a 9/9, b 3/3).
+
+## Verdict: CONFIRMED on the sealed bank P4-H3
+
+Criteria: {'a': True, 'b': True, 'c': True, 'd': True}

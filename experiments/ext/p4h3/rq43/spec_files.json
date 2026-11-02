@@ -1,0 +1,92 @@
+{
+ "id": "p4h3_rq43",
+ "doc": "docs/ext/p4h3_rq43.md",
+ "frozen_utc": "2026-11-02T17:41:04Z",
+ "interpreter": {
+  "path": "/Users/kietnt/miniconda3/bin/python",
+  "numpy": "2.5.4"
+ },
+ "env_must_be_unset": [
+  "PAPER4_TOPOLOGY_ROOT",
+  "PAPER4_ACIIDS_ROOT"
+ ],
+ "bank": "P4-H3",
+ "seed_base": 90261103,
+ "p4h3_bank_manifest": {
+  "path": "data/topology_bank/P4-H3/p4h3_manifest.json",
+  "expected_sha256": "af927e3a62e1d0d44d0aebe23fa2867e11643fe389bfe81590710e8d836ea32e",
+  "source": "data/topology_bank/PROVENANCE.md; NOT hashed or opened at freeze (sealed)"
+ },
+ "doc_prefix": {
+  "path": "docs/ext/p4h3_rq43.md",
+  "bytes": 14496,
+  "note": "hash covers bytes up to and including the '---- KẾT QUẢ ----' line; results are appended after"
+ },
+ "not_frozen_not_used": [
+  "experiments/calibration/tolerant_v4_frozen.json is hashed but unused by the plugin-only RQ4.3 driver"
+ ],
+ "run_dirs": [
+  "results/ext_p4h3_rq43"
+ ],
+ "dry_run_dirs": [
+  "results/ext_p4h3_dry_rq43",
+  "results/ext_p4h3_dry_rq43_ident"
+ ],
+ "commands": [
+  "cd /Users/kietnt/Desktop/Workspace/Paper4_UIT && unset PAPER4_TOPOLOGY_ROOT PAPER4_ACIIDS_ROOT",
+  "/Users/kietnt/miniconda3/bin/python experiments/ext/p4h3/rq43/run_edge_cost_p4h3.py --workers 4 --seed-base 90261103",
+  "/Users/kietnt/miniconda3/bin/python experiments/ext/p4h3/rq43/analyze_rq43.py"
+ ],
+ "expected_runtime": "runner ~3-5 s, analyzer ~9 s (measured on P4-H1 dry run, --workers 3)",
+ "files": {
+  "src/paper4/__init__.py": "22b8f4c0f60e546a2204f29121f338305ddb01841144b3b25a70b218a0e2c33d",
+  "src/paper4/diagnose.py": "5970f39000a02d22af65a38eeb082ffabfd2b12773b6d06278a1b3f32be945c8",
+  "src/paper4/effects.py": "5fd366609bb368ecf784a3d65388b88e942cec07a255c96546f5e4640921f95a",
+  "src/paper4/estimator.py": "70314e984e203b6838b6481394423a717411579eb0d08bc39cd295c46cc44c2d",
+  "src/paper4/ext_auto5.py": "e5f8c973b17865a54401549c05a17e9412080a46e637a8b5040e46c024c432d7",
+  "src/paper4/ext_baselines2.py": "2a145b5120890cb4c5c9dc86458fc27b7155140bcaad184da99420e64f237b67",
+  "src/paper4/ext_baselines3.py": "e53f1b1cb043873749dd1897fda4d96fcf1c9952dddca3b16f6cbbb8dd06eb65",
+  "src/paper4/ext_eiv.py": "972ebb563abdb70478395749f91ef1d22ef501ac66bbc0eccfa05714d7f8ac93",
+  "src/paper4/ext_eiv2.py": "9f181387c6c1898437ce9d8c119faae25a5475624315c6693a1e3dd229c27924",
+  "src/paper4/ext_gate.py": "42cf728548c1cc11d650971eec094b3f25c800a8ca40d98fe742d62ab8f6b85a",
+  "src/paper4/ext_narrow.py": "9fc15ae7147252cd7c67d6b28c3de6bcd38a410f9f8f31c90656e80f4985f728",
+  "src/paper4/ext_r4hubscreen.py": "210b18a79840fe41ba1f70df41818096a12144029f079327c67ddd4b28c8c81d",
+  "src/paper4/ext_r4kilianbab.py": "191875ca254e5a1c14b9827b719b7e9a767c97631e09359e293b83b8f20b6aaa",
+  "src/paper4/ext_r4leadlag.py": "b3104185be7ba8d37871cc1c41379065f775992608f0138f262531cbc6c062d6",
+  "src/paper4/ext_r4levboot.py": "5e217ed1cefbdff979857b3c80a321428b48f9ec21cb11f10e8d57e927f4f587",
+  "src/paper4/ext_r4lfdropen.py": "8499c5c8ab1a7f42db6d56d4b5b6b9d698de7204ac589c7585bbc999488285ac",
+  "src/paper4/ext_r4mondrian.py": "9898a2fe761431e1999a115d6b8c0731c8e7e837b30530f411cab00f0d7e757d",
+  "src/paper4/ext_r4ngorient.py": "6ce1304c101ecb70ad9cbdb376c87a0a5758f89848482d26fb066660a409c56b",
+  "src/paper4/ext_r4prepivot.py": "10d9c9b23c3a0ad1d29d12cd8fbb5d5c732c3f6f661f338a54b677750820997d",
+  "src/paper4/ext_r5hubscreen2.py": "4715d4fb6f2af2359552a6acd76c9505b6362c932c020530cf300db1593afad0",
+  "src/paper4/ext_r5ngorient3.py": "c727d5231fc02ee2f5c7b1c213967e64b56ec0ec000d6c5502c9c7f13dd28652",
+  "src/paper4/ext_r5v52.py": "75d6570f5171bbfcc01b1eafa9dfb091fdaf2c45a6bf44b48182853ea5f5658b",
+  "src/paper4/ext_revlag.py": "81e9988b2a18b30282f3b78758135510f11eab03cbe213e98a5e50074e77e00e",
+  "src/paper4/ext_revlag3.py": "976f99007ef7d43405cf9e7225c2eb185792ea2ae605a8f78a1141f4f6972c91",
+  "src/paper4/ext_textinfo.py": "0ca679d6c2147fd0b10fa4277652ab6b27d776d35b5a1f67a1400a55fc240475",
+  "src/paper4/ext_tlp.py": "c499681cb2f23929b5ea3ae7845d894dd608ad041cbb63873b8e4a163da8816c",
+  "src/paper4/ext_tlp2.py": "5a628b4fd142c4858ff8a771d7b7d970cadbef38f926fcef5d9987af7158984a",
+  "src/paper4/ext_v4c.py": "6fa943da80b8c73cf630be9be18654d8ac135e81fa3fcd5b19e2ee6c2c220137",
+  "src/paper4/ext_v51.py": "48bb21ad32d850483d9d46684b72a50c6396029f70d60112fbbf738bc58ca286",
+  "src/paper4/ext_v51fix.py": "2c1cc70c34b332250e3d67c944752e01abea7ffbb2d49e346a75416ffb4c87c4",
+  "src/paper4/generator.py": "84a52a8130a1173d9c2f6aca5c3ec2ce5472504a1fc6bc4fb7e4ab88f093ab2d",
+  "src/paper4/learned.py": "252419d74f2b3bd93cdd641106b7abbb4c5b949c8395044b41d1fe491795887a",
+  "src/paper4/llm.py": "08619cac88b763d530ea240b2e5e27dfdef7ce185e324a9d147f81656823dc4b",
+  "src/paper4/methods.py": "85bc718f0d222fbe47c4217d1e1b05ee702f1dc89c464fc35d9da4546f19cfbd",
+  "src/paper4/metrics.py": "32116e29fc22cc1630f0b5c98d4e9ab811b7c8f7108c8dda58833cb737bbdf08",
+  "src/paper4/skeleton.py": "c78ba5b930a49a0d06b9973432431f62cb72cfd7a8637a022d900d346e234b5e",
+  "src/paper4/topology.py": "2aab603e1b94586143fb59421b3c82bca5f07b709d93f7f2c6845e2dd4f63983",
+  "experiments/run_experiment.py": "2255693c9e3f56d186667e92136c22ad0e36f4520b729c4a07a9f248bf4c39d8",
+  "experiments/calibration/tolerant_v4_frozen.json": "9b630cab6b664c92c9e3098d5852a2260de039f5cb49c7b1dd2a482c3119b122",
+  "experiments/ext/p4h3/rq43/run_edge_cost_p4h3.py": "be58a370492c705bc0aa9cdf401f59e714419c7c923fea6a060aa4d978f4628f",
+  "experiments/ext/p4h3/rq43/analyze_rq43.py": "727d74ce8cc3c3a7d260984aae1f126917a7471e9854f211c13bdf38c5c87a67",
+  "experiments/configs/ext_p4h3_rq43_edgecost.json": "c3a986f71848f3cc7dec7663fa6374bfb6cfd27bee18b22d513d756d0ac04099",
+  "results/rq43_edge_cost/pairs.jsonl": "4fbe3e5e1472961ff7e5f37f21d361eed67508a3346ed51890c3ba20392e4b63",
+  "docs/ext/p4h1_rq43.md": "d4226c4296881513729e7b7e2d2e35f0fa1b7066aa7c2728ce9e21111c840bd6",
+  "experiments/ext/p4h1/rq43/run_edge_cost_p4h1.py": "476f622754fa4f9bb465449577e0e70cef09fc59757298371f207d78e6c41b06",
+  "experiments/ext/p4h1/rq43/analyze_rq43.py": "018c6bcd6412f34f305cb22ecff62c85fac58a47efe802a52dab2de8b72ff523",
+  "experiments/configs/ext_p4h1_rq43_edgecost.json": "c965cc4044269c945456632bd07a353430852d0e0b902e2c2a3c99fb3fe3109d",
+  "data/topology_bank/PROVENANCE.md": "8c6a2778f71a38f3217bebb62b11604defa6534c9bf261e7d391544e0775c3f7",
+  "docs/ext/p4h3_rq43.md": "93ddebd8d1d13faf4d0031023fc4d6ba7a7bc5f5ca5fd232bc1dc92d1461e38d"
+ }
+}

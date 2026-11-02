@@ -1,0 +1,17 @@
+('missing', 'c', 'on_path') 0.935 0.929 1789 40
+('missing', 'c', 'into_source') 0.112 0.097 487 37
+('missing', 'c', 'into_target') 0.043 0.034 876 40
+('missing', 'c', 'other') 0.0 0.0 12346 40
+('missing', 'l', 'on_path') 0.854 0.805 3979 40
+('missing', 'l', 'into_source') 0.077 0.074 1104 40
+('missing', 'l', 'into_target') 0.049 0.058 2079 40
+('missing', 'l', 'other') 0.0 0.0 29441 40
+('reversed', 'c', 'on_path') 0.528 0.527 1482 40
+('reversed', 'c', 'into_source') 0.167 0.141 426 37
+('reversed', 'c', 'into_target') 0.062 0.046 464 39
+('reversed', 'c', 'other') 0.002 0.002 9469 40
+missing c [np.float64(8.37), np.float64(21.68), np.float64(1952.46)]
+missing l [np.float64(11.12), np.float64(17.37), np.float64(1856.65)]
+reversed c [np.float64(3.16), np.float64(8.48), np.float64(242.0)]
+1.0 0.965034965034965 0.9860139860139862
+1628 40

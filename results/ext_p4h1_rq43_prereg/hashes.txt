@@ -1,0 +1,7 @@
+# Pre-registration hashes, written BEFORE the first evaluation run (2026-11-02T17:21:37Z)
+# doc hash covers the first 5705 bytes (through the '---- KẾT QUẢ ----' line); results are appended after. Verify: head -c N docs/ext/p4h1_rq43.md | shasum -a 256
+doc_bytes 5705
+5e35d77b64e76bcf1d4dc297ba6c505f43e18047849b6ccbdce0dbeb3aaec08d  docs/ext/p4h1_rq43.md
+018c6bcd6412f34f305cb22ecff62c85fac58a47efe802a52dab2de8b72ff523  experiments/ext/p4h1/rq43/analyze_rq43.py
+476f622754fa4f9bb465449577e0e70cef09fc59757298371f207d78e6c41b06  experiments/ext/p4h1/rq43/run_edge_cost_p4h1.py
+c965cc4044269c945456632bd07a353430852d0e0b902e2c2a3c99fb3fe3109d  experiments/configs/ext_p4h1_rq43_edgecost.json

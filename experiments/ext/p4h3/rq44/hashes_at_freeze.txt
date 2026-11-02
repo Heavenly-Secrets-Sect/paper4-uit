@@ -1,0 +1,7 @@
+# sha256 at freeze, before any P4-H3 run
+35c755d18cbaeb19e14131268c0744bda83084881bcaa195ac6db0dbdf693aa5  docs/ext/p4h3_rq44.md
+88036388b39119716546d5ed25aec9723da3c69015ff1a852ec3dbd63b4466cd  experiments/ext/p4h3/rq44/analyze_p4h3_rq44.py
+30a645660653fe2c8d557bf9b967e55e163605d5bb98803b227d82ada69503fb  experiments/configs/ext_p4h3_rq44_dev.json
+4dc7b5bf5bb3621b9cdd7bbe30569d7a4a1b2688c46c1d6c390c7c331268def2  experiments/configs/ext_p4h3_rq44_conf.json
+fef82f74ebc5fb4ee8ca86b52849010685e299a50047d87e3992a1aa93a5b0d8  experiments/ext/p4h3/rq44/run_pairs_p4h3.py
+40f11563a82fdeba26cf830dcadc67e64e71cb41fa37c2dba0b5ac1d61412d08  experiments/ext/p4h3/rq44/spec_files.json

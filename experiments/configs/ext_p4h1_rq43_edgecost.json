@@ -1,0 +1,15 @@
+{
+  "name": "ext_p4h1_rq43_edgecost",
+  "purpose": "Held-out replication of RQ4.3 (edge cost map) on P4-H1 development + confirmatory (40 topologies). NOT a sealed confirmation: P4-H1 was used before. See docs/ext/p4h1_rq43.md.",
+  "bank": "P4-H1",
+  "splits": ["development", "confirmatory"],
+  "T": 2000,
+  "replicates": 2,
+  "methods": ["plugin"],
+  "skeleton": "true skeleton with one edge damaged (missing; plus reversed for contemporaneous edges)",
+  "seed_base": 80261102,
+  "workers": 4,
+  "runner": "experiments/ext/p4h1/rq43/run_edge_cost_p4h1.py",
+  "analyzer": "experiments/ext/p4h1/rq43/analyze_rq43.py",
+  "output": "results/ext_p4h1_rq43/"
+}

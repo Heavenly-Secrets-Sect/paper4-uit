@@ -1,0 +1,7 @@
+# sha256 recorded BEFORE the first evaluation run (2026-11-03)
+985190137642c9da347da34a66d7d14caf7d84f79522bfd2dc679f807c953adf  docs/ext/p4h1_rq44.md
+610cd976a4789f1014491b54a26e4418785ae9e3b9977471948839301d9804c8  experiments/ext/p4h1/rq44/analyze_p4h1_rq44.py
+bde64182067c28e2c2ee1fbe3411b5b349ea166c7157309aadd6122f7fe5a7fc  experiments/ext/p4h1/rq44/run_pairs_p4h1.py
+2e6e3d2a49d8fe237acd5e18ed14a82696be6acdad2c1c092e132cb1c31dd3b9  experiments/configs/ext_p4h1_rq44_dev.json
+3480f51902fbe266496a37f343e0313b67beba314bd1ca7e2faa1515f1a56fe3  experiments/configs/ext_p4h1_rq44_conf.json
+7da8843fab352e798bec6471497192cfba201c0fa64ea333d2a4510938c37df3  experiments/ext/revlag/frozen_flag.json
