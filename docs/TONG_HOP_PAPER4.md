@@ -1,4 +1,4 @@
-# Tổng hợp Paper 4: trạng thái đến 2026-11-02
+# Tổng hợp Paper 4: trạng thái đến 2026-11-03 (sau vòng 5)
 
 Tài liệu đọc trước. Nó gom mọi thứ đã làm và đã tìm ra, kể cả những gì thất bại. Mỗi con số đều có đường dẫn tới file gốc. Thuật ngữ kỹ thuật giữ nguyên tiếng Anh.
 
@@ -17,7 +17,8 @@ Tài liệu đọc trước. Nó gom mọi thứ đã làm và đã tìm ra, k�
    - **Một biến thể không cần khai báo mức hỏng (`tolerant_auto3`)** giữ coverage ≥ 0.93 ở mọi cell được kiểm, kể cả khi có biến ẩn.
 3. **Vẫn chỉ là exploratory:** nhiễu đo, cờ tin cậy RQ4.4, lag output khi cạnh bị đảo, và so sánh với Targeted Local Projections (TLP) ngoài cell thiếu cạnh.
 4. **Dữ liệu thật 14 × 19:** với lag_max = 1, v5.1 dùng được kể cả khi skeleton được khai báo thiếu cạnh (v4 thì không). Riêng ô đảo nhiều cạnh (reversed-0.5) không dùng được. Kết quả là exploratory, xem docs/ext/region51.md.
-5. **Cần thầy quyết 4 việc** (mục 10).
+5. **Vòng 4 và 5** (thử 8 kỹ thuật mượn từ nghiên cứu khác, rồi ghép) **không thay được v5.1**; chỉ còn hai biến thể phụ ở mức exploratory (mục 12).
+6. **Cần thầy quyết 4 việc** (mục 10).
 
 ---
 
@@ -265,6 +266,8 @@ Lượt chạy duy nhất diễn ra ngày 2026-11-02, 08:07–08:50 UTC. Guard k
 | auto5 | Gate + targeted opening | Loại (0.898) |
 | v4c | Width hai chiều | Giữ; dùng trong ablation |
 | **v5.1** | v5 đã sửa bug + width hai chiều | **Giữ; xác nhận trên P4-H2; module chính thức hiện tại** |
+| 8 kỹ thuật mượn (vòng 4) | Kilian, non-Gaussian, conformal, local FDR, leverage, lead-lag, prepivot, hubscreen | Chỉ hubscreen giữ (exploratory); 7 loại |
+| v5.2 (vòng 5) | Ghép non-Gaussian orientation v3 + hubscreen v2 | Không giữ; chỉ non-Gaussian orientation v3 giữ như extension phụ |
 
 ---
 
@@ -311,3 +314,32 @@ Ngoài ra, chọn tên cho method trong bản thảo, ví dụ "Skeleton-Toleran
 | Lượt chạy P4-H2 | results/ext_synthesis_round3_p4h2_logs/, results/ext_v51fix_p4h2/, results/ext_auto3fix_p4h2_*/, results/ext_baselines3_p4h2/ |
 
 **Trạng thái git:** toàn bộ công việc từ tối 2026-11-01 **chưa commit**. Commit cuối là `c03d63e`.
+
+
+---
+
+## 12. Vòng 4 và 5: mượn kỹ thuật từ nghiên cứu khác (exploratory)
+
+**Cách làm.** Vòng 4: 5 agent khảo sát 58 kỹ thuật từ 5 mảng (bootstrap mẫu nhỏ, định chiều cạnh, chọn biến, suy luận nhiều biến hồi quy, biến ẩn và nhiễu đo). Chọn 8 ứng viên, mỗi cái có agent build (quy tắc ghi trước, so với v5.1) và agent phản biện. Vòng 5: ghép các thành phần còn sống thành `tolerant_v5_2`. Bản đồ tài liệu và chi tiết: docs/ext/synthesis_round4.md, synthesis_round5.md.
+
+| Kỹ thuật (nguồn) | Nhắm vào | Kết quả |
+|---|---|---|
+| Hiệu chỉnh bias bootstrap-after-bootstrap (Kilian 1998) | Hệ số width ad hoc | Loại: tệ hơn ở 3/8 cell. Bias về phía 0 có thật, nhưng sửa nó làm draw rộng hơn |
+| Định chiều cạnh non-Gaussian (Hyvärinen–Smith 2013) | Chiều cạnh repair đang rút ngẫu nhiên | Vòng 4 loại (2/8 win). Vòng 5 bản 3 **giữ như extension phụ**: giảm IS khoảng 0.9% (CI 0.35–1.42%) dưới nhiễu non-Gaussian tổng hợp, không gây hại dưới Gaussian, nhưng chỉ 1/8 cell qua Holm và không khác bản 2 |
+| Split-conformal theo lớp (Mondrian) | Hệ số width | Loại (0/18); chỉ dùng như cách mô tả bước hiệu chỉnh |
+| Local FDR chọn cặp mở lag | Mở quá nhiều lag | Loại: mở ít hơn thì tệ hơn (5/6 cell) |
+| Phần dư hiệu chỉnh leverage | Bootstrap under-cover | Loại: interval của C(H) gần như không phụ thuộc scale của phần dư |
+| Lead-lag (Haugh) phân biệt confounder | Biến ẩn bị nhầm thành cạnh thiếu | Loại: ở hệ số width bằng nhau, gate không đổi gì |
+| Double bootstrap rút gọn (prepivot) | Bỏ bank calibration | Loại: tệ hơn 9/9 cell, under-calibrated ngay cả khi skeleton đúng |
+| Sàng lọc biến cho nút hub (CSIS) | Hub underdetermined ở lag_max 2, T < 40 | Vòng 4 giữ; vòng 5 bản 2 **loại**: chạy được 60/60 nhưng chỉ non-inferior so với plugin hiệu chỉnh ở 1/6 cell, đuôi IS nặng |
+| `tolerant_v5_2` (ghép hai thành phần) | — | **Không giữ** (non-inferior 2/6, cần 4) |
+
+**Phát hiện dùng được trong paper:**
+1. v5.1 giữ coverage 0.937–0.970 ở cả 21 cell dưới hai kịch bản nhiễu non-Gaussian tổng hợp, dù hệ số width tune trên dữ liệu Gaussian (exploratory; tái lập trên seed mới).
+2. Thiết kế hiện tại của v5.1 khó cải thiện bằng các kỹ thuật mượn đã thử. Hệ số width vẫn là điểm reviewer có thể chất vấn.
+3. Re-tune hệ số width cho một method gần v5.1 tự nó làm IS dịch khoảng ±0.03–0.07, ngang hiệu ứng cần đo; mọi biến thể phải dùng hệ số đã đóng băng.
+4. Agent phản biện bác ít nhất một diễn giải ở mỗi ứng viên dù verdict đứng vững. Câu đưa vào paper phải lấy từ phần "đứng vững" của các bản tổng hợp, không từ tóm tắt của từng hướng.
+
+**Khuyến nghị:** không dùng P4-H2 development (split chưa mở cuối cùng) cho extension non-Gaussian, vì hiệu ứng quá nhỏ, endpoint gộp được chọn sau khi thấy dữ liệu, và nó không đổi claim chính. Bank độc lập mới (P4-H3) cần được duyệt nếu muốn thêm claim xác nhận.
+
+**Bản đồ file thêm:** docs/ext/synthesis_round4.md, synthesis_round5.md, region51.md; `results/ext_r4*`, `results/ext_r5*`.
