@@ -1,0 +1,34 @@
+### R-B2 (primary, X in pselect_union_v2 / _cal)
+
+| X | T | cell | v4 cov | IS v4 | IS X | cov X | v4 - X [95% CI] | p (one-sided) | CI rule | Holm |
+|---|---|---|---|---|---|---|---|---|---|---|
+| pselect_union_v2 | 80 | missing-0.2 | 0.959 | 3.28 | 4.41 | 0.877 | -1.14 [-1.65, -0.63] | 0.0002 | pass | pass |
+| pselect_union_v2 | 80 | missing-0.5 | 0.957 | 3.37 | 4.56 | 0.878 | -1.19 [-1.64, -0.78] | 0.0002 | pass | pass |
+| pselect_union_v2 | 150 | missing-0.2 | 0.968 | 2.06 | 2.15 | 0.965 | -0.10 [-0.30, +0.08] | 0.1640 | FAIL | FAIL |
+| pselect_union_v2 | 150 | missing-0.5 | 0.962 | 2.22 | 2.29 | 0.967 | -0.07 [-0.25, +0.08] | 0.2044 | FAIL | FAIL |
+| pselect_union_v2_cal | 80 | missing-0.2 | 0.959 | 3.28 | 4.49 | 0.940 | -1.22 [-1.62, -0.82] | 0.0002 | pass | pass |
+| pselect_union_v2_cal | 80 | missing-0.5 | 0.957 | 3.37 | 4.56 | 0.937 | -1.19 [-1.50, -0.88] | 0.0002 | pass | pass |
+| pselect_union_v2_cal | 150 | missing-0.2 | 0.968 | 2.06 | 2.15 | 0.965 | -0.10 [-0.29, +0.08] | 0.1612 | FAIL | FAIL |
+| pselect_union_v2_cal | 150 | missing-0.5 | 0.962 | 2.22 | 2.29 | 0.967 | -0.07 [-0.24, +0.08] | 0.2032 | FAIL | FAIL |
+
+Counts (cells out of 4): pselect_union_v2: 2/4 (Holm over 8: 2/4); pselect_union_v2_cal: 2/4 (Holm over 8: 2/4)
+
+**Verdict R-B2 (primary, X in pselect_union_v2 / _cal): FAILS** (CI rule); under Holm: FAILS.
+
+### R-B2s (secondary, X in bvar_minnesota_v2 / _cal)
+
+| X | T | cell | v4 cov | IS v4 | IS X | cov X | v4 - X [95% CI] | p (one-sided) | CI rule | Holm |
+|---|---|---|---|---|---|---|---|---|---|---|
+| bvar_minnesota_v2 | 80 | missing-0.2 | 0.959 | 3.28 | 6.48 | 0.719 | -3.20 [-3.85, -2.62] | 0.0002 | pass | pass |
+| bvar_minnesota_v2 | 80 | missing-0.5 | 0.957 | 3.37 | 8.86 | 0.606 | -5.49 [-6.51, -4.51] | 0.0002 | pass | pass |
+| bvar_minnesota_v2 | 150 | missing-0.2 | 0.968 | 2.06 | 4.45 | 0.793 | -2.40 [-2.98, -1.81] | 0.0002 | pass | pass |
+| bvar_minnesota_v2 | 150 | missing-0.5 | 0.962 | 2.22 | 6.65 | 0.682 | -4.44 [-5.48, -3.43] | 0.0002 | pass | pass |
+| bvar_minnesota_v2_cal | 80 | missing-0.2 | 0.959 | 3.28 | 4.86 | 0.958 | -1.58 [-1.95, -1.28] | 0.0002 | pass | pass |
+| bvar_minnesota_v2_cal | 80 | missing-0.5 | 0.957 | 3.37 | 4.58 | 0.958 | -1.21 [-1.42, -1.00] | 0.0002 | pass | pass |
+| bvar_minnesota_v2_cal | 150 | missing-0.2 | 0.968 | 2.06 | 3.71 | 0.968 | -1.65 [-1.88, -1.43] | 0.0002 | pass | pass |
+| bvar_minnesota_v2_cal | 150 | missing-0.5 | 0.962 | 2.22 | 3.63 | 0.962 | -1.42 [-1.58, -1.26] | 0.0002 | pass | pass |
+
+Counts (cells out of 4): bvar_minnesota_v2: 4/4 (Holm over 8: 4/4); bvar_minnesota_v2_cal: 4/4 (Holm over 8: 4/4)
+
+**Verdict R-B2s (secondary, X in bvar_minnesota_v2 / _cal): HOLDS** (CI rule); under Holm: HOLDS.
+

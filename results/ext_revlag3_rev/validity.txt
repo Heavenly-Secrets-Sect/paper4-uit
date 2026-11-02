@@ -1,0 +1,5 @@
+# validity of ext_revlag3_rev
+oracle: rows 11124 vs ext_revlag_lag 11124; same keys True; differing values 22248
+tolerant_v4: rows 11124 vs ext_revlag_lag 11124; same keys True; differing values 0
+failed runs (status != ok): none
+method modules: {'oracle': 'built-in', 'tolerant_v4': 'built-in', 'tolerant_v4R': 'paper4.ext_revlag3', 'tolerant_v4R_mix': 'paper4.ext_revlag3', 'tolerant_v4Rmap': 'paper4.ext_revlag3'}; python /Library/Developer/CommandLineTools/usr/bin/python3; numpy 2.0.2; workers 3; seconds 125.4

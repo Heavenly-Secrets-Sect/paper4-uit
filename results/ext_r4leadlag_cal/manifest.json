@@ -1,0 +1,119 @@
+{
+  "config": "experiments/configs/ext_r4leadlag_eval_clean.json",
+  "seconds": 638.1,
+  "workers": 3,
+  "calibration_bank": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "v51_frozen_sha256": "43ac16aa457a534e5785b9df9502d690e2074bddd2643b7a879cfde1cb60aab1",
+  "leadlag_vs_v51_factor": {
+    "tolerant_v5_1_leadlag|40|none": [
+      2.6,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag_skel|40|none": [
+      2.6,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag|40|extra": [
+      2.6,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag_skel|40|extra": [
+      2.6,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag|40|missing": [
+      2.3,
+      2.3
+    ],
+    "tolerant_v5_1_leadlag_skel|40|missing": [
+      2.4,
+      2.3
+    ],
+    "tolerant_v5_1_leadlag|40|reversed": [
+      2.8,
+      2.8
+    ],
+    "tolerant_v5_1_leadlag_skel|40|reversed": [
+      2.8,
+      2.8
+    ],
+    "tolerant_v5_1_leadlag|80|none": [
+      2.6,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag_skel|80|none": [
+      2.6,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag|80|extra": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag_skel|80|extra": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag|80|missing": [
+      2.5,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag_skel|80|missing": [
+      2.5,
+      2.6
+    ],
+    "tolerant_v5_1_leadlag|80|reversed": [
+      2.7,
+      2.7
+    ],
+    "tolerant_v5_1_leadlag_skel|80|reversed": [
+      2.7,
+      2.7
+    ],
+    "tolerant_v5_1_leadlag|150|none": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag_skel|150|none": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag|150|extra": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag_skel|150|extra": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag|150|missing": [
+      2.4,
+      2.3
+    ],
+    "tolerant_v5_1_leadlag_skel|150|missing": [
+      2.5,
+      2.3
+    ],
+    "tolerant_v5_1_leadlag|150|reversed": [
+      2.4,
+      2.4
+    ],
+    "tolerant_v5_1_leadlag_skel|150|reversed": [
+      2.4,
+      2.4
+    ]
+  }
+}

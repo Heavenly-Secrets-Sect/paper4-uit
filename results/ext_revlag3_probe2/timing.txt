@@ -1,0 +1,1 @@
+variant calibration seconds 66.5

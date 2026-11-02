@@ -1,0 +1,122 @@
+{
+  "config": {
+    "name": "ext_verify3_baselines3/smoke_clt",
+    "purpose": "verify3_baselines3 smoke test of the P7 pipeline on D-07H development (2 topologies, 1 replicate). Not a result.",
+    "T": [
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "methods": [
+      "tolerant_v4",
+      "tolerant_v5_1",
+      "pselect_union_v3",
+      "pselect_union_v3_cal",
+      "pselect_cal",
+      "fullvar_cal",
+      "targeted_lp",
+      "targeted_lp_cal",
+      "bvar_minnesota_v2_cal",
+      "tlp2_db_p3"
+    ],
+    "paired_references": [
+      "tolerant_v4"
+    ],
+    "calibrate_methods": [
+      "tolerant_v5_1",
+      "pselect_union_v3_cal",
+      "pselect_cal",
+      "fullvar_cal",
+      "targeted_lp_cal",
+      "bvar_minnesota_v2_cal"
+    ],
+    "only_cells": [
+      [
+        "missing",
+        0.2
+      ],
+      [
+        "missing",
+        0.5
+      ]
+    ],
+    "skip_calibration": true,
+    "frozen_calibration": "experiments/ext/baselines3/frozen_calibration_p7.json",
+    "expected_modules": {
+      "tolerant_v5_1": "paper4.ext_v51",
+      "pselect_union_v3": "paper4.ext_baselines3",
+      "pselect_union_v3_cal": "paper4.ext_baselines3",
+      "pselect_cal": "paper4.ext_baselines3",
+      "fullvar_cal": "paper4.ext_baselines3",
+      "targeted_lp": "paper4.ext_tlp",
+      "targeted_lp_cal": "paper4.ext_tlp",
+      "bvar_minnesota_v2_cal": "paper4.ext_baselines2",
+      "tlp2_db_p3": "paper4.ext_tlp2"
+    },
+    "calibration": {
+      "bank": "D-07H",
+      "split": "development",
+      "max_topologies": null,
+      "replicates": 1,
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 2,
+    "replicates": 1,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102
+  },
+  "seconds": 67.1,
+  "n_rows": 80,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+ "config": {
+  "name": "ext_r5hubscreen2_smoke_g",
+  "purpose": "SMOKE (pipeline check only, D-07H development, units seed_base+700000, n_boot 19); not evaluation.",
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": 2,
+  "replicates": 1,
+  "seed_base": 70961102,
+  "T": [
+   40,
+   80
+  ],
+  "cells": [
+   [
+    "none",
+    0.0
+   ],
+   [
+    "extra",
+    0.2
+   ],
+   [
+    "extra",
+    0.5
+   ],
+   [
+    "missing",
+    0.2
+   ],
+   [
+    "missing",
+    0.5
+   ],
+   [
+    "reversed",
+    0.2
+   ],
+   [
+    "reversed",
+    0.5
+   ]
+  ],
+  "methods": [
+   "tolerant_v5_1",
+   "tolerant_v5_1_hs2"
+  ],
+  "red_calibration": "results/ext_r5hubscreen2_smoke_cal/calibration.json",
+  "H": 4,
+  "n_boot": 19,
+  "tau_effect": 0.1,
+  "generator": {
+   "lag_max": 2,
+   "q0": 0.3,
+   "cross_coef": [
+    0.3,
+    0.8
+   ],
+   "self_coef": [
+    0.2,
+    0.6
+   ],
+   "noise_var": [
+    0.5,
+    1.5
+   ],
+   "rho_max": 0.9,
+   "burn_in": 200
+  }
+ },
+ "seconds": 1.4,
+ "n_rows": 56,
+ "workers": 3,
+ "topologies": [
+  {
+   "id": "syn_dag_00",
+   "profile": "erdos_renyi",
+   "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+  },
+  {
+   "id": "syn_dag_01",
+   "profile": "erdos_renyi",
+   "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+  }
+ ]
+}

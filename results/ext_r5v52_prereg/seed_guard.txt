@@ -1,0 +1,12 @@
+seed guard 2026-11-02T15:37:41Z: manifests with seed_base 70261102:
+results/ext_r5hubscreen2_cal/manifest.json
+results/ext_r5hubscreen2_p2/manifest.json
+results/ext_r5v52_smoke_cal/manifest.json
+results/ext_r5hubscreen2_g/manifest.json
+results/ext_r5ngorient3_gauss/manifest.json
+results/ext_r5v52_smoke_noise01/manifest.json
+results/ext_r5v52_smoke_latent1/manifest.json
+results/ext_r5ngorient3_ngmix/manifest.json
+results/ext_r5v52_smoke_gauss/manifest.json
+results/ext_r5v52_smoke_ngmix/manifest.json
+results/ext_r5v52_smoke_p2/manifest.json

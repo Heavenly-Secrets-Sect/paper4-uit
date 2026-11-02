@@ -1,0 +1,12 @@
+missing T=80 ratio=0.0 G0.5         n=8 cov=0.959 IS=2.94 width=2.54 abserr=0.398
+missing T=80 ratio=0.0 G0.7         n=8 cov=0.970 IS=3.50 width=3.02 abserr=0.421
+missing T=80 ratio=0.0 v3           n=8 cov=0.934 IS=2.80 width=2.10 abserr=0.415
+missing T=80 ratio=0.3 G0.5         n=8 cov=0.911 IS=3.40 width=2.57 abserr=0.519
+missing T=80 ratio=0.3 G0.7         n=8 cov=0.948 IS=4.03 width=3.30 abserr=0.441
+missing T=80 ratio=0.3 v3           n=8 cov=0.841 IS=4.13 width=2.02 abserr=0.514
+missing T=150 ratio=0.0 G0.5         n=8 cov=0.937 IS=1.81 width=1.49 abserr=0.234
+missing T=150 ratio=0.0 G0.7         n=8 cov=0.937 IS=1.94 width=1.59 abserr=0.232
+missing T=150 ratio=0.0 v3           n=8 cov=0.926 IS=1.74 width=1.39 abserr=0.231
+missing T=150 ratio=0.3 G0.5         n=8 cov=0.849 IS=2.75 width=1.54 abserr=0.288
+missing T=150 ratio=0.3 G0.7         n=8 cov=0.904 IS=2.52 width=1.94 abserr=0.311
+missing T=150 ratio=0.3 v3           n=8 cov=0.760 IS=3.85 width=1.39 abserr=0.369

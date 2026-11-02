@@ -40,7 +40,10 @@ python experiments/run_experiment.py --config experiments/configs/rq42_v4.json  
 python experiments/check_rules.py results/rq42_v4 --module tolerant_v4               # apply the decision rules
 python experiments/run_edge_cost.py                                                  # RQ4.3 edge cost map
 python experiments/run_flags.py                                                      # RQ4.4 reliability flags
+python experiments/run_experiment.py --config experiments/configs/a2_baselines.json    # A2 published baselines
+python experiments/run_experiment.py --config experiments/configs/a1_latent_noise.json # A1 latent + measurement noise
+python experiments/run_experiment.py --config experiments/configs/a3_ges.json          # A3 GES skeletons (needs ACIIDS, see src/paper4/learned.py)
 ```
 
-Topologies come from `data/topology_bank/`, verbatim copies of the Paper 2 banks D-07 and D-07H ([provenance](data/topology_bank/PROVENANCE.md)), verified against their manifests on every load. Development uses the D-07 development split; held-out checks used each confirmatory split once, as logged in [docs/decision_rules.md](docs/decision_rules.md). Results are summarised in docs/ket_qua_rq42.md, ket_qua_rq43.md and ket_qua_rq44.md.
+Topologies come from `data/topology_bank/`, verbatim copies of the Paper 2 banks D-07 and D-07H ([provenance](data/topology_bank/PROVENANCE.md)), verified against their manifests on every load. Development uses the D-07 development split; held-out checks used each confirmatory split once, as logged in [docs/decision_rules.md](docs/decision_rules.md). Results are summarised in docs/ket_qua_rq42.md, ket_qua_rq43.md, ket_qua_rq44.md and ket_qua_nhom_a.md; the 2023–2026 literature survey is docs/khao_sat_tai_lieu_2023_2026.md.
 

@@ -1,0 +1,70 @@
+{
+  "name": "ext_tlp2_p4h2",
+  "purpose": "FROZEN CONFIRMATORY SPEC (docs/ext/tlp2.md, 'Frozen spec for P4-H2'). DO NOT RUN except as the single sealed confirmatory run. Frozen tolerant_v4 against three published Targeted LP versions (targeted_lp: src/paper4/ext_tlp.py; tlp2_db, tlp2_db_p3: src/paper4/ext_tlp2.py) on all damaged cells at T = 80, 150, P4-H2 confirmatory. Run with experiments/run_experiment.py directly (NOT the cell-filter driver run_cells.py). No method is calibrated in this config; v4 width factors from frozen_calibration.",
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v4",
+    "targeted_lp",
+    "tlp2_db",
+    "tlp2_db_p3"
+  ],
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+  "paired_references": [
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "P4-H2",
+  "split": "confirmatory",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

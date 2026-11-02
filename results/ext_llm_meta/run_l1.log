@@ -1,0 +1,112 @@
+{
+ "orders": {
+  "T1": {
+   "order": [
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "POLICY_RATE",
+    "NPL",
+    "LDR",
+    "PROV_COVERAGE",
+    "NIM",
+    "ROE",
+    "CAR",
+    "Z_SCORE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "TRADE_VOLUME",
+    "TRADE_VALUE"
+   ],
+   "violated_weight": 10.666666666666668,
+   "total_weight": 81.75,
+   "n_prior_edges_reversed": 4
+  },
+  "T2": {
+   "order": [
+    "POLICY_RATE",
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "TRADE_VOLUME",
+    "TRADE_VALUE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "LDR",
+    "NIM",
+    "NPL",
+    "PROV_COVERAGE",
+    "CAR",
+    "ROE",
+    "Z_SCORE"
+   ],
+   "violated_weight": 23.583333333333332,
+   "total_weight": 91.0,
+   "n_prior_edges_reversed": 1
+  },
+  "P": {
+   "order": [
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "NPL",
+    "POLICY_RATE",
+    "LDR",
+    "NIM",
+    "PROV_COVERAGE",
+    "CAR",
+    "ROE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "Z_SCORE",
+    "TRADE_VOLUME",
+    "TRADE_VALUE"
+   ],
+   "violated_weight": 5.0,
+   "total_weight": 80.0,
+   "n_prior_edges_reversed": 5
+  },
+  "pooled": {
+   "order": [
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "POLICY_RATE",
+    "NPL",
+    "LDR",
+    "NIM",
+    "PROV_COVERAGE",
+    "CAR",
+    "ROE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "Z_SCORE",
+    "TRADE_VOLUME",
+    "TRADE_VALUE"
+   ],
+   "violated_weight": 16.944444444444446,
+   "total_weight": 84.25,
+   "n_prior_edges_reversed": 4
+  }
+ },
+ "kendall_tau": {
+  "T1~T2": 0.16483516483516486,
+  "T1~P": 0.8901098901098902,
+  "T2~P": 0.23076923076923078
+ },
+ "parse_ok_rate": {
+  "T1": 1.0,
+  "T2": 1.0,
+  "P": 1.0
+ },
+ "share_prompts_without_vote": {
+  "T1": 0.0,
+  "T2": 0.0,
+  "P": 0.12087912087912088
+ },
+ "calls_this_run": 819
+}
+LDR -> POLICY_RATE 1.0 3
+NIM -> NPL 0.89 2
+POLICY_RATE -> CPI_INFLATION 0.86 2
+POLICY_RATE -> GDP_GROWTH 0.85 2
+ROE -> Z_SCORE 0.25 0
+NIM -> CAR 0.08 0
+CPI_INFLATION -> TRADE_VALUE 0.06 0
+NPL -> ROE 0.06 0

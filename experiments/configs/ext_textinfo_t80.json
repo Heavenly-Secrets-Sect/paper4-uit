@@ -1,0 +1,67 @@
+{
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "qualities": [
+    0.5,
+    0.7,
+    0.9
+  ],
+  "sign_error": 0.1,
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1
+  },
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "textinfo",
+    "textinfo_all",
+    "textinfo_null"
+  ],
+  "quality_methods": [
+    "textinfo",
+    "textinfo_all"
+  ],
+  "name": "ext_textinfo_t80",
+  "T": [
+    80
+  ],
+  "purpose": "Text-informed module (synthetic side information of AUROC 0.5/0.7/0.9) against tolerant_v4 on D-07 development, T = 80. Pre-registered rule in docs/ext/textinfo.md."
+}

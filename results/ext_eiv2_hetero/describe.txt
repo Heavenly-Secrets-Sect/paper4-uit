@@ -1,0 +1,74 @@
+# ext_eiv2_hetero: descriptive report (docs/ext/eiv2.md)
+
+## Coverage / IS per cell
+
+| scenario | T | cell | plugin | tolerant_v4 | tolerant_eiv | tolerant_eiv2 |
+|---|---|---|---|---|---|---|
+| noise0.3 | 80 | none | 0.702 / 5.44 | 0.815 / 4.10 | 0.875 / 3.85 | 0.905 / 3.84 |
+| noise0.3 | 80 | missing | 0.543 / 13.08 | 0.917 / 3.90 | 0.939 / 4.39 | 0.936 / 4.35 |
+| noise0.3 | 80 | reversed | 0.661 / 6.34 | 0.826 / 4.23 | 0.889 / 3.96 | 0.897 / 4.01 |
+| noise0.3 | 150 | none | 0.669 / 4.28 | 0.774 / 3.37 | 0.898 / 2.48 | 0.933 / 2.42 |
+| noise0.3 | 150 | missing | 0.515 / 13.10 | 0.830 / 3.52 | 0.931 / 2.94 | 0.919 / 3.09 |
+| noise0.3 | 150 | reversed | 0.625 / 5.89 | 0.784 / 3.66 | 0.897 / 2.84 | 0.909 / 2.80 |
+| het0.3 | 80 | none | 0.694 / 5.40 | 0.810 / 4.04 | 0.866 / 3.95 | 0.889 / 3.84 |
+| het0.3 | 80 | missing | 0.540 / 13.20 | 0.887 / 4.16 | 0.919 / 4.38 | 0.926 / 4.47 |
+| het0.3 | 80 | reversed | 0.654 / 6.48 | 0.830 / 4.17 | 0.882 / 4.02 | 0.882 / 4.04 |
+| het0.3 | 150 | none | 0.669 / 4.40 | 0.766 / 3.55 | 0.839 / 3.01 | 0.881 / 2.84 |
+| het0.3 | 150 | missing | 0.507 / 13.11 | 0.823 / 3.54 | 0.897 / 3.13 | 0.900 / 3.17 |
+| het0.3 | 150 | reversed | 0.607 / 6.11 | 0.770 / 3.81 | 0.859 / 3.19 | 0.878 / 3.25 |
+
+ok runs per method: plugin 720/720, tolerant_v4 720/720, tolerant_eiv 720/720, tolerant_eiv2 720/720
+tolerant_v4: cells with coverage >= 0.90 in het0.3: 0/6
+tolerant_eiv: cells with coverage >= 0.90 in het0.3: 1/6
+tolerant_eiv2: cells with coverage >= 0.90 in het0.3: 2/6
+
+## Paired IS tolerant_eiv2 - tolerant_eiv (95% CI clustered by topology; * = Holm across the 6 cells of the scenario)
+
+  noise0.3: T80 none -0.01 [-0.29, +0.19]; T80 missing -0.04 [-0.19, +0.11]; T80 reversed +0.04 [-0.16, +0.18]; T150 none -0.06 [-0.22, +0.08]; T150 missing +0.15 [-0.01, +0.36]; T150 reversed -0.05 [-0.24, +0.12]
+  het0.3: T80 none -0.11 [-0.32, +0.09]; T80 missing +0.09 [-0.04, +0.21]; T80 reversed +0.02 [-0.10, +0.14]; T150 none -0.17 [-0.25, -0.09]*; T150 missing +0.04 [-0.07, +0.17]; T150 reversed +0.06 [-0.02, +0.13]
+
+## Paired IS tolerant_eiv2 - tolerant_v4 (95% CI clustered by topology; * = Holm across the 6 cells of the scenario)
+
+  noise0.3: T80 none -0.26 [-0.64, +0.08]; T80 missing +0.45 [+0.27, +0.62]*; T80 reversed -0.22 [-0.54, +0.09]; T150 none -0.94 [-1.20, -0.69]*; T150 missing -0.43 [-0.69, -0.18]*; T150 reversed -0.86 [-1.13, -0.59]*
+  het0.3: T80 none -0.20 [-0.42, +0.02]; T80 missing +0.30 [+0.12, +0.50]*; T80 reversed -0.13 [-0.35, +0.08]; T150 none -0.71 [-0.95, -0.49]*; T150 missing -0.37 [-0.60, -0.14]*; T150 reversed -0.56 [-0.75, -0.38]*
+
+## Coverage difference tolerant_eiv2 - tolerant_eiv at noise0.3 (95% CI clustered by topology)
+
+  T=80 none: +0.030 [+0.014, +0.047] p=0.0020 *Holm
+  T=80 missing: -0.002 [-0.015, +0.012] p=0.7690
+  T=80 reversed: +0.008 [-0.001, +0.018] p=0.0810
+  T=150 none: +0.036 [+0.020, +0.055] p=0.0000 *Holm
+  T=150 missing: -0.013 [-0.028, +0.001] p=0.0690
+  T=150 reversed: +0.012 [-0.002, +0.027] p=0.0900
+
+## r_hat (all cells pooled): mean (sd) vs true mean share
+
+  tolerant_eiv noise0.3 T=80: 0.115 (0.057); true mean share 0.231
+  tolerant_eiv noise0.3 T=150: 0.159 (0.051); true mean share 0.231
+  tolerant_eiv het0.3 T=80: 0.093 (0.054); true mean share 0.214
+  tolerant_eiv het0.3 T=150: 0.096 (0.054); true mean share 0.214
+  tolerant_eiv2 noise0.3 T=80: 0.193 (0.140); true mean share 0.231
+  tolerant_eiv2 noise0.3 T=150: 0.206 (0.100); true mean share 0.231
+  tolerant_eiv2 het0.3 T=80: 0.150 (0.125); true mean share 0.214
+  tolerant_eiv2 het0.3 T=150: 0.134 (0.104); true mean share 0.214
+
+## Null pairs: median C_abs_spurious, tolerant_v4 / tolerant_eiv / tolerant_eiv2
+
+  noise0.3 T=80 none: 0.039 / 0.076 / 0.080
+  noise0.3 T=80 missing: 0.186 / 0.231 / 0.229
+  noise0.3 T=80 reversed: 0.037 / 0.060 / 0.058
+  noise0.3 T=150 none: 0.032 / 0.060 / 0.057
+  noise0.3 T=150 missing: 0.132 / 0.144 / 0.149
+  noise0.3 T=150 reversed: 0.030 / 0.048 / 0.046
+  het0.3 T=80 none: 0.035 / 0.057 / 0.067
+  het0.3 T=80 missing: 0.193 / 0.230 / 0.223
+  het0.3 T=80 reversed: 0.038 / 0.053 / 0.060
+  het0.3 T=150 none: 0.029 / 0.036 / 0.038
+  het0.3 T=150 missing: 0.133 / 0.152 / 0.149
+  het0.3 T=150 reversed: 0.027 / 0.035 / 0.035
+
+## Reproducibility: noise0.3 rows shared with results/ext_eiv2_eval
+
+  rows identical: 1080, rows different: 0
+
+(B = 2000)

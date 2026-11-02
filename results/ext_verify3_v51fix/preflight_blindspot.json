@@ -1,0 +1,126 @@
+{
+ "when_utc": "2026-11-02T06:19:57Z",
+ "pass": true,
+ "checks": {
+  "A hashes of spec files equal the freeze": true,
+  "B1 runner maps tolerant_v5_1 to paper4.ext_v51.tolerant_v5_1": true,
+  "B2 only ext_v51 registers tolerant_v5_1": true,
+  "B3 no ext module registers a built-in name (tolerant_v4 etc.)": true,
+  "B4 ext_v51 loaded without error": true,
+  "B5 TAU == 6.6083 and PRESCALE == 0.5": true,
+  "B6 helpers used by ext_v51 are the original objects": true,
+  "C1 config: P4-H2 confirmatory, methods, grid, seed, frozen file": true,
+  "C2 mod|* factors equal tolerant_v4_frozen.json": true,
+  "C3 12 tolerant_v5_1 factors present": true,
+  "C4 frozen file overrides nothing else (bug E5)": true,
+  "D all-lag branch unreachable for n = 14 at every T of the config": true,
+  "E1 results/ext_v51fix_p4h2/runs.jsonl does not exist yet": true,
+  "E2 superseded spec output results/ext_v51_p4h2 does not exist": true
+ },
+ "hash_mismatches": [],
+ "warnings": [],
+ "interpreter": {
+  "executable": "/Users/kietnt/miniconda3/bin/python",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]",
+  "numpy": "2.5.4",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+ },
+ "ext_modules_registrations": {
+  "ext_auto5": [
+   "tolerant_auto5",
+   "tolerant_auto5_small"
+  ],
+  "ext_baselines2": [
+   "bvar_minnesota_v2",
+   "bvar_minnesota_v2_cal",
+   "pselect_union_v2",
+   "pselect_union_v2_cal"
+  ],
+  "ext_baselines3": [
+   "fullvar_cal",
+   "pselect_cal",
+   "pselect_union_v3",
+   "pselect_union_v3_cal"
+  ],
+  "ext_eiv": [
+   "plugin_eiv",
+   "tolerant_eiv"
+  ],
+  "ext_eiv2": [
+   "plugin_eiv2",
+   "tolerant_eiv2"
+  ],
+  "ext_gate": [
+   "tolerant_auto3",
+   "tolerant_auto3_nogate"
+  ],
+  "ext_narrow": [
+   "tolerant_v5",
+   "tolerant_v5_cal2",
+   "tolerant_v5_sel"
+  ],
+  "ext_revlag": [
+   "tolerant_v4L"
+  ],
+  "ext_revlag3": [
+   "tolerant_v4R",
+   "tolerant_v4R_bag",
+   "tolerant_v4R_mix",
+   "tolerant_v4R_t05",
+   "tolerant_v4Rmap"
+  ],
+  "ext_textinfo": [
+   "textinfo",
+   "textinfo_all",
+   "textinfo_null",
+   "textinfo_sign"
+  ],
+  "ext_tlp": [
+   "targeted_lp",
+   "targeted_lp_cal",
+   "targeted_lp_db"
+  ],
+  "ext_tlp2": [
+   "tlp2_db",
+   "tlp2_db90",
+   "tlp2_db_p3",
+   "tlp2_lp_cal"
+  ],
+  "ext_v4c": [
+   "bvar_minnesota_c2",
+   "ida_union_c2",
+   "pselect_union_c2",
+   "tolerant_v4c"
+  ],
+  "ext_v51": [
+   "tolerant_v5_1"
+  ],
+  "ext_v51fix": [
+   "tolerant_v5_1_t294"
+  ]
+ },
+ "ext_modules_sha256": {
+  "ext_auto5": "e5f8c973b17865a54401549c05a17e9412080a46e637a8b5040e46c024c432d7",
+  "ext_baselines2": "2a145b5120890cb4c5c9dc86458fc27b7155140bcaad184da99420e64f237b67",
+  "ext_baselines3": "e53f1b1cb043873749dd1897fda4d96fcf1c9952dddca3b16f6cbbb8dd06eb65",
+  "ext_eiv": "972ebb563abdb70478395749f91ef1d22ef501ac66bbc0eccfa05714d7f8ac93",
+  "ext_eiv2": "9f181387c6c1898437ce9d8c119faae25a5475624315c6693a1e3dd229c27924",
+  "ext_gate": "42cf728548c1cc11d650971eec094b3f25c800a8ca40d98fe742d62ab8f6b85a",
+  "ext_narrow": "9fc15ae7147252cd7c67d6b28c3de6bcd38a410f9f8f31c90656e80f4985f728",
+  "ext_revlag": "81e9988b2a18b30282f3b78758135510f11eab03cbe213e98a5e50074e77e00e",
+  "ext_revlag3": "976f99007ef7d43405cf9e7225c2eb185792ea2ae605a8f78a1141f4f6972c91",
+  "ext_textinfo": "0ca679d6c2147fd0b10fa4277652ab6b27d776d35b5a1f67a1400a55fc240475",
+  "ext_tlp": "c499681cb2f23929b5ea3ae7845d894dd608ad041cbb63873b8e4a163da8816c",
+  "ext_tlp2": "5a628b4fd142c4858ff8a771d7b7d970cadbef38f926fcef5d9987af7158984a",
+  "ext_v4c": "6fa943da80b8c73cf630be9be18654d8ac135e81fa3fcd5b19e2ee6c2c220137",
+  "ext_v51": "48bb21ad32d850483d9d46684b72a50c6396029f70d60112fbbf738bc58ca286",
+  "ext_v51fix": "2c1cc70c34b332250e3d67c944752e01abea7ffbb2d49e346a75416ffb4c87c4"
+ },
+ "r_max_analytic": {
+  "40": 1.3103448275862069,
+  "80": 2.689655172413793,
+  "150": 5.103448275862069
+ },
+ "patched_helpers": [],
+ "builtin_overrides": {}
+}

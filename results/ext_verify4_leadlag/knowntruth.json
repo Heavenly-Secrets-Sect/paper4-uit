@@ -1,0 +1,77 @@
+{
+ "chi2_err": 4.996003610813204e-16,
+ "size_white_m78": 0.0525,
+ "size_white_m148": 0.05125,
+ "E0 edge, no confounder (gate null)|T80": {
+  "A": 0.001,
+  "D": 0.055
+ },
+ "E0 edge, no confounder (gate null)|T150": {
+  "A": 0.011,
+  "D": 0.103
+ },
+ "E0 edge, no confounder (gate null)|T1000": {
+  "A": 0.016666666666666666,
+  "D": 0.8766666666666667
+ },
+ "no edge, no confounder|T80": {
+  "A": 0.001,
+  "D": 0.042
+ },
+ "no edge, no confounder|T150": {
+  "A": 0.005,
+  "D": 0.041
+ },
+ "no edge, no confounder|T1000": {
+  "A": 0.0033333333333333335,
+  "D": 0.04666666666666667
+ },
+ "confounder phi0.8 lag0/lag0|T80": {
+  "A": 0.003,
+  "D": 0.153
+ },
+ "confounder phi0.8 lag0/lag0|T150": {
+  "A": 0.007,
+  "D": 0.32
+ },
+ "confounder phi0.8 lag0/lag0|T1000": {
+  "A": 0.0033333333333333335,
+  "D": 1.0
+ },
+ "confounder phi0.5 lag0/lag0|T80": {
+  "A": 0.005,
+  "D": 0.075
+ },
+ "confounder phi0.5 lag0/lag0|T150": {
+  "A": 0.005,
+  "D": 0.112
+ },
+ "confounder phi0.5 lag0/lag0|T1000": {
+  "A": 0.01,
+  "D": 0.9333333333333333
+ },
+ "confounder phi0.8 lag0/lag2|T80": {
+  "A": 0.004,
+  "D": 0.633
+ },
+ "confounder phi0.8 lag0/lag2|T150": {
+  "A": 0.005,
+  "D": 0.913
+ },
+ "confounder phi0.8 lag0/lag2|T1000": {
+  "A": 0.0033333333333333335,
+  "D": 1.0
+ },
+ "white confounder lag0/lag0|T80": {
+  "A": 0.004,
+  "D": 0.04
+ },
+ "white confounder lag0/lag0|T150": {
+  "A": 0.006,
+  "D": 0.037
+ },
+ "white confounder lag0/lag0|T1000": {
+  "A": 0.0033333333333333335,
+  "D": 0.03
+ }
+}

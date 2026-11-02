@@ -1,0 +1,72 @@
+{
+ "v51": {
+  "19|none": 3.6,
+  "19|extra": 3.3,
+  "19|missing": 2.6,
+  "19|reversed": 3.3,
+  "25|none": 3.3,
+  "25|extra": 3.2,
+  "25|missing": 2.8,
+  "25|reversed": 3.4,
+  "30|none": 3.4,
+  "30|extra": 3.2,
+  "30|missing": 3.0,
+  "30|reversed": 3.4
+ },
+ "hs_all": {
+  "19|none": 3.6,
+  "19|extra": 3.3,
+  "19|missing": 2.6,
+  "19|reversed": 3.3,
+  "25|none": 3.3,
+  "25|extra": 3.2,
+  "25|missing": 2.8,
+  "25|reversed": 3.4,
+  "30|none": 3.4,
+  "30|extra": 3.2,
+  "30|missing": 3.0,
+  "30|reversed": 3.4
+ },
+ "red": {
+  "19|none": 2.9,
+  "19|extra": 2.9,
+  "19|missing": 2.8,
+  "19|reversed": 3.8,
+  "25|none": 2.9,
+  "25|extra": 2.9,
+  "25|missing": 2.9,
+  "25|reversed": 2.9,
+  "30|none": 2.9,
+  "30|extra": 2.9,
+  "30|missing": 2.9,
+  "30|reversed": 2.9
+ },
+ "plugin": {
+  "19|none|0.0": 1.8,
+  "19|extra|0.2": 1.7,
+  "19|missing|0.2": 7.7,
+  "19|reversed|0.2": 2.0,
+  "25|none|0.0": 1.7,
+  "25|extra|0.2": 1.6,
+  "25|missing|0.2": 8.1,
+  "25|reversed|0.2": 2.0,
+  "30|none|0.0": 1.7,
+  "30|extra|0.2": 1.7,
+  "30|missing|0.2": 8.6,
+  "30|reversed|0.2": 1.9
+ },
+ "plugin_hs": {
+  "19|none": 1.8,
+  "19|extra": 1.7,
+  "19|missing": 7.7,
+  "19|reversed": 2.0,
+  "25|none": 1.7,
+  "25|extra": 1.6,
+  "25|missing": 8.1,
+  "25|reversed": 2.0,
+  "30|none": 1.7,
+  "30|extra": 1.7,
+  "30|missing": 8.6,
+  "30|reversed": 1.9
+ }
+}

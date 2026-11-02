@@ -1,0 +1,84 @@
+{
+  "rescore_identical_to_results_ext_tlp2_rules": true,
+  "handicap_db_p3_vs_targeted_lp_T80_none_extra": {
+    "80|none|0.0": {
+      "d": -0.2261879704121053,
+      "lo": -0.408244299688618,
+      "hi": -0.022394356081195152,
+      "p": 0.0304,
+      "n": 60
+    },
+    "80|extra|0.2": {
+      "d": -0.19134056489105053,
+      "lo": -0.35192954587013153,
+      "hi": -0.005725932507067703,
+      "p": 0.0438,
+      "n": 60
+    },
+    "80|extra|0.5": {
+      "d": -0.18505875167615513,
+      "lo": -0.34251857067381575,
+      "hi": -0.008630894696954829,
+      "p": 0.0402,
+      "n": 60
+    }
+  },
+  "handicap_db_vs_db_p3_p_effect_T80_none_extra_IS": {
+    "80|none|0.0": {
+      "targeted_lp": 3.1005089017496332,
+      "tlp2_db": 3.911788047391914,
+      "tlp2_db_p3": 2.874320931337527
+    },
+    "80|extra|0.2": {
+      "targeted_lp": 3.127582724752816,
+      "tlp2_db": 3.832753824056378,
+      "tlp2_db_p3": 2.936242159861765
+    },
+    "80|extra|0.5": {
+      "targeted_lp": 3.164530428374538,
+      "tlp2_db": 3.9568378951673595,
+      "tlp2_db_p3": 2.979471676698383
+    }
+  },
+  "lp_cal_equals_targeted_lp_IS_at_T80_where_factor_1.0": {
+    "80|none|0.0": [
+      3.1005089017496332,
+      3.101641698925117
+    ],
+    "80|extra|0.2": [
+      3.127582724752816,
+      3.129687313462542
+    ],
+    "80|extra|0.5": [
+      3.164530428374538,
+      3.162265088854725
+    ],
+    "80|reversed|0.2": [
+      3.3983889247839154,
+      3.4188798653995764
+    ],
+    "80|reversed|0.5": [
+      3.943519367401096,
+      3.9414448940271254
+    ]
+  },
+  "calibration_grid_min": 1.0,
+  "tlp2_lp_cal_factors_T80": {
+    "tlp2_lp_cal|80|none": 1.0,
+    "tlp2_lp_cal|80|extra": 1.0,
+    "tlp2_lp_cal|80|missing": 1.1,
+    "tlp2_lp_cal|80|reversed": 1.0
+  },
+  "holm_adj_p_targeted_lp_gate_T80_missing_0.2": [
+    "v4",
+    0.0298
+  ],
+  "rule_timeline_utc": {
+    "rule_written(Write tlp2.md)": "2026-11-02T02:28:14",
+    "timestamp_line_added": "2026-11-02T02:28:28",
+    "first_D07_run_launched(t80a)": "2026-11-02T02:28:33",
+    "resume_section6_and_relaunch": "2026-11-02T03:30:31",
+    "first_post_resume_scoring": "2026-11-02T03:30:58"
+  },
+  "rule_section5_unchanged": "diff of Write content at 02:28:14 (+timestamp line) vs current docs/ext/tlp2.md: only sections 6-8 appended"
+}

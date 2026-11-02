@@ -1,0 +1,11 @@
+{"name": "ext_r4hubscreen_lag1",
+ "purpose": "r4hubscreen: tolerant_v5_1_hs (CSIS reduction of underdetermined equations) vs tolerant_v5_1, plugin_cal, plugin_hs_cal at lag_max 1, small T. Run by experiments/ext/r4hubscreen/run_r4.py (two-factor calibration). Rule in docs/ext/r4hubscreen.md.",
+ "bank": "D-07", "split": "development", "max_topologies": null, "replicates": 3,
+ "T": [19, 25, 30],
+ "cells": [["none", 0.0], ["extra", 0.2], ["missing", 0.2], ["reversed", 0.2]],
+ "layout": {"kinds": ["extra", "missing", "reversed"], "rates": [0.2, 0.5]},
+ "H": 4, "n_boot": 199, "tau_effect": 0.1,
+ "generator": {"lag_max": 1, "q0": 0.3, "cross_coef": [0.3, 0.8], "self_coef": [0.2, 0.6], "noise_var": [0.5, 1.5], "rho_max": 0.9, "burn_in": 200},
+ "seed_base": 20261102,
+ "calibration": {"bank": "D-07H", "split": "development", "max_topologies": null, "replicates": 3},
+ "frozen_v51": "experiments/ext/v51/frozen_v4_v51.json"}

@@ -13,8 +13,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from paper4 import methods as M  # noqa: E402
 from paper4.effects import companion_radius, cumulative, irf, mean_lag  # noqa: E402
 from paper4.estimator import fit_equations, parent_terms  # noqa: E402
-from paper4.generator import GeneratorConfig, build_dynamic_sem  # noqa: E402
-from paper4.metrics import evaluate, interval_score  # noqa: E402
+from paper4.generator import GeneratorConfig, add_latent, add_measurement_noise, build_dynamic_sem  # noqa: E402
+from paper4.metrics import evaluate, interval_score, truth_effects  # noqa: E402
 from paper4.skeleton import Skeleton, _creates_cycle, damage, true_skeleton  # noqa: E402
 from paper4.topology import Topology, load_bank  # noqa: E402
 
@@ -236,6 +236,72 @@ class TopologyBankTest(unittest.TestCase):
                 self.assertEqual(topo.n_nodes, 14)
                 self.assertEqual(len(topo.edges), 21)
                 topo.topological_order()
+
+
+class ExtensionTest(unittest.TestCase):
+    """A-group extensions: latent confounders, measurement noise, published baselines, learned skeletons."""
+
+    def setUp(self):
+        topo = load_bank("D-07", "development")[0]
+        self.sem = build_dynamic_sem(topo, GeneratorConfig(), np.random.default_rng(1))
+
+    def test_latent_keeps_observed_truth(self):
+        aug = add_latent(self.sem, 2, np.random.default_rng(2))
+        self.assertEqual(aug.n, self.sem.n)
+        self.assertEqual(aug.n_all, self.sem.n + 2)
+        np.testing.assert_allclose(truth_effects(aug, 4)[1], truth_effects(self.sem, 4)[1])
+        self.assertEqual(aug.simulate(30, np.random.default_rng(3)).shape, (30, self.sem.n))
+        # nested: the first latent node is the same whether one or two are added
+        one = add_latent(self.sem, 1, np.random.default_rng(2))
+        np.testing.assert_allclose(one.B[:, :, -1], aug.B[:, : self.sem.n + 1, self.sem.n])
+
+    def test_measurement_noise_ratio(self):
+        x = np.random.default_rng(4).normal(size=(20000, 3)) * [1.0, 2.0, 3.0]
+        y = add_measurement_noise(x, 0.5, np.random.default_rng(5))
+        np.testing.assert_allclose(y.var(axis=0) / x.var(axis=0), 1.5, rtol=0.05)
+
+    def test_equivalence_class(self):
+        truth = true_skeleton(self.sem)
+        members = M.equivalence_class(truth.oriented, self.sem.n, 1000, np.random.default_rng(6))
+        self.assertEqual(members[0], truth.oriented)
+        target = M._vstructures(truth.oriented, self.sem.n)
+        for dag in members:
+            self.assertEqual({frozenset(e) for e in dag}, truth.pairs())
+            self.assertEqual(M._vstructures(dag, self.sem.n), target)
+        self.assertEqual(len({frozenset(d) for d in members}), len(members))
+
+    def test_published_baselines_run(self):
+        data = self.sem.simulate(80, np.random.default_rng(7))
+        skel = true_skeleton(self.sem)
+        for f in (M.ida_union, M.bvar_minnesota):
+            res = f(data, skel, 2, 4, 39, np.random.default_rng(8))
+            self.assertEqual(res.status, "ok")
+            self.assertTrue(np.all(res.lo <= res.hi))
+
+    def test_damage_counts(self):
+        from paper4.learned import damage_counts
+        truth = true_skeleton(self.sem)
+        bad = damage(truth, "missing", 0.2, np.random.default_rng(9))
+        self.assertEqual(damage_counts(bad, truth), {"missing": bad.damage["k"], "extra": 0, "reversed": 0})
+        rev = damage(truth, "reversed", 0.5, np.random.default_rng(9), self.sem.edge_lag)
+        self.assertEqual(damage_counts(rev, truth)["reversed"], rev.damage["k"])
+
+
+class RunnerGuardTest(unittest.TestCase):
+    def test_methods_get_public_skeleton(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "experiments"))
+        import run_experiment as R
+        topo = load_bank("D-07", "development")[0]
+        sem = build_dynamic_sem(topo, GeneratorConfig(), np.random.default_rng(1))
+        full = damage(true_skeleton(sem, with_lags=True), "missing", 0.2, np.random.default_rng(2), sem.edge_lag)
+        self.assertTrue(full.log)
+        pub = R.public(full)
+        self.assertEqual(pub.log, [])
+        self.assertIsNone(pub.lag_hint)
+        self.assertEqual(pub.pairs(), full.pairs())
+        self.assertEqual(pub.damage, full.damage)
+        self.assertEqual(R.ext_seed("tolerant_v5"), R.ext_seed("tolerant_v5"))
+        self.assertNotEqual(R.ext_seed("tolerant_v5"), R.ext_seed("targeted_lp"))
 
 
 if __name__ == "__main__":

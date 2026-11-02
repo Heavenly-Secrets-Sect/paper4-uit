@@ -1,0 +1,13 @@
+start cal 15:37:51Z
+end cal 15:39:37Z exit 0
+start ngmix 15:39:37Z
+end ngmix 15:47:23Z exit 0
+start gauss 15:47:23Z
+end gauss 15:54:27Z exit 0
+start p2 15:54:27Z
+end p2 15:57:54Z exit 0
+start latent1 15:57:54Z
+end latent1 15:59:56Z exit 0
+start noise01 15:59:56Z
+end noise01 16:01:57Z exit 0
+ALL DONE 16:01:57Z

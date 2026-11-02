@@ -1,0 +1,27 @@
+{
+ "n_boot": 2000,
+ "seed": 0,
+ "full_sample_rule_holds": true,
+ "p_confirmed": 0.6155,
+ "p_fail_condition": {
+  "C1": 0.3845,
+  "C2": 0.0,
+  "C3": 0.0,
+  "L1": 0.0
+ },
+ "p_fail_cell": {
+  "clean|80|reversed|0.5": 0.3845,
+  "clean|80|reversed|0.2": 0.0005
+ },
+ "p_fail_only_T80_reversed_0.5": 0.384,
+ "T80_reversed_0.5": {
+  "cov_full": 0.9034519956850054,
+  "p_cov_le_0.90": 0.385,
+  "p_cov_lt_0.90": 0.3845,
+  "q025_q50_q975": [
+   0.8799501756059162,
+   0.9033498077979132,
+   0.9247558732499835
+  ]
+ }
+}

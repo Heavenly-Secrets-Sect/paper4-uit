@@ -1,0 +1,6 @@
+seeds 1..50 (B = 2000 each)
+(b) ida_union T150 extra-0.5 rejected by Holm(21): 18/50
+(b) ida_union W_holm count over 21 cells: min 12 max 13; distribution {np.int64(12): np.int64(32), np.int64(13): np.int64(18)}
+D6 ida_union T80 extra-0.2 upper < 0: 21/50
+C2 max upper bound over the 2 cells: max over seeds -0.533
+C1 TOST Holm count: min 4 max 5; distribution {np.int64(4): np.int64(2), np.int64(5): np.int64(48)}

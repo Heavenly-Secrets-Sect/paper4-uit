@@ -1,0 +1,2 @@
+seconds per unit (3 T x 7 cells, 1 process): {'tolerant_v4c': 6.1, 'pselect_union_c2': 5.2, 'bvar_minnesota_c2': 1.2, 'ida_union_c2': 4.1}
+max |deviation| from underlying interval x prescale: {'tolerant_v4c': 8.881784197001252e-16, 'pselect_union_c2': 8.881784197001252e-16, 'bvar_minnesota_c2': 4.440892098500626e-16, 'ida_union_c2': 4.440892098500626e-16}

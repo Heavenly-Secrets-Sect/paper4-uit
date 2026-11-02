@@ -1,0 +1,4 @@
+# Match of shared methods between results/ext_eiv_a1noise (round 1) and results/ext_eiv2_eval (coverage / IS, 3 decimals / 2 decimals)
+oracle: 18/18 cells identical
+plugin: 18/18 cells identical
+tolerant_v4: 18/18 cells identical

@@ -1,0 +1,71 @@
+# Confirmatory check of tolerant_auto3, corrected spec v2 (P4-H2 confirmatory)
+
+Runs: results/ext_auto3fix_p4h2_auto3, results/ext_auto3fix_p4h2_auto3_latent1. Failed/absent runs count as uncovered; a ruled cell fails when auto3 has > 3 failed/absent runs.
+
+## Integrity
+
+- I1: OK: manifest configs equal the frozen configs; P4-H2/confirmatory
+- I2: OK: 20 topologies, same in both runs, no duplicate rows
+- I3: OK: 2158 ok auto3 rows checked; 0 mismatches
+- I4: OK: 2160 ok tolerant_v4 rows checked; 0 mismatches
+- I5: OK: 0 units with non-constant n_nonnull
+
+## Rule
+
+- C1: clean|80|missing|0.2 0.967 (ok-only 0.967; auto3 ok 60/60, bad 0; p 0.0000); clean|80|missing|0.5 0.963 (ok-only 0.963; auto3 ok 60/60, bad 0; p 0.0000); clean|80|reversed|0.2 0.946 (ok-only 0.946; auto3 ok 60/60, bad 0; p 0.0000); clean|80|reversed|0.5 0.929 (ok-only 0.929; auto3 ok 60/60, bad 0; p 0.0060); clean|150|missing|0.2 0.981 (ok-only 0.981; auto3 ok 60/60, bad 0; p 0.0000); clean|150|missing|0.5 0.984 (ok-only 0.984; auto3 ok 60/60, bad 0; p 0.0000); clean|150|reversed|0.2 0.973 (ok-only 0.973; auto3 ok 60/60, bad 0; p 0.0000); clean|150|reversed|0.5 0.956 (ok-only 0.956; auto3 ok 60/60, bad 0; p 0.0000) -> PASS
+- C2: T40 ratio 1.113 (paired n 60; unpaired 1.113); T80 ratio 1.079 (paired n 60; unpaired 1.079); T150 ratio 1.199 (paired n 60; unpaired 1.199) -> PASS
+- C3: T80 cov 0.939 (ok-only 0.939, bad 0) ratio 0.948 (paired n 60); T150 cov 0.951 (ok-only 0.951, bad 0) ratio 0.964 (paired n 60) -> PASS
+- L1: latent1|80|missing|0.2 0.956 (ok-only 0.956; auto3 ok 60/60, bad 0; p 0.0000); latent1|80|reversed|0.2 0.945 (ok-only 0.945; auto3 ok 60/60, bad 0; p 0.0000); latent1|150|missing|0.2 0.975 (ok-only 0.975; auto3 ok 60/60, bad 0; p 0.0000); latent1|150|reversed|0.2 0.966 (ok-only 0.966; auto3 ok 60/60, bad 0; p 0.0000) -> PASS
+- Holm (alpha 0.05) over the 14 coverage cells, H0 'cov <= 0.90' rejected: 14/14
+- **CONFIRMED**
+
+Fragility (recorded before P4-H2, docs/ext/auto3fix.md 1.2): on the D-07 dry run, C1 at T80 reversed-0.5 was 0.903, the only one of 14 coverage cells Holm could not reject (13/14); a NOT CONFIRMED from that cell alone is not evidence that auto3 got worse, and a CONFIRMED does not rule out true coverage below 0.90 there.
+
+## n_ok / n_exp per method and cell
+
+### main run
+
+| cell | plugin | tolerant_auto3 | tolerant_v4 |
+|---|---|---|---|
+| clean|40|extra|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|40|extra|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|40|ges|0.0 | 60/60 | 59/60 | 60/60 |
+| clean|40|missing|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|40|missing|0.5 | 60/60 | 59/60 | 60/60 |
+| clean|40|none|0.0 | 60/60 | 60/60 | 60/60 |
+| clean|40|reversed|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|40|reversed|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|80|extra|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|80|extra|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|80|ges|0.0 | 60/60 | 60/60 | 60/60 |
+| clean|80|missing|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|80|missing|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|80|none|0.0 | 60/60 | 60/60 | 60/60 |
+| clean|80|reversed|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|80|reversed|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|150|extra|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|150|extra|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|150|ges|0.0 | 60/60 | 60/60 | 60/60 |
+| clean|150|missing|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|150|missing|0.5 | 60/60 | 60/60 | 60/60 |
+| clean|150|none|0.0 | 60/60 | 60/60 | 60/60 |
+| clean|150|reversed|0.2 | 60/60 | 60/60 | 60/60 |
+| clean|150|reversed|0.5 | 60/60 | 60/60 | 60/60 |
+
+### latent run
+
+| cell | oracle | plugin | tolerant_auto3 | tolerant_v4 |
+|---|---|---|---|---|
+| clean|80|missing|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| clean|80|none|0.0 | 60/60 | 60/60 | 60/60 | 60/60 |
+| clean|80|reversed|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| clean|150|missing|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| clean|150|none|0.0 | 60/60 | 60/60 | 60/60 | 60/60 |
+| clean|150|reversed|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| latent1|80|missing|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| latent1|80|none|0.0 | 60/60 | 60/60 | 60/60 | 60/60 |
+| latent1|80|reversed|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| latent1|150|missing|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+| latent1|150|none|0.0 | 60/60 | 60/60 | 60/60 | 60/60 |
+| latent1|150|reversed|0.2 | 60/60 | 60/60 | 60/60 | 60/60 |
+

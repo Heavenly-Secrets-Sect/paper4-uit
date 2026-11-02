@@ -1,0 +1,1862 @@
+[
+ {
+  "topo": "syn_dag_00",
+  "rep": 0,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1234,
+    1234
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 0,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 0,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    16,
+    16
+   ],
+   "hs_draws_reduced": [
+    12,
+    12
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 0,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 0,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 0,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 1,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    530,
+    530
+   ],
+   "hs_draws_reduced": [
+    97,
+    97
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 1,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 1,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    145,
+    145
+   ],
+   "hs_draws_reduced": [
+    51,
+    51
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 1,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 1,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    13,
+    13
+   ],
+   "hs_draws_reduced": [
+    9,
+    9
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_00",
+  "rep": 1,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 0,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1444,
+    1444
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 0,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    73,
+    73
+   ],
+   "hs_draws_reduced": [
+    72,
+    72
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 0,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    157,
+    157
+   ],
+   "hs_draws_reduced": [
+    58,
+    58
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 0,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 0,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1,
+    1
+   ],
+   "hs_draws_reduced": [
+    1,
+    1
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 0,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 1,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    510,
+    510
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 1,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 1,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    687,
+    687
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 1,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 1,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_04",
+  "rep": 1,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 0,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1120,
+    1120
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 0,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    183,
+    183
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 0,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    322,
+    322
+   ],
+   "hs_draws_reduced": [
+    78,
+    78
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 0,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 0,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    3,
+    3
+   ],
+   "hs_draws_reduced": [
+    3,
+    3
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 0,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 1,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1048,
+    1048
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 1,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    59,
+    59
+   ],
+   "hs_draws_reduced": [
+    57,
+    57
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 1,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    516,
+    516
+   ],
+   "hs_draws_reduced": [
+    96,
+    96
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 1,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 1,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    24,
+    24
+   ],
+   "hs_draws_reduced": [
+    13,
+    13
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_09",
+  "rep": 1,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 0,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    0,
+    0
+   ],
+   "hs_draws_reduced": [
+    0,
+    0
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 0,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1740,
+    1740
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 0,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 0,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    309,
+    309
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 0,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 0,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    25,
+    25
+   ],
+   "hs_draws_reduced": [
+    14,
+    14
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 0,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    22,
+    22
+   ],
+   "hs_draws_reduced": [
+    22,
+    22
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 1,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1994,
+    1994
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 1,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 1,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    396,
+    396
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 1,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 1,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    17,
+    17
+   ],
+   "hs_draws_reduced": [
+    9,
+    9
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_13",
+  "rep": 1,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    70,
+    70
+   ],
+   "hs_draws_reduced": [
+    69,
+    69
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 0,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    759,
+    759
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 0,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    200,
+    200
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 0,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    311,
+    311
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 0,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 0,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    191,
+    191
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 0,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 1,
+  "T": 19,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    1033,
+    1033
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 1,
+  "T": 19,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    176,
+    176
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 1,
+  "T": 25,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    294,
+    294
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 1,
+  "T": 25,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 1,
+  "T": 30,
+  "kind": "missing",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 0,
+  "ev_fail": 0,
+  "targeted": 1,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    859,
+    859
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ },
+ {
+  "topo": "syn_dag_18",
+  "rep": 1,
+  "T": 30,
+  "kind": "reversed",
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "eq": true,
+  "flags": true,
+  "red": 1,
+  "evred": 1,
+  "ev_fail": 0,
+  "targeted": 0,
+  "contemp": 0,
+  "fl": {
+   "hs_eq_total": [
+    100,
+    100
+   ],
+   "hs_draws_reduced": [
+    99,
+    99
+   ],
+   "hs_draws_total": [
+    99,
+    99
+   ]
+  }
+ }
+]

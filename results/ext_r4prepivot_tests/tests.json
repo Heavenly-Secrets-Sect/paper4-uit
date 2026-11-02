@@ -1,0 +1,58 @@
+{
+ "t_quantile matches tables (1e-5)": {
+  "pass": true,
+  "detail": "max err 1.05e-07"
+ },
+ "z_ref(19) = 2.1555": {
+  "pass": true,
+  "detail": "2.155501"
+ },
+ "roots_for known values": {
+  "pass": true,
+  "detail": "nn [0.5] all [0.5773502691896257, 0.5]"
+ },
+ "perfectly calibrated bootstrap -> mean f within 0.98..1.02": {
+  "pass": true,
+  "detail": "mean f 0.9985, sd 0.0132; with 1.96 instead: 1.0981"
+ },
+ "under-dispersed bootstrap -> f near 2.0..2.4": {
+  "pass": true,
+  "detail": "f 1.928, rough target 2.033"
+ },
+ "widen keeps midpoint, scales half-width": {
+  "pass": true,
+  "detail": ""
+ },
+ "outer draws of prepivot_core identical to tolerant_v5_1": {
+  "pass": true,
+  "detail": ""
+ },
+ "v5.1 prescaled interval = 0.5 x unscaled outer interval": {
+  "pass": true,
+  "detail": ""
+ },
+ "output unchanged when the private log changes": {
+  "pass": true,
+  "detail": "f_d 0.8069"
+ },
+ "deterministic given the rng seed": {
+  "pass": true,
+  "detail": ""
+ },
+ "bootstrap_C restored after calls": {
+  "pass": true,
+  "detail": ""
+ },
+ "final interval = unscaled outer interval widened by f_d": {
+  "pass": true,
+  "detail": ""
+ },
+ "bootstrap_C restored after an exception": {
+  "pass": true,
+  "detail": ""
+ },
+ "reversed branch (v3) runs, 39 inner worlds": {
+  "pass": true,
+  "detail": "status ok, f_d 1.08457697178331"
+ }
+}

@@ -1,0 +1,12 @@
+m=2 T=80 ratio=0.0 true share=0.000 est mean=0.007 sd=0.008
+m=2 T=80 ratio=0.1 true share=0.091 est mean=0.011 sd=0.012
+m=2 T=80 ratio=0.3 true share=0.231 est mean=0.016 sd=0.014
+m=2 T=150 ratio=0.0 true share=0.000 est mean=0.013 sd=0.009
+m=2 T=150 ratio=0.1 true share=0.091 est mean=0.027 sd=0.010
+m=2 T=150 ratio=0.3 true share=0.231 est mean=0.047 sd=0.020
+m=4 T=80 ratio=0.0 true share=0.000 est mean=0.009 sd=0.010
+m=4 T=80 ratio=0.1 true share=0.091 est mean=0.013 sd=0.015
+m=4 T=80 ratio=0.3 true share=0.231 est mean=0.016 sd=0.014
+m=4 T=150 ratio=0.0 true share=0.000 est mean=0.019 sd=0.010
+m=4 T=150 ratio=0.1 true share=0.091 est mean=0.029 sd=0.011
+m=4 T=150 ratio=0.3 true share=0.231 est mean=0.046 sd=0.022

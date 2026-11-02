@@ -1,0 +1,4 @@
+T cell mean radius_raw -> radius_c (K1 data fit)
+40 0.879 0.933
+80 0.807 0.843
+150 0.781 0.802

@@ -1,0 +1,81 @@
+{
+  "config": {
+    "name": "ext_baselines2_probe",
+    "purpose": "R2-1 design/timing probe on D-07H development (not evaluation): cost and raw coverage of pselect_union_v2 / bvar_minnesota_v2 next to round-1 versions and tolerant_v3. 4 topologies x 1 replicate.",
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "methods": [
+      "tolerant_v3",
+      "pselect_union",
+      "pselect_union_v2",
+      "bvar_minnesota",
+      "bvar_minnesota_v2"
+    ],
+    "paired_references": [
+      "tolerant_v3"
+    ],
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 4,
+    "replicates": 1,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102
+  },
+  "seconds": 32.9,
+  "n_rows": 300,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+    },
+    {
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "e23b356e6b5805d611b4bddadeb02d7033ddca2005f68cc17362b040f75223b7"
+    },
+    {
+      "id": "syn_dag_03",
+      "profile": "erdos_renyi",
+      "sha256": "601c985a6224c3707d137f6db617aab5449f7b91cdd36a0bea830c3af6c36993"
+    }
+  ]
+}

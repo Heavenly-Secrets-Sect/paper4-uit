@@ -1,0 +1,48 @@
+{
+  "name": "ext_revlag_probe_ges",
+  "purpose": "Timing probe of the GES and latent/noise pair runs, D-07H development, 3 topologies. Not used for claims.",
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": 3,
+  "replicates": 1,
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [],
+    "rates": [
+      0.2
+    ]
+  },
+  "methods": [
+    "tolerant_v4"
+  ],
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "learned": {
+    "algorithm": "ges"
+  },
+  "ges_damage_from": "results/a3_ges/calibration.json"
+}

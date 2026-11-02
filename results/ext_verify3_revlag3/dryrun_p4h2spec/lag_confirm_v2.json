@@ -1,0 +1,42 @@
+{
+ "failures": {
+  "reversed|0.2 T80": {
+   "n": 12,
+   "failed": 0,
+   "share": 0.0
+  },
+  "reversed|0.2 T150": {
+   "n": 12,
+   "failed": 0,
+   "share": 0.0
+  },
+  "reversed|0.5 T80": {
+   "n": 12,
+   "failed": 0,
+   "share": 0.0
+  },
+  "reversed|0.5 T150": {
+   "n": 12,
+   "failed": 0,
+   "share": 0.0
+  },
+  "all 21 cells": {
+   "n": 252,
+   "failed": 0,
+   "share": 0.0
+  }
+ },
+ "failures_ok": true,
+ "L1_n": 3,
+ "L1_pass": false,
+ "L2_pass": true,
+ "L2_counts": {
+  "w1": 0,
+  "w2": 0,
+  "w3": 0,
+  "w1h": 0,
+  "w2h": 0,
+  "w3h": 0
+ },
+ "verdict": "NOT CONFIRMED"
+}

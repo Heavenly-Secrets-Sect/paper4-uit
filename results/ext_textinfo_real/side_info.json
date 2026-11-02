@@ -1,0 +1,1151 @@
+{
+ "nodes": [
+  "bank_npl_ratio",
+  "bank_car_ratio",
+  "bank_nim_ratio",
+  "bank_roe_ratio",
+  "bank_ldr_ratio",
+  "bank_provision_coverage_proxy_pct",
+  "bank_z_score",
+  "macro_gdp_yoy_pct",
+  "macro_cpi_avg_pct",
+  "macro_policy_rate_pct",
+  "stock_adj_close_last_vnd",
+  "stock_return_qoq_pct",
+  "stock_avg_daily_volume_cp",
+  "stock_avg_daily_trade_value_vnd"
+ ],
+ "skeleton_oriented": [
+  [
+   4,
+   2
+  ],
+  [
+   4,
+   9
+  ],
+  [
+   2,
+   1
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   0,
+   5
+  ],
+  [
+   0,
+   3
+  ],
+  [
+   5,
+   3
+  ],
+  [
+   3,
+   6
+  ],
+  [
+   8,
+   0
+  ],
+  [
+   8,
+   13
+  ],
+  [
+   8,
+   12
+  ],
+  [
+   7,
+   1
+  ],
+  [
+   9,
+   2
+  ],
+  [
+   9,
+   0
+  ],
+  [
+   9,
+   8
+  ],
+  [
+   9,
+   7
+  ],
+  [
+   9,
+   10
+  ],
+  [
+   9,
+   13
+  ],
+  [
+   9,
+   12
+  ],
+  [
+   9,
+   11
+  ]
+ ],
+ "doubt": {
+  "2-4": 0.55,
+  "4-9": 1.83,
+  "1-2": 2.08,
+  "0-2": 1.08,
+  "2-3": 1.08,
+  "0-5": 1.4,
+  "0-3": 0.3,
+  "3-5": 1.3,
+  "3-6": 1.08,
+  "0-8": 1.08,
+  "8-13": 1.33,
+  "8-12": 1.33,
+  "1-7": 1.08,
+  "2-9": 1.8,
+  "0-9": 1.05,
+  "8-9": 0.65,
+  "7-9": 0.99,
+  "9-10": 1.3,
+  "9-13": 1.05,
+  "9-12": 1.08,
+  "9-11": 1.33
+ },
+ "suspicion": {
+  "0-1": 3.853,
+  "0-4": 4.031,
+  "0-6": 0.0,
+  "0-7": 1.085,
+  "0-10": 0.415,
+  "0-11": 1.136,
+  "0-12": 0.742,
+  "0-13": 0.735,
+  "1-3": 3.208,
+  "1-4": 1.989,
+  "1-5": 2.357,
+  "1-6": 0.0,
+  "1-8": 0.0,
+  "1-9": 0.0,
+  "1-10": 0.0,
+  "1-11": 0.0,
+  "1-12": 0.364,
+  "1-13": 0.361,
+  "2-5": 4.07,
+  "2-6": 0.0,
+  "2-7": 1.138,
+  "2-8": 0.614,
+  "2-10": 0.374,
+  "2-11": 0.787,
+  "2-12": 0.991,
+  "2-13": 0.977,
+  "3-4": 2.69,
+  "3-7": 1.154,
+  "3-8": 0.0,
+  "3-9": 1.0,
+  "3-10": 0.067,
+  "3-11": 1.157,
+  "3-12": 0.427,
+  "3-13": 0.415,
+  "4-5": 0.963,
+  "4-6": 0.0,
+  "4-7": 2.064,
+  "4-8": 0.733,
+  "4-10": 0.0,
+  "4-11": 0.0,
+  "4-12": 1.183,
+  "4-13": 1.152,
+  "5-6": 0.0,
+  "5-7": 0.023,
+  "5-8": 0.0,
+  "5-9": 0.0,
+  "5-10": 0.0,
+  "5-11": 0.0,
+  "5-12": 0.0,
+  "5-13": 0.0,
+  "6-7": 0.0,
+  "6-8": 0.0,
+  "6-9": 0.0,
+  "6-10": 0.0,
+  "6-11": 0.0,
+  "6-12": 0.0,
+  "6-13": 0.0,
+  "7-8": 1.078,
+  "7-10": 0.0,
+  "7-11": 0.763,
+  "7-12": 0.383,
+  "7-13": 0.378,
+  "8-10": 0.616,
+  "8-11": 0.404,
+  "10-11": 1.628,
+  "10-12": 0.806,
+  "10-13": 1.521,
+  "11-12": 0.608,
+  "11-13": 2.101,
+  "12-13": 3.561
+ },
+ "sign": {
+  "2-4": -1,
+  "4-9": 1,
+  "1-2": 1,
+  "0-2": -1,
+  "2-3": 1,
+  "0-5": -1,
+  "0-3": -1,
+  "3-5": 1,
+  "3-6": 1,
+  "0-8": 1,
+  "8-13": -1,
+  "8-12": -1,
+  "1-7": -1,
+  "9-10": -1,
+  "9-13": -1,
+  "9-12": -1
+ },
+ "edges_detail": [
+  {
+   "edge": "bank_ldr_ratio->bank_nim_ratio",
+   "confidence": 0.7,
+   "n_distinct_sources": 2,
+   "conflicted": false,
+   "n_rejected": 1,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 2
+   },
+   "doubt": 0.55
+  },
+  {
+   "edge": "bank_ldr_ratio->macro_policy_rate_pct",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 1,
+   "n_reverse_direction": 1,
+   "sign_disagree": false,
+   "sign_hint": "positive",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 1.83
+  },
+  {
+   "edge": "bank_nim_ratio->bank_car_ratio",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 4,
+   "n_reverse_direction": 3,
+   "sign_disagree": false,
+   "sign_hint": "positive",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 2.08
+  },
+  {
+   "edge": "bank_nim_ratio->bank_npl_ratio",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 1.08
+  },
+  {
+   "edge": "bank_nim_ratio->bank_roe_ratio",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "positive",
+   "lag_hints": {
+    "unknown": 1
+   },
+   "doubt": 1.08
+  },
+  {
+   "edge": "bank_npl_ratio->bank_provision_coverage_proxy_pct",
+   "confidence": 0.85,
+   "n_distinct_sources": 4,
+   "conflicted": true,
+   "n_rejected": 4,
+   "n_reverse_direction": 0,
+   "sign_disagree": true,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 5,
+    "unknown": 1
+   },
+   "doubt": 1.4
+  },
+  {
+   "edge": "bank_npl_ratio->bank_roe_ratio",
+   "confidence": 0.7,
+   "n_distinct_sources": 2,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 2
+   },
+   "doubt": 0.3
+  },
+  {
+   "edge": "bank_provision_coverage_proxy_pct->bank_roe_ratio",
+   "confidence": 0.7,
+   "n_distinct_sources": 2,
+   "conflicted": true,
+   "n_rejected": 1,
+   "n_reverse_direction": 0,
+   "sign_disagree": true,
+   "sign_hint": "positive",
+   "lag_hints": {
+    "immediate": 2
+   },
+   "doubt": 1.3
+  },
+  {
+   "edge": "bank_roe_ratio->bank_z_score",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "positive",
+   "lag_hints": {
+    "immediate": 1,
+    "unknown": 1
+   },
+   "doubt": 1.08
+  },
+  {
+   "edge": "macro_cpi_avg_pct->bank_npl_ratio",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "positive",
+   "lag_hints": {
+    "unknown": 1
+   },
+   "doubt": 1.08
+  },
+  {
+   "edge": "macro_cpi_avg_pct->stock_avg_daily_trade_value_vnd",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 1,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 1.33
+  },
+  {
+   "edge": "macro_cpi_avg_pct->stock_avg_daily_volume_cp",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 1,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 1.33
+  },
+  {
+   "edge": "macro_gdp_yoy_pct->bank_car_ratio",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 1.08
+  },
+  {
+   "edge": "macro_policy_rate_pct->bank_nim_ratio",
+   "confidence": 0.7,
+   "n_distinct_sources": 4,
+   "conflicted": true,
+   "n_rejected": 3,
+   "n_reverse_direction": 1,
+   "sign_disagree": false,
+   "sign_hint": null,
+   "lag_hints": {
+    "1_quarter": 1,
+    "immediate": 4
+   },
+   "doubt": 1.8
+  },
+  {
+   "edge": "macro_policy_rate_pct->bank_npl_ratio",
+   "confidence": 0.7,
+   "n_distinct_sources": 3,
+   "conflicted": true,
+   "n_rejected": 1,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": null,
+   "lag_hints": {
+    "1_quarter": 1,
+    "unknown": 1,
+    "immediate": 1
+   },
+   "doubt": 1.05
+  },
+  {
+   "edge": "macro_policy_rate_pct->macro_cpi_avg_pct",
+   "confidence": 0.85,
+   "n_distinct_sources": 2,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 4,
+   "sign_disagree": false,
+   "sign_hint": null,
+   "lag_hints": {
+    "immediate": 6
+   },
+   "doubt": 0.65
+  },
+  {
+   "edge": "macro_policy_rate_pct->macro_gdp_yoy_pct",
+   "confidence": 0.51,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": null,
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 0.99
+  },
+  {
+   "edge": "macro_policy_rate_pct->stock_adj_close_last_vnd",
+   "confidence": 0.7,
+   "n_distinct_sources": 6,
+   "conflicted": true,
+   "n_rejected": 2,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 6
+   },
+   "doubt": 1.3
+  },
+  {
+   "edge": "macro_policy_rate_pct->stock_avg_daily_trade_value_vnd",
+   "confidence": 0.7,
+   "n_distinct_sources": 4,
+   "conflicted": true,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": true,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 7
+   },
+   "doubt": 1.05
+  },
+  {
+   "edge": "macro_policy_rate_pct->stock_avg_daily_volume_cp",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 0,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": "negative",
+   "lag_hints": {
+    "immediate": 1
+   },
+   "doubt": 1.08
+  },
+  {
+   "edge": "macro_policy_rate_pct->stock_return_qoq_pct",
+   "confidence": 0.42,
+   "n_distinct_sources": 1,
+   "conflicted": false,
+   "n_rejected": 1,
+   "n_reverse_direction": 0,
+   "sign_disagree": false,
+   "sign_hint": null,
+   "lag_hints": {
+    "immediate": 3
+   },
+   "doubt": 1.33
+  }
+ ],
+ "pairs_detail": [
+  {
+   "pair": "bank_npl_ratio--bank_car_ratio",
+   "comention_candidate_nodes": 8,
+   "comention_lexicon": 15,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.269,
+   "suspicion": 3.853
+  },
+  {
+   "pair": "bank_npl_ratio--bank_ldr_ratio",
+   "comention_candidate_nodes": 4,
+   "comention_lexicon": 12,
+   "n_rejected_relations": 1,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.139,
+   "suspicion": 4.031
+  },
+  {
+   "pair": "bank_npl_ratio--bank_z_score",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_npl_ratio--macro_gdp_yoy_pct",
+   "comention_candidate_nodes": 1,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.045,
+   "suspicion": 1.085
+  },
+  {
+   "pair": "bank_npl_ratio--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.068,
+   "suspicion": 0.415
+  },
+  {
+   "pair": "bank_npl_ratio--stock_return_qoq_pct",
+   "comention_candidate_nodes": 2,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.038,
+   "suspicion": 1.136
+  },
+  {
+   "pair": "bank_npl_ratio--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 3,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.049,
+   "suspicion": 0.742
+  },
+  {
+   "pair": "bank_npl_ratio--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 3,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.042,
+   "suspicion": 0.735
+  },
+  {
+   "pair": "bank_car_ratio--bank_roe_ratio",
+   "comention_candidate_nodes": 4,
+   "comention_lexicon": 12,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.316,
+   "suspicion": 3.208
+  },
+  {
+   "pair": "bank_car_ratio--bank_ldr_ratio",
+   "comention_candidate_nodes": 1,
+   "comention_lexicon": 9,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.144,
+   "suspicion": 1.989
+  },
+  {
+   "pair": "bank_car_ratio--bank_provision_coverage_proxy_pct",
+   "comention_candidate_nodes": 2,
+   "comention_lexicon": 8,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.16,
+   "suspicion": 2.357
+  },
+  {
+   "pair": "bank_car_ratio--bank_z_score",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_car_ratio--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_car_ratio--macro_policy_rate_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_car_ratio--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_car_ratio--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_car_ratio--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.018,
+   "suspicion": 0.364
+  },
+  {
+   "pair": "bank_car_ratio--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.015,
+   "suspicion": 0.361
+  },
+  {
+   "pair": "bank_nim_ratio--bank_provision_coverage_proxy_pct",
+   "comention_candidate_nodes": 4,
+   "comention_lexicon": 12,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 1,
+   "tfidf_cosine": 0.178,
+   "suspicion": 4.07
+  },
+  {
+   "pair": "bank_nim_ratio--bank_z_score",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_nim_ratio--macro_gdp_yoy_pct",
+   "comention_candidate_nodes": 2,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.04,
+   "suspicion": 1.138
+  },
+  {
+   "pair": "bank_nim_ratio--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 2,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.065,
+   "suspicion": 0.614
+  },
+  {
+   "pair": "bank_nim_ratio--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.027,
+   "suspicion": 0.374
+  },
+  {
+   "pair": "bank_nim_ratio--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 3,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.094,
+   "suspicion": 0.787
+  },
+  {
+   "pair": "bank_nim_ratio--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 5,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.095,
+   "suspicion": 0.991
+  },
+  {
+   "pair": "bank_nim_ratio--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 5,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.081,
+   "suspicion": 0.977
+  },
+  {
+   "pair": "bank_roe_ratio--bank_ldr_ratio",
+   "comention_candidate_nodes": 3,
+   "comention_lexicon": 9,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.152,
+   "suspicion": 2.69
+  },
+  {
+   "pair": "bank_roe_ratio--macro_gdp_yoy_pct",
+   "comention_candidate_nodes": 2,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.056,
+   "suspicion": 1.154
+  },
+  {
+   "pair": "bank_roe_ratio--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_roe_ratio--macro_policy_rate_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 1,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 1.0
+  },
+  {
+   "pair": "bank_roe_ratio--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.067,
+   "suspicion": 0.067
+  },
+  {
+   "pair": "bank_roe_ratio--stock_return_qoq_pct",
+   "comention_candidate_nodes": 2,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.058,
+   "suspicion": 1.157
+  },
+  {
+   "pair": "bank_roe_ratio--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.081,
+   "suspicion": 0.427
+  },
+  {
+   "pair": "bank_roe_ratio--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.069,
+   "suspicion": 0.415
+  },
+  {
+   "pair": "bank_ldr_ratio--bank_provision_coverage_proxy_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 5,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.067,
+   "suspicion": 0.963
+  },
+  {
+   "pair": "bank_ldr_ratio--bank_z_score",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_ldr_ratio--macro_gdp_yoy_pct",
+   "comention_candidate_nodes": 4,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.108,
+   "suspicion": 2.064
+  },
+  {
+   "pair": "bank_ldr_ratio--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 1,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.04,
+   "suspicion": 0.733
+  },
+  {
+   "pair": "bank_ldr_ratio--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_ldr_ratio--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_ldr_ratio--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 6,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.21,
+   "suspicion": 1.183
+  },
+  {
+   "pair": "bank_ldr_ratio--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 6,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.179,
+   "suspicion": 1.152
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--bank_z_score",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--macro_gdp_yoy_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.023,
+   "suspicion": 0.023
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--macro_policy_rate_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_provision_coverage_proxy_pct--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--macro_gdp_yoy_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--macro_policy_rate_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "bank_z_score--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "macro_gdp_yoy_pct--macro_cpi_avg_pct",
+   "comention_candidate_nodes": 1,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.038,
+   "suspicion": 1.078
+  },
+  {
+   "pair": "macro_gdp_yoy_pct--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.0,
+   "suspicion": 0.0
+  },
+  {
+   "pair": "macro_gdp_yoy_pct--stock_return_qoq_pct",
+   "comention_candidate_nodes": 1,
+   "comention_lexicon": 0,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.07,
+   "suspicion": 0.763
+  },
+  {
+   "pair": "macro_gdp_yoy_pct--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.036,
+   "suspicion": 0.383
+  },
+  {
+   "pair": "macro_gdp_yoy_pct--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.031,
+   "suspicion": 0.378
+  },
+  {
+   "pair": "macro_cpi_avg_pct--stock_adj_close_last_vnd",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 2,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.067,
+   "suspicion": 0.616
+  },
+  {
+   "pair": "macro_cpi_avg_pct--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 1,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.058,
+   "suspicion": 0.404
+  },
+  {
+   "pair": "stock_adj_close_last_vnd--stock_return_qoq_pct",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 6,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.655,
+   "suspicion": 1.628
+  },
+  {
+   "pair": "stock_adj_close_last_vnd--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 3,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.113,
+   "suspicion": 0.806
+  },
+  {
+   "pair": "stock_adj_close_last_vnd--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 1,
+   "comention_lexicon": 3,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.135,
+   "suspicion": 1.521
+  },
+  {
+   "pair": "stock_return_qoq_pct--stock_avg_daily_volume_cp",
+   "comention_candidate_nodes": 0,
+   "comention_lexicon": 2,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.059,
+   "suspicion": 0.608
+  },
+  {
+   "pair": "stock_return_qoq_pct--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 3,
+   "comention_lexicon": 2,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.165,
+   "suspicion": 2.101
+  },
+  {
+   "pair": "stock_avg_daily_volume_cp--stock_avg_daily_trade_value_vnd",
+   "comention_candidate_nodes": 2,
+   "comention_lexicon": 29,
+   "n_rejected_relations": 0,
+   "n_accepted_not_in_prior": 0,
+   "tfidf_cosine": 0.762,
+   "suspicion": 3.561
+  }
+ ],
+ "note": "Heuristic, rule-based scores from Paper 1's stored fields; no ground truth; descriptive only."
+}

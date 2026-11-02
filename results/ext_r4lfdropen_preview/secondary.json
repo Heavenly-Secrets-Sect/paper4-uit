@@ -1,0 +1,1685 @@
+{
+  "factors": {
+    "40|none": {
+      "v5_1_frozen": 2.6,
+      "v5_1_retuned_raw": 2.6,
+      "lfdr": 2.6,
+      "lfdr_retuned_raw": 2.6
+    },
+    "40|extra": {
+      "v5_1_frozen": 2.6,
+      "v5_1_retuned_raw": 2.6,
+      "lfdr": 2.6,
+      "lfdr_retuned_raw": 2.6
+    },
+    "40|missing": {
+      "v5_1_frozen": 2.3,
+      "v5_1_retuned_raw": 2.3,
+      "lfdr": 3.6,
+      "lfdr_retuned_raw": 3.6
+    },
+    "40|reversed": {
+      "v5_1_frozen": 2.8,
+      "v5_1_retuned_raw": 2.8,
+      "lfdr": 2.8,
+      "lfdr_retuned_raw": 2.8
+    },
+    "80|none": {
+      "v5_1_frozen": 2.6,
+      "v5_1_retuned_raw": 2.6,
+      "lfdr": 2.6,
+      "lfdr_retuned_raw": 2.6
+    },
+    "80|extra": {
+      "v5_1_frozen": 2.4,
+      "v5_1_retuned_raw": 2.4,
+      "lfdr": 2.4,
+      "lfdr_retuned_raw": 2.4
+    },
+    "80|missing": {
+      "v5_1_frozen": 2.6,
+      "v5_1_retuned_raw": 2.6,
+      "lfdr": 3.0,
+      "lfdr_retuned_raw": 3.0
+    },
+    "80|reversed": {
+      "v5_1_frozen": 2.7,
+      "v5_1_retuned_raw": 2.7,
+      "lfdr": 2.7,
+      "lfdr_retuned_raw": 2.7
+    },
+    "150|none": {
+      "v5_1_frozen": 2.4,
+      "v5_1_retuned_raw": 2.4,
+      "lfdr": 2.4,
+      "lfdr_retuned_raw": 2.4
+    },
+    "150|extra": {
+      "v5_1_frozen": 2.4,
+      "v5_1_retuned_raw": 2.4,
+      "lfdr": 2.4,
+      "lfdr_retuned_raw": 2.4
+    },
+    "150|missing": {
+      "v5_1_frozen": 2.3,
+      "v5_1_retuned_raw": 2.3,
+      "lfdr": 2.4,
+      "lfdr_retuned_raw": 2.4
+    },
+    "150|reversed": {
+      "v5_1_frozen": 2.4,
+      "v5_1_retuned_raw": 2.4,
+      "lfdr": 2.4,
+      "lfdr_retuned_raw": 2.4
+    }
+  },
+  "open_counts": {
+    "40|0.2": {
+      "v5_1": {
+        "data_mean": 13.0,
+        "data_q": [
+          12.0,
+          12.0,
+          12.0,
+          12.0,
+          25.0
+        ],
+        "draw_mean": 22.73827470686767,
+        "draw_q": [
+          16.804020100502512,
+          19.394472361809044,
+          21.484924623115578,
+          25.134422110552762,
+          39.34170854271357
+        ]
+      },
+      "lfdr": {
+        "data_mean": 4.383333333333334,
+        "data_q": [
+          4.0,
+          4.0,
+          4.0,
+          4.0,
+          11.0
+        ],
+        "draw_mean": 6.867252931323281,
+        "draw_q": [
+          5.376884422110553,
+          6.0954773869346734,
+          6.349246231155779,
+          7.10929648241206,
+          18.804020100502512
+        ]
+      },
+      "drop_data": 0.6628205128205128,
+      "drop_draw": 0.6979870715851122
+    },
+    "40|0.5": {
+      "v5_1": {
+        "data_mean": 33.166666666666664,
+        "data_q": [
+          33.0,
+          33.0,
+          33.0,
+          33.0,
+          43.0
+        ],
+        "draw_mean": 38.91683417085427,
+        "draw_q": [
+          33.834170854271356,
+          35.21608040201005,
+          36.75879396984925,
+          41.01130653266331,
+          61.562814070351756
+        ]
+      },
+      "lfdr": {
+        "data_mean": 11.866666666666667,
+        "data_q": [
+          11.0,
+          11.0,
+          11.0,
+          11.0,
+          24.0
+        ],
+        "draw_mean": 17.516415410385257,
+        "draw_q": [
+          15.135678391959798,
+          15.793969849246231,
+          16.321608040201006,
+          17.731155778894472,
+          28.70854271356784
+        ]
+      },
+      "drop_data": 0.6422110552763819,
+      "drop_draw": 0.5499013271869964
+    },
+    "80|0.2": {
+      "v5_1": {
+        "data_mean": 14.183333333333334,
+        "data_q": [
+          12.0,
+          12.0,
+          13.0,
+          16.0,
+          21.0
+        ],
+        "draw_mean": 23.72219430485762,
+        "draw_q": [
+          18.884422110552762,
+          21.496231155778894,
+          22.816582914572862,
+          25.821608040201006,
+          32.336683417085425
+        ]
+      },
+      "lfdr": {
+        "data_mean": 4.8,
+        "data_q": [
+          4.0,
+          4.0,
+          4.0,
+          5.0,
+          9.0
+        ],
+        "draw_mean": 7.430485762144053,
+        "draw_q": [
+          5.8291457286432165,
+          6.520100502512563,
+          6.881909547738694,
+          8.061557788944725,
+          11.793969849246231
+        ]
+      },
+      "drop_data": 0.6615746180963573,
+      "drop_draw": 0.6867707233718044
+    },
+    "80|0.5": {
+      "v5_1": {
+        "data_mean": 33.21666666666667,
+        "data_q": [
+          33.0,
+          33.0,
+          33.0,
+          33.0,
+          37.0
+        ],
+        "draw_mean": 39.03383584589616,
+        "draw_q": [
+          34.11557788944724,
+          36.68090452261306,
+          38.21859296482412,
+          40.7964824120603,
+          49.688442211055275
+        ]
+      },
+      "lfdr": {
+        "data_mean": 14.2,
+        "data_q": [
+          11.0,
+          11.0,
+          14.0,
+          16.0,
+          23.0
+        ],
+        "draw_mean": 19.39338358458962,
+        "draw_q": [
+          14.090452261306533,
+          16.73994974874372,
+          18.814070351758794,
+          20.78894472361809,
+          28.92964824120603
+        ]
+      },
+      "drop_data": 0.572503763171099,
+      "drop_draw": 0.503164801400666
+    },
+    "150|0.2": {
+      "v5_1": {
+        "data_mean": 16.3,
+        "data_q": [
+          12.0,
+          14.0,
+          15.5,
+          18.0,
+          29.0
+        ],
+        "draw_mean": 26.51222780569514,
+        "draw_q": [
+          19.939698492462313,
+          23.858040201005025,
+          26.791457286432163,
+          28.060301507537687,
+          40.030150753768844
+        ]
+      },
+      "lfdr": {
+        "data_mean": 6.45,
+        "data_q": [
+          4.0,
+          4.75,
+          6.0,
+          8.0,
+          16.0
+        ],
+        "draw_mean": 8.80536013400335,
+        "draw_q": [
+          5.648241206030151,
+          7.141959798994975,
+          8.434673366834172,
+          9.683417085427136,
+          19.71356783919598
+        ]
+      },
+      "drop_data": 0.6042944785276074,
+      "drop_draw": 0.6678755101782938
+    },
+    "150|0.5": {
+      "v5_1": {
+        "data_mean": 35.61666666666667,
+        "data_q": [
+          33.0,
+          33.0,
+          33.0,
+          36.0,
+          49.0
+        ],
+        "draw_mean": 43.32855946398659,
+        "draw_q": [
+          35.87437185929648,
+          39.565326633165824,
+          42.19346733668341,
+          46.87688442211055,
+          55.15075376884422
+        ]
+      },
+      "lfdr": {
+        "data_mean": 19.683333333333334,
+        "data_q": [
+          11.0,
+          15.75,
+          18.0,
+          23.25,
+          38.0
+        ],
+        "draw_mean": 24.317755443886092,
+        "draw_q": [
+          15.06030150753769,
+          20.00502512562814,
+          24.015075376884422,
+          27.76005025125628,
+          41.30653266331658
+        ]
+      },
+      "drop_data": 0.44735610669162373,
+      "drop_draw": 0.43875919844281264
+    }
+  },
+  "recall_lfdr": {
+    "40|0.2": {
+      "rec_data": 0.42083333333333334,
+      "rec_draw": 0.3916882916666667,
+      "P_true": 0.32377599999999995
+    },
+    "40|0.5": {
+      "rec_data": 0.546969696969697,
+      "rec_draw": 0.5226052878787878,
+      "P_true": 0.4832678333333334
+    },
+    "80|0.2": {
+      "rec_data": 0.7041666666666667,
+      "rec_draw": 0.6592755416666666,
+      "P_true": 0.662089625
+    },
+    "80|0.5": {
+      "rec_data": 0.7484848484848484,
+      "rec_draw": 0.7105525303030304,
+      "P_true": 0.7243966060606061
+    },
+    "150|0.2": {
+      "rec_data": 0.8958333333333334,
+      "rec_draw": 0.8632952916666666,
+      "P_true": 0.8699687083333334
+    },
+    "150|0.5": {
+      "rec_data": 0.9015151515151515,
+      "rec_draw": 0.8749729545454544,
+      "P_true": 0.8963325151515152
+    }
+  },
+  "recall_v51": {
+    "40|0.2": {
+      "rec_data_v51": 0.6416666666666667,
+      "n_open_v51_recomputed": 13.0
+    },
+    "40|0.5": {
+      "rec_data_v51": 0.8045454545454546,
+      "n_open_v51_recomputed": 33.166666666666664
+    },
+    "80|0.2": {
+      "rec_data_v51": 0.8875,
+      "n_open_v51_recomputed": 14.183333333333334
+    },
+    "80|0.5": {
+      "rec_data_v51": 0.9227272727272727,
+      "n_open_v51_recomputed": 33.21666666666667
+    },
+    "150|0.2": {
+      "rec_data_v51": 0.9833333333333333,
+      "n_open_v51_recomputed": 16.3
+    },
+    "150|0.5": {
+      "rec_data_v51": 0.9787878787878787,
+      "n_open_v51_recomputed": 35.61666666666667
+    }
+  },
+  "open_set_check": {
+    "logged_open_set_matches_recomputation": 360,
+    "of": 360
+  },
+  "all_cells": [
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "none",
+      "rate": 0.0,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9196332254584682,
+        "IS": 4.37239495587123,
+        "width": 2.771272896274681,
+        "abs_err": 0.4285662748718948,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9196332254584682,
+        "IS": 4.37239495587123,
+        "width": 2.771272896274681,
+        "abs_err": 0.4285662748718948,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "extra",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9137001078748651,
+        "IS": 4.625113411960615,
+        "width": 2.9091234368220227,
+        "abs_err": 0.4616383659244877,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9137001078748651,
+        "IS": 4.625113411960615,
+        "width": 2.9091234368220227,
+        "abs_err": 0.4616383659244877,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "extra",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9196332254584682,
+        "IS": 4.813281955547284,
+        "width": 3.2124919337852473,
+        "abs_err": 0.4798445655417858,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9196332254584682,
+        "IS": 4.813281955547284,
+        "width": 3.2124919337852473,
+        "abs_err": 0.4798445655417858,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "missing",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9525350593311759,
+        "IS": 5.460641804307271,
+        "width": 4.124172745485939,
+        "abs_err": 0.5211034222149916,
+        "info_n_open": 4.383333333333334,
+        "info_n_open_boot_mean": 6.867252931323281,
+        "info_c_T": 3.6,
+        "info_n_repair": 0.8,
+        "info_lfdr_mu": 1.9128143035228062,
+        "info_lfdr_s": 0.7551856169020099
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9223300970873787,
+        "IS": 4.837236220963439,
+        "width": 3.2904286237600617,
+        "abs_err": 0.5531886820638504,
+        "info_n_open": 13.0,
+        "info_n_open_boot_mean": 22.73827470686767,
+        "info_c_T": 2.300000000000001,
+        "info_n_repair": 0.9166666666666666,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.6234055833438304,
+        "lo": 0.2786670202582821,
+        "hi": 0.9461421673382708,
+        "p2": 0.000599970001499925,
+        "p_less": 0.999750012499375,
+        "p_greater": 0.0002999850007499625,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": true
+    },
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "missing",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9498381877022654,
+        "IS": 5.559237038078812,
+        "width": 4.262450723133503,
+        "abs_err": 0.5932842292664097,
+        "info_n_open": 11.866666666666667,
+        "info_n_open_boot_mean": 17.516415410385257,
+        "info_c_T": 3.6,
+        "info_n_repair": 1.3,
+        "info_lfdr_mu": 2.2262173918858204,
+        "info_lfdr_s": 1.0593708280126555
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9390507011866235,
+        "IS": 5.090182808480238,
+        "width": 3.7903175888755194,
+        "abs_err": 0.572480628553278,
+        "info_n_open": 33.166666666666664,
+        "info_n_open_boot_mean": 38.91683417085427,
+        "info_c_T": 2.300000000000001,
+        "info_n_repair": 2.566666666666667,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.4690542295985742,
+        "lo": 0.25176420296234797,
+        "hi": 0.6948662377024578,
+        "p2": 9.99950002499875e-05,
+        "p_less": 1.0,
+        "p_greater": 4.999750012499375e-05,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": true
+    },
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "reversed",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9282632146709816,
+        "IS": 4.701931086761834,
+        "width": 3.101818175559974,
+        "abs_err": 0.4658850752460142,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.7933333333333343,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9282632146709816,
+        "IS": 4.701931086761834,
+        "width": 3.101818175559974,
+        "abs_err": 0.4658850752460142,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.7933333333333343,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 40,
+      "kind": "reversed",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9196332254584682,
+        "IS": 4.7409217511680595,
+        "width": 3.279357893776073,
+        "abs_err": 0.506010550011547,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.800000000000001,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9196332254584682,
+        "IS": 4.7409217511680595,
+        "width": 3.279357893776073,
+        "abs_err": 0.506010550011547,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.800000000000001,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8797195253505933,
+        "IS": 2.7201635410396747,
+        "width": 1.4728337493351384,
+        "abs_err": 0.2734252807333244,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "none",
+      "rate": 0.0,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9385113268608414,
+        "IS": 2.5346566193091222,
+        "width": 1.852911289773966,
+        "abs_err": 0.295785734370734,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9385113268608414,
+        "IS": 2.5346566193091222,
+        "width": 1.852911289773966,
+        "abs_err": 0.295785734370734,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "extra",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9271844660194175,
+        "IS": 2.530924965705778,
+        "width": 1.7324859679500282,
+        "abs_err": 0.30026966468296407,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9271844660194175,
+        "IS": 2.530924965705778,
+        "width": 1.7324859679500282,
+        "abs_err": 0.30026966468296407,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "extra",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9250269687162891,
+        "IS": 2.6664227368720748,
+        "width": 1.8817090006357744,
+        "abs_err": 0.3389168955544567,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9250269687162891,
+        "IS": 2.6664227368720748,
+        "width": 1.8817090006357744,
+        "abs_err": 0.3389168955544567,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "missing",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9530744336569579,
+        "IS": 3.0224467229460195,
+        "width": 2.2807225518874996,
+        "abs_err": 0.35436466828740887,
+        "info_n_open": 4.8,
+        "info_n_open_boot_mean": 7.430485762144053,
+        "info_c_T": 3.0,
+        "info_n_repair": 1.3333333333333333,
+        "info_lfdr_mu": 3.4725064427548125,
+        "info_lfdr_s": 1.157762804394642
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9487594390507011,
+        "IS": 2.842435855728601,
+        "width": 2.192537414540288,
+        "abs_err": 0.34648164073506815,
+        "info_n_open": 14.183333333333334,
+        "info_n_open_boot_mean": 23.72219430485762,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 1.3333333333333333,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.18001086721741952,
+        "lo": 0.038112455041909354,
+        "hi": 0.3130655792529849,
+        "p2": 0.014899255037248137,
+        "p_less": 0.9926003699815009,
+        "p_greater": 0.0074496275186240685,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "missing",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9363538295577131,
+        "IS": 3.5471658835825357,
+        "width": 2.5353102697276673,
+        "abs_err": 0.4052433912277227,
+        "info_n_open": 14.2,
+        "info_n_open_boot_mean": 19.39338358458962,
+        "info_c_T": 3.0,
+        "info_n_repair": 3.216666666666667,
+        "info_lfdr_mu": 3.3701693631518763,
+        "info_lfdr_s": 1.3526773501924907
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9514563106796117,
+        "IS": 3.1001509832728567,
+        "width": 2.4235008949330297,
+        "abs_err": 0.36391460215497995,
+        "info_n_open": 33.21666666666667,
+        "info_n_open_boot_mean": 39.03383584589616,
+        "info_c_T": 2.5999999999999996,
+        "info_n_repair": 3.533333333333333,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.44701490030967894,
+        "lo": 0.24771286845919716,
+        "hi": 0.6487523915855106,
+        "p2": 9.99950002499875e-05,
+        "p_less": 1.0,
+        "p_greater": 4.999750012499375e-05,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": true
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "reversed",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9412081984897519,
+        "IS": 2.79251697694733,
+        "width": 2.0536350154764937,
+        "abs_err": 0.34788614652454686,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.696666666666666,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9412081984897519,
+        "IS": 2.79251697694733,
+        "width": 2.0536350154764937,
+        "abs_err": 0.34788614652454686,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.696666666666666,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 80,
+      "kind": "reversed",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.918015102481122,
+        "IS": 3.0465737169183162,
+        "width": 2.031875000577373,
+        "abs_err": 0.3689821551726142,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.699999999999999,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.918015102481122,
+        "IS": 3.0465737169183162,
+        "width": 2.031875000577373,
+        "abs_err": 0.3689821551726142,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.699999999999999,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.8991370010787486,
+        "IS": 1.6783963403176787,
+        "width": 1.0278910218470958,
+        "abs_err": 0.18961899849701416,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "none",
+      "rate": 0.0,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9627831715210357,
+        "IS": 1.5724410117859466,
+        "width": 1.263735764045156,
+        "abs_err": 0.19136467241828783,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9627831715210357,
+        "IS": 1.5724410117859466,
+        "width": 1.263735764045156,
+        "abs_err": 0.19136467241828783,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "extra",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9633225458468176,
+        "IS": 1.6013957192224733,
+        "width": 1.3383332059961113,
+        "abs_err": 0.2004121534082578,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9633225458468176,
+        "IS": 1.6013957192224733,
+        "width": 1.3383332059961113,
+        "abs_err": 0.2004121534082578,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "extra",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9627831715210357,
+        "IS": 1.6755172479793332,
+        "width": 1.3706368385234908,
+        "abs_err": 0.20750870549929495,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9627831715210357,
+        "IS": 1.6755172479793332,
+        "width": 1.3706368385234908,
+        "abs_err": 0.20750870549929495,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "missing",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9633225458468176,
+        "IS": 1.781319751557781,
+        "width": 1.4053861524392017,
+        "abs_err": 0.20894272581887702,
+        "info_n_open": 6.45,
+        "info_n_open_boot_mean": 8.80536013400335,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 1.5833333333333333,
+        "info_lfdr_mu": 4.634450244751059,
+        "info_lfdr_s": 1.4367505311889721
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9660194174757282,
+        "IS": 1.75865376408272,
+        "width": 1.4630633798210448,
+        "abs_err": 0.2180066558078383,
+        "info_n_open": 16.3,
+        "info_n_open_boot_mean": 26.51222780569514,
+        "info_c_T": 2.300000000000001,
+        "info_n_repair": 1.6333333333333333,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.022665987475060618,
+        "lo": -0.06271635357141958,
+        "hi": 0.13258465292645147,
+        "p2": 0.7051647417629119,
+        "p_less": 0.6474676266186691,
+        "p_greater": 0.35258237088145594,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "missing",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.95361380798274,
+        "IS": 2.263306208646419,
+        "width": 1.5424373851907918,
+        "abs_err": 0.23930746399391112,
+        "info_n_open": 19.683333333333334,
+        "info_n_open_boot_mean": 24.317755443886092,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 4.216666666666667,
+        "info_lfdr_mu": 4.3144919671906,
+        "info_lfdr_s": 1.635120096724868
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9676375404530745,
+        "IS": 1.9858395931584496,
+        "width": 1.5958957102070954,
+        "abs_err": 0.24486818347129202,
+        "info_n_open": 35.61666666666667,
+        "info_n_open_boot_mean": 43.32855946398659,
+        "info_c_T": 2.300000000000001,
+        "info_n_repair": 4.266666666666667,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.27746661548796964,
+        "lo": 0.11733630172602084,
+        "hi": 0.46437692715775414,
+        "p2": 9.99950002499875e-05,
+        "p_less": 1.0,
+        "p_greater": 4.999750012499375e-05,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": true
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "reversed",
+      "rate": 0.2,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9590075512405609,
+        "IS": 1.827695901994293,
+        "width": 1.4439119555717415,
+        "abs_err": 0.21727174793816287,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9590075512405609,
+        "IS": 1.827695901994293,
+        "width": 1.4439119555717415,
+        "abs_err": 0.21727174793816287,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    },
+    {
+      "scenario": "clean",
+      "T": 150,
+      "kind": "reversed",
+      "rate": 0.5,
+      "cand": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9428263214670982,
+        "IS": 2.0333572334605297,
+        "width": 1.4913630149330421,
+        "abs_err": 0.24838953782065723,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "ref": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9428263214670982,
+        "IS": 2.0333572334605297,
+        "width": 1.4913630149330421,
+        "abs_err": 0.24838953782065723,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": 2.4000000000000004,
+        "info_n_repair": 0.0,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "oracle": {
+        "n": 60,
+        "of": 60,
+        "fail": 0,
+        "cov": 0.9433656957928802,
+        "IS": 1.0240988978659018,
+        "width": 0.7803540361538006,
+        "abs_err": 0.13285071586560798,
+        "info_n_open": null,
+        "info_n_open_boot_mean": null,
+        "info_c_T": null,
+        "info_n_repair": null,
+        "info_lfdr_mu": null,
+        "info_lfdr_s": null
+      },
+      "pair": {
+        "est": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "p2": 1.0,
+        "p_less": 1.0,
+        "p_greater": 1.0,
+        "n_pairs": 60,
+        "n_topo": 20
+      },
+      "holm_reject": false
+    }
+  ],
+  "secondary_runs": {}
+}

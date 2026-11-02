@@ -1,0 +1,21 @@
+{
+ "tolerant_v4 vs ext_baselines2_eval": [
+  0,
+  240
+ ],
+ "bvar_minnesota_v2_cal vs ext_baselines2_eval": [
+  0,
+  240
+ ],
+ "tolerant_v5_1 vs ext_v51_eval": [
+  0,
+  240
+ ],
+ "tolerant_v4 vs ext_v51_eval": [
+  0,
+  240
+ ],
+ "psv3_info_seconds_median_T80": 7.2075,
+ "psv3_info_seconds_median_T150": 10.4165,
+ "n_rows": 2160
+}

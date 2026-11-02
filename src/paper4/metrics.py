@@ -30,7 +30,7 @@ def _mean(values) -> float | None:
 
 
 def truth_effects(sem: DynamicSEM, H: int):
-    theta = irf(sem.B, H)
+    theta = irf(sem.B, H)[:, : sem.n, : sem.n]   # observed pairs only (latent nodes come last)
     return theta, cumulative(theta, H), mean_lag(theta, H), peak_lag(theta, H)
 
 
@@ -77,6 +77,9 @@ def evaluate(sem: DynamicSEM, res: MethodResult, H: int, *, tau_effect: float = 
             "width_kept": _median(width[kept]),
             "iscore_nonnull_mean": _mean(score[nonnull]),
             "iscore_nonnull_median": _median(score[nonnull]),
+            "n_null": int(null.sum()),
+            "n_covered_null": int(inside[null].sum()),
+            "iscore_null_mean": _mean(score[null]),
             "n_null_reach": int((null & ~est_zero).sum()),
             "n_covered_null_reach": int(inside[null & ~est_zero].sum()),
         })
@@ -93,12 +96,13 @@ def evaluate(sem: DynamicSEM, res: MethodResult, H: int, *, tau_effect: float = 
         })
 
     if res.B is not None:
-        cross = np.ones_like(sem.B, dtype=bool)
+        B_true = sem.B[:, :n, :n]
+        cross = np.ones_like(B_true, dtype=bool)
         cross[:, np.arange(n), np.arange(n)] = False
-        true_terms = (sem.B != 0) & cross
+        true_terms = (B_true != 0) & cross
         fitted = (res.B != 0) & cross
         row.update({
-            "edge_abs_err_fitted": _median(np.abs(res.B - sem.B)[true_terms & fitted]),
+            "edge_abs_err_fitted": _median(np.abs(res.B - B_true)[true_terms & fitted]),
             "edge_share_unfitted": float((true_terms & ~fitted).sum() / true_terms.sum()),
             "edge_abs_spurious": _median(np.abs(res.B)[~true_terms & fitted]),
         })

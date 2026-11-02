@@ -1,0 +1,115 @@
+{
+  "schema": "synthetic_dag/v1",
+  "id": "syn_dag_06",
+  "seed": 20261109,
+  "profile": "erdos_renyi",
+  "nodes": [
+    "bank_npl_ratio",
+    "bank_car_ratio",
+    "bank_nim_ratio",
+    "bank_roe_ratio",
+    "bank_ldr_ratio",
+    "bank_provision_coverage_proxy_pct",
+    "bank_z_score",
+    "macro_gdp_yoy_pct",
+    "macro_cpi_avg_pct",
+    "macro_policy_rate_pct",
+    "stock_adj_close_last_vnd",
+    "stock_return_qoq_pct",
+    "stock_avg_daily_volume_cp",
+    "stock_avg_daily_trade_value_vnd"
+  ],
+  "edges": [
+    [
+      "bank_car_ratio",
+      "bank_provision_coverage_proxy_pct"
+    ],
+    [
+      "bank_car_ratio",
+      "macro_gdp_yoy_pct"
+    ],
+    [
+      "bank_car_ratio",
+      "stock_adj_close_last_vnd"
+    ],
+    [
+      "bank_car_ratio",
+      "stock_return_qoq_pct"
+    ],
+    [
+      "bank_ldr_ratio",
+      "macro_cpi_avg_pct"
+    ],
+    [
+      "bank_ldr_ratio",
+      "stock_avg_daily_trade_value_vnd"
+    ],
+    [
+      "bank_ldr_ratio",
+      "stock_avg_daily_volume_cp"
+    ],
+    [
+      "bank_nim_ratio",
+      "bank_car_ratio"
+    ],
+    [
+      "bank_nim_ratio",
+      "bank_z_score"
+    ],
+    [
+      "bank_npl_ratio",
+      "bank_roe_ratio"
+    ],
+    [
+      "bank_provision_coverage_proxy_pct",
+      "stock_return_qoq_pct"
+    ],
+    [
+      "bank_roe_ratio",
+      "stock_return_qoq_pct"
+    ],
+    [
+      "bank_z_score",
+      "bank_npl_ratio"
+    ],
+    [
+      "bank_z_score",
+      "macro_cpi_avg_pct"
+    ],
+    [
+      "bank_z_score",
+      "stock_avg_daily_volume_cp"
+    ],
+    [
+      "macro_cpi_avg_pct",
+      "macro_gdp_yoy_pct"
+    ],
+    [
+      "macro_cpi_avg_pct",
+      "stock_adj_close_last_vnd"
+    ],
+    [
+      "macro_gdp_yoy_pct",
+      "stock_adj_close_last_vnd"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "macro_cpi_avg_pct"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "stock_return_qoq_pct"
+    ],
+    [
+      "stock_avg_daily_volume_cp",
+      "stock_return_qoq_pct"
+    ]
+  ],
+  "metrics": {
+    "n_nodes": 14,
+    "n_edges": 21,
+    "n_v_structures": 15,
+    "max_out_degree": 4,
+    "is_connected": true
+  }
+}

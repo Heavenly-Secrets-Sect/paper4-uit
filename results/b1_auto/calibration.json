@@ -1,0 +1,55 @@
+{
+  "ges_damage": {
+    "40": {
+      "missing": 13,
+      "extra": 12,
+      "reversed": 3
+    },
+    "80": {
+      "missing": 13,
+      "extra": 13,
+      "reversed": 3
+    },
+    "150": {
+      "missing": 12,
+      "extra": 13,
+      "reversed": 4
+    }
+  },
+  "40|none|0.0": 1.4,
+  "mod|40|none": 1.4,
+  "40|extra|0.2": 1.4,
+  "mod|40|extra": 1.3,
+  "40|extra|0.5": 1.3,
+  "40|missing|0.2": 8.5,
+  "mod|40|missing": 1.0,
+  "40|missing|0.5": 9.1,
+  "40|reversed|0.2": 1.6,
+  "mod|40|reversed": 1.4,
+  "40|reversed|0.5": 1.8,
+  "40|ges|0.0": 9.8,
+  "80|none|0.0": 1.3,
+  "mod|80|none": 1.3,
+  "80|extra|0.2": 1.3,
+  "mod|80|extra": 1.3,
+  "80|extra|0.5": 1.3,
+  "80|missing|0.2": 8.9,
+  "mod|80|missing": 1.3,
+  "80|missing|0.5": 8.5,
+  "80|reversed|0.2": 1.6,
+  "mod|80|reversed": 1.4,
+  "80|reversed|0.5": 2.2,
+  "80|ges|0.0": 9.7,
+  "150|none|0.0": 1.2,
+  "mod|150|none": 1.2,
+  "150|extra|0.2": 1.2,
+  "mod|150|extra": 1.2,
+  "150|extra|0.5": 1.2,
+  "150|missing|0.2": 8.4,
+  "mod|150|missing": 1.2,
+  "150|missing|0.5": 9.0,
+  "150|reversed|0.2": 1.9,
+  "mod|150|reversed": 1.3,
+  "150|reversed|0.5": 2.5,
+  "150|ges|0.0": 8.9
+}

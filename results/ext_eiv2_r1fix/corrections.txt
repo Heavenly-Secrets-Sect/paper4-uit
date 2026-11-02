@@ -1,0 +1,32 @@
+# Round-1 numbers recomputed from results/ext_eiv_a1noise/runs.jsonl (eiv2 agent, round 2)
+
+## noise0.1: coverage (eiv / v4) and paired IS eiv - v4 [95% CI clustered by topology]
+
+T=80 none: cov eiv 0.927 v4 0.893 | dIS +0.05 [-0.10, +0.19]
+T=80 missing: cov eiv 0.945 v4 0.942 | dIS +0.73 [+0.44, +1.10]
+T=80 reversed: cov eiv 0.937 v4 0.904 | dIS +0.16 [+0.03, +0.28]
+T=150 none: cov eiv 0.950 v4 0.921 | dIS -0.08 [-0.18, +0.02]
+T=150 missing: cov eiv 0.959 v4 0.925 | dIS +0.03 [-0.07, +0.14]
+T=150 reversed: cov eiv 0.947 v4 0.914 | dIS -0.07 [-0.18, +0.04]
+min coverage eiv at noise0.1: 0.9272; v4 cells >= 0.90 at noise0.1: 5/6
+
+## Null pairs: C_abs_spurious median over runs (mean in brackets), v4 -> eiv
+
+clean T=80 none: v4 0.054 (0.075) -> eiv 0.066 (0.092)
+clean T=80 missing: v4 0.225 (0.231) -> eiv 0.261 (0.270)
+clean T=80 reversed: v4 0.054 (0.067) -> eiv 0.065 (0.082)
+clean T=150 none: v4 0.041 (0.053) -> eiv 0.043 (0.059)
+clean T=150 missing: v4 0.163 (0.167) -> eiv 0.175 (0.180)
+clean T=150 reversed: v4 0.040 (0.049) -> eiv 0.046 (0.058)
+noise0.1 T=80 none: v4 0.048 (0.064) -> eiv 0.067 (0.092)
+noise0.1 T=80 missing: v4 0.205 (0.205) -> eiv 0.251 (0.250)
+noise0.1 T=80 reversed: v4 0.045 (0.058) -> eiv 0.062 (0.082)
+noise0.1 T=150 none: v4 0.035 (0.046) -> eiv 0.048 (0.067)
+noise0.1 T=150 missing: v4 0.147 (0.149) -> eiv 0.164 (0.169)
+noise0.1 T=150 reversed: v4 0.037 (0.044) -> eiv 0.046 (0.058)
+noise0.3 T=80 none: v4 0.039 (0.052) -> eiv 0.076 (0.087)
+noise0.3 T=80 missing: v4 0.186 (0.186) -> eiv 0.230 (0.235)
+noise0.3 T=80 reversed: v4 0.037 (0.049) -> eiv 0.062 (0.075)
+noise0.3 T=150 none: v4 0.032 (0.039) -> eiv 0.060 (0.067)
+noise0.3 T=150 missing: v4 0.132 (0.135) -> eiv 0.147 (0.151)
+noise0.3 T=150 reversed: v4 0.030 (0.036) -> eiv 0.046 (0.056)

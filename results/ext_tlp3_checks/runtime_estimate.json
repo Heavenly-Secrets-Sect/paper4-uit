@@ -1,0 +1,29 @@
+{
+  "smoke": {
+    "config": "experiments/configs/ext_tlp3_smoke.json",
+    "bank": "D-07H development",
+    "units": 3,
+    "workers": 3,
+    "total_s": 233.2,
+    "calibration_s_from_file_mtime": 11.0,
+    "main_s": 222.2,
+    "rows": 168,
+    "failed": 0
+  },
+  "p4h2_estimate_workers3": {
+    "assumption": "P4-H2 = 20 topologies x 3 replicates (synthesis round 2); per-unit time as in the smoke",
+    "main_s": 4444,
+    "calibration_s": 77,
+    "total_min": 75.3
+  },
+  "d07_upper_bound": {
+    "source": "manifest seconds of ext_tlp2_t80a,b,c,t150a,b,c,d (include tlp2_lp_cal and its calibration, 7 calibration phases)",
+    "total_s": 5265.6,
+    "total_min": 87.8
+  },
+  "stated_range_min": [
+    70,
+    90
+  ],
+  "caveat": "3-unit smoke; topology sizes and machine load (other agents in parallel) change the time; budget exception beyond hard rule 5 (30 min) needs user approval"
+}

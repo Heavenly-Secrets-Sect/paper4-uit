@@ -1,0 +1,38 @@
+{
+  "var_batch_max_abs_diff": 1.509903313490213e-14,
+  "lp_common_vs_horizon_max_abs_diff_T20000": 0.00031544860745858546,
+  "lp_horizon_vs_truth_max_abs_T20000": 0.0329077677948999,
+  "var_vs_truth_max_abs_T20000": 0.029089067271566904,
+  "db90_cold_equals_warm": true,
+  "db_and_db90_same_point": true,
+  "db90_over_db95_width_ratio_median": 0.7759869615423854,
+  "lp_cal_order_independent": true,
+  "db_info_T80": {
+    "p_lp": 4,
+    "n_shock_lp_infeasible": 0,
+    "b1": 200,
+    "b2": 100,
+    "var_radius": 0.8766,
+    "var_shrunk": false,
+    "v_mean": 0.0562,
+    "v_mean_h0_off": 0.1342,
+    "tq95_median": 1.5357
+  },
+  "timing_msdb_one_call": {
+    "40": {
+      "seconds": 3.25,
+      "status": "ok",
+      "p_lp": 1
+    },
+    "80": {
+      "seconds": 6.98,
+      "status": "ok",
+      "p_lp": 4
+    },
+    "150": {
+      "seconds": 9.1,
+      "status": "ok",
+      "p_lp": 4
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "config": {
+    "name": "ext_verify_tlp_db",
+    "purpose": "Skeptic probe (verify_tlp): single vs double bootstrap TLP on cells the tlp probe did not cover (T=40; extra). D-07H development, 6 topologies, exploratory.",
+    "T": [
+      40,
+      80
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing"
+      ],
+      "rates": [
+        0.5
+      ]
+    },
+    "methods": [
+      "targeted_lp",
+      "targeted_lp_db"
+    ],
+    "calibrate_methods": [],
+    "paired_references": [
+      "targeted_lp"
+    ],
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 6,
+    "replicates": 1,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102
+  },
+  "seconds": 301.0,
+  "n_rows": 72,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+    },
+    {
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "e23b356e6b5805d611b4bddadeb02d7033ddca2005f68cc17362b040f75223b7"
+    },
+    {
+      "id": "syn_dag_03",
+      "profile": "erdos_renyi",
+      "sha256": "601c985a6224c3707d137f6db617aab5449f7b91cdd36a0bea830c3af6c36993"
+    },
+    {
+      "id": "syn_dag_04",
+      "profile": "erdos_renyi",
+      "sha256": "635a2017bfb80ddb1f8a818bf04fd7fa7722df918af46766d2a144b578274c38"
+    },
+    {
+      "id": "syn_dag_05",
+      "profile": "erdos_renyi",
+      "sha256": "69a57bed9241a8578b132eaf59ca9e7392ba2ffa6897096a4fd337ddd993ed2b"
+    }
+  ]
+}

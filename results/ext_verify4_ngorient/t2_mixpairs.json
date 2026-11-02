@@ -1,0 +1,392 @@
+{
+ "m78|laplace+->laplace+": {
+  "gate": 0.8025,
+  "correct": 0.7425,
+  "wrong": 0.06
+ },
+ "m78|laplace+->t5+": {
+  "gate": 0.7775,
+  "correct": 0.705,
+  "wrong": 0.0725
+ },
+ "m78|laplace+->skewexp+": {
+  "gate": 0.95,
+  "correct": 0.8125,
+  "wrong": 0.1375
+ },
+ "m78|laplace+->skewexp-": {
+  "gate": 0.9525,
+  "correct": 0.825,
+  "wrong": 0.1275
+ },
+ "m78|laplace+->uniform+": {
+  "gate": 0.715,
+  "correct": 0.6175,
+  "wrong": 0.0975
+ },
+ "m78|t5+->laplace+": {
+  "gate": 0.7425,
+  "correct": 0.6175,
+  "wrong": 0.125
+ },
+ "m78|t5+->t5+": {
+  "gate": 0.76,
+  "correct": 0.66,
+  "wrong": 0.1
+ },
+ "m78|t5+->skewexp+": {
+  "gate": 0.9325,
+  "correct": 0.755,
+  "wrong": 0.1775
+ },
+ "m78|t5+->skewexp-": {
+  "gate": 0.9175,
+  "correct": 0.7175,
+  "wrong": 0.2
+ },
+ "m78|t5+->uniform+": {
+  "gate": 0.5625,
+  "correct": 0.4025,
+  "wrong": 0.16
+ },
+ "m78|skewexp+->laplace+": {
+  "gate": 1.0,
+  "correct": 0.9125,
+  "wrong": 0.0875
+ },
+ "m78|skewexp+->t5+": {
+  "gate": 1.0,
+  "correct": 0.9125,
+  "wrong": 0.0875
+ },
+ "m78|skewexp+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.98,
+  "wrong": 0.02
+ },
+ "m78|skewexp+->skewexp-": {
+  "gate": 0.9975,
+  "correct": 0.8,
+  "wrong": 0.1975
+ },
+ "m78|skewexp+->uniform+": {
+  "gate": 0.9975,
+  "correct": 0.89,
+  "wrong": 0.1075
+ },
+ "m78|skewexp-->laplace+": {
+  "gate": 1.0,
+  "correct": 0.95,
+  "wrong": 0.05
+ },
+ "m78|skewexp-->t5+": {
+  "gate": 1.0,
+  "correct": 0.9325,
+  "wrong": 0.0675
+ },
+ "m78|skewexp-->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.8375,
+  "wrong": 0.1625
+ },
+ "m78|skewexp-->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.975,
+  "wrong": 0.025
+ },
+ "m78|skewexp-->uniform+": {
+  "gate": 0.995,
+  "correct": 0.8525,
+  "wrong": 0.1425
+ },
+ "m78|uniform+->laplace+": {
+  "gate": 0.4675,
+  "correct": 0.24,
+  "wrong": 0.2275
+ },
+ "m78|uniform+->t5+": {
+  "gate": 0.3925,
+  "correct": 0.1775,
+  "wrong": 0.215
+ },
+ "m78|uniform+->skewexp+": {
+  "gate": 0.845,
+  "correct": 0.485,
+  "wrong": 0.36
+ },
+ "m78|uniform+->skewexp-": {
+  "gate": 0.84,
+  "correct": 0.4775,
+  "wrong": 0.3625
+ },
+ "m78|uniform+->uniform+": {
+  "gate": 0.15,
+  "correct": 0.15,
+  "wrong": 0.0
+ },
+ "m78|MIX-AVERAGE": {
+  "correct": 0.6232421874999999,
+  "wrong": 0.13203125,
+  "gate": 0.7552734375
+ },
+ "m148|laplace+->laplace+": {
+  "gate": 0.975,
+  "correct": 0.955,
+  "wrong": 0.02
+ },
+ "m148|laplace+->t5+": {
+  "gate": 0.9525,
+  "correct": 0.9375,
+  "wrong": 0.015
+ },
+ "m148|laplace+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.9525,
+  "wrong": 0.0475
+ },
+ "m148|laplace+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.9475,
+  "wrong": 0.0525
+ },
+ "m148|laplace+->uniform+": {
+  "gate": 0.9275,
+  "correct": 0.755,
+  "wrong": 0.1725
+ },
+ "m148|t5+->laplace+": {
+  "gate": 0.9175,
+  "correct": 0.855,
+  "wrong": 0.0625
+ },
+ "m148|t5+->t5+": {
+  "gate": 0.8925,
+  "correct": 0.83,
+  "wrong": 0.0625
+ },
+ "m148|t5+->skewexp+": {
+  "gate": 0.9975,
+  "correct": 0.91,
+  "wrong": 0.0875
+ },
+ "m148|t5+->skewexp-": {
+  "gate": 0.9975,
+  "correct": 0.8875,
+  "wrong": 0.11
+ },
+ "m148|t5+->uniform+": {
+  "gate": 0.7575,
+  "correct": 0.435,
+  "wrong": 0.3225
+ },
+ "m148|skewexp+->laplace+": {
+  "gate": 1.0,
+  "correct": 0.94,
+  "wrong": 0.06
+ },
+ "m148|skewexp+->t5+": {
+  "gate": 1.0,
+  "correct": 0.95,
+  "wrong": 0.05
+ },
+ "m148|skewexp+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.995,
+  "wrong": 0.005
+ },
+ "m148|skewexp+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.8375,
+  "wrong": 0.1625
+ },
+ "m148|skewexp+->uniform+": {
+  "gate": 1.0,
+  "correct": 0.8,
+  "wrong": 0.2
+ },
+ "m148|skewexp-->laplace+": {
+  "gate": 1.0,
+  "correct": 0.9825,
+  "wrong": 0.0175
+ },
+ "m148|skewexp-->t5+": {
+  "gate": 1.0,
+  "correct": 0.9425,
+  "wrong": 0.0575
+ },
+ "m148|skewexp-->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.835,
+  "wrong": 0.165
+ },
+ "m148|skewexp-->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.995,
+  "wrong": 0.005
+ },
+ "m148|skewexp-->uniform+": {
+  "gate": 1.0,
+  "correct": 0.7825,
+  "wrong": 0.2175
+ },
+ "m148|uniform+->laplace+": {
+  "gate": 0.9975,
+  "correct": 0.4675,
+  "wrong": 0.53
+ },
+ "m148|uniform+->t5+": {
+  "gate": 1.0,
+  "correct": 0.565,
+  "wrong": 0.435
+ },
+ "m148|uniform+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.5825,
+  "wrong": 0.4175
+ },
+ "m148|uniform+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.5575,
+  "wrong": 0.4425
+ },
+ "m148|uniform+->uniform+": {
+  "gate": 0.9975,
+  "correct": 0.9975,
+  "wrong": 0.0
+ },
+ "m148|MIX-AVERAGE": {
+  "correct": 0.8019140624999999,
+  "wrong": 0.1615234375,
+  "gate": 0.9634375000000002
+ },
+ "m400|laplace+->laplace+": {
+  "gate": 1.0,
+  "correct": 1.0,
+  "wrong": 0.0
+ },
+ "m400|laplace+->t5+": {
+  "gate": 1.0,
+  "correct": 0.9975,
+  "wrong": 0.0025
+ },
+ "m400|laplace+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.99,
+  "wrong": 0.01
+ },
+ "m400|laplace+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.9875,
+  "wrong": 0.0125
+ },
+ "m400|laplace+->uniform+": {
+  "gate": 1.0,
+  "correct": 0.9175,
+  "wrong": 0.0825
+ },
+ "m400|t5+->laplace+": {
+  "gate": 1.0,
+  "correct": 0.9875,
+  "wrong": 0.0125
+ },
+ "m400|t5+->t5+": {
+  "gate": 0.9975,
+  "correct": 0.9925,
+  "wrong": 0.005
+ },
+ "m400|t5+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.99,
+  "wrong": 0.01
+ },
+ "m400|t5+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.9925,
+  "wrong": 0.0075
+ },
+ "m400|t5+->uniform+": {
+  "gate": 0.995,
+  "correct": 0.475,
+  "wrong": 0.52
+ },
+ "m400|skewexp+->laplace+": {
+  "gate": 1.0,
+  "correct": 0.9975,
+  "wrong": 0.0025
+ },
+ "m400|skewexp+->t5+": {
+  "gate": 1.0,
+  "correct": 0.995,
+  "wrong": 0.005
+ },
+ "m400|skewexp+->skewexp+": {
+  "gate": 1.0,
+  "correct": 1.0,
+  "wrong": 0.0
+ },
+ "m400|skewexp+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.8625,
+  "wrong": 0.1375
+ },
+ "m400|skewexp+->uniform+": {
+  "gate": 1.0,
+  "correct": 0.7125,
+  "wrong": 0.2875
+ },
+ "m400|skewexp-->laplace+": {
+  "gate": 1.0,
+  "correct": 0.9925,
+  "wrong": 0.0075
+ },
+ "m400|skewexp-->t5+": {
+  "gate": 1.0,
+  "correct": 0.9925,
+  "wrong": 0.0075
+ },
+ "m400|skewexp-->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.8375,
+  "wrong": 0.1625
+ },
+ "m400|skewexp-->skewexp-": {
+  "gate": 1.0,
+  "correct": 1.0,
+  "wrong": 0.0
+ },
+ "m400|skewexp-->uniform+": {
+  "gate": 1.0,
+  "correct": 0.7,
+  "wrong": 0.3
+ },
+ "m400|uniform+->laplace+": {
+  "gate": 1.0,
+  "correct": 0.535,
+  "wrong": 0.465
+ },
+ "m400|uniform+->t5+": {
+  "gate": 1.0,
+  "correct": 0.555,
+  "wrong": 0.445
+ },
+ "m400|uniform+->skewexp+": {
+  "gate": 1.0,
+  "correct": 0.5475,
+  "wrong": 0.4525
+ },
+ "m400|uniform+->skewexp-": {
+  "gate": 1.0,
+  "correct": 0.5825,
+  "wrong": 0.4175
+ },
+ "m400|uniform+->uniform+": {
+  "gate": 1.0,
+  "correct": 1.0,
+  "wrong": 0.0
+ },
+ "m400|MIX-AVERAGE": {
+  "correct": 0.8515624999999998,
+  "wrong": 0.14796875000000004,
+  "gate": 0.99953125
+ }
+}

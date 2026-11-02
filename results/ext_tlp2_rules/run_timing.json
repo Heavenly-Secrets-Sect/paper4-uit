@@ -1,0 +1,32 @@
+{
+  "source_logs": [
+    "experiments/ext/tlp2/logs/run_all.log",
+    "experiments/ext/tlp2/logs/run_resume.log"
+  ],
+  "runs_utc": {
+    "attempt2: t80a start": "2026-11-02T02:28:34Z",
+    "attempt2: t80a end": "2026-11-02T02:50:41Z",
+    "attempt2: t80b start": "2026-11-02T02:50:41Z",
+    "attempt2: t80b end": "2026-11-02T03:02:58Z",
+    "attempt2: t40 start": "2026-11-02T03:02:58Z",
+    "attempt2: t40 end": "2026-11-02T03:13:37Z",
+    "attempt2: t150c start": "2026-11-02T03:13:37Z",
+    "attempt2: t150c end": "2026-11-02T03:24:11Z",
+    "attempt2: t80c start": "2026-11-02T03:24:11Z",
+    "resume: t80c start": "2026-11-02T03:30:31Z",
+    "resume: t80c end": "2026-11-02T03:39:41Z",
+    "resume: t150a start": "2026-11-02T03:39:41Z",
+    "resume: t150a end": "2026-11-02T03:45:45Z",
+    "resume: t150b start": "2026-11-02T03:45:45Z",
+    "resume: t150b end": "2026-11-02T05:20:22Z",
+    "resume: t150d start": "2026-11-02T05:20:22Z",
+    "resume: t150d end": "2026-11-02T05:31:38Z"
+  },
+  "t80c_first_attempt": "started 2026-11-02T03:24:11Z, interrupted by usage limit before runs.jsonl/summary.md; rerun unchanged 03:30:31Z",
+  "machine_sleep_local_+0700": {
+    "sleep": "2026-11-02 10:56:30 (Clamshell/Low Power Sleep, battery 2%)",
+    "wake": "2026-11-02 12:15:18 (Wake from Hibernate)",
+    "source": "pmset -g log"
+  },
+  "note": "t150b wall-clock 95 min includes ~79 min of machine sleep; compute ~16 min. Cost estimate in docs/ext/tlp2.md section 8 (about 6 min per cell per 60 runs with two MSDB versions) is from t80a/t80b/t80c/t150c/t150d wall-clock divided by their cell counts."
+}

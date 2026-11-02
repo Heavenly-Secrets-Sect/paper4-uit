@@ -1,0 +1,13 @@
+PASS G1 interpreter: /Users/kietnt/miniconda3/bin/python (python 3.13.9, numpy 2.5.4)
+PASS G1 cwd: /Users/kietnt/Desktop/Workspace/Paper4_UIT
+PASS G2 env: unset
+PASS G3 src/paper4/*.py set: new: []; missing: []
+PASS G4 plan hashes: 62/62 match
+PASS G5 P7 own freeze hashes: 37/37 match
+PASS G5 P1 own freeze hashes: 30/30 match
+PASS G5 P2 own freeze hashes: 40/40 match
+PASS G6 configs: 4/4 P4-H2 confirmatory, seed_base 20261102
+PASS G7 run dirs present: {'results/ext_v51fix_p4h2': True, 'results/ext_auto3fix_p4h2_auto3': True, 'results/ext_auto3fix_p4h2_auto3_latent1': True, 'results/ext_baselines3_p4h2': True}
+PASS G7 P4-H2 manifests == run dirs: found: ['results/ext_auto3fix_p4h2_auto3', 'results/ext_auto3fix_p4h2_auto3_latent1', 'results/ext_baselines3_p4h2', 'results/ext_v51fix_p4h2']; forbidden present: []
+PASS G8 P4-H2 bank manifest: raw 0b7e6579ae85379149c115a18a38eb7178e71f7decc9a15c1a6c5eadaaa1c7d8; lf 0b7e6579ae85379149c115a18a38eb7178e71f7decc9a15c1a6c5eadaaa1c7d8; expected 0b7e6579ae85379149c115a18a38eb7178e71f7decc9a15c1a6c5eadaaa1c7d8 (in PROVENANCE.md: True)
+LEAD GUARD PASS

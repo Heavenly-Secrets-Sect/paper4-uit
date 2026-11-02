@@ -1,0 +1,330 @@
+{
+ "summary": {
+  "n": 32,
+  "closed_identical": 32,
+  "unpatched_differs": 31,
+  "targeted_cases": 16
+ },
+ "rows": [
+  {
+   "topo": "syn_dag_00",
+   "T": 40,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 40,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 3,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 40,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 9,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 40,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 9,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 80,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 0,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 80,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 80,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 8,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_00",
+   "T": 80,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 7,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 40,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": false
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 40,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 3,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 40,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 8,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 40,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 6,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 80,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 80,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 80,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 8,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_01",
+   "T": 80,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 8,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 40,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 0,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 40,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 40,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 9,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 40,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 11,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 80,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 3,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 80,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 5,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 80,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 7,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_02",
+   "T": 80,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 7,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 40,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 0,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 40,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 40,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 6,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 40,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 7,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 80,
+   "cell": "missing|0.2",
+   "targeted": 1,
+   "n_repair": 0,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 80,
+   "cell": "missing|0.5",
+   "targeted": 1,
+   "n_repair": 1,
+   "pool": null,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 80,
+   "cell": "reversed|0.2",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 9,
+   "closed_identical": true,
+   "unpatched_differs": true
+  },
+  {
+   "topo": "syn_dag_03",
+   "T": 80,
+   "cell": "reversed|0.5",
+   "targeted": 0,
+   "n_repair": 0,
+   "pool": 8,
+   "closed_identical": true,
+   "unpatched_differs": true
+  }
+ ]
+}

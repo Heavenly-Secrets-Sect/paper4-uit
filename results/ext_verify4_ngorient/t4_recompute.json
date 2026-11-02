@@ -1,0 +1,572 @@
+{
+ "v1|tolerant_ngA|seed20261104": {
+  "WIN": 0,
+  "wins": [],
+  "holm_p": [
+   0.1412,
+   0.9865,
+   0.3486,
+   0.6913,
+   1.0,
+   1.0,
+   0.3786,
+   0.6913
+  ],
+  "d": [
+   -0.0329,
+   -0.0158,
+   -0.0624,
+   -0.0289,
+   0.0127,
+   0.0055,
+   -0.0345,
+   -0.0425
+  ],
+  "t_test_holm_wins": [],
+  "cov_min_primary": 0.9347,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "missing-0.2",
+    1.0173
+   ],
+   [
+    150,
+    "missing-0.5",
+    1.0196
+   ],
+   [
+    150,
+    "reversed-0.2",
+    1.0379
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [
+   [
+    40,
+    "reversed-0.5"
+   ]
+  ],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.912,
+   0.97
+  ]
+ },
+ "v1|tolerant_ngA|seed1": {
+  "WIN": 0,
+  "wins": [],
+  "holm_p": [
+   0.1468,
+   0.984,
+   0.3423,
+   0.683,
+   1.0,
+   1.0,
+   0.4029,
+   0.683
+  ],
+  "d": [
+   -0.0329,
+   -0.0158,
+   -0.0624,
+   -0.0289,
+   0.0127,
+   0.0055,
+   -0.0345,
+   -0.0425
+  ],
+  "t_test_holm_wins": [],
+  "cov_min_primary": 0.9347,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "missing-0.2",
+    1.0173
+   ],
+   [
+    150,
+    "missing-0.5",
+    1.0196
+   ],
+   [
+    150,
+    "reversed-0.2",
+    1.0379
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [
+   [
+    40,
+    "reversed-0.5"
+   ]
+  ],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.912,
+   0.97
+  ]
+ },
+ "v1|tolerant_ngA|seed2": {
+  "WIN": 0,
+  "wins": [],
+  "holm_p": [
+   0.158,
+   0.9975,
+   0.323,
+   0.697,
+   1.0,
+   1.0,
+   0.3822,
+   0.697
+  ],
+  "d": [
+   -0.0329,
+   -0.0158,
+   -0.0624,
+   -0.0289,
+   0.0127,
+   0.0055,
+   -0.0345,
+   -0.0425
+  ],
+  "t_test_holm_wins": [],
+  "cov_min_primary": 0.9347,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "missing-0.2",
+    1.0173
+   ],
+   [
+    150,
+    "missing-0.5",
+    1.0196
+   ],
+   [
+    150,
+    "reversed-0.2",
+    1.0379
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [
+   [
+    40,
+    "reversed-0.5"
+   ]
+  ],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.912,
+   0.97
+  ]
+ },
+ "v1|tolerant_ngB|seed20261104": {
+  "WIN": 1,
+  "wins": [
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   1.0,
+   1.0,
+   0.0016,
+   0.7853,
+   0.7853,
+   0.7086,
+   0.4931,
+   0.7853
+  ],
+  "d": [
+   0.0052,
+   0.0371,
+   -0.0791,
+   -0.0247,
+   -0.0085,
+   -0.0196,
+   -0.0353,
+   -0.0334
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@80"
+  ],
+  "cov_min_primary": 0.9444,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "reversed-0.2",
+    1.0245
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.912,
+   0.97
+  ]
+ },
+ "v1|tolerant_ngB|seed1": {
+  "WIN": 1,
+  "wins": [
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   1.0,
+   1.0,
+   0.0016,
+   0.7672,
+   0.7672,
+   0.6903,
+   0.5009,
+   0.7672
+  ],
+  "d": [
+   0.0052,
+   0.0371,
+   -0.0791,
+   -0.0247,
+   -0.0085,
+   -0.0196,
+   -0.0353,
+   -0.0334
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@80"
+  ],
+  "cov_min_primary": 0.9444,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "reversed-0.2",
+    1.0245
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.912,
+   0.97
+  ]
+ },
+ "v1|tolerant_ngB|seed2": {
+  "WIN": 1,
+  "wins": [
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   1.0,
+   1.0,
+   0.0012,
+   0.7755,
+   0.7755,
+   0.7164,
+   0.4771,
+   0.7755
+  ],
+  "d": [
+   0.0052,
+   0.0371,
+   -0.0791,
+   -0.0247,
+   -0.0085,
+   -0.0196,
+   -0.0353,
+   -0.0334
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@80"
+  ],
+  "cov_min_primary": 0.9444,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "reversed-0.2",
+    1.0245
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.912,
+   0.97
+  ]
+ },
+ "v2|tolerant_ngA|seed20261104": {
+  "WIN": 2,
+  "wins": [
+   "missing-0.5",
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   0.1533,
+   0.0161,
+   0.063,
+   0.063,
+   0.1533,
+   0.0606,
+   0.0028,
+   0.1161
+  ],
+  "d": [
+   -0.0165,
+   -0.0843,
+   -0.0511,
+   -0.0637,
+   -0.0087,
+   -0.0377,
+   -0.0777,
+   -0.0326
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@150"
+  ],
+  "cov_min_primary": 0.934,
+  "noharm_a": true,
+  "noharm_a_bad": [],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.922,
+   0.967
+  ]
+ },
+ "v2|tolerant_ngA|seed1": {
+  "WIN": 2,
+  "wins": [
+   "missing-0.5",
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   0.1573,
+   0.0129,
+   0.0672,
+   0.0603,
+   0.1573,
+   0.0603,
+   0.0012,
+   0.1106
+  ],
+  "d": [
+   -0.0165,
+   -0.0843,
+   -0.0511,
+   -0.0637,
+   -0.0087,
+   -0.0377,
+   -0.0777,
+   -0.0326
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@150"
+  ],
+  "cov_min_primary": 0.934,
+  "noharm_a": true,
+  "noharm_a_bad": [],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.922,
+   0.967
+  ]
+ },
+ "v2|tolerant_ngA|seed2": {
+  "WIN": 2,
+  "wins": [
+   "missing-0.5",
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   0.1538,
+   0.0164,
+   0.0633,
+   0.0633,
+   0.1538,
+   0.0564,
+   0.0008,
+   0.1153
+  ],
+  "d": [
+   -0.0165,
+   -0.0843,
+   -0.0511,
+   -0.0637,
+   -0.0087,
+   -0.0377,
+   -0.0777,
+   -0.0326
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@150"
+  ],
+  "cov_min_primary": 0.934,
+  "noharm_a": true,
+  "noharm_a_bad": [],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.922,
+   0.967
+  ]
+ },
+ "v2|tolerant_ngB|seed20261104": {
+  "WIN": 3,
+  "wins": [
+   "reversed-0.2",
+   "missing-0.5",
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   0.8864,
+   1.0,
+   0.0004,
+   0.8385,
+   1.0,
+   0.0186,
+   0.007,
+   1.0
+  ],
+  "d": [
+   -0.0077,
+   -0.0114,
+   -0.0818,
+   -0.0328,
+   -0.0027,
+   -0.0465,
+   -0.0625,
+   0.0508
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@80",
+   "missing-0.5@150",
+   "reversed-0.2@150"
+  ],
+  "cov_min_primary": 0.9243,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "reversed-0.5",
+    1.0324
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.922,
+   0.967
+  ]
+ },
+ "v2|tolerant_ngB|seed1": {
+  "WIN": 3,
+  "wins": [
+   "reversed-0.2",
+   "missing-0.5",
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   0.9036,
+   1.0,
+   0.0004,
+   0.8405,
+   1.0,
+   0.0174,
+   0.0063,
+   1.0
+  ],
+  "d": [
+   -0.0077,
+   -0.0114,
+   -0.0818,
+   -0.0328,
+   -0.0027,
+   -0.0465,
+   -0.0625,
+   0.0508
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@80",
+   "missing-0.5@150",
+   "reversed-0.2@150"
+  ],
+  "cov_min_primary": 0.9243,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "reversed-0.5",
+    1.0324
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.922,
+   0.967
+  ]
+ },
+ "v2|tolerant_ngB|seed2": {
+  "WIN": 3,
+  "wins": [
+   "reversed-0.2",
+   "missing-0.5",
+   "reversed-0.2"
+  ],
+  "holm_p": [
+   0.8816,
+   1.0,
+   0.0004,
+   0.8353,
+   1.0,
+   0.0201,
+   0.0056,
+   1.0
+  ],
+  "d": [
+   -0.0077,
+   -0.0114,
+   -0.0818,
+   -0.0328,
+   -0.0027,
+   -0.0465,
+   -0.0625,
+   0.0508
+  ],
+  "t_test_holm_wins": [
+   "reversed-0.2@80",
+   "missing-0.5@150",
+   "reversed-0.2@150"
+  ],
+  "cov_min_primary": 0.9243,
+  "noharm_a": false,
+  "noharm_a_bad": [
+   [
+    150,
+    "reversed-0.5",
+    1.0324
+   ]
+  ],
+  "n_gauss_cells": 21,
+  "noharm_b_bad": [],
+  "n_nonprim_cells": 13,
+  "v5_1_cov_range_ngmix": [
+   0.922,
+   0.967
+  ]
+ }
+}

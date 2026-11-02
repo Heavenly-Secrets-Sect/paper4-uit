@@ -1,0 +1,27 @@
+{
+ "_note": "Spec manifest of tolerant_v5_1_hs (docs/ext/r4hubscreen.md, Frozen spec). sha256 at freeze time (2026-11-02). The calibration files hold the D-07H-development factors; a held-out run must re-tune on its own calibration bank with run_r4.py or use these files as frozen factors, as decided before that run.",
+ "files": {
+  "src/paper4/ext_r4hubscreen.py": "210b18a79840fe41ba1f70df41818096a12144029f079327c67ddd4b28c8c81d",
+  "src/paper4/ext_v51.py": "48bb21ad32d850483d9d46684b72a50c6396029f70d60112fbbf738bc58ca286",
+  "src/paper4/ext_narrow.py": "9fc15ae7147252cd7c67d6b28c3de6bcd38a410f9f8f31c90656e80f4985f728",
+  "src/paper4/methods.py": "85bc718f0d222fbe47c4217d1e1b05ee702f1dc89c464fc35d9da4546f19cfbd",
+  "src/paper4/estimator.py": "70314e984e203b6838b6481394423a717411579eb0d08bc39cd295c46cc44c2d",
+  "src/paper4/effects.py": "5fd366609bb368ecf784a3d65388b88e942cec07a255c96546f5e4640921f95a",
+  "src/paper4/skeleton.py": "c78ba5b930a49a0d06b9973432431f62cb72cfd7a8637a022d900d346e234b5e",
+  "src/paper4/generator.py": "84a52a8130a1173d9c2f6aca5c3ec2ce5472504a1fc6bc4fb7e4ab88f093ab2d",
+  "src/paper4/metrics.py": "32116e29fc22cc1630f0b5c98d4e9ab811b7c8f7108c8dda58833cb737bbdf08",
+  "src/paper4/topology.py": "74be60eec6e7aecf250bf171fbd87d9c6170c3007f08e87431014f1a32578588",
+  "experiments/run_experiment.py": "2255693c9e3f56d186667e92136c22ad0e36f4520b729c4a07a9f248bf4c39d8",
+  "experiments/ext/r4hubscreen/run_r4.py": "3429ba46858dd0b8458f55aa3f23482f9b0eb67efb8b12e633344614cd748645",
+  "experiments/ext/r4hubscreen/rule_eval.py": "54fb91d5021eb904305736a401ec2dd92d6085a04bb556480f894a1998dd424e",
+  "experiments/ext/r4hubscreen/check_identity.py": "236f8bc9be1b17390c63469682df7daebdbb8262cf1bc6e4d66fd5d0512bc310",
+  "experiments/ext/r4hubscreen/describe.py": "a45690a24bb064e987d0702a4e769611fdceb44aabb9b05e777749ade0eb299f",
+  "experiments/ext/r4hubscreen/probe_incidence.py": "ac7d383c4e54a75d3f0822525bafa5a15a177174a5a719c415a6d756513427e8",
+  "experiments/ext/r4hubscreen/real_panel.py": "2eda0493c8ad6d1f83f1ee29aca33d01112c9e9a26aa46e03bb171d11e166cae",
+  "experiments/configs/ext_r4hubscreen_lag2.json": "01eaa4b0595088e180dac2459ce3d45831ecde80e73a9bf398db048bd1506450",
+  "experiments/configs/ext_r4hubscreen_lag1.json": "de602f5b8873e0e6ba34d3a42ca8436df2706843c9fabb4be0c935e59c360b18",
+  "experiments/ext/v51/frozen_v4_v51.json": "43ac16aa457a534e5785b9df9502d690e2074bddd2643b7a879cfde1cb60aab1",
+  "results/ext_r4hubscreen_lag2/calibration.json": "76d9f1e04cfbb26d93d242e722a168be4a4cb655c535990dc5e444a271e9f2ea",
+  "results/ext_r4hubscreen_lag1/calibration.json": "7c34fafee7bfcdba8ad8e9132648f8e98804c58c319c771ecee93ed84eaeae82"
+ }
+}

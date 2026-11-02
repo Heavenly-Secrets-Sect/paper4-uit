@@ -51,9 +51,14 @@ class DynamicSEM:
     def lag_max(self) -> int:
         return self.B.shape[0] - 1
 
+    @property
+    def n_all(self) -> int:
+        """Observed plus latent nodes. Latent nodes (see ``add_latent``) come after the observed ones."""
+        return self.B.shape[1]
+
     def simulate(self, T: int, rng: np.random.Generator) -> np.ndarray:
-        """T consecutive observations from the stationary regime."""
-        n, p = self.n, self.lag_max
+        """T consecutive observations of the observed nodes from the stationary regime."""
+        n, p = self.n_all, self.lag_max
         A = np.linalg.inv(np.eye(n) - self.B[0])
         sd = np.sqrt(self.noise_var)
         total = T + self.config.burn_in
@@ -63,7 +68,7 @@ class DynamicSEM:
             for k in range(1, p + 1):
                 acc += self.B[k] @ x[t - k]
             x[t] = A @ acc
-        return x[p + self.config.burn_in:]
+        return x[p + self.config.burn_in:, : self.n]
 
 
 def build_dynamic_sem(topology: Topology, config: GeneratorConfig, rng: np.random.Generator) -> DynamicSEM:
@@ -94,3 +99,45 @@ def build_dynamic_sem(topology: Topology, config: GeneratorConfig, rng: np.rando
         shrink=shrink,
         meta={"companion_radius": companion_radius(B), "bank": topology.bank, "profile": topology.profile},
     )
+
+
+# --------------------------------------------------------------------------- A1: latent and noise
+# Plan section 9 assigns "latent variables and measurement noise" to Paper 4. Neither changes the
+# estimand: the truth of an observed pair is still its response to the observed node's structural
+# shock in the full model. Both are deviations the module was not designed for.
+
+def add_latent(sem: DynamicSEM, n_latent: int, rng: np.random.Generator, *, n_children: int = 3,
+               coef: tuple[float, float] = (0.3, 0.8), persistence: tuple[float, float] = (0.5, 0.8)) -> DynamicSEM:
+    """A copy of ``sem`` with ``n_latent`` hidden common causes appended after the observed nodes.
+
+    Each latent node is an AR(1) process with unit shock variance that drives ``n_children``
+    distinct observed nodes, at lag 0 with probability q0 and otherwise at a lag drawn from
+    1..lag_max, with |b| ~ U(coef) and a random sign. Latent nodes have no parents, so the observed
+    block of B, and with it every observed edge and its truth, is unchanged. The companion radius
+    is that of the observed block or of the latent AR terms, whichever is larger.
+    """
+    if n_latent == 0:
+        return sem
+    n, p, cfg = sem.n, sem.lag_max, sem.config
+    m = n + n_latent
+    B = np.zeros((p + 1, m, m))
+    B[:, :n, :n] = sem.B
+    latent_edges = []
+    for a in range(n, m):
+        B[1, a, a] = rng.uniform(*persistence)
+        for child in rng.choice(n, size=n_children, replace=False):
+            lag = 0 if rng.random() < cfg.q0 else int(rng.integers(1, p + 1))
+            B[lag, child, a] = rng.uniform(*coef) * rng.choice((-1.0, 1.0))
+            latent_edges.append((int(a), int(child), lag))
+    noise_var = np.concatenate([sem.noise_var, np.ones(n_latent)])
+    return DynamicSEM(sem.topology_id, sem.nodes, B, noise_var, dict(sem.edge_lag), cfg, sem.shrink,
+                      {**sem.meta, "n_latent": n_latent, "latent_edges": latent_edges,
+                       "companion_radius": companion_radius(B)})
+
+
+def add_measurement_noise(data: np.ndarray, ratio: float, rng: np.random.Generator) -> np.ndarray:
+    """Observed = true + independent Gaussian error with variance ``ratio`` times the variance of
+    each series (reliability 1 / (1 + ratio)). The truth refers to the error-free series."""
+    if ratio == 0:
+        return data
+    return data + rng.normal(size=data.shape) * np.sqrt(ratio * data.var(axis=0))

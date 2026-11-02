@@ -1,0 +1,12 @@
+none T=80 ratio=0.0 G0.5         n=8 cov=0.923 IS=2.08 width=1.58 abserr=0.320
+none T=80 ratio=0.0 G0.7         n=8 cov=0.930 IS=2.18 width=1.61 abserr=0.320
+none T=80 ratio=0.0 v3           n=8 cov=0.908 IS=1.96 width=1.37 abserr=0.271
+none T=80 ratio=0.3 G0.5         n=8 cov=0.875 IS=3.06 width=1.72 abserr=0.356
+none T=80 ratio=0.3 G0.7         n=8 cov=0.908 IS=3.15 width=1.89 abserr=0.392
+none T=80 ratio=0.3 v3           n=8 cov=0.790 IS=3.60 width=1.39 abserr=0.325
+none T=150 ratio=0.0 G0.5         n=8 cov=0.959 IS=1.17 width=1.04 abserr=0.189
+none T=150 ratio=0.0 G0.7         n=8 cov=0.959 IS=1.19 width=1.07 abserr=0.189
+none T=150 ratio=0.0 v3           n=8 cov=0.952 IS=1.13 width=1.01 abserr=0.189
+none T=150 ratio=0.3 G0.5         n=8 cov=0.882 IS=2.03 width=1.27 abserr=0.203
+none T=150 ratio=0.3 G0.7         n=8 cov=0.915 IS=1.92 width=1.40 abserr=0.210
+none T=150 ratio=0.3 v3           n=8 cov=0.738 IS=2.99 width=1.01 abserr=0.290

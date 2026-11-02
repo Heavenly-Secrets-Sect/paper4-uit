@@ -37,6 +37,9 @@ Bám theo `Plan_Paper3_Paper4_Paper5.docx`, mục 5.2. Đây là trạng thái c
 | (B3) Làm hỏng | `src/paper4/skeleton.py` | `damage(skel, kind, rate, rng)` | Skeleton hỏng kèm `damage_estimate`. `to_interface()` xuất theo giao diện ở plan mục 7 |
 | (B4) Fit và bootstrap dùng chung | `src/paper4/estimator.py` | `fit_equations`, `bootstrap_C` | B̂ (OLS hoặc ridge), C(H) bootstrap |
 | (B4) Baseline b0–b5 | `src/paper4/methods.py` | `oracle`, `plugin`, `inflate`, `lp_allpast`, `bagging` | C(H) kèm khoảng 95% |
+| (B4) Baseline đã công bố | `src/paper4/methods.py` | `ida_union` (IDA), `bvar_minnesota` (BVAR Minnesota) | C(H) kèm khoảng 95% |
+| Biến ẩn, nhiễu đo | `src/paper4/generator.py` | `add_latent`, `add_measurement_noise`; config key `scenarios` | Dữ liệu quan sát bị lệch, truth giữ nguyên |
+| Skeleton học từ dữ liệu | `src/paper4/learned.py` | `ges_skeleton` (GES của Paper 2, import chỉ đọc), `damage_counts`; config key `learned` | Skeleton GES kèm mức hỏng ước lượng |
 | (B4) Module chịu lỗi | `src/paper4/methods.py` | `tolerant_v3` + `calibrate_width` = **`tolerant_v4`** (module chính thức) | Mọi lag khi khai báo thiếu cạnh, thêm lại cạnh cùng kỳ theo tương quan phần dư, rút chiều có nhắm mục tiêu khi khai báo đảo, nới rộng theo (T, loại hỏng). Các bản v1 `soft`, v2 `tolerant` bị loại, giữ lại để đối chiếu |
 | So với truth | `src/paper4/metrics.py` | `evaluate(sem, est, H)` | Sai số cường độ (theo cạnh và theo C(H)), sai số lag, coverage và độ rộng khoảng |
 | Runner | `experiments/run_experiment.py` | `--config experiments/configs/*.json` | `results/<name>/`: runs, skeletons (log hỏng riêng), calibration, summary |
@@ -50,10 +53,11 @@ Bám theo `Plan_Paper3_Paper4_Paper5.docx`, mục 5.2. Đây là trạng thái c
 - RQ4.3: [ket_qua_rq43.md](ket_qua_rq43.md)
 - RQ4.4: [ket_qua_rq44.md](ket_qua_rq44.md)
 - Vùng dùng được (sản phẩm P4): [ket_qua_vung_dung_duoc.md](ket_qua_vung_dung_duoc.md)
+- Nhóm A (baseline đã công bố, biến ẩn và nhiễu đo, skeleton do GES học): [ket_qua_nhom_a.md](ket_qua_nhom_a.md)
+- Khảo sát tài liệu 2023–2026: [khao_sat_tai_lieu_2023_2026.md](khao_sat_tai_lieu_2023_2026.md)
 - Nhật ký các vòng cải tiến và quy tắc ghi trước: [decision_rules.md](decision_rules.md)
 
 ## Bước chưa làm
 
 - **B2, mở rộng T bằng hàm lạm phát:** chờ thầy định nghĩa (câu hỏi 3 ở [open_questions.md](open_questions.md)). Hiện tại generator sinh chuỗi dài bao nhiêu cũng được từ cùng một cấu trúc; đây là hướng thứ nhất mà plan mục 5.5 nêu.
-- **Biến ẩn và nhiễu đo** (plan mục 9 giao cho Bài 4).
-- **Lỗi do chính thuật toán học skeleton tạo ra** (skeleton học bằng GES hay SP-GES của Bài 2).
+- Biến ẩn và nhiễu đo (plan mục 9) và skeleton do GES của Bài 2 học: **đã làm**, xem [ket_qua_nhom_a.md](ket_qua_nhom_a.md). Còn thiếu hiệu chỉnh errors-in-variables cho nhiễu đo lớn.

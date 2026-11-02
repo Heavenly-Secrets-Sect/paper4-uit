@@ -1,0 +1,11 @@
+{
+ "verifier": "verify3_revlag3",
+ "date_utc": "2026-11-02",
+ "prereg_hash_check": "sha256(docs/ext/revlag3.md up to '## Kết quả') = 3e1764310e08ab87409f1c156aea25e43bc08043f0fbbd1fb0c230112d5dd1f9 recomputed, matches; all 11 file hashes in rule_hash_before_runs.txt match current files; mtimes: rule hash 06:15:39Z < mc_draws 06:15:56Z < flag_extra 06:16:16Z < rev run 06:17:51Z",
+ "dryrun_p4h2spec_d07h": {"config": "experiments/ext/verify3_revlag3/dryrun_d07h.json (copy of ext_revlag3_p4h2_dryrun_d07h.json, output redirected)", "units": 6, "workers": 2, "seconds": 41.0, "pair_rows": 8442, "analyze_lag_p4h2_v2": "ran, exit 0", "analyze_flag_p4h2_v2": "ran, exit 0", "extrapolated_60_units_workers3_seconds": "approx 270-410"},
+ "R1_on_invalid_rev_rows_D07": "results/ext_verify3_revlag3/rev_invalid_copy/rev_analysis.md (their hashed analyze_rev.py on a copy; oracle columns invalid, R1/R2 use only v4 and M): R1 0/4 for v4R, v4R_mix, v4Rmap; Holm(4) 0/4; Holm(12) 0/4",
+ "matched_width": "results/ext_verify3_revlag3/matched_width.json (D-07H probes), matched_width_d07.json (D-07 rows)",
+ "holm_inv_width": "results/ext_verify3_revlag3/holm_inv_width.json",
+ "v4_realisation": "results/ext_verify3_revlag3/v4_realisation.json",
+ "known_truth": "results/ext_verify3_revlag3/known_truth.json"
+}

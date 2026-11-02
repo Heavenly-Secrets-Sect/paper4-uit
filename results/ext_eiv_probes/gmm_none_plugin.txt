@@ -1,0 +1,6 @@
+none plugin L=2 T=80 ratio=0.0 true share=0.000 est mean=0.035 sd=0.044 med=0.010
+none plugin L=2 T=80 ratio=0.1 true share=0.091 est mean=0.095 sd=0.058 med=0.095
+none plugin L=2 T=80 ratio=0.3 true share=0.231 est mean=0.193 sd=0.076 med=0.210
+none plugin L=2 T=150 ratio=0.0 true share=0.000 est mean=0.033 sd=0.028 med=0.030
+none plugin L=2 T=150 ratio=0.1 true share=0.091 est mean=0.107 sd=0.037 med=0.105
+none plugin L=2 T=150 ratio=0.3 true share=0.231 est mean=0.220 sd=0.056 med=0.220

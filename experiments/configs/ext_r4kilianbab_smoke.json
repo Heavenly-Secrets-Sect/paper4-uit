@@ -1,0 +1,79 @@
+{
+  "name": "ext_r4kilianbab_smoke",
+  "purpose": "smoke test of the r4kilianbab driver on D-07H development only (2 topologies, T 40, n_boot 49). Not evaluation.",
+  "T": [
+    40
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v5_1",
+    "r4kilianbab_bab",
+    "r4kilianbab_babbc",
+    "r4kilianbab_babraw",
+    "oracle"
+  ],
+  "paired_references": [
+    "tolerant_v5_1"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 2,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": 2,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 49,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "calibrate_methods": [
+    "tolerant_v5_1",
+    "r4kilianbab_bab",
+    "r4kilianbab_babbc"
+  ],
+  "frozen_calibration": "experiments/ext/v51/frozen_v4_v51.json",
+  "r4_tune_methods": [
+    "r4kilianbab_bab",
+    "r4kilianbab_babbc"
+  ]
+}

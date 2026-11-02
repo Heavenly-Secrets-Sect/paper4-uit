@@ -1,0 +1,69 @@
+{
+  "name": "ext_redteam_calbase",
+  "purpose": "Red team E3: published baselines (pselect_union, bvar_minnesota, ida_union) and the all-lags ablation widened by the same per-(T, stated kind) calibration as tolerant_v4 on D-07H development. Pre-registered in docs/ext/redteam.md.",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "pselect_cal",
+    "bvar_cal",
+    "ida_cal",
+    "fullvar_cal"
+  ],
+  "paired_references": [
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "calibrate_methods": [
+    "pselect_cal",
+    "bvar_cal",
+    "ida_cal",
+    "fullvar_cal"
+  ]
+}

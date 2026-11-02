@@ -1,0 +1,82 @@
+{
+ "counts": {
+  "red|19|missing": 2,
+  "red_T|19": 3,
+  "red_all|all": 6,
+  "red|19|reversed": 1,
+  "red|25|missing": 2,
+  "red_T|25": 2,
+  "red|30|missing": 1,
+  "red_T|30": 1
+ },
+ "red_source": {
+  "19|none": "T pooled over kinds",
+  "19|extra": "T pooled over kinds",
+  "19|missing": "T pooled over kinds",
+  "19|reversed": "T pooled over kinds",
+  "25|none": "pooled over every calibration T and kind",
+  "25|extra": "pooled over every calibration T and kind",
+  "25|missing": "pooled over every calibration T and kind",
+  "25|reversed": "pooled over every calibration T and kind",
+  "30|none": "pooled over every calibration T and kind",
+  "30|extra": "pooled over every calibration T and kind",
+  "30|missing": "pooled over every calibration T and kind",
+  "30|reversed": "pooled over every calibration T and kind",
+  "35|none": "pooled over every calibration T and kind",
+  "35|extra": "pooled over every calibration T and kind",
+  "35|missing": "pooled over every calibration T and kind",
+  "35|reversed": "pooled over every calibration T and kind",
+  "40|none": "pooled over every calibration T and kind",
+  "40|extra": "pooled over every calibration T and kind",
+  "40|missing": "pooled over every calibration T and kind",
+  "40|reversed": "pooled over every calibration T and kind",
+  "80|none": "pooled over every calibration T and kind",
+  "80|extra": "pooled over every calibration T and kind",
+  "80|missing": "pooled over every calibration T and kind",
+  "80|reversed": "pooled over every calibration T and kind",
+  "150|none": "pooled over every calibration T and kind",
+  "150|extra": "pooled over every calibration T and kind",
+  "150|missing": "pooled over every calibration T and kind",
+  "150|reversed": "pooled over every calibration T and kind"
+ },
+ "status": {
+  "19|extra": {
+   "ok|red0": 2
+  },
+  "19|missing": {
+   "ok|red1": 2
+  },
+  "19|reversed": {
+   "ok|red1": 1,
+   "ok|red0": 1
+  },
+  "25|extra": {
+   "ok|red0": 2
+  },
+  "25|missing": {
+   "ok|red1": 2
+  },
+  "25|reversed": {
+   "ok|red0": 2
+  },
+  "30|extra": {
+   "ok|red0": 2
+  },
+  "30|missing": {
+   "ok|red1": 1,
+   "ok|red0": 1
+  },
+  "30|reversed": {
+   "ok|red0": 2
+  },
+  "35|extra": {
+   "ok|red0": 2
+  },
+  "35|missing": {
+   "ok|red0": 2
+  },
+  "35|reversed": {
+   "ok|red0": 2
+  }
+ }
+}

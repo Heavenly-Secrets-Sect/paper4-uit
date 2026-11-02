@@ -1,0 +1,112 @@
+{
+ "counts": {
+  "red|19|extra": 59,
+  "red_T|19": 170,
+  "red_all|all": 360,
+  "red|19|missing": 60,
+  "red|25|missing": 60,
+  "red_T|25": 107,
+  "red|30|missing": 57,
+  "red_T|30": 80,
+  "red|19|reversed": 48,
+  "red|25|extra": 24,
+  "red|35|missing": 3,
+  "red_T|35": 3,
+  "red|19|none": 3,
+  "red|25|none": 2,
+  "red|25|reversed": 21,
+  "red|30|reversed": 12,
+  "red|30|extra": 10,
+  "red|30|none": 1
+ },
+ "red_source": {
+  "19|none": "T,kind",
+  "19|extra": "T,kind",
+  "19|missing": "T,kind",
+  "19|reversed": "T,kind",
+  "25|none": "T pooled over kinds",
+  "25|extra": "T,kind",
+  "25|missing": "T,kind",
+  "25|reversed": "T,kind",
+  "30|none": "T pooled over kinds",
+  "30|extra": "T,kind",
+  "30|missing": "T,kind",
+  "30|reversed": "T,kind",
+  "35|none": "T pooled over kinds",
+  "35|extra": "T pooled over kinds",
+  "35|missing": "T,kind",
+  "35|reversed": "T pooled over kinds",
+  "40|none": "pooled over every calibration T and kind",
+  "40|extra": "pooled over every calibration T and kind",
+  "40|missing": "pooled over every calibration T and kind",
+  "40|reversed": "pooled over every calibration T and kind",
+  "80|none": "pooled over every calibration T and kind",
+  "80|extra": "pooled over every calibration T and kind",
+  "80|missing": "pooled over every calibration T and kind",
+  "80|reversed": "pooled over every calibration T and kind",
+  "150|none": "pooled over every calibration T and kind",
+  "150|extra": "pooled over every calibration T and kind",
+  "150|missing": "pooled over every calibration T and kind",
+  "150|reversed": "pooled over every calibration T and kind"
+ },
+ "status": {
+  "19|extra": {
+   "ok|red1": 59,
+   "ok|red0": 1
+  },
+  "19|missing": {
+   "ok|red1": 60
+  },
+  "19|reversed": {
+   "ok|red0": 9,
+   "ok|red1": 48
+  },
+  "25|extra": {
+   "ok|red0": 36,
+   "ok|red1": 24
+  },
+  "25|missing": {
+   "ok|red1": 60
+  },
+  "25|reversed": {
+   "ok|red0": 36,
+   "ok|red1": 21
+  },
+  "30|extra": {
+   "ok|red0": 50,
+   "ok|red1": 10
+  },
+  "30|missing": {
+   "ok|red1": 57,
+   "ok|red0": 3
+  },
+  "30|reversed": {
+   "ok|red0": 45,
+   "ok|red1": 12
+  },
+  "35|extra": {
+   "ok|red0": 60
+  },
+  "35|missing": {
+   "ok|red0": 57,
+   "ok|red1": 3
+  },
+  "35|reversed": {
+   "ok|red0": 57
+  },
+  "19|none": {
+   "ok|red1": 3
+  },
+  "25|none": {
+   "ok|red1": 2,
+   "ok|red0": 1
+  },
+  "30|none": {
+   "ok|red0": 2,
+   "ok|red1": 1
+  },
+  "35|none": {
+   "ok|red0": 3
+  }
+ }
+}

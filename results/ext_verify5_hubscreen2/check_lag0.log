@@ -1,0 +1,20 @@
+{
+ "jobs": 40,
+ "hs2_runs": 240,
+ "trunc_runs": 92,
+ "instrumentation": {
+  "reduce_calls": 161020,
+  "trunc_calls": 21416,
+  "lag0_in": 255872,
+  "lag0_violations": 0,
+  "ownlag1_violations": 0,
+  "data_fits_checked": 240,
+  "declared_parent_missing": 0,
+  "declared_parents_total": 5040
+ },
+ "reproduced_vs_logged": {
+  "match": 240,
+  "mismatch": 0,
+  "examples": []
+ }
+}

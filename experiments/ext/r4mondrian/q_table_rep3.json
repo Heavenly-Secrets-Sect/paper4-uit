@@ -1,0 +1,171 @@
+{
+ "_note": "r4mondrian conformal factors (rep3): key T|stated kind|class (all = M0; R, S = M2 classes, merged into the pooled q when a class has N < 50). Effective factor on the UNSCALED percentile half-width h of tolerant_v5_1: interval = mid +/- q*h. Source: results/ext_r4mondrian_cal/pairs.npz (D-07H development, calibration-phase seeds, replicates [0, 1, 2]).",
+ "40|extra|all": {
+  "q": 1.5394736898958317,
+  "N": 3508
+ },
+ "40|extra|R": {
+  "q": 1.5394736898958317,
+  "N": 0,
+  "merged": true
+ },
+ "40|extra|S": {
+  "q": 1.5394736898958317,
+  "N": 3508,
+  "merged": true
+ },
+ "40|missing|all": {
+  "q": 1.2613094095545851,
+  "N": 3508
+ },
+ "40|missing|R": {
+  "q": 1.3706038097706885,
+  "N": 1285,
+  "merged": false
+ },
+ "40|missing|S": {
+  "q": 1.1827551978089024,
+  "N": 2223,
+  "merged": false
+ },
+ "40|none|all": {
+  "q": 1.6444132519801458,
+  "N": 1841
+ },
+ "40|none|R": {
+  "q": 1.6444132519801458,
+  "N": 0,
+  "merged": true
+ },
+ "40|none|S": {
+  "q": 1.6444132519801458,
+  "N": 1841,
+  "merged": true
+ },
+ "40|reversed|all": {
+  "q": 1.6409188477574495,
+  "N": 3421
+ },
+ "40|reversed|R": {
+  "q": 1.6408531671122637,
+  "N": 950,
+  "merged": false
+ },
+ "40|reversed|S": {
+  "q": 1.6577949349728458,
+  "N": 2471,
+  "merged": false
+ },
+ "80|extra|all": {
+  "q": 1.2235777162523422,
+  "N": 3508
+ },
+ "80|extra|R": {
+  "q": 1.2235777162523422,
+  "N": 0,
+  "merged": true
+ },
+ "80|extra|S": {
+  "q": 1.2235777162523422,
+  "N": 3508,
+  "merged": true
+ },
+ "80|missing|all": {
+  "q": 1.1676425730851723,
+  "N": 3508
+ },
+ "80|missing|R": {
+  "q": 1.2758496298817397,
+  "N": 1279,
+  "merged": false
+ },
+ "80|missing|S": {
+  "q": 1.1071341627050733,
+  "N": 2229,
+  "merged": false
+ },
+ "80|none|all": {
+  "q": 1.2685887416713277,
+  "N": 1841
+ },
+ "80|none|R": {
+  "q": 1.2685887416713277,
+  "N": 0,
+  "merged": true
+ },
+ "80|none|S": {
+  "q": 1.2685887416713277,
+  "N": 1841,
+  "merged": true
+ },
+ "80|reversed|all": {
+  "q": 1.3388380824628991,
+  "N": 3421
+ },
+ "80|reversed|R": {
+  "q": 1.5015673699811256,
+  "N": 1114,
+  "merged": false
+ },
+ "80|reversed|S": {
+  "q": 1.2178632235188234,
+  "N": 2307,
+  "merged": false
+ },
+ "150|extra|all": {
+  "q": 1.1443637939630715,
+  "N": 3508
+ },
+ "150|extra|R": {
+  "q": 1.1443637939630715,
+  "N": 0,
+  "merged": true
+ },
+ "150|extra|S": {
+  "q": 1.1443637939630715,
+  "N": 3508,
+  "merged": true
+ },
+ "150|missing|all": {
+  "q": 1.085767411300069,
+  "N": 3508
+ },
+ "150|missing|R": {
+  "q": 1.1008277360729293,
+  "N": 1282,
+  "merged": false
+ },
+ "150|missing|S": {
+  "q": 1.0780933640678434,
+  "N": 2226,
+  "merged": false
+ },
+ "150|none|all": {
+  "q": 1.1452193904387327,
+  "N": 1841
+ },
+ "150|none|R": {
+  "q": 1.1452193904387327,
+  "N": 0,
+  "merged": true
+ },
+ "150|none|S": {
+  "q": 1.1452193904387327,
+  "N": 1841,
+  "merged": true
+ },
+ "150|reversed|all": {
+  "q": 1.2165657357995208,
+  "N": 3421
+ },
+ "150|reversed|R": {
+  "q": 1.4075848735333762,
+  "N": 1156,
+  "merged": false
+ },
+ "150|reversed|S": {
+  "q": 1.117464900845019,
+  "N": 2265,
+  "merged": false
+ }
+}

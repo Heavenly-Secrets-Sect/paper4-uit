@@ -1,0 +1,70 @@
+{
+ "name": "ext_verify2_baselines2/fidelity2",
+ "purpose": "skeptic D-07H probe (verify2_baselines2)",
+ "T": [
+  80
+ ],
+ "damage": {
+  "kinds": [
+   "missing"
+  ],
+  "rates": [
+   0.2,
+   0.5
+  ]
+ },
+ "methods": [
+  "tolerant_v4",
+  "pselect_union_v2",
+  "pselect_union_v2_cal",
+  "psel_v2_hifi",
+  "psel_v2_hifi_cal"
+ ],
+ "paired_references": [
+  "tolerant_v4"
+ ],
+ "calibrate_methods": [
+  "pselect_union_v2_cal",
+  "psel_v2_hifi_cal"
+ ],
+ "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+ "calibration": {
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 1,
+  "kinds": [
+   "missing"
+  ],
+  "rates": [
+   0.2,
+   0.5
+  ]
+ },
+ "bank": "D-07H",
+ "split": "development",
+ "max_topologies": null,
+ "replicates": 1,
+ "H": 4,
+ "n_boot": 199,
+ "tau_effect": 0.1,
+ "generator": {
+  "lag_max": 2,
+  "q0": 0.3,
+  "cross_coef": [
+   0.3,
+   0.8
+  ],
+  "self_coef": [
+   0.2,
+   0.6
+  ],
+  "noise_var": [
+   0.5,
+   1.5
+  ],
+  "rho_max": 0.9,
+  "burn_in": 200
+ },
+ "seed_base": 20261102
+}

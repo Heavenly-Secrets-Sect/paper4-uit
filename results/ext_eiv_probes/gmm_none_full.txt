@@ -1,0 +1,6 @@
+none full L=2 T=80 ratio=0.0 true share=0.000 est mean=0.073 sd=0.057 med=0.060
+none full L=2 T=80 ratio=0.1 true share=0.091 est mean=0.133 sd=0.053 med=0.125
+none full L=2 T=80 ratio=0.3 true share=0.231 est mean=0.193 sd=0.058 med=0.205
+none full L=2 T=150 ratio=0.0 true share=0.000 est mean=0.037 sd=0.033 med=0.030
+none full L=2 T=150 ratio=0.1 true share=0.091 est mean=0.159 sd=0.088 med=0.125
+none full L=2 T=150 ratio=0.3 true share=0.231 est mean=0.335 sd=0.180 med=0.250

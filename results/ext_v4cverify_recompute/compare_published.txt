@@ -1,0 +1,25 @@
+partB: 252 cells; max |est diff| 3.55e-15; max |CI bound diff| 0.1680 (median 0.0116); max |p diff| 0.0595
+class mismatches: 0 []
+W_holm mismatches: 1 [('b|ida_union|150|extra|0.5', True, False, 0.0014992503748125937, 0.00399800099950025)]
+C1 T80 none: ratio mine 0.988734 pub 0.988734; ratioCI mine [0.9623,1.0157] pub [0.9635,1.0148]; p_TOST mine 0.0750 pub 0.0870; TOST-Holm mine False pub False
+C1 T80 extra-0.2: ratio mine 0.981123 pub 0.981123; ratioCI mine [0.9594,1.0026] pub [0.9596,1.0035]; p_TOST mine 0.1489 pub 0.1574; TOST-Holm mine False pub False
+C1 T80 extra-0.5: ratio mine 1.007941 pub 1.007941; ratioCI mine [0.9832,1.0339] pub [0.9843,1.0336]; p_TOST mine 0.0430 pub 0.0515; TOST-Holm mine False pub False
+C1 T80 missing-0.2: ratio mine 0.984165 pub 0.984165; ratioCI mine [0.9689,1.0005] pub [0.9681,1.0003]; p_TOST mine 0.0340 pub 0.0415; TOST-Holm mine False pub False
+C1 T80 missing-0.5: ratio mine 0.999884 pub 0.999884; ratioCI mine [0.9809,1.0213] pub [0.9804,1.0197]; p_TOST mine 0.0035 pub 0.0030; TOST-Holm mine True pub True
+C1 T80 reversed-0.2: ratio mine 0.994582 pub 0.994582; ratioCI mine [0.9778,1.0106] pub [0.9773,1.0114]; p_TOST mine 0.0020 pub 0.0030; TOST-Holm mine True pub True
+C1 T80 reversed-0.5: ratio mine 1.013893 pub 1.013893; ratioCI mine [0.9870,1.0412] pub [0.9868,1.0398]; p_TOST mine 0.1219 pub 0.1104; TOST-Holm mine False pub False
+C1 T150 none: ratio mine 1.000256 pub 1.000256; ratioCI mine [0.9868,1.0153] pub [0.9859,1.0144]; p_TOST mine 0.0005 pub 0.0005; TOST-Holm mine True pub True
+C1 T150 extra-0.2: ratio mine 1.004228 pub 1.004228; ratioCI mine [0.9866,1.0210] pub [0.9862,1.0219]; p_TOST mine 0.0015 pub 0.0015; TOST-Holm mine True pub True
+C1 T150 extra-0.5: ratio mine 1.013969 pub 1.013969; ratioCI mine [0.9960,1.0323] pub [0.9955,1.0313]; p_TOST mine 0.0430 pub 0.0345; TOST-Holm mine False pub False
+C1 T150 missing-0.2: ratio mine 0.991854 pub 0.991854; ratioCI mine [0.9812,1.0029] pub [0.9814,1.0030]; p_TOST mine 0.0005 pub 0.0005; TOST-Holm mine True pub True
+C1 T150 missing-0.5: ratio mine 0.981789 pub 0.981789; ratioCI mine [0.9680,0.9976] pub [0.9689,0.9961]; p_TOST mine 0.0485 pub 0.0415; TOST-Holm mine False pub False
+C1 T150 reversed-0.2: ratio mine 0.983437 pub 0.983437; ratioCI mine [0.9666,1.0001] pub [0.9662,1.0008]; p_TOST mine 0.0640 pub 0.0665; TOST-Holm mine False pub False
+C1 T150 reversed-0.5: ratio mine 1.005518 pub 1.005518; ratioCI mine [0.9776,1.0356] pub [0.9782,1.0353]; p_TOST mine 0.0525 pub 0.0495; TOST-Holm mine False pub False
+ruleA keys: cond1, cond2, n_cond1, n_cond1_equiv_holm, n_cond2, n_cond2_holm, verdict, other_T40, null_iscore
+pub cond2: [{"T": 40, "kind": "missing", "rate": 0.2, "cov_v4": 0.982740021574973, "cov_v4c": 0.9579288025889967, "IS_v4": 7.765119826840766, "IS_v4c": 6.977439024637254, "diff": {"est": -0.7876808022035117, "lo": -0.9874345062328092, "hi": -0.5813284164843172, "p_less": 0.0004997501249375312, "p_greater": 1.0, "mean_a": 6.977439024637254, "mean_b": 7.765119826840766, "n": 60}, "width_v4": 6.600815189341245, "width_v4c": 5.612963719375749, "ok": true, "ok_holm": true}, {"T": 40, "kind": "missing", "rate": 0.5, "cov_v4": 0.9784250269687162, "cov_v4c": 0.9557713052858684, "IS_v4": 7.528116002768725, "IS_v4c": 6.817086260488773, "diff": {"est": -0.7110297422799514, "lo": -0.8749626797454538, "hi": -0.5359836324414442, "p_less": 0.0004997501249375312, "p_greater": 1.0, "mean_a": 6.817086260488773, "mean_b": 7.528116002768725, "n": 60}, "width_v4": 6.454116783405232, "width_v4c": 5.378259039783218, "ok": true, "ok_holm": true}]
+cells with CI bound diff > 0.03: 56; max relative (diff / CI width) 0.066; min distance of nearest published bound to 0 among them 0.061
+  ('c|bvar_minnesota|40|extra|0.5', 0.0833, 0.063, 0.061); ('d|ida_union|40|reversed|0.2', 0.0569, 0.066, 0.077); ('d|bvar_minnesota|40|missing|0.5', 0.0331, 0.027, 0.086); ('b|bvar_minnesota|40|extra|0.5', 0.0477, 0.035, 0.099); ('b|ida_union|40|reversed|0.2', 0.0341, 0.033, 0.1); ('b|ida_union|40|extra|0.5', 0.0333, 0.046, 0.154); ('a|ida_union|40|reversed|0.2', 0.04, 0.035, 0.161); ('c|pselect_union|40|missing|0.2', 0.0363, 0.052, 0.187); ('a|pselect_union|40|missing|0.5', 0.0328, 0.026, 0.269); ('a|bvar_minnesota|40|reversed|0.2', 0.0383, 0.023, 0.281)
+width tolerant_v4 T40 missing-0.2: mean 6.923, median 6.601, n_kept-weighted 6.849
+width tolerant_v4 T40 missing-0.5: mean 6.708, median 6.454, n_kept-weighted 6.645
+width tolerant_v4c T40 missing-0.2: mean 5.824, median 5.613, n_kept-weighted 5.760
+width tolerant_v4c T40 missing-0.5: mean 5.647, median 5.378, n_kept-weighted 5.596

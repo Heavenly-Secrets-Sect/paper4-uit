@@ -1,0 +1,65 @@
+{
+  "name": "ext_r5ngorient3_gauss",
+  "phase": "main",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 70261102,
+  "methods": [
+    "oracle",
+    "tolerant_v5_1",
+    "tolerant_ngA3",
+    "tolerant_ngA"
+  ],
+  "stream_of": {
+    "tolerant_ngA3": "tolerant_v5_1",
+    "tolerant_ngA": "tolerant_v5_1"
+  },
+  "calibrate_methods": [
+    "tolerant_v5_1",
+    "tolerant_ngA3",
+    "tolerant_ngA"
+  ],
+  "frozen_calibration": "experiments/ext/r5ngorient3/frozen_r5ngorient3.json",
+  "frozen_calibration_sha256": "29b1fe2f416996cee1c98e335a6e5976be171b1091ed847380d1c8b2dd246d85",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "shock": "gauss",
+  "purpose": "r5ngorient3 (NG-A v3 = component A of tolerant_v5_2) vs tolerant_v5_1 at v5_1's frozen factors; tolerant_ngA (v2) descriptive only. Fresh seed_base 70261102, shock gauss. Runs only if V0 passes."
+}

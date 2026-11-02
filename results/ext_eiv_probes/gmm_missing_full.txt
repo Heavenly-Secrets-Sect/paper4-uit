@@ -1,0 +1,6 @@
+missing full L=2 T=80 ratio=0.0 true share=0.000 est mean=0.110 sd=0.074 med=0.090
+missing full L=2 T=80 ratio=0.1 true share=0.091 est mean=0.138 sd=0.052 med=0.130
+missing full L=2 T=80 ratio=0.3 true share=0.231 est mean=0.176 sd=0.070 med=0.180
+missing full L=2 T=150 ratio=0.0 true share=0.000 est mean=0.046 sd=0.044 med=0.035
+missing full L=2 T=150 ratio=0.1 true share=0.091 est mean=0.159 sd=0.088 med=0.125
+missing full L=2 T=150 ratio=0.3 true share=0.231 est mean=0.316 sd=0.159 med=0.250

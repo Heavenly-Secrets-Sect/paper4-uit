@@ -1,0 +1,19 @@
+{
+ "source": "transcripts ~/.claude/projects/-Users-kietnt-Desktop-Workspace-UIT-NCKH-aDuy/2f8361ac-.../subagents/workflows/wf_ccca4e91-1dd/agent-a7558e999131276cc.jsonl (attempt 1) and agent-aecea0233cf01bed2.jsonl (resume)",
+ "attempt1": {
+  "doc_part_a_rule_written": "2026-11-01T19:45:18Z", "pair_v5_run": "2026-11-01T19:46:00Z",
+  "timing_run_D07H": "2026-11-01T19:47:56Z (1 topo, T 40/200, buggy module; d40 -3.596, d200 +0.151; shell only)",
+  "tau_procedure_written": "19:48:30Z", "probe_tau1_started": "19:48:35Z",
+  "rule_eval.py_written": "19:49:35Z (file mtime unchanged since)", "rule_a1.py_written": "19:50:24Z (6-cell version)"
+ },
+ "resume": {
+  "sanity_check_D07H_ddcheck": "02:23:49Z (3 topo; dup data 8/12/4, total 976/800/692, max|lo diff| 1.98/2.51/1.69; shell only, scratchpad script)",
+  "rules_b_c_and_tau_commitment_appended": "02:25:01Z",
+  "probe_tau2_started": "02:25:08Z", "rule_a1.py_edited_pre_run": ["02:25:23Z", "02:42:12Z"],
+  "TAU_set": "02:41:25Z", "ext_v51_a1_config_drop_v5": "02:41:25Z (doc note 02:41:48Z)",
+  "first_D07_run_ext_v51_eval": "02:41:59Z-02:52:47Z", "rule_eval_run": "02:52:52Z",
+  "a1_runs": "02:52:51Z-03:08:50Z", "rule_a1.py_edited_post_results_reporting_only": ["03:09:20Z", "03:09:29Z"],
+  "frozen_files_and_rule_p4h2": "03:09:59Z-03:10:17Z", "frozen_spec_in_doc": "03:11:02Z"
+ },
+ "D07_runs_before_rule": "none found; no P4-H2 load or run in either transcript"
+}

@@ -1,0 +1,177 @@
+{
+  "config": {
+    "name": "a3_heldout",
+    "purpose": "Held-out check of a3_ges on P4-H1 development (never used before), frozen methods, run once. See docs/decision_rules.md.",
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "learned": {
+      "algorithm": "ges"
+    },
+    "methods": [
+      "oracle",
+      "plugin",
+      "inflate",
+      "lp_allpast",
+      "bagging",
+      "ida_union",
+      "bvar_minnesota",
+      "pselect_union",
+      "tolerant_v4"
+    ],
+    "calibration": {
+      "bank": "D-07H",
+      "split": "development",
+      "max_topologies": null,
+      "replicates": 1,
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "bank": "P4-H1",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 3,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102
+  },
+  "seconds": 88.4,
+  "n_rows": 3240,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "5b3d87eb7c7aaf44ee6ba8ce5f08b8087129df3ac4f08e8daa0941085044dc22"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "b2fb3a7f32309f1e00f0fe4f2bcb88373d40419c87574c395b83c9b0acdf97ad"
+    },
+    {
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "a71d1e0f7a03096a104ea1495c7046ac0d5ead981d15e0776b5c1f80d3ac86c7"
+    },
+    {
+      "id": "syn_dag_03",
+      "profile": "erdos_renyi",
+      "sha256": "c1a4e16e511efd1335dcf4b9412e15560dec9c7418fb0ae1d4b24d5753534464"
+    },
+    {
+      "id": "syn_dag_04",
+      "profile": "erdos_renyi",
+      "sha256": "7ef1ac515c72733d39d6e933582c2fb3db422cece08842b95c49d921f31a6381"
+    },
+    {
+      "id": "syn_dag_05",
+      "profile": "erdos_renyi",
+      "sha256": "0ec359a8e9d0567e361c466c49a4208ad62e675695037984a3e7b4b245deb3be"
+    },
+    {
+      "id": "syn_dag_06",
+      "profile": "erdos_renyi",
+      "sha256": "f736441cccf8bf44ccae80924fe90ada87eefdfde40db63aca27e82db90479c7"
+    },
+    {
+      "id": "syn_dag_07",
+      "profile": "erdos_renyi",
+      "sha256": "c7132a11ee7f7dba6c190516a924dec6c4122ced0efd38a74c170924b8ea25a7"
+    },
+    {
+      "id": "syn_dag_08",
+      "profile": "erdos_renyi",
+      "sha256": "687140f6bf440cb85f368f48d6e0a48a6bc6e5b4a0a93e3ad3cdbbdae30c25e2"
+    },
+    {
+      "id": "syn_dag_09",
+      "profile": "erdos_renyi",
+      "sha256": "75821c8b1a8b612897cca16794e16b46c6a635ed3ffd3a9f875df52d3cc04872"
+    },
+    {
+      "id": "syn_dag_10",
+      "profile": "scale_free_hub",
+      "sha256": "4432657f4d766b4e41549c0a18d88a16eda4dedc2063e2de23302ac38ffd9a53"
+    },
+    {
+      "id": "syn_dag_11",
+      "profile": "scale_free_hub",
+      "sha256": "b44d2795e4f54f8001b1bd3ce6fc032909daddeba2c0f01cab1e341d1e0ff46a"
+    },
+    {
+      "id": "syn_dag_12",
+      "profile": "scale_free_hub",
+      "sha256": "524218e898479ca320627fc3b363c3fe8abb9203516bafc285e9604a2caedbf2"
+    },
+    {
+      "id": "syn_dag_13",
+      "profile": "scale_free_hub",
+      "sha256": "835fc63d089de3e92dbea6a244518bb2f85d35bb9d78dc3f3e88fccd6b474732"
+    },
+    {
+      "id": "syn_dag_14",
+      "profile": "scale_free_hub",
+      "sha256": "b23694a8ec3383968b40504a893e0eaa5b362217623b3e261813b06e4d18d994"
+    },
+    {
+      "id": "syn_dag_15",
+      "profile": "scale_free_hub",
+      "sha256": "5f730e9047820134bfca532e730ab67f9c06be43f574da06e4f50ead50f86255"
+    },
+    {
+      "id": "syn_dag_16",
+      "profile": "scale_free_hub",
+      "sha256": "c7364f63f84651d75f4a5b43e9b3877c647bb738a22728a83919bfbb12ea423f"
+    },
+    {
+      "id": "syn_dag_17",
+      "profile": "scale_free_hub",
+      "sha256": "c00e8828b020e08e833f3b0b8c302e245e73448e35f0c4425666ffac0fe3ef5e"
+    },
+    {
+      "id": "syn_dag_18",
+      "profile": "scale_free_hub",
+      "sha256": "37ab3dc63a0abbb9a4f43e2f363f89b9414077db99e20198e452fb92ed1c29f6"
+    },
+    {
+      "id": "syn_dag_19",
+      "profile": "scale_free_hub",
+      "sha256": "756190baf23df6ec06a171c7cc5df5c353b16da6f99d73f1a0f442069e376dec"
+    }
+  ]
+}

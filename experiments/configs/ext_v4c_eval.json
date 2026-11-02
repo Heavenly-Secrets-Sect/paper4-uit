@@ -1,0 +1,80 @@
+{
+  "name": "ext_v4c_eval",
+  "purpose": "R2-4 (v4c): two-sided width calibration (pre-scale 0.5, ext_v4c.py) for the module (tolerant_v4c = v3) and for the published baselines (*_c2), against frozen tolerant_v4. D-07 development, same seeds as a2_baselines. Rule in docs/ext/v4c.md.",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "tolerant_v4c",
+    "pselect_union_c2",
+    "ida_union_c2",
+    "bvar_minnesota_c2"
+  ],
+  "paired_references": [
+    "tolerant_v4",
+    "tolerant_v4c"
+  ],
+  "calibrate_methods": [
+    "tolerant_v4c",
+    "pselect_union_c2",
+    "ida_union_c2",
+    "bvar_minnesota_c2"
+  ],
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

@@ -1,0 +1,73 @@
+{
+ "name": "ext_r4prepivot_lag1",
+ "bank": "D-07",
+ "split": "development",
+ "b_o": 39,
+ "b_i": 19,
+ "replicates": [
+  0,
+  1,
+  2
+ ],
+ "purpose": "Descriptive: real-panel regime lag_max 1, T 19/25, pairs with results/ext_region51_lag1 (its calibration.json factors).",
+ "base_config": "ext_region51_lag1",
+ "pair_with": "ext_region51_lag1",
+ "factors": "results/ext_region51_lag1/calibration.json",
+ "cells": [
+  [
+   19,
+   "none",
+   0.0
+  ],
+  [
+   19,
+   "missing",
+   0.2
+  ],
+  [
+   19,
+   "missing",
+   0.5
+  ],
+  [
+   19,
+   "reversed",
+   0.2
+  ],
+  [
+   19,
+   "reversed",
+   0.5
+  ],
+  [
+   25,
+   "none",
+   0.0
+  ],
+  [
+   25,
+   "missing",
+   0.2
+  ],
+  [
+   25,
+   "missing",
+   0.5
+  ],
+  [
+   25,
+   "reversed",
+   0.2
+  ],
+  [
+   25,
+   "reversed",
+   0.5
+  ]
+ ],
+ "scenarios": [
+  {
+   "name": "clean"
+  }
+ ]
+}

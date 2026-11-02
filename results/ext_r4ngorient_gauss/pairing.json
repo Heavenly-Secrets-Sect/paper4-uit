@@ -1,0 +1,9 @@
+{
+ "run": "ext_r4ngorient_gauss",
+ "n_new": 1260,
+ "n_stored": 1260,
+ "n_shared": 1260,
+ "n_mismatch_fields": 0,
+ "examples": [],
+ "PASS": true
+}

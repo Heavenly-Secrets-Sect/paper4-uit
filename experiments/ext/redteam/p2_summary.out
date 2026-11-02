@@ -1,0 +1,19 @@
+P2 (D-07H development, calibration seeds): pooled non-null coverage vs width factor c
+tolerant_v3 T=40 none: c* (grid from 0.5) = 1.4; cov at c=0.5..1.5: 0.610 0.682 0.768 0.814 0.853 0.885 0.916 0.926 0.938 0.952 0.959
+tolerant_v3 T=40 missing: c* (grid from 0.5) = 0.9; cov at c=0.5..1.5: 0.763 0.842 0.905 0.943 0.962 0.975 0.980 0.986 0.988 0.992 0.995
+tolerant_v3 T=40 reversed: c* (grid from 0.5) = 1.4; cov at c=0.5..1.5: 0.596 0.679 0.752 0.809 0.853 0.886 0.908 0.930 0.944 0.955 0.962
+tolerant_v3 T=80 none: c* (grid from 0.5) = 1.3; cov at c=0.5..1.5: 0.579 0.672 0.762 0.826 0.872 0.901 0.930 0.947 0.962 0.971 0.985
+tolerant_v3 T=80 missing: c* (grid from 0.5) = 1.3; cov at c=0.5..1.5: 0.617 0.691 0.768 0.826 0.874 0.907 0.930 0.947 0.965 0.977 0.985
+tolerant_v3 T=80 reversed: c* (grid from 0.5) = 1.4; cov at c=0.5..1.5: 0.529 0.620 0.710 0.786 0.842 0.879 0.910 0.935 0.950 0.960 0.974
+tolerant_v3 T=150 none: c* (grid from 0.5) = 1.2; cov at c=0.5..1.5: 0.598 0.684 0.764 0.839 0.875 0.920 0.945 0.954 0.964 0.968 0.985
+tolerant_v3 T=150 missing: c* (grid from 0.5) = 1.2; cov at c=0.5..1.5: 0.585 0.684 0.772 0.821 0.862 0.903 0.934 0.952 0.971 0.980 0.986
+tolerant_v3 T=150 reversed: c* (grid from 0.5) = 1.3; cov at c=0.5..1.5: 0.558 0.656 0.726 0.790 0.843 0.884 0.913 0.947 0.958 0.972 0.980
+pselect_union T=40 none: c* (grid from 0.5) = 1.5; cov at c=0.5..1.5: 0.665 0.737 0.786 0.834 0.863 0.887 0.897 0.911 0.926 0.940 0.945
+pselect_union T=40 missing: c* (grid from 0.5) = 1.5; cov at c=0.5..1.5: 0.624 0.693 0.758 0.808 0.843 0.868 0.885 0.903 0.916 0.930 0.938
+pselect_union T=40 reversed: c* (grid from 0.5) = 1.5; cov at c=0.5..1.5: 0.646 0.718 0.773 0.807 0.844 0.874 0.897 0.911 0.920 0.935 0.944
+pselect_union T=80 none: c* (grid from 0.5) = 1.0; cov at c=0.5..1.5: 0.709 0.793 0.843 0.897 0.932 0.954 0.973 0.985 0.985 0.990 0.991
+pselect_union T=80 missing: c* (grid from 0.5) = 1.3; cov at c=0.5..1.5: 0.642 0.731 0.790 0.835 0.868 0.901 0.927 0.937 0.954 0.972 0.983
+pselect_union T=80 reversed: c* (grid from 0.5) = 1.2; cov at c=0.5..1.5: 0.649 0.742 0.808 0.871 0.904 0.932 0.944 0.956 0.971 0.978 0.981
+pselect_union T=150 none: c* (grid from 0.5) = 0.9; cov at c=0.5..1.5: 0.715 0.831 0.889 0.928 0.962 0.978 0.985 0.988 0.991 0.993 0.995
+pselect_union T=150 missing: c* (grid from 0.5) = 1.3; cov at c=0.5..1.5: 0.650 0.746 0.803 0.847 0.880 0.908 0.932 0.944 0.951 0.962 0.970
+pselect_union T=150 reversed: c* (grid from 0.5) = 1.3; cov at c=0.5..1.5: 0.632 0.723 0.792 0.843 0.877 0.907 0.929 0.943 0.957 0.965 0.975

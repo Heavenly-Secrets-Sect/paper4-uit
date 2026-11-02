@@ -1,0 +1,92 @@
+{
+  "config": {
+    "name": "ext_eiv2_smoke_d07h",
+    "purpose": "eiv2 driver smoke test on D-07H development (1 topology), not an evaluation.",
+    "T": [
+      80
+    ],
+    "damage": {
+      "kinds": [
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2
+      ]
+    },
+    "scenarios": [
+      {
+        "name": "noise0.3",
+        "meas_noise": 0.3
+      },
+      {
+        "name": "het0.3",
+        "meas_noise": -0.3
+      }
+    ],
+    "methods": [
+      "plugin",
+      "tolerant_v4",
+      "tolerant_eiv2",
+      "plugin_eiv2"
+    ],
+    "calibration": {
+      "bank": "D-07H",
+      "split": "development",
+      "max_topologies": 1,
+      "replicates": 1,
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 1,
+    "replicates": 1,
+    "H": 4,
+    "n_boot": 19,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102,
+    "calibrate_methods": [
+      "tolerant_eiv2"
+    ],
+    "paired_references": [
+      "plugin",
+      "tolerant_v4"
+    ],
+    "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json"
+  },
+  "seconds": 4.5,
+  "n_rows": 24,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    }
+  ]
+}

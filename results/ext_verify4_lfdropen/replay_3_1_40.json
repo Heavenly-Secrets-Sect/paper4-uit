@@ -1,0 +1,25 @@
+{
+ "topology": "syn_dag_03",
+ "rep": 1,
+ "T": 40,
+ "replay_vs_stored": {
+  "tolerant_v5_1|none|0.0": [],
+  "tolerant_v5_1_lfdr|none|0.0": [],
+  "tolerant_v5_1|extra|0.2": [],
+  "tolerant_v5_1_lfdr|extra|0.2": [],
+  "tolerant_v5_1|extra|0.5": [],
+  "tolerant_v5_1_lfdr|extra|0.5": [],
+  "tolerant_v5_1|missing|0.2": [],
+  "tolerant_v5_1_lfdr|missing|0.2": [],
+  "tolerant_v5_1|missing|0.5": [],
+  "tolerant_v5_1_lfdr|missing|0.5": [],
+  "tolerant_v5_1|reversed|0.2": [],
+  "tolerant_v5_1_lfdr|reversed|0.2": [],
+  "tolerant_v5_1|reversed|0.5": [],
+  "tolerant_v5_1_lfdr|reversed|0.5": []
+ },
+ "patched_equals_v51": {
+  "missing|0.2": [],
+  "missing|0.5": []
+ }
+}

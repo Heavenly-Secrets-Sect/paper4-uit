@@ -1,0 +1,62 @@
+{
+ "T80|conf phi0.8 lag0/lag0": {
+  "A_null_meanQ": 4.172227613268776,
+  "df": 8,
+  "A_conf_meanQ": 4.544336081963568,
+  "A_power": 0.048,
+  "A_auroc": 0.550993,
+  "D_null_meanQ": 8.427646974855287,
+  "D_power": 0.16,
+  "D_auroc": 0.706803
+ },
+ "T80|conf phi0.8 lag0/lag2": {
+  "A_null_meanQ": 4.172227613268776,
+  "df": 8,
+  "A_conf_meanQ": 4.531362298965431,
+  "A_power": 0.049,
+  "A_auroc": 0.547385,
+  "D_null_meanQ": 8.427646974855287,
+  "D_power": 0.556,
+  "D_auroc": 0.907186
+ },
+ "T150|conf phi0.8 lag0/lag0": {
+  "A_null_meanQ": 8.087782348817775,
+  "df": 12,
+  "A_conf_meanQ": 8.072034359940064,
+  "A_power": 0.046,
+  "A_auroc": 0.504806,
+  "D_null_meanQ": 14.07326877174067,
+  "D_power": 0.198,
+  "D_auroc": 0.737683
+ },
+ "T150|conf phi0.8 lag0/lag2": {
+  "A_null_meanQ": 8.087782348817775,
+  "df": 12,
+  "A_conf_meanQ": 8.438588881280433,
+  "A_power": 0.049,
+  "A_auroc": 0.532491,
+  "D_null_meanQ": 14.07326877174067,
+  "D_power": 0.829,
+  "D_auroc": 0.96876
+ },
+ "T1000|conf phi0.8 lag0/lag0": {
+  "A_null_meanQ": 8.08736531839147,
+  "df": 12,
+  "A_conf_meanQ": 8.42527435124832,
+  "A_power": 0.06333333333333334,
+  "A_auroc": 0.5194444444444445,
+  "D_null_meanQ": 31.51261568755793,
+  "D_power": 0.9866666666666667,
+  "D_auroc": 0.9943777777777778
+ },
+ "T1000|conf phi0.8 lag0/lag2": {
+  "A_null_meanQ": 8.08736531839147,
+  "df": 12,
+  "A_conf_meanQ": 8.079472432900518,
+  "A_power": 0.06333333333333334,
+  "A_auroc": 0.4991555555555556,
+  "D_null_meanQ": 31.51261568755793,
+  "D_power": 1.0,
+  "D_auroc": 1.0
+ }
+}

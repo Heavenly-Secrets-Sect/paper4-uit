@@ -1,0 +1,78 @@
+## Coverage / IS per cell
+
+| scenario | T | cell | oracle | plugin | inflate | lp_allpast | tolerant_v4 | tolerant_eiv |
+|---|---|---|---|---|---|---|---|---|
+| clean | 80 | none | 0.899 / 1.68 | 0.869 / 2.78 | 0.936 / 2.50 | 0.839 / 5.70 | 0.933 / 2.50 | 0.939 / 2.60 |
+| clean | 80 | missing | 0.899 / 1.68 | 0.665 / 11.06 | 0.892 / 15.47 | 0.840 / 5.78 | 0.961 / 3.27 | 0.953 / 3.59 |
+| clean | 80 | reversed | 0.899 / 1.68 | 0.814 / 3.70 | 0.941 / 3.02 | 0.820 / 6.39 | 0.941 / 2.81 | 0.949 / 2.96 |
+| clean | 150 | none | 0.943 / 1.02 | 0.930 / 1.58 | 0.963 / 1.57 | 0.908 / 2.66 | 0.964 / 1.56 | 0.953 / 1.60 |
+| clean | 150 | missing | 0.943 / 1.02 | 0.684 / 10.55 | 0.862 / 12.95 | 0.905 / 2.73 | 0.969 / 2.04 | 0.964 / 2.26 |
+| clean | 150 | reversed | 0.943 / 1.02 | 0.841 / 3.09 | 0.954 / 2.64 | 0.873 / 3.50 | 0.964 / 1.96 | 0.957 / 2.03 |
+| noise0.1 | 80 | none | 0.766 / 2.97 | 0.813 / 3.55 | 0.894 / 2.97 | 0.826 / 5.87 | 0.893 / 2.95 | 0.927 / 3.00 |
+| noise0.1 | 80 | missing | 0.766 / 2.97 | 0.626 / 11.61 | 0.886 / 15.45 | 0.827 / 5.87 | 0.942 / 3.47 | 0.945 / 4.20 |
+| noise0.1 | 80 | reversed | 0.766 / 2.97 | 0.760 / 4.48 | 0.911 / 3.32 | 0.812 / 6.35 | 0.904 / 3.18 | 0.937 / 3.34 |
+| noise0.1 | 150 | none | 0.755 / 2.31 | 0.863 / 2.12 | 0.921 / 1.90 | 0.874 / 3.10 | 0.921 / 1.89 | 0.950 / 1.81 |
+| noise0.1 | 150 | missing | 0.755 / 2.31 | 0.639 / 11.15 | 0.854 / 12.98 | 0.869 / 3.17 | 0.925 / 2.44 | 0.959 / 2.47 |
+| noise0.1 | 150 | reversed | 0.755 / 2.31 | 0.782 / 3.83 | 0.942 / 2.73 | 0.839 / 4.09 | 0.914 / 2.27 | 0.947 / 2.20 |
+| noise0.3 | 80 | none | 0.477 / 7.45 | 0.702 / 5.44 | 0.813 / 4.17 | 0.804 / 6.61 | 0.815 / 4.10 | 0.874 / 3.85 |
+| noise0.3 | 80 | missing | 0.477 / 7.45 | 0.543 / 13.08 | 0.878 / 15.38 | 0.804 / 6.62 | 0.917 / 3.90 | 0.938 / 4.33 |
+| noise0.3 | 80 | reversed | 0.477 / 7.45 | 0.661 / 6.34 | 0.854 / 4.03 | 0.793 / 6.88 | 0.826 / 4.23 | 0.885 / 3.97 |
+| noise0.3 | 150 | none | 0.355 / 8.06 | 0.669 / 4.28 | 0.771 / 3.40 | 0.773 / 4.41 | 0.774 / 3.37 | 0.895 / 2.47 |
+| noise0.3 | 150 | missing | 0.355 / 8.06 | 0.515 / 13.10 | 0.848 / 13.09 | 0.775 / 4.41 | 0.830 / 3.52 | 0.923 / 2.96 |
+| noise0.3 | 150 | reversed | 0.355 / 8.06 | 0.625 / 5.89 | 0.893 / 3.21 | 0.743 / 5.43 | 0.784 / 3.66 | 0.893 / 2.87 |
+
+## Rule
+
+Condition 1 (coverage >= 0.90 in every noise cell):
+  noise0.1 T=80 none: 0.927 PASS
+  noise0.1 T=80 missing: 0.945 PASS
+  noise0.1 T=80 reversed: 0.937 PASS
+  noise0.1 T=150 none: 0.950 PASS
+  noise0.1 T=150 missing: 0.959 PASS
+  noise0.1 T=150 reversed: 0.947 PASS
+  noise0.3 T=80 none: 0.874 FAIL
+  noise0.3 T=80 missing: 0.938 PASS
+  noise0.3 T=80 reversed: 0.885 FAIL
+  noise0.3 T=150 none: 0.895 FAIL
+  noise0.3 T=150 missing: 0.923 PASS
+  noise0.3 T=150 reversed: 0.893 FAIL
+  -> 8/12 cells
+Condition 2 (clean IS <= 1.15 x tolerant_v4):
+  T=80 none: eiv 2.598 v4 2.502 ratio 1.038 PASS
+  T=80 missing: eiv 3.593 v4 3.271 ratio 1.098 PASS
+  T=80 reversed: eiv 2.962 v4 2.807 ratio 1.055 PASS
+  T=150 none: eiv 1.604 v4 1.564 ratio 1.026 PASS
+  T=150 missing: eiv 2.256 v4 2.039 ratio 1.106 PASS
+  T=150 reversed: eiv 2.033 v4 1.965 ratio 1.035 PASS
+  -> 6/6 cells
+VERDICT: REJECTED
+
+## r_hat of tolerant_eiv (mean) by scenario and T; true share 0 / 0.091 / 0.231
+
+  clean T=80: r_hat mean 0.028 sd 0.027; r_used mean 0.027
+  clean T=150: r_hat mean 0.023 sd 0.021; r_used mean 0.023
+  noise0.1 T=80: r_hat mean 0.072 sd 0.043; r_used mean 0.072
+  noise0.1 T=150: r_hat mean 0.084 sd 0.037; r_used mean 0.084
+  noise0.3 T=80: r_hat mean 0.115 sd 0.057; r_used mean 0.114
+  noise0.3 T=150: r_hat mean 0.159 sd 0.051; r_used mean 0.159
+
+## Width (median kept) and median abs err of C(H), tolerant_v4 vs tolerant_eiv
+
+  clean T=80 none: tolerant_v4: width 1.828 abserr 0.296 ok 60/60; tolerant_eiv: width 1.853 abserr 0.317 ok 60/60
+  clean T=80 missing: tolerant_v4: width 2.645 abserr 0.408 ok 60/60; tolerant_eiv: width 2.803 abserr 0.439 ok 60/60
+  clean T=80 reversed: tolerant_v4: width 2.091 abserr 0.343 ok 60/60; tolerant_eiv: width 2.232 abserr 0.335 ok 60/60
+  clean T=150 none: tolerant_v4: width 1.277 abserr 0.191 ok 60/60; tolerant_eiv: width 1.283 abserr 0.196 ok 60/60
+  clean T=150 missing: tolerant_v4: width 1.670 abserr 0.257 ok 60/60; tolerant_eiv: width 1.786 abserr 0.290 ok 60/60
+  clean T=150 reversed: tolerant_v4: width 1.575 abserr 0.238 ok 60/60; tolerant_eiv: width 1.575 abserr 0.230 ok 60/60
+  noise0.1 T=80 none: tolerant_v4: width 1.844 abserr 0.336 ok 60/60; tolerant_eiv: width 2.045 abserr 0.336 ok 60/60
+  noise0.1 T=80 missing: tolerant_v4: width 2.664 abserr 0.452 ok 60/60; tolerant_eiv: width 2.970 abserr 0.487 ok 60/60
+  noise0.1 T=80 reversed: tolerant_v4: width 2.159 abserr 0.388 ok 60/60; tolerant_eiv: width 2.332 abserr 0.399 ok 60/60
+  noise0.1 T=150 none: tolerant_v4: width 1.269 abserr 0.224 ok 60/60; tolerant_eiv: width 1.422 abserr 0.237 ok 60/60
+  noise0.1 T=150 missing: tolerant_v4: width 1.598 abserr 0.286 ok 60/60; tolerant_eiv: width 1.961 abserr 0.295 ok 60/60
+  noise0.1 T=150 reversed: tolerant_v4: width 1.471 abserr 0.275 ok 60/60; tolerant_eiv: width 1.643 abserr 0.260 ok 60/60
+  noise0.3 T=80 none: tolerant_v4: width 1.822 abserr 0.414 ok 60/60; tolerant_eiv: width 2.161 abserr 0.361 ok 60/60
+  noise0.3 T=80 missing: tolerant_v4: width 2.684 abserr 0.506 ok 60/60; tolerant_eiv: width 3.125 abserr 0.553 ok 60/60
+  noise0.3 T=80 reversed: tolerant_v4: width 1.986 abserr 0.507 ok 60/60; tolerant_eiv: width 2.406 abserr 0.471 ok 60/60
+  noise0.3 T=150 none: tolerant_v4: width 1.241 abserr 0.343 ok 60/60; tolerant_eiv: width 1.462 abserr 0.268 ok 60/60
+  noise0.3 T=150 missing: tolerant_v4: width 1.562 abserr 0.419 ok 60/60; tolerant_eiv: width 1.982 abserr 0.368 ok 60/60
+  noise0.3 T=150 reversed: tolerant_v4: width 1.387 abserr 0.407 ok 60/60; tolerant_eiv: width 1.745 abserr 0.317 ok 60/60

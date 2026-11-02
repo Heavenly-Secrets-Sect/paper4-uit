@@ -1,0 +1,31 @@
+{
+ "vstructure_dl": {
+  "80": {
+   "mean_dl_true_reversed": 5.781131211972262,
+   "share_pos_true_reversed": 0.9333333333333333,
+   "mean_dl_correct_edge": -0.7883463109364002,
+   "share_correct_neg": 0.8
+  },
+  "150": {
+   "mean_dl_true_reversed": 11.911639786705921,
+   "share_pos_true_reversed": 1.0,
+   "mean_dl_correct_edge": -1.6052263812646728,
+   "share_correct_neg": 0.8666666666666667
+  },
+  "400": {
+   "mean_dl_true_reversed": 36.26748741233895,
+   "share_pos_true_reversed": 1.0,
+   "mean_dl_correct_edge": -3.2986468929378616,
+   "share_correct_neg": 0.8666666666666667
+  }
+ },
+ "two_node_equivalent_dl": 0.0,
+ "v4R_vs_v3_true_a_to_b": {
+  "C_true": 2.1648799999999997,
+  "n": 20,
+  "med_err_v4R": 0.3484780984345297,
+  "med_err_v3": 0.5496414568598635,
+  "cov_v4R_prescaled": 0.5,
+  "cov_v3": 0.9
+ }
+}

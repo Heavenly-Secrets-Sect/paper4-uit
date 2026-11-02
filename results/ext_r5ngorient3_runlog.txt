@@ -1,0 +1,4 @@
+start ngmix 14:53:50Z
+end ngmix 15:07:39Z exit 0
+start gauss 15:07:39Z
+end gauss 15:20:07Z exit 0

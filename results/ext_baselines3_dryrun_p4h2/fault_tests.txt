@@ -1,0 +1,4 @@
+Fault-injection tests of experiments/ext/baselines3/analyze_p4h2.py on copies of the D-07 development rows (in memory, nothing written to results of runs):
+(a) all tolerant_v5_1 rows of T80 missing-0.2 removed -> validity "tolerant_v5_1 T80 missing-0.2: 0 rows, expected 60"; P7 for v5_1 NOT CONFIRMED (no crash)
+(b) 4/60 tolerant_v5_1 rows of T150 missing-0.5 set to failed -> condition (ii) failure <= 2% False -> NOT CONFIRMED
+(c) info_c_T of one pselect_union_v3_cal row changed to 9.9 -> validity FAIL "c_T 9.9 != frozen pselect_union_v3_cal|80|missing = 1.7"

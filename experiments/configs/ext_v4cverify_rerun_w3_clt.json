@@ -1,0 +1,80 @@
+{
+  "name": "ext_v4cverify_rerun_w3_clt",
+  "purpose": "R3-7 (v4cverify): rerun 2 units (syn_dag_00/01 rep 0) of ext_v4c_eval with --workers 3 to check row identity vs the --workers 6 run (python3 CLT, numpy 2.0.2). Otherwise identical to experiments/configs/ext_v4c_eval.json.",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "tolerant_v4c",
+    "pselect_union_c2",
+    "ida_union_c2",
+    "bvar_minnesota_c2"
+  ],
+  "paired_references": [
+    "tolerant_v4",
+    "tolerant_v4c"
+  ],
+  "calibrate_methods": [
+    "tolerant_v4c",
+    "pselect_union_c2",
+    "ida_union_c2",
+    "bvar_minnesota_c2"
+  ],
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": 2,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

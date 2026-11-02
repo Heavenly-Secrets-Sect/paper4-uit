@@ -1,0 +1,74 @@
+{
+  "name": "ext_auto5_p4h2_auto3",
+  "purpose": "FROZEN, NOT RUN. Confirmatory run of tolerant_auto3 (docs/ext/auto5.md, 'Frozen spec for P4-H2'), rule B1 C1-C3 unchanged, on the sealed P4-H2 confirmatory split. Module src/paper4/ext_gate.py and width table experiments/ext/gate/width_table.json unchanged since round 1; tolerant_v4 frozen. Run once with: python experiments/run_experiment.py --config experiments/configs/ext_auto5_p4h2_auto3.json --workers 3; then the latent1 config; then python experiments/ext/auto5/check_p4h2.py",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "tolerant_auto3"
+  ],
+  "paired_references": [
+    "plugin",
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "P4-H2",
+  "split": "confirmatory",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "learned": {
+    "algorithm": "ges"
+  },
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json"
+}

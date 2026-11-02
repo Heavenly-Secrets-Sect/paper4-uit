@@ -1,0 +1,10 @@
+{
+ "retained": false,
+ "noninf_holm": 0,
+ "noninf_raw": 1,
+ "cov_ok": 1,
+ "fail_cap_ok": true,
+ "orig_noninf_holm": 1,
+ "orig_cov_ok": 0,
+ "verdict": "pairing PASS; non-inferior (Holm 0.05 over 9) 0/9 (raw one-sided 95% bound < 1.10: 1/9); coverage >= 0.90 in 1/9; failure cap (<= 3 failed of 60) PASS -> tolerant_v5_1_pp NOT RETAINED (sensitivity analysis only). Secondary (design as proposed, descriptive): non-inferior Holm 1/9, coverage >= 0.90 in 0/9."
+}

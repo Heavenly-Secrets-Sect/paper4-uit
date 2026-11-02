@@ -1,0 +1,11 @@
+{
+ "verifier": "verify3_baselines3",
+ "recompute_rule_table": "recompute_B4000.json / recompute_B20000.json: independent code; all 56 estimates and p2 identical to results/ext_baselines3_eval/analysis.json (max diff 0); Holm 0.05 B4000 v4 W19/T8/L1 (loss pselect_union_v3_cal T150 m0.5), v5_1 W27/T1/L0, E-cell v5_1 3/4; Holm 0.025 B4000 0/28 W both; B20000 v4 0.05 W20/T7/L1, 0.025 W19/T8/L1; v5_1 W27/T1/L0 both; win sets equal p7_win_set.json",
+ "prereg": "doc sections 1-3 + placeholder hash = e0a0d710...b5c8 (matches prereg_sha256.txt); analyze.py hash unchanged 6d24f176...0d40; run 06:22:03Z-06:37:57Z after rule 06:19Z",
+ "regression": "regression_check.json: v4, bvar_v2_cal, v5_1 0/240 mismatches vs stored; pselect_cal/fullvar_cal point estimates identical 240/240 vs stored (bootstrap differs)",
+ "frozen_calibration": "every key of frozen_calibration_p7.json equals its stated source file",
+ "spec_manifest": "28 files + 9 other ext modules re-hashed: all unchanged at verification time; covers all imports of the P7 modules",
+ "smoke_p7_pipeline_d07h": "smoke_check.json: P7 config with bank D-07H dev, 2 topologies x 1 rep, --workers 2, miniconda python 3.13.9/numpy 2.5.4: 80/80 rows ok in 65.7 s; same rows under CLT python 3.9.6/numpy 2.0.2: 0/80 mismatches; method_modules == expected_modules; info_c_T equal frozen keys; validity() flags only row counts (expected for smoke)",
+ "known_truth": "known_truth.json: synthetic 5-node topology, T300, 12 reps: pselect_union_v3 raw coverage of C(H) 0.972 (true skel), 0.986 (one true edge removed), removed pair covered 12/12; blind to stated damage 12/12; _cal midpoint equal and half-width 0.5x 12/12",
+ "bootstrap_index_numpy_stability": "default_rng(20261102).integers identical in numpy 2.0.2 and 2.5.4"
+}

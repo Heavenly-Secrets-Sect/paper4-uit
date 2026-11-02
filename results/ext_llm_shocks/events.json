@@ -1,0 +1,2176 @@
+{
+ "summary": {
+  "chunk_selection": {
+   "flag": 75,
+   "paper1_policy_shock": 38,
+   "keyword": 42,
+   "union": 105
+  },
+  "n_chunks": 105,
+  "calls_this_run": 210,
+  "n_events_raw": 104,
+  "n_events_usable": 47,
+  "n_without_quarter": 55,
+  "n_quote_not_verified": 2,
+  "usable_keys_A": 14,
+  "usable_keys_B": 31,
+  "keys_both": 12,
+  "jaccard_A_B": 0.36363636363636365,
+  "n_clusters": 28,
+  "n_clusters_consensus": 10,
+  "n_clusters_in_window": 14,
+  "n_clusters_consensus_in_window": 8
+ },
+ "clusters": [
+  {
+   "quarter": "2019Q4",
+   "target": "CAR",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_058"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": false,
+   "quotes": [
+    "Ngày 15/11/2019, NHNN ban hành Thông tư 22/2019/TT-NHNN ... tăng hệ số rủi ro áp dụng cho các khoản vay kinh doanh bất động sản từ 150% lên 200% khi tính mẫu số của hệ số an toàn vốn (CAR).",
+    "Ngày 15/11/2019, NHNN ban hành Thông tư 22/2019/TT-NHNN quy định các giới hạn, tỷ lệ bảo đảm an toàn trong hoạt động ngân hàng, trong đó tăng hệ số rủi ro áp dụng cho các khoản vay kinh doanh bất động sản từ 150% lên 200% khi tính mẫu số của hệ số an toàn vốn (CAR)."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2022Q3",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_060"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "tăng trách nhiệm giải trình mục đích sử dụng vốn cho nhà đầu tư"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2022Q3",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_040",
+    "RAGKB_046"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "NHNN Việt Nam cũng phải tăng lãi suất điều hành vào tháng 9/2022",
+    "NHNN Việt Nam cũng phải tăng lãi suất điều hành vào tháng 9/2022, khiến VN-Index tiếp tục lao dốc về vùng 1.000 điểm.",
+    "NHNN đã 2 lần tăng các mức lãi suất điều hành vào tháng 9 và tháng 10/2022, mỗi đợt 1 điểm phần trăm"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2022Q3",
+   "target": "TRADE_VALUE",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_060"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": true,
+   "quotes": [
+    "Nghị định bổ sung quy định doanh nghiệp phát hành phải mua lại trái phiếu trước hạn bắt buộc trong một số trường hợp vi phạm"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2022Q3",
+   "target": "TRADE_VOLUME",
+   "direction": "-",
+   "magnitude": "large",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_060"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "Nghị định bổ sung quy định doanh nghiệp phát hành phải mua lại trái phiếu trước hạn bắt buộc trong một số trường hợp vi phạm",
+    "siết chặt đáng kể điều kiện huy động vốn qua kênh trái phiếu riêng lẻ",
+    "yêu cầu xếp hạng tín nhiệm theo lộ trình từ 1/1/2023"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2022Q4",
+   "target": "LDR",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_059"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "NHNN quy định lộ trình giảm dần tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn, đưa về mức 30% kể từ ngày 1/10/2022.",
+    "giảm dần tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn, đưa về mức 30% kể từ ngày 1/10/2022"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2022Q4",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_032",
+    "RAGKB_046"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "NHNN đã 2 lần tăng các mức lãi suất điều hành vào tháng 9 và tháng 10/2022, mỗi đợt 1 điểm phần trăm",
+    "Sau 2 lần NHNN tăng lãi suất điều hành cuối năm 2022"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2023Q1",
+   "target": "TRADE_VOLUME",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_060"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": true,
+   "quotes": [
+    "yêu cầu xếp hạng tín nhiệm theo lộ trình từ 1/1/2023"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2023Q4",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "small",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_061"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "Ngày 29/12/2023, Thống đốc NHNN ban hành Thông tư 22/2023/TT-NHNN sửa đổi, bổ sung một số điều của Thông tư 41/2016/TT-NHNN về tỷ lệ an toàn vốn, trong đó điều chỉnh cách xác định một số loại tài sản bảo đảm giảm thiểu rủi ro tín dụng."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2024Q1",
+   "target": "GDP_GROWTH",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "other",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_R006"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": true,
+   "quotes": [
+    "Các quy định mới của Luật Đất đai và Luật Nhà ở mở rộng khả năng tham gia của người gốc Việt ở nước ngoài và tổ chức nước ngoài; cơ chế này được kỳ vọng làm FDI và kiều hối vào bất động sản tăng."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2024Q1",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "small",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_R003"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": true,
+   "quotes": [
+    "trước điều chỉnh giảm lãi suất"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2024Q2",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "policy_type": "other",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_R009"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": true,
+   "quotes": [
+    "Ngân hàng Nhà nước phải thực hiện biện pháp chống áp lực tỷ giá"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2024Q3",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "other",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_R020"
+   ],
+   "variants": [
+    "A"
+   ],
+   "consensus": false,
+   "in_panel_window": true,
+   "quotes": [
+    "Ba luật mới về nhà ở, kinh doanh bất động sản và đất đai có hiệu lực từ 1/8/2024"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2024Q3",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "other",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_050",
+    "RAGKB_R020",
+    "RAGKB_R049"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "Ba luật mới về nhà ở, kinh doanh bất động sản và đất đai có hiệu lực từ 1/8/2024, góp phần hoàn thiện hành lang pháp lý và mở ra chu kỳ bất động sản an toàn hơn.",
+    "Luật Nhà ở 2023, Luật Kinh doanh Bất động sản 2023 và Luật Đất đai 2024 đồng loạt có hiệu lực từ ngày 1/8/2024",
+    "NHNN bán hơn 6 tỷ USD để bình ổn tỷ giá"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2024Q3",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "policy_type": "omo_liquidity",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_R049"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": true,
+   "quotes": [
+    "NHNN bán hơn 6 tỷ USD để bình ổn tỷ giá và duy trì lãi suất điều hành thấp",
+    "duy trì lãi suất điều hành thấp"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2025Q1",
+   "target": "NPL",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_037"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "Thông tư 02/2023/TT-NHNN về cơ cấu lại thời hạn trả nợ và giữ nguyên nhóm nợ hết hiệu lực từ ngày 1/1/2025 và NHNN không gia hạn."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2025Q2",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_062"
+   ],
+   "variants": [
+    "A",
+    "B"
+   ],
+   "consensus": true,
+   "in_panel_window": false,
+   "quotes": [
+    "NHNN ban hành Thông tư 14/2025/TT-NHNN quy định tỷ lệ an toàn vốn mới, chính thức thay thế Thông tư 41/2016/TT-NHNN... Điểm mới quan trọng nhất: lần đầu tiên thiết lập cơ chế bộ đệm bảo toàn vốn (capital conservation buffer) và gắn chặt việc chia cổ tức bằng tiền mặt của ngân hàng với mức độ tuân thủ đầy đủ các tỷ lệ an toàn vốn",
+    "Ngày 30/6/2025, NHNN ban hành Thông tư 14/2025/TT-NHNN quy định tỷ lệ an toàn vốn mới, chính thức thay thế Thông tư 41/2016/TT-NHNN kể từ 1/1/2030 theo lộ trình chuyển đổi kéo dài nhằm tránh xáo trộn hệ thống. Điểm mới quan trọng nhất: lần đầu tiên thiết lập cơ chế bộ đệm bảo toàn vốn (capital conservation buffer) và gắn chặt việc chia cổ tức bằng tiền mặt của ngân hàng với mức độ tuân thủ đầy đủ các tỷ lệ an toàn vốn — ngân hàng không đáp ứng đủ bộ đệm vốn sẽ bị hạn chế phân phối lợi nhuận bằng tiền mặt cho cổ đông."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2025Q2",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_R024"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "Quy định giảm hệ số rủi ro đối với khoản vay bất động sản công nghiệp giúp các chủ đầu tư tiếp cận tín dụng ngân hàng dễ hơn;"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2025Q2",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "debt_restructuring",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_R034"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "Việc luật hóa cơ chế xử lý nợ được kỳ vọng đẩy nhanh thu hồi nợ xấu, từ đó nâng hiệu quả hoạt động và bảo toàn lợi nhuận của ngân hàng."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q1",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_R056"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "buộc ngân hàng củng cố vốn"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q1",
+   "target": "GDP_GROWTH",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_TAN016"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "NHNN giảm chỉ tiêu tăng trưởng tín dụng mục tiêu ngay từ đầu năm xuống 15%."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q1",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "small",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_R057"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "giới hạn tăng trưởng tín dụng bất động sản không vượt tốc độ tín dụng chung nhằm hạn chế rủi ro tập trung và nguy cơ nợ xấu trung hạn"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q1",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_R056"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "Cơ chế phân bổ room tín dụng dựa trên xếp hạng và giám sát chặt, kèm khả năng giảm room khi vi phạm an toàn"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q1",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_R055"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "buộc hệ thống tăng lãi suất để xử lý áp lực thanh khoản."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q2",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_126"
+   ],
+   "variants": [
+    "A"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "Bộ Xây dựng đồng thời nghiên cứu cơ chế phát triển nhà ở thương mại giá rẻ, thúc đẩy nhà ở xã hội và yêu cầu kiểm soát tín dụng bất động sản."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q3",
+   "target": "CPI_INFLATION",
+   "direction": "-",
+   "magnitude": "small",
+   "policy_type": "other",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_S013"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "ưu tiên bán ngoại tệ và hút bớt tiền đồng qua OMO"
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q3",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "policy_type": "credit_quota",
+   "stance": "easing",
+   "chunk_ids": [
+    "RAGKB_S031",
+    "RAGKB_S038"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "Việc nâng tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn từ 30% lên 40% tạo thêm dư địa tài chính cho nền kinh tế, trong bối cảnh nhu cầu vốn trung và dài hạn đang gia tăng mạnh mẽ.",
+    "dù các chính sách nới lỏng room tín dụng đã tháo gỡ thanh khoản trước mắt."
+   ],
+   "union": true
+  },
+  {
+   "quarter": "2026Q3",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "policy_type": "omo_liquidity",
+   "stance": "tightening",
+   "chunk_ids": [
+    "RAGKB_S013"
+   ],
+   "variants": [
+    "B"
+   ],
+   "consensus": false,
+   "in_panel_window": false,
+   "quotes": [
+    "thay vì tăng ngay lãi suất điều hành",
+    "ưu tiên bán ngoại tệ và hút bớt tiền đồng qua OMO"
+   ],
+   "union": true
+  }
+ ],
+ "events": [
+  {
+   "chunk_id": "RAGKB_005",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "TT41/2016/TT-NHNN",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Tối thiểu 8% theo TT41/2016/TT-NHNN (Basel II)",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_005",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "TT14/2025/TT-NHNN",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "TT14/2025 tiệm cận Basel III, lộ trình nâng lên 10,5% đến 2030-2033",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_005",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "TT41/2016/TT-NHNN",
+   "policy_type": "prudential_rule",
+   "stance": "neutral",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Tối thiểu 8% theo TT41/2016/TT-NHNN (Basel II)",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_005",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "TT14/2025/TT-NHNN; đến 2030-2033",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "TT14/2025 tiệm cận Basel III, lộ trình nâng lên 10,5% đến 2030-2033.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_008",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Giảm còn 4,0% giai đoạn 2020-2021",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "Giảm còn 4,0% giai đoạn 2020-2021 (hỗ trợ kinh tế).",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_008",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Tăng lên 6,0% năm 2022 (kiểm soát lạm phát/tỷ giá, QĐ 1606/QĐ-NHNN)",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "Tăng lên 6,0% năm 2022 (kiểm soát lạm phát/tỷ giá, QĐ 1606/QĐ-NHNN).",
+   "quote_verified": true,
+   "confidence": 0.95,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_008",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Giảm về 4,5% từ 2023, ổn định đến 2025",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "Giảm về 4,5% từ 2023, ổn định đến 2025.",
+   "quote_verified": true,
+   "confidence": 0.95,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_008",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "giai đoạn 2020-2021",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "Giảm còn 4,0% giai đoạn 2020-2021 (hỗ trợ kinh tế).",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_008",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "Tăng lên 6,0% năm 2022 (kiểm soát lạm phát/tỷ giá, QĐ 1606/QĐ-NHNN).",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_008",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "từ 2023, ổn định đến 2025",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "Giảm về 4,5% từ 2023, ổn định đến 2025.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_021",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "tăng trưởng tín dụng toàn nền kinh tế được kiểm soát quanh mức 14%",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_021",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "tiếp tục siết chặt cho vay vào các lĩnh vực rủi ro như bất động sản, chứng khoán và trái phiếu doanh nghiệp",
+   "quote_verified": true,
+   "confidence": 0.85,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_021",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "đồng thời tăng cường thanh kiểm tra",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_021",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Ngân hàng Nhà nước xác định năm 2022 tiếp tục siết chặt cho vay vào các lĩnh vực rủi ro như bất động sản, chứng khoán và trái phiếu doanh nghiệp",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_021",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "tăng cường thanh kiểm tra",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_021",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "năm 2022",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "tăng trưởng tín dụng toàn nền kinh tế được kiểm soát quanh mức 14%",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_025",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Từ năm 2019",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "LDR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Từ năm 2019, cơ quan quản lý bắt đầu nhận thấy rủi ro vĩ mô từ hoạt động cho vay bất động sản và dần siết tỷ lệ cho vay lĩnh vực này.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_025",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "từ 2021",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "TRADE_VALUE",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "kênh này cũng bị kiểm soát chặt hơn từ 2021.",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_025",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "Từ năm 2019",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Từ năm 2019, cơ quan quản lý bắt đầu nhận thấy rủi ro vĩ mô từ hoạt động cho vay bất động sản và dần siết tỷ lệ cho vay lĩnh vực này.",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_025",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "từ 2021",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "trước khi kênh này cũng bị kiểm soát chặt hơn từ 2021.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_030",
+   "variant": "A",
+   "quarter": null,
+   "date_text": null,
+   "policy_type": "other",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Sự kiện SCB bị kiểm soát đặc biệt cũng góp phần đẩy tỷ lệ nợ xấu tăng mạnh.",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_031",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "NHNN 4 lần giảm lãi suất điều hành",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "NHNN 4 lần giảm lãi suất điều hành",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_031",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "yêu cầu giảm lãi suất cho vay hỗ trợ nền kinh tế",
+   "policy_type": "other",
+   "stance": "easing",
+   "target": "NIM",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "yêu cầu giảm lãi suất cho vay hỗ trợ nền kinh tế",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_031",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "nửa đầu 2023",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "khi NHNN 4 lần giảm lãi suất điều hành",
+   "quote_verified": true,
+   "confidence": 0.4,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_031",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "nửa đầu 2023",
+   "policy_type": "other",
+   "stance": "easing",
+   "target": "NIM",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "yêu cầu giảm lãi suất cho vay hỗ trợ nền kinh tế",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_032",
+   "variant": "A",
+   "quarter": "2022Q4",
+   "date_text": "2 lần NHNN tăng lãi suất điều hành cuối năm 2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Sau 2 lần NHNN tăng lãi suất điều hành cuối năm 2022",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_032",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "yêu cầu kiểm soát lãi suất cho vay hỗ trợ phục hồi kinh tế vẫn tiếp diễn",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "NIM",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "yêu cầu kiểm soát lãi suất cho vay hỗ trợ phục hồi kinh tế vẫn tiếp diễn",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_032",
+   "variant": "B",
+   "quarter": "2022Q4",
+   "date_text": "cuối năm 2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Sau 2 lần NHNN tăng lãi suất điều hành cuối năm 2022",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_032",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "không ghi rõ thời điểm trong văn bản",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "NIM",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "yêu cầu kiểm soát lãi suất cho vay hỗ trợ phục hồi kinh tế vẫn tiếp diễn",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_037",
+   "variant": "A",
+   "quarter": "2025Q1",
+   "date_text": "ngày 1/1/2025",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Thông tư 02/2023/TT-NHNN ... hết hiệu lực từ ngày 1/1/2025 và NHNN không gia hạn.",
+   "quote_verified": false,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_037",
+   "variant": "B",
+   "quarter": "2025Q1",
+   "date_text": "từ ngày 1/1/2025",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Thông tư 02/2023/TT-NHNN về cơ cấu lại thời hạn trả nợ và giữ nguyên nhóm nợ hết hiệu lực từ ngày 1/1/2025 và NHNN không gia hạn.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_040",
+   "variant": "A",
+   "quarter": "2022Q3",
+   "date_text": "tháng 9/2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "NHNN Việt Nam cũng phải tăng lãi suất điều hành vào tháng 9/2022",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_040",
+   "variant": "B",
+   "quarter": "2022Q3",
+   "date_text": "tháng 9/2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "NHNN Việt Nam cũng phải tăng lãi suất điều hành vào tháng 9/2022, khiến VN-Index tiếp tục lao dốc về vùng 1.000 điểm.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_046",
+   "variant": "A",
+   "quarter": "2022Q3",
+   "date_text": "tháng 9/2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "NHNN đã 2 lần tăng các mức lãi suất điều hành vào tháng 9 và tháng 10/2022, mỗi đợt 1 điểm phần trăm",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_046",
+   "variant": "A",
+   "quarter": "2022Q4",
+   "date_text": "tháng 10/2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "NHNN đã 2 lần tăng các mức lãi suất điều hành vào tháng 9 và tháng 10/2022, mỗi đợt 1 điểm phần trăm",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_046",
+   "variant": "B",
+   "quarter": "2022Q3",
+   "date_text": "tháng 9/2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "NHNN đã 2 lần tăng các mức lãi suất điều hành vào tháng 9 và tháng 10/2022, mỗi đợt 1 điểm phần trăm",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_046",
+   "variant": "B",
+   "quarter": "2022Q4",
+   "date_text": "tháng 10/2022",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "large",
+   "quote": "NHNN đã 2 lần tăng các mức lãi suất điều hành vào tháng 9 và tháng 10/2022, mỗi đợt 1 điểm phần trăm",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_049",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "trong năm 2023, NHNN đã 4 lần giảm lãi suất điều hành năm 2023",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "NHNN đã 4 lần giảm lãi suất điều hành nhằm hỗ trợ doanh nghiệp và người dân",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_049",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "năm 2023",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "NHNN đã 4 lần giảm lãi suất điều hành nhằm hỗ trợ doanh nghiệp và người dân, kích thích tăng trưởng.",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_050",
+   "variant": "A",
+   "quarter": "2024Q3",
+   "date_text": "ngày 1/8/2024",
+   "policy_type": "other",
+   "stance": "easing",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Luật Nhà ở 2023, Luật Kinh doanh Bất động sản 2023 và Luật Đất đai 2024 đồng loạt có hiệu lực từ ngày 1/8/2024",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_050",
+   "variant": "B",
+   "quarter": "2024Q3",
+   "date_text": "từ ngày 1/8/2024",
+   "policy_type": "other",
+   "stance": "easing",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Luật Nhà ở 2023, Luật Kinh doanh Bất động sản 2023 và Luật Đất đai 2024 đồng loạt có hiệu lực từ ngày 1/8/2024",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_058",
+   "variant": "A",
+   "quarter": "2019Q4",
+   "date_text": "Ngày 15/11/2019",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Ngày 15/11/2019, NHNN ban hành Thông tư 22/2019/TT-NHNN ... tăng hệ số rủi ro áp dụng cho các khoản vay kinh doanh bất động sản từ 150% lên 200% khi tính mẫu số của hệ số an toàn vốn (CAR).",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_058",
+   "variant": "B",
+   "quarter": "2019Q4",
+   "date_text": "Ngày 15/11/2019",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Ngày 15/11/2019, NHNN ban hành Thông tư 22/2019/TT-NHNN quy định các giới hạn, tỷ lệ bảo đảm an toàn trong hoạt động ngân hàng, trong đó tăng hệ số rủi ro áp dụng cho các khoản vay kinh doanh bất động sản từ 150% lên 200% khi tính mẫu số của hệ số an toàn vốn (CAR).",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_059",
+   "variant": "A",
+   "quarter": "2022Q4",
+   "date_text": "kể từ ngày 1/10/2022",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "LDR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "giảm dần tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn, đưa về mức 30% kể từ ngày 1/10/2022",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_059",
+   "variant": "B",
+   "quarter": "2022Q4",
+   "date_text": "kể từ ngày 1/10/2022",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "LDR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "NHNN quy định lộ trình giảm dần tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn, đưa về mức 30% kể từ ngày 1/10/2022.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "A",
+   "quarter": "2022Q3",
+   "date_text": "Ngày 16/9/2022",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "TRADE_VOLUME",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "Nghị định bổ sung quy định doanh nghiệp phát hành phải mua lại trái phiếu trước hạn bắt buộc trong một số trường hợp vi phạm",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "A",
+   "quarter": "2022Q3",
+   "date_text": "từ 1/1/2023",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "TRADE_VOLUME",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "yêu cầu xếp hạng tín nhiệm theo lộ trình từ 1/1/2023",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "A",
+   "quarter": "2022Q3",
+   "date_text": "Ngày 16/9/2022",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "tăng trách nhiệm giải trình mục đích sử dụng vốn cho nhà đầu tư",
+   "quote_verified": true,
+   "confidence": 0.85,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "B",
+   "quarter": "2022Q3",
+   "date_text": "Ngày 16/9/2022",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "TRADE_VALUE",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Nghị định bổ sung quy định doanh nghiệp phát hành phải mua lại trái phiếu trước hạn bắt buộc trong một số trường hợp vi phạm",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "B",
+   "quarter": "2023Q1",
+   "date_text": "từ 1/1/2023",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "TRADE_VOLUME",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "yêu cầu xếp hạng tín nhiệm theo lộ trình từ 1/1/2023",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "B",
+   "quarter": "2022Q3",
+   "date_text": "Ngày 16/9/2022",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "tăng trách nhiệm giải trình mục đích sử dụng vốn cho nhà đầu tư",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_060",
+   "variant": "B",
+   "quarter": "2022Q3",
+   "date_text": "Ngày 16/9/2022",
+   "policy_type": "bond_market_rule",
+   "stance": "tightening",
+   "target": "TRADE_VOLUME",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "siết chặt đáng kể điều kiện huy động vốn qua kênh trái phiếu riêng lẻ",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_061",
+   "variant": "A",
+   "quarter": "2023Q4",
+   "date_text": "Ngày 29/12/2023",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "Ngày 29/12/2023, Thống đốc NHNN ban hành Thông tư 22/2023/TT-NHNN sửa đổi, bổ sung một số điều của Thông tư 41/2016/TT-NHNN về tỷ lệ an toàn vốn, trong đó điều chỉnh cách xác định một số loại tài sản bảo đảm giảm thiểu rủi ro tín dụng.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_061",
+   "variant": "B",
+   "quarter": "2023Q4",
+   "date_text": "Ngày 29/12/2023",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "Ngày 29/12/2023, Thống đốc NHNN ban hành Thông tư 22/2023/TT-NHNN sửa đổi, bổ sung một số điều của Thông tư 41/2016/TT-NHNN về tỷ lệ an toàn vốn, trong đó điều chỉnh cách xác định một số loại tài sản bảo đảm giảm thiểu rủi ro tín dụng.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_062",
+   "variant": "A",
+   "quarter": "2025Q2",
+   "date_text": "Ngày 30/6/2025",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "NHNN ban hành Thông tư 14/2025/TT-NHNN quy định tỷ lệ an toàn vốn mới, chính thức thay thế Thông tư 41/2016/TT-NHNN... Điểm mới quan trọng nhất: lần đầu tiên thiết lập cơ chế bộ đệm bảo toàn vốn (capital conservation buffer) và gắn chặt việc chia cổ tức bằng tiền mặt của ngân hàng với mức độ tuân thủ đầy đủ các tỷ lệ an toàn vốn",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_062",
+   "variant": "B",
+   "quarter": "2025Q2",
+   "date_text": "Ngày 30/6/2025; hiệu lực toàn bộ từ 1/1/2030 theo lộ trình chuyển đổi",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Ngày 30/6/2025, NHNN ban hành Thông tư 14/2025/TT-NHNN quy định tỷ lệ an toàn vốn mới, chính thức thay thế Thông tư 41/2016/TT-NHNN kể từ 1/1/2030 theo lộ trình chuyển đổi kéo dài nhằm tránh xáo trộn hệ thống. Điểm mới quan trọng nhất: lần đầu tiên thiết lập cơ chế bộ đệm bảo toàn vốn (capital conservation buffer) và gắn chặt việc chia cổ tức bằng tiền mặt của ngân hàng với mức độ tuân thủ đầy đủ các tỷ lệ an toàn vốn — ngân hàng không đáp ứng đủ bộ đệm vốn sẽ bị hạn chế phân phối lợi nhuận bằng tiền mặt cho cổ đông.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_126",
+   "variant": "A",
+   "quarter": "2026Q2",
+   "date_text": "Bộ Xây dựng công bố trong tháng 4/2026",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Bộ Xây dựng đồng thời nghiên cứu cơ chế phát triển nhà ở thương mại giá rẻ, thúc đẩy nhà ở xã hội và yêu cầu kiểm soát tín dụng bất động sản.",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_378",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Thông tư 14/2025",
+   "policy_type": "prudential_rule",
+   "stance": "neutral",
+   "target": "CAR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "CAR quý I/2026 được tính trên số liệu bank-only theo phương pháp SA của Thông tư 14/2025",
+   "quote_verified": true,
+   "confidence": 0.3,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_378",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Thông tư 41/2016",
+   "policy_type": "prudential_rule",
+   "stance": "neutral",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "CAR 2025 là số hợp nhất theo Thông tư 41/2016",
+   "quote_verified": true,
+   "confidence": 0.3,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_389",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Thông tư 31",
+   "policy_type": "prudential_rule",
+   "stance": "neutral",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "Việc ghi rõ cách tính NPL theo Thông tư 31 giúp tránh trộn lẫn với NPL riêng lẻ hoặc hợp nhất theo chuẩn công bố khác.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_389",
+   "variant": "B",
+   "quarter": null,
+   "date_text": null,
+   "policy_type": "prudential_rule",
+   "stance": "neutral",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "Việc ghi rõ cách tính NPL theo Thông tư 31 giúp tránh trộn lẫn với NPL riêng lẻ hoặc hợp nhất theo chuẩn công bố khác.",
+   "quote_verified": true,
+   "confidence": 0.3,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_393",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "trong nửa đầu năm 2026",
+   "policy_type": "policy_rate",
+   "stance": "neutral",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "Ngân hàng Nhà nước Việt Nam giữ lãi suất tái cấp vốn ở mức 4,50% trong nửa đầu năm 2026",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_393",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "trong nửa đầu năm 2026",
+   "policy_type": "policy_rate",
+   "stance": "neutral",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "Bản cập nhật kinh tế của DBS ghi nhận Ngân hàng Nhà nước Việt Nam giữ lãi suất tái cấp vốn ở mức 4,50% trong nửa đầu năm 2026",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R003",
+   "variant": "B",
+   "quarter": "2024Q1",
+   "date_text": "31/01/2024",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "trước điều chỉnh giảm lãi suất",
+   "quote_verified": true,
+   "confidence": 0.3,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R006",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Các quy định mới của Luật Đất đai và Luật Nhà ở",
+   "policy_type": "other",
+   "stance": "easing",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Các quy định mới của Luật Đất đai và Luật Nhà ở mở rộng khả năng tham gia của người gốc Việt ở nước ngoài và tổ chức nước ngoài",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R006",
+   "variant": "B",
+   "quarter": "2024Q1",
+   "date_text": "27/03/2024",
+   "policy_type": "other",
+   "stance": "easing",
+   "target": "GDP_GROWTH",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Các quy định mới của Luật Đất đai và Luật Nhà ở mở rộng khả năng tham gia của người gốc Việt ở nước ngoài và tổ chức nước ngoài; cơ chế này được kỳ vọng làm FDI và kiều hối vào bất động sản tăng.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R009",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "buộc Ngân hàng Nhà nước phải thực hiện biện pháp chống áp lực tỷ giá",
+   "policy_type": "other",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "buộc Ngân hàng Nhà nước phải thực hiện biện pháp chống áp lực tỷ giá",
+   "quote_verified": true,
+   "confidence": 0.4,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R009",
+   "variant": "B",
+   "quarter": "2024Q2",
+   "date_text": "28/05/2024",
+   "policy_type": "other",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "Ngân hàng Nhà nước phải thực hiện biện pháp chống áp lực tỷ giá",
+   "quote_verified": true,
+   "confidence": 0.3,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R020",
+   "variant": "A",
+   "quarter": "2024Q3",
+   "date_text": "1/8/2024",
+   "policy_type": "other",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Ba luật mới về nhà ở, kinh doanh bất động sản và đất đai có hiệu lực từ 1/8/2024",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R020",
+   "variant": "B",
+   "quarter": "2024Q3",
+   "date_text": "1/8/2024",
+   "policy_type": "bond_market_rule",
+   "stance": "neutral",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Ba luật mới về nhà ở, kinh doanh bất động sản và đất đai có hiệu lực từ 1/8/2024, góp phần hoàn thiện hành lang pháp lý và mở ra chu kỳ bất động sản an toàn hơn.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R022",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Các quy định chặt chẽ mới",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Các quy định chặt chẽ mới khiến nhiều dự án phải kiện toàn thủ tục",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R024",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Quy định giảm hệ số rủi ro đối với khoản vay bất động sản công nghiệp",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Quy định giảm hệ số rủi ro đối với khoản vay bất động sản công nghiệp",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R024",
+   "variant": "B",
+   "quarter": "2025Q2",
+   "date_text": "15/05/2025",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Quy định giảm hệ số rủi ro đối với khoản vay bất động sản công nghiệp giúp các chủ đầu tư tiếp cận tín dụng ngân hàng dễ hơn;",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R030",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Thông tư 02/2023/TT-NHNN hết hiệu lực",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Sau khi Thông tư 02/2023/TT-NHNN hết hiệu lực, một phần nợ tái cơ cấu có thể chuyển thành nợ xấu",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R030",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "24/03/2025",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Sau khi Thông tư 02/2023/TT-NHNN hết hiệu lực, một phần nợ tái cơ cấu có thể chuyển thành nợ xấu, kéo theo nhu cầu trích lập dự phòng cao hơn.",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R034",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Việc luật hóa cơ chế xử lý nợ",
+   "policy_type": "debt_restructuring",
+   "stance": "easing",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Việc luật hóa cơ chế xử lý nợ được kỳ vọng đẩy nhanh thu hồi nợ xấu",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R034",
+   "variant": "B",
+   "quarter": "2025Q2",
+   "date_text": "19/05/2025",
+   "policy_type": "debt_restructuring",
+   "stance": "easing",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Việc luật hóa cơ chế xử lý nợ được kỳ vọng đẩy nhanh thu hồi nợ xấu, từ đó nâng hiệu quả hoạt động và bảo toàn lợi nhuận của ngân hàng.",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R042",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "hết hiệu lực trong năm 2024",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "target": "PROV_COVERAGE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "các thông tư giãn, hoãn nợ hết hiệu lực trong năm 2024",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R042",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "năm 2024",
+   "policy_type": "debt_restructuring",
+   "stance": "tightening",
+   "target": "PROV_COVERAGE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Sau khi các thông tư giãn, hoãn nợ hết hiệu lực trong năm 2024",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R049",
+   "variant": "A",
+   "quarter": "2024Q3",
+   "date_text": "19/07/2024",
+   "policy_type": "omo_liquidity",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "large",
+   "quote": "NHNN bán hơn 6 tỷ USD để bình ổn tỷ giá và duy trì lãi suất điều hành thấp",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_R049",
+   "variant": "B",
+   "quarter": "2024Q3",
+   "date_text": "19/07/2024",
+   "policy_type": "omo_liquidity",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "NHNN bán hơn 6 tỷ USD để bình ổn tỷ giá",
+   "quote_verified": true,
+   "confidence": 0.4,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R049",
+   "variant": "B",
+   "quarter": "2024Q3",
+   "date_text": "19/07/2024",
+   "policy_type": "policy_rate",
+   "stance": "easing",
+   "target": "POLICY_RATE",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "duy trì lãi suất điều hành thấp",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": true
+  },
+  {
+   "chunk_id": "RAGKB_R055",
+   "variant": "B",
+   "quarter": "2026Q1",
+   "date_text": "17/01/2026",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "buộc hệ thống tăng lãi suất để xử lý áp lực thanh khoản.",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R056",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Cơ chế phân bổ room tín dụng dựa trên xếp hạng và giám sát chặt, kèm khả năng giảm room khi vi phạm an toàn, buộc ngân hàng củng cố vốn, chất lượng tài sản và nguồn huy động bền vững.",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Cơ chế phân bổ room tín dụng dựa trên xếp hạng và giám sát chặt, kèm khả năng giảm room khi vi phạm an toàn, buộc ngân hàng củng cố vốn, chất lượng tài sản và nguồn huy động bền vững.",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R056",
+   "variant": "B",
+   "quarter": "2026Q1",
+   "date_text": "17/01/2026",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Cơ chế phân bổ room tín dụng dựa trên xếp hạng và giám sát chặt, kèm khả năng giảm room khi vi phạm an toàn",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R056",
+   "variant": "B",
+   "quarter": "2026Q1",
+   "date_text": "17/01/2026",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "CAR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "buộc ngân hàng củng cố vốn",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R056",
+   "variant": "B",
+   "quarter": "2026Q1",
+   "date_text": "17/01/2026",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "buộc ngân hàng ... củng cố chất lượng tài sản",
+   "quote_verified": false,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R057",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "giới hạn tăng trưởng tín dụng bất động sản không vượt tốc độ tín dụng chung",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "giới hạn tăng trưởng tín dụng bất động sản không vượt tốc độ tín dụng chung nhằm hạn chế rủi ro tập trung và nguy cơ nợ xấu trung hạn",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_R057",
+   "variant": "B",
+   "quarter": "2026Q1",
+   "date_text": "17/01/2026",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "NPL",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "giới hạn tăng trưởng tín dụng bất động sản không vượt tốc độ tín dụng chung nhằm hạn chế rủi ro tập trung và nguy cơ nợ xấu trung hạn",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S013",
+   "variant": "B",
+   "quarter": "2026Q3",
+   "date_text": "16/07/2026",
+   "policy_type": "omo_liquidity",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "ưu tiên bán ngoại tệ và hút bớt tiền đồng qua OMO",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S013",
+   "variant": "B",
+   "quarter": "2026Q3",
+   "date_text": "16/07/2026",
+   "policy_type": "other",
+   "stance": "tightening",
+   "target": "CPI_INFLATION",
+   "direction": "-",
+   "magnitude": "small",
+   "quote": "ưu tiên bán ngoại tệ và hút bớt tiền đồng qua OMO",
+   "quote_verified": true,
+   "confidence": 0.5,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S013",
+   "variant": "B",
+   "quarter": "2026Q3",
+   "date_text": "16/07/2026",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "small",
+   "quote": "thay vì tăng ngay lãi suất điều hành",
+   "quote_verified": true,
+   "confidence": 0.4,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S014",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "16/07/2026",
+   "policy_type": "policy_rate",
+   "stance": "tightening",
+   "target": "POLICY_RATE",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Ngân hàng Nhà nước mới cần cân nhắc tăng lãi suất điều hành vì chi phí đối với tăng trưởng khá lớn.",
+   "quote_verified": true,
+   "confidence": 0.3,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S031",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "",
+   "policy_type": "credit_quota",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "các chính sách nới lỏng room tín dụng đã tháo gỡ thanh khoản trước mắt",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S031",
+   "variant": "B",
+   "quarter": "2026Q3",
+   "date_text": "09/07/2026",
+   "policy_type": "credit_quota",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "dù các chính sách nới lỏng room tín dụng đã tháo gỡ thanh khoản trước mắt.",
+   "quote_verified": true,
+   "confidence": 0.7,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S038",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "nâng tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn từ 30% lên 40%",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "nâng tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn từ 30% lên 40%",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S038",
+   "variant": "B",
+   "quarter": "2026Q3",
+   "date_text": "20/07/2026",
+   "policy_type": "prudential_rule",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "Việc nâng tỷ lệ tối đa nguồn vốn ngắn hạn được sử dụng để cho vay trung và dài hạn từ 30% lên 40% tạo thêm dư địa tài chính cho nền kinh tế, trong bối cảnh nhu cầu vốn trung và dài hạn đang gia tăng mạnh mẽ.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S041",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "tăng trưởng tín dụng được định hướng ở mức cao",
+   "policy_type": "credit_quota",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "khi tăng trưởng tín dụng được định hướng ở mức cao, các ngân hàng phải tăng lãi suất huy động để giữ chân vốn",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_S041",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "15/07/2026",
+   "policy_type": "credit_quota",
+   "stance": "easing",
+   "target": "LDR",
+   "direction": "+",
+   "magnitude": "medium",
+   "quote": "khi tăng trưởng tín dụng được định hướng ở mức cao",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_TAN016",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "ngay từ đầu năm xuống 15%",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "CPI_INFLATION",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "NHNN giảm chỉ tiêu tăng trưởng tín dụng mục tiêu ngay từ đầu năm xuống 15%.",
+   "quote_verified": true,
+   "confidence": 0.9,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_TAN016",
+   "variant": "B",
+   "quarter": "2026Q1",
+   "date_text": "ngay từ đầu năm",
+   "policy_type": "credit_quota",
+   "stance": "tightening",
+   "target": "GDP_GROWTH",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "NHNN giảm chỉ tiêu tăng trưởng tín dụng mục tiêu ngay từ đầu năm xuống 15%.",
+   "quote_verified": true,
+   "confidence": 0.8,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_TAN017",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "kiềm chế dòng vốn bất động sản thông qua các biện pháp kiểm soát dòng vốn",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "OTHER",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Động lực tăng trưởng tín dụng truyền thống từ bất động sản bị NHNN kiềm chế thông qua các biện pháp kiểm soát dòng vốn",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_TAN050",
+   "variant": "A",
+   "quarter": null,
+   "date_text": "Các quy định chặt chẽ hơn về thanh khoản trong ngắn hạn",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "LDR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Các quy định chặt chẽ hơn về thanh khoản trong ngắn hạn sẽ làm gia tăng cạnh tranh huy động, khiến chi phí vốn neo cao",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  },
+  {
+   "chunk_id": "RAGKB_TAN050",
+   "variant": "B",
+   "quarter": null,
+   "date_text": "29/05/2026",
+   "policy_type": "prudential_rule",
+   "stance": "tightening",
+   "target": "LDR",
+   "direction": "-",
+   "magnitude": "medium",
+   "quote": "Các quy định chặt chẽ hơn về thanh khoản trong ngắn hạn",
+   "quote_verified": true,
+   "confidence": 0.6,
+   "matched_other_variant": false
+  }
+ ]
+}

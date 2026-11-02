@@ -1,0 +1,65 @@
+{
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "frozen_calibration": "experiments/ext/revlag3/frozen_revlag3_eval.json",
+  "frozen_calibration_sha256": "c57218af10124073fa73ec9688bc7c419b56771fd5a29dcd717d4f7029a47cdc",
+  "seed_base": 20261102,
+  "name": "ext_revlag3_rev2",
+  "purpose": "R3-4 (revlag3), corrected re-run of ext_revlag3_rev: identical except that cell none is evaluated too, so the oracle (fitted once per T at the FIRST evaluated cell, stream rng(2) seeded with that cell's position c_idx; bug E1) uses c_idx 0 as in ext_revlag_lag. ext_revlag3_rev failed the pre-registered validity condition for oracle (lo/hi differ, C_e equal; tolerant_v4 identical) and was not analysed. Rules in docs/ext/revlag3.md, unchanged. Run by experiments/ext/revlag3/run_pairs3.py.",
+  "only_cells": [
+    "none|0.0",
+    "reversed|0.2",
+    "reversed|0.5"
+  ],
+  "methods": [
+    "oracle",
+    "tolerant_v4",
+    "tolerant_v4R",
+    "tolerant_v4R_mix",
+    "tolerant_v4Rmap"
+  ],
+  "calibrate_methods": [
+    "tolerant_v4R",
+    "tolerant_v4R_mix",
+    "tolerant_v4Rmap"
+  ]
+}

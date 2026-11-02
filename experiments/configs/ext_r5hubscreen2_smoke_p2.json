@@ -1,0 +1,57 @@
+{
+ "name": "ext_r5hubscreen2_smoke_p2",
+ "purpose": "SMOKE (pipeline check only, D-07H development, units seed_base+700000, n_boot 19); not evaluation.",
+ "bank": "D-07H",
+ "split": "development",
+ "max_topologies": 2,
+ "replicates": 1,
+ "seed_base": 70961102,
+ "T": [
+  19,
+  25,
+  30,
+  35
+ ],
+ "cells": [
+  [
+   "extra",
+   0.2
+  ],
+  [
+   "missing",
+   0.2
+  ],
+  [
+   "reversed",
+   0.2
+  ]
+ ],
+ "methods": [
+  "tolerant_v5_1",
+  "tolerant_v5_1_hs2",
+  "tolerant_v5_1_hs",
+  "plugin_hs_cal"
+ ],
+ "red_calibration": "results/ext_r5hubscreen2_smoke_cal/calibration.json",
+ "H": 4,
+ "n_boot": 19,
+ "tau_effect": 0.1,
+ "generator": {
+  "lag_max": 2,
+  "q0": 0.3,
+  "cross_coef": [
+   0.3,
+   0.8
+  ],
+  "self_coef": [
+   0.2,
+   0.6
+  ],
+  "noise_var": [
+   0.5,
+   1.5
+  ],
+  "rho_max": 0.9,
+  "burn_in": 200
+ }
+}

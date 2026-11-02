@@ -1,0 +1,115 @@
+{
+  "schema": "synthetic_dag/v1",
+  "id": "syn_dag_34",
+  "seed": 20261137,
+  "profile": "scale_free_hub",
+  "nodes": [
+    "bank_npl_ratio",
+    "bank_car_ratio",
+    "bank_nim_ratio",
+    "bank_roe_ratio",
+    "bank_ldr_ratio",
+    "bank_provision_coverage_proxy_pct",
+    "bank_z_score",
+    "macro_gdp_yoy_pct",
+    "macro_cpi_avg_pct",
+    "macro_policy_rate_pct",
+    "stock_adj_close_last_vnd",
+    "stock_return_qoq_pct",
+    "stock_avg_daily_volume_cp",
+    "stock_avg_daily_trade_value_vnd"
+  ],
+  "edges": [
+    [
+      "bank_car_ratio",
+      "bank_ldr_ratio"
+    ],
+    [
+      "bank_car_ratio",
+      "bank_z_score"
+    ],
+    [
+      "bank_npl_ratio",
+      "stock_avg_daily_trade_value_vnd"
+    ],
+    [
+      "bank_provision_coverage_proxy_pct",
+      "bank_roe_ratio"
+    ],
+    [
+      "bank_provision_coverage_proxy_pct",
+      "bank_z_score"
+    ],
+    [
+      "bank_provision_coverage_proxy_pct",
+      "stock_avg_daily_trade_value_vnd"
+    ],
+    [
+      "bank_roe_ratio",
+      "bank_npl_ratio"
+    ],
+    [
+      "bank_roe_ratio",
+      "stock_avg_daily_trade_value_vnd"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "bank_car_ratio"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "bank_ldr_ratio"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "bank_nim_ratio"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "bank_provision_coverage_proxy_pct"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "bank_roe_ratio"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "bank_z_score"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "macro_cpi_avg_pct"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "macro_gdp_yoy_pct"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "stock_adj_close_last_vnd"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "stock_avg_daily_trade_value_vnd"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "stock_avg_daily_volume_cp"
+    ],
+    [
+      "macro_policy_rate_pct",
+      "stock_return_qoq_pct"
+    ],
+    [
+      "stock_adj_close_last_vnd",
+      "bank_npl_ratio"
+    ]
+  ],
+  "metrics": {
+    "n_nodes": 14,
+    "n_edges": 21,
+    "n_v_structures": 4,
+    "max_out_degree": 12,
+    "is_connected": true
+  }
+}

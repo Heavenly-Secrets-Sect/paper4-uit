@@ -1,0 +1,241 @@
+"""Apply the pre-registered rule of r4hubscreen (docs/ext/r4hubscreen.md, section 3) mechanically.
+
+Reads results/ext_r4hubscreen_lag2 and results/ext_r4hubscreen_lag1, the stored runs ext_v51_eval and
+a2_baselines (pairing check), and results/ext_r4hubscreen_identity/identity.json (V1).
+Writes results/ext_r4hubscreen_ruling/{ruling.md, ruling.json}.
+"""
+import json
+import sys
+from collections import defaultdict
+from pathlib import Path
+
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[3]
+RES = ROOT / "results"
+OUT = RES / "ext_r4hubscreen_ruling"
+CAND, V51 = "tolerant_v5_1_hs", "tolerant_v5_1"
+PRIMARY = [(2, T, k) for T in (19, 25, 30, 35) for k in ("missing", "reversed", "extra")]
+SECONDARY = ([(2, T, k) for T in (19, 25, 30, 35) for k in ("none",)] + [(2, 40, k) for k in ("none", "missing", "reversed", "extra")]
+             + [(1, T, k) for T in (19, 25, 30) for k in ("none", "missing", "reversed", "extra")])
+B = 20_000
+ALPHA = 0.05
+
+
+def load(name):
+    p = RES / name / "runs.jsonl"
+    return [json.loads(l) for l in open(p)] if p.exists() else []
+
+
+def rk(r):
+    return (r["topology"], r["replicate"], r["T"], r["kind"], r["rate"])
+
+
+def cell_rows(rows, lag, T, kind, m):
+    return [r for r in rows if r.get("lag_max") == lag and r["T"] == T and r["kind"] == kind and r["method"] == m]
+
+
+def stats(g):
+    ok = [r for r in g if r["status"] == "ok"]
+    nn_all = sum(r["n_nonnull_truth"] for r in g)
+    nn_ok = sum(r["n_nonnull"] for r in ok)
+    cov_ok = sum(r["n_covered_nonnull"] for r in ok) / nn_ok if nn_ok else float("nan")
+    itt = sum(r["n_covered_nonnull"] for r in ok) / nn_all if nn_all else float("nan")
+    IS = float(np.mean([r["iscore_nonnull_mean"] for r in ok])) if ok else float("nan")
+    w = [r["width_kept"] for r in ok if r.get("width_kept") is not None]
+    return {"n": len(g), "ok": len(ok), "cov": cov_ok, "itt": itt, "IS": IS,
+            "width": float(np.median(w)) if w else float("nan")}
+
+
+def boot_p(d, sign, seed=1):
+    """One-sided cluster-bootstrap p (topology clusters): sign=+1 tests mean diff > 0, -1 tests < 0."""
+    topos = list(d)
+    if not topos:
+        return None
+    sums = np.array([np.sum(d[t]) for t in topos])
+    cnts = np.array([len(d[t]) for t in topos])
+    rng = np.random.default_rng(seed)
+    picks = rng.integers(0, len(topos), size=(B, len(topos)))
+    bm = sums[picks].sum(1) / cnts[picks].sum(1)
+    if sign > 0:
+        return (1 + int((bm <= 0).sum())) / (B + 1)
+    return (1 + int((bm >= 0).sum())) / (B + 1)
+
+
+def itt_p(g):
+    """One-sided cluster bootstrap p for H0: ITT coverage <= 0.90 (descriptive Holm count)."""
+    d = defaultdict(lambda: [0, 0])
+    for r in g:
+        d[r["topology"]][0] += r.get("n_covered_nonnull", 0) if r["status"] == "ok" else 0
+        d[r["topology"]][1] += r["n_nonnull_truth"]
+    topos = list(d)
+    c = np.array([d[t][0] for t in topos]); n = np.array([d[t][1] for t in topos])
+    rng = np.random.default_rng(2)
+    picks = rng.integers(0, len(topos), size=(B, len(topos)))
+    bm = c[picks].sum(1) / n[picks].sum(1)
+    return (1 + int((bm <= 0.90).sum())) / (B + 1)
+
+
+def paired(rows, lag, T, kind, a, b):
+    ia = {rk(r): r for r in cell_rows(rows, lag, T, kind, a) if r["status"] == "ok"}
+    ib = {rk(r): r for r in cell_rows(rows, lag, T, kind, b) if r["status"] == "ok"}
+    d = defaultdict(list)
+    ma, mb = [], []
+    for k in set(ia) & set(ib):
+        d[k[0]].append(ia[k]["iscore_nonnull_mean"] - ib[k]["iscore_nonnull_mean"])
+        ma.append(ia[k]["iscore_nonnull_mean"]); mb.append(ib[k]["iscore_nonnull_mean"])
+    n = sum(len(v) for v in d.values())
+    if not n:
+        return {"n": 0}
+    return {"n": n, "diff": float(np.mean(ma) - np.mean(mb)), "ratio": float(np.mean(ma) / np.mean(mb)),
+            "p_worse": boot_p(d, +1), "p_better": boot_p(d, -1)}
+
+
+def holm(ps, alpha=ALPHA):
+    idx = [i for i, p in enumerate(ps) if p is not None]
+    order = sorted(idx, key=lambda i: ps[i])
+    m = len(idx)
+    rej = [False] * len(ps)
+    for rank, i in enumerate(order):
+        if ps[i] <= alpha / (m - rank):
+            rej[i] = True
+        else:
+            break
+    return rej
+
+
+def identical(x, y):
+    if x["status"] != y["status"]:
+        return False
+    if x["status"] != "ok":
+        return True
+    return abs(x["iscore_nonnull_mean"] - y["iscore_nonnull_mean"]) < 1e-12 and x["n_covered_nonnull"] == y["n_covered_nonnull"]
+
+
+def pairing_check(rows, stored, method, lag=2, T=40):
+    mine = {rk(r): r for r in rows if r.get("lag_max") == lag and r["method"] == method and r["T"] == T}
+    theirs = {rk(r): r for r in stored if r["method"] == method and r["T"] == T and rk(r) in mine}
+    same = sum(identical(mine[k], theirs[k]) for k in theirs)
+    return {"mine": len(mine), "matched_keys": len(theirs), "identical": same}
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+    rows = load("ext_r4hubscreen_lag2") + load("ext_r4hubscreen_lag1")
+    out = ["# r4hubscreen: ruling (generated by experiments/ext/r4hubscreen/rule_eval.py)", ""]
+    J = {}
+    # ---------------- validity
+    ident = json.loads((RES / "ext_r4hubscreen_identity" / "identity.json").read_text())
+    nonred = [r for r in ident["rows"] if r["reduced"] == 0]
+    v1 = all(r["identical"] for r in nonred) and "True" in ident["unit_test"]
+    v2_tot = v2_same = 0
+    for lag, T, kind in PRIMARY + SECONDARY:
+        c = {rk(r): r for r in cell_rows(rows, lag, T, kind, CAND)}
+        v = {rk(r): r for r in cell_rows(rows, lag, T, kind, V51)}
+        for k, r in c.items():
+            if r["hs_reduced"] == 0 and v[k]["status"] == "ok":
+                v2_tot += 1
+                v2_same += identical(r, v[k])
+    v2 = v2_tot == v2_same
+    p_v51 = pairing_check(rows, load("ext_v51_eval"), V51)
+    p_plg = pairing_check(rows, load("a2_baselines"), "plugin")
+    J["validity"] = {"V1": v1, "V1_runs": len(nonred), "V2": v2, "V2_runs": v2_tot, "V2_identical": v2_same,
+                     "V3_v51_vs_ext_v51_eval": p_v51, "V3_plugin_vs_a2_baselines": p_plg}
+    out += ["## Validity", "",
+            f"- V1 identity script (D-07H): {'PASS' if v1 else 'FAIL'} ({len(nonred)} non-reduced runs)",
+            f"- V2 candidate == v5_1 on runs with no reduction and v5_1 ok (all cells): {v2_same}/{v2_tot} -> **{'PASS' if v2 else 'FAIL'}**",
+            f"- V3 pairing lag 2 T40: v5_1 vs ext_v51_eval {p_v51['identical']}/{p_v51['matched_keys']} identical (of {p_v51['mine']} rows); "
+            f"plugin vs a2_baselines {p_plg['identical']}/{p_plg['matched_keys']} (of {p_plg['mine']})", ""]
+    # ---------------- cells
+    methods = [CAND, V51, "tolerant_v5_1_hs1", "plugin", "plugin_cal", "plugin_hs_cal"]
+    out += ["## Cells (ok/60 · coverage on completed · ITT coverage · mean IS on completed)", "",
+            "| lag | T | cell | reduced runs | " + " | ".join(methods) + " |", "|---|---|---|---|" + "---|" * len(methods)]
+    S = {}
+    for lag, T, kind in PRIMARY + SECONDARY:
+        cs = []
+        for m in methods:
+            s = stats(cell_rows(rows, lag, T, kind, m))
+            S[(lag, T, kind, m)] = s
+            cs.append(f"{s['ok']}/{s['n']} · {s['cov']:.3f} · {s['itt']:.3f} · {s['IS']:.2f}")
+        nred = sum(r["hs_reduced"] for r in cell_rows(rows, lag, T, kind, CAND))
+        tag = "**P**" if (lag, T, kind) in PRIMARY else "s"
+        out.append(f"| {lag} | {T} | {kind} {tag} | {nred} | " + " | ".join(cs) + " |")
+    # rescued runs
+    out += ["", "## Rescued runs (v5_1 not ok, candidate ok): coverage / mean IS of the candidate", "",
+            "| lag | T | cell | rescued | cov | IS | non-rescued completed: cov / IS |", "|---|---|---|---|---|---|---|"]
+    J["rescued"] = {}
+    for lag, T, kind in PRIMARY + SECONDARY:
+        g = cell_rows(rows, lag, T, kind, CAND)
+        res = [r for r in g if r["v51_status"] != "ok" and r["status"] == "ok"]
+        oth = [r for r in g if r["v51_status"] == "ok" and r["status"] == "ok"]
+        if not res:
+            continue
+        sr, so = stats(res), stats(oth) if oth else None
+        J["rescued"][f"{lag}|{T}|{kind}"] = {"n": len(res), "cov": sr["cov"], "IS": sr["IS"],
+                                             "other_cov": so["cov"] if so else None, "other_IS": so["IS"] if so else None}
+        out.append(f"| {lag} | {T} | {kind} | {len(res)} | {sr['cov']:.3f} | {sr['IS']:.2f} | "
+                   + (f"{so['cov']:.3f} / {so['IS']:.2f}" if so else "–") + " |")
+    # ---------------- criteria on primary cells
+    C1 = [S[(l, T, k, CAND)]["ok"] >= 59 for l, T, k in PRIMARY]
+    itts = [S[(l, T, k, CAND)]["itt"] for l, T, k in PRIMARY]
+    C2a = sum(x >= 0.90 for x in itts)
+    C2b = min(itts)
+    itt_ps = [itt_p(cell_rows(rows, l, T, k, CAND)) for l, T, k in PRIMARY]
+    itt_holm = holm(itt_ps)
+    harm = [paired(rows, l, T, k, CAND, V51) for l, T, k in PRIMARY]
+    harm_ps = [h.get("p_worse") for h in harm]
+    harm_holm = holm(harm_ps)
+    C3_ratio = [h["n"] == 0 or h["ratio"] <= 1.05 for h in harm]
+    C3 = all(C3_ratio) and not any(harm_holm)
+    vp = [paired(rows, l, T, k, CAND, "plugin_cal") for l, T, k in PRIMARY]
+    wins = [h["n"] > 0 and h["diff"] <= 0 for h in vp]
+    vp_ps = [h.get("p_better") for h in vp]
+    vp_holm = holm(vp_ps)
+    vp_worse_holm = holm([h.get("p_worse") for h in vp])
+    vh = [paired(rows, l, T, k, CAND, "plugin_hs_cal") for l, T, k in PRIMARY]
+    vh_holm_b = holm([h.get("p_better") for h in vh]); vh_holm_w = holm([h.get("p_worse") for h in vh])
+    out += ["", "## Primary cells: criteria", "",
+            "| lag | T | cell | C1 ok | C2 ITT (H0 <=0.90: p, Holm) | C3 vs v5_1: paired n, ratio, diff, p worse, Holm | "
+            "C4 vs plugin_cal: n, diff, p better, Holm win, Holm worse | secondary vs plugin_hs_cal: n, diff, Holm win/worse |",
+            "|---|---|---|---|---|---|---|---|"]
+    for i, (l, T, k) in enumerate(PRIMARY):
+        h, v, w = harm[i], vp[i], vh[i]
+        c3s = "n 0" if h["n"] == 0 else f"{h['n']}, {h['ratio']:.3f}, {h['diff']:+.3f}, {h['p_worse']:.4f}, {'SIG' if harm_holm[i] else '-'}"
+        c4s = "n 0" if v["n"] == 0 else f"{v['n']}, {v['diff']:+.2f}, {v['p_better']:.4f}, {'WIN' if vp_holm[i] else '-'}, {'WORSE' if vp_worse_holm[i] else '-'}"
+        c5s = "n 0" if w["n"] == 0 else f"{w['n']}, {w['diff']:+.2f}, {'WIN' if vh_holm_b[i] else '-'}/{'WORSE' if vh_holm_w[i] else '-'}"
+        out.append(f"| {l} | {T} | {k} | {S[(l, T, k, CAND)]['ok']}/60 | {itts[i]:.3f} ({itt_ps[i]:.4f}, {'rej' if itt_holm[i] else '-'}) | "
+                   f"{c3s} | {c4s} | {c5s} |")
+    c1 = all(C1)
+    c2 = C2a >= 10 and C2b >= 0.85
+    c4 = sum(wins) >= 6
+    verdict = "RETAINED (exploratory)" if (v2 and c1 and c2 and C3 and c4) else ("INVALID" if not v2 else "REJECTED")
+    J["criteria"] = {"C1": {"pass": c1, "cells_pass": sum(C1), "of": 12},
+                     "C2": {"pass": c2, "cells_ge_090": C2a, "min_itt": C2b, "holm_rejections_H0_le_090": sum(itt_holm), "of": 12},
+                     "C3": {"pass": C3, "ratio_ok_cells": sum(C3_ratio), "holm_sig_worse": sum(harm_holm),
+                            "cells_with_pairs": sum(h["n"] > 0 for h in harm), "of": 12},
+                     "C4": {"pass": c4, "cells_le_plugin_cal": sum(wins), "holm_sig_wins": sum(vp_holm),
+                            "holm_sig_worse": sum(vp_worse_holm), "of": 12},
+                     "secondary_vs_plugin_hs_cal": {"holm_wins": sum(vh_holm_b), "holm_worse": sum(vh_holm_w),
+                                                    "cells_le": sum(h["n"] > 0 and h["diff"] <= 0 for h in vh), "of": 12},
+                     "verdict": verdict}
+    J["cells"] = {f"{l}|{T}|{k}|{m}": S[(l, T, k, m)] for (l, T, k, m) in S}
+    J["primary_detail"] = {f"{l}|{T}|{k}": {"itt": itts[i], "itt_p": itt_ps[i], "harm": harm[i], "vs_plugin_cal": vp[i],
+                                            "vs_plugin_hs_cal": vh[i]} for i, (l, T, k) in enumerate(PRIMARY)}
+    out += ["", "## Verdict", "",
+            f"- C1 completion >= 59/60: {sum(C1)}/12 cells -> {'PASS' if c1 else 'FAIL'}",
+            f"- C2 ITT coverage >= 0.90 in >= 10/12 (got {C2a}/12), min >= 0.85 (got {C2b:.3f}) -> {'PASS' if c2 else 'FAIL'}; "
+            f"Holm (alpha 0.05, over 12) rejections of H0 'ITT <= 0.90': {sum(itt_holm)}/12",
+            f"- C3 no-harm vs v5_1 on runs where v5_1 completes: ratio <= 1.05 in {sum(C3_ratio)}/12, Holm-significant worse "
+            f"{sum(harm_holm)}/{sum(h['n'] > 0 for h in harm)} (cells with paired runs) -> {'PASS' if C3 else 'FAIL'}",
+            f"- C4 IS <= plugin_cal (paired, both completed) in {sum(wins)}/12 (need >= 6); Holm-significant wins "
+            f"{sum(vp_holm)}/12, Holm-significant worse {sum(vp_worse_holm)}/12 -> {'PASS' if c4 else 'FAIL'}",
+            f"- Secondary vs plugin_hs_cal: IS <= in {J['criteria']['secondary_vs_plugin_hs_cal']['cells_le']}/12, "
+            f"Holm wins {sum(vh_holm_b)}/12, Holm worse {sum(vh_holm_w)}/12",
+            f"- Validity V2: {'PASS' if v2 else 'FAIL'}", "", f"**Verdict: {verdict}**"]
+    (OUT / "ruling.md").write_text("\n".join(out) + "\n", encoding="utf-8")
+    (OUT / "ruling.json").write_text(json.dumps(J, indent=1, default=float), encoding="utf-8")
+    print("\n".join(out))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,51 @@
+{
+  "spec": "P5 (TLP baseline, secondary) -- docs/ext/tlp3.md section 3; replaces experiments/configs/ext_tlp2_p4h2.json + experiments/ext/tlp2/score.py (both must NOT be used for P4-H2)",
+  "owner": "tlp3 (R3-5)",
+  "files": [
+    "experiments/configs/ext_tlp3_p4h2.json",
+    "experiments/ext/tlp3/analyze_p4h2.py",
+    "experiments/ext/tlp3/preflight.py",
+    "experiments/ext/tlp3/p4h2_spec_files.json",
+    "experiments/calibration/tolerant_v4_frozen.json",
+    "experiments/run_experiment.py",
+    "src/paper4/__init__.py",
+    "src/paper4/ext_tlp.py",
+    "src/paper4/ext_tlp2.py",
+    "src/paper4/methods.py",
+    "src/paper4/estimator.py",
+    "src/paper4/metrics.py",
+    "src/paper4/generator.py",
+    "src/paper4/skeleton.py",
+    "src/paper4/effects.py",
+    "src/paper4/topology.py",
+    "docs/ext/tlp3.md"
+  ],
+  "registry_dependents_note": "run_experiment.ext_methods() imports EVERY src/paper4/ext_*.py present at run time (bug E4). They do not compute any P5 method, but a later module could overwrite a method name or monkeypatch at import. preflight.py fails on a name collision and writes the sha256 of every loaded paper4 module (results/ext_tlp3_preflight/preflight.json); the lead should hash all ext_*.py present at run time together with the files above.",
+  "registry_dependents_at_spec_time": [
+    "src/paper4/ext_auto5.py",
+    "src/paper4/ext_baselines2.py",
+    "src/paper4/ext_baselines3.py",
+    "src/paper4/ext_eiv.py",
+    "src/paper4/ext_eiv2.py",
+    "src/paper4/ext_gate.py",
+    "src/paper4/ext_narrow.py",
+    "src/paper4/ext_revlag.py",
+    "src/paper4/ext_revlag3.py",
+    "src/paper4/ext_textinfo.py",
+    "src/paper4/ext_tlp.py",
+    "src/paper4/ext_tlp2.py",
+    "src/paper4/ext_v4c.py",
+    "src/paper4/ext_v51.py",
+    "src/paper4/diagnose.py"
+  ],
+  "topology_bank": "P4-H2 confirmatory; verified by sha256 inside topology.load_bank against the bank manifest (not read by tlp3)",
+  "commands": [
+    "python3 experiments/ext/tlp3/preflight.py --out results/ext_tlp3_preflight/preflight.json   # must print ok: true, else do not run",
+    "python3 experiments/run_experiment.py --config experiments/configs/ext_tlp3_p4h2.json --workers 3",
+    "python3 experiments/ext/tlp3/analyze_p4h2.py --run ext_tlp3_p4h2 --out results/ext_tlp3_p4h2_verdict"
+  ],
+  "run_order_note": "Run after ext_v51_p4h2 (P1) if possible, so the descriptive v4-realisation check compares against P1's rows; the verdict does not depend on it.",
+  "expected_runtime_workers3": "about 75.3 min (smoke extrapolation: 20 x 222 s main + ~77 s calibration); stated range 70-90 min; D-07 upper bound 87.8 min. Needs a user-approved exception to hard rule 5. Source: results/ext_tlp3_checks/runtime_estimate.json",
+  "rerun_policy": "If interrupted before results/ext_tlp3_p4h2/runs.jsonl exists: rerun once, config unchanged, disclose. Never a cell-filter driver.",
+  "confirmatory_rule": "see docs/ext/tlp3.md section 3 (verbatim) and experiments/ext/tlp3/analyze_p4h2.py:decide"
+}

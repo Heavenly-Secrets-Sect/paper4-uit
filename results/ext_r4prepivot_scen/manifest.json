@@ -1,0 +1,148 @@
+{
+ "spec": {
+  "name": "ext_r4prepivot_scen",
+  "bank": "D-07",
+  "split": "development",
+  "b_o": 39,
+  "b_i": 19,
+  "replicates": [
+   0,
+   1,
+   2
+  ],
+  "purpose": "Descriptive: latent1 and noise0.1 scenarios, T 80/150, pairs with results/ext_v51_a1 (its calibration.json factors).",
+  "base_config": "ext_v51_a1",
+  "pair_with": "ext_v51_a1",
+  "factors": "results/ext_v51_a1/calibration.json",
+  "cells": [
+   [
+    80,
+    "none",
+    0.0
+   ],
+   [
+    80,
+    "missing",
+    0.2
+   ],
+   [
+    80,
+    "reversed",
+    0.2
+   ],
+   [
+    150,
+    "none",
+    0.0
+   ],
+   [
+    150,
+    "missing",
+    0.2
+   ],
+   [
+    150,
+    "reversed",
+    0.2
+   ]
+  ],
+  "scenarios": [
+   {
+    "name": "latent1",
+    "latent": 1
+   },
+   {
+    "name": "noise0.1",
+    "meas_noise": 0.1
+   }
+  ]
+ },
+ "start_utc": "2026-11-02T13:16:39Z",
+ "end_utc": "2026-11-02T13:30:10Z",
+ "seconds": 811.1,
+ "n_datasets": 720,
+ "workers": 3,
+ "python": "/Users/kietnt/miniconda3/bin/python",
+ "topologies": [
+  {
+   "id": "syn_dag_00",
+   "sha256": "896a4cbcbbe3ec0b3738defc20b3a7b75b1187d993cc569c52fe197741c244d1"
+  },
+  {
+   "id": "syn_dag_01",
+   "sha256": "601e2dcbb1e105ca98b26dafa00bda540a5501fe02ef41548c850682aeaddb00"
+  },
+  {
+   "id": "syn_dag_02",
+   "sha256": "e1d0d0ec280ee66f64ae76dc3e8ba67eef56a12410563185f0f3db36f514ea52"
+  },
+  {
+   "id": "syn_dag_03",
+   "sha256": "a4c6c0557daddbf235965b20f975026d4948abdba73f6a8c43dcb3e2438e31d5"
+  },
+  {
+   "id": "syn_dag_04",
+   "sha256": "ff649f9ceed557594bbd3878b3fa79f80edda15ca4957a8acb6ed4d91ab08892"
+  },
+  {
+   "id": "syn_dag_05",
+   "sha256": "cf9029bf89eae8033aacd4b99c2466ecba1b3af8abfcae818d75b41698bb5c9c"
+  },
+  {
+   "id": "syn_dag_06",
+   "sha256": "2a19920ed652baf99f958954382063aeecea8277bbd692e3ac5bd4b12fe21bb6"
+  },
+  {
+   "id": "syn_dag_07",
+   "sha256": "2ec3fbbf40df1f10f9a003d28c7d4eb29ea05ca7189972eab1ab2a8504005932"
+  },
+  {
+   "id": "syn_dag_08",
+   "sha256": "3197e753de719ce3facb90f411fdb7b147c5334e6ea09801702367666518a8bd"
+  },
+  {
+   "id": "syn_dag_09",
+   "sha256": "5441695f936ff85d1a201ffa5c379862d16a3df5b1e9e08ee8ed38b55e381414"
+  },
+  {
+   "id": "syn_dag_10",
+   "sha256": "b4112920f0b0c4cbbaccbf72219097f379e53693e11db1d9f4bd0910e85686ca"
+  },
+  {
+   "id": "syn_dag_11",
+   "sha256": "941d1b6de7f080a7ec488f3d11cf29ae224963820ba4889c1d5e47d3fc8ec546"
+  },
+  {
+   "id": "syn_dag_12",
+   "sha256": "b70eace02d5b70af01f6a1091a97afb2d542aecfcf9a773ec255119733225a2a"
+  },
+  {
+   "id": "syn_dag_13",
+   "sha256": "761d497d5b290e9290b1116eaaf1a988f095dd9ecf7d19b83a119ce819dd7f3a"
+  },
+  {
+   "id": "syn_dag_14",
+   "sha256": "490cbd1f141f9b78eaed7c21c3c0ecfece765143c13033964bbb459bfd5865e8"
+  },
+  {
+   "id": "syn_dag_15",
+   "sha256": "0725cbd971c343a6a998d034eb323e732bcb8c90febdf5f3692a3d53a422bec6"
+  },
+  {
+   "id": "syn_dag_16",
+   "sha256": "8866ef2ee34ee74ead4a06d997686ef994365f4a3d1fe8981401048c4ed6e1f9"
+  },
+  {
+   "id": "syn_dag_17",
+   "sha256": "1c35e346e2b95c6f18689ded567f4e7bb41b6b9be55770e59100d3b9858067ee"
+  },
+  {
+   "id": "syn_dag_18",
+   "sha256": "4a82c0d05df72d859f0991bbd474de359490ba87385988802777863f8204ef9d"
+  },
+  {
+   "id": "syn_dag_19",
+   "sha256": "5c2faaa8dc09d7bbf284e105481f683b4fe31cf3a83181068282c300b5e57c49"
+  }
+ ]
+}

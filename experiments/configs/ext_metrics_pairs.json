@@ -1,0 +1,19 @@
+{
+  "name": "ext_metrics_pairs",
+  "purpose": "RQ4.1 pair-level error characterisation (by true lag of the pair's direct edge and by role relative to the damaged edges) and RQ4.4 truth-free flags for tolerant_v4. Re-runs the a2_baselines / a2b_pselect seeds exactly, storing pair-level rows. Run by experiments/ext/metrics/run_pairs.py, not by run_experiment.py (which stores run-level medians only).",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "T": [40, 80, 150],
+  "damage": {"kinds": ["extra", "missing", "reversed"], "rates": [0.2, 0.5]},
+  "methods": ["oracle", "plugin", "lp_allpast", "ida_union", "bvar_minnesota", "pselect_union", "tolerant_v4"],
+  "module_width_factors_from": "results/a2_baselines/calibration.json",
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "window_share": 0.6,
+  "generator": {"lag_max": 2, "q0": 0.3, "cross_coef": [0.3, 0.8], "self_coef": [0.2, 0.6],
+                "noise_var": [0.5, 1.5], "rho_max": 0.9, "burn_in": 200},
+  "seed_base": 20261102
+}

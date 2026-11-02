@@ -1,0 +1,56 @@
+{
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "frozen_calibration": "experiments/ext/revlag3/frozen_revlag3_eval.json",
+  "frozen_calibration_sha256": "c57218af10124073fa73ec9688bc7c419b56771fd5a29dcd717d4f7029a47cdc",
+  "seed_base": 20261102,
+  "name": "ext_revlag3_flag",
+  "purpose": "R3-9 (revlag3): pair rows of tolerant_auto3 and tolerant_v5_1 (and tolerant_v4) on D-07 development (seed_base 20261102, a2 grid, same cell positions as ext_gate_auto3 / ext_v51_eval) for the descriptive AUROC of the frozen RQ4.4 flag. Analysis pre-registered in docs/ext/revlag3.md. Run by experiments/ext/revlag3/run_pairs3.py.",
+  "methods": [
+    "tolerant_v4",
+    "tolerant_auto3",
+    "tolerant_v5_1"
+  ],
+  "calibrate_methods": [
+    "tolerant_v5_1"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+ "setting": "VAR(1) A=[[.9,.1],[0,.85]], T=40, H=4, reps=150, n_boot=199",
+ "coverage_percentile": 0.7283333333333334,
+ "coverage_bab": 0.915,
+ "width_percentile": 2.333832344321643,
+ "width_bab": 2.870175317636042,
+ "IS_percentile": 7.9072520239449995,
+ "IS_bab": 4.048940088848116,
+ "mean_bias_C_LS": [
+  [
+   -0.687,
+   0.004
+  ],
+  [
+   -0.181,
+   -0.625
+  ]
+ ],
+ "mean_bias_C_BaB": [
+  [
+   -0.125,
+   -0.001
+  ],
+  [
+   -0.102,
+   -0.031
+  ]
+ ],
+ "C_true": [
+  [
+   4.095,
+   0.773
+  ],
+  [
+   0.0,
+   3.709
+  ]
+ ],
+ "shrink_linear_vs_recursive": [
+  {
+   "B": 0.98,
+   "d_linear": 0.66,
+   "d_recursive_kilian1998": 0.6282
+  },
+  {
+   "B": 0.95,
+   "d_linear": 0.66,
+   "d_recursive_kilian1998": 0.6282
+  },
+  {
+   "B": 0.9,
+   "d_linear": 0.66,
+   "d_recursive_kilian1998": 0.6282
+  },
+  {
+   "B": 0.8,
+   "d_linear": 0.66,
+   "d_recursive_kilian1998": 0.6282
+  },
+  {
+   "B": 0.6,
+   "d_linear": 0.66,
+   "d_recursive_kilian1998": 0.6282
+  },
+  {
+   "B": 0.4,
+   "d_linear": 0.66,
+   "d_recursive_kilian1998": 0.6282
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "n": 12,
+ "n_identical": 12,
+ "calls": [
+  {
+   "topology": "syn_dag_00",
+   "T": 80,
+   "rate": 0.2,
+   "seconds": 4.59,
+   "iscore_new": 2.4111279144960944,
+   "iscore_stored": 2.4111279144960944,
+   "cov_new": 37,
+   "cov_stored": 37,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_00",
+   "T": 80,
+   "rate": 0.5,
+   "seconds": 3.82,
+   "iscore_new": 3.4178574550039853,
+   "iscore_stored": 3.4178574550039853,
+   "cov_new": 35,
+   "cov_stored": 35,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_00",
+   "T": 150,
+   "rate": 0.2,
+   "seconds": 5.15,
+   "iscore_new": 2.6204876910430763,
+   "iscore_stored": 2.6204876910430763,
+   "cov_new": 36,
+   "cov_stored": 36,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_00",
+   "T": 150,
+   "rate": 0.5,
+   "seconds": 4.71,
+   "iscore_new": 2.962291958301808,
+   "iscore_stored": 2.962291958301808,
+   "cov_new": 33,
+   "cov_stored": 33,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_01",
+   "T": 80,
+   "rate": 0.2,
+   "seconds": 4.06,
+   "iscore_new": 3.506033672457231,
+   "iscore_stored": 3.506033672457231,
+   "cov_new": 41,
+   "cov_stored": 41,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_01",
+   "T": 80,
+   "rate": 0.5,
+   "seconds": 3.7,
+   "iscore_new": 5.375599940217891,
+   "iscore_stored": 5.375599940217891,
+   "cov_new": 38,
+   "cov_stored": 38,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_01",
+   "T": 150,
+   "rate": 0.2,
+   "seconds": 5.23,
+   "iscore_new": 1.813650661205348,
+   "iscore_stored": 1.813650661205348,
+   "cov_new": 43,
+   "cov_stored": 43,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_01",
+   "T": 150,
+   "rate": 0.5,
+   "seconds": 4.76,
+   "iscore_new": 3.8848089084413266,
+   "iscore_stored": 3.8848089084413266,
+   "cov_new": 41,
+   "cov_stored": 41,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_02",
+   "T": 80,
+   "rate": 0.2,
+   "seconds": 4.04,
+   "iscore_new": 3.588784833397869,
+   "iscore_stored": 3.588784833397869,
+   "cov_new": 31,
+   "cov_stored": 31,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_02",
+   "T": 80,
+   "rate": 0.5,
+   "seconds": 3.68,
+   "iscore_new": 5.115413477752104,
+   "iscore_stored": 5.115413477752104,
+   "cov_new": 30,
+   "cov_stored": 30,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_02",
+   "T": 150,
+   "rate": 0.2,
+   "seconds": 5.15,
+   "iscore_new": 1.7336505308578032,
+   "iscore_stored": 1.7336505308578032,
+   "cov_new": 35,
+   "cov_stored": 35,
+   "identical": true
+  },
+  {
+   "topology": "syn_dag_02",
+   "T": 150,
+   "rate": 0.5,
+   "seconds": 4.61,
+   "iscore_new": 1.984818438838178,
+   "iscore_stored": 1.984818438838178,
+   "cov_new": 35,
+   "cov_stored": 35,
+   "identical": true
+  }
+ ]
+}

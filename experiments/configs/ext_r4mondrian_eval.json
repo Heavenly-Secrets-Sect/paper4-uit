@@ -1,0 +1,47 @@
+{
+  "name": "ext_r4mondrian_eval",
+  "purpose": "r4mondrian: evaluation grid G (D-07 development, seed_base 20261102, a2 grid, 20 topologies x 3 replicates), v5_1 on the runner stream with structure record, oracle (rng 2, c_idx 0) for the affected-pair analysis. Rule in docs/ext/r4mondrian.md.",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "oracle": true,
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

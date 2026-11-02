@@ -1,0 +1,69 @@
+{
+ "T": 19,
+ "n": 14,
+ "lag_max": 1,
+ "H": 4,
+ "n_boot": 199,
+ "cases": [
+  {
+   "kind": "none",
+   "rate": 0.0,
+   "k": 0,
+   "v51_status": "ok",
+   "pp_status": "ok",
+   "f_v51_eff": 1.5,
+   "width_v51_median": 1.9696709102879955,
+   "n_inner_ok": 39,
+   "f_pp": 1.216067114128304,
+   "width_pp_median": 1.596834679770928,
+   "f_orig": 1.1727024439490237,
+   "width_orig_median": 1.539891926846687,
+   "seconds": 0.5880572919850238
+  },
+  {
+   "kind": "missing",
+   "rate": 0.2,
+   "k": 4,
+   "v51_status": "ok",
+   "pp_status": "ok",
+   "f_v51_eff": 1.05,
+   "width_v51_median": 3.251167300215118,
+   "n_inner_ok": 39,
+   "f_pp": 0.7164933425730363,
+   "width_pp_median": 2.2185140249478894,
+   "f_orig": 0.7317556429342869,
+   "width_orig_median": 2.2657714457674696,
+   "seconds": 3.789826373977121
+  },
+  {
+   "kind": "missing",
+   "rate": 0.5,
+   "k": 11,
+   "v51_status": "ok",
+   "pp_status": "ok",
+   "f_v51_eff": 1.05,
+   "width_v51_median": 8.030555849372131,
+   "n_inner_ok": 38,
+   "f_pp": 0.6167023125718315,
+   "width_pp_median": 4.7166308224238485,
+   "f_orig": 0.6673551085372684,
+   "width_orig_median": 5.104030924259366,
+   "seconds": 4.96558970893966
+  },
+  {
+   "kind": "reversed",
+   "rate": 0.2,
+   "k": 4,
+   "v51_status": "ok",
+   "pp_status": "ok",
+   "f_v51_eff": 1.75,
+   "width_v51_median": 2.322122472122567,
+   "n_inner_ok": 39,
+   "f_pp": 1.0646974073167168,
+   "width_pp_median": 1.4127758717375896,
+   "f_orig": 0.9610033186182828,
+   "width_orig_median": 1.2751813725416445,
+   "seconds": 0.7087818329455331
+  }
+ ]
+}

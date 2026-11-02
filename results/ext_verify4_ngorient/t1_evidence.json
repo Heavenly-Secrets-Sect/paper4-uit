@@ -1,0 +1,146 @@
+{
+ "laplace|laplace|b0.6|m78": {
+  "gate": 0.842,
+  "correct": 0.763,
+  "wrong": 0.079,
+  "agree_exactLR_given_gate": 0.9121140142517815
+ },
+ "laplace|laplace|b0.6|m148": {
+  "gate": 0.968,
+  "correct": 0.952,
+  "wrong": 0.016,
+  "agree_exactLR_given_gate": 0.9834710743801653
+ },
+ "t5|t5|b0.6|m78": {
+  "gate": 0.719,
+  "correct": 0.602,
+  "wrong": 0.117,
+  "agree_exactLR_given_gate": null
+ },
+ "t5|t5|b0.6|m148": {
+  "gate": 0.901,
+  "correct": 0.842,
+  "wrong": 0.059,
+  "agree_exactLR_given_gate": null
+ },
+ "uniform|uniform|b0.6|m78": {
+  "gate": 0.121,
+  "correct": 0.121,
+  "wrong": 0.0,
+  "agree_exactLR_given_gate": null
+ },
+ "uniform|uniform|b0.6|m148": {
+  "gate": 0.989,
+  "correct": 0.989,
+  "wrong": 0.0,
+  "agree_exactLR_given_gate": null
+ },
+ "gauss|gauss|b0.6|m78": {
+  "gate": 0.077,
+  "correct": 0.038,
+  "wrong": 0.039,
+  "agree_exactLR_given_gate": null
+ },
+ "gauss|gauss|b0.6|m148": {
+  "gate": 0.087,
+  "correct": 0.049,
+  "wrong": 0.038,
+  "agree_exactLR_given_gate": null
+ },
+ "skewexp(+)|skewexp(+)|m148": {
+  "gate": 1.0,
+  "correct": 0.994,
+  "wrong": 0.006,
+  "agree_exactLR_given_gate": null
+ },
+ "skewexp(+)|skewexp(-)|m148": {
+  "gate": 1.0,
+  "correct": 0.819,
+  "wrong": 0.181,
+  "agree_exactLR_given_gate": null
+ },
+ "laplace|skewexp|m148": {
+  "gate": 0.998,
+  "correct": 0.937,
+  "wrong": 0.061,
+  "agree_exactLR_given_gate": null
+ },
+ "uniform|skewexp|m148": {
+  "gate": 1.0,
+  "correct": 0.582,
+  "wrong": 0.418,
+  "agree_exactLR_given_gate": null
+ },
+ "skewexp|laplace|m148": {
+  "gate": 1.0,
+  "correct": 0.956,
+  "wrong": 0.044,
+  "agree_exactLR_given_gate": null
+ },
+ "gauss|laplace|m148": {
+  "gate": 0.64,
+  "correct": 0.509,
+  "wrong": 0.131,
+  "agree_exactLR_given_gate": null
+ },
+ "laplace|gauss|m148": {
+  "gate": 0.921,
+  "correct": 0.855,
+  "wrong": 0.066,
+  "agree_exactLR_given_gate": null
+ },
+ "uniform|laplace|m148": {
+  "gate": 0.996,
+  "correct": 0.522,
+  "wrong": 0.474,
+  "agree_exactLR_given_gate": null
+ },
+ "skewexp(+)|skewexp(+)|m400": {
+  "gate": 1.0,
+  "correct": 1.0,
+  "wrong": 0.0,
+  "agree_exactLR_given_gate": null
+ },
+ "skewexp(+)|skewexp(-)|m400": {
+  "gate": 1.0,
+  "correct": 0.84,
+  "wrong": 0.16,
+  "agree_exactLR_given_gate": null
+ },
+ "laplace|skewexp|m400": {
+  "gate": 1.0,
+  "correct": 0.993,
+  "wrong": 0.007,
+  "agree_exactLR_given_gate": null
+ },
+ "uniform|skewexp|m400": {
+  "gate": 1.0,
+  "correct": 0.582,
+  "wrong": 0.418,
+  "agree_exactLR_given_gate": null
+ },
+ "skewexp|laplace|m400": {
+  "gate": 1.0,
+  "correct": 0.994,
+  "wrong": 0.006,
+  "agree_exactLR_given_gate": null
+ },
+ "gauss|laplace|m400": {
+  "gate": 0.943,
+  "correct": 0.902,
+  "wrong": 0.041,
+  "agree_exactLR_given_gate": null
+ },
+ "laplace|gauss|m400": {
+  "gate": 1.0,
+  "correct": 0.995,
+  "wrong": 0.005,
+  "agree_exactLR_given_gate": null
+ },
+ "uniform|laplace|m400": {
+  "gate": 1.0,
+  "correct": 0.494,
+  "wrong": 0.506,
+  "agree_exactLR_given_gate": null
+ }
+}

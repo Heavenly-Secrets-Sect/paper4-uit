@@ -1,0 +1,38 @@
+{
+  "T1_em_recovers": {
+    "pass": true,
+    "detail": "mu 2.953 s 0.942 it 35"
+  },
+  "T2_closed_form": {
+    "pass": true,
+    "detail": "max diff 1.67e-16"
+  },
+  "T3_edges": {
+    "pass": true,
+    "detail": "pi0(m=3,k=10) 0.333; s(flat) 0.918; P(flat max) 0.043"
+  },
+  "T4_select": {
+    "pass": true,
+    "detail": "m 74 k 4 open_data 4 v5_1 K 12 mu 1.64 s 2.45"
+  },
+  "T5_tags": {
+    "pass": true,
+    "detail": "84262 24099"
+  },
+  "T5_crn": {
+    "pass": true,
+    "detail": ""
+  },
+  "T5_fallback": {
+    "pass": true,
+    "detail": ""
+  },
+  "T6_identity_nonmissing": {
+    "pass": true,
+    "detail": "5/5"
+  },
+  "T6b_only_step2_differs": {
+    "pass": true,
+    "detail": "2/2"
+  }
+}

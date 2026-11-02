@@ -1,0 +1,16 @@
+{
+  "25|none|0.0": 1.6,
+  "tolerant_v5_1|25|none": 2.9,
+  "tolerant_v5_1_lfdr|25|none": 2.9,
+  "25|missing|0.2": 7.4,
+  "tolerant_v5_1|25|missing": 2.6,
+  "tolerant_v5_1_lfdr|25|missing": 3.3,
+  "25|missing|0.5": 9.4,
+  "40|none|0.0": 1.5,
+  "tolerant_v5_1|40|none": 3.2,
+  "tolerant_v5_1_lfdr|40|none": 3.2,
+  "40|missing|0.2": 8.3,
+  "tolerant_v5_1|40|missing": 2.7,
+  "tolerant_v5_1_lfdr|40|missing": 3.3,
+  "40|missing|0.5": 8.6
+}

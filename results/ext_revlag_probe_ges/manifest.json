@@ -1,0 +1,71 @@
+{
+  "config": {
+    "name": "ext_revlag_probe_ges",
+    "purpose": "Timing probe of the GES and latent/noise pair runs, D-07H development, 3 topologies. Not used for claims.",
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 3,
+    "replicates": 1,
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [],
+      "rates": [
+        0.2
+      ]
+    },
+    "methods": [
+      "tolerant_v4"
+    ],
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102,
+    "learned": {
+      "algorithm": "ges"
+    },
+    "ges_damage_from": "results/a3_ges/calibration.json"
+  },
+  "seconds": 3.4,
+  "n_units": 3,
+  "n_pair_rows": 624,
+  "workers": 3,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+    },
+    {
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "e23b356e6b5805d611b4bddadeb02d7033ddca2005f68cc17362b040f75223b7"
+    }
+  ]
+}

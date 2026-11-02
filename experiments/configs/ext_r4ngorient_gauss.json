@@ -1,0 +1,65 @@
+{
+  "name": "ext_r4ngorient_gauss",
+  "phase": "main",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "methods": [
+    "oracle",
+    "tolerant_v5_1",
+    "tolerant_ngA",
+    "tolerant_ngB"
+  ],
+  "stream_of": {
+    "tolerant_ngA": "tolerant_v5_1",
+    "tolerant_ngB": "tolerant_v5_1"
+  },
+  "calibrate_methods": [
+    "tolerant_v5_1",
+    "tolerant_ngA",
+    "tolerant_ngB"
+  ],
+  "frozen_calibration": "experiments/ext/r4ngorient/frozen_ngorient.json",
+  "frozen_calibration_sha256": "68b42d47bae60bcb0304d2b3d880a66ef2de170a4fbfd61708e302c2784cf63d",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "shock": "gauss",
+  "purpose": "r4ngorient no-harm grid G (Gaussian shocks)."
+}

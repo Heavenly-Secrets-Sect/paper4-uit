@@ -1,0 +1,66 @@
+{
+  "name": "ext_revlag3_probe2",
+  "purpose": "R3-4 design probe 2, D-07H development ONLY (20 topologies x 1 replicate, reversed cells): variants of tolerant_v4R. Not used for any claim.",
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "oracle",
+    "tolerant_v4",
+    "tolerant_v4R",
+    "tolerant_v4R_t05",
+    "tolerant_v4R_mix",
+    "tolerant_v4R_bag"
+  ],
+  "calibrate_methods": [
+    "tolerant_v4R",
+    "tolerant_v4R_t05",
+    "tolerant_v4R_mix",
+    "tolerant_v4R_bag"
+  ],
+  "frozen_calibration": "experiments/ext/revlag3/probe_frozen_variants.json",
+  "frozen_calibration_sha256": "2ad39df06ce44dee75005530c6188b75d13e7d001bc3c1f359e27706bedfb484",
+  "seed_base": 20261102,
+  "only_cells": [
+    "reversed|0.2",
+    "reversed|0.5"
+  ]
+}

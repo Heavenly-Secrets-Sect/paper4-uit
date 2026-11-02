@@ -1,0 +1,51 @@
+{
+ "v4 narrow vs redteam": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ },
+ "v4 narrow vs tlp": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ },
+ "v4 redteam vs tlp": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ },
+ "v4 narrow vs a2b_pselect": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ },
+ "plugin redteam vs tlp": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ },
+ "plugin redteam vs a2b_pselect": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ },
+ "pselect_union tlp vs a2b_pselect": {
+  "n_a": 1260,
+  "n_b": 1260,
+  "common": 1260,
+  "identical": 1260,
+  "ok": true
+ }
+}

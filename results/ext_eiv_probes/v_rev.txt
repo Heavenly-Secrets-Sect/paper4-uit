@@ -1,0 +1,12 @@
+reversed T=80 ratio=0.0 eiv_bc    n=8 cov=0.904 IS=2.94 width=1.80 r_used=0.042
+reversed T=80 ratio=0.0 eiv_nobc  n=8 cov=0.904 IS=2.92 width=1.75 r_used=0.039
+reversed T=80 ratio=0.0 v3        n=8 cov=0.856 IS=2.37 width=1.46 r_used=nan
+reversed T=80 ratio=0.3 eiv_bc    n=8 cov=0.867 IS=5.17 width=2.20 r_used=0.170
+reversed T=80 ratio=0.3 eiv_nobc  n=8 cov=0.856 IS=3.99 width=1.98 r_used=0.145
+reversed T=80 ratio=0.3 v3        n=8 cov=0.760 IS=4.13 width=1.47 r_used=nan
+reversed T=150 ratio=0.0 eiv_bc    n=8 cov=0.970 IS=1.51 width=1.24 r_used=0.025
+reversed T=150 ratio=0.0 eiv_nobc  n=8 cov=0.959 IS=1.45 width=1.24 r_used=0.026
+reversed T=150 ratio=0.0 v3        n=8 cov=0.919 IS=1.67 width=1.11 r_used=nan
+reversed T=150 ratio=0.3 eiv_bc    n=8 cov=0.908 IS=3.65 width=1.98 r_used=0.223
+reversed T=150 ratio=0.3 eiv_nobc  n=8 cov=0.900 IS=2.60 width=1.60 r_used=0.179
+reversed T=150 ratio=0.3 v3        n=8 cov=0.731 IS=3.69 width=1.07 r_used=nan

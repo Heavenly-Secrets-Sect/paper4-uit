@@ -1,0 +1,3 @@
+oracle: round1 rows 38934, round2 rows 38934, same keys True, rows with any C_e/lo/hi/C_t difference 0 -> IDENTICAL
+tolerant_v4: round1 rows 38934, round2 rows 38934, same keys True, rows with any C_e/lo/hi/C_t difference 0 -> IDENTICAL
+VALID: True

@@ -1,0 +1,18 @@
+{
+ "timeline_utc_from_transcripts": {
+  "ext_v4c.py written": "2026-11-01T19:45:18Z",
+  "timing_probe (D-07H) written/run": "2026-11-01T19:45:34Z (out 19:46:07Z)",
+  "docs/ext/v4c.md written (only write; mtime 02:47:30 local)": "2026-11-01T19:47:29Z",
+  "ext_v4c_eval.json written": "2026-11-01T19:47:39Z",
+  "first eval run started (python3=/usr/bin, numpy 2.0.2)": "2026-11-01T19:47:45Z",
+  "analyze.py first and only write": "2026-11-01T19:49:39Z",
+  "calibration.json written by first run": "2026-11-01T19:52:14Z",
+  "first attempt cut by usage limit, run still in evaluation phase": "2026-11-01T20:00:00Z",
+  "rerun started (python=miniconda, numpy 2.5.4)": "2026-11-02T02:21:55Z",
+  "rerun log last write / reporting agent returned (rerun killed)": "2026-11-02T02:23:08Z"
+ },
+ "rerun_outcome": "killed after ~73 s, before calibration finished; calibration.json not rewritten (mtime 02:52 local, cmp identical to calibration_interrupted_attempt.json); no runs.jsonl/summary.md",
+ "interpreter_difference": "first run python3 (/Library/Developer/CommandLineTools, numpy 2.0.2), rerun python (miniconda 3.13, numpy 2.5.4); probe on 1 D-07H unit (results/ext_verify2_v4c/interp_check.txt) gives identical intervals to 1e-10, so not material but undisclosed",
+ "narrow_eval_v5_over_v4_IS_ratio_non_missing_cells": {"min": 0.9847, "min_cell": "T150 reversed-0.2", "max": 1.0194, "max_cell": "T80 reversed-0.5", "doc_quotes": "0.987-1.019"},
+ "narrow_ablation_v5cal2_T_ge_80_missing_ratio": [0.991, 0.991, 1.0146, 1.0045]
+}

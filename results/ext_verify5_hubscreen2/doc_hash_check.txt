@@ -1,0 +1,3 @@
+doc_prereg_from_transcript.md = Write content of docs/ext/r5hubscreen2.md at 2026-11-02T14:44:45Z (agent transcript)
+sha256 51dada3987c45688fcff128560652aad6a559db8fb1f3efd9eb5a50de89ee9ff (prereg hashes.txt: 51dada39...e9ff)
+diff vs current doc: only line 141 placeholder '(Dán nguyên văn sau khi chạy.)' replaced by section 5; sections 1-4 byte-identical

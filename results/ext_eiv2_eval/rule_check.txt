@@ -1,0 +1,125 @@
+# ext_eiv2_eval: rule check (docs/ext/eiv2.md)
+
+## Coverage / IS per cell (ok runs)
+
+| scenario | T | cell | oracle | plugin | tolerant_v4 | tolerant_eiv2 | plugin_eiv2 |
+|---|---|---|---|---|---|---|---|
+| clean | 80 | none | 0.899 / 1.68 | 0.869 / 2.78 | 0.933 / 2.50 | 0.943 / 2.71 | 0.905 / 2.75 |
+| clean | 80 | missing | 0.899 / 1.68 | 0.665 / 11.06 | 0.961 / 3.27 | 0.958 / 3.66 | 0.696 / 10.50 |
+| clean | 80 | reversed | 0.899 / 1.68 | 0.814 / 3.70 | 0.941 / 2.81 | 0.945 / 2.95 | 0.858 / 3.72 |
+| clean | 150 | none | 0.943 / 1.02 | 0.930 / 1.58 | 0.964 / 1.56 | 0.970 / 1.67 | 0.935 / 1.65 |
+| clean | 150 | missing | 0.943 / 1.02 | 0.684 / 10.55 | 0.969 / 2.04 | 0.969 / 2.27 | 0.698 / 10.35 |
+| clean | 150 | reversed | 0.943 / 1.02 | 0.841 / 3.09 | 0.964 / 1.96 | 0.959 / 2.08 | 0.858 / 3.16 |
+| noise0.1 | 80 | none | 0.766 / 2.97 | 0.813 / 3.55 | 0.893 / 2.95 | 0.934 / 3.11 | 0.896 / 3.12 |
+| noise0.1 | 80 | missing | 0.766 / 2.97 | 0.626 / 11.61 | 0.942 / 3.47 | 0.948 / 4.35 | 0.703 / 10.40 |
+| noise0.1 | 80 | reversed | 0.766 / 2.97 | 0.760 / 4.48 | 0.904 / 3.18 | 0.924 / 3.46 | 0.859 / 3.94 |
+| noise0.1 | 150 | none | 0.755 / 2.31 | 0.863 / 2.12 | 0.921 / 1.89 | 0.970 / 1.91 | 0.935 / 1.84 |
+| noise0.1 | 150 | missing | 0.755 / 2.31 | 0.639 / 11.15 | 0.925 / 2.44 | 0.957 / 2.52 | 0.705 / 10.34 |
+| noise0.1 | 150 | reversed | 0.755 / 2.31 | 0.782 / 3.83 | 0.914 / 2.27 | 0.949 / 2.22 | 0.857 / 3.12 |
+| noise0.3 | 80 | none | 0.477 / 7.45 | 0.702 / 5.44 | 0.815 / 4.10 | 0.905 / 3.84 | 0.851 / 4.14 |
+| noise0.3 | 80 | missing | 0.477 / 7.45 | 0.543 / 13.08 | 0.917 / 3.90 | 0.936 / 4.35 | 0.688 / 10.85 |
+| noise0.3 | 80 | reversed | 0.477 / 7.45 | 0.661 / 6.34 | 0.826 / 4.23 | 0.897 / 4.01 | 0.821 / 4.67 |
+| noise0.3 | 150 | none | 0.355 / 8.06 | 0.669 / 4.28 | 0.774 / 3.37 | 0.933 / 2.42 | 0.891 / 2.52 |
+| noise0.3 | 150 | missing | 0.355 / 8.06 | 0.515 / 13.10 | 0.830 / 3.52 | 0.919 / 3.09 | 0.677 / 10.74 |
+| noise0.3 | 150 | reversed | 0.355 / 8.06 | 0.625 / 5.89 | 0.784 / 3.66 | 0.909 / 2.80 | 0.828 / 3.70 |
+
+ok runs per method: oracle 1080/1080, plugin 1080/1080, tolerant_v4 1080/1080, tolerant_eiv2 1080/1080, plugin_eiv2 1080/1080
+
+## Rule
+
+Condition 1 (coverage of tolerant_eiv2 >= 0.90 in every noise cell); cluster-bootstrap one-sided p-values
+  noise0.1 T=80 none: 0.934 PASS | p(cov<=0.90) 0.0025 *Holm | p(cov>=0.90) 0.9980
+  noise0.1 T=80 missing: 0.948 PASS | p(cov<=0.90) 0.0000 *Holm | p(cov>=0.90) 1.0000
+  noise0.1 T=80 reversed: 0.924 PASS | p(cov<=0.90) 0.0155 | p(cov>=0.90) 0.9845
+  noise0.1 T=150 none: 0.970 PASS | p(cov<=0.90) 0.0000 *Holm | p(cov>=0.90) 1.0000
+  noise0.1 T=150 missing: 0.957 PASS | p(cov<=0.90) 0.0000 *Holm | p(cov>=0.90) 1.0000
+  noise0.1 T=150 reversed: 0.949 PASS | p(cov<=0.90) 0.0000 *Holm | p(cov>=0.90) 1.0000
+  noise0.3 T=80 none: 0.905 PASS | p(cov<=0.90) 0.3590 | p(cov>=0.90) 0.6420
+  noise0.3 T=80 missing: 0.936 PASS | p(cov<=0.90) 0.0000 *Holm | p(cov>=0.90) 1.0000
+  noise0.3 T=80 reversed: 0.897 FAIL | p(cov<=0.90) 0.5945 | p(cov>=0.90) 0.4060
+  noise0.3 T=150 none: 0.933 PASS | p(cov<=0.90) 0.0000 *Holm | p(cov>=0.90) 1.0000
+  noise0.3 T=150 missing: 0.919 PASS | p(cov<=0.90) 0.0185 | p(cov>=0.90) 0.9815
+  noise0.3 T=150 reversed: 0.909 PASS | p(cov<=0.90) 0.1275 | p(cov>=0.90) 0.8735
+  -> 11/12 cells pass (point estimate)
+  -> Holm (12 cells): 7/12 significantly above 0.90; 0/12 significantly below 0.90
+  -> unadjusted p<0.05: 9/12 above, 0/12 below
+
+Condition 2 (clean IS of tolerant_eiv2 <= 1.15 x tolerant_v4)
+  T=80 none: eiv2 2.714 v4 2.502 ratio 1.085 PASS | p(ratio>=1.15) 0.0065 *Holm | p(ratio<=1.15) 0.9935
+  T=80 missing: eiv2 3.658 v4 3.271 ratio 1.118 PASS | p(ratio>=1.15) 0.0205 *Holm | p(ratio<=1.15) 0.9795
+  T=80 reversed: eiv2 2.950 v4 2.807 ratio 1.051 PASS | p(ratio>=1.15) 0.0000 *Holm | p(ratio<=1.15) 1.0000
+  T=150 none: eiv2 1.666 v4 1.564 ratio 1.066 PASS | p(ratio>=1.15) 0.0005 *Holm | p(ratio<=1.15) 0.9995
+  T=150 missing: eiv2 2.265 v4 2.039 ratio 1.111 PASS | p(ratio>=1.15) 0.0040 *Holm | p(ratio<=1.15) 0.9960
+  T=150 reversed: eiv2 2.080 v4 1.965 ratio 1.059 PASS | p(ratio>=1.15) 0.0000 *Holm | p(ratio<=1.15) 1.0000
+  -> 6/6 cells pass (point estimate)
+  -> Holm (6 cells): 6/6 significantly below 1.15; 0/6 significantly above 1.15
+
+VERDICT: REJECTED (condition 1: 11/12, condition 2: 6/6)
+
+## Paired IS difference tolerant_eiv2 - tolerant_v4 (95% CI clustered by topology; two-sided bootstrap p)
+
+  clean T=80 none: +0.21 [+0.11, +0.32] p=0.0000 *Holm
+  clean T=80 missing: +0.39 [+0.30, +0.48] p=0.0000 *Holm
+  clean T=80 reversed: +0.14 [+0.08, +0.22] p=0.0000 *Holm
+  clean T=150 none: +0.10 [+0.04, +0.16] p=0.0000 *Holm
+  clean T=150 missing: +0.23 [+0.17, +0.28] p=0.0000 *Holm
+  clean T=150 reversed: +0.12 [+0.05, +0.19] p=0.0000 *Holm
+  -> clean: CI excludes 0: better 0/6, worse 6/6; Holm (6 cells): better 0/6, worse 6/6
+  noise0.1 T=80 none: +0.15 [-0.00, +0.30] p=0.0510
+  noise0.1 T=80 missing: +0.88 [+0.58, +1.27] p=0.0000 *Holm
+  noise0.1 T=80 reversed: +0.28 [+0.11, +0.44] p=0.0010 *Holm
+  noise0.1 T=150 none: +0.03 [-0.10, +0.13] p=0.6470
+  noise0.1 T=150 missing: +0.08 [-0.03, +0.19] p=0.1500
+  noise0.1 T=150 reversed: -0.04 [-0.15, +0.06] p=0.4030
+  -> noise0.1: CI excludes 0: better 0/6, worse 2/6; Holm (6 cells): better 0/6, worse 2/6
+  noise0.3 T=80 none: -0.26 [-0.64, +0.08] p=0.1440
+  noise0.3 T=80 missing: +0.45 [+0.27, +0.62] p=0.0000 *Holm
+  noise0.3 T=80 reversed: -0.22 [-0.54, +0.09] p=0.1510
+  noise0.3 T=150 none: -0.94 [-1.20, -0.69] p=0.0000 *Holm
+  noise0.3 T=150 missing: -0.43 [-0.69, -0.18] p=0.0040 *Holm
+  noise0.3 T=150 reversed: -0.86 [-1.13, -0.59] p=0.0000 *Holm
+  -> noise0.3: CI excludes 0: better 3/6, worse 1/6; Holm (6 cells): better 3/6, worse 1/6
+
+## Ablation: paired IS differences
+
+  plugin_eiv2 - plugin, clean: T80 none -0.03 [-0.19, +0.12]; T80 missing -0.56 [-0.80, -0.32]*; T80 reversed +0.02 [-0.19, +0.28]; T150 none +0.07 [+0.01, +0.13]; T150 missing -0.20 [-0.32, -0.09]*; T150 reversed +0.07 [-0.05, +0.19]
+  plugin_eiv2 - plugin, noise0.1: T80 none -0.43 [-0.69, -0.17]*; T80 missing -1.21 [-1.57, -0.86]*; T80 reversed -0.54 [-0.84, -0.25]*; T150 none -0.27 [-0.42, -0.14]*; T150 missing -0.81 [-1.06, -0.57]*; T150 reversed -0.71 [-0.97, -0.49]*
+  plugin_eiv2 - plugin, noise0.3: T80 none -1.30 [-1.84, -0.80]*; T80 missing -2.23 [-2.70, -1.77]*; T80 reversed -1.67 [-2.14, -1.22]*; T150 none -1.76 [-2.11, -1.41]*; T150 missing -2.36 [-2.96, -1.80]*; T150 reversed -2.19 [-2.73, -1.70]*
+  tolerant_eiv2 - plugin_eiv2, clean: T80 none -0.04 [-0.14, +0.06]; T80 missing -6.84 [-7.57, -6.13]*; T80 reversed -0.77 [-1.06, -0.50]*; T150 none +0.02 [-0.06, +0.08]; T150 missing -8.08 [-8.92, -7.18]*; T150 reversed -1.08 [-1.50, -0.73]*
+  tolerant_eiv2 - plugin_eiv2, noise0.1: T80 none -0.02 [-0.16, +0.12]; T80 missing -6.05 [-6.74, -5.32]*; T80 reversed -0.48 [-0.80, -0.21]*; T150 none +0.07 [+0.01, +0.13]*; T150 missing -7.81 [-8.61, -6.97]*; T150 reversed -0.90 [-1.18, -0.65]*
+  tolerant_eiv2 - plugin_eiv2, noise0.3: T80 none -0.30 [-0.52, -0.09]*; T80 missing -6.50 [-7.25, -5.66]*; T80 reversed -0.67 [-0.96, -0.39]*; T150 none -0.10 [-0.24, +0.02]; T150 missing -7.65 [-8.45, -6.83]*; T150 reversed -0.91 [-1.18, -0.67]*
+  (* = significant after Holm across the 6 cells of that line)
+
+## Null pairs: C_abs_spurious median (mean) and mean iscore_null_mean
+
+| scenario | T | cell | plugin | tolerant_v4 | tolerant_eiv2 | plugin_eiv2 |
+|---|---|---|---|---|---|---|
+| clean | 80 | none | 0.054 (0.075) / IS0 0.728 | 0.054 (0.075) / IS0 0.847 | 0.070 (0.095) / IS0 1.123 | 0.070 (0.095) / IS0 1.011 |
+| clean | 80 | missing | 0.036 (0.055) / IS0 0.539 | 0.225 (0.231) / IS0 2.026 | 0.254 (0.266) / IS0 2.426 | 0.043 (0.071) / IS0 0.780 |
+| clean | 80 | reversed | 0.056 (0.074) / IS0 0.801 | 0.054 (0.067) / IS0 0.933 | 0.064 (0.081) / IS0 1.129 | 0.066 (0.089) / IS0 1.069 |
+| clean | 150 | none | 0.041 (0.053) / IS0 0.520 | 0.041 (0.053) / IS0 0.552 | 0.043 (0.061) / IS0 0.685 | 0.043 (0.061) / IS0 0.624 |
+| clean | 150 | missing | 0.024 (0.039) / IS0 0.429 | 0.163 (0.167) / IS0 1.311 | 0.178 (0.180) / IS0 1.529 | 0.028 (0.047) / IS0 0.532 |
+| clean | 150 | reversed | 0.037 (0.050) / IS0 0.865 | 0.040 (0.049) / IS0 0.640 | 0.044 (0.057) / IS0 0.743 | 0.041 (0.060) / IS0 0.970 |
+| noise0.1 | 80 | none | 0.048 (0.064) / IS0 0.648 | 0.048 (0.064) / IS0 0.760 | 0.078 (0.101) / IS0 1.172 | 0.078 (0.101) / IS0 1.061 |
+| noise0.1 | 80 | missing | 0.032 (0.047) / IS0 0.485 | 0.205 (0.205) / IS0 1.889 | 0.254 (0.254) / IS0 2.296 | 0.056 (0.076) / IS0 0.835 |
+| noise0.1 | 80 | reversed | 0.048 (0.064) / IS0 0.720 | 0.045 (0.058) / IS0 0.841 | 0.068 (0.083) / IS0 1.188 | 0.082 (0.100) / IS0 1.112 |
+| noise0.1 | 150 | none | 0.035 (0.046) / IS0 0.470 | 0.035 (0.046) / IS0 0.483 | 0.051 (0.068) / IS0 0.732 | 0.051 (0.068) / IS0 0.699 |
+| noise0.1 | 150 | missing | 0.025 (0.035) / IS0 0.381 | 0.147 (0.149) / IS0 1.204 | 0.155 (0.163) / IS0 1.464 | 0.036 (0.056) / IS0 0.559 |
+| noise0.1 | 150 | reversed | 0.036 (0.044) / IS0 0.695 | 0.037 (0.044) / IS0 0.549 | 0.048 (0.059) / IS0 0.766 | 0.051 (0.065) / IS0 0.919 |
+| noise0.3 | 80 | none | 0.039 (0.052) / IS0 0.567 | 0.039 (0.052) / IS0 0.663 | 0.080 (0.100) / IS0 1.128 | 0.080 (0.100) / IS0 1.014 |
+| noise0.3 | 80 | missing | 0.026 (0.038) / IS0 0.425 | 0.186 (0.186) / IS0 1.761 | 0.229 (0.216) / IS0 2.126 | 0.058 (0.072) / IS0 0.776 |
+| noise0.3 | 80 | reversed | 0.040 (0.053) / IS0 0.608 | 0.037 (0.049) / IS0 0.729 | 0.058 (0.071) / IS0 1.129 | 0.071 (0.095) / IS0 1.003 |
+| noise0.3 | 150 | none | 0.032 (0.039) / IS0 0.408 | 0.032 (0.039) / IS0 0.412 | 0.057 (0.073) / IS0 0.746 | 0.057 (0.073) / IS0 0.690 |
+| noise0.3 | 150 | missing | 0.019 (0.029) / IS0 0.321 | 0.132 (0.135) / IS0 1.113 | 0.149 (0.149) / IS0 1.333 | 0.035 (0.054) / IS0 0.542 |
+| noise0.3 | 150 | reversed | 0.031 (0.038) / IS0 0.519 | 0.030 (0.036) / IS0 0.465 | 0.046 (0.054) / IS0 0.772 | 0.056 (0.069) / IS0 0.802 |
+
+cells where median null |C| of tolerant_eiv2 > tolerant_v4: 18/18
+
+## r_hat of tolerant_eiv2 (all cells pooled): mean (sd); true share; mean #equations capped at r_hat
+
+  clean T=80: r_hat 0.034 (0.046), true 0.000; r_used 0.033; #eq capped 1.05; PD fixes 0
+  clean T=150: r_hat 0.025 (0.026), true 0.000; r_used 0.025; #eq capped 0.27; PD fixes 0
+  noise0.1 T=80: r_hat 0.099 (0.082), true 0.091; r_used 0.098; #eq capped 2.83; PD fixes 0
+  noise0.1 T=150: r_hat 0.094 (0.054), true 0.091; r_used 0.094; #eq capped 1.64; PD fixes 0
+  noise0.3 T=80: r_hat 0.193 (0.140), true 0.231; r_used 0.188; #eq capped 5.36; PD fixes 0
+  noise0.3 T=150: r_hat 0.206 (0.100), true 0.231; r_used 0.206; #eq capped 4.85; PD fixes 0

@@ -1,0 +1,72 @@
+{
+  "name": "ext_v51_p4h2",
+  "purpose": "FROZEN CONFIRMATORY SPEC (docs/ext/v51.md, 'Frozen spec for P4-H2'). DO NOT RUN except as the single sealed confirmatory run. tolerant_v5_1 (src/paper4/ext_v51.py, TAU = 6.6083) against frozen tolerant_v4 on the a2 grid, P4-H2 confirmatory; width factors of both methods frozen in experiments/ext/v51/frozen_v4_v51.json.",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v4",
+    "tolerant_v5_1"
+  ],
+  "paired_references": [
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "P4-H2",
+  "split": "confirmatory",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "calibrate_methods": [
+    "tolerant_v5_1"
+  ],
+  "frozen_calibration": "experiments/ext/v51/frozen_v4_v51.json"
+}

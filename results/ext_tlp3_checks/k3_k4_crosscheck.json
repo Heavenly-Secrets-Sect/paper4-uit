@@ -1,0 +1,20 @@
+{
+  "k3_vs_score_py": {
+    "max_abs_diff_d": 0,
+    "max_abs_diff_cov": 0,
+    "max_abs_diff_ci_bound": 0.027226266891087203
+  },
+  "k3_verdict": "CONFIRMED-A",
+  "k4_verdict": "CONFIRMED-A'",
+  "k4_T80_missing0.2_targeted_lp": {
+    "n_pairs": 60,
+    "complete": true,
+    "d": -0.1795321933419821,
+    "lo": -0.38435634625796683,
+    "hi": 0.018120163920555314,
+    "p": 0.0788,
+    "gate": "tie",
+    "pure": "tie",
+    "p_holm": 0.0788
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "ext_auto5_eval",
+  "purpose": "B1 version 5 (ext auto5, round 2): tolerant_auto5 reads no stated damage; auto3's gate, then targeted opening with re-selection (ext_narrow) when open at small T, flip pool and two-sided width per (T, branch) from experiments/ext/auto5/width_table.json (D-07H development). Seeds of a2_baselines/b1v2_auto/ext_gate_auto3. tolerant_v4 uses the frozen calibration. Rule in docs/ext/auto5.md.",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "tolerant_auto5"
+  ],
+  "paired_references": [
+    "plugin",
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "learned": {
+    "algorithm": "ges"
+  },
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json"
+}

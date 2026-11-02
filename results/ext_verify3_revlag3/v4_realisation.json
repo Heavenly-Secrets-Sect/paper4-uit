@@ -1,0 +1,23 @@
+{
+ "ext_revlag_lag vs ext_v51_eval": {
+  "n_mine": 1260,
+  "n_theirs": 1260,
+  "n_common": 1260,
+  "n_diff": 0,
+  "ids_from_manifest": true
+ },
+ "ext_revlag_lag vs a2_baselines": {
+  "n_mine": 1260,
+  "n_theirs": 1260,
+  "n_common": 1260,
+  "n_diff": 0,
+  "ids_from_manifest": true
+ },
+ "ext_verify3_revlag3/rev_invalid_copy vs ext_v51_eval": {
+  "n_mine": 360,
+  "n_theirs": 1260,
+  "n_common": 360,
+  "n_diff": 0,
+  "ids_from_manifest": true
+ }
+}

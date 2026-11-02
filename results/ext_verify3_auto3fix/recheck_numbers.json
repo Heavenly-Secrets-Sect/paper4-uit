@@ -1,0 +1,29 @@
+{
+ "fragility_p_confirmed_seed0": 0.6155,
+ "fragility_p_confirmed_seed1": 0.6225,
+ "fragility_p_confirmed_seed2": 0.629,
+ "fragility_p_confirmed_seed3": 0.653,
+ "independent_d07": {
+  "C1 80 missing 0.2": 0.9515,
+  "C1 80 missing 0.5": 0.9493,
+  "L1 80 missing": 0.9558,
+  "C1 80 reversed 0.2": 0.932,
+  "C1 80 reversed 0.5": 0.9035,
+  "L1 80 reversed": 0.9374,
+  "C1 150 missing 0.2": 0.98,
+  "C1 150 missing 0.5": 0.9795,
+  "L1 150 missing": 0.9773,
+  "C1 150 reversed 0.2": 0.9714,
+  "C1 150 reversed 0.5": 0.966,
+  "L1 150 reversed": 0.9703,
+  "C2 40": 1.1239,
+  "C2 80": 1.071,
+  "C2 150": 1.1949,
+  "C3 80 cov": 0.9407,
+  "C3 80 ratio": 0.9553,
+  "C3 80 n_v4_ok": 60,
+  "C3 150 cov": 0.9552,
+  "C3 150 ratio": 0.9676,
+  "C3 150 n_v4_ok": 60
+ }
+}

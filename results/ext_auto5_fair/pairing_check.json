@@ -1,0 +1,22 @@
+{
+  "plugin": {
+    "identical": 1260,
+    "compared": 1260,
+    "max_abs_diff": 1.4210854715202004e-14
+  },
+  "ida_union": {
+    "identical": 1260,
+    "compared": 1260,
+    "max_abs_diff": 7.105427357601002e-15
+  },
+  "bvar_minnesota": {
+    "identical": 1260,
+    "compared": 1260,
+    "max_abs_diff": 7.105427357601002e-15
+  },
+  "pselect_union": {
+    "identical": 1260,
+    "compared": 1260,
+    "max_abs_diff": 3.552713678800501e-15
+  }
+}

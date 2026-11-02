@@ -1,0 +1,7 @@
+narrow_eval v5/v4 IS ratio, non-missing cells (15): min 0.9847 at (150, 'reversed', 0.2), max 1.0194 at (80, 'reversed', 0.5)
+eiv2 seed 0: pass(point) 11/12; Holm above 0.90: 7/12; Holm below 0.90: 0/12; unadjusted above 9
+  Holm-above cells (seed 0): noise0.1 T80 missing, noise0.1 T80 none, noise0.1 T150 missing, noise0.1 T150 none, noise0.1 T150 reversed, noise0.3 T80 missing, noise0.3 T150 none
+eiv2 seed 1: pass(point) 11/12; Holm above 0.90: 7/12; Holm below 0.90: 0/12; unadjusted above 9
+eiv2 seed 2: pass(point) 11/12; Holm above 0.90: 8/12; Holm below 0.90: 0/12; unadjusted above 9
+eiv2 seed 3: pass(point) 11/12; Holm above 0.90: 7/12; Holm below 0.90: 0/12; unadjusted above 9
+eiv2 seed 4: pass(point) 11/12; Holm above 0.90: 7/12; Holm below 0.90: 0/12; unadjusted above 9

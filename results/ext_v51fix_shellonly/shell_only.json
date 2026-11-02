@@ -1,0 +1,168 @@
+{
+ "verbatim_from_transcripts": {
+  "timing_run_D07H_attempt1": {
+   "when_utc": "2026-11-01T19:47:56Z (tool result logged 19:48:00.955Z)",
+   "transcript": "~/.claude/projects/-Users-kietnt-Desktop-Workspace-UIT-NCKH-aDuy/2f8361ac-f8f9-48a7-901f-7ac732921a60/subagents/workflows/wf_ccca4e91-1dd/agent-a7558e999131276cc.jsonl",
+   "what": "probe_tau.py (buggy targeted variant, ext_narrow.tolerant_sel) on D-07H development, 1 topology x 1 replicate, T = 40 and 200, n_boot 99; inside the probe sample. Printed before the tau procedure was written (19:48:30Z).",
+   "output_verbatim": [
+    "T=40 ratio 1.27 [1.26,1.28] c* {'targeted': 1.2, 'all': 0.85} d -3.596 [-3.596,-3.596] (0.2: -2.257, 0.5: -4.934) fail {'targeted': 0, 'all': 0} sec {'targeted': 0.590297459, 'all': 0.2471837085}",
+    "T=200 ratio 6.61 [6.55,6.66] c* {'targeted': 1.8, 'all': 1.4} d +0.151 [+0.151,+0.151] (0.2: -0.095, 0.5: +0.398) fail {'targeted': 0, 'all': 0} sec {'targeted': 0.8714890415000001, 'all': 0.39938058350000016}",
+    "T* = 40; tau = 3.9383; T* = 40, next probed T = 200: tau = midpoint of their mean ratios; 4 s"
+   ],
+   "numbers": {
+    "d40": -3.596,
+    "d200": 0.151,
+    "d40_rate0.2": -2.257,
+    "d40_rate0.5": -4.934,
+    "d200_rate0.2": -0.095,
+    "d200_rate0.5": 0.398,
+    "tau_of_this_smoke_run": 3.9383
+   }
+  },
+  "dedup_sanity_check_D07H_resume": {
+   "when_utc": "2026-11-02T02:23:49Z (tool result logged 02:23:52.575Z)",
+   "transcript": "~/.claude/projects/-Users-kietnt-Desktop-Workspace-UIT-NCKH-aDuy/2f8361ac-f8f9-48a7-901f-7ac732921a60/subagents/workflows/wf_ccca4e91-1dd/agent-aecea0233cf01bed2.jsonl",
+   "what": "scratchpad script (not kept): ext_v51.tolerant_sel_dd vs ext_narrow.tolerant_sel on D-07H development, 3 topologies (syn_dag_00..02), T = 40, missing-0.5, n_boot 49, seed 9 990 000 + topology index (outside the probe sample). Columns: status buggy, status dedup, info of dedup, max |difference of lower bounds|.",
+   "output_verbatim": [
+    "syn_dag_00 ok ok {'n_repair': 2, 'n_open': 33, 'n_open_boot_mean': 36.714285714285715, 'n_reversal_pool': None, 'n_dup_terms_data': 8, 'n_dup_terms_total': 976} 1.9812739982548677",
+    "syn_dag_01 ok ok {'n_repair': 4, 'n_open': 33, 'n_open_boot_mean': 40.91836734693877, 'n_reversal_pool': None, 'n_dup_terms_data': 12, 'n_dup_terms_total': 800} 2.5059199522991333",
+    "syn_dag_02 ok ok {'n_repair': 1, 'n_open': 33, 'n_open_boot_mean': 35.265306122448976, 'n_reversal_pool': None, 'n_dup_terms_data': 4, 'n_dup_terms_total': 692} 1.6906078152537543"
+   ],
+   "numbers": {
+    "dup_terms_data": [
+     8,
+     12,
+     4
+    ],
+    "dup_terms_total": [
+     976,
+     800,
+     692
+    ],
+    "max_abs_lo_diff": [
+     1.981,
+     2.506,
+     1.691
+    ]
+   }
+  }
+ },
+ "probe_tau2_seconds_per_fit": {
+  "40": {
+   "targeted": 1.8728951614752682,
+   "all": 0.8641655964985451
+  },
+  "60": {
+   "targeted": 1.9968805212008496,
+   "all": 0.9613691461267687
+  },
+  "80": {
+   "targeted": 2.1063878242712235,
+   "all": 1.0123046979439096
+  },
+  "100": {
+   "targeted": 2.228886962890586,
+   "all": 1.0650397728696892
+  },
+  "120": {
+   "targeted": 2.333564664532605,
+   "all": 1.0991231618114399
+  },
+  "150": {
+   "targeted": 2.5348347160305518,
+   "all": 1.2259192628228144
+  },
+  "200": {
+   "targeted": 2.8914888531144243,
+   "all": 1.3923197673648247
+  }
+ },
+ "probe_tau2_seconds_per_fit_range_T40_150": {
+  "targeted": [
+   1.8728951614752682,
+   2.5348347160305518
+  ],
+  "all": [
+   0.8641655964985451,
+   1.2259192628228144
+  ]
+ },
+ "ext_v51_eval_dup_terms": {
+  "per_cell": {
+   "40|missing|0.2": {
+    "n_runs": 60,
+    "data_min": 0,
+    "data_max": 16,
+    "data_mean": 3.066666666666667,
+    "runs_with_dup_data": 28,
+    "total_min": 700,
+    "total_max": 2268,
+    "total_mean": 1503.9333333333334
+   },
+   "40|missing|0.5": {
+    "n_runs": 60,
+    "data_min": 0,
+    "data_max": 32,
+    "data_mean": 8.666666666666666,
+    "runs_with_dup_data": 50,
+    "total_min": 1396,
+    "total_max": 6876,
+    "total_mean": 3151.6666666666665
+   },
+   "80|missing|0.2": {
+    "n_runs": 60,
+    "data_min": 0,
+    "data_max": 16,
+    "data_mean": 5.2,
+    "runs_with_dup_data": 45,
+    "total_min": 1416,
+    "total_max": 3080,
+    "total_mean": 2386.4666666666667
+   },
+   "80|missing|0.5": {
+    "n_runs": 60,
+    "data_min": 0,
+    "data_max": 44,
+    "data_mean": 13.666666666666666,
+    "runs_with_dup_data": 57,
+    "total_min": 2260,
+    "total_max": 8304,
+    "total_mean": 4955.866666666667
+   },
+   "150|missing|0.2": {
+    "n_runs": 60,
+    "data_min": 0,
+    "data_max": 16,
+    "data_mean": 6.4,
+    "runs_with_dup_data": 50,
+    "total_min": 1352,
+    "total_max": 3184,
+    "total_mean": 2618.6666666666665
+   },
+   "150|missing|0.5": {
+    "n_runs": 60,
+    "data_min": 4,
+    "data_max": 44,
+    "data_mean": 16.666666666666668,
+    "runs_with_dup_data": 60,
+    "total_min": 2468,
+    "total_max": 8752,
+    "total_mean": 5993.266666666666
+   }
+  },
+  "per_run_data_range": [
+   0,
+   44
+  ],
+  "cell_mean_data_range": [
+   3.066666666666667,
+   16.666666666666668
+  ],
+  "per_run_total_range": [
+   700,
+   8752
+  ],
+  "runs_with_any_dup_data": "290/360",
+  "runs_with_any_dup_total": "360/360"
+ }
+}

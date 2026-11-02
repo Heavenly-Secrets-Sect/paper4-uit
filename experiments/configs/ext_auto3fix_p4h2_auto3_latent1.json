@@ -1,0 +1,78 @@
+{
+  "name": "ext_auto3fix_p4h2_auto3_latent1",
+  "purpose": "FROZEN, NOT RUN. Confirmatory latent1 robustness of tolerant_auto3 on the sealed P4-H2 confirmatory split, corrected spec of round 3 (docs/ext/auto3fix.md, ID auto3fix). Identical to experiments/configs/ext_auto5_p4h2_auto3_latent1.json except name and purpose. Only the latent1 rows are ruled (L1).",
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2
+    ]
+  },
+  "methods": [
+    "oracle",
+    "plugin",
+    "tolerant_v4",
+    "tolerant_auto3"
+  ],
+  "paired_references": [
+    "plugin",
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "P4-H2",
+  "split": "confirmatory",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+  "scenarios": [
+    {
+      "name": "clean"
+    },
+    {
+      "name": "latent1",
+      "latent": 1
+    }
+  ]
+}

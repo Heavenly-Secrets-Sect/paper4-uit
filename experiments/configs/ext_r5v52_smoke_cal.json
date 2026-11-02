@@ -1,0 +1,61 @@
+{
+ "bank": "D-07H",
+ "split": "development",
+ "max_topologies": 2,
+ "replicates": 1,
+ "seed_base": 70261102,
+ "unit_offset": 800000,
+ "phase": "calibration",
+ "T": [
+  19,
+  25,
+  30,
+  35
+ ],
+ "cells": [
+  [
+   "extra",
+   0.2
+  ],
+  [
+   "missing",
+   0.2
+  ],
+  [
+   "reversed",
+   0.2
+  ]
+ ],
+ "fill_T": [
+  19,
+  25,
+  30,
+  35,
+  40,
+  80,
+  150
+ ],
+ "H": 4,
+ "n_boot": 19,
+ "tau_effect": 0.1,
+ "generator": {
+  "lag_max": 2,
+  "q0": 0.3,
+  "cross_coef": [
+   0.3,
+   0.8
+  ],
+  "self_coef": [
+   0.2,
+   0.6
+  ],
+  "noise_var": [
+   0.5,
+   1.5
+  ],
+  "rho_max": 0.9,
+  "burn_in": 200
+ },
+ "name": "ext_r5v52_smoke_cal",
+ "purpose": "SMOKE (pipeline check only)."
+}

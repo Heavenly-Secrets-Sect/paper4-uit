@@ -1,0 +1,72 @@
+{
+  "name": "ext_r4levboot_lag4",
+  "purpose": "Round 4 levboot, lag_max 4 region grid (T 40/80, missing and reversed 0.2; seeds of ext_region51_lag4). Descriptive. tolerant_v5_1 and the arms all calibrated in this run on D-07H development (calibration cells as ext_region51_lag4: missing/reversed x 0.2/0.5). Run through experiments/ext/r4levboot/run.py.",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "T": [
+    40,
+    80
+  ],
+  "damage": {
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "methods": [
+    "tolerant_v5_1",
+    "r4levboot_L2",
+    "r4levboot_L3",
+    "r4levboot_W3"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "generator": {
+    "lag_max": 4,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261101,
+  "calibrate_methods": [
+    "tolerant_v5_1",
+    "r4levboot_L2",
+    "r4levboot_L3",
+    "r4levboot_W3"
+  ],
+  "paired_references": [
+    "tolerant_v5_1"
+  ]
+}

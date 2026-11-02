@@ -1,0 +1,4 @@
+1. NIG log ML closed form -47.054227 vs scipy multivariate_t -47.054227
+2. bvar_v2 T=3000: lambda=0.2, theta=0.01, C(0->3) est 0.817 [0.733, 0.924] true 0.822
+3. pselect_v2 T=150, deleted 0->1 (true C 1.598): coverage 0.95 over 20 seeds; mean selected pairs 3.10 (truth 3); mean unoriented 1.10; last info {'n_graphs': 4, 'n_members': 8, 'n_members_ok': 8, 'n_draws': 320, 'n_selected': 3, 'n_unoriented': 1}
+4. identical raw intervals: pselect True (cache cleared between calls), bvar True; names pselect_union_v2, pselect_union_v2_cal

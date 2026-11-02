@@ -1,0 +1,32 @@
+{
+ "calT_over_raw_IS_ratio_none": {
+  "40|plugin": 1.942,
+  "40|ida_union": 2.673,
+  "80|plugin": 2.247,
+  "80|ida_union": 3.013,
+  "150|plugin": 2.941,
+  "150|ida_union": 3.333
+ },
+ "notes": {
+  "width_confound_T150": {
+   "open_all|150 (auto5_small)": 1.25,
+   "open_tgt|150 (auto5)": 1.2,
+   "ratio": 1.0416666666666667
+  },
+  "calT_grid_cap": "calT grid 0.5..5.0 vs calT1 1.0..10: plugin 3.9/4.1/4.1 vs 6.1/6.9/7.1, ida 3.45/3.8/3.7 vs 4.8/5.6/6.3 -> calT target = max cov on capped grid - 0.005, below 0.95"
+ },
+ "auto3_loses_to_raw_cells": {
+  "plugin": [
+   "150|none|0.0",
+   "150|extra|0.2",
+   "150|extra|0.5"
+  ],
+  "ida_union": [
+   "40|none|0.0",
+   "80|none|0.0",
+   "150|none|0.0",
+   "150|extra|0.2",
+   "150|extra|0.5"
+  ]
+ }
+}

@@ -1,0 +1,212 @@
+{
+  "config": {
+    "name": "ext_baselines3_p4h2",
+    "purpose": "FROZEN CONFIRMATORY SPEC P7 (docs/ext/baselines3.md, 'Frozen spec P7 for P4-H2'). DO NOT RUN except as the single sealed confirmatory run, through experiments/ext/baselines3/run_cells.py. tolerant_v4 and tolerant_v5_1 against the full-budget baseline envelope at T 80/150 x missing 0.2/0.5 (cell positions of the a2 kinds list kept), all width factors frozen in experiments/ext/baselines3/frozen_calibration_p7.json (D-07H development), no calibration phase.",
+    "T": [
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "methods": [
+      "tolerant_v4",
+      "tolerant_v5_1",
+      "pselect_union_v3",
+      "pselect_union_v3_cal",
+      "pselect_cal",
+      "fullvar_cal",
+      "targeted_lp",
+      "targeted_lp_cal",
+      "bvar_minnesota_v2_cal",
+      "tlp2_db_p3"
+    ],
+    "paired_references": [
+      "tolerant_v4"
+    ],
+    "calibrate_methods": [
+      "tolerant_v5_1",
+      "pselect_union_v3_cal",
+      "pselect_cal",
+      "fullvar_cal",
+      "targeted_lp_cal",
+      "bvar_minnesota_v2_cal"
+    ],
+    "only_cells": [
+      [
+        "missing",
+        0.2
+      ],
+      [
+        "missing",
+        0.5
+      ]
+    ],
+    "skip_calibration": true,
+    "frozen_calibration": "experiments/ext/baselines3/frozen_calibration_p7.json",
+    "expected_modules": {
+      "tolerant_v5_1": "paper4.ext_v51",
+      "pselect_union_v3": "paper4.ext_baselines3",
+      "pselect_union_v3_cal": "paper4.ext_baselines3",
+      "pselect_cal": "paper4.ext_baselines3",
+      "fullvar_cal": "paper4.ext_baselines3",
+      "targeted_lp": "paper4.ext_tlp",
+      "targeted_lp_cal": "paper4.ext_tlp",
+      "bvar_minnesota_v2_cal": "paper4.ext_baselines2",
+      "tlp2_db_p3": "paper4.ext_tlp2"
+    },
+    "calibration": {
+      "bank": "D-07H",
+      "split": "development",
+      "max_topologies": null,
+      "replicates": 1,
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "bank": "P4-H2",
+    "split": "confirmatory",
+    "max_topologies": null,
+    "replicates": 3,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102
+  },
+  "seconds": 1358.9,
+  "n_rows": 2400,
+  "topologies": [
+    {
+      "id": "syn_dag_20",
+      "profile": "erdos_renyi",
+      "sha256": "82d8eec9840780ead1701530cbb1f109ec243a90de823a7e779313557e97379b"
+    },
+    {
+      "id": "syn_dag_21",
+      "profile": "erdos_renyi",
+      "sha256": "aa2e006b8106f93efe30e5b4d17269eb380d43611f4a430fa87abe27664aa609"
+    },
+    {
+      "id": "syn_dag_22",
+      "profile": "erdos_renyi",
+      "sha256": "7735b2e16b59197917124c62cf77f5117a06850b312893b77103edca5a6e5344"
+    },
+    {
+      "id": "syn_dag_23",
+      "profile": "erdos_renyi",
+      "sha256": "736b607d0d45cd2380ae2191bb18438e95f379b0f0982abff10bf497016c9666"
+    },
+    {
+      "id": "syn_dag_24",
+      "profile": "erdos_renyi",
+      "sha256": "944f12b11d5628ecc6e95b623086df62b37ac6965651c653950a72a8a4fc62ea"
+    },
+    {
+      "id": "syn_dag_25",
+      "profile": "erdos_renyi",
+      "sha256": "f717f930b59f5099c8202b7c953185be4614ab8999fc2b3c698d3de9714144d5"
+    },
+    {
+      "id": "syn_dag_26",
+      "profile": "erdos_renyi",
+      "sha256": "2906c47600994242fb5a2643e6d96595bfbd0c9ab097aae01782f72172839793"
+    },
+    {
+      "id": "syn_dag_27",
+      "profile": "erdos_renyi",
+      "sha256": "57cf0d2350284bf914ebca2dfe0c7f4d141057a87c0be9bac57f7478c351b35c"
+    },
+    {
+      "id": "syn_dag_28",
+      "profile": "erdos_renyi",
+      "sha256": "69d36cf926dd5362e769c8090629cbf22f5982f2bb7066517638054cc845cfd5"
+    },
+    {
+      "id": "syn_dag_29",
+      "profile": "erdos_renyi",
+      "sha256": "d3f2638649efefef03fdcb097095c7682c472159489045519d4f7fc2be5edd43"
+    },
+    {
+      "id": "syn_dag_30",
+      "profile": "scale_free_hub",
+      "sha256": "7328419f8da2b6b329b1ee741e6f1d3f47c7631755aa20065422fea29ae3c91f"
+    },
+    {
+      "id": "syn_dag_31",
+      "profile": "scale_free_hub",
+      "sha256": "5a2cf7437c853d4262f167bb2882aec9c76602172224868dd262e3024ce5fe0c"
+    },
+    {
+      "id": "syn_dag_32",
+      "profile": "scale_free_hub",
+      "sha256": "3216a56920c624873c4382e1588227ad08ccff4d7e0f2fa38a0cefe8defa0bb5"
+    },
+    {
+      "id": "syn_dag_33",
+      "profile": "scale_free_hub",
+      "sha256": "da345acab9320851eefde4e716008dd0d56e3087b7e3f14a55de9139abd5f3d4"
+    },
+    {
+      "id": "syn_dag_34",
+      "profile": "scale_free_hub",
+      "sha256": "b10f8df199af9b29c1e54769e4b848a59145e6e85d2fa1120653d26ede629ead"
+    },
+    {
+      "id": "syn_dag_35",
+      "profile": "scale_free_hub",
+      "sha256": "88dd02cf9142ef5ad5a4c47d18f95c604c0e67aed85d5a6533eabf596a33c971"
+    },
+    {
+      "id": "syn_dag_36",
+      "profile": "scale_free_hub",
+      "sha256": "e6737c7ecfe63ebe52e66183a6b1fe6c465626b2685f8fc7dabbceb86c5fd330"
+    },
+    {
+      "id": "syn_dag_37",
+      "profile": "scale_free_hub",
+      "sha256": "93810b04fa6d2bbb3b50f000fc7057fef54e235cd86df553e55c0195224d61e9"
+    },
+    {
+      "id": "syn_dag_38",
+      "profile": "scale_free_hub",
+      "sha256": "81e0591043173f8b3a138fc89b04f4245a157ec8468a50f7d579756f35ed3f59"
+    },
+    {
+      "id": "syn_dag_39",
+      "profile": "scale_free_hub",
+      "sha256": "fabd86ff60975008f7495d0d3ba7b0ae97eda8a26f4e4fd914d33a2cfbcd5910"
+    }
+  ]
+}

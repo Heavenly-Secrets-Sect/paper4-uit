@@ -1,0 +1,144 @@
+{
+ "n_rows": [
+  80,
+  80
+ ],
+ "status": {
+  "tolerant_v4|ok": 8,
+  "tolerant_v5_1|ok": 8,
+  "pselect_union_v3|ok": 8,
+  "pselect_union_v3_cal|ok": 8,
+  "pselect_cal|ok": 8,
+  "fullvar_cal|ok": 8,
+  "targeted_lp|ok": 8,
+  "targeted_lp_cal|ok": 8,
+  "bvar_minnesota_v2_cal|ok": 8,
+  "tlp2_db_p3|ok": 8
+ },
+ "interp_mismatches_miniconda_vs_clt": [],
+ "validity_problems_expected_only_rowcounts": [
+  "tolerant_v4 T80 missing-0.2: 2 rows, expected 60",
+  "tolerant_v4 T80 missing-0.5: 2 rows, expected 60",
+  "tolerant_v4 T150 missing-0.2: 2 rows, expected 60",
+  "tolerant_v4 T150 missing-0.5: 2 rows, expected 60",
+  "tolerant_v5_1 T80 missing-0.2: 2 rows, expected 60",
+  "tolerant_v5_1 T80 missing-0.5: 2 rows, expected 60",
+  "tolerant_v5_1 T150 missing-0.2: 2 rows, expected 60",
+  "tolerant_v5_1 T150 missing-0.5: 2 rows, expected 60",
+  "pselect_union_v3 T80 missing-0.2: 2 rows, expected 60",
+  "pselect_union_v3 T80 missing-0.5: 2 rows, expected 60",
+  "pselect_union_v3 T150 missing-0.2: 2 rows, expected 60",
+  "pselect_union_v3 T150 missing-0.5: 2 rows, expected 60",
+  "pselect_union_v3_cal T80 missing-0.2: 2 rows, expected 60",
+  "pselect_union_v3_cal T80 missing-0.5: 2 rows, expected 60",
+  "pselect_union_v3_cal T150 missing-0.2: 2 rows, expected 60",
+  "pselect_union_v3_cal T150 missing-0.5: 2 rows, expected 60",
+  "pselect_cal T80 missing-0.2: 2 rows, expected 60",
+  "pselect_cal T80 missing-0.5: 2 rows, expected 60",
+  "pselect_cal T150 missing-0.2: 2 rows, expected 60",
+  "pselect_cal T150 missing-0.5: 2 rows, expected 60",
+  "fullvar_cal T80 missing-0.2: 2 rows, expected 60",
+  "fullvar_cal T80 missing-0.5: 2 rows, expected 60",
+  "fullvar_cal T150 missing-0.2: 2 rows, expected 60",
+  "fullvar_cal T150 missing-0.5: 2 rows, expected 60",
+  "targeted_lp T80 missing-0.2: 2 rows, expected 60",
+  "targeted_lp T80 missing-0.5: 2 rows, expected 60",
+  "targeted_lp T150 missing-0.2: 2 rows, expected 60",
+  "targeted_lp T150 missing-0.5: 2 rows, expected 60",
+  "targeted_lp_cal T80 missing-0.2: 2 rows, expected 60",
+  "targeted_lp_cal T80 missing-0.5: 2 rows, expected 60",
+  "targeted_lp_cal T150 missing-0.2: 2 rows, expected 60",
+  "targeted_lp_cal T150 missing-0.5: 2 rows, expected 60",
+  "bvar_minnesota_v2_cal T80 missing-0.2: 2 rows, expected 60",
+  "bvar_minnesota_v2_cal T80 missing-0.5: 2 rows, expected 60",
+  "bvar_minnesota_v2_cal T150 missing-0.2: 2 rows, expected 60",
+  "bvar_minnesota_v2_cal T150 missing-0.5: 2 rows, expected 60",
+  "tlp2_db_p3 T80 missing-0.2: 2 rows, expected 60",
+  "tlp2_db_p3 T80 missing-0.5: 2 rows, expected 60",
+  "tlp2_db_p3 T150 missing-0.2: 2 rows, expected 60",
+  "tlp2_db_p3 T150 missing-0.5: 2 rows, expected 60"
+ ],
+ "manifest_method_modules": {
+  "tolerant_v5_1": "paper4.ext_v51",
+  "pselect_union_v3": "paper4.ext_baselines3",
+  "pselect_union_v3_cal": "paper4.ext_baselines3",
+  "pselect_cal": "paper4.ext_baselines3",
+  "fullvar_cal": "paper4.ext_baselines3",
+  "targeted_lp": "paper4.ext_tlp",
+  "targeted_lp_cal": "paper4.ext_tlp",
+  "bvar_minnesota_v2_cal": "paper4.ext_baselines2",
+  "tlp2_db_p3": "paper4.ext_tlp2"
+ },
+ "cT_rows": [
+  [
+   "bvar_minnesota_v2_cal",
+   80,
+   2.8
+  ],
+  [
+   "bvar_minnesota_v2_cal",
+   150,
+   2.7
+  ],
+  [
+   "fullvar_cal",
+   80,
+   1.4
+  ],
+  [
+   "fullvar_cal",
+   150,
+   1.6
+  ],
+  [
+   "pselect_cal",
+   80,
+   1.3
+  ],
+  [
+   "pselect_cal",
+   150,
+   1.3
+  ],
+  [
+   "pselect_union_v3_cal",
+   80,
+   1.7
+  ],
+  [
+   "pselect_union_v3_cal",
+   150,
+   1.6
+  ],
+  [
+   "targeted_lp_cal",
+   80,
+   1.1
+  ],
+  [
+   "targeted_lp_cal",
+   150,
+   1.3
+  ],
+  [
+   "tolerant_v4",
+   80,
+   1.3
+  ],
+  [
+   "tolerant_v4",
+   150,
+   1.2
+  ],
+  [
+   "tolerant_v5_1",
+   80,
+   2.6
+  ],
+  [
+   "tolerant_v5_1",
+   150,
+   2.3
+  ]
+ ]
+}

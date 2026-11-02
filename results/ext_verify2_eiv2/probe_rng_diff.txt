@@ -1,0 +1,3 @@
+# eiv2 column: cov_main.txt vs cov_diag.txt (same method, different rng stream)
+max |coverage diff| 0.023 at ('150', 'het0.3', 'none'); cells with diff > 0.01: 10/24
+max |IS diff| 0.29 at ('80', 'het0.3', 'reversed')

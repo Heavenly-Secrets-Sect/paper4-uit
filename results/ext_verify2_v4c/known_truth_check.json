@@ -1,0 +1,24 @@
+{
+ "maxdev_compose": 1.7763568394002505e-15,
+ "maxdev_C": 0.0,
+ "ida_prescale": {
+  "none|0.0": 0.5,
+  "extra|0.5": 0.5,
+  "missing|0.5": 1.0,
+  "reversed|0.5": 0.5
+ },
+ "coverage": {
+  "v4_c1.3": 0.9511,
+  "v4c_c2.6": 0.9511
+ },
+ "ext_seed": {
+  "tolerant_v4c": 837629,
+  "pselect_union_c2": 366703,
+  "bvar_minnesota_c2": 286542,
+  "ida_union_c2": 251430
+ },
+ "coverage_npairs": {
+  "v4_c1.3": 696,
+  "v4c_c2.6": 696
+ }
+}

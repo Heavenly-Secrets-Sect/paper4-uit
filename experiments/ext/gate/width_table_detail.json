@@ -1,0 +1,103 @@
+{
+  "n_runs": 420,
+  "n_boot": 199,
+  "alpha_gate": 0.1,
+  "flip_prob": 0.2,
+  "gate_state_counts": {
+    "40|none|0.0": {
+      "closed": 18,
+      "open": 2
+    },
+    "40|extra|0.2": {
+      "closed": 18,
+      "open": 2
+    },
+    "40|extra|0.5": {
+      "closed": 16,
+      "open": 4
+    },
+    "40|missing|0.2": {
+      "closed": 5,
+      "open": 15
+    },
+    "40|missing|0.5": {
+      "closed": 0,
+      "open": 20
+    },
+    "40|reversed|0.2": {
+      "closed": 18,
+      "open": 2
+    },
+    "40|reversed|0.5": {
+      "closed": 18,
+      "open": 2
+    },
+    "80|none|0.0": {
+      "closed": 19,
+      "open": 1
+    },
+    "80|extra|0.2": {
+      "closed": 19,
+      "open": 1
+    },
+    "80|extra|0.5": {
+      "closed": 19,
+      "open": 1
+    },
+    "80|missing|0.2": {
+      "closed": 1,
+      "open": 19
+    },
+    "80|missing|0.5": {
+      "closed": 0,
+      "open": 20
+    },
+    "80|reversed|0.2": {
+      "closed": 17,
+      "open": 3
+    },
+    "80|reversed|0.5": {
+      "closed": 15,
+      "open": 5
+    },
+    "150|none|0.0": {
+      "closed": 20,
+      "open": 0
+    },
+    "150|extra|0.2": {
+      "closed": 20,
+      "open": 0
+    },
+    "150|extra|0.5": {
+      "closed": 20,
+      "open": 0
+    },
+    "150|missing|0.2": {
+      "closed": 0,
+      "open": 20
+    },
+    "150|missing|0.5": {
+      "closed": 0,
+      "open": 20
+    },
+    "150|reversed|0.2": {
+      "closed": 12,
+      "open": 8
+    },
+    "150|reversed|0.5": {
+      "closed": 8,
+      "open": 12
+    }
+  },
+  "n_pairs": {
+    "closed|40": 2767,
+    "nogate|40": 4095,
+    "open|40": 1328,
+    "closed|80": 2656,
+    "nogate|80": 4095,
+    "open|80": 1439,
+    "closed|150": 2321,
+    "nogate|150": 4095,
+    "open|150": 1774
+  }
+}

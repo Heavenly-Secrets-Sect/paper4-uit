@@ -1,0 +1,84 @@
+# R3-7 row comparison (experiments/ext/v4cverify/compare_rows.py)
+
+## ext_v4cverify_rerun_w3
+{
+ "n_rows": 252,
+ "seconds": 218.8,
+ "units": [
+  [
+   "syn_dag_00",
+   0
+  ],
+  [
+   "syn_dag_01",
+   0
+  ]
+ ],
+ "vs_ext_v4c_eval_rows": {
+  "n_compared": 252,
+  "n_identical": 252,
+  "n_missing_in_ref": 0,
+  "fields_differing": {},
+  "max_abs_diff": 0.0,
+  "max_rel_diff": 0.0,
+  "worst": null
+ },
+ "vs_ext_v4c_eval_calibration": {
+  "n_keys": 85,
+  "n_diff": 0,
+  "diff": {},
+  "bytes_identical": true
+ },
+ "skeletons_identical": true
+}
+
+## ext_v4cverify_rerun_w3_clt
+{
+ "n_rows": 252,
+ "seconds": 284.8,
+ "units": [
+  [
+   "syn_dag_00",
+   0
+  ],
+  [
+   "syn_dag_01",
+   0
+  ]
+ ],
+ "vs_ext_v4c_eval_rows": {
+  "n_compared": 252,
+  "n_identical": 252,
+  "n_missing_in_ref": 0,
+  "fields_differing": {},
+  "max_abs_diff": 0.0,
+  "max_rel_diff": 0.0,
+  "worst": null
+ },
+ "vs_ext_v4c_eval_calibration": {
+  "n_keys": 85,
+  "n_diff": 0,
+  "diff": {},
+  "bytes_identical": true
+ },
+ "skeletons_identical": true
+}
+
+## conda_vs_clt_rows
+{
+ "n_compared": 252,
+ "n_identical": 252,
+ "n_missing_in_ref": 0,
+ "fields_differing": {},
+ "max_abs_diff": 0.0,
+ "max_rel_diff": 0.0,
+ "worst": null
+}
+
+## conda_vs_clt_calibration
+{
+ "n_keys": 85,
+ "n_diff": 0,
+ "diff": {},
+ "bytes_identical": true
+}

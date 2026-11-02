@@ -1,0 +1,47 @@
+{
+  "all_p_0.02": {
+    "verdict": "NOT CONFIRMED",
+    "targeted_lp": [
+      12,
+      0
+    ],
+    "tlp2_db": [
+      12,
+      0
+    ],
+    "tlp2_db_p3": [
+      12,
+      0
+    ]
+  },
+  "p_0.001_x10_0.03_x2": {
+    "verdict": "CONFIRMED-A'",
+    "targeted_lp": [
+      12,
+      10
+    ],
+    "tlp2_db": [
+      12,
+      10
+    ],
+    "tlp2_db_p3": [
+      12,
+      10
+    ]
+  },
+  "p_0.001_x9_0.03_x3": {
+    "verdict": "NOT CONFIRMED",
+    "targeted_lp": [
+      12,
+      9
+    ],
+    "tlp2_db": [
+      12,
+      9
+    ],
+    "tlp2_db_p3": [
+      12,
+      9
+    ]
+  }
+}

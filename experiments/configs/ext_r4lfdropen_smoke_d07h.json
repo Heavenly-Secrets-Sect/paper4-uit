@@ -1,0 +1,73 @@
+{
+  "name": "ext_r4lfdropen_smoke_d07h",
+  "purpose": "r4lfdropen smoke test of the driver and method on D-07H development (2 topologies, 1 replicate, T 40/80); no evaluation use.",
+  "T": [
+    40,
+    80
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "oracle",
+    "tolerant_v5_1",
+    "tolerant_v5_1_lfdr"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 2,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "calibrate_methods": [
+    "tolerant_v5_1",
+    "tolerant_v5_1_lfdr"
+  ],
+  "frozen_calibration": "experiments/ext/v51/frozen_v4_v51.json",
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": 2,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "paired_references": [
+    "tolerant_v5_1"
+  ]
+}

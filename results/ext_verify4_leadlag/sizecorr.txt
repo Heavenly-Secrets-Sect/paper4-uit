@@ -1,0 +1,6 @@
+T=80 conf phi0.8 lag0/lag0: A-like mean Q null 4.17 (nominal df 8) conf 4.54; size-corrected power 0.048; AUROC 0.551 | D-like null mean 8.43, power 0.160, AUROC 0.707
+T=80 conf phi0.8 lag0/lag2: A-like mean Q null 4.17 (nominal df 8) conf 4.53; size-corrected power 0.049; AUROC 0.547 | D-like null mean 8.43, power 0.556, AUROC 0.907
+T=150 conf phi0.8 lag0/lag0: A-like mean Q null 8.09 (nominal df 12) conf 8.07; size-corrected power 0.046; AUROC 0.505 | D-like null mean 14.07, power 0.198, AUROC 0.738
+T=150 conf phi0.8 lag0/lag2: A-like mean Q null 8.09 (nominal df 12) conf 8.44; size-corrected power 0.049; AUROC 0.532 | D-like null mean 14.07, power 0.829, AUROC 0.969
+T=1000 conf phi0.8 lag0/lag0: A-like mean Q null 8.09 (nominal df 12) conf 8.43; size-corrected power 0.063; AUROC 0.519 | D-like null mean 31.51, power 0.987, AUROC 0.994
+T=1000 conf phi0.8 lag0/lag2: A-like mean Q null 8.09 (nominal df 12) conf 8.08; size-corrected power 0.063; AUROC 0.499 | D-like null mean 31.51, power 1.000, AUROC 1.000

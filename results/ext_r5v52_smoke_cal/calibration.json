@@ -1,0 +1,32 @@
+{
+ "red": {
+  "19|none": 2.7,
+  "19|extra": 2.7,
+  "19|missing": 2.7,
+  "19|reversed": 2.7,
+  "25|none": 2.8,
+  "25|extra": 2.8,
+  "25|missing": 2.8,
+  "25|reversed": 2.8,
+  "30|none": 2.8,
+  "30|extra": 2.8,
+  "30|missing": 2.8,
+  "30|reversed": 2.8,
+  "35|none": 2.8,
+  "35|extra": 2.8,
+  "35|missing": 2.8,
+  "35|reversed": 2.8,
+  "40|none": 2.8,
+  "40|extra": 2.8,
+  "40|missing": 2.8,
+  "40|reversed": 2.8,
+  "80|none": 2.8,
+  "80|extra": 2.8,
+  "80|missing": 2.8,
+  "80|reversed": 2.8,
+  "150|none": 2.8,
+  "150|extra": 2.8,
+  "150|missing": 2.8,
+  "150|reversed": 2.8
+ }
+}

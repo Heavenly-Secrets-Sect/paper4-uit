@@ -1,0 +1,19 @@
+{
+ "reproduced": {
+  "d": -0.11166143938329362,
+  "lo": -0.22527534166890587,
+  "hi": -0.0038306029053010063,
+  "c_star": {
+   "targeted": 1.2,
+   "all": 1.15
+  }
+ },
+ "probe_tau2_reported": -0.0038306029053010063,
+ "hi_over_200_seeds": {
+  "min": -0.011770651631998114,
+  "max": 0.00467823276791299,
+  "median": -0.004061107902041015,
+  "share_hi_ge_0": 0.11
+ },
+ "c_star_sensitivity_note": "c* chosen on the same runs; not re-sampled here"
+}

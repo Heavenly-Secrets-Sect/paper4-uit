@@ -1,0 +1,10 @@
+{
+  "closed|150": 1.2,
+  "closed|40": 1.5,
+  "closed|80": 1.25,
+  "open_all|150": 1.25,
+  "open_all|80": 1.2,
+  "open_tgt|150": 1.2,
+  "open_tgt|40": 1.2,
+  "open_tgt|80": 1.2
+}

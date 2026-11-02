@@ -1,0 +1,2 @@
+calibration seconds 60.2 workers 3
+frozen sha256 495b7bbd7b1d895455d35f91bc86c22fdfef754dbceba1e3fb2fe52fc093d7d2

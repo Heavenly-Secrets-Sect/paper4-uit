@@ -1,0 +1,6 @@
+noise0.3 T80 none: cov 0.905 95% CI [0.875, 0.931] (20 topologies)
+noise0.3 T80 missing: cov 0.936 95% CI [0.920, 0.952] (20 topologies)
+noise0.3 T80 reversed: cov 0.897 95% CI [0.871, 0.924] (20 topologies)
+noise0.3 T150 none: cov 0.933 95% CI [0.918, 0.948] (20 topologies)
+noise0.3 T150 missing: cov 0.919 95% CI [0.901, 0.935] (20 topologies)
+noise0.3 T150 reversed: cov 0.909 95% CI [0.893, 0.925] (20 topologies)

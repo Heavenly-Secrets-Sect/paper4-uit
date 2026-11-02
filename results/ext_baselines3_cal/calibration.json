@@ -1,0 +1,12 @@
+{
+  "80|none|0.0": 1.3,
+  "pselect_union_v3_cal|80|none": 1.7,
+  "80|missing|0.2": 8.9,
+  "pselect_union_v3_cal|80|missing": 1.7,
+  "80|missing|0.5": 8.5,
+  "150|none|0.0": 1.2,
+  "pselect_union_v3_cal|150|none": 1.6,
+  "150|missing|0.2": 8.4,
+  "pselect_union_v3_cal|150|missing": 1.6,
+  "150|missing|0.5": 9.0
+}

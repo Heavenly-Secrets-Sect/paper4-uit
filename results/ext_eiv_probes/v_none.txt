@@ -1,0 +1,12 @@
+none T=80 ratio=0.0 eiv_bc    n=8 cov=0.930 IS=2.23 width=1.71 r_used=0.037
+none T=80 ratio=0.0 eiv_nobc  n=8 cov=0.926 IS=2.17 width=1.66 r_used=0.035
+none T=80 ratio=0.0 v3        n=8 cov=0.908 IS=1.96 width=1.37 r_used=nan
+none T=80 ratio=0.3 eiv_bc    n=8 cov=0.919 IS=3.92 width=2.52 r_used=0.161
+none T=80 ratio=0.3 eiv_nobc  n=8 cov=0.893 IS=3.54 width=2.03 r_used=0.147
+none T=80 ratio=0.3 v3        n=8 cov=0.790 IS=3.60 width=1.39 r_used=nan
+none T=150 ratio=0.0 eiv_bc    n=8 cov=0.948 IS=1.23 width=1.10 r_used=0.019
+none T=150 ratio=0.0 eiv_nobc  n=8 cov=0.959 IS=1.19 width=1.06 r_used=0.022
+none T=150 ratio=0.0 v3        n=8 cov=0.952 IS=1.13 width=1.01 r_used=nan
+none T=150 ratio=0.3 eiv_bc    n=8 cov=0.915 IS=2.60 width=1.75 r_used=0.217
+none T=150 ratio=0.3 eiv_nobc  n=8 cov=0.923 IS=2.00 width=1.47 r_used=0.172
+none T=150 ratio=0.3 v3        n=8 cov=0.738 IS=2.99 width=1.01 r_used=nan

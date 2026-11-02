@@ -1,0 +1,8 @@
+{"name": "ext_r4hubscreen_smoke", "purpose": "smoke test on D-07H development only",
+ "bank": "D-07H", "split": "development", "max_topologies": 3, "replicates": 1,
+ "T": [25, 40], "cells": [["none", 0.0], ["missing", 0.2], ["reversed", 0.2], ["extra", 0.2]],
+ "H": 4, "n_boot": 29, "tau_effect": 0.1,
+ "generator": {"lag_max": 2, "q0": 0.3, "cross_coef": [0.3, 0.8], "self_coef": [0.2, 0.6], "noise_var": [0.5, 1.5], "rho_max": 0.9, "burn_in": 200},
+ "seed_base": 20261102,
+ "calibration": {"bank": "D-07H", "split": "development", "max_topologies": 4, "replicates": 1},
+ "frozen_v51": "experiments/ext/v51/frozen_v4_v51.json"}

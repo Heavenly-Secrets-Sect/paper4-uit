@@ -1,0 +1,4083 @@
+{
+ "model": "gpt-5-mini-2025-08-07",
+ "summary": {
+  "n_pairs": 61,
+  "n_prior": 21,
+  "n_missing_candidates": 40,
+  "support_agreement": 0.7049180327868853,
+  "direction_agreement_when_both_state": 0.9615384615384616,
+  "lag_agreement": 0.6721311475409836,
+  "calls_this_run": 122,
+  "n_pairs_both_state_direction": 26,
+  "support_spearman_A_vs_B": 0.7879398281727232
+ },
+ "pairs": [
+  {
+   "pair": [
+    "macro_gdp_yoy_pct",
+    "macro_policy_rate_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "macro_gdp_yoy_pct",
+   "prior_sign": "policy_shock",
+   "prior_confidence": 0.51,
+   "co_mentions": 0,
+   "chunk_ids": [
+    "RAGKB_026",
+    "RAGKB_007",
+    "RAGKB_R3080",
+    "RAGKB_046",
+    "RAGKB_040"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_026"
+   ],
+   "pair_short": [
+    "GDP_GROWTH",
+    "POLICY_RATE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.65,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "supports_edge",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_026",
+      "RAGKB_046",
+      "RAGKB_040"
+     ],
+     "knowledge_direction": "both",
+     "direction": "POLICY_RATE->GDP_GROWTH"
+    },
+    "B": {
+     "p_edge": 0.9500000000000001,
+     "p_ab": 0.10526315789473684,
+     "p_ba": 0.8947368421052632,
+     "support": "supports_edge",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_026",
+      "RAGKB_046"
+     ],
+     "direction": "POLICY_RATE->GDP_GROWTH"
+    }
+   },
+   "support_mean": 0.8,
+   "p_ab_mean": 0.05,
+   "p_ba_mean": 0.75,
+   "support_agree": true,
+   "direction_majority": "POLICY_RATE->GDP_GROWTH",
+   "direction_agree": true,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "p_stated_direction": 0.75,
+   "p_reversed_direction": 0.05,
+   "doubt": 0.25,
+   "reversal_score": 0.0625
+  },
+  {
+   "pair": [
+    "macro_cpi_avg_pct",
+    "macro_policy_rate_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "macro_cpi_avg_pct",
+   "prior_sign": "policy_shock",
+   "prior_confidence": 0.85,
+   "co_mentions": 9,
+   "chunk_ids": [
+    "RAGKB_026",
+    "RAGKB_048",
+    "RAGKB_R049",
+    "RAGKB_R3086",
+    "RAGKB_S014",
+    "RAGKB_S045",
+    "RAGKB_046",
+    "RAGKB_040"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_026",
+    "RAGKB_048",
+    "RAGKB_R049",
+    "RAGKB_R3086",
+    "RAGKB_S014",
+    "RAGKB_S045"
+   ],
+   "pair_short": [
+    "CPI_INFLATION",
+    "POLICY_RATE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.85,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_046",
+      "RAGKB_040",
+      "RAGKB_026",
+      "RAGKB_R049",
+      "RAGKB_048",
+      "RAGKB_S014",
+      "RAGKB_S045"
+     ],
+     "knowledge_direction": "both",
+     "direction": "both"
+    },
+    "B": {
+     "p_edge": 0.95,
+     "p_ab": 0.3684210526315789,
+     "p_ba": 0.631578947368421,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_046",
+      "RAGKB_R049"
+     ],
+     "direction": "both"
+    }
+   },
+   "support_mean": 0.8999999999999999,
+   "p_ab_mean": 0.38749999999999996,
+   "p_ba_mean": 0.5125,
+   "support_agree": true,
+   "direction_majority": "both",
+   "direction_agree": true,
+   "lag_majority": "both",
+   "lag_agree": true,
+   "p_stated_direction": 0.5125,
+   "p_reversed_direction": 0.38749999999999996,
+   "doubt": 0.48750000000000004,
+   "reversal_score": 0.4305555555555555
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "macro_policy_rate_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "bank_nim_ratio",
+   "prior_sign": "policy_shock",
+   "prior_confidence": 0.7,
+   "co_mentions": 5,
+   "chunk_ids": [
+    "RAGKB_031",
+    "RAGKB_032",
+    "RAGKB_R037",
+    "RAGKB_TAN002",
+    "RAGKB_TAN006",
+    "RAGKB_TAN010",
+    "RAGKB_TAN011",
+    "RAGKB_TAN024"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_031",
+    "RAGKB_032",
+    "RAGKB_R037",
+    "RAGKB_TAN002",
+    "RAGKB_TAN006",
+    "RAGKB_TAN010",
+    "RAGKB_TAN011",
+    "RAGKB_TAN024"
+   ],
+   "pair_short": [
+    "NIM",
+    "POLICY_RATE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.9,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_031",
+      "RAGKB_032",
+      "RAGKB_R037",
+      "RAGKB_TAN010",
+      "RAGKB_TAN011",
+      "RAGKB_TAN002",
+      "RAGKB_TAN006",
+      "RAGKB_TAN024"
+     ],
+     "knowledge_direction": "Y->X",
+     "direction": "POLICY_RATE->NIM"
+    },
+    "B": {
+     "p_edge": 0.88,
+     "p_ab": 0.05113636363636363,
+     "p_ba": 0.9488636363636364,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_032",
+      "RAGKB_031"
+     ],
+     "direction": "POLICY_RATE->NIM"
+    }
+   },
+   "support_mean": 0.89,
+   "p_ab_mean": 0.0225,
+   "p_ba_mean": 0.8674999999999999,
+   "support_agree": true,
+   "direction_majority": "POLICY_RATE->NIM",
+   "direction_agree": true,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "p_stated_direction": 0.8674999999999999,
+   "p_reversed_direction": 0.0225,
+   "doubt": 0.13250000000000006,
+   "reversal_score": 0.025280898876404497
+  },
+  {
+   "pair": [
+    "macro_policy_rate_pct",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "stock_adj_close_last_vnd",
+   "prior_sign": "negative",
+   "prior_confidence": 0.7,
+   "co_mentions": 7,
+   "chunk_ids": [
+    "RAGKB_038",
+    "RAGKB_044",
+    "RAGKB_045",
+    "RAGKB_R045",
+    "RAGKB_S040",
+    "RAGKB_S041",
+    "RAGKB_CK004",
+    "RAGKB_CK015"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_038",
+    "RAGKB_044",
+    "RAGKB_045",
+    "RAGKB_CK004",
+    "RAGKB_CK015",
+    "RAGKB_R045",
+    "RAGKB_S040",
+    "RAGKB_S041"
+   ],
+   "pair_short": [
+    "POLICY_RATE",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.75,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_038",
+      "RAGKB_044",
+      "RAGKB_045",
+      "RAGKB_R045",
+      "RAGKB_CK004",
+      "RAGKB_CK015",
+      "RAGKB_S041",
+      "RAGKB_S040"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "POLICY_RATE->STOCK_PRICE"
+    },
+    "B": {
+     "p_edge": 0.89,
+     "p_ab": 0.9606741573033708,
+     "p_ba": 0.039325842696629205,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK004",
+      "RAGKB_CK015"
+     ],
+     "direction": "POLICY_RATE->STOCK_PRICE"
+    }
+   },
+   "support_mean": 0.8200000000000001,
+   "p_ab_mean": 0.8025,
+   "p_ba_mean": 0.017499999999999998,
+   "support_agree": true,
+   "direction_majority": "POLICY_RATE->STOCK_PRICE",
+   "direction_agree": true,
+   "lag_majority": "later_quarters",
+   "lag_agree": true,
+   "p_stated_direction": 0.8025,
+   "p_reversed_direction": 0.017499999999999998,
+   "doubt": 0.1975,
+   "reversal_score": 0.021341463414634144
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "bank_provision_coverage_proxy_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_npl_ratio",
+   "prior_target": "bank_provision_coverage_proxy_pct",
+   "prior_sign": "negative",
+   "prior_confidence": 0.85,
+   "co_mentions": 27,
+   "chunk_ids": [
+    "RAGKB_360",
+    "RAGKB_R030",
+    "RAGKB_R033",
+    "RAGKB_R043",
+    "RAGKB_R3050",
+    "RAGKB_S018",
+    "RAGKB_TAN035",
+    "RAGKB_TAN036"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_360",
+    "RAGKB_R030",
+    "RAGKB_R033",
+    "RAGKB_R043",
+    "RAGKB_R3050",
+    "RAGKB_S018",
+    "RAGKB_TAN035",
+    "RAGKB_TAN036",
+    "RAGKB_TAN037",
+    "RAGKB_TAN039"
+   ],
+   "pair_short": [
+    "NPL",
+    "PROV_COVERAGE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.9,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R043",
+      "RAGKB_TAN035",
+      "RAGKB_360",
+      "RAGKB_R033",
+      "RAGKB_R3050",
+      "RAGKB_S018",
+      "RAGKB_R030",
+      "RAGKB_TAN036"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "NPL->PROV_COVERAGE"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9529411764705882,
+     "p_ba": 0.047058823529411764,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_360",
+      "RAGKB_TAN035"
+     ],
+     "direction": "NPL->PROV_COVERAGE"
+    }
+   },
+   "support_mean": 0.875,
+   "p_ab_mean": 0.855,
+   "p_ba_mean": 0.02,
+   "support_agree": true,
+   "direction_majority": "NPL->PROV_COVERAGE",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "p_stated_direction": 0.855,
+   "p_reversed_direction": 0.02,
+   "doubt": 0.14500000000000002,
+   "reversal_score": 0.022857142857142857
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "bank_roe_ratio"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_npl_ratio",
+   "prior_target": "bank_roe_ratio",
+   "prior_sign": "negative",
+   "prior_confidence": 0.7,
+   "co_mentions": 20,
+   "chunk_ids": [
+    "RAGKB_R028",
+    "RAGKB_TAN038",
+    "RAGKB_349",
+    "RAGKB_357",
+    "RAGKB_389",
+    "RAGKB_390",
+    "RAGKB_336",
+    "RAGKB_331"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_R028",
+    "RAGKB_TAN038"
+   ],
+   "pair_short": [
+    "NPL",
+    "ROE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.8,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R028",
+      "RAGKB_TAN038"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "NPL->ROE"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9529411764705882,
+     "p_ba": 0.047058823529411764,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R028",
+      "RAGKB_TAN038"
+     ],
+     "direction": "NPL->ROE"
+    }
+   },
+   "support_mean": 0.8250000000000001,
+   "p_ab_mean": 0.805,
+   "p_ba_mean": 0.02,
+   "support_agree": true,
+   "direction_majority": "NPL->ROE",
+   "direction_agree": true,
+   "lag_majority": "later_quarters",
+   "lag_agree": true,
+   "p_stated_direction": 0.805,
+   "p_reversed_direction": 0.02,
+   "doubt": 0.19499999999999995,
+   "reversal_score": 0.024242424242424242
+  },
+  {
+   "pair": [
+    "bank_provision_coverage_proxy_pct",
+    "bank_roe_ratio"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_provision_coverage_proxy_pct",
+   "prior_target": "bank_roe_ratio",
+   "prior_sign": "positive",
+   "prior_confidence": 0.7,
+   "co_mentions": 12,
+   "chunk_ids": [
+    "RAGKB_R028",
+    "RAGKB_R029",
+    "RAGKB_TAN038",
+    "RAGKB_334",
+    "RAGKB_349",
+    "RAGKB_336",
+    "RAGKB_390",
+    "RAGKB_378"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_R028",
+    "RAGKB_R029",
+    "RAGKB_TAN038"
+   ],
+   "pair_short": [
+    "PROV_COVERAGE",
+    "ROE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.75,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_R029",
+      "RAGKB_TAN038",
+      "RAGKB_R028",
+      "RAGKB_334"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "PROV_COVERAGE->ROE"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9117647058823529,
+     "p_ba": 0.08823529411764706,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R028",
+      "RAGKB_TAN038"
+     ],
+     "direction": "PROV_COVERAGE->ROE"
+    }
+   },
+   "support_mean": 0.8,
+   "p_ab_mean": 0.7625,
+   "p_ba_mean": 0.037500000000000006,
+   "support_agree": true,
+   "direction_majority": "PROV_COVERAGE->ROE",
+   "direction_agree": true,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "p_stated_direction": 0.7625,
+   "p_reversed_direction": 0.037500000000000006,
+   "doubt": 0.23750000000000004,
+   "reversal_score": 0.046875000000000014
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "macro_cpi_avg_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_cpi_avg_pct",
+   "prior_target": "bank_npl_ratio",
+   "prior_sign": "positive",
+   "prior_confidence": 0.42,
+   "co_mentions": 1,
+   "chunk_ids": [
+    "RAGKB_R038",
+    "RAGKB_390",
+    "RAGKB_349",
+    "RAGKB_026",
+    "RAGKB_046"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_R038"
+   ],
+   "pair_short": [
+    "NPL",
+    "CPI_INFLATION"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.8,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "supports_edge",
+     "lag": "unclear",
+     "sign": "+",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_R038"
+     ],
+     "knowledge_direction": "both",
+     "direction": "CPI_INFLATION->NPL"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.08823529411764706,
+     "p_ba": 0.9117647058823529,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R038",
+      "RAGKB_046"
+     ],
+     "direction": "CPI_INFLATION->NPL"
+    }
+   },
+   "support_mean": 0.8250000000000001,
+   "p_ab_mean": 0.037500000000000006,
+   "p_ba_mean": 0.7875000000000001,
+   "support_agree": true,
+   "direction_majority": "CPI_INFLATION->NPL",
+   "direction_agree": true,
+   "lag_majority": "later_quarters",
+   "lag_agree": false,
+   "p_stated_direction": 0.7875000000000001,
+   "p_reversed_direction": 0.037500000000000006,
+   "doubt": 0.2124999999999999,
+   "reversal_score": 0.045454545454545456
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "macro_policy_rate_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_ldr_ratio",
+   "prior_target": "macro_policy_rate_pct",
+   "prior_sign": "positive",
+   "prior_confidence": 0.42,
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_R039",
+    "RAGKB_R055",
+    "RAGKB_031",
+    "RAGKB_TAN014",
+    "RAGKB_S041"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_R039",
+    "RAGKB_R055"
+   ],
+   "pair_short": [
+    "LDR",
+    "POLICY_RATE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R039",
+      "RAGKB_R055",
+      "RAGKB_031",
+      "RAGKB_TAN014",
+      "RAGKB_S041"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.18000000000000002,
+     "p_ab": 0.3611111111111111,
+     "p_ba": 0.6388888888888888,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_TAN014",
+      "RAGKB_R055"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.14,
+   "p_ab_mean": 0.0575,
+   "p_ba_mean": 0.0825,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "p_stated_direction": 0.0575,
+   "p_reversed_direction": 0.0825,
+   "doubt": 0.9425,
+   "reversal_score": 0.5892857142857143
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "bank_nim_ratio"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_ldr_ratio",
+   "prior_target": "bank_nim_ratio",
+   "prior_sign": "negative",
+   "prior_confidence": 0.7,
+   "co_mentions": 12,
+   "chunk_ids": [
+    "RAGKB_063",
+    "RAGKB_R3056",
+    "RAGKB_TAN014",
+    "RAGKB_336",
+    "RAGKB_031",
+    "RAGKB_358",
+    "RAGKB_360",
+    "RAGKB_361"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_063",
+    "RAGKB_R3056",
+    "RAGKB_TAN014"
+   ],
+   "pair_short": [
+    "LDR",
+    "NIM"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.2,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_063",
+      "RAGKB_R3056",
+      "RAGKB_TAN014",
+      "RAGKB_031"
+     ],
+     "knowledge_direction": "both",
+     "direction": "LDR->NIM"
+    },
+    "B": {
+     "p_edge": 0.9000000000000001,
+     "p_ab": 0.9444444444444444,
+     "p_ba": 0.05555555555555555,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R3056",
+      "RAGKB_TAN014"
+     ],
+     "direction": "LDR->NIM"
+    }
+   },
+   "support_mean": 0.55,
+   "p_ab_mean": 0.525,
+   "p_ba_mean": 0.025,
+   "support_agree": false,
+   "direction_majority": "LDR->NIM",
+   "direction_agree": true,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "p_stated_direction": 0.525,
+   "p_reversed_direction": 0.025,
+   "doubt": 0.475,
+   "reversal_score": 0.045454545454545456
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "bank_npl_ratio"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_nim_ratio",
+   "prior_target": "bank_npl_ratio",
+   "prior_sign": "negative",
+   "prior_confidence": 0.42,
+   "co_mentions": 18,
+   "chunk_ids": [
+    "RAGKB_S037",
+    "RAGKB_336",
+    "RAGKB_349",
+    "RAGKB_357",
+    "RAGKB_360",
+    "RAGKB_384",
+    "RAGKB_391",
+    "RAGKB_009"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_S037"
+   ],
+   "pair_short": [
+    "NIM",
+    "NPL"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_S037",
+      "RAGKB_384",
+      "RAGKB_360",
+      "RAGKB_336",
+      "RAGKB_357"
+     ],
+     "knowledge_direction": "Y->X",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.7000000000000001,
+     "p_ab": 0.10714285714285715,
+     "p_ba": 0.8928571428571428,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S037",
+      "RAGKB_384"
+     ],
+     "direction": "NPL->NIM"
+    }
+   },
+   "support_mean": 0.4,
+   "p_ab_mean": 0.0625,
+   "p_ba_mean": 0.3375,
+   "support_agree": false,
+   "direction_majority": "NPL->NIM",
+   "direction_agree": false,
+   "lag_majority": "same_quarter",
+   "lag_agree": false,
+   "p_stated_direction": 0.0625,
+   "p_reversed_direction": 0.3375,
+   "doubt": 0.9375,
+   "reversal_score": 0.84375
+  },
+  {
+   "pair": [
+    "macro_policy_rate_pct",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "stock_avg_daily_volume_cp",
+   "prior_sign": "negative",
+   "prior_confidence": 0.42,
+   "co_mentions": 6,
+   "chunk_ids": [
+    "RAGKB_S039",
+    "RAGKB_S041",
+    "RAGKB_R045",
+    "RAGKB_R003",
+    "RAGKB_R046",
+    "RAGKB_R055",
+    "RAGKB_TAN014"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_S039"
+   ],
+   "pair_short": [
+    "POLICY_RATE",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S039",
+      "RAGKB_S041",
+      "RAGKB_R055",
+      "RAGKB_TAN014",
+      "RAGKB_R046"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9588235294117646,
+     "p_ba": 0.041176470588235294,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S039",
+      "RAGKB_S041"
+     ],
+     "direction": "POLICY_RATE->TRADE_VOLUME"
+    }
+   },
+   "support_mean": 0.5,
+   "p_ab_mean": 0.445,
+   "p_ba_mean": 0.055,
+   "support_agree": false,
+   "direction_majority": "POLICY_RATE->TRADE_VOLUME",
+   "direction_agree": false,
+   "lag_majority": "same_quarter",
+   "lag_agree": false,
+   "p_stated_direction": 0.445,
+   "p_reversed_direction": 0.055,
+   "doubt": 0.5549999999999999,
+   "reversal_score": 0.11
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "macro_policy_rate_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "bank_npl_ratio",
+   "prior_sign": "policy_shock",
+   "prior_confidence": 0.7,
+   "co_mentions": 1,
+   "chunk_ids": [
+    "RAGKB_S034",
+    "RAGKB_TAN021",
+    "RAGKB_TAN042",
+    "RAGKB_TAN045",
+    "RAGKB_390",
+    "RAGKB_349",
+    "RAGKB_046",
+    "RAGKB_040"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_S034",
+    "RAGKB_TAN021",
+    "RAGKB_TAN042",
+    "RAGKB_TAN045"
+   ],
+   "pair_short": [
+    "NPL",
+    "POLICY_RATE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S034",
+      "RAGKB_TAN021",
+      "RAGKB_TAN042",
+      "RAGKB_TAN045",
+      "RAGKB_046"
+     ],
+     "knowledge_direction": "Y->X",
+     "direction": "POLICY_RATE->NPL"
+    },
+    "B": {
+     "p_edge": 0.9,
+     "p_ab": 0.022222222222222223,
+     "p_ba": 0.9777777777777777,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S034",
+      "RAGKB_TAN021"
+     ],
+     "direction": "POLICY_RATE->NPL"
+    }
+   },
+   "support_mean": 0.525,
+   "p_ab_mean": 0.01,
+   "p_ba_mean": 0.515,
+   "support_agree": false,
+   "direction_majority": "POLICY_RATE->NPL",
+   "direction_agree": true,
+   "lag_majority": "later_quarters",
+   "lag_agree": true,
+   "p_stated_direction": 0.515,
+   "p_reversed_direction": 0.01,
+   "doubt": 0.485,
+   "reversal_score": 0.019047619047619046
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "bank_roe_ratio"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_nim_ratio",
+   "prior_target": "bank_roe_ratio",
+   "prior_sign": "positive",
+   "prior_confidence": 0.42,
+   "co_mentions": 19,
+   "chunk_ids": [
+    "RAGKB_TAN047",
+    "RAGKB_336",
+    "RAGKB_349",
+    "RAGKB_357",
+    "RAGKB_379",
+    "RAGKB_009",
+    "RAGKB_391",
+    "RAGKB_034"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_TAN047"
+   ],
+   "pair_short": [
+    "NIM",
+    "ROE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.85,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "+",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_TAN047",
+      "RAGKB_034"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "NIM->ROE"
+    },
+    "B": {
+     "p_edge": 0.9400000000000001,
+     "p_ab": 0.9734042553191489,
+     "p_ba": 0.026595744680851064,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "+",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_TAN047",
+      "RAGKB_034"
+     ],
+     "direction": "NIM->ROE"
+    }
+   },
+   "support_mean": 0.895,
+   "p_ab_mean": 0.8825000000000001,
+   "p_ba_mean": 0.0125,
+   "support_agree": true,
+   "direction_majority": "NIM->ROE",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "p_stated_direction": 0.8825000000000001,
+   "p_reversed_direction": 0.0125,
+   "doubt": 0.11749999999999994,
+   "reversal_score": 0.013966480446927375
+  },
+  {
+   "pair": [
+    "macro_policy_rate_pct",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "stock_avg_daily_trade_value_vnd",
+   "prior_sign": "negative",
+   "prior_confidence": 0.7,
+   "co_mentions": 8,
+   "chunk_ids": [
+    "RAGKB_CK001",
+    "RAGKB_CK002",
+    "RAGKB_CK003",
+    "RAGKB_CK004",
+    "RAGKB_CK005",
+    "RAGKB_CK006",
+    "RAGKB_CK007",
+    "RAGKB_S041"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_CK001",
+    "RAGKB_CK002",
+    "RAGKB_CK003",
+    "RAGKB_CK004",
+    "RAGKB_CK005",
+    "RAGKB_CK006",
+    "RAGKB_CK007"
+   ],
+   "pair_short": [
+    "POLICY_RATE",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.2,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK001",
+      "RAGKB_CK002",
+      "RAGKB_CK003",
+      "RAGKB_CK004",
+      "RAGKB_CK006",
+      "RAGKB_CK007",
+      "RAGKB_CK005",
+      "RAGKB_S041"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "POLICY_RATE->TRADE_VALUE"
+    },
+    "B": {
+     "p_edge": 0.9,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK001",
+      "RAGKB_CK006"
+     ],
+     "direction": "POLICY_RATE->TRADE_VALUE"
+    }
+   },
+   "support_mean": 0.55,
+   "p_ab_mean": 0.55,
+   "p_ba_mean": 0.0,
+   "support_agree": false,
+   "direction_majority": "POLICY_RATE->TRADE_VALUE",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "p_stated_direction": 0.55,
+   "p_reversed_direction": 0.0,
+   "doubt": 0.44999999999999996,
+   "reversal_score": 0.0
+  },
+  {
+   "pair": [
+    "macro_policy_rate_pct",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_policy_rate_pct",
+   "prior_target": "stock_return_qoq_pct",
+   "prior_sign": "policy_shock",
+   "prior_confidence": 0.42,
+   "co_mentions": 2,
+   "chunk_ids": [
+    "RAGKB_R059",
+    "RAGKB_CK008",
+    "RAGKB_CK013",
+    "RAGKB_CK014",
+    "RAGKB_R026",
+    "RAGKB_R032",
+    "RAGKB_046",
+    "RAGKB_040",
+    "RAGKB_TAI053",
+    "RAGKB_340"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_CK008",
+    "RAGKB_CK013",
+    "RAGKB_CK014",
+    "RAGKB_R059"
+   ],
+   "pair_short": [
+    "POLICY_RATE",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.65,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_040",
+      "RAGKB_046",
+      "RAGKB_CK008",
+      "RAGKB_CK013",
+      "RAGKB_CK014",
+      "RAGKB_R059"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "POLICY_RATE->STOCK_RETURN"
+    },
+    "B": {
+     "p_edge": 0.9,
+     "p_ab": 0.9833333333333333,
+     "p_ba": 0.016666666666666666,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_040",
+      "RAGKB_CK008"
+     ],
+     "direction": "POLICY_RATE->STOCK_RETURN"
+    }
+   },
+   "support_mean": 0.775,
+   "p_ab_mean": 0.7675000000000001,
+   "p_ba_mean": 0.0075,
+   "support_agree": true,
+   "direction_majority": "POLICY_RATE->STOCK_RETURN",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "p_stated_direction": 0.7675000000000001,
+   "p_reversed_direction": 0.0075,
+   "doubt": 0.23249999999999993,
+   "reversal_score": 0.009677419354838708
+  },
+  {
+   "pair": [
+    "macro_cpi_avg_pct",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_cpi_avg_pct",
+   "prior_target": "stock_avg_daily_volume_cp",
+   "prior_sign": "negative",
+   "prior_confidence": 0.42,
+   "co_mentions": 3,
+   "chunk_ids": [
+    "RAGKB_CK009",
+    "RAGKB_CK010",
+    "RAGKB_S042"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_CK009",
+    "RAGKB_CK010"
+   ],
+   "pair_short": [
+    "CPI_INFLATION",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK009",
+      "RAGKB_CK010",
+      "RAGKB_S042"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "CPI_INFLATION->TRADE_VOLUME"
+    },
+    "B": {
+     "p_edge": 0.92,
+     "p_ab": 0.967391304347826,
+     "p_ba": 0.03260869565217391,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK009",
+      "RAGKB_S042"
+     ],
+     "direction": "CPI_INFLATION->TRADE_VOLUME"
+    }
+   },
+   "support_mean": 0.535,
+   "p_ab_mean": 0.52,
+   "p_ba_mean": 0.015,
+   "support_agree": false,
+   "direction_majority": "CPI_INFLATION->TRADE_VOLUME",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "p_stated_direction": 0.52,
+   "p_reversed_direction": 0.015,
+   "doubt": 0.48,
+   "reversal_score": 0.02803738317757009
+  },
+  {
+   "pair": [
+    "macro_cpi_avg_pct",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_cpi_avg_pct",
+   "prior_target": "stock_avg_daily_trade_value_vnd",
+   "prior_sign": "negative",
+   "prior_confidence": 0.42,
+   "co_mentions": 5,
+   "chunk_ids": [
+    "RAGKB_CK011",
+    "RAGKB_CK012",
+    "RAGKB_CK009",
+    "RAGKB_S042",
+    "RAGKB_CK010"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_CK011",
+    "RAGKB_CK012"
+   ],
+   "pair_short": [
+    "CPI_INFLATION",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK011",
+      "RAGKB_CK012",
+      "RAGKB_CK009",
+      "RAGKB_CK010"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "CPI_INFLATION->TRADE_VALUE"
+    },
+    "B": {
+     "p_edge": 0.84,
+     "p_ab": 0.9821428571428571,
+     "p_ba": 0.017857142857142856,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK011",
+      "RAGKB_CK009"
+     ],
+     "direction": "CPI_INFLATION->TRADE_VALUE"
+    }
+   },
+   "support_mean": 0.495,
+   "p_ab_mean": 0.4875,
+   "p_ba_mean": 0.0075,
+   "support_agree": false,
+   "direction_majority": "CPI_INFLATION->TRADE_VALUE",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "p_stated_direction": 0.4875,
+   "p_reversed_direction": 0.0075,
+   "doubt": 0.5125,
+   "reversal_score": 0.015151515151515152
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "bank_nim_ratio"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_nim_ratio",
+   "prior_target": "bank_car_ratio",
+   "prior_sign": "positive",
+   "prior_confidence": 0.42,
+   "co_mentions": 10,
+   "chunk_ids": [
+    "RAGKB_R058",
+    "RAGKB_TAN012",
+    "RAGKB_TAN025",
+    "RAGKB_TAN2_055",
+    "RAGKB_TAN2_053",
+    "RAGKB_358",
+    "RAGKB_361",
+    "RAGKB_378"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_R058",
+    "RAGKB_TAN012",
+    "RAGKB_TAN025",
+    "RAGKB_TAN2_053",
+    "RAGKB_TAN2_055"
+   ],
+   "pair_short": [
+    "CAR",
+    "NIM"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_TAN2_055",
+      "RAGKB_TAN2_053"
+     ],
+     "knowledge_direction": "Y->X",
+     "direction": "NIM->CAR"
+    },
+    "B": {
+     "p_edge": 0.89,
+     "p_ab": 0.02808988764044944,
+     "p_ba": 0.9719101123595505,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_TAN2_055",
+      "RAGKB_TAN2_053"
+     ],
+     "direction": "NIM->CAR"
+    }
+   },
+   "support_mean": 0.47000000000000003,
+   "p_ab_mean": 0.0125,
+   "p_ba_mean": 0.4575,
+   "support_agree": false,
+   "direction_majority": "NIM->CAR",
+   "direction_agree": true,
+   "lag_majority": "later_quarters",
+   "lag_agree": true,
+   "p_stated_direction": 0.4575,
+   "p_reversed_direction": 0.0125,
+   "doubt": 0.5425,
+   "reversal_score": 0.026595744680851064
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "macro_gdp_yoy_pct"
+   ],
+   "kind": "prior",
+   "prior_source": "macro_gdp_yoy_pct",
+   "prior_target": "bank_car_ratio",
+   "prior_sign": "negative",
+   "prior_confidence": 0.42,
+   "co_mentions": 1,
+   "chunk_ids": [
+    "RAGKB_TAN2_057",
+    "RAGKB_353",
+    "RAGKB_358",
+    "RAGKB_026",
+    "RAGKB_007"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_TAN2_057"
+   ],
+   "pair_short": [
+    "CAR",
+    "GDP_GROWTH"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.85,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_TAN2_057"
+     ],
+     "knowledge_direction": "both",
+     "direction": "GDP_GROWTH->CAR"
+    },
+    "B": {
+     "p_edge": 0.85,
+     "p_ab": 0.029411764705882356,
+     "p_ba": 0.9705882352941176,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_TAN2_057"
+     ],
+     "direction": "GDP_GROWTH->CAR"
+    }
+   },
+   "support_mean": 0.85,
+   "p_ab_mean": 0.0125,
+   "p_ba_mean": 0.8374999999999999,
+   "support_agree": true,
+   "direction_majority": "GDP_GROWTH->CAR",
+   "direction_agree": true,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "p_stated_direction": 0.8374999999999999,
+   "p_reversed_direction": 0.0125,
+   "doubt": 0.1625000000000001,
+   "reversal_score": 0.01470588235294118
+  },
+  {
+   "pair": [
+    "bank_roe_ratio",
+    "bank_z_score"
+   ],
+   "kind": "prior",
+   "prior_source": "bank_roe_ratio",
+   "prior_target": "bank_z_score",
+   "prior_sign": "positive",
+   "prior_confidence": 0.42,
+   "co_mentions": 2,
+   "chunk_ids": [
+    "RAGKB_TAN2_065",
+    "RAGKB_TAN2_062",
+    "RAGKB_335",
+    "RAGKB_350",
+    "RAGKB_030",
+    "RAGKB_046"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_TAN2_062",
+    "RAGKB_TAN2_065"
+   ],
+   "pair_short": [
+    "ROE",
+    "Z_SCORE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.85,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "unclear",
+     "sign": "+",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_TAN2_065",
+      "RAGKB_TAN2_062"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "ROE->Z_SCORE"
+    },
+    "B": {
+     "p_edge": 0.9,
+     "p_ab": 0.9555555555555555,
+     "p_ba": 0.044444444444444446,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "+",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_TAN2_065",
+      "RAGKB_TAN2_062"
+     ],
+     "direction": "ROE->Z_SCORE"
+    }
+   },
+   "support_mean": 0.875,
+   "p_ab_mean": 0.855,
+   "p_ba_mean": 0.02,
+   "support_agree": true,
+   "direction_majority": "ROE->Z_SCORE",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": false,
+   "p_stated_direction": 0.855,
+   "p_reversed_direction": 0.02,
+   "doubt": 0.14500000000000002,
+   "reversal_score": 0.022857142857142857
+  },
+  {
+   "pair": [
+    "stock_avg_daily_trade_value_vnd",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 31,
+   "chunk_ids": [
+    "RAGKB_398",
+    "RAGKB_S041",
+    "RAGKB_399",
+    "RAGKB_S040",
+    "RAGKB_CK001",
+    "RAGKB_CK003",
+    "RAGKB_S039",
+    "RAGKB_S042"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "TRADE_VALUE",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_398",
+      "RAGKB_399",
+      "RAGKB_S041",
+      "RAGKB_S040",
+      "RAGKB_S039",
+      "RAGKB_S042",
+      "RAGKB_CK001",
+      "RAGKB_CK003"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.2,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_398",
+      "RAGKB_S039"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.125,
+   "p_ab_mean": 0.0625,
+   "p_ba_mean": 0.0625,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.125
+  },
+  {
+   "pair": [
+    "bank_roe_ratio",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 17,
+   "chunk_ids": [
+    "RAGKB_335",
+    "RAGKB_353",
+    "RAGKB_389",
+    "RAGKB_334",
+    "RAGKB_340",
+    "RAGKB_345",
+    "RAGKB_362",
+    "RAGKB_378"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "ROE",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.04,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.06999999999999999,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.05499999999999999,
+   "p_ab_mean": 0.027499999999999997,
+   "p_ba_mean": 0.027499999999999997,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.05499999999999999
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "bank_npl_ratio"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 16,
+   "chunk_ids": [
+    "RAGKB_S031",
+    "RAGKB_389",
+    "RAGKB_336",
+    "RAGKB_360",
+    "RAGKB_353",
+    "RAGKB_388",
+    "RAGKB_028",
+    "RAGKB_378"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_S031"
+   ],
+   "pair_short": [
+    "LDR",
+    "NPL"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.65,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S031"
+     ],
+     "knowledge_direction": "both",
+     "direction": "LDR->NPL"
+    },
+    "B": {
+     "p_edge": 0.8,
+     "p_ab": 0.9562499999999999,
+     "p_ba": 0.043750000000000004,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S031",
+      "RAGKB_389"
+     ],
+     "direction": "LDR->NPL"
+    }
+   },
+   "support_mean": 0.7250000000000001,
+   "p_ab_mean": 0.7075,
+   "p_ba_mean": 0.0175,
+   "support_agree": true,
+   "direction_majority": "LDR->NPL",
+   "direction_agree": true,
+   "lag_majority": "later_quarters",
+   "lag_agree": true,
+   "suspicion": 0.7250000000000001
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "bank_npl_ratio"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 15,
+   "chunk_ids": [
+    "RAGKB_338",
+    "RAGKB_353",
+    "RAGKB_361",
+    "RAGKB_358",
+    "RAGKB_378",
+    "RAGKB_334",
+    "RAGKB_360",
+    "RAGKB_389"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CAR",
+    "NPL"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_338",
+      "RAGKB_353",
+      "RAGKB_378",
+      "RAGKB_334"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.12,
+     "p_ab": 0.125,
+     "p_ba": 0.8750000000000001,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_378",
+      "RAGKB_378"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.08499999999999999,
+   "p_ab_mean": 0.02,
+   "p_ba_mean": 0.065,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.08499999999999999
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "bank_roe_ratio"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 14,
+   "chunk_ids": [
+    "RAGKB_353",
+    "RAGKB_358",
+    "RAGKB_361",
+    "RAGKB_350",
+    "RAGKB_378",
+    "RAGKB_334",
+    "RAGKB_379",
+    "RAGKB_389"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CAR",
+    "ROE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_350",
+      "RAGKB_378",
+      "RAGKB_334"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.2,
+     "p_ab": 0.625,
+     "p_ba": 0.37500000000000006,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_350",
+      "RAGKB_350"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.125,
+   "p_ab_mean": 0.075,
+   "p_ba_mean": 0.05,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.125
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "bank_roe_ratio"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 14,
+   "chunk_ids": [
+    "RAGKB_335",
+    "RAGKB_336",
+    "RAGKB_353",
+    "RAGKB_389",
+    "RAGKB_379",
+    "RAGKB_378",
+    "RAGKB_388",
+    "RAGKB_R3056"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "ROE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.08,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R3056"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "LDR->ROE"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9588235294117646,
+     "p_ba": 0.041176470588235294,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R3056",
+      "RAGKB_336"
+     ],
+     "direction": "LDR->ROE"
+    }
+   },
+   "support_mean": 0.465,
+   "p_ab_mean": 0.4475,
+   "p_ba_mean": 0.0175,
+   "support_agree": false,
+   "direction_majority": "LDR->ROE",
+   "direction_agree": true,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "suspicion": 0.465
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "bank_provision_coverage_proxy_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 13,
+   "chunk_ids": [
+    "RAGKB_TAN013",
+    "RAGKB_336",
+    "RAGKB_349",
+    "RAGKB_385",
+    "RAGKB_391",
+    "RAGKB_R044",
+    "RAGKB_TAN022",
+    "RAGKB_360"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_TAN013"
+   ],
+   "pair_short": [
+    "NIM",
+    "PROV_COVERAGE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.8,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "mixed",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_TAN013",
+      "RAGKB_R044",
+      "RAGKB_385"
+     ],
+     "knowledge_direction": "both",
+     "direction": "both"
+    },
+    "B": {
+     "p_edge": 0.95,
+     "p_ab": 0.5263157894736842,
+     "p_ba": 0.47368421052631576,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_TAN013",
+      "RAGKB_R044"
+     ],
+     "direction": "both"
+    }
+   },
+   "support_mean": 0.875,
+   "p_ab_mean": 0.44999999999999996,
+   "p_ba_mean": 0.425,
+   "support_agree": true,
+   "direction_majority": "both",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "suspicion": 0.875
+  },
+  {
+   "pair": [
+    "stock_avg_daily_trade_value_vnd",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 11,
+   "chunk_ids": [
+    "RAGKB_398",
+    "RAGKB_399",
+    "RAGKB_395",
+    "RAGKB_CK003",
+    "RAGKB_CK011",
+    "RAGKB_CK012",
+    "RAGKB_TAI053",
+    "RAGKB_CK009"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "TRADE_VALUE",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_398",
+      "RAGKB_399",
+      "RAGKB_CK003",
+      "RAGKB_CK011",
+      "RAGKB_CK012",
+      "RAGKB_CK009"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.39999999999999997,
+     "p_ab": 0.18750000000000006,
+     "p_ba": 0.8125000000000001,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_399",
+      "RAGKB_CK011"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.22499999999999998,
+   "p_ab_mean": 0.05,
+   "p_ba_mean": 0.17500000000000002,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.22499999999999998
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 10,
+   "chunk_ids": [
+    "RAGKB_S041",
+    "RAGKB_011",
+    "RAGKB_389",
+    "RAGKB_S031",
+    "RAGKB_063",
+    "RAGKB_R055",
+    "RAGKB_R3056",
+    "RAGKB_S035"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.25,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S041",
+      "RAGKB_R055",
+      "RAGKB_R3056",
+      "RAGKB_S031",
+      "RAGKB_S035",
+      "RAGKB_063"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "LDR->TRADE_VALUE"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9117647058823529,
+     "p_ba": 0.08823529411764706,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S041",
+      "RAGKB_R055"
+     ],
+     "direction": "LDR->TRADE_VALUE"
+    }
+   },
+   "support_mean": 0.55,
+   "p_ab_mean": 0.5125,
+   "p_ba_mean": 0.037500000000000006,
+   "support_agree": false,
+   "direction_majority": "LDR->TRADE_VALUE",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": false,
+   "suspicion": 0.55
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 10,
+   "chunk_ids": [
+    "RAGKB_360",
+    "RAGKB_384",
+    "RAGKB_390",
+    "RAGKB_009",
+    "RAGKB_353",
+    "RAGKB_379",
+    "RAGKB_358",
+    "RAGKB_R058"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NPL",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R058"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "NPL->STOCK_PRICE"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9588235294117646,
+     "p_ba": 0.041176470588235294,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R058",
+      "RAGKB_R058"
+     ],
+     "direction": "NPL->STOCK_PRICE"
+    }
+   },
+   "support_mean": 0.5,
+   "p_ab_mean": 0.48250000000000004,
+   "p_ba_mean": 0.0175,
+   "support_agree": false,
+   "direction_majority": "NPL->STOCK_PRICE",
+   "direction_agree": true,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "suspicion": 0.5
+  },
+  {
+   "pair": [
+    "stock_adj_close_last_vnd",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 10,
+   "chunk_ids": [
+    "RAGKB_399",
+    "RAGKB_042",
+    "RAGKB_097",
+    "RAGKB_043",
+    "RAGKB_398",
+    "RAGKB_CK008",
+    "RAGKB_CK013",
+    "RAGKB_CK015"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "STOCK_PRICE",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_399",
+      "RAGKB_398",
+      "RAGKB_CK008"
+     ],
+     "knowledge_direction": "none",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.35,
+     "p_ab": 0.7857142857142858,
+     "p_ba": 0.21428571428571433,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_399",
+      "RAGKB_CK013"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.19999999999999998,
+   "p_ab_mean": 0.15000000000000002,
+   "p_ba_mean": 0.05,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.19999999999999998
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "bank_ldr_ratio"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 9,
+   "chunk_ids": [
+    "RAGKB_353",
+    "RAGKB_358",
+    "RAGKB_361",
+    "RAGKB_378",
+    "RAGKB_389",
+    "RAGKB_360",
+    "RAGKB_379",
+    "RAGKB_383"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CAR",
+    "LDR"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_353",
+      "RAGKB_389",
+      "RAGKB_378",
+      "RAGKB_361"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.1,
+     "p_ab": 0.35000000000000003,
+     "p_ba": 0.65,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_353"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.07500000000000001,
+   "p_ab_mean": 0.030000000000000002,
+   "p_ba_mean": 0.045,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.07500000000000001
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 9,
+   "chunk_ids": [
+    "RAGKB_S041",
+    "RAGKB_389",
+    "RAGKB_S031",
+    "RAGKB_063",
+    "RAGKB_R055",
+    "RAGKB_R3056",
+    "RAGKB_S035",
+    "RAGKB_TAN014"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S041",
+      "RAGKB_R055",
+      "RAGKB_R3056",
+      "RAGKB_S035",
+      "RAGKB_TAN014",
+      "RAGKB_063"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "LDR->TRADE_VOLUME"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.9529411764705882,
+     "p_ba": 0.047058823529411764,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S041",
+      "RAGKB_R055"
+     ],
+     "direction": "LDR->TRADE_VOLUME"
+    }
+   },
+   "support_mean": 0.5,
+   "p_ab_mean": 0.48000000000000004,
+   "p_ba_mean": 0.02,
+   "support_agree": false,
+   "direction_majority": "LDR->TRADE_VOLUME",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "suspicion": 0.5
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 9,
+   "chunk_ids": [
+    "RAGKB_031",
+    "RAGKB_384",
+    "RAGKB_TAN046",
+    "RAGKB_009",
+    "RAGKB_360",
+    "RAGKB_TAN025",
+    "RAGKB_358",
+    "RAGKB_379"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NIM",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.05,
+     "p_ab": 1.0,
+     "p_ba": 0.0,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.05,
+   "p_ab_mean": 0.037500000000000006,
+   "p_ba_mean": 0.0125,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.05
+  },
+  {
+   "pair": [
+    "bank_roe_ratio",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 9,
+   "chunk_ids": [
+    "RAGKB_379",
+    "RAGKB_353",
+    "RAGKB_384",
+    "RAGKB_009",
+    "RAGKB_360",
+    "RAGKB_390",
+    "RAGKB_019",
+    "RAGKB_358"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "ROE",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.03,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_379",
+      "RAGKB_353",
+      "RAGKB_384",
+      "RAGKB_360",
+      "RAGKB_390",
+      "RAGKB_009"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.1,
+     "p_ab": 0.7500000000000001,
+     "p_ba": 0.25,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.065,
+   "p_ab_mean": 0.045000000000000005,
+   "p_ba_mean": 0.02,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.065
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "bank_provision_coverage_proxy_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 8,
+   "chunk_ids": [
+    "RAGKB_338",
+    "RAGKB_334",
+    "RAGKB_378",
+    "RAGKB_360",
+    "RAGKB_383",
+    "RAGKB_384",
+    "RAGKB_388",
+    "RAGKB_391"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CAR",
+    "PROV_COVERAGE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_338",
+      "RAGKB_378",
+      "RAGKB_334"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.12,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_338",
+      "RAGKB_378"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.08499999999999999,
+   "p_ab_mean": 0.042499999999999996,
+   "p_ba_mean": 0.042499999999999996,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.08499999999999999
+  },
+  {
+   "pair": [
+    "bank_roe_ratio",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 8,
+   "chunk_ids": [
+    "RAGKB_395",
+    "RAGKB_364",
+    "RAGKB_367",
+    "RAGKB_369",
+    "RAGKB_389",
+    "RAGKB_386",
+    "RAGKB_R3056",
+    "RAGKB_TAN045"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "ROE",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_389",
+      "RAGKB_R3056",
+      "RAGKB_TAN045"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.07,
+     "p_ab": 0.4285714285714285,
+     "p_ba": 0.5714285714285714,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.060000000000000005,
+   "p_ab_mean": 0.0275,
+   "p_ba_mean": 0.0325,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.060000000000000005
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "bank_provision_coverage_proxy_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 7,
+   "chunk_ids": [
+    "RAGKB_336",
+    "RAGKB_360",
+    "RAGKB_378",
+    "RAGKB_383",
+    "RAGKB_388",
+    "RAGKB_R029",
+    "RAGKB_R058"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "PROV_COVERAGE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_336",
+      "RAGKB_378",
+      "RAGKB_360",
+      "RAGKB_R029"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_336",
+      "RAGKB_336"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.07500000000000001,
+   "p_ab_mean": 0.037500000000000006,
+   "p_ba_mean": 0.037500000000000006,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.07500000000000001
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 7,
+   "chunk_ids": [
+    "RAGKB_353",
+    "RAGKB_S031",
+    "RAGKB_360",
+    "RAGKB_031",
+    "RAGKB_358",
+    "RAGKB_379",
+    "RAGKB_R058"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_S031",
+      "RAGKB_R058",
+      "RAGKB_353"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.65,
+     "p_ab": 0.8461538461538461,
+     "p_ba": 0.15384615384615385,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S031",
+      "RAGKB_R058"
+     ],
+     "direction": "LDR->STOCK_PRICE"
+    }
+   },
+   "support_mean": 0.35000000000000003,
+   "p_ab_mean": 0.28750000000000003,
+   "p_ba_mean": 0.0625,
+   "support_agree": false,
+   "direction_majority": "LDR->STOCK_PRICE",
+   "direction_agree": false,
+   "lag_majority": "later_quarters",
+   "lag_agree": false,
+   "suspicion": 0.35000000000000003
+  },
+  {
+   "pair": [
+    "stock_adj_close_last_vnd",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 7,
+   "chunk_ids": [
+    "RAGKB_399",
+    "RAGKB_045",
+    "RAGKB_398",
+    "RAGKB_R045",
+    "RAGKB_S040",
+    "RAGKB_R059",
+    "RAGKB_S031"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "STOCK_PRICE",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.6,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S040",
+      "RAGKB_399",
+      "RAGKB_R045",
+      "RAGKB_398",
+      "RAGKB_R059"
+     ],
+     "knowledge_direction": "both",
+     "direction": "both"
+    },
+    "B": {
+     "p_edge": 0.7000000000000001,
+     "p_ab": 0.10714285714285715,
+     "p_ba": 0.8928571428571428,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S040",
+      "RAGKB_399"
+     ],
+     "direction": "TRADE_VALUE->STOCK_PRICE"
+    }
+   },
+   "support_mean": 0.65,
+   "p_ab_mean": 0.1875,
+   "p_ba_mean": 0.4625,
+   "support_agree": true,
+   "direction_majority": "disagree",
+   "direction_agree": false,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "suspicion": 0.65
+  },
+  {
+   "pair": [
+    "stock_avg_daily_volume_cp",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 7,
+   "chunk_ids": [
+    "RAGKB_398",
+    "RAGKB_TAI053",
+    "RAGKB_399",
+    "RAGKB_CK003",
+    "RAGKB_CK010",
+    "RAGKB_389",
+    "RAGKB_CK009"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "TRADE_VOLUME",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.08,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_399",
+      "RAGKB_398",
+      "RAGKB_CK003",
+      "RAGKB_CK010",
+      "RAGKB_CK009"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.3,
+     "p_ab": 0.4166666666666667,
+     "p_ba": 0.5833333333333334,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_398",
+      "RAGKB_399"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.19,
+   "p_ab_mean": 0.0825,
+   "p_ba_mean": 0.10750000000000001,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.19
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 6,
+   "chunk_ids": [
+    "RAGKB_353",
+    "RAGKB_358",
+    "RAGKB_384",
+    "RAGKB_062",
+    "RAGKB_360",
+    "RAGKB_379"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CAR",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_062"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.25,
+     "p_ab": 0.8400000000000001,
+     "p_ba": 0.16,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_062",
+      "RAGKB_062"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.15,
+   "p_ab_mean": 0.11750000000000001,
+   "p_ba_mean": 0.0325,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "later_quarters",
+   "lag_agree": false,
+   "suspicion": 0.15
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 6,
+   "chunk_ids": [
+    "RAGKB_063",
+    "RAGKB_TAN014",
+    "RAGKB_TAN015",
+    "RAGKB_R041",
+    "RAGKB_R3056",
+    "RAGKB_TAN026"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NIM",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.03,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_063",
+      "RAGKB_TAN014",
+      "RAGKB_TAN015",
+      "RAGKB_R041",
+      "RAGKB_R3056",
+      "RAGKB_TAN026"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.15000000000000002,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.09000000000000001,
+   "p_ab_mean": 0.045000000000000005,
+   "p_ba_mean": 0.045000000000000005,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.09000000000000001
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 6,
+   "chunk_ids": [
+    "RAGKB_063",
+    "RAGKB_TAN014",
+    "RAGKB_TAN015",
+    "RAGKB_R041",
+    "RAGKB_R3056",
+    "RAGKB_TAN026"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NIM",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_063",
+      "RAGKB_TAN014",
+      "RAGKB_TAN015",
+      "RAGKB_R041",
+      "RAGKB_R3056",
+      "RAGKB_TAN026"
+     ],
+     "knowledge_direction": "none",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.0,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.025,
+   "p_ab_mean": 0.0125,
+   "p_ba_mean": 0.0125,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.025
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 5,
+   "chunk_ids": [
+    "RAGKB_353",
+    "RAGKB_389",
+    "RAGKB_051",
+    "RAGKB_335",
+    "RAGKB_378"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.02,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_353",
+      "RAGKB_389"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.035,
+   "p_ab_mean": 0.0175,
+   "p_ba_mean": 0.0175,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.035
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 5,
+   "chunk_ids": [
+    "RAGKB_389",
+    "RAGKB_334",
+    "RAGKB_378",
+    "RAGKB_353",
+    "RAGKB_TAN032"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NPL",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_389",
+      "RAGKB_334",
+      "RAGKB_378",
+      "RAGKB_353",
+      "RAGKB_TAN032"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.15,
+     "p_ab": 0.8333333333333334,
+     "p_ba": 0.16666666666666669,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.1,
+   "p_ab_mean": 0.075,
+   "p_ba_mean": 0.025,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.1
+  },
+  {
+   "pair": [
+    "stock_adj_close_last_vnd",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 5,
+   "chunk_ids": [
+    "RAGKB_399",
+    "RAGKB_398",
+    "RAGKB_S040",
+    "RAGKB_R045",
+    "RAGKB_S031"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "STOCK_PRICE",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.2,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S040",
+      "RAGKB_399",
+      "RAGKB_398",
+      "RAGKB_R045"
+     ],
+     "knowledge_direction": "both",
+     "direction": "both"
+    },
+    "B": {
+     "p_edge": 0.9000000000000001,
+     "p_ab": 0.4166666666666667,
+     "p_ba": 0.5833333333333334,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "mixed",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_S040",
+      "RAGKB_399"
+     ],
+     "direction": "both"
+    }
+   },
+   "support_mean": 0.55,
+   "p_ab_mean": 0.23750000000000004,
+   "p_ba_mean": 0.31250000000000006,
+   "support_agree": false,
+   "direction_majority": "both",
+   "direction_agree": true,
+   "lag_majority": "same_quarter",
+   "lag_agree": false,
+   "suspicion": 0.55
+  },
+  {
+   "pair": [
+    "bank_car_ratio",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_353",
+    "RAGKB_378",
+    "RAGKB_334",
+    "RAGKB_389"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CAR",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.060000000000000005,
+     "p_ab": 0.41666666666666663,
+     "p_ba": 0.5833333333333333,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.05500000000000001,
+   "p_ab_mean": 0.025,
+   "p_ba_mean": 0.03,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.05500000000000001
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "macro_cpi_avg_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_S043",
+    "RAGKB_021",
+    "RAGKB_S045",
+    "RAGKB_TAN016"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "CPI_INFLATION"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S043",
+      "RAGKB_S045",
+      "RAGKB_021",
+      "RAGKB_TAN016"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.8,
+     "p_ab": 0.09375000000000001,
+     "p_ba": 0.9062499999999999,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "mixed",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S043",
+      "RAGKB_TAN016"
+     ],
+     "direction": "CPI_INFLATION->LDR"
+    }
+   },
+   "support_mean": 0.45,
+   "p_ab_mean": 0.0625,
+   "p_ba_mean": 0.3875,
+   "support_agree": false,
+   "direction_majority": "CPI_INFLATION->LDR",
+   "direction_agree": false,
+   "lag_majority": "both",
+   "lag_agree": false,
+   "suspicion": 0.45
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_378",
+    "RAGKB_R026",
+    "RAGKB_R027",
+    "RAGKB_R031"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NIM",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_R026",
+      "RAGKB_R027",
+      "RAGKB_R031",
+      "RAGKB_378"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.1,
+     "p_ab": 0.44999999999999996,
+     "p_ba": 0.5499999999999999,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.07500000000000001,
+   "p_ab_mean": 0.035,
+   "p_ba_mean": 0.039999999999999994,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.07500000000000001
+  },
+  {
+   "pair": [
+    "bank_provision_coverage_proxy_pct",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_384",
+    "RAGKB_360",
+    "RAGKB_390",
+    "RAGKB_R058"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "PROV_COVERAGE",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R058",
+      "RAGKB_384",
+      "RAGKB_360",
+      "RAGKB_390"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.30000000000000004,
+     "p_ab": 0.8833333333333332,
+     "p_ba": 0.11666666666666665,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_384",
+      "RAGKB_R058"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.2,
+   "p_ab_mean": 0.1575,
+   "p_ba_mean": 0.0425,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "later_quarters",
+   "lag_agree": false,
+   "suspicion": 0.2
+  },
+  {
+   "pair": [
+    "macro_cpi_avg_pct",
+    "stock_return_qoq_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_CK009",
+    "RAGKB_CK010",
+    "RAGKB_CK012",
+    "RAGKB_CK011"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CPI_INFLATION",
+    "STOCK_RETURN"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK009",
+      "RAGKB_CK010",
+      "RAGKB_CK012",
+      "RAGKB_CK011"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.8,
+     "p_ab": 0.9562499999999999,
+     "p_ba": 0.043750000000000004,
+     "support": "supports_edge",
+     "lag": "same_quarter",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_CK009",
+      "RAGKB_CK012"
+     ],
+     "direction": "CPI_INFLATION->STOCK_RETURN"
+    }
+   },
+   "support_mean": 0.45,
+   "p_ab_mean": 0.40750000000000003,
+   "p_ba_mean": 0.0425,
+   "support_agree": false,
+   "direction_majority": "CPI_INFLATION->STOCK_RETURN",
+   "direction_agree": false,
+   "lag_majority": "same_quarter",
+   "lag_agree": true,
+   "suspicion": 0.45
+  },
+  {
+   "pair": [
+    "macro_gdp_yoy_pct",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 4,
+   "chunk_ids": [
+    "RAGKB_S030",
+    "RAGKB_S031",
+    "RAGKB_S032",
+    "RAGKB_S049"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "GDP_GROWTH",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_S030",
+      "RAGKB_S031",
+      "RAGKB_S032",
+      "RAGKB_S049"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.44999999999999996,
+     "p_ab": 0.8333333333333334,
+     "p_ba": 0.1666666666666667,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.24999999999999997,
+   "p_ab_mean": 0.2,
+   "p_ba_mean": 0.05,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "later_quarters",
+   "lag_agree": false,
+   "suspicion": 0.24999999999999997
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "stock_avg_daily_trade_value_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 3,
+   "chunk_ids": [
+    "RAGKB_389",
+    "RAGKB_S031",
+    "RAGKB_S035"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NPL",
+    "TRADE_VALUE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_389",
+      "RAGKB_S031",
+      "RAGKB_S035"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.1,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.07500000000000001,
+   "p_ab_mean": 0.037500000000000006,
+   "p_ba_mean": 0.037500000000000006,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.07500000000000001
+  },
+  {
+   "pair": [
+    "bank_npl_ratio",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 3,
+   "chunk_ids": [
+    "RAGKB_389",
+    "RAGKB_S031",
+    "RAGKB_S035"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NPL",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_389",
+      "RAGKB_S031",
+      "RAGKB_S035"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.05,
+   "p_ab_mean": 0.025,
+   "p_ba_mean": 0.025,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.05
+  },
+  {
+   "pair": [
+    "bank_roe_ratio",
+    "macro_policy_rate_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 3,
+   "chunk_ids": [
+    "RAGKB_R032",
+    "RAGKB_034",
+    "RAGKB_R026"
+   ],
+   "paper1_evidence_chunks": [
+    "RAGKB_R032"
+   ],
+   "pair_short": [
+    "ROE",
+    "POLICY_RATE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R032",
+      "RAGKB_034",
+      "RAGKB_R026"
+     ],
+     "knowledge_direction": "Y->X",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.8,
+     "p_ab": 0.043750000000000004,
+     "p_ba": 0.9562499999999999,
+     "support": "supports_edge",
+     "lag": "both",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_R032",
+      "RAGKB_034"
+     ],
+     "direction": "POLICY_RATE->ROE"
+    }
+   },
+   "support_mean": 0.47500000000000003,
+   "p_ab_mean": 0.055,
+   "p_ba_mean": 0.42,
+   "support_agree": false,
+   "direction_majority": "POLICY_RATE->ROE",
+   "direction_agree": false,
+   "lag_majority": "both",
+   "lag_agree": false,
+   "suspicion": 0.47500000000000003
+  },
+  {
+   "pair": [
+    "bank_roe_ratio",
+    "stock_avg_daily_volume_cp"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 3,
+   "chunk_ids": [
+    "RAGKB_389",
+    "RAGKB_R3056",
+    "RAGKB_TAN045"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "ROE",
+    "TRADE_VOLUME"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_389",
+      "RAGKB_R3056",
+      "RAGKB_TAN045"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.05,
+   "p_ab_mean": 0.025,
+   "p_ba_mean": 0.025,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "unclear",
+   "lag_agree": true,
+   "suspicion": 0.05
+  },
+  {
+   "pair": [
+    "macro_cpi_avg_pct",
+    "stock_adj_close_last_vnd"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 3,
+   "chunk_ids": [
+    "RAGKB_040",
+    "RAGKB_038",
+    "RAGKB_046"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "CPI_INFLATION",
+    "STOCK_PRICE"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.15,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "same_quarter",
+     "sign": "unclear",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_040",
+      "RAGKB_046",
+      "RAGKB_038"
+     ],
+     "knowledge_direction": "X->Y",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.15000000000000002,
+     "p_ab": 0.7666666666666666,
+     "p_ba": 0.2333333333333333,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_040",
+      "RAGKB_038"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.15000000000000002,
+   "p_ab_mean": 0.095,
+   "p_ba_mean": 0.055,
+   "support_agree": true,
+   "direction_majority": "unclear",
+   "direction_agree": false,
+   "lag_majority": "disagree",
+   "lag_agree": false,
+   "suspicion": 0.15000000000000002
+  },
+  {
+   "pair": [
+    "bank_ldr_ratio",
+    "macro_gdp_yoy_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 2,
+   "chunk_ids": [
+    "RAGKB_S031",
+    "RAGKB_S044",
+    "RAGKB_TAN023",
+    "RAGKB_336",
+    "RAGKB_026",
+    "RAGKB_007"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "LDR",
+    "GDP_GROWTH"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.05,
+     "p_ab": 0.5,
+     "p_ba": 0.5,
+     "support": "insufficient",
+     "lag": "unclear",
+     "sign": "unclear",
+     "mediated": false,
+     "evidence_ids": [
+      "RAGKB_S031",
+      "RAGKB_S044",
+      "RAGKB_TAN023",
+      "RAGKB_336",
+      "RAGKB_026",
+      "RAGKB_007"
+     ],
+     "knowledge_direction": "both",
+     "direction": "unclear"
+    },
+    "B": {
+     "p_edge": 0.8500000000000001,
+     "p_ab": 0.08823529411764706,
+     "p_ba": 0.9117647058823529,
+     "support": "supports_edge",
+     "lag": "later_quarters",
+     "sign": "+",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_S044",
+      "RAGKB_TAN023"
+     ],
+     "direction": "GDP_GROWTH->LDR"
+    }
+   },
+   "support_mean": 0.45000000000000007,
+   "p_ab_mean": 0.05,
+   "p_ba_mean": 0.4,
+   "support_agree": false,
+   "direction_majority": "GDP_GROWTH->LDR",
+   "direction_agree": false,
+   "lag_majority": "later_quarters",
+   "lag_agree": false,
+   "suspicion": 0.45000000000000007
+  },
+  {
+   "pair": [
+    "bank_nim_ratio",
+    "macro_cpi_avg_pct"
+   ],
+   "kind": "missing_candidate",
+   "co_mentions": 2,
+   "chunk_ids": [
+    "RAGKB_032",
+    "RAGKB_R038",
+    "RAGKB_031",
+    "RAGKB_033",
+    "RAGKB_026",
+    "RAGKB_046"
+   ],
+   "paper1_evidence_chunks": [],
+   "pair_short": [
+    "NIM",
+    "CPI_INFLATION"
+   ],
+   "per_variant": {
+    "A": {
+     "p_edge": 0.1,
+     "p_ab": 0.0,
+     "p_ba": 1.0,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_032",
+      "RAGKB_031",
+      "RAGKB_033",
+      "RAGKB_046",
+      "RAGKB_R038"
+     ],
+     "knowledge_direction": "Y->X",
+     "direction": "CPI_INFLATION->NIM"
+    },
+    "B": {
+     "p_edge": 0.15,
+     "p_ab": 0.2,
+     "p_ba": 0.8,
+     "support": "insufficient",
+     "lag": "later_quarters",
+     "sign": "-",
+     "mediated": true,
+     "evidence_ids": [
+      "RAGKB_032",
+      "RAGKB_046"
+     ],
+     "direction": "unclear"
+    }
+   },
+   "support_mean": 0.125,
+   "p_ab_mean": 0.015,
+   "p_ba_mean": 0.11,
+   "support_agree": true,
+   "direction_majority": "CPI_INFLATION->NIM",
+   "direction_agree": false,
+   "lag_majority": "later_quarters",
+   "lag_agree": true,
+   "suspicion": 0.125
+  }
+ ]
+}

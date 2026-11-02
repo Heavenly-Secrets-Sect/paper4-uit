@@ -1,0 +1,5 @@
+# Output of experiments/ext/verify_eiv/cap_vs_probe.py (rerun by eiv2 agent, round 2, D-07H development, seed 777)
+T=80 ratio=0.1 share=0.091 n=14: eval estimator 0.077 | probe2 gmm_common 0.095 | mean min-lambda 0.118 | runs where r_hat sits at the cap 4/12
+T=80 ratio=0.3 share=0.231 n=14: eval estimator 0.121 | probe2 gmm_common 0.193 | mean min-lambda 0.174 | runs where r_hat sits at the cap 5/12
+T=150 ratio=0.1 share=0.091 n=14: eval estimator 0.088 | probe2 gmm_common 0.107 | mean min-lambda 0.140 | runs where r_hat sits at the cap 2/12
+T=150 ratio=0.3 share=0.231 n=14: eval estimator 0.175 | probe2 gmm_common 0.220 | mean min-lambda 0.219 | runs where r_hat sits at the cap 3/12

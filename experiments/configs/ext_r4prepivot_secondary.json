@@ -1,0 +1,83 @@
+{
+ "name": "ext_r4prepivot_secondary",
+ "bank": "D-07",
+ "split": "development",
+ "b_o": 39,
+ "b_i": 19,
+ "replicates": [
+  0,
+  1,
+  2
+ ],
+ "purpose": "Secondary (descriptive): the other 12 cells of the a2 grid, pairs with results/ext_v51_eval.",
+ "base_config": "ext_v51_eval",
+ "pair_with": "ext_v51_eval",
+ "factors": "experiments/ext/v51/frozen_v4_v51.json",
+ "cells": [
+  [
+   40,
+   "none",
+   0.0
+  ],
+  [
+   40,
+   "extra",
+   0.2
+  ],
+  [
+   40,
+   "extra",
+   0.5
+  ],
+  [
+   80,
+   "extra",
+   0.2
+  ],
+  [
+   80,
+   "extra",
+   0.5
+  ],
+  [
+   150,
+   "none",
+   0.0
+  ],
+  [
+   150,
+   "extra",
+   0.2
+  ],
+  [
+   150,
+   "extra",
+   0.5
+  ],
+  [
+   150,
+   "missing",
+   0.2
+  ],
+  [
+   150,
+   "missing",
+   0.5
+  ],
+  [
+   150,
+   "reversed",
+   0.2
+  ],
+  [
+   150,
+   "reversed",
+   0.5
+  ]
+ ],
+ "scenarios": [
+  {
+   "name": "clean"
+  }
+ ]
+}

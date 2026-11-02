@@ -1,0 +1,44 @@
+{
+  "_note": "Frozen RQ4.4 combined flag (R2-7, ID revlag). Fitted on round-1 D-07 development rows (results/ext_metrics_pairs/pairs.npz, tolerant_v4, all T). Score = logistic(intercept + sum w_k (x_k - mu_k) / sd_k). Binary flag: p_hat > threshold. Do not refit.",
+  "feature_set": "S1",
+  "features": [
+    "log1p_rel_width",
+    "log1p_width",
+    "zero_in",
+    "logT",
+    "stated_missing",
+    "stated_reversed",
+    "stated_extra"
+  ],
+  "mu": [
+    1.4376433549811134,
+    1.2259615355933664,
+    0.5705039297272307,
+    4.360513794294286,
+    0.2857142857142857,
+    0.2857142857142857,
+    0.2857142857142857
+  ],
+  "sd": [
+    0.8712415878489962,
+    0.4454865937515881,
+    0.49500423925761006,
+    0.5398189378408683,
+    0.45175395245264216,
+    0.45175395245264216,
+    0.4517539524526421
+  ],
+  "weights": [
+    -3.466292124837983,
+    0.25095026045936164,
+    -1.4073646205289978,
+    0.42000168637777907,
+    -0.6353027170750446,
+    0.13667858434110686,
+    0.019639157573911915,
+    0.06581867198464024
+  ],
+  "threshold": 0.1,
+  "train_rows": 38934,
+  "train_oof_auc_T80_150": 0.7374543241074384
+}

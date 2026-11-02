@@ -1,0 +1,80 @@
+{
+  "name": "a1_latent_noise",
+  "purpose": "A1 (plan section 9): frozen v4 and all baselines under hidden common causes and measurement noise, D-07 development. Descriptive; see docs/decision_rules.md.",
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "clean"
+    },
+    {
+      "name": "latent1",
+      "latent": 1
+    },
+    {
+      "name": "latent3",
+      "latent": 3
+    },
+    {
+      "name": "noise0.1",
+      "meas_noise": 0.1
+    },
+    {
+      "name": "noise0.3",
+      "meas_noise": 0.3
+    }
+  ],
+  "methods": [
+    "oracle",
+    "plugin",
+    "inflate",
+    "lp_allpast",
+    "bagging",
+    "ida_union",
+    "bvar_minnesota",
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

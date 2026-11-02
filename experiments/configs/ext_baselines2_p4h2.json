@@ -1,0 +1,70 @@
+{
+  "name": "ext_baselines2_p4h2",
+  "purpose": "FROZEN, NOT RUN. Confirmatory run of the narrowed R2-1 claim (docs/ext/baselines2.md, 'Frozen spec for P4-H2'): frozen tolerant_v4 vs pselect_union_v2 / pselect_union_v2_cal (primary) and bvar_minnesota_v2_cal (secondary) at T 80/150, missing cells, on the sealed P4-H2 confirmatory split. Width factors fixed in experiments/ext/baselines2/frozen_calibration_p4h2.json (v4 factors identical to tolerant_v4_frozen.json). Run once with: python experiments/ext/baselines2/run_eval.py --config experiments/configs/ext_baselines2_p4h2.json --workers 3; then python experiments/ext/baselines2/analyze_p4h2.py",
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "missing"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v4",
+    "pselect_union_v2",
+    "pselect_union_v2_cal",
+    "bvar_minnesota_v2_cal"
+  ],
+  "paired_references": [
+    "tolerant_v4"
+  ],
+  "calibrate_methods": [
+    "pselect_union_v2_cal",
+    "bvar_minnesota_v2_cal"
+  ],
+  "frozen_calibration": "experiments/ext/baselines2/frozen_calibration_p4h2.json",
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "missing"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "P4-H2",
+  "split": "confirmatory",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

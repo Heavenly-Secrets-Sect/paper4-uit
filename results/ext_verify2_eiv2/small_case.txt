@@ -1,0 +1,22 @@
+# A. constructed 3-node system, noise ratio 0.3 (true share 0.231)
+  T=40000 mode=pereq: r_hat 0.240
+  T=40000 mode=global: r_hat 0.240
+  T=40000 mode=free: r_hat 0.240
+  T=40000 round-1 estimate_noise_share: 0.240
+  T=40000 CLEAN pereq: r_hat 0.000 (truth 0)
+  tolerant_eiv2 T=5000: C_hat vs C_true on non-null pairs: [('+2.115', '+2.162'), ('+1.262', '+1.242'), ('+1.303', '+1.331')] r_hat 0.22
+
+# B. coverage on the constructed system, T=150, noise 0.3, 40 reps, n_boot 99 (UNCALIBRATED widths)
+  tolerant_eiv2: coverage 0.942 over 120 pair-runs; r_hat mean 0.204 sd 0.146
+  plugin_eiv2: coverage 0.942 over 120 pair-runs; r_hat mean 0.204 sd 0.146
+
+# C. global vs per-equation cap with one near-collinear equation (x3 ~ x0 + small noise feeding x4)
+  T=80: pereq 0.193 (0.137)  global 0.123 (0.062)  truth 0.231
+  T=150: pereq 0.191 (0.139)  global 0.122 (0.083)  truth 0.231
+  T=2000: pereq 0.235 (0.036)  global 0.204 (0.027)  truth 0.231
+
+# D. true mean share under het r=0.3 (ratios linspace(0, 0.6, n)), share_i = r_i/(1+r_i)
+  n=7: mean share 0.2118
+  n=10: mean share 0.2134
+  n=14: mean share 0.2144
+  n=20: mean share 0.2151

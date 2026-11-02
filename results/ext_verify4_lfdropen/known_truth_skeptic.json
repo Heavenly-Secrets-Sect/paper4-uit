@@ -1,0 +1,66 @@
+{
+ "K1_em_vs_mle": {
+  "em": [
+   3.5521801200679364,
+   0.5483532133964901
+  ],
+  "mle": [
+   3.5521809564144284,
+   0.5483525517620347
+  ],
+  "nll_em": 117.58377605079846,
+  "nll_mle": 117.58377605079323
+ },
+ "K2_K3_sim": {
+  "k4_ind0_strong": {
+   "m": 74,
+   "k": 4,
+   "n_indirect": 0,
+   "mean_open_lfdr": 4.228,
+   "share_open_eq_floor": 0.812,
+   "recall_lfdr": 0.955,
+   "mean_K_v51": 12.604,
+   "recall_v51": 0.9995
+  },
+  "k4_ind8_strong": {
+   "m": 74,
+   "k": 4,
+   "n_indirect": 8,
+   "mean_open_lfdr": 7.744,
+   "share_open_eq_floor": 0.012,
+   "recall_lfdr": 0.921,
+   "mean_K_v51": 17.442,
+   "recall_v51": 0.9975
+  },
+  "k4_ind8_weak": {
+   "m": 74,
+   "k": 4,
+   "n_indirect": 8,
+   "mean_open_lfdr": 5.646,
+   "share_open_eq_floor": 0.306,
+   "recall_lfdr": 0.423,
+   "mean_K_v51": 15.616,
+   "recall_v51": 0.7795
+  },
+  "k11_ind10_weak": {
+   "m": 81,
+   "k": 11,
+   "n_indirect": 10,
+   "mean_open_lfdr": 13.19,
+   "share_open_eq_floor": 0.27,
+   "recall_lfdr": 0.5434545454545454,
+   "mean_K_v51": 33.0,
+   "recall_v51": 0.9021818181818181
+  },
+  "k4_ind0_weak": {
+   "m": 74,
+   "k": 4,
+   "n_indirect": 0,
+   "mean_open_lfdr": 4.15,
+   "share_open_eq_floor": 0.898,
+   "recall_lfdr": 0.549,
+   "mean_K_v51": 12.378,
+   "recall_v51": 0.819
+  }
+ }
+}

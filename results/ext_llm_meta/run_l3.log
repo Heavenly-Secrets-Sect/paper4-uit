@@ -1,0 +1,22 @@
+{
+ "chunk_selection": {
+  "flag": 75,
+  "paper1_policy_shock": 38,
+  "keyword": 42,
+  "union": 105
+ },
+ "n_chunks": 105,
+ "calls_this_run": 210,
+ "n_events_raw": 104,
+ "n_events_usable": 47,
+ "n_without_quarter": 55,
+ "n_quote_not_verified": 2,
+ "usable_keys_A": 14,
+ "usable_keys_B": 31,
+ "keys_both": 12,
+ "jaccard_A_B": 0.36363636363636365,
+ "n_clusters": 28,
+ "n_clusters_consensus": 10,
+ "n_clusters_in_window": 14,
+ "n_clusters_consensus_in_window": 8
+}

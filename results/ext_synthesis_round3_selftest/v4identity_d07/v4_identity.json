@@ -1,0 +1,32 @@
+[
+  {
+    "ref": "ext_v51_eval",
+    "run": "ext_gate_auto3",
+    "method": "tolerant_v4",
+    "n_ref": 1260,
+    "n_run": 1260,
+    "n_shared": 1260,
+    "n_mismatch": 0,
+    "first_mismatches": []
+  },
+  {
+    "ref": "ext_v51_eval",
+    "run": "ext_baselines3_eval",
+    "method": "tolerant_v4",
+    "n_ref": 1260,
+    "n_run": 240,
+    "n_shared": 240,
+    "n_mismatch": 0,
+    "first_mismatches": []
+  },
+  {
+    "ref": "ext_v51_eval",
+    "run": "ext_baselines3_eval",
+    "method": "tolerant_v5_1",
+    "n_ref": 1260,
+    "n_run": 240,
+    "n_shared": 240,
+    "n_mismatch": 0,
+    "first_mismatches": []
+  }
+]

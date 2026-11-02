@@ -1,0 +1,58 @@
+{
+ "name": "ext_r4prepivot_scen",
+ "bank": "D-07",
+ "split": "development",
+ "b_o": 39,
+ "b_i": 19,
+ "replicates": [
+  0,
+  1,
+  2
+ ],
+ "purpose": "Descriptive: latent1 and noise0.1 scenarios, T 80/150, pairs with results/ext_v51_a1 (its calibration.json factors).",
+ "base_config": "ext_v51_a1",
+ "pair_with": "ext_v51_a1",
+ "factors": "results/ext_v51_a1/calibration.json",
+ "cells": [
+  [
+   80,
+   "none",
+   0.0
+  ],
+  [
+   80,
+   "missing",
+   0.2
+  ],
+  [
+   80,
+   "reversed",
+   0.2
+  ],
+  [
+   150,
+   "none",
+   0.0
+  ],
+  [
+   150,
+   "missing",
+   0.2
+  ],
+  [
+   150,
+   "reversed",
+   0.2
+  ]
+ ],
+ "scenarios": [
+  {
+   "name": "latent1",
+   "latent": 1
+  },
+  {
+   "name": "noise0.1",
+   "meas_noise": 0.1
+  }
+ ]
+}

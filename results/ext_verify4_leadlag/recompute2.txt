@@ -1,0 +1,36 @@
+A decomp non-missing identical 540 / 540 | missing rows identical to v51 2 / 600 | rows with zero labels data+draws 0
+D decomp non-missing identical 540 / 540 | missing rows identical to v51 0 / 600 | rows with zero labels data+draws 0
+A gate Holm rej 0 factor Holm rej 6
+   ('latent1', 80, 0.2) gate -0.011 [-0.038,+0.012] p=0.3700  | factor -0.012 [-0.034,+0.015] p=0.3540 
+   ('latent1', 150, 0.2) gate +0.004 [-0.010,+0.017] p=0.5946  | factor +0.016 [+0.005,+0.028] p=0.0051 H
+   ('latent1', 80, 0.5) gate +0.032 [-0.021,+0.088] p=0.2291  | factor -0.023 [-0.048,+0.007] p=0.1291 
+   ('latent1', 150, 0.5) gate +0.009 [-0.022,+0.042] p=0.6127  | factor +0.019 [+0.002,+0.036] p=0.0338 
+   ('latent3', 80, 0.2) gate -0.015 [-0.047,+0.010] p=0.3110  | factor -0.030 [-0.051,-0.008] p=0.0065 H
+   ('latent3', 150, 0.2) gate +0.008 [-0.013,+0.030] p=0.4916  | factor -0.051 [-0.075,-0.027] p=0.0001 H
+   ('latent3', 80, 0.5) gate -0.002 [-0.033,+0.030] p=0.8953  | factor -0.051 [-0.076,-0.023] p=0.0005 H
+   ('latent3', 150, 0.5) gate +0.015 [-0.024,+0.049] p=0.4012  | factor -0.011 [-0.032,+0.011] p=0.3356 
+   ('clean', 150, 0.2) gate +0.002 [-0.012,+0.017] p=0.7769  | factor +0.030 [+0.018,+0.042] p=0.0002 H
+   ('clean', 150, 0.5) gate +0.006 [-0.017,+0.030] p=0.6196  | factor +0.037 [+0.022,+0.051] p=0.0001 H
+D gate Holm rej 0 factor Holm rej 3
+   ('latent1', 80, 0.2) gate +0.036 [-0.004,+0.075] p=0.0761  | factor -0.010 [-0.032,+0.016] p=0.4100 
+   ('latent1', 150, 0.2) gate +0.013 [-0.020,+0.050] p=0.4746  | factor +0.030 [+0.004,+0.056] p=0.0211 
+   ('latent1', 80, 0.5) gate +0.107 [-0.004,+0.237] p=0.0603  | factor -0.010 [-0.041,+0.027] p=0.5597 
+   ('latent1', 150, 0.5) gate +0.027 [-0.020,+0.081] p=0.2816  | factor +0.041 [+0.006,+0.072] p=0.0233 
+   ('latent3', 80, 0.2) gate -0.023 [-0.091,+0.043] p=0.4904  | factor -0.023 [-0.050,+0.007] p=0.1276 
+   ('latent3', 150, 0.2) gate -0.007 [-0.044,+0.032] p=0.7003  | factor -0.071 [-0.112,-0.029] p=0.0008 H
+   ('latent3', 80, 0.5) gate -0.061 [-0.166,+0.030] p=0.2098  | factor -0.038 [-0.068,-0.006] p=0.0231 
+   ('latent3', 150, 0.5) gate -0.014 [-0.067,+0.038] p=0.5888  | factor -0.027 [-0.073,+0.018] p=0.2456 
+   ('clean', 150, 0.2) gate -0.001 [-0.028,+0.029] p=0.9160  | factor +0.070 [+0.055,+0.083] p=0.0001 H
+   ('clean', 150, 0.5) gate +0.031 [-0.019,+0.088] p=0.2460  | factor +0.059 [+0.025,+0.089] p=0.0016 H
+A 80 AUROC 0.477 [0.375, 0.598] npos 92 nneg 386 | median p_Q C 0.834 edges 0.805
+A 150 AUROC 0.592 [0.530, 0.647] npos 191 nneg 475 | median p_Q C 0.647 edges 0.791
+D 80 AUROC 0.548 [0.473, 0.623] npos 93 nneg 386 | median p_Q C 0.441 edges 0.489
+D 150 AUROC 0.593 [0.544, 0.638] npos 200 nneg 477 | median p_Q C 0.166 edges 0.312
+A latent T80/150 {'E0': [8, 821], 'CE': [1, 121], 'N': [3, 418], 'C': [8, 283], 'EL': [0, 40]} per draw 0.07
+A clean {'E0': [4, 530], 'N': [1, 299], 'EL': [0, 26]} per draw 0.09
+D latent T80/150 {'E0': [106, 822], 'CE': [54, 122], 'N': [63, 445], 'C': [62, 293], 'EL': [29, 41]} per draw 1.73
+D clean {'E0': [47, 530], 'N': [31, 303], 'EL': [16, 26]} per draw 1.09
+cochild cov latent1 0.2 ['oracle 0.928', 't_v5_1 0.828', 'eadlag 0.853', 'g_skel 0.861']
+cochild cov latent1 0.5 ['oracle 0.928', 't_v5_1 0.839', 'eadlag 0.858', 'g_skel 0.872']
+cochild cov latent3 0.2 ['oracle 0.937', 't_v5_1 0.836', 'eadlag 0.851', 'g_skel 0.869']
+cochild cov latent3 0.5 ['oracle 0.937', 't_v5_1 0.853', 'eadlag 0.873', 'g_skel 0.880']

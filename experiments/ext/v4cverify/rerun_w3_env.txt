@@ -1,0 +1,1 @@
+/Users/kietnt/miniconda3/bin/python 2.5.4 1.17.1

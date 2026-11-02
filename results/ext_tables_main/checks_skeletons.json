@@ -1,0 +1,77 @@
+{
+ "ext_tlp2_t40": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "ext_tlp2_t80a": {
+  "n": 180,
+  "n_common": 180,
+  "identical": 180
+ },
+ "ext_tlp2_t80b": {
+  "n": 120,
+  "n_common": 120,
+  "identical": 120
+ },
+ "ext_tlp2_t80c": {
+  "n": 120,
+  "n_common": 120,
+  "identical": 120
+ },
+ "ext_tlp2_t150a": {
+  "n": 60,
+  "n_common": 60,
+  "identical": 60
+ },
+ "ext_tlp2_t150b": {
+  "n": 120,
+  "n_common": 120,
+  "identical": 120
+ },
+ "ext_tlp2_t150c": {
+  "n": 120,
+  "n_common": 120,
+  "identical": 120
+ },
+ "ext_tlp2_t150d": {
+  "n": 120,
+  "n_common": 120,
+  "identical": 120
+ },
+ "ext_baselines3_eval": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "a2_baselines": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "ext_tlp_eval": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "ext_redteam_calbase": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "ext_baselines2_eval": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "ext_v4c_eval": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ },
+ "a2b_pselect": {
+  "n": 420,
+  "n_common": 420,
+  "identical": 420
+ }
+}

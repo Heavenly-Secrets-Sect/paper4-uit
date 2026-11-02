@@ -1,0 +1,68 @@
+{
+ "name": "ext_r4prepivot_primary",
+ "bank": "D-07",
+ "split": "development",
+ "b_o": 39,
+ "b_i": 19,
+ "replicates": [
+  0,
+  1,
+  2
+ ],
+ "purpose": "Primary (pre-registered rule, docs/ext/r4prepivot.md): 9 cells, pairs with results/ext_v51_eval (frozen v5.1 factors).",
+ "base_config": "ext_v51_eval",
+ "pair_with": "ext_v51_eval",
+ "factors": "experiments/ext/v51/frozen_v4_v51.json",
+ "cells": [
+  [
+   40,
+   "missing",
+   0.2
+  ],
+  [
+   40,
+   "missing",
+   0.5
+  ],
+  [
+   40,
+   "reversed",
+   0.2
+  ],
+  [
+   40,
+   "reversed",
+   0.5
+  ],
+  [
+   80,
+   "missing",
+   0.2
+  ],
+  [
+   80,
+   "missing",
+   0.5
+  ],
+  [
+   80,
+   "reversed",
+   0.2
+  ],
+  [
+   80,
+   "reversed",
+   0.5
+  ],
+  [
+   80,
+   "none",
+   0.0
+  ]
+ ],
+ "scenarios": [
+  {
+   "name": "clean"
+  }
+ ]
+}

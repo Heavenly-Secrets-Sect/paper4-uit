@@ -1,0 +1,12 @@
+reversed T=80 ratio=0.0 G0.5         n=8 cov=0.904 IS=2.50 width=1.70 abserr=0.310
+reversed T=80 ratio=0.0 G0.7         n=8 cov=0.908 IS=2.85 width=1.75 abserr=0.314
+reversed T=80 ratio=0.0 v3           n=8 cov=0.856 IS=2.37 width=1.46 abserr=0.299
+reversed T=80 ratio=0.3 G0.5         n=8 cov=0.841 IS=3.39 width=1.79 abserr=0.372
+reversed T=80 ratio=0.3 G0.7         n=8 cov=0.871 IS=3.71 width=1.90 abserr=0.400
+reversed T=80 ratio=0.3 v3           n=8 cov=0.760 IS=4.13 width=1.47 abserr=0.397
+reversed T=150 ratio=0.0 G0.5         n=8 cov=0.956 IS=1.43 width=1.24 abserr=0.212
+reversed T=150 ratio=0.0 G0.7         n=8 cov=0.959 IS=1.45 width=1.24 abserr=0.211
+reversed T=150 ratio=0.0 v3           n=8 cov=0.919 IS=1.67 width=1.11 abserr=0.216
+reversed T=150 ratio=0.3 G0.5         n=8 cov=0.852 IS=2.71 width=1.31 abserr=0.306
+reversed T=150 ratio=0.3 G0.7         n=8 cov=0.889 IS=2.46 width=1.47 abserr=0.278
+reversed T=150 ratio=0.3 v3           n=8 cov=0.731 IS=3.69 width=1.07 abserr=0.386

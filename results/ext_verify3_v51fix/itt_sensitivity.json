@@ -1,0 +1,72 @@
+{
+ "(40, 'missing', 0.2)": {
+  "cov": 0.9223,
+  "single_fail_flips": 5,
+  "min_fails_to_flip": 1
+ },
+ "(40, 'missing', 0.5)": {
+  "cov": 0.9391,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 2
+ },
+ "(80, 'extra', 0.2)": {
+  "cov": 0.9272,
+  "single_fail_flips": 2,
+  "min_fails_to_flip": 1
+ },
+ "(80, 'extra', 0.5)": {
+  "cov": 0.925,
+  "single_fail_flips": 2,
+  "min_fails_to_flip": 1
+ },
+ "(80, 'missing', 0.2)": {
+  "cov": 0.9488,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 2
+ },
+ "(80, 'missing', 0.5)": {
+  "cov": 0.9515,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 2
+ },
+ "(80, 'reversed', 0.2)": {
+  "cov": 0.9412,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 2
+ },
+ "(80, 'reversed', 0.5)": {
+  "cov": 0.918,
+  "single_fail_flips": 19,
+  "min_fails_to_flip": 1
+ },
+ "(150, 'extra', 0.2)": {
+  "cov": 0.9633,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 3
+ },
+ "(150, 'extra', 0.5)": {
+  "cov": 0.9628,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 3
+ },
+ "(150, 'missing', 0.2)": {
+  "cov": 0.966,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 3
+ },
+ "(150, 'missing', 0.5)": {
+  "cov": 0.9676,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 3
+ },
+ "(150, 'reversed', 0.2)": {
+  "cov": 0.959,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 3
+ },
+ "(150, 'reversed', 0.5)": {
+  "cov": 0.9428,
+  "single_fail_flips": 0,
+  "min_fails_to_flip": 2
+ }
+}

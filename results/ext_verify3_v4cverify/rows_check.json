@@ -1,0 +1,34 @@
+{
+ "results/ext_v4cverify_rerun_w3": {
+  "n": 252,
+  "identical": 252,
+  "diff": [],
+  "units": [
+   [
+    "syn_dag_00",
+    0
+   ],
+   [
+    "syn_dag_01",
+    0
+   ]
+  ],
+  "cal_bytes_equal": true
+ },
+ "results/ext_v4cverify_rerun_w3_clt": {
+  "n": 252,
+  "identical": 252,
+  "diff": [],
+  "units": [
+   [
+    "syn_dag_00",
+    0
+   ],
+   [
+    "syn_dag_01",
+    0
+   ]
+  ],
+  "cal_bytes_equal": true
+ }
+}

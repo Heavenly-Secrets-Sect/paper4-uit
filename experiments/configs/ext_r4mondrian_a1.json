@@ -1,0 +1,54 @@
+{
+  "name": "ext_r4mondrian_a1",
+  "purpose": "r4mondrian no-harm check (descriptive): the ext_v51_a1 grid (T 80/150; none, missing-0.2, reversed-0.2) with scenarios latent1 and noise0.1, D-07 development, seed_base 20261102; pairs with stored ext_v51_a1 rows.",
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "oracle": false,
+  "scenarios": [
+    {
+      "name": "latent1",
+      "latent": 1
+    },
+    {
+      "name": "noise0.1",
+      "meas_noise": 0.1
+    }
+  ],
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

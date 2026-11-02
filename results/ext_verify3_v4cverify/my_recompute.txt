@@ -1,0 +1,18 @@
+C1 ratios [np.float64(0.9887), np.float64(0.9811), np.float64(1.0079), np.float64(0.9842), np.float64(0.9999), np.float64(0.9946), np.float64(1.0139), np.float64(1.0003), np.float64(1.0042), np.float64(1.014), np.float64(0.9919), np.float64(0.9818), np.float64(0.9834), np.float64(1.0055)] pass 14
+TOST Holm count per seed Counter({5: 29, 4: 2}) seed20261102: 5
+C2 [{'r': 0.2, 'covv4c': 0.9579288025889967, 'covv4': 0.982740021574973, 'IS': (np.float64(6.977439024637254), np.float64(7.765119826840765)), 'diff': np.float64(-0.7876808022035107), 'ci': (np.float64(-0.9898356467747944), np.float64(-0.5767803399849603)), 'max_upper': np.float64(-0.5659533941984479), 'max_p': np.float64(0.0004997501249375312)}, {'r': 0.5, 'covv4c': 0.9557713052858684, 'covv4': 0.9784250269687162, 'IS': (np.float64(6.817086260488774), np.float64(7.5281160027687255)), 'diff': np.float64(-0.7110297422799512), 'ci': (np.float64(-0.8752857784624986), np.float64(-0.5421243509162933)), 'max_upper': np.float64(-0.5325112802846053), 'max_p': np.float64(0.0004997501249375312)}]
+a pselect_union {'W': 19, 'T': 0, 'L': 2, 'Wnm': 15, 'Tnm': 0, 'Lnm': 0, 'holmW': 19, 'holmW_nm': 15}
+a ida_union {'W': 14, 'T': 7, 'L': 0, 'Wnm': 8, 'Tnm': 7, 'Lnm': 0, 'holmW': 12, 'holmW_nm': 6}
+a bvar_minnesota {'W': 18, 'T': 3, 'L': 0, 'Wnm': 12, 'Tnm': 3, 'Lnm': 0, 'holmW': 18, 'holmW_nm': 12}
+b pselect_union {'W': 19, 'T': 2, 'L': 0, 'Wnm': 15, 'Tnm': 0, 'Lnm': 0, 'holmW': 19, 'holmW_nm': 15}
+b ida_union {'W': 14, 'T': 7, 'L': 0, 'Wnm': 8, 'Tnm': 7, 'Lnm': 0, 'holmW': 13, 'holmW_nm': 7}
+b bvar_minnesota {'W': 16, 'T': 5, 'L': 0, 'Wnm': 11, 'Tnm': 4, 'Lnm': 0, 'holmW': 15, 'holmW_nm': 10}
+c pselect_union {'W': 19, 'T': 2, 'L': 0, 'Wnm': 15, 'Tnm': 0, 'Lnm': 0, 'holmW': 19, 'holmW_nm': 15}
+c ida_union {'W': 14, 'T': 7, 'L': 0, 'Wnm': 8, 'Tnm': 7, 'Lnm': 0, 'holmW': 12, 'holmW_nm': 6}
+c bvar_minnesota {'W': 16, 'T': 5, 'L': 0, 'Wnm': 11, 'Tnm': 4, 'Lnm': 0, 'holmW': 15, 'holmW_nm': 10}
+d pselect_union {'W': 21, 'T': 0, 'L': 0, 'Wnm': 15, 'Tnm': 0, 'Lnm': 0, 'holmW': 21, 'holmW_nm': 15}
+d ida_union {'W': 13, 'T': 8, 'L': 0, 'Wnm': 7, 'Tnm': 8, 'Lnm': 0, 'holmW': 12, 'holmW_nm': 6}
+d bvar_minnesota {'W': 16, 'T': 5, 'L': 0, 'Wnm': 11, 'Tnm': 4, 'Lnm': 0, 'holmW': 15, 'holmW_nm': 10}
+(b) ida holm across seeds Counter({(12, 6): 20, (13, 7): 11})
+D6 better 9 worse 6 holm better 4
+ida T80 extra-0.2 upper [('ida_union', 80, 'extra', 0.2, np.float64(-0.0009)), ('ida_union', 80, 'extra', 0.5, np.float64(0.0691))]

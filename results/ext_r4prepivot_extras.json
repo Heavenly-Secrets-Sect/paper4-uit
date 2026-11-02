@@ -1,0 +1,1200 @@
+{
+ "primary": {
+  "tolerant_v5_1_pp": {
+   "n_cells": 9,
+   "worse_holm": 9,
+   "worse_raw": 9,
+   "noninf_holm": 0,
+   "cov_ge_090": 1,
+   "cells": [
+    {
+     "cell": [
+      "clean",
+      40,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1963060817980953,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.09439050701186624,
+     "f_ratio_to_bank": 0.7148116213149333
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "missing",
+      0.5
+     ],
+     "ratio": 1.2344424294902716,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.12297734627831713,
+     "f_ratio_to_bank": 0.6526190436329168
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0817038571438213,
+     "p_worse": 0.03914804259787011,
+     "worse_holm": true,
+     "cov_gap": -0.06526429341963313,
+     "f_ratio_to_bank": 0.751412324572349
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.1300659883077755,
+     "p_worse": 0.00039998000099995,
+     "worse_holm": true,
+     "cov_gap": -0.07659115426105711,
+     "f_ratio_to_bank": 0.7417393662930203
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.137935045279456,
+     "p_worse": 0.00034998250087495624,
+     "worse_holm": true,
+     "cov_gap": -0.0884573894282632,
+     "f_ratio_to_bank": 0.7219198688169469
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "missing",
+      0.5
+     ],
+     "ratio": 1.139092205087673,
+     "p_worse": 9.99950002499875e-05,
+     "worse_holm": true,
+     "cov_gap": -0.09654800431499466,
+     "f_ratio_to_bank": 0.7085446119736986
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0976859018997414,
+     "p_worse": 0.0002999850007499625,
+     "worse_holm": true,
+     "cov_gap": -0.06472491909385114,
+     "f_ratio_to_bank": 0.765642571016396
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.1601754553293275,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.0722761596548005,
+     "f_ratio_to_bank": 0.7638166006211721
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0511162587497414,
+     "p_worse": 0.01224938753062347,
+     "worse_holm": true,
+     "cov_gap": -0.034519956850053934,
+     "f_ratio_to_bank": 0.8446134728012814
+    }
+   ]
+  },
+  "tolerant_v5_1_pp_orig": {
+   "n_cells": 9,
+   "worse_holm": 9,
+   "worse_raw": 9,
+   "noninf_holm": 1,
+   "cov_ge_090": 0,
+   "cells": [
+    {
+     "cell": [
+      "clean",
+      40,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1486009025336816,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.08198489751887816,
+     "f_ratio_to_bank": 0.7457583691416363
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "missing",
+      0.5
+     ],
+     "ratio": 1.172102868671351,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.10194174757281549,
+     "f_ratio_to_bank": 0.6891029646606363
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0659171552808355,
+     "p_worse": 0.04499775011249438,
+     "worse_holm": true,
+     "cov_gap": -0.06903991370010787,
+     "f_ratio_to_bank": 0.7543550777693566
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.1239987819863424,
+     "p_worse": 0.00034998250087495624,
+     "worse_holm": true,
+     "cov_gap": -0.08522114347357068,
+     "f_ratio_to_bank": 0.7385339244348582
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1130591132550005,
+     "p_worse": 0.0010499475026248687,
+     "worse_holm": true,
+     "cov_gap": -0.07874865156418553,
+     "f_ratio_to_bank": 0.7375825874535028
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "missing",
+      0.5
+     ],
+     "ratio": 1.1055675024018088,
+     "p_worse": 0.0006999650017499125,
+     "worse_holm": true,
+     "cov_gap": -0.08036677454153185,
+     "f_ratio_to_bank": 0.7403328987145765
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.096092286592586,
+     "p_worse": 0.00039998000099995,
+     "worse_holm": true,
+     "cov_gap": -0.06850053937432576,
+     "f_ratio_to_bank": 0.7515987628005789
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.1819173203776034,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.08414239482200647,
+     "f_ratio_to_bank": 0.7490473920548909
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "none",
+      0.0
+     ],
+     "ratio": 1.040535785637054,
+     "p_worse": 0.024998750062496876,
+     "worse_holm": true,
+     "cov_gap": -0.03883495145631066,
+     "f_ratio_to_bank": 0.8464228381618256
+    }
+   ]
+  }
+ },
+ "secondary": {
+  "tolerant_v5_1_pp": {
+   "n_cells": 12,
+   "worse_holm": 2,
+   "worse_raw": 6,
+   "noninf_holm": 12,
+   "cov_ge_090": 8,
+   "cells": [
+    {
+     "cell": [
+      "clean",
+      40,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0189742684809653,
+     "p_worse": 0.10089495525223739,
+     "worse_holm": false,
+     "cov_gap": -0.022114347357065745,
+     "f_ratio_to_bank": 0.8826179929208328
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "extra",
+      0.2
+     ],
+     "ratio": 1.0550718106308166,
+     "p_worse": 0.007649617519124044,
+     "worse_holm": false,
+     "cov_gap": -0.03505933117583593,
+     "f_ratio_to_bank": 0.8624158157199445
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "extra",
+      0.5
+     ],
+     "ratio": 1.0428362639816333,
+     "p_worse": 0.027498625068746563,
+     "worse_holm": false,
+     "cov_gap": -0.04045307443365698,
+     "f_ratio_to_bank": 0.8541253686487816
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "extra",
+      0.2
+     ],
+     "ratio": 1.0569248356359275,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.02481121898597627,
+     "f_ratio_to_bank": 0.904924918393932
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "extra",
+      0.5
+     ],
+     "ratio": 1.054585324438643,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.03182308522114341,
+     "f_ratio_to_bank": 0.8896473794161377
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0064071895648325,
+     "p_worse": 0.26108694565271734,
+     "worse_holm": false,
+     "cov_gap": -0.02265372168284796,
+     "f_ratio_to_bank": 0.8851747911782465
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "extra",
+      0.2
+     ],
+     "ratio": 1.0078756663878599,
+     "p_worse": 0.26383680815959204,
+     "worse_holm": false,
+     "cov_gap": -0.027508090614886682,
+     "f_ratio_to_bank": 0.8874731799272229
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "extra",
+      0.5
+     ],
+     "ratio": 0.9965485305069084,
+     "p_worse": 0.6173691315434229,
+     "worse_holm": false,
+     "cov_gap": -0.02265372168284796,
+     "f_ratio_to_bank": 0.8755605185883427
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.0058080905993587,
+     "p_worse": 0.3575821208939553,
+     "worse_holm": false,
+     "cov_gap": -0.03991370010787487,
+     "f_ratio_to_bank": 0.8221021412965398
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "missing",
+      0.5
+     ],
+     "ratio": 0.9817670242201106,
+     "p_worse": 0.8584070796460177,
+     "worse_holm": false,
+     "cov_gap": -0.03937432578209288,
+     "f_ratio_to_bank": 0.813817140845398
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.048161213059113,
+     "p_worse": 0.02414879256037198,
+     "worse_holm": false,
+     "cov_gap": -0.04908306364617043,
+     "f_ratio_to_bank": 0.7987702913734466
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.0429981811157578,
+     "p_worse": 0.012099395030248488,
+     "worse_holm": false,
+     "cov_gap": -0.04153182308522119,
+     "f_ratio_to_bank": 0.8347417625571091
+    }
+   ]
+  },
+  "tolerant_v5_1_pp_orig": {
+   "n_cells": 12,
+   "worse_holm": 2,
+   "worse_raw": 5,
+   "noninf_holm": 11,
+   "cov_ge_090": 9,
+   "cells": [
+    {
+     "cell": [
+      "clean",
+      40,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0013443817962366,
+     "p_worse": 0.45392730363481826,
+     "worse_holm": false,
+     "cov_gap": -0.022114347357065745,
+     "f_ratio_to_bank": 0.8887352046829788
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "extra",
+      0.2
+     ],
+     "ratio": 1.0246717008315849,
+     "p_worse": 0.037398130093495324,
+     "worse_holm": false,
+     "cov_gap": -0.027508090614886682,
+     "f_ratio_to_bank": 0.8948472722042116
+    },
+    {
+     "cell": [
+      "clean",
+      40,
+      "extra",
+      0.5
+     ],
+     "ratio": 1.0128970891657263,
+     "p_worse": 0.15624218789060548,
+     "worse_holm": false,
+     "cov_gap": -0.01725997842502691,
+     "f_ratio_to_bank": 0.9074546244539251
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "extra",
+      0.2
+     ],
+     "ratio": 1.0341751558422507,
+     "p_worse": 0.0014999250037498126,
+     "worse_holm": true,
+     "cov_gap": -0.018878101402373226,
+     "f_ratio_to_bank": 0.9213192058871826
+    },
+    {
+     "cell": [
+      "clean",
+      80,
+      "extra",
+      0.5
+     ],
+     "ratio": 1.0244935865430058,
+     "p_worse": 0.0024998750062496873,
+     "worse_holm": true,
+     "cov_gap": -0.02049622437971954,
+     "f_ratio_to_bank": 0.9340726011967875
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "none",
+      0.0
+     ],
+     "ratio": 0.9937635725206685,
+     "p_worse": 0.7369131543422829,
+     "worse_holm": false,
+     "cov_gap": -0.018878101402373337,
+     "f_ratio_to_bank": 0.8900518287422275
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "extra",
+      0.2
+     ],
+     "ratio": 0.9986882229559996,
+     "p_worse": 0.5530723463826809,
+     "worse_holm": false,
+     "cov_gap": -0.02373247033441206,
+     "f_ratio_to_bank": 0.9027961633625831
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "extra",
+      0.5
+     ],
+     "ratio": 0.9897767560390252,
+     "p_worse": 0.9278536073196341,
+     "worse_holm": false,
+     "cov_gap": -0.011866235167206085,
+     "f_ratio_to_bank": 0.9121110132323392
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "missing",
+      0.2
+     ],
+     "ratio": 0.9962049073043422,
+     "p_worse": 0.6017199140042998,
+     "worse_holm": false,
+     "cov_gap": -0.035598705501618144,
+     "f_ratio_to_bank": 0.8364187806693265
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "missing",
+      0.5
+     ],
+     "ratio": 0.9752208781957485,
+     "p_worse": 0.9563521823908805,
+     "worse_holm": false,
+     "cov_gap": -0.03074433656957931,
+     "f_ratio_to_bank": 0.8331178766448649
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.038683363826271,
+     "p_worse": 0.04209789510524474,
+     "worse_holm": false,
+     "cov_gap": -0.04800431499460622,
+     "f_ratio_to_bank": 0.7990197569734994
+    },
+    {
+     "cell": [
+      "clean",
+      150,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.061646848509609,
+     "p_worse": 0.006299685015749213,
+     "worse_holm": false,
+     "cov_gap": -0.05070118662351675,
+     "f_ratio_to_bank": 0.816574068538052
+    }
+   ]
+  }
+ },
+ "lag1": {
+  "tolerant_v5_1_pp": {
+   "n_cells": 10,
+   "worse_holm": 1,
+   "worse_raw": 2,
+   "noninf_holm": 5,
+   "cov_ge_090": 1,
+   "cells": [
+    {
+     "cell": [
+      "clean",
+      19,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0139012366018734,
+     "p_worse": 0.256137193140343,
+     "worse_holm": false,
+     "cov_gap": -0.050945378151260545,
+     "f_ratio_to_bank": 0.81866474147508
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1713007495700274,
+     "p_worse": 0.00014999250037498125,
+     "worse_holm": true,
+     "cov_gap": -0.09506302521008403,
+     "f_ratio_to_bank": 0.7245218702633152
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "missing",
+      0.5
+     ],
+     "ratio": 1.0276822736567355,
+     "p_worse": 0.28828558572071394,
+     "worse_holm": false,
+     "cov_gap": -0.10241596638655459,
+     "f_ratio_to_bank": 0.6634169642112253
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.2392543444394712,
+     "p_worse": 0.3530823458827059,
+     "worse_holm": false,
+     "cov_gap": -0.09926470588235292,
+     "f_ratio_to_bank": 0.6311596801121083
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.3215956198168135,
+     "p_worse": 0.04329783510824459,
+     "worse_holm": false,
+     "cov_gap": -0.14639397201291715,
+     "f_ratio_to_bank": 0.5906937311204371
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "none",
+      0.0
+     ],
+     "ratio": 0.8884086142754097,
+     "p_worse": 0.9984500774961252,
+     "worse_holm": false,
+     "cov_gap": -0.057247899159663884,
+     "f_ratio_to_bank": 0.6506371423432515
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.0326120170049677,
+     "p_worse": 0.2056897155142243,
+     "worse_holm": false,
+     "cov_gap": -0.10924369747899165,
+     "f_ratio_to_bank": 0.5955418733312415
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "missing",
+      0.5
+     ],
+     "ratio": 0.9396097724606782,
+     "p_worse": 0.9453027348632569,
+     "worse_holm": false,
+     "cov_gap": -0.10976890756302515,
+     "f_ratio_to_bank": 0.597141304705257
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "reversed",
+      0.2
+     ],
+     "ratio": 0.8803621365048278,
+     "p_worse": 0.9994000299985001,
+     "worse_holm": false,
+     "cov_gap": -0.07930672268907557,
+     "f_ratio_to_bank": 0.6080489656258531
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "reversed",
+      0.5
+     ],
+     "ratio": 0.9264515057656791,
+     "p_worse": 0.9594520273986301,
+     "worse_holm": false,
+     "cov_gap": -0.09558823529411764,
+     "f_ratio_to_bank": 0.598479463386718
+    }
+   ]
+  },
+  "tolerant_v5_1_pp_orig": {
+   "n_cells": 10,
+   "worse_holm": 1,
+   "worse_raw": 1,
+   "noninf_holm": 5,
+   "cov_ge_090": 1,
+   "cells": [
+    {
+     "cell": [
+      "clean",
+      19,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0155615006642078,
+     "p_worse": 0.24873756312184392,
+     "worse_holm": false,
+     "cov_gap": -0.05514705882352944,
+     "f_ratio_to_bank": 0.8110901896491066
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1336117349496238,
+     "p_worse": 0.000199990000499975,
+     "worse_holm": true,
+     "cov_gap": -0.08350840336134457,
+     "f_ratio_to_bank": 0.7619165882299095
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "missing",
+      0.5
+     ],
+     "ratio": 1.0018927471514223,
+     "p_worse": 0.4965751712414379,
+     "worse_holm": false,
+     "cov_gap": -0.0892857142857143,
+     "f_ratio_to_bank": 0.6809212656459818
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.1850046269114292,
+     "p_worse": 0.3530823458827059,
+     "worse_holm": false,
+     "cov_gap": -0.09978991596638653,
+     "f_ratio_to_bank": 0.6177241620655044
+    },
+    {
+     "cell": [
+      "clean",
+      19,
+      "reversed",
+      0.5
+     ],
+     "ratio": 1.2721047950519533,
+     "p_worse": 0.054297285135743216,
+     "worse_holm": false,
+     "cov_gap": -0.15123789020452094,
+     "f_ratio_to_bank": 0.5577331849655415
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "none",
+      0.0
+     ],
+     "ratio": 0.8830626982806309,
+     "p_worse": 0.9985500724963752,
+     "worse_holm": false,
+     "cov_gap": -0.05987394957983194,
+     "f_ratio_to_bank": 0.6239576521734074
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.018253805847897,
+     "p_worse": 0.3182340882955852,
+     "worse_holm": false,
+     "cov_gap": -0.1029411764705882,
+     "f_ratio_to_bank": 0.6071707035104263
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "missing",
+      0.5
+     ],
+     "ratio": 0.9268075501303495,
+     "p_worse": 0.9833508324583771,
+     "worse_holm": false,
+     "cov_gap": -0.1029411764705882,
+     "f_ratio_to_bank": 0.6067779540440976
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "reversed",
+      0.2
+     ],
+     "ratio": 0.8805443814738051,
+     "p_worse": 0.9994500274986251,
+     "worse_holm": false,
+     "cov_gap": -0.08403361344537807,
+     "f_ratio_to_bank": 0.5859288869216592
+    },
+    {
+     "cell": [
+      "clean",
+      25,
+      "reversed",
+      0.5
+     ],
+     "ratio": 0.9310797602227278,
+     "p_worse": 0.9501524923753812,
+     "worse_holm": false,
+     "cov_gap": -0.10451680672268904,
+     "f_ratio_to_bank": 0.578796360166247
+    }
+   ]
+  }
+ },
+ "scen": {
+  "tolerant_v5_1_pp": {
+   "n_cells": 12,
+   "worse_holm": 12,
+   "worse_raw": 12,
+   "noninf_holm": 3,
+   "cov_ge_090": 2,
+   "cells": [
+    {
+     "cell": [
+      "latent1",
+      80,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0550189230044629,
+     "p_worse": 0.0111994400279986,
+     "worse_holm": true,
+     "cov_gap": -0.0453074433656957,
+     "f_ratio_to_bank": 0.8501659782573897
+    },
+    {
+     "cell": [
+      "latent1",
+      80,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.0839944076937447,
+     "p_worse": 0.009149542522873857,
+     "worse_holm": true,
+     "cov_gap": -0.07928802588996764,
+     "f_ratio_to_bank": 0.7155232366345051
+    },
+    {
+     "cell": [
+      "latent1",
+      80,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0940086916592902,
+     "p_worse": 0.004849757512124394,
+     "worse_holm": true,
+     "cov_gap": -0.0744336569579288,
+     "f_ratio_to_bank": 0.766257463630107
+    },
+    {
+     "cell": [
+      "latent1",
+      150,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0428747393548274,
+     "p_worse": 0.001799910004499775,
+     "worse_holm": true,
+     "cov_gap": -0.02265372168284785,
+     "f_ratio_to_bank": 0.8872225055914873
+    },
+    {
+     "cell": [
+      "latent1",
+      150,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.0476479674945327,
+     "p_worse": 0.002999850007499625,
+     "worse_holm": true,
+     "cov_gap": -0.046925566343042124,
+     "f_ratio_to_bank": 0.8276277367598309
+    },
+    {
+     "cell": [
+      "latent1",
+      150,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0997023212494859,
+     "p_worse": 9.99950002499875e-05,
+     "worse_holm": true,
+     "cov_gap": -0.06256742179072272,
+     "f_ratio_to_bank": 0.7906364472924853
+    },
+    {
+     "cell": [
+      "noise0.1",
+      80,
+      "none",
+      0.0
+     ],
+     "ratio": 1.1063372197160601,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.05070118662351675,
+     "f_ratio_to_bank": 0.8461947698916062
+    },
+    {
+     "cell": [
+      "noise0.1",
+      80,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.2789831044804667,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.11165048543689315,
+     "f_ratio_to_bank": 0.72297380042999
+    },
+    {
+     "cell": [
+      "noise0.1",
+      80,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.1700589724641808,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.08360302049622437,
+     "f_ratio_to_bank": 0.7656696929341368
+    },
+    {
+     "cell": [
+      "noise0.1",
+      150,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0637785649576943,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.033441208198489725,
+     "f_ratio_to_bank": 0.8858002355763284
+    },
+    {
+     "cell": [
+      "noise0.1",
+      150,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1290339321858678,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.052858683926645056,
+     "f_ratio_to_bank": 0.833012945662896
+    },
+    {
+     "cell": [
+      "noise0.1",
+      150,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.1976277607759425,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.07011866235167208,
+     "f_ratio_to_bank": 0.830974254250403
+    }
+   ]
+  },
+  "tolerant_v5_1_pp_orig": {
+   "n_cells": 12,
+   "worse_holm": 12,
+   "worse_raw": 12,
+   "noninf_holm": 4,
+   "cov_ge_090": 2,
+   "cells": [
+    {
+     "cell": [
+      "latent1",
+      80,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0411191776401014,
+     "p_worse": 0.016349182540872958,
+     "worse_holm": true,
+     "cov_gap": -0.040453074433656866,
+     "f_ratio_to_bank": 0.8551208999731804
+    },
+    {
+     "cell": [
+      "latent1",
+      80,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.061764699218197,
+     "p_worse": 0.018849057547122645,
+     "worse_holm": true,
+     "cov_gap": -0.06526429341963325,
+     "f_ratio_to_bank": 0.7452156107238953
+    },
+    {
+     "cell": [
+      "latent1",
+      80,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0887963055142384,
+     "p_worse": 0.0019499025048747563,
+     "worse_holm": true,
+     "cov_gap": -0.07713052858683922,
+     "f_ratio_to_bank": 0.7634253598311275
+    },
+    {
+     "cell": [
+      "latent1",
+      150,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0372184403309934,
+     "p_worse": 0.0016499175041247937,
+     "worse_holm": true,
+     "cov_gap": -0.02157497303128375,
+     "f_ratio_to_bank": 0.912491445539179
+    },
+    {
+     "cell": [
+      "latent1",
+      150,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.0301052889178843,
+     "p_worse": 0.022098895055247238,
+     "worse_holm": true,
+     "cov_gap": -0.042610571736785285,
+     "f_ratio_to_bank": 0.8500148279209
+    },
+    {
+     "cell": [
+      "latent1",
+      150,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.0824762369257743,
+     "p_worse": 9.99950002499875e-05,
+     "worse_holm": true,
+     "cov_gap": -0.06040992448759441,
+     "f_ratio_to_bank": 0.802530208611826
+    },
+    {
+     "cell": [
+      "noise0.1",
+      80,
+      "none",
+      0.0
+     ],
+     "ratio": 1.1270926474332728,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.0587918015102481,
+     "f_ratio_to_bank": 0.8315829940052796
+    },
+    {
+     "cell": [
+      "noise0.1",
+      80,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.2625928204119587,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.10787486515641853,
+     "f_ratio_to_bank": 0.7310291814262693
+    },
+    {
+     "cell": [
+      "noise0.1",
+      80,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.2101798696766795,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.09061488673139151,
+     "f_ratio_to_bank": 0.7559687010284107
+    },
+    {
+     "cell": [
+      "noise0.1",
+      150,
+      "none",
+      0.0
+     ],
+     "ratio": 1.0552943070952525,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.034519956850053934,
+     "f_ratio_to_bank": 0.8928994963086894
+    },
+    {
+     "cell": [
+      "noise0.1",
+      150,
+      "missing",
+      0.2
+     ],
+     "ratio": 1.1237656772228568,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.05339805825242716,
+     "f_ratio_to_bank": 0.8353389181427407
+    },
+    {
+     "cell": [
+      "noise0.1",
+      150,
+      "reversed",
+      0.2
+     ],
+     "ratio": 1.2143733099635956,
+     "p_worse": 4.999750012499375e-05,
+     "worse_holm": true,
+     "cov_gap": -0.07820927723840354,
+     "f_ratio_to_bank": 0.8286074292295813
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,16 @@
+reversed T=80 ratio=0.0 A_ratio_re   n=8 cov=0.904 IS=2.92 width=1.75 abserr=0.315
+reversed T=80 ratio=0.0 B_ratio_fix  n=8 cov=0.900 IS=2.92 width=1.77 abserr=0.322
+reversed T=80 ratio=0.0 C_minus1_re  n=8 cov=0.900 IS=2.47 width=1.62 abserr=0.316
+reversed T=80 ratio=0.0 v3           n=8 cov=0.856 IS=2.37 width=1.46 abserr=0.299
+reversed T=80 ratio=0.3 A_ratio_re   n=8 cov=0.856 IS=3.99 width=1.98 abserr=0.440
+reversed T=80 ratio=0.3 B_ratio_fix  n=8 cov=0.900 IS=4.09 width=2.21 abserr=0.390
+reversed T=80 ratio=0.3 C_minus1_re  n=8 cov=0.827 IS=3.54 width=1.71 abserr=0.382
+reversed T=80 ratio=0.3 v3           n=8 cov=0.760 IS=4.13 width=1.47 abserr=0.397
+reversed T=150 ratio=0.0 A_ratio_re   n=8 cov=0.959 IS=1.45 width=1.24 abserr=0.211
+reversed T=150 ratio=0.0 B_ratio_fix  n=8 cov=0.959 IS=1.45 width=1.20 abserr=0.210
+reversed T=150 ratio=0.0 C_minus1_re  n=8 cov=0.956 IS=1.47 width=1.23 abserr=0.212
+reversed T=150 ratio=0.0 v3           n=8 cov=0.919 IS=1.67 width=1.11 abserr=0.216
+reversed T=150 ratio=0.3 A_ratio_re   n=8 cov=0.900 IS=2.60 width=1.60 abserr=0.282
+reversed T=150 ratio=0.3 B_ratio_fix  n=8 cov=0.941 IS=2.78 width=2.03 abserr=0.279
+reversed T=150 ratio=0.3 C_minus1_re  n=8 cov=0.793 IS=3.05 width=1.20 abserr=0.329
+reversed T=150 ratio=0.3 v3           n=8 cov=0.731 IS=3.69 width=1.07 abserr=0.386

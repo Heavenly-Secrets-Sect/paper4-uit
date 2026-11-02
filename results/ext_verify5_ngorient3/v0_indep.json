@@ -1,0 +1,87 @@
+{
+ "b0.6_m148": {
+  "mix_wrong_cond": 0.05540683053459885,
+  "worst": [
+   "unif->sexp+",
+   0.1825
+  ],
+  "pairs": {
+   "laplace->laplace": 0.03865979381443299,
+   "laplace->t5": 0.07772020725388601,
+   "laplace->sexp+": 0.047619047619047616,
+   "laplace->sexp-": 0.0575,
+   "laplace->unif": 0.03651685393258427,
+   "t5->laplace": 0.03234501347708895,
+   "t5->t5": 0.08264462809917356,
+   "t5->sexp+": 0.08793969849246232,
+   "t5->sexp-": 0.08838383838383838,
+   "t5->unif": 0.06687898089171974,
+   "sexp+->laplace": 0.015,
+   "sexp+->t5": 0.0275,
+   "sexp+->sexp+": 0.0625,
+   "sexp+->sexp-": 0.035,
+   "sexp+->unif": 0.07,
+   "sexp-->laplace": 0.02,
+   "sexp-->t5": 0.02,
+   "sexp-->sexp+": 0.0225,
+   "sexp-->sexp-": 0.03,
+   "sexp-->unif": 0.0675,
+   "unif->laplace": 0.035,
+   "unif->t5": 0.0678391959798995,
+   "unif->sexp+": 0.1825,
+   "unif->sexp-": 0.14,
+   "unif->unif": 0.0
+  }
+ },
+ "b0.6_m400": {
+  "mix_wrong_cond": 0.01734917161613004,
+  "worst": [
+   "sexp+->unif",
+   0.09
+  ],
+  "pairs": {
+   "laplace->laplace": 0.0,
+   "laplace->t5": 0.0025,
+   "laplace->sexp+": 0.0125,
+   "laplace->sexp-": 0.0,
+   "laplace->unif": 0.0125,
+   "t5->laplace": 0.0,
+   "t5->t5": 0.002506265664160401,
+   "t5->sexp+": 0.025,
+   "t5->sexp-": 0.0225,
+   "t5->unif": 0.03508771929824561,
+   "sexp+->laplace": 0.0025,
+   "sexp+->t5": 0.005,
+   "sexp+->sexp+": 0.005,
+   "sexp+->sexp-": 0.0025,
+   "sexp+->unif": 0.09,
+   "sexp-->laplace": 0.0,
+   "sexp-->t5": 0.0075,
+   "sexp-->sexp+": 0.0025,
+   "sexp-->sexp-": 0.005,
+   "sexp-->unif": 0.085,
+   "unif->laplace": 0.0,
+   "unif->t5": 0.02,
+   "unif->sexp+": 0.0825,
+   "unif->sexp-": 0.07,
+   "unif->unif": 0.0
+  }
+ },
+ "gauss": [
+  {
+   "b": 0.6,
+   "m": 148,
+   "gate_open": 0.0825,
+   "mean_p": 0.4928763893862712
+  },
+  {
+   "b": 0.3,
+   "m": 400,
+   "gate_open": 0.0775,
+   "mean_p": 0.4964503842866854
+  }
+ ],
+ "max_abs_p_diff_vs_module": 2.2343238370581275e-15,
+ "reps": 400,
+ "seed": 99112233
+}

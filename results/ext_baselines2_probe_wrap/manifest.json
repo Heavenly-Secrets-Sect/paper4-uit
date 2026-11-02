@@ -1,0 +1,84 @@
+{
+  "config": {
+    "name": "ext_baselines2_probe_wrap",
+    "purpose": "Plumbing check of run_eval.py on D-07H development (2 topologies, T=80, calibration on 3 D-07H topologies). Not evaluation.",
+    "T": [
+      80
+    ],
+    "damage": {
+      "kinds": [
+        "missing"
+      ],
+      "rates": [
+        0.2
+      ]
+    },
+    "methods": [
+      "tolerant_v4",
+      "pselect_union_v2",
+      "pselect_union_v2_cal",
+      "bvar_minnesota_v2",
+      "bvar_minnesota_v2_cal"
+    ],
+    "paired_references": [
+      "tolerant_v4"
+    ],
+    "calibrate_methods": [
+      "pselect_union_v2_cal",
+      "bvar_minnesota_v2_cal"
+    ],
+    "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+    "calibration": {
+      "bank": "D-07H",
+      "split": "development",
+      "max_topologies": 3,
+      "replicates": 1,
+      "kinds": [
+        "missing"
+      ],
+      "rates": [
+        0.2
+      ]
+    },
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": 2,
+    "replicates": 1,
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20261102
+  },
+  "seconds": 4.0,
+  "n_rows": 20,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+    }
+  ]
+}

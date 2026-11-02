@@ -1,0 +1,63 @@
+{
+ "name": "ext_r5v52_p2",
+ "bank": "D-07",
+ "split": "development",
+ "max_topologies": null,
+ "replicates": 3,
+ "seed_base": 70261102,
+ "unit_offset": 0,
+ "red_calibration": "results/ext_r5v52_cal/calibration.json",
+ "H": 4,
+ "n_boot": 199,
+ "tau_effect": 0.1,
+ "generator": {
+  "lag_max": 2,
+  "q0": 0.3,
+  "cross_coef": [
+   0.3,
+   0.8
+  ],
+  "self_coef": [
+   0.2,
+   0.6
+  ],
+  "noise_var": [
+   0.5,
+   1.5
+  ],
+  "rho_max": 0.9,
+  "burn_in": 200
+ },
+ "T": [
+  19,
+  25,
+  30,
+  35
+ ],
+ "cells": [
+  [
+   "extra",
+   0.2
+  ],
+  [
+   "missing",
+   0.2
+  ],
+  [
+   "reversed",
+   0.2
+  ]
+ ],
+ "shock": "gauss",
+ "scenario": {
+  "name": "clean"
+ },
+ "methods": [
+  "tolerant_v5_1",
+  "tolerant_v5_2",
+  "plugin_hs_cal",
+  "tolerant_v5_2_fredB"
+ ],
+ "purpose": "r5v52 P2: region grid lag_max 2 x T{19,25,30,35} x {extra,missing,reversed}-0.2, D-07 development, seed_base 70261102.",
+ "red_calibration_B": "results/ext_r5hubscreen2_cal/calibration.json"
+}

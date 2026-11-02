@@ -1,0 +1,16 @@
+{
+  "verifier": "verify3_tlp3",
+  "checks": {
+    "preflight_rerun": "ok true, registry resolves to ext_tlp/ext_tlp2, no duplicate names (results/ext_verify3_tlp3/preflight_rerun.json)",
+    "k3_k4_repro": "analyzer --dev on results/ext_tlp3_checks/k3_rows.jsonl / k4_rows.jsonl reproduces CONFIRMED-A / CONFIRMED-A' with identical cells (k3_repro/, k4_repro/)",
+    "known_truth": "results/ext_verify3_tlp3/known_truth.json and holm_gate.json: holm() matches reference (max diff 0); A, A', NOT CONFIRMED, pure-view loss, incomplete all as specified; raw-vs-Holm distinction correct",
+    "config_diff": "ext_tlp3_p4h2 == ext_tlp2_p4h2 except name/purpose; vs ext_v51_p4h2 and ext_v51fix_p4h2: same kinds/rates/seed/generator/bank/replicates; mod|* factors equal in both frozen files",
+    "smoke": "168 rows, 168 ok, 233.2 s"
+  },
+  "defects": {
+    "D1_coverage_edge": "If every method fails for a (unit, cell), the analyzer drops that unit from the coverage denominator (n_nonnull taken only from ok rows), contrary to doc 3.2 'run fail counts as uncovering nothing over all expected runs'. Synthetic case: 6 units all-fail in 80|extra|0.2 -> analyzer cov(v4)=0.95, CONFIRMED-A; spec text gives 0.855 -> gate win lost -> A' at best.",
+    "D2_stale_P1": "analyzer v4_realisation_check and doc 3.4 point to results/ext_v51_p4h2 (P1), superseded at 06:04Z by ext_v51fix_p4h2 ('ext_v51_p4h2 must NOT be run'); the descriptive check will always print 'not available'.",
+    "D3_manifest_registry_list": "registry_dependents_at_spec_time omits src/paper4/ext_v51fix.py (exists 06:04:47Z, loaded by their own 06:09:57Z preflight).",
+    "D4_fairness": "TLP versions uncalibrated vs v4 with D-07H-tuned width factors; paper sentence A/A' does not say 'uncalibrated'; calibrated TLP dropped from P5 (synthesis weakness 3)."
+  }
+}

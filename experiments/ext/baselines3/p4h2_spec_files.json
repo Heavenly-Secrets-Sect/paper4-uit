@@ -1,0 +1,142 @@
+{
+ "spec": "P7 (R3-1, baselines3): tolerant_v4 and tolerant_v5_1 vs full-budget baseline envelope; docs/ext/baselines3.md",
+ "frozen_utc": "2026-11-02T06:43:04Z",
+ "files": {
+  "experiments/run_experiment.py": {
+   "role": "runner (unchanged; bug E1 not fixed, see doc)",
+   "sha256": "2255693c9e3f56d186667e92136c22ad0e36f4520b729c4a07a9f248bf4c39d8"
+  },
+  "experiments/ext/baselines3/run_cells.py": {
+   "role": "wrapper: cell subset with positions kept, skip_calibration, expected_modules guard, baselines3_manifest.json",
+   "sha256": "0e22e034e497748d68f95c6b938e67ecceb43414bfcfc210e846d92b0ae0d515"
+  },
+  "experiments/configs/ext_baselines3_p4h2.json": {
+   "role": "frozen confirmatory config (bank P4-H2, split confirmatory)",
+   "sha256": "61bdc61334ef55eb17fcda4f0657db0bb6590e8eaa23dfc8f36f2e5a35862856"
+  },
+  "experiments/ext/baselines3/frozen_calibration_p7.json": {
+   "role": "combined frozen width factors (all D-07H development)",
+   "sha256": "b6e4a8501328ff4613d8b81ff092bf0a3643705bdbb3182fcc478207f96b9ac9"
+  },
+  "experiments/ext/baselines3/p7_win_set.json": {
+   "role": "W_D07(m): comparisons tested on P4-H2 (from D-07 development, Holm)",
+   "sha256": "06d4eebce9994390b1a9c39d68c2a908afc6f359e0d021d34ade2ad248d2d49b"
+  },
+  "experiments/ext/baselines3/analyze.py": {
+   "role": "scoring functions (imported by analyze_p4h2.py)",
+   "sha256": "6d24f176307c8664e71cab91636b061261c005bc5459a1e74cb2d4c122c70d40"
+  },
+  "experiments/ext/baselines3/analyze_p4h2.py": {
+   "role": "confirmatory analyzer",
+   "sha256": "9bef0f5a8c7cf81f88cbb44d7e6cae7d4555255a74225584a3b09450e3c96bc4"
+  },
+  "src/paper4/ext_baselines3.py": {
+   "role": "pselect_union_v3, pselect_union_v3_cal, pselect_cal, fullvar_cal",
+   "sha256": "e53f1b1cb043873749dd1897fda4d96fcf1c9952dddca3b16f6cbbb8dd06eb65"
+  },
+  "src/paper4/ext_baselines2.py": {
+   "role": "bvar_minnesota_v2_cal",
+   "sha256": "2a145b5120890cb4c5c9dc86458fc27b7155140bcaad184da99420e64f237b67"
+  },
+  "src/paper4/ext_tlp.py": {
+   "role": "targeted_lp, targeted_lp_cal (cache path)",
+   "sha256": "c499681cb2f23929b5ea3ae7845d894dd608ad041cbb63873b8e4a163da8816c"
+  },
+  "src/paper4/ext_tlp2.py": {
+   "role": "tlp2_db_p3",
+   "sha256": "5a628b4fd142c4858ff8a771d7b7d970cadbef38f926fcef5d9987af7158984a"
+  },
+  "src/paper4/ext_v51.py": {
+   "role": "tolerant_v5_1 (TAU = 6.6083)",
+   "sha256": "48bb21ad32d850483d9d46684b72a50c6396029f70d60112fbbf738bc58ca286"
+  },
+  "src/paper4/ext_narrow.py": {
+   "role": "imported by ext_v51 (select_open, opened_terms, _prescale)",
+   "sha256": "9fc15ae7147252cd7c67d6b28c3de6bcd38a410f9f8f31c90656e80f4985f728"
+  },
+  "src/paper4/__init__.py": {
+   "role": "package",
+   "sha256": "22b8f4c0f60e546a2204f29121f338305ddb01841144b3b25a70b218a0e2c33d"
+  },
+  "src/paper4/methods.py": {
+   "role": "tolerant_v3/v4, pselect_union, calibrate_width",
+   "sha256": "85bc718f0d222fbe47c4217d1e1b05ee702f1dc89c464fc35d9da4546f19cfbd"
+  },
+  "src/paper4/estimator.py": {
+   "role": "fits and bootstrap",
+   "sha256": "70314e984e203b6838b6481394423a717411579eb0d08bc39cd295c46cc44c2d"
+  },
+  "src/paper4/metrics.py": {
+   "role": "scoring",
+   "sha256": "32116e29fc22cc1630f0b5c98d4e9ab811b7c8f7108c8dda58833cb737bbdf08"
+  },
+  "src/paper4/generator.py": {
+   "role": "data",
+   "sha256": "84a52a8130a1173d9c2f6aca5c3ec2ce5472504a1fc6bc4fb7e4ab88f093ab2d"
+  },
+  "src/paper4/skeleton.py": {
+   "role": "skeletons and damage",
+   "sha256": "c78ba5b930a49a0d06b9973432431f62cb72cfd7a8637a022d900d346e234b5e"
+  },
+  "src/paper4/effects.py": {
+   "role": "IRF, C(H)",
+   "sha256": "5fd366609bb368ecf784a3d65388b88e942cec07a255c96546f5e4640921f95a"
+  },
+  "src/paper4/topology.py": {
+   "role": "bank loader",
+   "sha256": "74be60eec6e7aecf250bf171fbd87d9c6170c3007f08e87431014f1a32578588"
+  },
+  "src/paper4/diagnose.py": {
+   "role": "structural_pvalues (pselect_union_v3, bvar seeds none)",
+   "sha256": "5970f39000a02d22af65a38eeb082ffabfd2b12773b6d06278a1b3f32be945c8"
+  },
+  "experiments/calibration/tolerant_v4_frozen.json": {
+   "role": "provenance of mod|* (values copied into frozen_calibration_p7.json; not read at run time)",
+   "sha256": "9b630cab6b664c92c9e3098d5852a2260de039f5cb49c7b1dd2a482c3119b122"
+  },
+  "experiments/ext/v51/frozen_v4_v51.json": {
+   "role": "provenance of tolerant_v5_1|* (copied; not read at run time)",
+   "sha256": "43ac16aa457a534e5785b9df9502d690e2074bddd2643b7a879cfde1cb60aab1"
+  },
+  "results/ext_redteam_calbase/calibration.json": {
+   "role": "provenance of pselect_cal|*, fullvar_cal|* (copied)",
+   "sha256": "5414d9c165abd89bba1d232ea0cfade4b390a6aa612bcdc38e1ea519b92b1f8b"
+  },
+  "results/ext_tlp_eval/calibration.json": {
+   "role": "provenance of targeted_lp_cal|* (copied)",
+   "sha256": "0914f9657356df20b3560ab944057fd6260ce9038aabe48a07f634b62310bd5f"
+  },
+  "results/ext_baselines2_eval/calibration.json": {
+   "role": "provenance of bvar_minnesota_v2_cal|* (copied)",
+   "sha256": "8dd24bb0f7a5a9a0d1d7e7e94812e2f13a894375bb6a0a28fcd91be6adc90568"
+  },
+  "results/ext_baselines3_cal/calibration.json": {
+   "role": "provenance of pselect_union_v3_cal|* (copied)",
+   "sha256": "c12a3ca11db5daaad9fc32585db0179626441f8865edb53c8d542bb29dd08bef"
+  }
+ },
+ "other_ext_modules_imported_by_runner": {
+  "src/paper4/ext_auto5.py": "e5f8c973b17865a54401549c05a17e9412080a46e637a8b5040e46c024c432d7",
+  "src/paper4/ext_eiv.py": "972ebb563abdb70478395749f91ef1d22ef501ac66bbc0eccfa05714d7f8ac93",
+  "src/paper4/ext_eiv2.py": "9f181387c6c1898437ce9d8c119faae25a5475624315c6693a1e3dd229c27924",
+  "src/paper4/ext_gate.py": "42cf728548c1cc11d650971eec094b3f25c800a8ca40d98fe742d62ab8f6b85a",
+  "src/paper4/ext_revlag.py": "81e9988b2a18b30282f3b78758135510f11eab03cbe213e98a5e50074e77e00e",
+  "src/paper4/ext_revlag3.py": "976f99007ef7d43405cf9e7225c2eb185792ea2ae605a8f78a1141f4f6972c91",
+  "src/paper4/ext_textinfo.py": "0ca679d6c2147fd0b10fa4277652ab6b27d776d35b5a1f67a1400a55fc240475",
+  "src/paper4/ext_v4c.py": "6fa943da80b8c73cf630be9be18654d8ac135e81fa3fcd5b19e2ee6c2c220137",
+  "src/paper4/ext_v51fix.py": "2c1cc70c34b332250e3d67c944752e01abea7ffbb2d49e346a75416ffb4c87c4"
+ },
+ "other_ext_modules_note": "The runner imports every src/paper4/ext_*.py. They cannot change P7 methods unless they register the same names (the wrapper aborts if any P7 method is registered by another module: expected_modules) or monkeypatch shared modules; the lead should hash all src/paper4/*.py at run time.",
+ "data_not_opened": [
+  "data/topology_bank/P4-H2/p4h2_manifest.json (lead hashes it; expected sha256 in data/topology_bank/PROVENANCE.md)"
+ ],
+ "interpreter": "/Users/kietnt/miniconda3/bin/python (numpy 2.5.4); the D-07 dry run used /usr/bin/python3 (CLT, numpy 2.0.2); identical outputs on a D-07H check (results/ext_baselines3_budget/interpreter_check.json)",
+ "commands": [
+  "/Users/kietnt/miniconda3/bin/python experiments/ext/baselines3/run_cells.py --config experiments/configs/ext_baselines3_p4h2.json --workers 3",
+  "/Users/kietnt/miniconda3/bin/python experiments/ext/baselines3/analyze_p4h2.py"
+ ],
+ "precondition": "results/ext_baselines3_p4h2/ must not exist before the run (single run); if it is interrupted before runs.jsonl is written, rerun once with the same config and disclose",
+ "expected_rows": 2400,
+ "expected_runtime_workers3": "see docs/ext/baselines3.md section 6 (filled from the D-07 run)",
+ "confirmatory_rule": "see docs/ext/baselines3.md section 3.5 / analyze_p4h2.py docstring"
+}

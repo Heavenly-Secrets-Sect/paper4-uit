@@ -1,0 +1,83 @@
+{
+  "name": "ext_baselines3_cal",
+  "purpose": "R3-1 (baselines3): calibration-only run on D-07H development (no main phase). Tunes the two-sided width factor of pselect_union_v3_cal per (T, stated kind) for none/missing cells, with the a2 kinds list so that calibration skeletons and cell positions equal those of every other D-07H calibration. Run through experiments/ext/baselines3/run_cells.py --calibration-only.",
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "pselect_union_v3_cal"
+  ],
+  "calibrate_methods": [
+    "pselect_union_v3_cal"
+  ],
+  "cal_only_cells": [
+    [
+      "none",
+      0.0
+    ],
+    [
+      "missing",
+      0.2
+    ],
+    [
+      "missing",
+      0.5
+    ]
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "expected_modules": {
+    "pselect_union_v3_cal": "paper4.ext_baselines3"
+  }
+}

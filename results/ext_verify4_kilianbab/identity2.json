@@ -1,0 +1,227 @@
+{
+ "u3|T40|none|0.0": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T40|extra|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T40|extra|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T40|missing|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u3|T40|missing|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u3|T40|reversed|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T40|reversed|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T80|none|0.0": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T80|extra|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T80|extra|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T80|missing|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u3|T80|missing|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u3|T80|reversed|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u3|T80|reversed|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T40|none|0.0": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T40|extra|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T40|extra|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T40|missing|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u7|T40|missing|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u7|T40|reversed|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T40|reversed|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T80|none|0.0": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T80|extra|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T80|extra|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T80|missing|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u7|T80|missing|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 1
+ },
+ "u7|T80|reversed|0.2": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "u7|T80|reversed|0.5": {
+  "same": true,
+  "status": [
+   "ok",
+   "ok"
+  ],
+  "targeted": 0
+ },
+ "all_same": true
+}

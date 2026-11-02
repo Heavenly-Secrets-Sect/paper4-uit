@@ -1,0 +1,76 @@
+{
+ "name": "ext_r5v52_smoke_ngmix",
+ "bank": "D-07H",
+ "split": "development",
+ "max_topologies": 2,
+ "replicates": 1,
+ "seed_base": 70261102,
+ "unit_offset": 800000,
+ "red_calibration": "results/ext_r5v52_smoke_cal/calibration.json",
+ "H": 4,
+ "n_boot": 19,
+ "tau_effect": 0.1,
+ "generator": {
+  "lag_max": 2,
+  "q0": 0.3,
+  "cross_coef": [
+   0.3,
+   0.8
+  ],
+  "self_coef": [
+   0.2,
+   0.6
+  ],
+  "noise_var": [
+   0.5,
+   1.5
+  ],
+  "rho_max": 0.9,
+  "burn_in": 200
+ },
+ "T": [
+  40,
+  80,
+  150
+ ],
+ "cells": [
+  [
+   "none",
+   0.0
+  ],
+  [
+   "extra",
+   0.2
+  ],
+  [
+   "extra",
+   0.5
+  ],
+  [
+   "missing",
+   0.2
+  ],
+  [
+   "missing",
+   0.5
+  ],
+  [
+   "reversed",
+   0.2
+  ],
+  [
+   "reversed",
+   0.5
+  ]
+ ],
+ "shock": "ng_mix",
+ "scenario": {
+  "name": "clean"
+ },
+ "methods": [
+  "tolerant_v5_1",
+  "tolerant_v5_2"
+ ],
+ "purpose": "SMOKE (pipeline check only, D-07H development, units seed_base + 800000, n_boot 19); not evaluation.",
+ "red_calibration_B": "results/ext_r5hubscreen2_cal/calibration.json"
+}

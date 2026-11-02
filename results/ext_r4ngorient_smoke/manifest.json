@@ -1,0 +1,179 @@
+{
+  "config": {
+    "name": "ext_r4ngorient_smoke",
+    "purpose": "Smoke/timing on D-07H development only (no metric read).",
+    "phase": "main",
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 20961102,
+    "shock": "ng_mix",
+    "methods": [
+      "oracle",
+      "tolerant_v5_1",
+      "tolerant_ngA",
+      "tolerant_ngB"
+    ],
+    "stream_of": {
+      "tolerant_ngA": "tolerant_v5_1",
+      "tolerant_ngB": "tolerant_v5_1"
+    },
+    "calibrate_methods": []
+  },
+  "phase": "main",
+  "seconds": 47.6,
+  "n_units": 3,
+  "n_rows": 252,
+  "n_diag": 126,
+  "workers": 3,
+  "python": "/Users/kietnt/miniconda3/bin/python",
+  "numpy": "2.5.4",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "method_modules": {
+    "oracle": "built-in",
+    "tolerant_v5_1": "paper4.ext_v51",
+    "tolerant_ngA": "paper4.ext_r4ngorient",
+    "tolerant_ngB": "paper4.ext_r4ngorient"
+  },
+  "frozen_calibration_sha256": null,
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "b906503c5185aa999641f3d37d6031e1fbe633a173799b9ef4bfca48a3dd9460"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "bb1728abdeaeb9591134027ecca909632511eaaaa6f7dbdac88a9b7d8351223b"
+    },
+    {
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "e23b356e6b5805d611b4bddadeb02d7033ddca2005f68cc17362b040f75223b7"
+    },
+    {
+      "id": "syn_dag_03",
+      "profile": "erdos_renyi",
+      "sha256": "601c985a6224c3707d137f6db617aab5449f7b91cdd36a0bea830c3af6c36993"
+    },
+    {
+      "id": "syn_dag_04",
+      "profile": "erdos_renyi",
+      "sha256": "635a2017bfb80ddb1f8a818bf04fd7fa7722df918af46766d2a144b578274c38"
+    },
+    {
+      "id": "syn_dag_05",
+      "profile": "erdos_renyi",
+      "sha256": "69a57bed9241a8578b132eaf59ca9e7392ba2ffa6897096a4fd337ddd993ed2b"
+    },
+    {
+      "id": "syn_dag_06",
+      "profile": "erdos_renyi",
+      "sha256": "a2a4f772287b32444a89f2307a507484e4decfb91cb6bad671422066fdbce231"
+    },
+    {
+      "id": "syn_dag_07",
+      "profile": "erdos_renyi",
+      "sha256": "9747ff741ef66b8f99784537e0eed59ab066af9cf8dd65fe3be7c18bc1eba1ae"
+    },
+    {
+      "id": "syn_dag_08",
+      "profile": "erdos_renyi",
+      "sha256": "c2e6ec661b14c259894e05167c8b0d45c48249f1af7186d68b6d863dd619bf19"
+    },
+    {
+      "id": "syn_dag_09",
+      "profile": "erdos_renyi",
+      "sha256": "04d919677b4926763a5fc2c6f856c697b8680fcdfd521f4eae5067b5dce924e1"
+    },
+    {
+      "id": "syn_dag_10",
+      "profile": "scale_free_hub",
+      "sha256": "2bf2bdb611468ae869c3349a6a6a4114451e21e61f30eeba09e056a8ed737fe6"
+    },
+    {
+      "id": "syn_dag_11",
+      "profile": "scale_free_hub",
+      "sha256": "f2b4cdd473bc6ca510188f6b5db356a6537b1ce0c411dc6c998af8e134b4512f"
+    },
+    {
+      "id": "syn_dag_12",
+      "profile": "scale_free_hub",
+      "sha256": "cbcb9cdef24575307d73520b29c7d994c13882cb9d18d8cb9773516235f459b5"
+    },
+    {
+      "id": "syn_dag_13",
+      "profile": "scale_free_hub",
+      "sha256": "5fd7d38a0709d070b7b056dca69868eec1c7bd9646bac8124b36c11819eacc42"
+    },
+    {
+      "id": "syn_dag_14",
+      "profile": "scale_free_hub",
+      "sha256": "3ce3e5039c85f3eb6c818ede8f87f0bf6b4062ed0d0650134ad3f49eacbe4fd3"
+    },
+    {
+      "id": "syn_dag_15",
+      "profile": "scale_free_hub",
+      "sha256": "034ecbfa6a6c82e463c945038638543771967cfe4dafdf0fff16c8c1292f4c9f"
+    },
+    {
+      "id": "syn_dag_16",
+      "profile": "scale_free_hub",
+      "sha256": "7059333106e0619c37791d32eb59f5d0e15d0c32fe656ae9840d6f2b32b72ab5"
+    },
+    {
+      "id": "syn_dag_17",
+      "profile": "scale_free_hub",
+      "sha256": "6b952b5b9b2bc7e833b4e6fad285507c3af03a8202ef8b09b4d54f721327ab60"
+    },
+    {
+      "id": "syn_dag_18",
+      "profile": "scale_free_hub",
+      "sha256": "96777fd5d9a85e8b42d310b0a6e3837ac7c6d99e5629e9246eed89d501880423"
+    },
+    {
+      "id": "syn_dag_19",
+      "profile": "scale_free_hub",
+      "sha256": "4a07dadbcbe79c1c968b2e808d942853be9cb50cfdc876277b87881551181589"
+    }
+  ]
+}

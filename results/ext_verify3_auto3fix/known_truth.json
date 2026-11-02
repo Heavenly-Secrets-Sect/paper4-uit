@@ -1,0 +1,116 @@
+{
+ "K0_all_ok": {
+  "rule": true,
+  "integrity": true,
+  "exp": true
+ },
+ "K1_cov_exactly_0.90": {
+  "cov": 0.9,
+  "ok": true,
+  "exp_ok": true
+ },
+ "K2_3_failed": {
+  "cov": 0.95,
+  "n_bad": 3,
+  "ok": true,
+  "exp": [
+   0.95,
+   3,
+   true
+  ]
+ },
+ "K3_4_failed": {
+  "cov": 0.9333333333333333,
+  "n_bad": 4,
+  "ok": false,
+  "rule": false,
+  "exp": [
+   0.9333,
+   4,
+   false,
+   false
+  ]
+ },
+ "K4_4_absent": {
+  "cov": 0.9333333333333333,
+  "n_bad": 4,
+  "ok": false,
+  "exp": [
+   0.9333,
+   4,
+   false
+  ]
+ },
+ "K5_unit_without_ok_row": {
+  "C1": false,
+  "C2": true,
+  "C3": false,
+  "undef": 1,
+  "n_bad": 1,
+  "exp": "C1 False (undefined=1), C2 True (59 pairs >= 57), C3 False"
+ },
+ "K6_v4_fail_3": {
+  "n_pair": 57,
+  "ok": true,
+  "exp_ok": true
+ },
+ "K6_v4_fail_4": {
+  "n_pair": 56,
+  "ok": false,
+  "exp_ok": false
+ },
+ "K7_ratio_1.35": {
+  "ratio": 1.35,
+  "ok": true,
+  "exp_ok": true
+ },
+ "K7_ratio_1.36": {
+  "ratio": 1.3599999999999999,
+  "ok": false,
+  "exp_ok": false
+ },
+ "K8_paired_vs_unpaired": {
+  "ratio_paired": 1.0,
+  "ratio_unpaired": 1.0166666666666666,
+  "exp": [
+   1.0,
+   1.0166666666666666
+  ]
+ },
+ "K9_L1_cov_0.85": {
+  "cov": 0.85,
+  "ok": false,
+  "exp": [
+   0.85,
+   false
+  ]
+ },
+ "K9b_config2_clean_not_ruled": {
+  "rule": true,
+  "exp": true
+ },
+ "K10_I1_identical": {
+  "I1": true,
+  "exp": true
+ },
+ "K10b_I1_drift": {
+  "I1": false,
+  "exp": false
+ },
+ "K11_I4_k0_none": {
+  "I4": true,
+  "exp": true
+ },
+ "K11b_I4_wrong_factor": {
+  "I4": false,
+  "exp": false
+ },
+ "K12_duplicate": {
+  "I2": false,
+  "exp": false
+ },
+ "K13_I3_wrong_width": {
+  "I3": false,
+  "exp": false
+ }
+}

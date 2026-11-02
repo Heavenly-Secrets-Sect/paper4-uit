@@ -13,3 +13,14 @@ results/**/skeletons.jsonl
 # Produced by the superseded pilot runner
 results/pilot_rq41/
 results/pilot_rq41_boot/
+
+# secrets
+.env
+.env.*
+results/llm_cache/
+
+# large regenerable artefacts (results/*/runs.jsonl are already ignored)
+results/**/*.npz
+results/**/diag.jsonl
+results/**/*_pairs.jsonl
+experiments/ext/**/out/

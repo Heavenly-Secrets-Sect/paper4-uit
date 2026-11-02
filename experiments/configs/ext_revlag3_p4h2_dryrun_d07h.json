@@ -1,0 +1,53 @@
+{
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": 6,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v4",
+    "tolerant_v4L"
+  ],
+  "seed_base": 20261102,
+  "name": "ext_revlag3_p4h2_dryrun_d07h",
+  "purpose": "Dry run of the corrected P3/P4 pipeline on D-07H development ONLY (6 topologies x 1 replicate): checks run_pairs3 + analyze_lag_p4h2_v2 + analyze_flag_p4h2_v2 end to end and the run time. Not used for any claim.",
+  "frozen_calibration_sha256": "9b630cab6b664c92c9e3098d5852a2260de039f5cb49c7b1dd2a482c3119b122",
+  "calibration_note": "No re-calibration. tolerant_v4 is widened by mod|T|kind of frozen_calibration (read by run_pairs3 from this key; sha256 checked). tolerant_v4L widens through src/paper4/ext_revlag.py frozen_factor (path hard-coded to the same file); run_pairs3 aborts unless that file's mod|* factors equal frozen_calibration's."
+}

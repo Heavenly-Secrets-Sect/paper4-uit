@@ -1,0 +1,433 @@
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: divide by zero encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: overflow encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: invalid value encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: divide by zero encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: overflow encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: invalid value encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: divide by zero encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: overflow encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: invalid value encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: divide by zero encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: overflow encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: invalid value encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: divide by zero encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: overflow encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: invalid value encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: divide by zero encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: overflow encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: invalid value encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: divide by zero encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: overflow encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: invalid value encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: divide by zero encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: overflow encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: invalid value encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: divide by zero encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: overflow encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: invalid value encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: divide by zero encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: overflow encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: invalid value encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: divide by zero encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: overflow encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: invalid value encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: divide by zero encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: overflow encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: invalid value encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: divide by zero encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: overflow encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: invalid value encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: divide by zero encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: overflow encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: invalid value encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: divide by zero encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: overflow encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: invalid value encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: divide by zero encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: overflow encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: invalid value encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: divide by zero encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: overflow encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: invalid value encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: divide by zero encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: overflow encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: invalid value encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: divide by zero encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: overflow encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: invalid value encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: divide by zero encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: overflow encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: invalid value encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: divide by zero encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: overflow encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: invalid value encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: divide by zero encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: overflow encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: invalid value encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: divide by zero encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: overflow encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: invalid value encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: divide by zero encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: overflow encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: invalid value encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: divide by zero encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: overflow encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: invalid value encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: divide by zero encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: overflow encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: invalid value encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: divide by zero encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: overflow encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: invalid value encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: divide by zero encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: overflow encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: invalid value encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: divide by zero encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: overflow encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: invalid value encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: divide by zero encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: overflow encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: invalid value encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: divide by zero encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: overflow encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: invalid value encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: divide by zero encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: overflow encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: invalid value encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: divide by zero encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: overflow encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:82: RuntimeWarning: invalid value encountered in matmul
+  G = Xc.T @ Xc
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: divide by zero encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: overflow encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: invalid value encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: divide by zero encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: overflow encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: invalid value encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: divide by zero encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: overflow encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:554: RuntimeWarning: invalid value encountered in matmul
+  S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: divide by zero encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: overflow encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:2311: RuntimeWarning: invalid value encountered in slogdet
+  sign, logdet = _umath_linalg.slogdet(a, signature=signature)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: divide by zero encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: overflow encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: invalid value encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: divide by zero encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: overflow encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: invalid value encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: divide by zero encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: overflow encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: invalid value encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: divide by zero encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: overflow encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: invalid value encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: divide by zero encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: overflow encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:563: RuntimeWarning: invalid value encountered in matmul
+  prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: divide by zero encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: overflow encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:565: RuntimeWarning: invalid value encountered in matmul
+  means.append(cov @ X.T @ y / s[j] ** 2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: divide by zero encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: overflow encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: invalid value encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: divide by zero encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: overflow encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: invalid value encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: divide by zero encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: overflow encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/estimator.py:93: RuntimeWarning: invalid value encountered in matmul
+  resid[:, j] = yc - Xc @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: divide by zero encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: overflow encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: invalid value encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: divide by zero encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: overflow encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: invalid value encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: divide by zero encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: overflow encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: invalid value encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: divide by zero encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: overflow encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: invalid value encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: divide by zero encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: overflow encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: invalid value encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: divide by zero encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: overflow encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: invalid value encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: divide by zero encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: overflow encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:599: RuntimeWarning: invalid value encountered in matmul
+  XtX_inv = np.linalg.inv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: divide by zero encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: overflow encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:600: RuntimeWarning: invalid value encountered in matmul
+  beta = XtX_inv @ X.T @ Y
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: divide by zero encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: overflow encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:601: RuntimeWarning: invalid value encountered in matmul
+  U = Y - X @ beta
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Library/Python/3.9/lib/python/site-packages/numpy/linalg/_linalg.py:3220: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: divide by zero encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: overflow encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: invalid value encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: divide by zero encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: overflow encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: invalid value encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: divide by zero encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: overflow encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:576: RuntimeWarning: invalid value encountered in matmul
+  draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: divide by zero encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: overflow encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: invalid value encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: divide by zero encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: overflow encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: invalid value encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: divide by zero encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: overflow encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+/Users/kietnt/Desktop/Workspace/Paper4_UIT/src/paper4/methods.py:368: RuntimeWarning: invalid value encountered in matmul
+  cov = s2 * np.linalg.pinv(X.T @ X)
+7560 rows in 1561.8 s -> /Users/kietnt/Desktop/Workspace/Paper4_UIT/results/ext_redteam_calbase

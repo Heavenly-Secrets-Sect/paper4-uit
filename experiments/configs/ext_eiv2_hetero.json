@@ -1,0 +1,83 @@
+{
+  "name": "ext_eiv2_hetero",
+  "purpose": "Extension eiv2 (round 2, R2-5): heterogeneous measurement noise across series (meas_noise < 0 = heterogeneous with mean ratio |value|, via experiments/ext/eiv2/run_hetero.py) plus homogeneous noise0.3; tolerant_eiv2 vs round-1 tolerant_eiv, tolerant_v4 (frozen factors) and plugin, D-07 development. Descriptive; pre-registered in docs/ext/eiv2.md.",
+  "T": [
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "noise0.3",
+      "meas_noise": 0.3
+    },
+    {
+      "name": "het0.3",
+      "meas_noise": -0.3
+    }
+  ],
+  "methods": [
+    "plugin",
+    "tolerant_v4",
+    "tolerant_eiv",
+    "tolerant_eiv2"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "calibrate_methods": [
+    "tolerant_eiv",
+    "tolerant_eiv2"
+  ],
+  "paired_references": [
+    "tolerant_v4",
+    "tolerant_eiv"
+  ],
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json"
+}

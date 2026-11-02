@@ -1,0 +1,244 @@
+{
+ "effective": {
+  "tolerant_v4c|40|none": 1.3,
+  "tolerant_v4c|40|extra": 1.3,
+  "tolerant_v4c|40|missing": 0.85,
+  "tolerant_v4c|40|reversed": 1.45,
+  "tolerant_v4c|80|none": 1.25,
+  "tolerant_v4c|80|extra": 1.25,
+  "tolerant_v4c|80|missing": 1.25,
+  "tolerant_v4c|80|reversed": 1.3,
+  "tolerant_v4c|150|none": 1.2,
+  "tolerant_v4c|150|extra": 1.2,
+  "tolerant_v4c|150|missing": 1.2,
+  "tolerant_v4c|150|reversed": 1.25,
+  "pselect_union_c2|40|none": 1.7,
+  "pselect_union_c2|40|extra": 1.55,
+  "pselect_union_c2|40|missing": 1.8,
+  "pselect_union_c2|40|reversed": 1.7,
+  "pselect_union_c2|80|none": 1.0,
+  "pselect_union_c2|80|extra": 1.0,
+  "pselect_union_c2|80|missing": 1.25,
+  "pselect_union_c2|80|reversed": 1.2,
+  "pselect_union_c2|150|none": 0.95,
+  "pselect_union_c2|150|extra": 0.9,
+  "pselect_union_c2|150|missing": 1.35,
+  "pselect_union_c2|150|reversed": 1.3,
+  "ida_union_c2|40|none": 1.05,
+  "ida_union_c2|40|extra": 1.05,
+  "ida_union_c2|40|missing": 7.2,
+  "ida_union_c2|40|reversed": 1.15,
+  "ida_union_c2|80|none": 1.0,
+  "ida_union_c2|80|extra": 1.05,
+  "ida_union_c2|80|missing": 8.9,
+  "ida_union_c2|80|reversed": 1.3,
+  "ida_union_c2|150|none": 0.95,
+  "ida_union_c2|150|extra": 0.95,
+  "ida_union_c2|150|missing": 8.9,
+  "ida_union_c2|150|reversed": 1.5,
+  "bvar_minnesota_c2|40|none": 1.45,
+  "bvar_minnesota_c2|40|extra": 1.35,
+  "bvar_minnesota_c2|40|missing": 3.55,
+  "bvar_minnesota_c2|40|reversed": 1.9,
+  "bvar_minnesota_c2|80|none": 1.4,
+  "bvar_minnesota_c2|80|extra": 1.3,
+  "bvar_minnesota_c2|80|missing": 4.0,
+  "bvar_minnesota_c2|80|reversed": 2.05,
+  "bvar_minnesota_c2|150|none": 1.25,
+  "bvar_minnesota_c2|150|extra": 1.15,
+  "bvar_minnesota_c2|150|missing": 3.75,
+  "bvar_minnesota_c2|150|reversed": 1.95
+ },
+ "v4c_minus_v4": {
+  "40|none": -0.1,
+  "40|extra": 0.0,
+  "40|missing": -0.15,
+  "40|reversed": 0.05,
+  "80|none": -0.05,
+  "80|extra": -0.05,
+  "80|missing": -0.05,
+  "80|reversed": -0.1,
+  "150|none": 0.0,
+  "150|extra": 0.0,
+  "150|missing": 0.0,
+  "150|reversed": -0.05
+ },
+ "below_1_outside_missing": [
+  "ida_union_c2|150|extra",
+  "ida_union_c2|150|none",
+  "pselect_union_c2|150|extra",
+  "pselect_union_c2|150|none"
+ ],
+ "c2_minus_E3": {
+  "pselect_union_c2|40|none": [
+   1.7,
+   1.4,
+   0.3
+  ],
+  "pselect_union_c2|40|extra": [
+   1.55,
+   1.5,
+   0.05
+  ],
+  "pselect_union_c2|40|missing": [
+   1.8,
+   1.8,
+   0.0
+  ],
+  "pselect_union_c2|40|reversed": [
+   1.7,
+   1.6,
+   0.1
+  ],
+  "pselect_union_c2|80|missing": [
+   1.25,
+   1.3,
+   -0.05
+  ],
+  "pselect_union_c2|80|reversed": [
+   1.2,
+   1.2,
+   0.0
+  ],
+  "pselect_union_c2|150|missing": [
+   1.35,
+   1.3,
+   0.05
+  ],
+  "pselect_union_c2|150|reversed": [
+   1.3,
+   1.3,
+   0.0
+  ],
+  "ida_union_c2|40|missing": [
+   7.2,
+   7.7,
+   -0.5
+  ],
+  "ida_union_c2|40|reversed": [
+   1.15,
+   1.2,
+   -0.05
+  ],
+  "ida_union_c2|80|extra": [
+   1.05,
+   1.1,
+   -0.05
+  ],
+  "ida_union_c2|80|missing": [
+   8.9,
+   8.9,
+   0.0
+  ],
+  "ida_union_c2|80|reversed": [
+   1.3,
+   1.3,
+   0.0
+  ],
+  "ida_union_c2|150|missing": [
+   8.9,
+   8.6,
+   0.3
+  ],
+  "ida_union_c2|150|reversed": [
+   1.5,
+   1.6,
+   -0.1
+  ],
+  "bvar_minnesota_c2|40|none": [
+   1.45,
+   1.5,
+   -0.05
+  ],
+  "bvar_minnesota_c2|40|extra": [
+   1.35,
+   1.4,
+   -0.05
+  ],
+  "bvar_minnesota_c2|40|missing": [
+   3.55,
+   3.6,
+   -0.05
+  ],
+  "bvar_minnesota_c2|40|reversed": [
+   1.9,
+   2.0,
+   -0.1
+  ],
+  "bvar_minnesota_c2|80|none": [
+   1.4,
+   1.4,
+   0.0
+  ],
+  "bvar_minnesota_c2|80|extra": [
+   1.3,
+   1.3,
+   0.0
+  ],
+  "bvar_minnesota_c2|80|missing": [
+   4.0,
+   4.0,
+   0.0
+  ],
+  "bvar_minnesota_c2|80|reversed": [
+   2.05,
+   2.0,
+   0.05
+  ],
+  "bvar_minnesota_c2|150|none": [
+   1.25,
+   1.2,
+   0.05
+  ],
+  "bvar_minnesota_c2|150|extra": [
+   1.15,
+   1.2,
+   -0.05
+  ],
+  "bvar_minnesota_c2|150|missing": [
+   3.75,
+   3.8,
+   -0.05
+  ],
+  "bvar_minnesota_c2|150|reversed": [
+   1.95,
+   1.9,
+   0.05
+  ]
+ },
+ "at_floor": [],
+ "at_ceiling": [],
+ "mod_keys_equal_frozen": true,
+ "c2_vs_E3_abs_diff_ge_0.1": {
+  "pselect_union_c2|40|none": [
+   1.7,
+   1.4,
+   0.3
+  ],
+  "pselect_union_c2|40|reversed": [
+   1.7,
+   1.6,
+   0.1
+  ],
+  "ida_union_c2|40|missing": [
+   7.2,
+   7.7,
+   -0.5
+  ],
+  "ida_union_c2|150|missing": [
+   8.9,
+   8.6,
+   0.3
+  ],
+  "ida_union_c2|150|reversed": [
+   1.5,
+   1.6,
+   -0.1
+  ],
+  "bvar_minnesota_c2|40|reversed": [
+   1.9,
+   2.0,
+   -0.1
+  ]
+ }
+}

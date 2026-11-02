@@ -1,0 +1,26 @@
+  f"IS={a[:,2].mean():.2f} width={np.median(a[:,3]):.2f} abserr={np.median(a[:,4]):.3f} r_hat={np.nanmean(a[:,5]):.3f} r_boot={np.nanmean(a[:,6]):.3f}")
+T=80 ratio=0.0 plugin        ok=6/6 cov=0.829 IS=3.18 width=1.32 abserr=0.312 r_hat=nan r_boot=nan
+T=80 ratio=0.0 plugin_eiv    ok=6/6 cov=0.864 IS=3.47 width=1.57 abserr=0.372 r_hat=0.045 r_boot=0.033
+T=80 ratio=0.0 tolerant_eiv  ok=6/6 cov=0.889 IS=3.12 width=1.75 abserr=0.315 r_hat=0.045 r_boot=0.032
+T=80 ratio=0.0 tolerant_v3   ok=6/6 cov=0.834 IS=2.47 width=1.46 abserr=0.315 r_hat=nan r_boot=nan
+T=80 ratio=0.1 plugin        ok=6/6 cov=0.839 IS=3.48 width=1.44 abserr=0.287 r_hat=nan r_boot=nan
+T=80 ratio=0.1 plugin_eiv    ok=6/6 cov=0.854 IS=3.52 width=1.75 abserr=0.292 r_hat=0.068 r_boot=0.051
+T=80 ratio=0.1 tolerant_eiv  ok=6/6 cov=0.879 IS=3.28 width=1.89 abserr=0.328 r_hat=0.068 r_boot=0.050
+T=80 ratio=0.1 tolerant_v3   ok=6/6 cov=0.819 IS=3.04 width=1.49 abserr=0.314 r_hat=nan r_boot=nan
+T=80 ratio=0.3 plugin        ok=6/6 cov=0.754 IS=4.77 width=1.43 abserr=0.351 r_hat=nan r_boot=nan
+T=80 ratio=0.3 plugin_eiv    ok=6/6 cov=0.819 IS=4.25 width=1.83 abserr=0.373 r_hat=0.140 r_boot=0.070
+T=80 ratio=0.3 tolerant_eiv  ok=6/6 cov=0.834 IS=4.10 width=1.98 abserr=0.411 r_hat=0.140 r_boot=0.068
+T=80 ratio=0.3 tolerant_v3   ok=6/6 cov=0.764 IS=4.34 width=1.47 abserr=0.418 r_hat=nan r_boot=nan
+T=150 ratio=0.0 plugin        ok=6/6 cov=0.869 IS=2.47 width=0.97 abserr=0.211 r_hat=nan r_boot=nan
+T=150 ratio=0.0 plugin_eiv    ok=6/6 cov=0.889 IS=2.41 width=1.06 abserr=0.193 r_hat=0.032 r_boot=0.030
+T=150 ratio=0.0 tolerant_eiv  ok=6/6 cov=0.965 IS=1.47 width=1.28 abserr=0.201 r_hat=0.032 r_boot=0.031
+T=150 ratio=0.0 tolerant_v3   ok=6/6 cov=0.910 IS=1.73 width=1.11 abserr=0.216 r_hat=nan r_boot=nan
+T=150 ratio=0.1 plugin        ok=6/6 cov=0.814 IS=3.17 width=0.99 abserr=0.240 r_hat=nan r_boot=nan
+T=150 ratio=0.1 plugin_eiv    ok=6/6 cov=0.854 IS=2.76 width=1.23 abserr=0.244 r_hat=0.090 r_boot=0.068
+T=150 ratio=0.1 tolerant_eiv  ok=6/6 cov=0.915 IS=1.98 width=1.43 abserr=0.246 r_hat=0.090 r_boot=0.067
+T=150 ratio=0.1 tolerant_v3   ok=6/6 cov=0.849 IS=2.26 width=1.10 abserr=0.290 r_hat=nan r_boot=nan
+T=150 ratio=0.3 plugin        ok=6/6 cov=0.678 IS=4.75 width=1.00 abserr=0.306 r_hat=nan r_boot=nan
+T=150 ratio=0.3 plugin_eiv    ok=6/6 cov=0.834 IS=3.40 width=1.41 abserr=0.307 r_hat=0.178 r_boot=0.114
+T=150 ratio=0.3 tolerant_eiv  ok=6/6 cov=0.884 IS=2.76 width=1.57 abserr=0.303 r_hat=0.178 r_boot=0.116
+T=150 ratio=0.3 tolerant_v3   ok=6/6 cov=0.709 IS=4.11 width=1.07 abserr=0.391 r_hat=nan r_boot=nan
+{'plugin': 7.2, 'plugin_eiv': 23.1, 'tolerant_v3': 7.8, 'tolerant_eiv': 24.4}

@@ -1,0 +1,21 @@
+chi2_sf_even max abs err vs scipy: 4.996003610813204e-16
+white independent m=78: size at 0.05 = 0.052
+white independent m=148: size at 0.05 = 0.051
+E0 edge, no confounder (gate null)     T=   80: flag rate A-like 0.008  D-like 0.075
+E0 edge, no confounder (gate null)     T=  150: flag rate A-like 0.007  D-like 0.091
+E0 edge, no confounder (gate null)     T= 1000: flag rate A-like 0.017  D-like 0.897
+no edge, no confounder                 T=   80: flag rate A-like 0.002  D-like 0.048
+no edge, no confounder                 T=  150: flag rate A-like 0.009  D-like 0.039
+no edge, no confounder                 T= 1000: flag rate A-like 0.000  D-like 0.050
+confounder phi0.8 lag0/lag0            T=   80: flag rate A-like 0.006  D-like 0.157
+confounder phi0.8 lag0/lag0            T=  150: flag rate A-like 0.003  D-like 0.338
+confounder phi0.8 lag0/lag0            T= 1000: flag rate A-like 0.017  D-like 1.000
+confounder phi0.5 lag0/lag0            T=   80: flag rate A-like 0.003  D-like 0.080
+confounder phi0.5 lag0/lag0            T=  150: flag rate A-like 0.007  D-like 0.123
+confounder phi0.5 lag0/lag0            T= 1000: flag rate A-like 0.003  D-like 0.933
+confounder phi0.8 lag0/lag2            T=   80: flag rate A-like 0.002  D-like 0.628
+confounder phi0.8 lag0/lag2            T=  150: flag rate A-like 0.007  D-like 0.927
+confounder phi0.8 lag0/lag2            T= 1000: flag rate A-like 0.007  D-like 1.000
+white confounder lag0/lag0             T=   80: flag rate A-like 0.004  D-like 0.032
+white confounder lag0/lag0             T=  150: flag rate A-like 0.006  D-like 0.045
+white confounder lag0/lag0             T= 1000: flag rate A-like 0.010  D-like 0.050

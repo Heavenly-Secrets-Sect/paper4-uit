@@ -1,0 +1,16 @@
+{
+ "what": "tolerant_v3, pselect_union_v3, tolerant_v5_1 on one D-07H development unit (syn topology 0 of D-07H, T80, missing-0.2), CLT python vs miniconda (experiments/ext/baselines3/interp_check.py)",
+ "clt": [
+  "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "2.0.2"
+ ],
+ "conda": [
+  "/Users/kietnt/miniconda3/bin/python",
+  "2.5.4"
+ ],
+ "max_abs_diff": {
+  "v3": 0.0,
+  "psv3": 0.0,
+  "v51": 0.0
+ }
+}

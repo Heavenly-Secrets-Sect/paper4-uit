@@ -1,0 +1,70 @@
+{
+ "name": "ext_r5hubscreen2_g",
+ "purpose": "r5hubscreen2 no-harm (a): Gaussian grid G = lag_max 2 x T{40,80,150} x (none + {extra,missing,reversed} x {0.2,0.5}), D-07 development, seed_base 70261102.",
+ "bank": "D-07",
+ "split": "development",
+ "max_topologies": null,
+ "replicates": 3,
+ "seed_base": 70261102,
+ "T": [
+  40,
+  80,
+  150
+ ],
+ "cells": [
+  [
+   "none",
+   0.0
+  ],
+  [
+   "extra",
+   0.2
+  ],
+  [
+   "extra",
+   0.5
+  ],
+  [
+   "missing",
+   0.2
+  ],
+  [
+   "missing",
+   0.5
+  ],
+  [
+   "reversed",
+   0.2
+  ],
+  [
+   "reversed",
+   0.5
+  ]
+ ],
+ "methods": [
+  "tolerant_v5_1",
+  "tolerant_v5_1_hs2"
+ ],
+ "red_calibration": "results/ext_r5hubscreen2_cal/calibration.json",
+ "H": 4,
+ "n_boot": 199,
+ "tau_effect": 0.1,
+ "generator": {
+  "lag_max": 2,
+  "q0": 0.3,
+  "cross_coef": [
+   0.3,
+   0.8
+  ],
+  "self_coef": [
+   0.2,
+   0.6
+  ],
+  "noise_var": [
+   0.5,
+   1.5
+  ],
+  "rho_max": 0.9,
+  "burn_in": 200
+ }
+}

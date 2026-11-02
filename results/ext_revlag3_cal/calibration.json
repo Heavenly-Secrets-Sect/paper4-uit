@@ -1,0 +1,23 @@
+{
+  "150|none|0.0": 1.2,
+  "150|reversed|0.2": 2.1,
+  "150|reversed|0.5": 2.7,
+  "40|none|0.0": 1.4,
+  "40|reversed|0.2": 1.5,
+  "40|reversed|0.5": 1.8,
+  "80|none|0.0": 1.3,
+  "80|reversed|0.2": 1.7,
+  "80|reversed|0.5": 2.2,
+  "tolerant_v4Rmap|150|none": 2.4,
+  "tolerant_v4Rmap|150|reversed": 2.7,
+  "tolerant_v4Rmap|40|none": 2.7,
+  "tolerant_v4Rmap|40|reversed": 3.2,
+  "tolerant_v4Rmap|80|none": 2.4,
+  "tolerant_v4Rmap|80|reversed": 2.8,
+  "tolerant_v4R|150|none": 2.4,
+  "tolerant_v4R|150|reversed": 2.5,
+  "tolerant_v4R|40|none": 2.6,
+  "tolerant_v4R|40|reversed": 3.0,
+  "tolerant_v4R|80|none": 2.4,
+  "tolerant_v4R|80|reversed": 2.7
+}

@@ -1,0 +1,35 @@
+{
+ "chi2": {
+  "max_abs_err_vs_scipy": 1.6653345369377348e-16,
+  "ok": true
+ },
+ "size_power": {
+  "m38_M4": 0.043,
+  "m78_M4": 0.0445,
+  "m148_M6": 0.0475,
+  "contemp_m78_M4": 0.05225,
+  "contemp_m148_M6": 0.05,
+  "latent_ar08_m78_M4": 0.791,
+  "latent_ar08_m148_M6": 0.976,
+  "ok": true
+ },
+ "identity": {
+  "disabled_missing": [
+   16,
+   16
+  ],
+  "kmiss0": [
+   48,
+   48
+  ],
+  "enabled_missing_differs": [
+   8,
+   8
+  ],
+  "ok": true
+ },
+ "leak": {
+  "ok": true
+ },
+ "all_ok": true
+}

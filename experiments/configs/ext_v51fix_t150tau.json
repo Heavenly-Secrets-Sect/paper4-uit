@@ -1,0 +1,70 @@
+{
+  "name": "ext_v51fix_t150tau",
+  "purpose": "v51fix (R3-2, docs/ext/v51fix.md 1.C): descriptive tau sensitivity. tolerant_v5_1_t294 (= tolerant_v5_1 with TAU 2.9370, all-lag branch at T=150) against frozen tolerant_v4, T=150 only, D-07 development, a2 cell list kept so tolerant_v4 rows equal ext_v51_eval (E1).",
+  "T": [
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v4",
+    "tolerant_v5_1_t294"
+  ],
+  "paired_references": [
+    "tolerant_v4"
+  ],
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "calibrate_methods": [
+    "tolerant_v5_1_t294"
+  ],
+  "frozen_calibration": "experiments/calibration/tolerant_v4_frozen.json"
+}

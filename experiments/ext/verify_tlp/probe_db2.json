@@ -1,0 +1,51 @@
+{
+  "name": "ext_verify_tlp_db",
+  "purpose": "Skeptic probe (verify_tlp): single vs double bootstrap TLP on cells the tlp probe did not cover (T=40; extra). D-07H development, 6 topologies, exploratory.",
+  "T": [
+    40,
+    80
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing"
+    ],
+    "rates": [
+      0.5
+    ]
+  },
+  "methods": [
+    "targeted_lp",
+    "targeted_lp_db"
+  ],
+  "calibrate_methods": [],
+  "paired_references": [
+    "targeted_lp"
+  ],
+  "bank": "D-07H",
+  "split": "development",
+  "max_topologies": 6,
+  "replicates": 1,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102
+}

@@ -1,0 +1,21 @@
+{
+ "rerun_w3_miniconda": {
+  "units": 22,
+  "seconds": 218.8,
+  "start": "2026-11-02T06:00:31Z",
+  "end": "2026-11-02T06:04:10Z"
+ },
+ "rerun_w3_clt": {
+  "units": 22,
+  "seconds": 284.8,
+  "end": "2026-11-02T06:08:55Z"
+ },
+ "extrapolated_full_ext_v4c_eval_workers3_seconds": {
+  "miniconda": 796,
+  "clt": 1036
+ },
+ "note": "22 units = 20 calibration (D-07H dev) + 2 evaluation units; full ext_v4c_eval = 20 + 60 = 80 units. Load average 4-8 during reruns.",
+ "v4c_doc_estimate": "10-12 min at 3 workers",
+ "workers6_run_seconds": 464.6,
+ "first_attempt": "started 2026-11-01T19:47:45Z (CLT python3, 3 workers), calibration.json at 19:52:14Z, cut 20:00Z still in evaluation phase (>12.25 min)"
+}

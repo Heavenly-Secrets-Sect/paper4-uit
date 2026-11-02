@@ -8,6 +8,13 @@ Baselines:
                      contemporaneous parents of the shocked node; Newey-West interval
 - ``bagging``    b5  b1 refitted on skeletons perturbed at the stated damage rate, on bootstrap data
 
+Published baselines (A2):
+- ``ida_union``       IDA-style: union of b1 intervals over the skeleton's Markov equivalence class
+- ``pselect_union``   adaptation of Chang, Guo and Malinsky: adjacencies re-selected from the data with
+                      perturbed tests, union of intervals over the selected graphs
+- ``bvar_minnesota``  Bayesian VAR, Minnesota-type prior tightened off the skeleton, hyperparameters
+                      by marginal likelihood
+
 Tolerant module, version 1 (rejected by the rules in docs/decision_rules.md, kept for the record):
 - ``soft``       the skeleton becomes a prior instead of a hard restriction: every node's lags
                  enter every equation, but lagged terms of pairs outside the skeleton get a ridge
@@ -32,6 +39,7 @@ Version 4:
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from itertools import combinations
 
 import numpy as np
 
@@ -398,3 +406,268 @@ def calibrate_width(res: MethodResult, c: float, name: str) -> MethodResult:
     out.name = name
     out.info = {**res.info, "c_T": c}
     return out
+
+
+# --------------------------------------------------------------------------- A2: published baselines
+
+def _cpdag(oriented: set[tuple[int, int]], n: int) -> tuple[set[tuple[int, int]], set[frozenset[int]]]:
+    """Compelled arrows and reversible lines of the Markov equivalence class of a DAG: keep the
+    arrows of its v-structures, then apply Meek rules R1-R3 until nothing changes."""
+    adj = {frozenset(e) for e in oriented}
+    parents = {v: {u for u, w in oriented if w == v} for v in range(n)}
+    arrows = set()
+    for c in range(n):
+        for a, b in combinations(sorted(parents[c]), 2):
+            if frozenset((a, b)) not in adj:
+                arrows |= {(a, c), (b, c)}
+    lines = {e for e in adj if not any((u, v) in arrows for u, v in (tuple(e), tuple(e)[::-1]))}
+    changed = True
+    while changed:
+        changed = False
+        for e in list(lines):
+            u, v = tuple(e)
+            for x, y in ((u, v), (v, u)):
+                r1 = any((a, x) in arrows and frozenset((a, y)) not in adj for a in range(n) if a != y)
+                r2 = any((x, b) in arrows and (b, y) in arrows for b in range(n))
+                r3 = any(frozenset((x, c)) in lines and frozenset((x, d)) in lines and (c, y) in arrows
+                         and (d, y) in arrows and frozenset((c, d)) not in adj
+                         for c, d in combinations(range(n), 2))
+                if r1 or r2 or r3:
+                    arrows.add((x, y))
+                    lines.discard(e)
+                    changed = True
+                    break
+    return arrows, lines
+
+
+def equivalence_class(oriented: set[tuple[int, int]], n: int, cap: int, rng) -> list[set[tuple[int, int]]]:
+    """DAGs Markov equivalent to ``oriented`` (same adjacencies, same v-structures), the given DAG
+    first. Exhaustive for up to 12 reversible lines; beyond that, or past ``cap`` members, a random
+    subset."""
+    arrows, lines = _cpdag(oriented, n)
+    lines = sorted(tuple(sorted(e)) for e in lines)
+    target_v = _vstructures(oriented, n)
+
+    def valid(dag):
+        return not _creates_cycle(dag, n) and _vstructures(dag, n) == target_v
+
+    if len(lines) <= 12:
+        members = []
+        for bits in range(2 ** len(lines)):
+            dag = arrows | {(u, v) if (bits >> i) & 1 else (v, u) for i, (u, v) in enumerate(lines)}
+            if valid(dag):
+                members.append(dag)
+    else:
+        members, seen = [], set()
+        for _ in range(50 * cap):
+            order = {node: r for r, node in enumerate(rng.permutation(n))}
+            dag = arrows | {(u, v) if order[u] < order[v] else (v, u) for u, v in lines}
+            key = frozenset(dag)
+            if key not in seen and valid(dag):
+                seen.add(key)
+                members.append(dag)
+            if len(members) >= cap:
+                break
+    members.sort(key=lambda d: d != oriented)
+    if not members or members[0] != oriented:
+        members.insert(0, set(oriented))
+    if len(members) > cap:
+        members = members[:1] + [members[i] for i in 1 + rng.permutation(len(members) - 1)[: cap - 1]]
+    return members
+
+
+def _vstructures(oriented: set[tuple[int, int]], n: int) -> set[tuple[int, int, int]]:
+    adj = {frozenset(e) for e in oriented}
+    parents = {v: sorted(u for u, w in oriented if w == v) for v in range(n)}
+    return {(a, c, b) for c in range(n) for a, b in combinations(parents[c], 2) if frozenset((a, b)) not in adj}
+
+
+def ida_union(data, skel: Skeleton, lag_max: int, H: int, n_boot: int, rng, *, cap: int = 16) -> MethodResult:
+    """IDA-style baseline (Maathuis, Kalisch and Buhlmann 2009): the skeleton's orientation is only
+    trusted up to Markov equivalence. Every member of the equivalence class (up to ``cap``) is fitted
+    as in ``plugin``; the reported interval is the union of the members' bootstrap intervals and the
+    point estimate the mean over members. Lagged terms do not depend on orientation (estimator.py),
+    so only the contemporaneous terms differ between members. It reads no stated damage and cannot
+    restore missing edges."""
+    members = equivalence_class(skel.oriented, skel.n, cap, rng)
+    per = max(10, n_boot // len(members))
+    Cs, los, his = [], [], []
+    for dag in members:
+        s = skel.copy()
+        s.oriented = set(dag)
+        r = plugin(data, s, lag_max, H, per, rng, name="ida_union")
+        if r.status != "ok":
+            continue
+        Cs.append(r.C)
+        los.append(r.lo)
+        his.append(r.hi)
+    if not Cs:
+        return _failed("ida_union", "underdetermined")
+    return MethodResult("ida_union", "ok", np.mean(Cs, axis=0), np.min(los, axis=0), np.max(his, axis=0),
+                        info={"n_members": len(members), "n_fitted": len(Cs)})
+
+
+def _ar_scale(x: np.ndarray, p: int) -> float:
+    """Residual standard deviation of a univariate AR(p): the Minnesota scale of a variable."""
+    X = np.column_stack([np.ones(len(x) - p)] + [x[p - k: len(x) - k] for k in range(1, p + 1)])
+    y = x[p:]
+    resid = y - X @ np.linalg.lstsq(X, y, rcond=None)[0]
+    return float(np.sqrt(resid @ resid / max(len(y) - p - 1, 1)))
+
+
+def bvar_minnesota(data, skel: Skeleton, lag_max: int, H: int, n_boot: int, rng,
+                   lambdas=(0.05, 0.1, 0.2, 0.5, 1.0), thetas=(0.01, 0.1, 0.3, 1.0)) -> MethodResult:
+    """Bayesian VAR baseline: every equation carries every node's lags 1..lag_max and the
+    skeleton's contemporaneous parents, with a Minnesota-type Gaussian prior centred at zero.
+
+    Prior variance of the coefficient of x_i at lag l in the equation of x_j is
+    (lambda / l)^2 * s_j^2 / s_i^2, multiplied by theta when i != j and the pair is off the
+    skeleton (the skeleton enters as prior tightness, not as a hard restriction). Contemporaneous
+    terms get a flat prior. s_i is the residual sd of a univariate AR(lag_max); the error variance
+    of equation j is fixed at s_j^2. lambda and theta are chosen jointly on a grid by maximising
+    the marginal likelihood of all equations, as in the hierarchical prior selection of Giannone,
+    Lenza and Primiceri (2015). The interval is the 2.5-97.5% range of C(H) over posterior draws.
+    """
+    T, n = data.shape
+    rows = np.arange(lag_max, T)
+    s = np.array([_ar_scale(data[:, i], lag_max) for i in range(n)])
+    eqs = []
+    for j in range(n):
+        tj = soft_terms(skel, j, lag_max)
+        X = np.column_stack([data[rows - lag, i] for i, lag in tj])
+        X = X - X.mean(axis=0)
+        y = data[rows, j] - data[rows, j].mean()
+        eqs.append((tj, X, y))
+
+    def prior_var(j, tj, lam, th):
+        v = np.empty(len(tj))
+        for idx, (i, lag) in enumerate(tj):
+            if lag == 0:
+                v[idx] = 1e4 * s[j] ** 2 / s[i] ** 2
+            else:
+                v[idx] = (lam / lag) ** 2 * s[j] ** 2 / s[i] ** 2 * (1.0 if i == j or skel.is_adjacent(i, j) else th)
+        return v
+
+    def log_ml(lam, th):
+        total = 0.0
+        for j, (tj, X, y) in enumerate(eqs):
+            S = s[j] ** 2 * np.eye(len(y)) + (X * prior_var(j, tj, lam, th)) @ X.T
+            sign, logdet = np.linalg.slogdet(S)
+            total += -0.5 * (logdet + y @ np.linalg.solve(S, y))
+        return total
+
+    lam, th = max(((lam, th) for lam in lambdas for th in thetas), key=lambda g: log_ml(*g))
+    p = lag_max
+    means, chols = [], []
+    for j, (tj, X, y) in enumerate(eqs):
+        prec = X.T @ X / s[j] ** 2 + np.diag(1.0 / prior_var(j, tj, lam, th))
+        cov = np.linalg.inv(prec)
+        means.append(cov @ X.T @ y / s[j] ** 2)
+        chols.append(np.linalg.cholesky((cov + cov.T) / 2))
+
+    def to_B(betas):
+        B = np.zeros((p + 1, n, n))
+        for j, (tj, _, _) in enumerate(eqs):
+            for (i, lag), b in zip(tj, betas[j]):
+                B[lag, j, i] = b
+        return B
+
+    B_mean = to_B(means)
+    draws = np.array([cumulative(irf(to_B([m + L @ rng.normal(size=len(m)) for m, L in zip(means, chols)]), H), H)
+                      for _ in range(n_boot)])
+    lo, hi = percentile_interval(draws, ALPHA)
+    theta = irf(B_mean, H)
+    return MethodResult("bvar_minnesota", "ok", cumulative(theta, H), lo, hi, theta, B_mean,
+                        {"lambda": lam, "theta": th})
+
+
+def pair_evidence(data, lag_max: int) -> tuple[np.ndarray, np.ndarray, int]:
+    """Data evidence for every pair, from the reduced-form VAR with all lags of all nodes.
+
+    Returns (G, Z, m): G[j, i] is the Granger z-score of x_i's lags in the equation of x_j (Wald
+    statistic mapped to N(0, 1) by the Wilson-Hilferty transform), Z[i, j] the Fisher z of the
+    partial correlation of the residuals of x_i and x_j given all other residuals, m the number of
+    rows. Raises ValueError when the VAR has more regressors than rows."""
+    T, n = data.shape
+    rows = np.arange(lag_max, T)
+    m = len(rows)
+    k = n * lag_max
+    if k + 2 > m:
+        raise ValueError("underdetermined")
+    X = np.column_stack([np.ones(m)] + [data[rows - lag, i] for lag in range(1, lag_max + 1) for i in range(n)])
+    Y = data[rows]
+    XtX_inv = np.linalg.inv(X.T @ X)
+    beta = XtX_inv @ X.T @ Y
+    U = Y - X @ beta
+    s2 = (U ** 2).sum(axis=0) / (m - k - 1)
+    G = np.zeros((n, n))
+    for i in range(n):
+        idx = [1 + (lag - 1) * n + i for lag in range(1, lag_max + 1)]
+        V = XtX_inv[np.ix_(idx, idx)]
+        V_inv = np.linalg.inv(V)
+        for j in range(n):
+            b = beta[idx, j]
+            W = b @ V_inv @ b / s2[j]
+            c = 2 / (9 * lag_max)
+            G[j, i] = ((W / lag_max) ** (1 / 3) - (1 - c)) / np.sqrt(c)
+    P = np.linalg.pinv(np.cov(U.T))
+    d = np.sqrt(np.diag(P))
+    pcor = np.clip(-P / np.outer(d, d), -0.999999, 0.999999)
+    Z = np.arctanh(pcor) * np.sqrt(max(m - k - n - 1, 1))
+    np.fill_diagonal(Z, 0.0)
+    return G, Z, m
+
+
+def pselect_union(data, skel: Skeleton, lag_max: int, H: int, n_boot: int, rng, *, n_perturb: int = 100,
+                  tau: float = 1.0, crit: float = 1.96, cap: int = 16) -> MethodResult:
+    """SVAR adaptation of post-selection inference after causal discovery (Chang, Guo and Malinsky,
+    arXiv 2405.06763): the adjacencies are re-selected from the data, the selection is repeated
+    with randomly perturbed test statistics, and the interval is the union of the intervals fitted
+    on the distinct selected graphs.
+
+    A pair is selected when its Granger z-score in either direction or its residual partial
+    correlation z-score exceeds ``crit``. Each perturbed selection adds N(0, tau^2) noise to every
+    z-score. The unperturbed graph and the most frequent perturbed graphs, up to ``cap`` in total,
+    are fitted as in ``plugin``. A selected pair keeps the skeleton's orientation when the skeleton
+    has one and is otherwise undetermined (lagged terms only). It reads no stated damage. This is
+    an adaptation, not the original procedure: the original perturbs the tests inside PC on iid
+    data and screens the graphs; here the selection is one step on the VAR and every distinct graph
+    is kept, which makes the union wider rather than narrower.
+    """
+    n = skel.n
+    try:
+        G, Z, _ = pair_evidence(data, lag_max)
+    except ValueError:
+        return _failed("pselect_union", "underdetermined")
+    pairs = [(u, v) for u in range(n) for v in range(u + 1, n)]
+    stat = np.array([max(G[v, u], G[u, v], abs(Z[u, v])) for u, v in pairs])
+
+    def graph(s):
+        return frozenset(p for p, keep in zip(pairs, s > crit) if keep)
+
+    counts = {}
+    for _ in range(n_perturb):
+        g = graph(stat + tau * rng.normal(size=len(stat)))
+        counts[g] = counts.get(g, 0) + 1
+    base = graph(stat)
+    graphs = [base] + [g for g, _ in sorted(counts.items(), key=lambda kv: -kv[1]) if g != base][: cap - 1]
+
+    def to_skel(g):
+        s = Skeleton(n, damage=dict(skel.damage))
+        for u, v in g:
+            if (u, v) in skel.oriented:
+                s.oriented.add((u, v))
+            elif (v, u) in skel.oriented:
+                s.oriented.add((v, u))
+            else:
+                s.undetermined.add(frozenset((u, v)))
+        return s
+
+    per = max(10, n_boot // len(graphs))
+    fits = [plugin(data, to_skel(g), lag_max, H, per, rng, name="pselect_union") for g in graphs]
+    ok = [r for r in fits if r.status == "ok"]
+    if not ok or fits[0].status != "ok":
+        return _failed("pselect_union", fits[0].status if fits[0].status != "ok" else "bootstrap_failed")
+    return MethodResult("pselect_union", "ok", fits[0].C, np.min([r.lo for r in ok], axis=0),
+                        np.max([r.hi for r in ok], axis=0), fits[0].theta, fits[0].B,
+                        {"n_graphs": len(graphs), "n_selected": len(base)})

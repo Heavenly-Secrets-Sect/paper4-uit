@@ -1,0 +1,212 @@
+{
+ "id": "auto3fix",
+ "spec": "P2 (tolerant_auto3, undeclared-damage mode), corrected for round 3 (R3-3). Primary spec per synthesis_round2.md 3.3.",
+ "doc": "docs/ext/auto3fix.md (rule: section 1.1, fragility: 1.2, spec summary: section 5)",
+ "supersedes": [
+  "experiments/ext/auto5/check_p4h2.py",
+  "experiments/configs/ext_auto5_p4h2_auto3.json",
+  "experiments/configs/ext_auto5_p4h2_auto3_latent1.json",
+  "results/ext_auto5_p4h2_dryrun/frozen_sha256.txt"
+ ],
+ "files": {
+  "method_module": [
+   {
+    "path": "src/paper4/ext_gate.py",
+    "role": "tolerant_auto3 (unchanged since round 1)"
+   },
+   {
+    "path": "experiments/ext/gate/width_table.json",
+    "role": "frozen width factors of tolerant_auto3 by (state, T), read by ext_gate._width"
+   }
+  ],
+  "frozen_calibration": [
+   {
+    "path": "experiments/calibration/tolerant_v4_frozen.json",
+    "role": "frozen mod|T|kind factors of tolerant_v4 (config key frozen_calibration)"
+   }
+  ],
+  "configs": [
+   {
+    "path": "experiments/configs/ext_auto3fix_p4h2_auto3.json",
+    "role": "config 1: C1, C2, C3"
+   },
+   {
+    "path": "experiments/configs/ext_auto3fix_p4h2_auto3_latent1.json",
+    "role": "config 2: L1"
+   }
+  ],
+  "analyzer_and_preflight": [
+   {
+    "path": "experiments/ext/auto3fix/check_p4h2_v2.py",
+    "role": "confirmatory analyzer (self-contained; no import of stats5/common)"
+   },
+   {
+    "path": "experiments/ext/auto3fix/preflight_p4h2.py",
+    "role": "preflight, run immediately before the run"
+   },
+   {
+    "path": "experiments/ext/auto3fix/p4h2_spec_files.json",
+    "role": "this manifest"
+   }
+  ],
+  "runner_and_core": [
+   {
+    "path": "experiments/run_experiment.py",
+    "role": "runner (bug E1 not fixed, see doc section 4)"
+   },
+   {
+    "path": "src/paper4/__init__.py",
+    "role": "package"
+   },
+   {
+    "path": "src/paper4/methods.py",
+    "role": "plugin, oracle, tolerant_v3/v4, calibrate_width, repair_candidates"
+   },
+   {
+    "path": "src/paper4/estimator.py",
+    "role": "fit_equations, bootstrap_C, parent_terms, soft_terms"
+   },
+   {
+    "path": "src/paper4/metrics.py",
+    "role": "evaluate, truth_effects"
+   },
+   {
+    "path": "src/paper4/generator.py",
+    "role": "dynamic SEM, add_latent"
+   },
+   {
+    "path": "src/paper4/skeleton.py",
+    "role": "true_skeleton, damage"
+   },
+   {
+    "path": "src/paper4/effects.py",
+    "role": "irf, cumulative"
+   },
+   {
+    "path": "src/paper4/topology.py",
+    "role": "load_bank (verifies topology sha256 against the bank manifest)"
+   },
+   {
+    "path": "src/paper4/diagnose.py",
+    "role": "imported by ext_gate (_norm_sf, storey_nonnull)"
+   },
+   {
+    "path": "src/paper4/learned.py",
+    "role": "GES cell of config 1"
+   }
+  ],
+  "runner_imports_every_ext_module": [
+   {
+    "path": "src/paper4/ext_auto5.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_baselines2.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_baselines3.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_eiv.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_eiv2.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_narrow.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_revlag.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_revlag3.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_textinfo.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_tlp.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_tlp2.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_v4c.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_v51.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   },
+   {
+    "path": "src/paper4/ext_v51fix.py",
+    "role": "imported by ext_methods(); a name collision would override a method (E4), checked by preflight P2. Any ext_*.py added later must also be hashed."
+   }
+  ],
+  "external_ges_aciids": [
+   {
+    "path": "/Users/kietnt/Desktop/Workspace/ACIIDS/03_causal_discovery/baselines/no_prior/scripts/paths.py",
+    "role": "ACIIDS import bootstrap"
+   },
+   {
+    "path": "/Users/kietnt/Desktop/Workspace/ACIIDS/03_causal_discovery/baselines/no_prior/scripts/linalg.py",
+    "role": "GES linear algebra"
+   },
+   {
+    "path": "/Users/kietnt/Desktop/Workspace/ACIIDS/03_causal_discovery/baselines/no_prior/scripts/algorithms/__init__.py",
+    "role": "package"
+   },
+   {
+    "path": "/Users/kietnt/Desktop/Workspace/ACIIDS/03_causal_discovery/baselines/no_prior/scripts/algorithms/base.py",
+    "role": "GES base"
+   },
+   {
+    "path": "/Users/kietnt/Desktop/Workspace/ACIIDS/03_causal_discovery/baselines/no_prior/scripts/algorithms/ges_wrapper.py",
+    "role": "GES (Paper 2)"
+   },
+   {
+    "path": "/Users/kietnt/Desktop/Workspace/ACIIDS/03_causal_discovery/evaluation/graph.py",
+    "role": "Graph class used by GES"
+   }
+  ],
+  "calibration_bank": [
+   {
+    "path": "data/topology_bank/D-07H/heldout_manifest.json",
+    "role": "calibration phase (D-07H development): GES stated damage for tolerant_v4 in the GES cell; mod|* factors are overridden by the frozen file"
+   }
+  ]
+ },
+ "sealed_bank_lead_only": [
+  {
+   "path": "data/topology_bank/P4-H2/p4h2_manifest.json",
+   "role": "sealed evaluation bank; hashed by the lead only (the preflight never reads it)"
+  }
+ ],
+ "ext_modules_glob": "src/paper4/ext_*.py (every file present at run time)",
+ "interpreter": "python = /Users/kietnt/miniconda3/bin/python (Python 3.13.9, numpy 2.5.4) as in this round's dry runs; the preflight prints both (runner manifest does not, bug E6)",
+ "commands": [
+  "python experiments/ext/auto3fix/preflight_p4h2.py --hashes <lead hash file> --out results/ext_auto3fix_p4h2_check_preflight.json",
+  "python experiments/run_experiment.py --config experiments/configs/ext_auto3fix_p4h2_auto3.json --workers 3",
+  "python experiments/run_experiment.py --config experiments/configs/ext_auto3fix_p4h2_auto3_latent1.json --workers 3",
+  "python experiments/ext/auto3fix/check_p4h2_v2.py"
+ ],
+ "outputs": [
+  "results/ext_auto3fix_p4h2_auto3/",
+  "results/ext_auto3fix_p4h2_auto3_latent1/",
+  "results/ext_auto3fix_p4h2_check/{check.md,check.json}"
+ ],
+ "expected_runtime_workers3": "config 1: about 13-18 min (D-07 reference: ext_gate_auto3, same grid plus the extra method tolerant_auto3_nogate, 1027.6 s under load ~42 on 12 cores; ext_auto5_main 1405.6 s with 5 methods); config 2: about 7-11 min (ext_auto5_a1 with 4 scenarios: 1050.8 s; config 2 has 2 scenarios plus the D-07H calibration phase); analyzer < 10 s; total about 20-30 min",
+ "confirmatory_rule": "CONFIRMED iff all four hold and integrity checks I1-I5 pass (and the preflight printed PREFLIGHT OK). Pooled coverage counts failed or absent runs as covering no non-null pair (their n_nonnull stays in the denominator); a ruled cell fails if tolerant_auto3 has more than 3 failed/absent runs of 60 or no ok run. C1: coverage of tolerant_auto3 >= 0.90 in missing and reversed x {0.2, 0.5} at T = 80 and 150 (config 1, 8 cells). C2: in the none cell, IS(tolerant_auto3) <= 1.35 x IS(tolerant_v4) at T = 40, 80 and 150, means over units where both are ok, at least 57 such units (config 1). C3: in the GES cell at T = 80 and 150, coverage >= 0.90 and IS(tolerant_auto3) <= 1.10 x IS(tolerant_v4) on the same paired basis (config 1). L1: scenario latent1, coverage >= 0.90 in missing-0.2 and reversed-0.2 at T = 80 and 150 (config 2). Reported, not ruled: one-sided cluster-bootstrap p for H0 'coverage <= 0.90' (2000 resamples of topologies, seed 0) and Holm (alpha 0.05) over the 14 coverage cells; n_ok/n_exp of every method in every cell; ok-only coverage and unpaired IS ratios. Mandatory sentence with any report: on the D-07 dry run C1 at T80 reversed-0.5 was 0.903, the only cell of 14 that Holm did not reject (13/14); topology bootstrap of the D-07 rows gives P(CONFIRMED) as in results/ext_auto3fix_fragility/fragility.json.",
+ "if_not_confirmed": "claim C-auto stays exploratory (D-07 development only); the paper presents the declared mode as primary.",
+ "e1_note": "Built-in and ext seeds depend on the cell position c_idx (E1, not fixed before P4-H2 by user decision). Config 1 has the cell order of ext_v51_p4h2 for its first 7 cells (GES last), so its tolerant_v4 rows should equal those of P1; config 2 has different c_idx and different k_idx for missing/reversed, so its damaged skeletons and every method's draws differ from config 1. Tests pair only within a config. See doc section 4."
+}

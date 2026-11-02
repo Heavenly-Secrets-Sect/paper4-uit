@@ -1,0 +1,1173 @@
+{
+ "model": "gpt-5-mini-2025-08-07",
+ "nodes": [
+  "NPL",
+  "CAR",
+  "NIM",
+  "ROE",
+  "LDR",
+  "PROV_COVERAGE",
+  "Z_SCORE",
+  "GDP_GROWTH",
+  "CPI_INFLATION",
+  "POLICY_RATE",
+  "STOCK_PRICE",
+  "STOCK_RETURN",
+  "TRADE_VOLUME",
+  "TRADE_VALUE"
+ ],
+ "node_ids": [
+  "bank_npl_ratio",
+  "bank_car_ratio",
+  "bank_nim_ratio",
+  "bank_roe_ratio",
+  "bank_ldr_ratio",
+  "bank_provision_coverage_proxy_pct",
+  "bank_z_score",
+  "macro_gdp_yoy_pct",
+  "macro_cpi_avg_pct",
+  "macro_policy_rate_pct",
+  "stock_adj_close_last_vnd",
+  "stock_return_qoq_pct",
+  "stock_avg_daily_volume_cp",
+  "stock_avg_daily_trade_value_vnd"
+ ],
+ "orders": {
+  "T1": {
+   "order": [
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "POLICY_RATE",
+    "NPL",
+    "LDR",
+    "PROV_COVERAGE",
+    "NIM",
+    "ROE",
+    "CAR",
+    "Z_SCORE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "TRADE_VOLUME",
+    "TRADE_VALUE"
+   ],
+   "violated_weight": 10.666666666666668,
+   "total_weight": 81.75,
+   "n_prior_edges_reversed": 4
+  },
+  "T2": {
+   "order": [
+    "POLICY_RATE",
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "TRADE_VOLUME",
+    "TRADE_VALUE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "LDR",
+    "NIM",
+    "NPL",
+    "PROV_COVERAGE",
+    "CAR",
+    "ROE",
+    "Z_SCORE"
+   ],
+   "violated_weight": 23.583333333333332,
+   "total_weight": 91.0,
+   "n_prior_edges_reversed": 1
+  },
+  "P": {
+   "order": [
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "NPL",
+    "POLICY_RATE",
+    "LDR",
+    "NIM",
+    "PROV_COVERAGE",
+    "CAR",
+    "ROE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "Z_SCORE",
+    "TRADE_VOLUME",
+    "TRADE_VALUE"
+   ],
+   "violated_weight": 5.0,
+   "total_weight": 80.0,
+   "n_prior_edges_reversed": 5
+  },
+  "pooled": {
+   "order": [
+    "GDP_GROWTH",
+    "CPI_INFLATION",
+    "POLICY_RATE",
+    "NPL",
+    "LDR",
+    "NIM",
+    "PROV_COVERAGE",
+    "CAR",
+    "ROE",
+    "STOCK_PRICE",
+    "STOCK_RETURN",
+    "Z_SCORE",
+    "TRADE_VOLUME",
+    "TRADE_VALUE"
+   ],
+   "violated_weight": 16.944444444444446,
+   "total_weight": 84.25,
+   "n_prior_edges_reversed": 4
+  }
+ },
+ "kendall_tau": {
+  "T1~T2": 0.16483516483516486,
+  "T1~P": 0.8901098901098902,
+  "T2~P": 0.23076923076923078
+ },
+ "parse_ok_rate": {
+  "T1": 1.0,
+  "T2": 1.0,
+  "P": 1.0
+ },
+ "share_prompts_without_vote": {
+  "T1": 0.0,
+  "T2": 0.0,
+  "P": 0.12087912087912088
+ },
+ "calls_this_run": 819,
+ "bootstrap_B": 200,
+ "P_before": {
+  "NPL": {
+   "CAR": 1.0,
+   "NIM": 0.995,
+   "ROE": 1.0,
+   "LDR": 0.84,
+   "PROV_COVERAGE": 1.0,
+   "Z_SCORE": 1.0,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 1.0,
+   "STOCK_RETURN": 1.0,
+   "TRADE_VOLUME": 1.0,
+   "TRADE_VALUE": 1.0
+  },
+  "CAR": {
+   "NPL": 0.0,
+   "NIM": 0.0,
+   "ROE": 0.795,
+   "LDR": 0.0,
+   "PROV_COVERAGE": 0.0,
+   "Z_SCORE": 0.99,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.975,
+   "STOCK_RETURN": 0.985,
+   "TRADE_VOLUME": 0.95,
+   "TRADE_VALUE": 0.63
+  },
+  "NIM": {
+   "NPL": 0.005,
+   "CAR": 1.0,
+   "ROE": 1.0,
+   "LDR": 0.0,
+   "PROV_COVERAGE": 0.735,
+   "Z_SCORE": 1.0,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.99,
+   "STOCK_RETURN": 0.995,
+   "TRADE_VOLUME": 0.975,
+   "TRADE_VALUE": 0.755
+  },
+  "ROE": {
+   "NPL": 0.0,
+   "CAR": 0.205,
+   "NIM": 0.0,
+   "LDR": 0.0,
+   "PROV_COVERAGE": 0.0,
+   "Z_SCORE": 0.88,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.985,
+   "STOCK_RETURN": 0.98,
+   "TRADE_VOLUME": 0.975,
+   "TRADE_VALUE": 0.745
+  },
+  "LDR": {
+   "NPL": 0.16,
+   "CAR": 1.0,
+   "NIM": 1.0,
+   "ROE": 1.0,
+   "PROV_COVERAGE": 0.815,
+   "Z_SCORE": 1.0,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.005,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.99,
+   "STOCK_RETURN": 0.995,
+   "TRADE_VOLUME": 0.985,
+   "TRADE_VALUE": 0.795
+  },
+  "PROV_COVERAGE": {
+   "NPL": 0.0,
+   "CAR": 1.0,
+   "NIM": 0.265,
+   "ROE": 1.0,
+   "LDR": 0.185,
+   "Z_SCORE": 1.0,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.995,
+   "STOCK_RETURN": 1.0,
+   "TRADE_VOLUME": 1.0,
+   "TRADE_VALUE": 0.965
+  },
+  "Z_SCORE": {
+   "NPL": 0.0,
+   "CAR": 0.01,
+   "NIM": 0.0,
+   "ROE": 0.12,
+   "LDR": 0.0,
+   "PROV_COVERAGE": 0.0,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.51,
+   "STOCK_RETURN": 0.465,
+   "TRADE_VOLUME": 0.94,
+   "TRADE_VALUE": 0.615
+  },
+  "GDP_GROWTH": {
+   "NPL": 1.0,
+   "CAR": 1.0,
+   "NIM": 1.0,
+   "ROE": 1.0,
+   "LDR": 1.0,
+   "PROV_COVERAGE": 1.0,
+   "Z_SCORE": 1.0,
+   "CPI_INFLATION": 1.0,
+   "POLICY_RATE": 0.985,
+   "STOCK_PRICE": 1.0,
+   "STOCK_RETURN": 1.0,
+   "TRADE_VOLUME": 1.0,
+   "TRADE_VALUE": 1.0
+  },
+  "CPI_INFLATION": {
+   "NPL": 1.0,
+   "CAR": 1.0,
+   "NIM": 1.0,
+   "ROE": 1.0,
+   "LDR": 0.995,
+   "PROV_COVERAGE": 1.0,
+   "Z_SCORE": 1.0,
+   "GDP_GROWTH": 0.0,
+   "POLICY_RATE": 0.965,
+   "STOCK_PRICE": 1.0,
+   "STOCK_RETURN": 1.0,
+   "TRADE_VOLUME": 1.0,
+   "TRADE_VALUE": 1.0
+  },
+  "POLICY_RATE": {
+   "NPL": 1.0,
+   "CAR": 1.0,
+   "NIM": 1.0,
+   "ROE": 1.0,
+   "LDR": 1.0,
+   "PROV_COVERAGE": 1.0,
+   "Z_SCORE": 1.0,
+   "GDP_GROWTH": 0.015,
+   "CPI_INFLATION": 0.035,
+   "STOCK_PRICE": 1.0,
+   "STOCK_RETURN": 1.0,
+   "TRADE_VOLUME": 1.0,
+   "TRADE_VALUE": 1.0
+  },
+  "STOCK_PRICE": {
+   "NPL": 0.0,
+   "CAR": 0.025,
+   "NIM": 0.01,
+   "ROE": 0.015,
+   "LDR": 0.01,
+   "PROV_COVERAGE": 0.005,
+   "Z_SCORE": 0.49,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_RETURN": 0.685,
+   "TRADE_VOLUME": 0.615,
+   "TRADE_VALUE": 0.26
+  },
+  "STOCK_RETURN": {
+   "NPL": 0.0,
+   "CAR": 0.015,
+   "NIM": 0.005,
+   "ROE": 0.02,
+   "LDR": 0.005,
+   "PROV_COVERAGE": 0.0,
+   "Z_SCORE": 0.535,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.315,
+   "TRADE_VOLUME": 0.82,
+   "TRADE_VALUE": 0.515
+  },
+  "TRADE_VOLUME": {
+   "NPL": 0.0,
+   "CAR": 0.05,
+   "NIM": 0.025,
+   "ROE": 0.025,
+   "LDR": 0.015,
+   "PROV_COVERAGE": 0.0,
+   "Z_SCORE": 0.06,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.385,
+   "STOCK_RETURN": 0.18,
+   "TRADE_VALUE": 0.635
+  },
+  "TRADE_VALUE": {
+   "NPL": 0.0,
+   "CAR": 0.37,
+   "NIM": 0.245,
+   "ROE": 0.255,
+   "LDR": 0.205,
+   "PROV_COVERAGE": 0.035,
+   "Z_SCORE": 0.385,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.74,
+   "STOCK_RETURN": 0.485,
+   "TRADE_VOLUME": 0.365
+  }
+ },
+ "vote_matrix_pooled": {
+  "NPL": {
+   "CAR": 0.8333333333333334,
+   "NIM": 0.7777777777777777,
+   "ROE": 0.8888888888888888,
+   "LDR": 0.6388888888888888,
+   "PROV_COVERAGE": 0.9444444444444445,
+   "Z_SCORE": 0.8611111111111112,
+   "GDP_GROWTH": 0.05555555555555555,
+   "CPI_INFLATION": 0.027777777777777776,
+   "POLICY_RATE": 0.05555555555555555,
+   "STOCK_PRICE": 0.7777777777777777,
+   "STOCK_RETURN": 0.7777777777777777,
+   "TRADE_VOLUME": 0.8055555555555555,
+   "TRADE_VALUE": 0.75
+  },
+  "CAR": {
+   "NPL": 0.16666666666666666,
+   "NIM": 0.16666666666666666,
+   "ROE": 0.6944444444444445,
+   "LDR": 0.3611111111111111,
+   "PROV_COVERAGE": 0.027777777777777776,
+   "Z_SCORE": 0.9722222222222222,
+   "GDP_GROWTH": 0.08333333333333333,
+   "CPI_INFLATION": 0.1111111111111111,
+   "POLICY_RATE": 0.05555555555555555,
+   "STOCK_PRICE": 0.6666666666666666,
+   "STOCK_RETURN": 0.7777777777777778,
+   "TRADE_VOLUME": 0.38888888888888884,
+   "TRADE_VALUE": 0.22222222222222224
+  },
+  "NIM": {
+   "NPL": 0.2222222222222222,
+   "CAR": 0.8333333333333334,
+   "ROE": 1.0,
+   "LDR": 0.05555555555555555,
+   "PROV_COVERAGE": 0.3055555555555556,
+   "Z_SCORE": 0.8611111111111112,
+   "GDP_GROWTH": 0.05555555555555555,
+   "CPI_INFLATION": 0.05555555555555555,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.6666666666666666,
+   "STOCK_RETURN": 0.5555555555555555,
+   "TRADE_VOLUME": 0.16666666666666666,
+   "TRADE_VALUE": 0.19444444444444445
+  },
+  "ROE": {
+   "NPL": 0.1111111111111111,
+   "CAR": 0.3611111111111111,
+   "NIM": 0.0,
+   "LDR": 0.08333333333333333,
+   "PROV_COVERAGE": 0.1111111111111111,
+   "Z_SCORE": 0.6111111111111112,
+   "GDP_GROWTH": 0.0,
+   "CPI_INFLATION": 0.027777777777777776,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.8888888888888888,
+   "STOCK_RETURN": 0.7777777777777777,
+   "TRADE_VOLUME": 0.4444444444444444,
+   "TRADE_VALUE": 0.7222222222222223
+  },
+  "LDR": {
+   "NPL": 0.3611111111111111,
+   "CAR": 0.75,
+   "NIM": 0.9444444444444443,
+   "ROE": 0.9166666666666666,
+   "PROV_COVERAGE": 0.3611111111111111,
+   "Z_SCORE": 0.8888888888888888,
+   "GDP_GROWTH": 0.1111111111111111,
+   "CPI_INFLATION": 0.16666666666666666,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.36111111111111116,
+   "STOCK_RETURN": 0.5833333333333334,
+   "TRADE_VOLUME": 0.5,
+   "TRADE_VALUE": 0.3333333333333333
+  },
+  "PROV_COVERAGE": {
+   "NPL": 0.05555555555555555,
+   "CAR": 0.9722222222222222,
+   "NIM": 0.16666666666666666,
+   "ROE": 0.9166666666666666,
+   "LDR": 0.25,
+   "Z_SCORE": 0.9444444444444445,
+   "GDP_GROWTH": 0.08333333333333333,
+   "CPI_INFLATION": 0.05555555555555555,
+   "POLICY_RATE": 0.027777777777777776,
+   "STOCK_PRICE": 0.8055555555555555,
+   "STOCK_RETURN": 0.75,
+   "TRADE_VOLUME": 0.8055555555555555,
+   "TRADE_VALUE": 0.7222222222222222
+  },
+  "Z_SCORE": {
+   "NPL": 0.1388888888888889,
+   "CAR": 0.027777777777777776,
+   "NIM": 0.1111111111111111,
+   "ROE": 0.3888888888888889,
+   "LDR": 0.19444444444444442,
+   "PROV_COVERAGE": 0.1111111111111111,
+   "GDP_GROWTH": 0.05555555555555555,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.027777777777777776,
+   "STOCK_PRICE": 0.47222222222222215,
+   "STOCK_RETURN": 0.36111111111111116,
+   "TRADE_VOLUME": 0.75,
+   "TRADE_VALUE": 0.638888888888889
+  },
+  "GDP_GROWTH": {
+   "NPL": 0.9444444444444445,
+   "CAR": 0.6944444444444443,
+   "NIM": 0.8333333333333334,
+   "ROE": 1.0,
+   "LDR": 0.8055555555555557,
+   "PROV_COVERAGE": 0.8888888888888888,
+   "Z_SCORE": 0.9166666666666666,
+   "CPI_INFLATION": 0.861111111111111,
+   "POLICY_RATE": 0.5833333333333334,
+   "STOCK_PRICE": 0.8333333333333334,
+   "STOCK_RETURN": 0.8611111111111112,
+   "TRADE_VOLUME": 0.5,
+   "TRADE_VALUE": 0.8611111111111112
+  },
+  "CPI_INFLATION": {
+   "NPL": 0.7777777777777777,
+   "CAR": 0.25,
+   "NIM": 0.9444444444444445,
+   "ROE": 0.9444444444444443,
+   "LDR": 0.3888888888888889,
+   "PROV_COVERAGE": 0.5,
+   "Z_SCORE": 0.8888888888888888,
+   "GDP_GROWTH": 0.08333333333333333,
+   "POLICY_RATE": 0.7777777777777777,
+   "STOCK_PRICE": 0.9444444444444445,
+   "STOCK_RETURN": 0.9722222222222222,
+   "TRADE_VOLUME": 0.8333333333333334,
+   "TRADE_VALUE": 0.861111111111111
+  },
+  "POLICY_RATE": {
+   "NPL": 0.4444444444444444,
+   "CAR": 0.7777777777777777,
+   "NIM": 1.0,
+   "ROE": 0.9722222222222222,
+   "LDR": 0.9722222222222222,
+   "PROV_COVERAGE": 0.75,
+   "Z_SCORE": 0.8888888888888888,
+   "GDP_GROWTH": 0.2222222222222222,
+   "CPI_INFLATION": 0.25,
+   "STOCK_PRICE": 0.9444444444444445,
+   "STOCK_RETURN": 1.0,
+   "TRADE_VOLUME": 1.0,
+   "TRADE_VALUE": 1.0
+  },
+  "STOCK_PRICE": {
+   "NPL": 0.22222222222222224,
+   "CAR": 0.3055555555555555,
+   "NIM": 0.2777777777777778,
+   "ROE": 0.1111111111111111,
+   "LDR": 0.5833333333333334,
+   "PROV_COVERAGE": 0.2222222222222222,
+   "Z_SCORE": 0.5555555555555555,
+   "GDP_GROWTH": 0.1388888888888889,
+   "CPI_INFLATION": 0.05555555555555555,
+   "POLICY_RATE": 0.05555555555555555,
+   "STOCK_RETURN": 0.7222222222222223,
+   "TRADE_VOLUME": 0.6944444444444443,
+   "TRADE_VALUE": 0.3055555555555556
+  },
+  "STOCK_RETURN": {
+   "NPL": 0.25,
+   "CAR": 0.25,
+   "NIM": 0.3611111111111111,
+   "ROE": 0.2222222222222222,
+   "LDR": 0.3333333333333333,
+   "PROV_COVERAGE": 0.25,
+   "Z_SCORE": 0.5555555555555555,
+   "GDP_GROWTH": 0.1388888888888889,
+   "CPI_INFLATION": 0.0,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.2777777777777778,
+   "TRADE_VOLUME": 0.7777777777777777,
+   "TRADE_VALUE": 0.6111111111111112
+  },
+  "TRADE_VOLUME": {
+   "NPL": 0.19444444444444445,
+   "CAR": 0.16666666666666666,
+   "NIM": 0.25,
+   "ROE": 0.19444444444444445,
+   "LDR": 0.25,
+   "PROV_COVERAGE": 0.16666666666666666,
+   "Z_SCORE": 0.22222222222222224,
+   "GDP_GROWTH": 0.1111111111111111,
+   "CPI_INFLATION": 0.08333333333333333,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.5,
+   "STOCK_RETURN": 0.36111111111111116,
+   "TRADE_VALUE": 0.9166666666666666
+  },
+  "TRADE_VALUE": {
+   "NPL": 0.22222222222222224,
+   "CAR": 0.6666666666666666,
+   "NIM": 0.3611111111111111,
+   "ROE": 0.25,
+   "LDR": 0.611111111111111,
+   "PROV_COVERAGE": 0.19444444444444445,
+   "Z_SCORE": 0.3333333333333333,
+   "GDP_GROWTH": 0.08333333333333333,
+   "CPI_INFLATION": 0.1111111111111111,
+   "POLICY_RATE": 0.0,
+   "STOCK_PRICE": 0.9444444444444443,
+   "STOCK_RETURN": 0.5833333333333334,
+   "TRADE_VOLUME": 0.1111111111111111
+  }
+ },
+ "prior_edges": [
+  {
+   "source": "LDR",
+   "target": "POLICY_RATE",
+   "source_id": "bank_ldr_ratio",
+   "target_id": "macro_policy_rate_pct",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 0.0,
+     "votes_reversed": 11.0,
+     "order_reverses": true
+    },
+    "T2": {
+     "votes_stated": 0.0,
+     "votes_reversed": 12.0,
+     "order_reverses": true
+    },
+    "P": {
+     "votes_stated": 0.0,
+     "votes_reversed": 1.0,
+     "order_reverses": true
+    }
+   },
+   "vote_share_reversed": 1.0,
+   "vote_support_any_direction": 0.9722222222222222,
+   "p_order_reversed_bootstrap": 1.0,
+   "pooled_order_reverses": true,
+   "n_variants_reversing": 3,
+   "reversal_suspicion": 1.0
+  },
+  {
+   "source": "NIM",
+   "target": "NPL",
+   "source_id": "bank_nim_ratio",
+   "target_id": "bank_npl_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 0.0,
+     "votes_reversed": 12.0,
+     "order_reverses": true
+    },
+    "T2": {
+     "votes_stated": 8.0,
+     "votes_reversed": 4.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 0.0,
+     "votes_reversed": 1.0,
+     "order_reverses": true
+    }
+   },
+   "vote_share_reversed": 0.7777777777777778,
+   "vote_support_any_direction": 0.9999999999999999,
+   "p_order_reversed_bootstrap": 0.995,
+   "pooled_order_reverses": true,
+   "n_variants_reversing": 2,
+   "reversal_suspicion": 0.8863888888888889
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "CPI_INFLATION",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "macro_cpi_avg_pct",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 1.0,
+     "votes_reversed": 12.0,
+     "order_reverses": true
+    },
+    "T2": {
+     "votes_stated": 8.0,
+     "votes_reversed": 4.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 0.0,
+     "votes_reversed": 1.0,
+     "order_reverses": true
+    }
+   },
+   "vote_share_reversed": 0.7567567567567567,
+   "vote_support_any_direction": 1.0277777777777777,
+   "p_order_reversed_bootstrap": 0.965,
+   "pooled_order_reverses": true,
+   "n_variants_reversing": 2,
+   "reversal_suspicion": 0.8608783783783783
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "GDP_GROWTH",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "macro_gdp_yoy_pct",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 0.0,
+     "votes_reversed": 5.0,
+     "order_reverses": true
+    },
+    "T2": {
+     "votes_stated": 8.0,
+     "votes_reversed": 4.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 0.0,
+     "votes_reversed": 1.0,
+     "order_reverses": true
+    }
+   },
+   "vote_share_reversed": 0.7241379310344828,
+   "vote_support_any_direction": 0.8055555555555556,
+   "p_order_reversed_bootstrap": 0.985,
+   "pooled_order_reverses": true,
+   "n_variants_reversing": 2,
+   "reversal_suspicion": 0.8545689655172414
+  },
+  {
+   "source": "ROE",
+   "target": "Z_SCORE",
+   "source_id": "bank_roe_ratio",
+   "target_id": "bank_z_score",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 10.0,
+     "votes_reversed": 2.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 0.0,
+     "votes_reversed": 1.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.3888888888888889,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.12,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.2544444444444445
+  },
+  {
+   "source": "NIM",
+   "target": "CAR",
+   "source_id": "bank_nim_ratio",
+   "target_id": "bank_car_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 10.0,
+     "votes_reversed": 2.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 8.0,
+     "votes_reversed": 4.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.16666666666666666,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.08333333333333333
+  },
+  {
+   "source": "CPI_INFLATION",
+   "target": "TRADE_VALUE",
+   "source_id": "macro_cpi_avg_pct",
+   "target_id": "stock_avg_daily_trade_value_vnd",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 11.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 8.0,
+     "votes_reversed": 4.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.1142857142857143,
+   "vote_support_any_direction": 0.9722222222222221,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.05714285714285715
+  },
+  {
+   "source": "NPL",
+   "target": "ROE",
+   "source_id": "bank_npl_ratio",
+   "target_id": "bank_roe_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 8.0,
+     "votes_reversed": 4.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.1111111111111111,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.05555555555555555
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "NPL",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "bank_npl_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 4.0,
+     "votes_reversed": 2.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 0.0,
+     "votes_reversed": 0.0,
+     "order_reverses": true
+    }
+   },
+   "vote_share_reversed": 0.1111111111111111,
+   "vote_support_any_direction": 0.5,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 1,
+   "reversal_suspicion": 0.05555555555555555
+  },
+  {
+   "source": "PROV_COVERAGE",
+   "target": "ROE",
+   "source_id": "bank_provision_coverage_proxy_pct",
+   "target_id": "bank_roe_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 1.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 9.0,
+     "votes_reversed": 3.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.10810810810810811,
+   "vote_support_any_direction": 1.0277777777777777,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.05405405405405406
+  },
+  {
+   "source": "GDP_GROWTH",
+   "target": "CAR",
+   "source_id": "macro_gdp_yoy_pct",
+   "target_id": "bank_car_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 4.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 9.0,
+     "votes_reversed": 3.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.10714285714285715,
+   "vote_support_any_direction": 0.7777777777777777,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.053571428571428575
+  },
+  {
+   "source": "CPI_INFLATION",
+   "target": "TRADE_VOLUME",
+   "source_id": "macro_cpi_avg_pct",
+   "target_id": "stock_avg_daily_volume_cp",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 9.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 9.0,
+     "votes_reversed": 3.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.0909090909090909,
+   "vote_support_any_direction": 0.9166666666666667,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.04545454545454545
+  },
+  {
+   "source": "LDR",
+   "target": "NIM",
+   "source_id": "bank_ldr_ratio",
+   "target_id": "bank_nim_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 11.0,
+     "votes_reversed": 1.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 11.0,
+     "votes_reversed": 1.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.05555555555555556,
+   "vote_support_any_direction": 0.9999999999999999,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.02777777777777778
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "STOCK_PRICE",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "stock_adj_close_last_vnd",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 10.0,
+     "votes_reversed": 2.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.05555555555555555,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.027777777777777776
+  },
+  {
+   "source": "NPL",
+   "target": "PROV_COVERAGE",
+   "source_id": "bank_npl_ratio",
+   "target_id": "bank_provision_coverage_proxy_pct",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 10.0,
+     "votes_reversed": 2.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.05555555555555555,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.027777777777777776
+  },
+  {
+   "source": "CPI_INFLATION",
+   "target": "NPL",
+   "source_id": "macro_cpi_avg_pct",
+   "target_id": "bank_npl_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 5.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 11.0,
+     "votes_reversed": 1.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.034482758620689655,
+   "vote_support_any_direction": 0.8055555555555555,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.017241379310344827
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "NIM",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "bank_nim_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.0,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.0
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "TRADE_VOLUME",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "stock_avg_daily_volume_cp",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.0,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.0
+  },
+  {
+   "source": "NIM",
+   "target": "ROE",
+   "source_id": "bank_nim_ratio",
+   "target_id": "bank_roe_ratio",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.0,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.0
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "TRADE_VALUE",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "stock_avg_daily_trade_value_vnd",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.0,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.0
+  },
+  {
+   "source": "POLICY_RATE",
+   "target": "STOCK_RETURN",
+   "source_id": "macro_policy_rate_pct",
+   "target_id": "stock_return_qoq_pct",
+   "per_variant": {
+    "T1": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "T2": {
+     "votes_stated": 12.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    },
+    "P": {
+     "votes_stated": 1.0,
+     "votes_reversed": 0.0,
+     "order_reverses": false
+    }
+   },
+   "vote_share_reversed": 0.0,
+   "vote_support_any_direction": 1.0,
+   "p_order_reversed_bootstrap": 0.0,
+   "pooled_order_reverses": false,
+   "n_variants_reversing": 0,
+   "reversal_suspicion": 0.0
+  }
+ ]
+}

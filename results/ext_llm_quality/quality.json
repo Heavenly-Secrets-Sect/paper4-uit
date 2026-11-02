@@ -1,0 +1,1512 @@
+{
+ "notes": "Proxies only; no ground truth on real data. See docs/ext/llm.md.",
+ "self_consistency": {
+  "L1_kendall_tau": {
+   "T1~T2": 0.16483516483516486,
+   "T1~P": 0.8901098901098902,
+   "T2~P": 0.23076923076923078
+  },
+  "L1_prior_edges_reversed_per_order": {
+   "T1": 4,
+   "T2": 1,
+   "P": 5,
+   "pooled": 4
+  },
+  "L4": {
+   "n_pairs": 61,
+   "n_prior": 21,
+   "n_missing_candidates": 40,
+   "support_agreement": 0.7049180327868853,
+   "direction_agreement_when_both_state": 0.9615384615384616,
+   "lag_agreement": 0.6721311475409836,
+   "calls_this_run": 122,
+   "n_pairs_both_state_direction": 26,
+   "support_spearman_A_vs_B": 0.7879398281727232
+  },
+  "L3": {
+   "usable_keys_A": 14,
+   "usable_keys_B": 31,
+   "keys_both": 12,
+   "jaccard_A_B": 0.36363636363636365
+  },
+  "L1_kendall_tau_within_domain_blocks": {
+   "T1~T2": 0.3333333333333333,
+   "T1~P": 0.8666666666666667,
+   "T2~P": 0.4666666666666667
+  },
+  "L1_orientation_agreement_on_21_prior_pairs": {
+   "T1~T2": 0.8571428571428571,
+   "T1~P": 0.9523809523809523,
+   "T2~P": 0.8095238095238095
+  },
+  "L4_support_pearson_A_B": 0.6260841021316718,
+  "L4_mean_p_edge": {
+   "A": 0.2570491803278689,
+   "B": 0.5340983606557377
+  }
+ },
+ "cross_method_L1_vs_L4_reversal_spearman": 0.5212807969897598,
+ "cross_method_flagged_by_both": [
+  "LDR->POLICY_RATE",
+  "NIM->NPL"
+ ],
+ "paper1_accepted": {
+  "n_directed_relations": 23,
+  "L4_support_ge_0.5": 19,
+  "L4_direction_agree": 18,
+  "L4_direction_disagree": 1,
+  "L1_order_agree": 18,
+  "rows": [
+   {
+    "relation": "POLICY_RATE->GDP_GROWTH",
+    "n_accepted": 1,
+    "L4_support": 0.8,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": false
+   },
+   {
+    "relation": "POLICY_RATE->CPI_INFLATION",
+    "n_accepted": 2,
+    "L4_support": 0.8999999999999999,
+    "L4_direction_agrees": null,
+    "L1_order_agrees": false
+   },
+   {
+    "relation": "POLICY_RATE->NIM",
+    "n_accepted": 5,
+    "L4_support": 0.89,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "POLICY_RATE->STOCK_PRICE",
+    "n_accepted": 6,
+    "L4_support": 0.8200000000000001,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "CPI_INFLATION->POLICY_RATE",
+    "n_accepted": 4,
+    "L4_support": 0.8999999999999999,
+    "L4_direction_agrees": null,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "NPL->PROV_COVERAGE",
+    "n_accepted": 6,
+    "L4_support": 0.875,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "NPL->ROE",
+    "n_accepted": 2,
+    "L4_support": 0.8250000000000001,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "PROV_COVERAGE->ROE",
+    "n_accepted": 2,
+    "L4_support": 0.8,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "CPI_INFLATION->NPL",
+    "n_accepted": 1,
+    "L4_support": 0.8250000000000001,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "LDR->POLICY_RATE",
+    "n_accepted": 1,
+    "L4_support": 0.14,
+    "L4_direction_agrees": null,
+    "L1_order_agrees": false
+   },
+   {
+    "relation": "LDR->NIM",
+    "n_accepted": 2,
+    "L4_support": 0.55,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "NIM->NPL",
+    "n_accepted": 1,
+    "L4_support": 0.4,
+    "L4_direction_agrees": false,
+    "L1_order_agrees": false
+   },
+   {
+    "relation": "POLICY_RATE->TRADE_VOLUME",
+    "n_accepted": 1,
+    "L4_support": 0.5,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "PROV_COVERAGE->NIM",
+    "n_accepted": 1,
+    "L4_support": 0.875,
+    "L4_direction_agrees": null,
+    "L1_order_agrees": false
+   },
+   {
+    "relation": "POLICY_RATE->NPL",
+    "n_accepted": 3,
+    "L4_support": 0.525,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "NIM->ROE",
+    "n_accepted": 1,
+    "L4_support": 0.895,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "POLICY_RATE->TRADE_VALUE",
+    "n_accepted": 7,
+    "L4_support": 0.55,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "POLICY_RATE->STOCK_RETURN",
+    "n_accepted": 3,
+    "L4_support": 0.775,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "CPI_INFLATION->TRADE_VOLUME",
+    "n_accepted": 1,
+    "L4_support": 0.535,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "CPI_INFLATION->TRADE_VALUE",
+    "n_accepted": 1,
+    "L4_support": 0.495,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "NIM->CAR",
+    "n_accepted": 1,
+    "L4_support": 0.47000000000000003,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "GDP_GROWTH->CAR",
+    "n_accepted": 1,
+    "L4_support": 0.85,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   },
+   {
+    "relation": "ROE->Z_SCORE",
+    "n_accepted": 2,
+    "L4_support": 0.875,
+    "L4_direction_agrees": true,
+    "L1_order_agrees": true
+   }
+  ]
+ },
+ "paper1_human_gold": {
+  "n_pairs": 11,
+  "n_valid": 6,
+  "n_invalid": 5,
+  "L4_support_auroc_valid_vs_invalid": 0.6,
+  "L4_support_auroc_ci95_bootstrap": [
+   0.2,
+   0.9666666666666667
+  ],
+  "L4_direction_on_valid": {
+   "agree": 4,
+   "disagree": 0
+  },
+  "L1_order_on_valid": {
+   "agree": 5,
+   "disagree": 1
+  },
+  "rows": [
+   {
+    "pair": [
+     "LDR",
+     "CPI_INFLATION"
+    ],
+    "gold_valid": false,
+    "labels": [
+     "invalid"
+    ],
+    "assertion_types": [
+     "policy_statement"
+    ],
+    "L4_support": 0.45,
+    "L4_direction": "CPI_INFLATION->LDR"
+   },
+   {
+    "pair": [
+     "NPL",
+     "STOCK_RETURN"
+    ],
+    "gold_valid": false,
+    "labels": [
+     "invalid"
+    ],
+    "assertion_types": [
+     "correlation_only"
+    ],
+    "L4_support": 0.1,
+    "L4_direction": "unclear"
+   },
+   {
+    "pair": [
+     "CPI_INFLATION",
+     "POLICY_RATE"
+    ],
+    "gold_valid": false,
+    "labels": [
+     "invalid",
+     "invalid"
+    ],
+    "assertion_types": [
+     "policy_statement",
+     "policy_statement"
+    ],
+    "L4_support": 0.8999999999999999,
+    "L4_direction": "both"
+   },
+   {
+    "pair": [
+     "GDP_GROWTH",
+     "POLICY_RATE"
+    ],
+    "gold_valid": false,
+    "labels": [
+     "invalid"
+    ],
+    "assertion_types": [
+     "correlation_only"
+    ],
+    "L4_support": 0.8,
+    "L4_direction": "POLICY_RATE->GDP_GROWTH"
+   },
+   {
+    "pair": [
+     "NIM",
+     "POLICY_RATE"
+    ],
+    "gold_valid": true,
+    "labels": [
+     "valid_causal",
+     "valid_causal"
+    ],
+    "assertion_types": [
+     "direct_causal",
+     "direct_causal"
+    ],
+    "L4_support": 0.89,
+    "L4_direction": "POLICY_RATE->NIM"
+   },
+   {
+    "pair": [
+     "LDR",
+     "NIM"
+    ],
+    "gold_valid": true,
+    "labels": [
+     "valid_causal",
+     "valid_causal"
+    ],
+    "assertion_types": [
+     "indirect_mechanism",
+     "indirect_mechanism"
+    ],
+    "L4_support": 0.55,
+    "L4_direction": "LDR->NIM"
+   },
+   {
+    "pair": [
+     "NIM",
+     "ROE"
+    ],
+    "gold_valid": true,
+    "labels": [
+     "valid_causal"
+    ],
+    "assertion_types": [
+     "direct_causal"
+    ],
+    "L4_support": 0.895,
+    "L4_direction": "NIM->ROE"
+   },
+   {
+    "pair": [
+     "POLICY_RATE",
+     "STOCK_RETURN"
+    ],
+    "gold_valid": true,
+    "labels": [
+     "valid_causal",
+     "valid_causal",
+     "valid_causal"
+    ],
+    "assertion_types": [
+     "indirect_mechanism",
+     "direct_causal",
+     "indirect_mechanism"
+    ],
+    "L4_support": 0.775,
+    "L4_direction": "POLICY_RATE->STOCK_RETURN"
+   },
+   {
+    "pair": [
+     "TRADE_VALUE",
+     "STOCK_RETURN"
+    ],
+    "gold_valid": true,
+    "labels": [
+     "valid_causal"
+    ],
+    "assertion_types": [
+     "direct_causal"
+    ],
+    "L4_support": 0.22499999999999998,
+    "L4_direction": "unclear"
+   },
+   {
+    "pair": [
+     "ROE",
+     "STOCK_RETURN"
+    ],
+    "gold_valid": false,
+    "labels": [
+     "invalid"
+    ],
+    "assertion_types": [
+     "non_causal"
+    ],
+    "L4_support": 0.05499999999999999,
+    "L4_direction": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "POLICY_RATE"
+    ],
+    "gold_valid": true,
+    "labels": [
+     "valid_causal"
+    ],
+    "assertion_types": [
+     "indirect_mechanism"
+    ],
+    "L4_support": 0.14,
+    "L4_direction": "unclear"
+   }
+  ]
+ },
+ "data": {
+  "panel": "14 x 19 (2020Q2..2024Q4); 8 columns first-differenced -> 18 rows; 17 usable for lag-1 tests",
+  "n_granger_tests": 122,
+  "share_p_below_0.10": 0.11475409836065574,
+  "expected_share_under_null": 0.1,
+  "granger_vs_L4_direction": {
+   "agree": 5,
+   "disagree": 0
+  },
+  "granger_vs_prior_direction": {
+   "agree": 1,
+   "disagree": 0
+  },
+  "lingam_vs_L4_direction": {
+   "agree": 22,
+   "disagree": 8
+  },
+  "lingam_vs_prior_direction": {
+   "agree": 16,
+   "disagree": 5
+  },
+  "lingam_vs_L4_direction_real_only": {
+   "agree": 8,
+   "disagree": 0
+  },
+  "rows": [
+   {
+    "pair": [
+     "GDP_GROWTH",
+     "POLICY_RATE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.9169439779259104,
+    "granger_p_ba": 0.5164071111963526,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0016948465332685097,
+    "lingam_direction": "POLICY_RATE->GDP_GROWTH",
+    "lingam_boot_share_ab": 0.16,
+    "involves_simulated": false,
+    "L4_direction": "POLICY_RATE->GDP_GROWTH",
+    "L4_lag": "unclear",
+    "prior_direction": "POLICY_RATE->GDP_GROWTH"
+   },
+   {
+    "pair": [
+     "CPI_INFLATION",
+     "POLICY_RATE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.7696239681921953,
+    "granger_p_ba": 0.27779678437273614,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.00818269108207648,
+    "lingam_direction": "POLICY_RATE->CPI_INFLATION",
+    "lingam_boot_share_ab": 0.186,
+    "involves_simulated": false,
+    "L4_direction": "both",
+    "L4_lag": "both",
+    "prior_direction": "POLICY_RATE->CPI_INFLATION"
+   },
+   {
+    "pair": [
+     "NIM",
+     "POLICY_RATE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.12353783352594072,
+    "granger_p_ba": 0.9832958730292515,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.03172396477229416,
+    "lingam_direction": "POLICY_RATE->NIM",
+    "lingam_boot_share_ab": 0.12,
+    "involves_simulated": true,
+    "L4_direction": "POLICY_RATE->NIM",
+    "L4_lag": "disagree",
+    "prior_direction": "POLICY_RATE->NIM"
+   },
+   {
+    "pair": [
+     "POLICY_RATE",
+     "STOCK_PRICE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.18585237689966871,
+    "granger_p_ba": 0.3103334366022156,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.003062871616539031,
+    "lingam_direction": "POLICY_RATE->STOCK_PRICE",
+    "lingam_boot_share_ab": 0.886,
+    "involves_simulated": false,
+    "L4_direction": "POLICY_RATE->STOCK_PRICE",
+    "L4_lag": "later_quarters",
+    "prior_direction": "POLICY_RATE->STOCK_PRICE"
+   },
+   {
+    "pair": [
+     "NPL",
+     "PROV_COVERAGE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.5121713892344794,
+    "granger_p_ba": 0.6151198898328881,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.000792294102054419,
+    "lingam_direction": "NPL->PROV_COVERAGE",
+    "lingam_boot_share_ab": 0.544,
+    "involves_simulated": true,
+    "L4_direction": "NPL->PROV_COVERAGE",
+    "L4_lag": "same_quarter",
+    "prior_direction": "NPL->PROV_COVERAGE"
+   },
+   {
+    "pair": [
+     "NPL",
+     "ROE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.17447678907986486,
+    "granger_p_ba": 0.5339841215257017,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.03001986454233887,
+    "lingam_direction": "NPL->ROE",
+    "lingam_boot_share_ab": 0.862,
+    "involves_simulated": true,
+    "L4_direction": "NPL->ROE",
+    "L4_lag": "later_quarters",
+    "prior_direction": "NPL->ROE"
+   },
+   {
+    "pair": [
+     "PROV_COVERAGE",
+     "ROE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.1326257579325495,
+    "granger_p_ba": 0.7389228153977669,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.0294891381834735,
+    "lingam_direction": "PROV_COVERAGE->ROE",
+    "lingam_boot_share_ab": 0.868,
+    "involves_simulated": true,
+    "L4_direction": "PROV_COVERAGE->ROE",
+    "L4_lag": "disagree",
+    "prior_direction": "PROV_COVERAGE->ROE"
+   },
+   {
+    "pair": [
+     "NPL",
+     "CPI_INFLATION"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.29159560173093646,
+    "granger_p_ba": 0.6936887767130598,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.00014498146954238834,
+    "lingam_direction": "CPI_INFLATION->NPL",
+    "lingam_boot_share_ab": 0.666,
+    "involves_simulated": true,
+    "L4_direction": "CPI_INFLATION->NPL",
+    "L4_lag": "later_quarters",
+    "prior_direction": "CPI_INFLATION->NPL"
+   },
+   {
+    "pair": [
+     "LDR",
+     "POLICY_RATE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.9410414519545794,
+    "granger_p_ba": 0.8936133010108686,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0024441653870432454,
+    "lingam_direction": "POLICY_RATE->LDR",
+    "lingam_boot_share_ab": 0.158,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear",
+    "prior_direction": "LDR->POLICY_RATE"
+   },
+   {
+    "pair": [
+     "LDR",
+     "NIM"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.3662158496141541,
+    "granger_p_ba": 0.7932015462387937,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.0028664631060343437,
+    "lingam_direction": "LDR->NIM",
+    "lingam_boot_share_ab": 0.594,
+    "involves_simulated": true,
+    "L4_direction": "LDR->NIM",
+    "L4_lag": "disagree",
+    "prior_direction": "LDR->NIM"
+   },
+   {
+    "pair": [
+     "NIM",
+     "NPL"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.36752457646248193,
+    "granger_p_ba": 0.6044380632058542,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.00043811010029234747,
+    "lingam_direction": "NPL->NIM",
+    "lingam_boot_share_ab": 0.152,
+    "involves_simulated": true,
+    "L4_direction": "NPL->NIM",
+    "L4_lag": "same_quarter",
+    "prior_direction": "NIM->NPL"
+   },
+   {
+    "pair": [
+     "POLICY_RATE",
+     "TRADE_VOLUME"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.4560541690084198,
+    "granger_p_ba": 0.41685243667603133,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.001783744571152268,
+    "lingam_direction": "POLICY_RATE->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.838,
+    "involves_simulated": false,
+    "L4_direction": "POLICY_RATE->TRADE_VOLUME",
+    "L4_lag": "same_quarter",
+    "prior_direction": "POLICY_RATE->TRADE_VOLUME"
+   },
+   {
+    "pair": [
+     "NPL",
+     "POLICY_RATE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.9712080992600206,
+    "granger_p_ba": 0.9774587284299447,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.010410441127162317,
+    "lingam_direction": "NPL->POLICY_RATE",
+    "lingam_boot_share_ab": 0.77,
+    "involves_simulated": true,
+    "L4_direction": "POLICY_RATE->NPL",
+    "L4_lag": "later_quarters",
+    "prior_direction": "POLICY_RATE->NPL"
+   },
+   {
+    "pair": [
+     "NIM",
+     "ROE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.9607641289470599,
+    "granger_p_ba": 0.42680211616009156,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0018389267581881764,
+    "lingam_direction": "ROE->NIM",
+    "lingam_boot_share_ab": 0.416,
+    "involves_simulated": true,
+    "L4_direction": "NIM->ROE",
+    "L4_lag": "same_quarter",
+    "prior_direction": "NIM->ROE"
+   },
+   {
+    "pair": [
+     "POLICY_RATE",
+     "TRADE_VALUE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.27698485982599064,
+    "granger_p_ba": 0.8207642671236708,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.0005794003267135098,
+    "lingam_direction": "POLICY_RATE->TRADE_VALUE",
+    "lingam_boot_share_ab": 0.85,
+    "involves_simulated": false,
+    "L4_direction": "POLICY_RATE->TRADE_VALUE",
+    "L4_lag": "same_quarter",
+    "prior_direction": "POLICY_RATE->TRADE_VALUE"
+   },
+   {
+    "pair": [
+     "POLICY_RATE",
+     "STOCK_RETURN"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.15618054385355407,
+    "granger_p_ba": 0.43998618910717935,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.011624440023978807,
+    "lingam_direction": "POLICY_RATE->STOCK_RETURN",
+    "lingam_boot_share_ab": 0.886,
+    "involves_simulated": false,
+    "L4_direction": "POLICY_RATE->STOCK_RETURN",
+    "L4_lag": "same_quarter",
+    "prior_direction": "POLICY_RATE->STOCK_RETURN"
+   },
+   {
+    "pair": [
+     "CPI_INFLATION",
+     "TRADE_VOLUME"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.15280804379826973,
+    "granger_p_ba": 0.9348521662079304,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.027815288655630332,
+    "lingam_direction": "CPI_INFLATION->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.734,
+    "involves_simulated": false,
+    "L4_direction": "CPI_INFLATION->TRADE_VOLUME",
+    "L4_lag": "same_quarter",
+    "prior_direction": "CPI_INFLATION->TRADE_VOLUME"
+   },
+   {
+    "pair": [
+     "CPI_INFLATION",
+     "TRADE_VALUE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.028933446320608347,
+    "granger_p_ba": 0.7845038598897658,
+    "granger_direction_p10": "CPI_INFLATION->TRADE_VALUE",
+    "lingam_measure_ab": 0.01701911785918431,
+    "lingam_direction": "CPI_INFLATION->TRADE_VALUE",
+    "lingam_boot_share_ab": 0.69,
+    "involves_simulated": false,
+    "L4_direction": "CPI_INFLATION->TRADE_VALUE",
+    "L4_lag": "same_quarter",
+    "prior_direction": "CPI_INFLATION->TRADE_VALUE"
+   },
+   {
+    "pair": [
+     "CAR",
+     "NIM"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.10430518788998488,
+    "granger_p_ba": 0.6215014116558544,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.0031320096971855517,
+    "lingam_direction": "CAR->NIM",
+    "lingam_boot_share_ab": 0.758,
+    "involves_simulated": true,
+    "L4_direction": "NIM->CAR",
+    "L4_lag": "later_quarters",
+    "prior_direction": "NIM->CAR"
+   },
+   {
+    "pair": [
+     "CAR",
+     "GDP_GROWTH"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.16689653551899564,
+    "granger_p_ba": 0.6910818404089683,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0024834365740881415,
+    "lingam_direction": "GDP_GROWTH->CAR",
+    "lingam_boot_share_ab": 0.274,
+    "involves_simulated": true,
+    "L4_direction": "GDP_GROWTH->CAR",
+    "L4_lag": "disagree",
+    "prior_direction": "GDP_GROWTH->CAR"
+   },
+   {
+    "pair": [
+     "ROE",
+     "Z_SCORE"
+    ],
+    "kind": "prior",
+    "granger_p_ab": 0.5817088162250452,
+    "granger_p_ba": 0.887888512586928,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 3.196252202911082e-05,
+    "lingam_direction": "ROE->Z_SCORE",
+    "lingam_boot_share_ab": 0.408,
+    "involves_simulated": true,
+    "L4_direction": "ROE->Z_SCORE",
+    "L4_lag": "same_quarter",
+    "prior_direction": "ROE->Z_SCORE"
+   },
+   {
+    "pair": [
+     "TRADE_VALUE",
+     "TRADE_VOLUME"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.16894973044387696,
+    "granger_p_ba": 0.27061372599888667,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.01698043275072169,
+    "lingam_direction": "TRADE_VALUE->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.656,
+    "involves_simulated": false,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "ROE",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.865415988228571,
+    "granger_p_ba": 0.4925633846654047,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.017216434953998137,
+    "lingam_direction": "ROE->STOCK_RETURN",
+    "lingam_boot_share_ab": 0.772,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "NPL"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.07451177273120246,
+    "granger_p_ba": 0.39223847103802334,
+    "granger_direction_p10": "LDR->NPL",
+    "lingam_measure_ab": -0.01454545574089253,
+    "lingam_direction": "NPL->LDR",
+    "lingam_boot_share_ab": 0.144,
+    "involves_simulated": true,
+    "L4_direction": "LDR->NPL",
+    "L4_lag": "later_quarters"
+   },
+   {
+    "pair": [
+     "CAR",
+     "NPL"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8166210627773435,
+    "granger_p_ba": 0.03621698081281988,
+    "granger_direction_p10": "NPL->CAR",
+    "lingam_measure_ab": -0.0013102645554179278,
+    "lingam_direction": "NPL->CAR",
+    "lingam_boot_share_ab": 0.146,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "CAR",
+     "ROE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8403831319045119,
+    "granger_p_ba": 0.1932454053849033,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0013413598509815464,
+    "lingam_direction": "ROE->CAR",
+    "lingam_boot_share_ab": 0.364,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "ROE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.010143515443759687,
+    "granger_p_ba": 0.021479535840846165,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0004505925316539507,
+    "lingam_direction": "ROE->LDR",
+    "lingam_boot_share_ab": 0.602,
+    "involves_simulated": true,
+    "L4_direction": "LDR->ROE",
+    "L4_lag": "disagree"
+   },
+   {
+    "pair": [
+     "NIM",
+     "PROV_COVERAGE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.30538232926782005,
+    "granger_p_ba": 0.6760997802452231,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0006819792909098681,
+    "lingam_direction": "PROV_COVERAGE->NIM",
+    "lingam_boot_share_ab": 0.168,
+    "involves_simulated": true,
+    "L4_direction": "both",
+    "L4_lag": "same_quarter"
+   },
+   {
+    "pair": [
+     "TRADE_VALUE",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.3130737519403799,
+    "granger_p_ba": 0.19412792969890058,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.018496588887610063,
+    "lingam_direction": "STOCK_RETURN->TRADE_VALUE",
+    "lingam_boot_share_ab": 0.224,
+    "involves_simulated": false,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "TRADE_VALUE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.006924852676339244,
+    "granger_p_ba": 0.4239968163515221,
+    "granger_direction_p10": "LDR->TRADE_VALUE",
+    "lingam_measure_ab": -0.005170448307313051,
+    "lingam_direction": "TRADE_VALUE->LDR",
+    "lingam_boot_share_ab": 0.52,
+    "involves_simulated": true,
+    "L4_direction": "LDR->TRADE_VALUE",
+    "L4_lag": "same_quarter"
+   },
+   {
+    "pair": [
+     "NPL",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8894594042976874,
+    "granger_p_ba": 0.774006120431179,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.011332962438690688,
+    "lingam_direction": "NPL->STOCK_PRICE",
+    "lingam_boot_share_ab": 0.866,
+    "involves_simulated": true,
+    "L4_direction": "NPL->STOCK_PRICE",
+    "L4_lag": "disagree"
+   },
+   {
+    "pair": [
+     "STOCK_PRICE",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.14818529675454528,
+    "granger_p_ba": 0.09914861609912684,
+    "granger_direction_p10": "STOCK_RETURN->STOCK_PRICE",
+    "lingam_measure_ab": -0.0026049651559986744,
+    "lingam_direction": "STOCK_RETURN->STOCK_PRICE",
+    "lingam_boot_share_ab": 0.478,
+    "involves_simulated": false,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "CAR",
+     "LDR"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.3011567820976756,
+    "granger_p_ba": 0.40527705349268695,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.009144324805587063,
+    "lingam_direction": "LDR->CAR",
+    "lingam_boot_share_ab": 0.482,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "TRADE_VOLUME"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.010502837668940113,
+    "granger_p_ba": 0.4589888710381176,
+    "granger_direction_p10": "LDR->TRADE_VOLUME",
+    "lingam_measure_ab": 0.00011847669406223525,
+    "lingam_direction": "LDR->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.802,
+    "involves_simulated": true,
+    "L4_direction": "LDR->TRADE_VOLUME",
+    "L4_lag": "same_quarter"
+   },
+   {
+    "pair": [
+     "NIM",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.795209354939798,
+    "granger_p_ba": 0.3463820057342031,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.007820290532102413,
+    "lingam_direction": "STOCK_PRICE->NIM",
+    "lingam_boot_share_ab": 0.274,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "ROE",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.4887048821082407,
+    "granger_p_ba": 0.19726462426284097,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.0034504822390208894,
+    "lingam_direction": "ROE->STOCK_PRICE",
+    "lingam_boot_share_ab": 0.586,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "CAR",
+     "PROV_COVERAGE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.7725105918121133,
+    "granger_p_ba": 0.0470217265465952,
+    "granger_direction_p10": "PROV_COVERAGE->CAR",
+    "lingam_measure_ab": -0.0008289019902119963,
+    "lingam_direction": "PROV_COVERAGE->CAR",
+    "lingam_boot_share_ab": 0.148,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "ROE",
+     "TRADE_VALUE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.2949763089870301,
+    "granger_p_ba": 0.12055753559086324,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.006881132610779473,
+    "lingam_direction": "TRADE_VALUE->ROE",
+    "lingam_boot_share_ab": 0.414,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "PROV_COVERAGE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.07566956575077133,
+    "granger_p_ba": 0.4399697061202037,
+    "granger_direction_p10": "LDR->PROV_COVERAGE",
+    "lingam_measure_ab": -0.014874597312434897,
+    "lingam_direction": "PROV_COVERAGE->LDR",
+    "lingam_boot_share_ab": 0.26,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.07213196918082354,
+    "granger_p_ba": 0.604133935382458,
+    "granger_direction_p10": "LDR->STOCK_PRICE",
+    "lingam_measure_ab": -0.004431214847677443,
+    "lingam_direction": "STOCK_PRICE->LDR",
+    "lingam_boot_share_ab": 0.554,
+    "involves_simulated": true,
+    "L4_direction": "LDR->STOCK_PRICE",
+    "L4_lag": "later_quarters"
+   },
+   {
+    "pair": [
+     "STOCK_PRICE",
+     "TRADE_VALUE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8989207477819856,
+    "granger_p_ba": 0.5664073295815317,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.005576768283902846,
+    "lingam_direction": "STOCK_PRICE->TRADE_VALUE",
+    "lingam_boot_share_ab": 0.612,
+    "involves_simulated": false,
+    "L4_direction": "disagree",
+    "L4_lag": "same_quarter"
+   },
+   {
+    "pair": [
+     "TRADE_VOLUME",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8262285653387738,
+    "granger_p_ba": 0.5097690345685207,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.03382843392155614,
+    "lingam_direction": "STOCK_RETURN->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.124,
+    "involves_simulated": false,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "CAR",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.636717730816227,
+    "granger_p_ba": 0.26354110783853324,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.005853024133222376,
+    "lingam_direction": "STOCK_PRICE->CAR",
+    "lingam_boot_share_ab": 0.386,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "later_quarters"
+   },
+   {
+    "pair": [
+     "NIM",
+     "TRADE_VALUE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.9327444621775685,
+    "granger_p_ba": 0.5726050306223138,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.00031980396486493216,
+    "lingam_direction": "TRADE_VALUE->NIM",
+    "lingam_boot_share_ab": 0.508,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "NIM",
+     "TRADE_VOLUME"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.7709208547026707,
+    "granger_p_ba": 0.5407950341890824,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0007905909497204744,
+    "lingam_direction": "TRADE_VOLUME->NIM",
+    "lingam_boot_share_ab": 0.552,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.07121345556968206,
+    "granger_p_ba": 0.6222489751159845,
+    "granger_direction_p10": "LDR->STOCK_RETURN",
+    "lingam_measure_ab": -0.005413857600499023,
+    "lingam_direction": "STOCK_RETURN->LDR",
+    "lingam_boot_share_ab": 0.458,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "NPL",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.7862424381535489,
+    "granger_p_ba": 0.9817009680889284,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.002010425910958477,
+    "lingam_direction": "NPL->STOCK_RETURN",
+    "lingam_boot_share_ab": 0.788,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "STOCK_PRICE",
+     "TRADE_VOLUME"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.7674404823555792,
+    "granger_p_ba": 0.8528310242053836,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.030339963205831467,
+    "lingam_direction": "STOCK_PRICE->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.884,
+    "involves_simulated": false,
+    "L4_direction": "both",
+    "L4_lag": "same_quarter"
+   },
+   {
+    "pair": [
+     "CAR",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8775809196677998,
+    "granger_p_ba": 0.3342438340282805,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.004485586485707193,
+    "lingam_direction": "STOCK_RETURN->CAR",
+    "lingam_boot_share_ab": 0.378,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "LDR",
+     "CPI_INFLATION"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.960308465825911,
+    "granger_p_ba": 0.17055350001355174,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.015394602658212549,
+    "lingam_direction": "CPI_INFLATION->LDR",
+    "lingam_boot_share_ab": 0.374,
+    "involves_simulated": true,
+    "L4_direction": "CPI_INFLATION->LDR",
+    "L4_lag": "both"
+   },
+   {
+    "pair": [
+     "NIM",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.7527947864017857,
+    "granger_p_ba": 0.14010715350614844,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.005541972464068524,
+    "lingam_direction": "STOCK_RETURN->NIM",
+    "lingam_boot_share_ab": 0.334,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "PROV_COVERAGE",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.9718393795379329,
+    "granger_p_ba": 0.8530193266032489,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.008921284355320623,
+    "lingam_direction": "PROV_COVERAGE->STOCK_PRICE",
+    "lingam_boot_share_ab": 0.806,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "later_quarters"
+   },
+   {
+    "pair": [
+     "CPI_INFLATION",
+     "STOCK_RETURN"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.11412233607631772,
+    "granger_p_ba": 0.610198206863164,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.002781885330153991,
+    "lingam_direction": "CPI_INFLATION->STOCK_RETURN",
+    "lingam_boot_share_ab": 0.49,
+    "involves_simulated": false,
+    "L4_direction": "CPI_INFLATION->STOCK_RETURN",
+    "L4_lag": "same_quarter"
+   },
+   {
+    "pair": [
+     "GDP_GROWTH",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.17705228873845436,
+    "granger_p_ba": 0.02870390890053809,
+    "granger_direction_p10": "STOCK_PRICE->GDP_GROWTH",
+    "lingam_measure_ab": -0.004052158937475749,
+    "lingam_direction": "STOCK_PRICE->GDP_GROWTH",
+    "lingam_boot_share_ab": 0.572,
+    "involves_simulated": false,
+    "L4_direction": "unclear",
+    "L4_lag": "later_quarters"
+   },
+   {
+    "pair": [
+     "NPL",
+     "TRADE_VALUE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.7271442742585086,
+    "granger_p_ba": 0.27868906922679115,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.04166826098506847,
+    "lingam_direction": "NPL->TRADE_VALUE",
+    "lingam_boot_share_ab": 0.87,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "NPL",
+     "TRADE_VOLUME"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.8618753445241598,
+    "granger_p_ba": 0.05193154719811832,
+    "granger_direction_p10": "TRADE_VOLUME->NPL",
+    "lingam_measure_ab": 0.053066006516820995,
+    "lingam_direction": "NPL->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.87,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "ROE",
+     "POLICY_RATE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.14614743267552344,
+    "granger_p_ba": 0.15874418484993047,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.0009908543307135254,
+    "lingam_direction": "POLICY_RATE->ROE",
+    "lingam_boot_share_ab": 0.178,
+    "involves_simulated": true,
+    "L4_direction": "POLICY_RATE->ROE",
+    "L4_lag": "both"
+   },
+   {
+    "pair": [
+     "ROE",
+     "TRADE_VOLUME"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.49635590107521144,
+    "granger_p_ba": 0.10858474512802785,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.005590403933927113,
+    "lingam_direction": "ROE->TRADE_VOLUME",
+    "lingam_boot_share_ab": 0.718,
+    "involves_simulated": true,
+    "L4_direction": "unclear",
+    "L4_lag": "unclear"
+   },
+   {
+    "pair": [
+     "CPI_INFLATION",
+     "STOCK_PRICE"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.12796913521887765,
+    "granger_p_ba": 0.8071256948304021,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.001418129911663499,
+    "lingam_direction": "STOCK_PRICE->CPI_INFLATION",
+    "lingam_boot_share_ab": 0.272,
+    "involves_simulated": false,
+    "L4_direction": "unclear",
+    "L4_lag": "disagree"
+   },
+   {
+    "pair": [
+     "LDR",
+     "GDP_GROWTH"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.29352045359673584,
+    "granger_p_ba": 0.7947521719490532,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": 0.00010874431327204191,
+    "lingam_direction": "LDR->GDP_GROWTH",
+    "lingam_boot_share_ab": 0.564,
+    "involves_simulated": true,
+    "L4_direction": "GDP_GROWTH->LDR",
+    "L4_lag": "later_quarters"
+   },
+   {
+    "pair": [
+     "NIM",
+     "CPI_INFLATION"
+    ],
+    "kind": "missing_candidate",
+    "granger_p_ab": 0.17714781572086225,
+    "granger_p_ba": 0.5381429383638654,
+    "granger_direction_p10": null,
+    "lingam_measure_ab": -0.011163305095368567,
+    "lingam_direction": "CPI_INFLATION->NIM",
+    "lingam_boot_share_ab": 0.266,
+    "involves_simulated": true,
+    "L4_direction": "CPI_INFLATION->NIM",
+    "L4_lag": "later_quarters"
+   }
+  ]
+ },
+ "L3_vs_observed_policy_rate": {
+  "consensus": {
+   "shock_POLICY_RATE": {
+    "quarters_rate_changed": 2,
+    "quarters_text_nonzero": 3,
+    "both_nonzero": 0,
+    "sign_match_when_both": 0,
+    "text_nonzero_rate_unchanged": 3,
+    "rate_changed_text_silent": 2,
+    "pearson": -0.00613785770175295
+   },
+   "monetary_stance": {
+    "quarters_rate_changed": 2,
+    "quarters_text_nonzero": 3,
+    "both_nonzero": 0,
+    "sign_match_when_both": 0,
+    "text_nonzero_rate_unchanged": 3,
+    "rate_changed_text_silent": 2,
+    "pearson": -0.00613785770175295
+   }
+  },
+  "union": {
+   "shock_POLICY_RATE": {
+    "quarters_rate_changed": 2,
+    "quarters_text_nonzero": 5,
+    "both_nonzero": 0,
+    "sign_match_when_both": 0,
+    "text_nonzero_rate_unchanged": 5,
+    "rate_changed_text_silent": 2,
+    "pearson": -0.005918783311591927
+   },
+   "monetary_stance": {
+    "quarters_rate_changed": 2,
+    "quarters_text_nonzero": 4,
+    "both_nonzero": 0,
+    "sign_match_when_both": 0,
+    "text_nonzero_rate_unchanged": 4,
+    "rate_changed_text_silent": 2,
+    "pearson": -0.003997825774007639
+   }
+  },
+  "observed_policy_rate_change_by_quarter": {
+   "2022Q1": 2.0,
+   "2023Q1": -1.5
+  }
+ },
+ "auroc_translation": {
+  "L4_support_reliability_single": 0.6260841021316718,
+  "L4_support_reliability_mean_of_2": 0.7700513169164172,
+  "upper_bound_corr_with_latent": 0.8775256787789273,
+  "gold_based_auroc_point": 0.6,
+  "gold_based_auroc_ci95": [
+   0.2,
+   0.9666666666666667
+  ],
+  "note": "AUROC = Phi(d/sqrt2) (textinfo's binormal model). See docs/ext/llm.md section 6 for the reasoning.",
+  "example_d_for_auroc": {
+   "0.6": 0.3582869092425833,
+   "0.7": 0.7416143171871158,
+   "0.8": 1.19023216289999,
+   "0.9": 1.8123876048736465
+  },
+  "auc_from_d_check": {
+   "0.36": 0.6004679195093479,
+   "0.74": 0.6996029920214997,
+   "1.19": 0.7999540371673164,
+   "1.81": 0.8997033870166815
+  }
+ }
+}

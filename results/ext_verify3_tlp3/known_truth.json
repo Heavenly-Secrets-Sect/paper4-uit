@@ -1,0 +1,202 @@
+{
+  "holm_max_abs_diff_vs_ref": 0.0,
+  "cases": {
+    "all_v4_better_by_1": {
+      "expect": "CONFIRMED-A",
+      "got": "CONFIRMED-A",
+      "counts": {
+        "targeted_lp": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db_p3": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        }
+      }
+    },
+    "two_ties_one_X": {
+      "expect": "CONFIRMED-A' (10 wins)",
+      "got": "CONFIRMED-A'",
+      "counts": {
+        "targeted_lp": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db": {
+          "n": 12,
+          "v4_wins_gate": 10,
+          "v4_wins_gate_holm": 10,
+          "v4_wins_pure": 10,
+          "v4_wins_pure_holm": 10,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db_p3": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        }
+      }
+    },
+    "four_ties_one_X": {
+      "expect": "NOT CONFIRMED (8 wins)",
+      "got": "NOT CONFIRMED",
+      "counts": {
+        "targeted_lp": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db": {
+          "n": 12,
+          "v4_wins_gate": 8,
+          "v4_wins_gate_holm": 8,
+          "v4_wins_pure": 8,
+          "v4_wins_pure_holm": 8,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db_p3": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        }
+      }
+    },
+    "X_wins_pure_only": {
+      "expect": "NOT CONFIRMED",
+      "got": "NOT CONFIRMED",
+      "counts": {
+        "targeted_lp": {
+          "n": 12,
+          "v4_wins_gate": 11,
+          "v4_wins_gate_holm": 11,
+          "v4_wins_pure": 11,
+          "v4_wins_pure_holm": 11,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 1,
+          "X_wins_pure_holm": 1
+        },
+        "tlp2_db": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        },
+        "tlp2_db_p3": {
+          "n": 12,
+          "v4_wins_gate": 12,
+          "v4_wins_gate_holm": 12,
+          "v4_wins_pure": 12,
+          "v4_wins_pure_holm": 12,
+          "X_wins_gate": 0,
+          "X_wins_gate_holm": 0,
+          "X_wins_pure": 0,
+          "X_wins_pure_holm": 0
+        }
+      }
+    },
+    "small_effects_tlp2_db_p3": {
+      "note": "raw gate wins vs Holm-passed should differ",
+      "got": "NOT CONFIRMED",
+      "counts": {
+        "n": 12,
+        "v4_wins_gate": 0,
+        "v4_wins_gate_holm": 0,
+        "v4_wins_pure": 0,
+        "v4_wins_pure_holm": 0,
+        "X_wins_gate": 0,
+        "X_wins_gate_holm": 0,
+        "X_wins_pure": 0,
+        "X_wins_pure_holm": 0
+      },
+      "raw_p": [
+        0.3562,
+        0.1352,
+        0.4426,
+        0.371,
+        0.2214,
+        0.2674,
+        0.5142,
+        0.1804,
+        0.1302,
+        0.8584,
+        0.9584,
+        0.1192
+      ]
+    },
+    "7_v4_failures": {
+      "expect": "NOT CONFIRMED (incomplete ...)",
+      "got": "NOT CONFIRMED (incomplete: targeted_lp@150|extra|0.2, tlp2_db@150|extra|0.2, tlp2_db_p3@150|extra|0.2)",
+      "v4_cov_150_extra_0.2": 0.8391666666666666,
+      "expected_cov": 0.8391666666666666
+    },
+    "6_units_all_methods_fail": {
+      "got": "CONFIRMED-A",
+      "v4_cov": 0.95,
+      "cov_if_failed_counted_uncovered": 0.855,
+      "n_pairs": 54
+    }
+  }
+}

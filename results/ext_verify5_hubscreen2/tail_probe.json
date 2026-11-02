@@ -1,0 +1,90 @@
+[
+ {
+  "topology": "syn_dag_13",
+  "replicate": 2,
+  "status": "ok",
+  "rho_data": 8.18,
+  "min_dof_fit0": 1.0,
+  "draw_rho_median": 8.18,
+  "draw_rho_p95": 8.18,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 286
+ },
+ {
+  "topology": "syn_dag_13",
+  "replicate": 1,
+  "status": "ok",
+  "rho_data": 3.705,
+  "min_dof_fit0": 1.0,
+  "draw_rho_median": 3.705,
+  "draw_rho_p95": 3.705,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 314
+ },
+ {
+  "topology": "syn_dag_02",
+  "replicate": 0,
+  "status": "ok",
+  "rho_data": 2.185,
+  "min_dof_fit0": 1.0,
+  "draw_rho_median": 2.185,
+  "draw_rho_p95": 5.866,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 341
+ },
+ {
+  "topology": "syn_dag_00",
+  "replicate": 0,
+  "status": "ok",
+  "rho_data": 1.767,
+  "min_dof_fit0": 2.0,
+  "draw_rho_median": 1.769,
+  "draw_rho_p95": 3.637,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 322
+ },
+ {
+  "topology": "syn_dag_06",
+  "replicate": 0,
+  "status": "ok",
+  "rho_data": 1.418,
+  "min_dof_fit0": 1.0,
+  "draw_rho_median": 1.913,
+  "draw_rho_p95": 3.179,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 323
+ },
+ {
+  "topology": "syn_dag_05",
+  "replicate": 0,
+  "status": "ok",
+  "rho_data": 1.489,
+  "min_dof_fit0": 1.0,
+  "draw_rho_median": 1.493,
+  "draw_rho_p95": 2.306,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 332
+ },
+ {
+  "topology": "syn_dag_00",
+  "replicate": 1,
+  "status": "ok",
+  "rho_data": 1.255,
+  "min_dof_fit0": 2.0,
+  "draw_rho_median": 1.376,
+  "draw_rho_p95": 2.888,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 339
+ },
+ {
+  "topology": "syn_dag_03",
+  "replicate": 1,
+  "status": "ok",
+  "rho_data": 1.158,
+  "min_dof_fit0": 1.0,
+  "draw_rho_median": 1.36,
+  "draw_rho_p95": 3.466,
+  "share_draws_rho_ge_1": 1.0,
+  "n_draw_fits": 317
+ }
+]

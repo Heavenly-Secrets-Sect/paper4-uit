@@ -1,0 +1,414 @@
+{
+ "quarters": [
+  "2020Q2",
+  "2020Q3",
+  "2020Q4",
+  "2021Q1",
+  "2021Q2",
+  "2021Q3",
+  "2021Q4",
+  "2022Q1",
+  "2022Q2",
+  "2022Q3",
+  "2022Q4",
+  "2023Q1",
+  "2023Q2",
+  "2023Q3",
+  "2023Q4",
+  "2024Q1",
+  "2024Q2",
+  "2024Q3",
+  "2024Q4"
+ ],
+ "m": 17,
+ "xcheck_max_abs_diff": 0.0,
+ "nodes": [
+  {
+   "node": "bank_npl_ratio",
+   "nature": [
+    "simulated_calibrated"
+   ],
+   "n_terms": 9,
+   "fallback": false,
+   "skew": 0.609625976649416,
+   "exkurt": -0.10450441569612101,
+   "JB": 1.0607266864537952,
+   "p_asym": 0.5883911428979129,
+   "p_mc": 0.49545045495450457,
+   "p_sw": 0.5278811746350676,
+   "group": "simulated",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "bank_car_ratio",
+   "nature": [
+    "simulated_calibrated"
+   ],
+   "n_terms": 5,
+   "fallback": false,
+   "skew": 0.8436250304503203,
+   "exkurt": 1.3732492953400586,
+   "JB": 3.352277029905838,
+   "p_asym": 0.187095047668713,
+   "p_mc": 0.07579242075792421,
+   "p_sw": 0.30124415283794703,
+   "group": "simulated",
+   "p_mc_holm14": 0.8963103689631037,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "bank_nim_ratio",
+   "nature": [
+    "simulated_calibrated"
+   ],
+   "n_terms": 8,
+   "fallback": false,
+   "skew": 0.21289318795528978,
+   "exkurt": 0.41875155365171546,
+   "JB": 0.2526248886310602,
+   "p_asym": 0.8813394342638302,
+   "p_mc": 0.8883111688831117,
+   "p_sw": 0.3959989603058236,
+   "group": "simulated",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "bank_roe_ratio",
+   "nature": [
+    "simulated_calibrated"
+   ],
+   "n_terms": 8,
+   "fallback": false,
+   "skew": 0.9280029600748928,
+   "exkurt": 0.955099224392479,
+   "JB": 3.0861888570468685,
+   "p_asym": 0.21371873977576647,
+   "p_mc": 0.0746925307469253,
+   "p_sw": 0.12592945819322082,
+   "group": "simulated",
+   "p_mc_holm14": 0.8963103689631037,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "bank_ldr_ratio",
+   "nature": [
+    "simulated_calibrated"
+   ],
+   "n_terms": 3,
+   "fallback": false,
+   "skew": -0.3104242616743392,
+   "exkurt": -0.5179114407374166,
+   "JB": 0.4630269808185832,
+   "p_asym": 0.7933319930576437,
+   "p_mc": 0.7474252574742526,
+   "p_sw": 0.4648173702315004,
+   "group": "simulated",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "bank_provision_coverage_proxy_pct",
+   "nature": [
+    "derived_from_simulated"
+   ],
+   "n_terms": 4,
+   "fallback": false,
+   "skew": -0.7733692337446914,
+   "exkurt": 1.9894924355965902,
+   "JB": 4.498256693659449,
+   "p_asym": 0.10549113618180636,
+   "p_mc": 0.0524947505249475,
+   "p_sw": 0.1447171953669739,
+   "group": "simulated",
+   "p_mc_holm14": 0.6824317568243176,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "bank_z_score",
+   "nature": [
+    "derived_from_simulated"
+   ],
+   "n_terms": 3,
+   "fallback": false,
+   "skew": 0.675454234367893,
+   "exkurt": 0.2468468795345622,
+   "JB": 1.3358366765935954,
+   "p_asym": 0.5127748914031744,
+   "p_mc": 0.22597740225977403,
+   "p_sw": 0.14134970929831556,
+   "group": "simulated",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "macro_gdp_yoy_pct",
+   "nature": [
+    "real"
+   ],
+   "n_terms": 4,
+   "fallback": false,
+   "skew": -0.8311087771139282,
+   "exkurt": 2.8201042620930155,
+   "JB": 7.590468299716386,
+   "p_asym": 0.02247764206380432,
+   "p_mc": 0.028197180281971802,
+   "p_sw": 0.012470965076772962,
+   "group": "real",
+   "p_mc_holm14": 0.39476052394760525,
+   "p_sw_holm14": 0.17459351107482146
+  },
+  {
+   "node": "macro_cpi_avg_pct",
+   "nature": [
+    "real"
+   ],
+   "n_terms": 6,
+   "fallback": false,
+   "skew": -0.8571128316339747,
+   "exkurt": 1.9229380570244405,
+   "JB": 4.700684446996221,
+   "p_asym": 0.09533653023127872,
+   "p_mc": 0.07889211078892111,
+   "p_sw": 0.1428588324532936,
+   "group": "real",
+   "p_mc_holm14": 0.8963103689631037,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "macro_policy_rate_pct",
+   "nature": [
+    "real"
+   ],
+   "n_terms": 11,
+   "fallback": false,
+   "skew": 0.1728287700422298,
+   "exkurt": -0.01346822190075736,
+   "JB": 0.08475954067970555,
+   "p_asym": 0.9585056994080315,
+   "p_mc": 0.9361063893610639,
+   "p_sw": 0.8211940143183403,
+   "group": "real",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "stock_adj_close_last_vnd",
+   "nature": [
+    "real"
+   ],
+   "n_terms": 3,
+   "fallback": false,
+   "skew": 0.4204241348524151,
+   "exkurt": -0.9485906981697174,
+   "JB": 1.138185505434801,
+   "p_asym": 0.5660387429287634,
+   "p_mc": 0.36476352364763526,
+   "p_sw": 0.26594621337493835,
+   "group": "real",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "stock_return_qoq_pct",
+   "nature": [
+    "derived_from_real"
+   ],
+   "n_terms": 3,
+   "fallback": false,
+   "skew": 0.5868920363128082,
+   "exkurt": -0.32744067522173337,
+   "JB": 1.0518653984986304,
+   "p_asym": 0.5910038783478192,
+   "p_mc": 0.4116588341165883,
+   "p_sw": 0.4794130923438999,
+   "group": "real",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "stock_avg_daily_volume_cp",
+   "nature": [
+    "real"
+   ],
+   "n_terms": 5,
+   "fallback": false,
+   "skew": 0.759440529309331,
+   "exkurt": -0.41821310995002525,
+   "JB": 1.7580138285249387,
+   "p_asym": 0.4151950312765197,
+   "p_mc": 0.23107689231076892,
+   "p_sw": 0.1221338567934938,
+   "group": "real",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  },
+  {
+   "node": "stock_avg_daily_trade_value_vnd",
+   "nature": [
+    "real"
+   ],
+   "n_terms": 5,
+   "fallback": false,
+   "skew": 0.7050980208158047,
+   "exkurt": -0.18306258297051947,
+   "JB": 1.4323667227914199,
+   "p_asym": 0.4886135631197446,
+   "p_mc": 0.29657034296570345,
+   "p_sw": 0.32742806590860674,
+   "group": "real",
+   "p_mc_holm14": 1.0,
+   "p_sw_holm14": 1.0
+  }
+ ],
+ "power": {
+  "17": {
+   "crit_0.05": 3.5131016690536003,
+   "laplace": 0.2753,
+   "t5": 0.2019,
+   "skewexp": 0.5581,
+   "uniform": 0.0045,
+   "t10": 0.114
+  },
+  "18": {
+   "crit_0.05": 3.507878117869272,
+   "laplace": 0.2822,
+   "t5": 0.2159,
+   "skewexp": 0.5832,
+   "uniform": 0.0041,
+   "t10": 0.1231
+  }
+ },
+ "gate_21_edges": {
+  "n_open": 4,
+  "edges": [
+   {
+    "u": "bank_npl_ratio",
+    "v": "bank_roe_ratio",
+    "gate": false,
+    "gate_p": 0.7256964513116249
+   },
+   {
+    "u": "bank_npl_ratio",
+    "v": "bank_provision_coverage_proxy_pct",
+    "gate": true,
+    "gate_p": 0.0006221027082646824
+   },
+   {
+    "u": "bank_nim_ratio",
+    "v": "bank_npl_ratio",
+    "gate": false,
+    "gate_p": 0.7285040904934226
+   },
+   {
+    "u": "bank_nim_ratio",
+    "v": "bank_car_ratio",
+    "gate": false,
+    "gate_p": 0.9395865337243688
+   },
+   {
+    "u": "bank_nim_ratio",
+    "v": "bank_roe_ratio",
+    "gate": false,
+    "gate_p": 0.41385116551607914
+   },
+   {
+    "u": "bank_roe_ratio",
+    "v": "bank_z_score",
+    "gate": false,
+    "gate_p": 0.3817617798201912
+   },
+   {
+    "u": "bank_ldr_ratio",
+    "v": "bank_nim_ratio",
+    "gate": false,
+    "gate_p": 0.9515811495931894
+   },
+   {
+    "u": "bank_ldr_ratio",
+    "v": "macro_policy_rate_pct",
+    "gate": false,
+    "gate_p": 0.9572883349064741
+   },
+   {
+    "u": "bank_provision_coverage_proxy_pct",
+    "v": "bank_roe_ratio",
+    "gate": false,
+    "gate_p": 0.1998538925506843
+   },
+   {
+    "u": "macro_gdp_yoy_pct",
+    "v": "bank_car_ratio",
+    "gate": true,
+    "gate_p": 0.044450039734860614
+   },
+   {
+    "u": "macro_cpi_avg_pct",
+    "v": "bank_npl_ratio",
+    "gate": false,
+    "gate_p": 0.18158400646601802
+   },
+   {
+    "u": "macro_cpi_avg_pct",
+    "v": "stock_avg_daily_volume_cp",
+    "gate": false,
+    "gate_p": 0.18158400646601802
+   },
+   {
+    "u": "macro_cpi_avg_pct",
+    "v": "stock_avg_daily_trade_value_vnd",
+    "gate": false,
+    "gate_p": 0.18158400646601802
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "bank_npl_ratio",
+    "gate": true,
+    "gate_p": 0.0003656312570231579
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "bank_nim_ratio",
+    "gate": false,
+    "gate_p": 0.9982782230183834
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "macro_gdp_yoy_pct",
+    "gate": true,
+    "gate_p": 0.04777613181954221
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "macro_cpi_avg_pct",
+    "gate": false,
+    "gate_p": 0.3666530915076456
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "stock_adj_close_last_vnd",
+    "gate": false,
+    "gate_p": 0.809417573486247
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "stock_return_qoq_pct",
+    "gate": false,
+    "gate_p": 0.7722987217361195
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "stock_avg_daily_volume_cp",
+    "gate": false,
+    "gate_p": 0.700993192393472
+   },
+   {
+    "u": "macro_policy_rate_pct",
+    "v": "stock_avg_daily_trade_value_vnd",
+    "gate": false,
+    "gate_p": 0.7569860033696371
+   }
+  ]
+ }
+}

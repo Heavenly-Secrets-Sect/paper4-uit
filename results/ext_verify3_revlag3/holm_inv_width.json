@@ -1,0 +1,234 @@
+{
+ "round2": {
+  "rows": [
+   {
+    "label": "clean T80/150",
+    "d_inv": 0.07174199541668591,
+    "ci": [
+     0.03703616151783622,
+     0.10735072435962666
+    ],
+    "p_one_sided_phat_better": 0.0005,
+    "holm9": 0.0045000000000000005,
+    "p_one_sided_inv_better_approx": 1.0,
+    "holm9_inv": 1
+   },
+   {
+    "label": "clean T40",
+    "d_inv": 0.015442878399603122,
+    "ci": [
+     0.004682535683128425,
+     0.02524658630710885
+    ],
+    "p_one_sided_phat_better": 0.004,
+    "holm9": 0.024,
+    "p_one_sided_inv_better_approx": 0.9964999999999999,
+    "holm9_inv": 1
+   },
+   {
+    "label": "GES T40",
+    "d_inv": -0.04775359874044083,
+    "ci": [
+     -0.06954586581871493,
+     -0.025964518545673318
+    ],
+    "p_one_sided_phat_better": 1.0,
+    "holm9": 1,
+    "p_one_sided_inv_better_approx": 0.0005,
+    "holm9_inv": 0.0045000000000000005
+   },
+   {
+    "label": "GES T80",
+    "d_inv": 0.06564077397644419,
+    "ci": [
+     0.03682928874135663,
+     0.09549691959299962
+    ],
+    "p_one_sided_phat_better": 0.0005,
+    "holm9": 0.0045000000000000005,
+    "p_one_sided_inv_better_approx": 1.0,
+    "holm9_inv": 1
+   },
+   {
+    "label": "GES T150",
+    "d_inv": 0.14888918931098194,
+    "ci": [
+     0.11965919230678952,
+     0.18214880944562195
+    ],
+    "p_one_sided_phat_better": 0.0005,
+    "holm9": 0.0045000000000000005,
+    "p_one_sided_inv_better_approx": 1.0,
+    "holm9_inv": 1
+   },
+   {
+    "label": "latent1 T80/150",
+    "d_inv": 0.016429027341680613,
+    "ci": [
+     -0.02289068253728109,
+     0.05676791572512228
+    ],
+    "p_one_sided_phat_better": 0.1885,
+    "holm9": 0.754,
+    "p_one_sided_inv_better_approx": 0.8119999999999999,
+    "holm9_inv": 1
+   },
+   {
+    "label": "latent3 T80/150",
+    "d_inv": -0.022771257080241747,
+    "ci": [
+     -0.06475286916657629,
+     0.01869337225030508
+    ],
+    "p_one_sided_phat_better": 0.8745,
+    "holm9": 1,
+    "p_one_sided_inv_better_approx": 0.12599999999999995,
+    "holm9_inv": 0.8819999999999997
+   },
+   {
+    "label": "noise0.1 T80/150",
+    "d_inv": 0.028617734987599563,
+    "ci": [
+     0.006324882263484077,
+     0.052517901379866894
+    ],
+    "p_one_sided_phat_better": 0.0045,
+    "holm9": 0.024,
+    "p_one_sided_inv_better_approx": 0.996,
+    "holm9_inv": 1
+   },
+   {
+    "label": "noise0.3 T80/150",
+    "d_inv": -0.022914646640103897,
+    "ci": [
+     -0.040231007086160106,
+     -0.0025916785141916893
+    ],
+    "p_one_sided_phat_better": 0.986,
+    "holm9": 1,
+    "p_one_sided_inv_better_approx": 0.014500000000000013,
+    "holm9_inv": 0.1160000000000001
+   }
+  ],
+  "n_phat_better_holm": 5,
+  "n_inv_better_holm": 1,
+  "n_point_phat_better": 6,
+  "n_sets": 9
+ },
+ "train": {
+  "rows": [
+   {
+    "label": "clean T80/150",
+    "d_inv": 0.07172506263176637,
+    "ci": [
+     0.0370155657700013,
+     0.10735076561238313
+    ],
+    "p_one_sided_phat_better": 0.0005,
+    "holm9": 0.0045000000000000005,
+    "p_one_sided_inv_better_approx": 1.0,
+    "holm9_inv": 1
+   },
+   {
+    "label": "clean T40",
+    "d_inv": 0.015404172907416469,
+    "ci": [
+     0.004665877881844785,
+     0.025169961310938977
+    ],
+    "p_one_sided_phat_better": 0.004,
+    "holm9": 0.024,
+    "p_one_sided_inv_better_approx": 0.9964999999999999,
+    "holm9_inv": 1
+   },
+   {
+    "label": "GES T40",
+    "d_inv": -0.04775359874044083,
+    "ci": [
+     -0.06954586581871493,
+     -0.025964518545673318
+    ],
+    "p_one_sided_phat_better": 1.0,
+    "holm9": 1,
+    "p_one_sided_inv_better_approx": 0.0005,
+    "holm9_inv": 0.0045000000000000005
+   },
+   {
+    "label": "GES T80",
+    "d_inv": 0.06564077397644419,
+    "ci": [
+     0.03682928874135663,
+     0.09549691959299962
+    ],
+    "p_one_sided_phat_better": 0.0005,
+    "holm9": 0.0045000000000000005,
+    "p_one_sided_inv_better_approx": 1.0,
+    "holm9_inv": 1
+   },
+   {
+    "label": "GES T150",
+    "d_inv": 0.14888918931098194,
+    "ci": [
+     0.11965919230678952,
+     0.18214880944562195
+    ],
+    "p_one_sided_phat_better": 0.0005,
+    "holm9": 0.0045000000000000005,
+    "p_one_sided_inv_better_approx": 1.0,
+    "holm9_inv": 1
+   },
+   {
+    "label": "latent1 T80/150",
+    "d_inv": 0.016514902422606115,
+    "ci": [
+     -0.02245346846279945,
+     0.05673590824610101
+    ],
+    "p_one_sided_phat_better": 0.1875,
+    "holm9": 0.75,
+    "p_one_sided_inv_better_approx": 0.813,
+    "holm9_inv": 1
+   },
+   {
+    "label": "latent3 T80/150",
+    "d_inv": -0.022704505490045657,
+    "ci": [
+     -0.06467548064745036,
+     0.01869025189077064
+    ],
+    "p_one_sided_phat_better": 0.8745,
+    "holm9": 1,
+    "p_one_sided_inv_better_approx": 0.12599999999999995,
+    "holm9_inv": 0.8819999999999997
+   },
+   {
+    "label": "noise0.1 T80/150",
+    "d_inv": 0.02858599434297482,
+    "ci": [
+     0.006247378592059216,
+     0.05247866871568937
+    ],
+    "p_one_sided_phat_better": 0.0045,
+    "holm9": 0.024,
+    "p_one_sided_inv_better_approx": 0.996,
+    "holm9_inv": 1
+   },
+   {
+    "label": "noise0.3 T80/150",
+    "d_inv": -0.022964931846396808,
+    "ci": [
+     -0.04030047576354528,
+     -0.0025916785141916893
+    ],
+    "p_one_sided_phat_better": 0.986,
+    "holm9": 1,
+    "p_one_sided_inv_better_approx": 0.014500000000000013,
+    "holm9_inv": 0.1160000000000001
+   }
+  ],
+  "n_phat_better_holm": 5,
+  "n_inv_better_holm": 1,
+  "n_point_phat_better": 6,
+  "n_sets": 9
+ }
+}

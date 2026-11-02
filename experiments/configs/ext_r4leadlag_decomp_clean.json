@@ -1,0 +1,69 @@
+{
+  "name": "ext_r4leadlag_decomp_clean",
+  "purpose": "r4leadlag POST HOC descriptive decomposition: A and D with tolerant_v5_1's frozen width factors, clean grid at T 150 (same seeds/cells as ext_r4leadlag_eval_clean); paired with that run's tolerant_v5_1 rows. Not part of the pre-registered rule.",
+  "T": [
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "tolerant_v5_1_leadlag",
+    "tolerant_v5_1_leadlag_skel"
+  ],
+  "bank": "D-07",
+  "split": "development",
+  "max_topologies": null,
+  "replicates": 3,
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 20261102,
+  "calibration": {
+    "bank": "D-07H",
+    "split": "development",
+    "max_topologies": null,
+    "replicates": 1,
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "calibrate_methods": [
+    "tolerant_v5_1_leadlag",
+    "tolerant_v5_1_leadlag_skel"
+  ],
+  "frozen_calibration": "experiments/ext/r4leadlag/frozen_r4leadlag_v51factors.json",
+  "paired_references": []
+}
