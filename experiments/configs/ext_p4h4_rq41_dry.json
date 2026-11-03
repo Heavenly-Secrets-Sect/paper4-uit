@@ -1,0 +1,57 @@
+{
+  "name": "ext_p4h4_dry_rq41",
+  "purpose": "DRY RUN ONLY of the P4-H3 RQ4.1 spec, on bank P4-H1 (never P4-H3), different seed_base. Output results/ext_p4h4_dry_rq41*.",
+  "bank": "P4-H1",
+  "splits": [
+    "development",
+    "confirmatory"
+  ],
+  "replicates": 3,
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "oracle",
+    "plugin",
+    "tolerant_v4",
+    "tolerant_v5_1"
+  ],
+  "frozen_v4": "experiments/calibration/tolerant_v4_frozen.json",
+  "frozen_v51": "experiments/ext/v51/frozen_v4_v51.json",
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 99261105,
+  "seed_note": "dry seed_base 99261105 differs from the real 90261102 on purpose"
+}

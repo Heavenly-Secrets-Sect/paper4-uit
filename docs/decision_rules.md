@@ -701,3 +701,23 @@ Next: one run of the same rules on the sealed bank P4-H3 (specs under `experimen
 **Reading.** The (a) failure was disclosed in advance: D-07 and P4-H1 also gave 4/6, because at T40 the data cannot separate reversed from extra damage. It is therefore a property of the pre-registered threshold rather than a new failure, but the verdict stands as NOT CONFIRMED and is reported as such.
 
 **Split usage.** P4-H3 confirmatory has been used once, on 2026-11-02 (UTC). P4-H3 development was never opened. Seeds 90261102 / 90261103 / 90261104 were used on the same bank (disclosed).
+
+## P4-H4 run of RQ4.1 with revised rule (a'), recorded before running
+
+**Approval.** After RQ4.1 was NOT CONFIRMED on P4-H3, the user approved (2026-11-03, "ok, cứ chạy đi") a rerun with a revised criterion (a). Bank P4-H4 (seed 20261105, manifest sha256 `776f074c1d8d52a3cb591551d28e889f0e9d2d9d93346a232bbda7d1e479442a`) generated and sealed. Spec: `docs/ext/p4h4_rq41.md`, hashes in `experiments/ext/p4h4/rq41/spec_files.json`.
+
+**Rules.** (b), (c), (d) unchanged. (a') = plugin rel_missing > rel_reversed and > rel_extra on damaged pairs in all 4 cells with T in {80,150}; T40 descriptive. (a') was chosen after seeing P4-H3 (post-hoc, disclosed). Known weakness: (c) for v5_1 is fragile (0.895 on P4-H1).
+
+**Commands, each once:** runner (`--workers 4`), then analyzer. Stop rules as for P4-H3: crash = NOT CONFIRMED (incomplete); no rerun after seeing numbers.
+
+## Outcome of the P4-H4 run of RQ4.1 (revised rule a')
+
+**Run.** One runner (612.9 s, 120 units, 0 failed runs) and one analyzer; frozen hashes unchanged after the run. Results: `results/ext_p4h4_rq41_analysis/analysis.md`.
+
+**Verdict: NOT CONFIRMED on the sealed bank P4-H4** (3 of 4 parts pass).
+- (a') PASS 4/4: plugin rel_missing (1.000) exceeds reversed and extra in all four cells with T >= 80. Original full order (5/6) still fails, 4/6 (descriptive).
+- (b) PASS: plugin coverage under missing-0.5 = 0.373 / 0.350 / 0.335 (all < 0.60, Holm 3/3).
+- (c) FAIL: tolerant_v4 passes (error reduced 6/6, damaged-pair coverage >= 0.90 in 4/4, 0.948-0.955). tolerant_v5_1 reduces error 6/6 but damaged-pair coverage is 0.899 at T80 missing-0.2 (needs 0.90; CI [0.872, 0.926]), so 3/4. Same cell and same near-threshold failure as on P4-H1 (0.895).
+- (d) PASS 4/4.
+
+**Reading.** The fragility stated in advance occurred: the 0.90 point-estimate threshold on one cell fails by 0.001. Coverage over all non-null pairs for v5_1 is 0.953-0.967 and Holm-supported in 3 of the 4 cells. No rerun. P4-H4 confirmatory/development split both used once (runner covers both splits).
