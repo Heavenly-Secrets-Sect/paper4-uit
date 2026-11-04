@@ -1,0 +1,345 @@
+{
+  "config": {
+    "name": "ext_p4h5_rq41_main",
+    "purpose": "RQ4.1 SEALED confirmatory run on P4-H5 (both splits), identical design and rule to the P4-H1 replication (docs/ext/p4h1_rq41.md). Run by experiments/ext/p4h5/rq41/run_pairs_p4h5.py. Spec: docs/ext/p4h5_rq41.md.",
+    "bank": "P4-H5",
+    "splits": [
+      "development",
+      "confirmatory"
+    ],
+    "replicates": 3,
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "methods": [
+      "oracle",
+      "plugin",
+      "tolerant_v4",
+      "tolerant_v5_1"
+    ],
+    "frozen_v4": "experiments/calibration/tolerant_v4_frozen.json",
+    "frozen_v51": "experiments/ext/v51/frozen_v4_v51.json",
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 90261106,
+    "seed_note": "unit seed = seed_base + 100000*split_index + 1000*topology_index + replicate (split_index 0 = development, 1 = confirmatory)"
+  },
+  "seconds": 618.9,
+  "n_units": 120,
+  "n_pair_rows": 302568,
+  "n_failed_runs": 0,
+  "topologies": [
+    {
+      "g": 0,
+      "split": "development",
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "450c8e8b899ff4efb81f4a356bd679063e732d715c02955030235e0c1759f705"
+    },
+    {
+      "g": 1,
+      "split": "development",
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "ae26842eefffdaf734b32be35939f79a457c73a144ebfa83134e7dc60b22fe91"
+    },
+    {
+      "g": 2,
+      "split": "development",
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "6f7b28efd131c79dadc1119bd0d3006fd2a8037113b475c4d2f6ed8f3e4b45ce"
+    },
+    {
+      "g": 3,
+      "split": "development",
+      "id": "syn_dag_03",
+      "profile": "erdos_renyi",
+      "sha256": "308e42a2b5500b058ff1cfdb907548c44fc8533a0ad6fcee53556d53a6958ed2"
+    },
+    {
+      "g": 4,
+      "split": "development",
+      "id": "syn_dag_04",
+      "profile": "erdos_renyi",
+      "sha256": "571a1fd18a45f329cc159a8fba40620834c4fda4e642d7f27311c57a7539a4c3"
+    },
+    {
+      "g": 5,
+      "split": "development",
+      "id": "syn_dag_05",
+      "profile": "erdos_renyi",
+      "sha256": "9a52cc7092da267457d7b71a230ecd96cf571fd44b4d73dee2f251427ecd842a"
+    },
+    {
+      "g": 6,
+      "split": "development",
+      "id": "syn_dag_06",
+      "profile": "erdos_renyi",
+      "sha256": "ae7309abd77488de4e12e203f00b9ba8da79d237251015015bd496eb40698b3a"
+    },
+    {
+      "g": 7,
+      "split": "development",
+      "id": "syn_dag_07",
+      "profile": "erdos_renyi",
+      "sha256": "3b8807f383e29124d46f951991342aa69e7b684bc5b82701abbd15fa3207d62c"
+    },
+    {
+      "g": 8,
+      "split": "development",
+      "id": "syn_dag_08",
+      "profile": "erdos_renyi",
+      "sha256": "c8ff42a29de48ffdf13d7dd0cbbd264dc11ad97e2a054c37447629273fbbf384"
+    },
+    {
+      "g": 9,
+      "split": "development",
+      "id": "syn_dag_09",
+      "profile": "erdos_renyi",
+      "sha256": "98c36a59b2763ef16e2cef08d656f05dc021e8dbb47316d4d82d7cac87f2c09f"
+    },
+    {
+      "g": 10,
+      "split": "development",
+      "id": "syn_dag_10",
+      "profile": "scale_free_hub",
+      "sha256": "73eea92d6faa47879c317eaad5fe384a77a0312305dc6cc1162d5cab122ea037"
+    },
+    {
+      "g": 11,
+      "split": "development",
+      "id": "syn_dag_11",
+      "profile": "scale_free_hub",
+      "sha256": "35c19cf6a9f2bc8a64dfa504caf7eb29ab6d1fb4faf62004e878dcc7a7bb723c"
+    },
+    {
+      "g": 12,
+      "split": "development",
+      "id": "syn_dag_12",
+      "profile": "scale_free_hub",
+      "sha256": "c30f1d4832d05a2ffb5ac47d78c003f7ef893c44ba41e40e901be388799af0c0"
+    },
+    {
+      "g": 13,
+      "split": "development",
+      "id": "syn_dag_13",
+      "profile": "scale_free_hub",
+      "sha256": "7dc3602b05a04a95cf2c55ef8a68ead10de30905e9f409d550397a7496d73e0e"
+    },
+    {
+      "g": 14,
+      "split": "development",
+      "id": "syn_dag_14",
+      "profile": "scale_free_hub",
+      "sha256": "5bb0b4a09c0045f89a47f17d8ebd3d4be923d5ab25c978e23d9b220f1ae1b6b5"
+    },
+    {
+      "g": 15,
+      "split": "development",
+      "id": "syn_dag_15",
+      "profile": "scale_free_hub",
+      "sha256": "ab151f5ef6f0b8667d674fcfd1f2b4caf9c65eb11c8e3587c3ab2125271a4de8"
+    },
+    {
+      "g": 16,
+      "split": "development",
+      "id": "syn_dag_16",
+      "profile": "scale_free_hub",
+      "sha256": "9f7e36ff52ebda28ac518fff6111280c2a4ac3605649fdb5ec2163b8412c67ba"
+    },
+    {
+      "g": 17,
+      "split": "development",
+      "id": "syn_dag_17",
+      "profile": "scale_free_hub",
+      "sha256": "92dee358f15f8dd771e1754d90b969b8c237cc6972a731ab81c15bdc1b8aa066"
+    },
+    {
+      "g": 18,
+      "split": "development",
+      "id": "syn_dag_18",
+      "profile": "scale_free_hub",
+      "sha256": "77c2ca4c3959a9f231e043f1ff7d7eebb65916c2059be8181d932fdf37154d9b"
+    },
+    {
+      "g": 19,
+      "split": "development",
+      "id": "syn_dag_19",
+      "profile": "scale_free_hub",
+      "sha256": "800def525cc88347b77b59238cf77ca5bb4796a4d9855bc994a6db5b3dc1ea2b"
+    },
+    {
+      "g": 100,
+      "split": "confirmatory",
+      "id": "syn_dag_20",
+      "profile": "erdos_renyi",
+      "sha256": "e3b241b707baacc113fc1a5d286786a1829c78d563f79d5ec79763171614c00f"
+    },
+    {
+      "g": 101,
+      "split": "confirmatory",
+      "id": "syn_dag_21",
+      "profile": "erdos_renyi",
+      "sha256": "e264efb1bb1aabcbbba8f6358cfeb667ba4a286e1e34d617835d60c1502ac383"
+    },
+    {
+      "g": 102,
+      "split": "confirmatory",
+      "id": "syn_dag_22",
+      "profile": "erdos_renyi",
+      "sha256": "c56791ba640c30b474f246eb7d9db6afaedc2e867ccc6ca32ca4ea33a9574079"
+    },
+    {
+      "g": 103,
+      "split": "confirmatory",
+      "id": "syn_dag_23",
+      "profile": "erdos_renyi",
+      "sha256": "e7c857a1aa679f15be91d954ae9405edc24554e2aedc5c61f2dab08be1e7bc89"
+    },
+    {
+      "g": 104,
+      "split": "confirmatory",
+      "id": "syn_dag_24",
+      "profile": "erdos_renyi",
+      "sha256": "b3bab3931e5f1e33658d4ed212c2ae8283043d3bbe4b2b71cf0c6d2450cecc11"
+    },
+    {
+      "g": 105,
+      "split": "confirmatory",
+      "id": "syn_dag_25",
+      "profile": "erdos_renyi",
+      "sha256": "4859c86438bf4884358e672066d3da881decd98d3d1051f216d7e949ca57bb00"
+    },
+    {
+      "g": 106,
+      "split": "confirmatory",
+      "id": "syn_dag_26",
+      "profile": "erdos_renyi",
+      "sha256": "ce330c06890bc1b50bd572de06d19019f3d96c6c4b468b783148bce53edad767"
+    },
+    {
+      "g": 107,
+      "split": "confirmatory",
+      "id": "syn_dag_27",
+      "profile": "erdos_renyi",
+      "sha256": "38bb78e5e36cbd5ba96d7e671a466211a5a74502ffa2492e780602832ac19e94"
+    },
+    {
+      "g": 108,
+      "split": "confirmatory",
+      "id": "syn_dag_28",
+      "profile": "erdos_renyi",
+      "sha256": "72b2259f9681ee33e2689c520c4ca917fc1e690b14e9660b1316f7dede051bf8"
+    },
+    {
+      "g": 109,
+      "split": "confirmatory",
+      "id": "syn_dag_29",
+      "profile": "erdos_renyi",
+      "sha256": "becc38b832a443896fd3b6f9b18ccddcaa40c21ce22d9d6f2c5e49cebf4a72a7"
+    },
+    {
+      "g": 110,
+      "split": "confirmatory",
+      "id": "syn_dag_30",
+      "profile": "scale_free_hub",
+      "sha256": "db93cef44ed3259234bec08f23dca8c684205096a3c514462f75ee17f332d7b4"
+    },
+    {
+      "g": 111,
+      "split": "confirmatory",
+      "id": "syn_dag_31",
+      "profile": "scale_free_hub",
+      "sha256": "b5e06e9a98ac3c9e87e4c1ff936f771492f629547514e5778bddb6b450c9c3b1"
+    },
+    {
+      "g": 112,
+      "split": "confirmatory",
+      "id": "syn_dag_32",
+      "profile": "scale_free_hub",
+      "sha256": "4d946f1dc8e3859ec3b5f53e368e2600309770508a1bee9d7ac19a08e21d5466"
+    },
+    {
+      "g": 113,
+      "split": "confirmatory",
+      "id": "syn_dag_33",
+      "profile": "scale_free_hub",
+      "sha256": "443fa47ad6aadff854b389561537025343b40ad7eb75c5ad5bc547d64c4cd40f"
+    },
+    {
+      "g": 114,
+      "split": "confirmatory",
+      "id": "syn_dag_34",
+      "profile": "scale_free_hub",
+      "sha256": "2eb40047504a0eda77afd40c958bc9631ff442337e44beef1dca7e48476257b5"
+    },
+    {
+      "g": 115,
+      "split": "confirmatory",
+      "id": "syn_dag_35",
+      "profile": "scale_free_hub",
+      "sha256": "13eaa110d00969ba445f8b1d0b588408a0fc0a7ada7824f467da32fba51bf9cb"
+    },
+    {
+      "g": 116,
+      "split": "confirmatory",
+      "id": "syn_dag_36",
+      "profile": "scale_free_hub",
+      "sha256": "211396e49536ca19f31d1c0365cb8a6cfb026febda12e89b82a2b2dd4ebe5a19"
+    },
+    {
+      "g": 117,
+      "split": "confirmatory",
+      "id": "syn_dag_37",
+      "profile": "scale_free_hub",
+      "sha256": "350e090e8453df56c021440326d987f3011f12de61b96d1f850aa7ca5d01fc9f"
+    },
+    {
+      "g": 118,
+      "split": "confirmatory",
+      "id": "syn_dag_38",
+      "profile": "scale_free_hub",
+      "sha256": "dd69e8afdbd3e18624e3f2d9dac349dc58616b66acc0c79e4bd9d561d59e56da"
+    },
+    {
+      "g": 119,
+      "split": "confirmatory",
+      "id": "syn_dag_39",
+      "profile": "scale_free_hub",
+      "sha256": "1a2f0e284087b54bba06620ebf3ebd6329dbd4f89367e046f5eff4bda7d46345"
+    }
+  ]
+}

@@ -41,3 +41,10 @@ Verbatim copies of the static DAG banks built for Paper 2. Paper 4 turns each to
 - **How:** generated on 2026-11-03 by `D-07/generate_d07_bank.py --seed 20261105 --bank-dir P4-H4 --manifest-name p4h4_manifest.json --decision-id P4-H4`. Same generator as D-07, new seed. None of its 40 edge sets matches any topology of D-07, D-07H, P4-H1, P4-H2 or P4-H3.
 - **Manifest SHA-256:** `776f074c1d8d52a3cb591551d28e889f0e9d2d9d93346a232bbda7d1e479442a`.
 - **Sealed:** reserved for ONE run of RQ4.1 with the revised rule (a') after RQ4.1 was NOT CONFIRMED on P4-H3. No design, tuning, probe or descriptive look before that run. Its use is logged in `docs/decision_rules.md`.
+
+## P4-H5 (generated for Paper 4, sealed)
+
+- **What:** 40 topologies (20 development / 20 confirmatory; 20 Erdős–Rényi / 20 scale-free hub), 14 nodes, 21 edges.
+- **How:** generated on 2026-11-03 by `D-07/generate_d07_bank.py --seed 20261106 --bank-dir P4-H5 --manifest-name p4h5_manifest.json --decision-id P4-H5`. None of its edge sets matches D-07, D-07H, P4-H1..P4-H4.
+- **Manifest SHA-256:** `86827ed5c2b7a387d0989cb9edfe945976c8759430b86015cf59322ce4424261`.
+- **Sealed:** reserved for ONE run of RQ4.1 with revised rules (a') and (c2). No design, tuning or look before that run.

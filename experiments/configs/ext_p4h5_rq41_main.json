@@ -1,0 +1,57 @@
+{
+  "name": "ext_p4h5_rq41_main",
+  "purpose": "RQ4.1 SEALED confirmatory run on P4-H5 (both splits), identical design and rule to the P4-H1 replication (docs/ext/p4h1_rq41.md). Run by experiments/ext/p4h5/rq41/run_pairs_p4h5.py. Spec: docs/ext/p4h5_rq41.md.",
+  "bank": "P4-H5",
+  "splits": [
+    "development",
+    "confirmatory"
+  ],
+  "replicates": 3,
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "methods": [
+    "oracle",
+    "plugin",
+    "tolerant_v4",
+    "tolerant_v5_1"
+  ],
+  "frozen_v4": "experiments/calibration/tolerant_v4_frozen.json",
+  "frozen_v51": "experiments/ext/v51/frozen_v4_v51.json",
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 90261106,
+  "seed_note": "unit seed = seed_base + 100000*split_index + 1000*topology_index + replicate (split_index 0 = development, 1 = confirmatory)"
+}

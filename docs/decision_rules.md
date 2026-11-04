@@ -721,3 +721,21 @@ Next: one run of the same rules on the sealed bank P4-H3 (specs under `experimen
 - (d) PASS 4/4.
 
 **Reading.** The fragility stated in advance occurred: the 0.90 point-estimate threshold on one cell fails by 0.001. Coverage over all non-null pairs for v5_1 is 0.953-0.967 and Holm-supported in 3 of the 4 cells. No rerun. P4-H4 confirmatory/development split both used once (runner covers both splits).
+
+## P4-H5 run of RQ4.1 with revised rules (a') and (c2), recorded before running
+
+**Approval.** After NOT CONFIRMED on P4-H3 (rule a) and P4-H4 (rule c, v5_1 at 0.899 in one cell), the user chose (2026-11-03) the tolerance-margin test plus cell pooling. Bank P4-H5 (seed 20261106, sha256 `86827ed5c2b7a387d0989cb9edfe945976c8759430b86015cf59322ce4424261`) sealed. Spec: `docs/ext/p4h5_rq41.md`; hashes in `experiments/ext/p4h5/rq41/spec_files.json`.
+
+**Rules.** (a') as on P4-H4. (c2): error reduced 6/6 cells and, per T in {80,150}, pooled damaged-pair coverage over both missing rates has bootstrap-cluster lower 95% bound >= 0.85, for both v4 and v5_1. (b), (d) unchanged. Both revisions are post-hoc (chosen after seeing P4-H3/P4-H4); the 0.85 margin and the pooling were fixed before any P4-H5 data. v5_1 may still fail. No rerun after seeing numbers.
+
+## Outcome of the P4-H5 run of RQ4.1 (revised rules a' and c2)
+
+**Run.** One runner (618.9 s, 120 units, 0 failed runs) and one analyzer; frozen hashes unchanged after the run. Results: `results/ext_p4h5_rq41_analysis/analysis.md`.
+
+**Verdict: CONFIRMED on the sealed bank P4-H5, under the revised rules (a') and (c2).**
+- (a') PASS 4/4. The original full-order rule (a) still fails (4/6), descriptive.
+- (b) PASS, 3/3 cells below 0.60 (Holm 3/3).
+- (c2) PASS for both methods. Error reduced 6/6 cells. Pooled damaged-pair coverage: v4 0.956 [0.942, 0.968] at T80 and 0.957 [0.944, 0.969] at T150; v5_1 0.929 [0.916, 0.942] and 0.947 [0.936, 0.957]. All lower bounds above 0.85. The old per-cell >= 0.90 rule also gave 4/4 for both methods on this bank (descriptive; Holm 3/4 for v5_1).
+- (d) PASS 4/4 (Holm 2/4).
+
+**Caveats.** The confirmation holds only under rules revised after seeing P4-H3 and P4-H4 (post-hoc twice). Under the original rules RQ4.1 was NOT CONFIRMED on P4-H3, and on P4-H4 under (c). Report all three runs.
