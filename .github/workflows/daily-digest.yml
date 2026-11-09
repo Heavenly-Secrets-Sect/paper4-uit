@@ -1,0 +1,56 @@
+name: daily-digest
+
+# Bản tin hằng ngày gửi vào kênh Discord thiên-cơ-báo.
+# Cần repository secret: DISCORD_WEBHOOK_DIGEST (URL webhook Discord thường, KHÔNG thêm /github).
+# Lưu ý: workflow theo lịch chỉ chạy từ nhánh mặc định của repo.
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # 01:00 UTC = 08:00 giờ Việt Nam (có thể trễ vài phút)
+  workflow_dispatch: # cho phép bấm chạy tay để thử
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build and post digest
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_DIGEST }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${WEBHOOK:-}" ]; then
+            echo "Thiếu secret DISCORD_WEBHOOK_DIGEST"
+            exit 1
+          fi
+
+          SINCE=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          COMMITS=$(git log --all --since="$SINCE" --no-merges --pretty='- %s (%an)' | head -15 || true)
+          PRS=$(gh pr list --state open --limit 10 --json number,title --jq '.[] | "- #\(.number) \(.title)"' || true)
+
+          if [ -z "$COMMITS" ] && [ -z "$PRS" ]; then
+            echo "Không có gì mới, không gửi bản tin."
+            exit 0
+          fi
+
+          BODY="**Bản tin ${GITHUB_REPOSITORY} (24 giờ qua)**"
+          if [ -n "$COMMITS" ]; then
+            BODY="$BODY"$'\n\n'"**Commit:**"$'\n'"$COMMITS"
+          fi
+          if [ -n "$PRS" ]; then
+            BODY="$BODY"$'\n\n'"**PR đang mở:**"$'\n'"$PRS"
+          fi
+          BODY=$(printf '%s' "$BODY" | head -c 1800)
+
+          # allowed_mentions rỗng: tin tự động không ping ai, kể cả khi commit có @everyone
+          jq -n --arg c "$BODY" '{content:$c, allowed_mentions:{parse:[]}}' \
+            | curl -sS --fail -H "Content-Type: application/json" -d @- "$WEBHOOK"
