@@ -1,0 +1,19 @@
+# Danh sách hạn chót cho kênh thiên-kiếp-bảng (Discord).
+# Mỗi sáng 08:05 (giờ Việt Nam), workflow deadline-reminder đọc file này và nhắc
+# những việc còn 3 ngày, còn 1 ngày, đến hạn hôm nay, hoặc đã quá hạn (tối đa 7 ngày).
+#
+# Cách dùng:
+#   - Thêm một mục vào "items" khi có hạn mới.
+#   - Xong việc thì xóa mục đó (lịch sử vẫn còn trong Git).
+#   - "due" viết dạng YYYY-MM-DD. "owner" và "link" không bắt buộc.
+#
+# Ví dụ (bỏ dấu # đầu dòng để dùng):
+#   - title: "Nộp bản thảo Paper 4 cho thầy"
+#     due: 2026-12-01
+#     owner: "Kiệt"
+#     link: "https://github.com/KiRzEa/Paper4_UIT"
+#
+# Lưu ý: nếu đã dùng Jira cho task, chỉ ghi vào đây những hạn không có trong Jira,
+# để mỗi hạn chỉ có một nơi ghi.
+
+items: []

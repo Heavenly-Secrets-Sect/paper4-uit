@@ -1,0 +1,31 @@
+name: deadline-reminder
+
+# Nhắc hạn chót vào kênh Discord thiên-kiếp-bảng, đọc từ docs/team/deadlines.yml.
+# Cần repository secret: DISCORD_WEBHOOK_REMINDER (URL webhook Discord thường, KHÔNG thêm /github).
+# Lưu ý: workflow theo lịch chỉ chạy từ nhánh mặc định của repo.
+
+on:
+  schedule:
+    - cron: "5 1 * * *" # 01:05 UTC = 08:05 giờ Việt Nam (có thể trễ vài phút)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cài PyYAML
+        run: python -m pip install --quiet pyyaml
+
+      - name: Gửi nhắc việc
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_REMINDER }}
+        run: python .github/scripts/deadline_reminder.py

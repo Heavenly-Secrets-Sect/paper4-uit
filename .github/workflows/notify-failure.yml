@@ -1,0 +1,37 @@
+name: notify-failure
+
+# Báo vào kênh Discord hộ-sơn-đại-trận khi một workflow của repo bị lỗi.
+# Cần repository secret: DISCORD_WEBHOOK_LOG (URL webhook Discord thường, KHÔNG thêm /github).
+# Khi thêm workflow mới cần được theo dõi, thêm tên của nó vào danh sách "workflows" bên dưới.
+# Lưu ý: workflow loại workflow_run chỉ chạy từ nhánh mặc định của repo.
+
+on:
+  workflow_run:
+    workflows: ["daily-digest", "deadline-reminder"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Báo lỗi vào Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_LOG }}
+          NAME: ${{ github.event.workflow_run.name }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${WEBHOOK:-}" ]; then
+            echo "Thiếu secret DISCORD_WEBHOOK_LOG"
+            exit 1
+          fi
+          MSG=$(printf '🛡️ **Đại trận có lỗi**\nWorkflow `%s` của `%s` (nhánh `%s`) vừa thất bại.\nXem chi tiết: %s' "$NAME" "$REPO" "$BRANCH" "$RUN_URL")
+          # allowed_mentions rỗng: tin tự động không ping ai
+          jq -n --arg c "$MSG" '{content:$c, allowed_mentions:{parse:[]}}' \
+            | curl -sS --fail -H "Content-Type: application/json" -d @- "$WEBHOOK"
