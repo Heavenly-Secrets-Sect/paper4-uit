@@ -11,6 +11,31 @@ Nguyên tắc xuyên suốt (nếu chỉ nhớ năm dòng):
 
 ---
 
+## Trạng thái thực tế (cập nhật 2026-11-09)
+
+Các mục bên dưới là kế hoạch ban đầu. Khi khác với bảng này thì bảng này đúng.
+
+| Hạng mục | Thực tế |
+|---|---|
+| GitHub Organization | `Heavenly-Secrets-Sect` (Thiên Cơ Môn, tiếng Anh: Heavenly Secrets Sect) |
+| Repo nghiên cứu | `paper4-uit` (Paper 4) |
+| Repo vault Obsidian | `knowledge-base`, một vault chung cho mọi dự án và môn học |
+| Server Discord | Thiên Cơ Môn, bản rút gọn. Tên kênh viết theo kiểu tiên hiệp có dấu, phần mô tả (topic) ghi nghĩa hiện đại. Tên kênh trong Discord là chuẩn, tên kênh trong các mục dưới chỉ là tên thiết kế |
+| Webhook GitHub → Discord | Đặt ở cấp organization, gửi vào `thiên-cơ-báo`, URL thêm `/github`. Sự kiện: Pull requests, Issues, Releases. Không bật Pushes (xem mục 4) |
+| Jira | `thiencomon.atlassian.net`, một project `KAN` (Kanban), tách việc bằng Epic. Không dùng Confluence |
+
+Secret của GitHub Actions và kênh Discord tương ứng:
+
+| Secret | Kênh | Workflow |
+|---|---|---|
+| `DISCORD_WEBHOOK_DIGEST` | `thiên-cơ-báo` | `daily-digest` (có ở `paper4-uit` và `knowledge-base`) |
+| `DISCORD_WEBHOOK_REMINDER` | `thiên-kiếp-bảng` | `deadline-reminder` |
+| `DISCORD_WEBHOOK_LOG` | `hộ-sơn-đại-trận` | `notify-failure` |
+
+Secret có thể đặt ở cấp organization nếu phạm vi repo của secret gồm repo cần dùng. Quy trình đưa nội dung đã chốt lên Confluence (chưa dựng) ở [quy_trinh_phat_hanh_tri_thuc.md](quy_trinh_phat_hanh_tri_thuc.md).
+
+---
+
 ## 1. Quyết định cần chốt trước (Phase 0)
 
 | # | Câu hỏi | Gợi ý mặc định |
@@ -27,7 +52,7 @@ Nguyên tắc xuyên suốt (nếu chỉ nhớ năm dòng):
 
 ## 2. Cách đặt tên "tu tiên"
 
-Quy ước: **tên tiên hiệp + nghĩa thường** để người mới không phải đoán. Ví dụ `tang-kinh-cac` kèm mô tả kênh "kho tài liệu". Tên Discord nên dùng chữ không dấu, gạch ngang, để dễ gõ.
+Quy ước: **tên tiên hiệp + nghĩa thường** để người mới không phải đoán. Ví dụ `tang-kinh-cac` kèm mô tả kênh "kho tài liệu". Tên kênh Discord cho phép dấu tiếng Việt, nhóm dùng tên tiên hiệp có dấu và ghi nghĩa hiện đại trong mô tả kênh. Tên file và thư mục trong vault vẫn viết không dấu (xem mục 6.1).
 
 | Tên tiên hiệp | Nghĩa thường | Dùng cho |
 |---|---|---|
@@ -122,7 +147,7 @@ Quyền chi tiết:
 ## 4. Webhook GitHub: quy tắc lọc
 
 ### 4.1 Cách kết nối
-Discord có endpoint tương thích GitHub: tạo webhook cho kênh bot (Channel Settings, Integrations, Webhooks), copy URL, thêm đuôi `/github`. Trong GitHub: repo Settings, Webhooks, Add webhook:
+Discord có endpoint tương thích GitHub: tạo webhook cho kênh bot (Channel Settings, Integrations, Webhooks), copy URL, thêm đuôi `/github`. Nhóm đặt webhook ở **cấp organization** (Organization Settings, Webhooks) để mọi repo hiện tại và repo mới đều gửi về cùng một kênh. Webhook organization không lọc được theo repo, chỉ lọc theo loại sự kiện. Cách đặt ở cấp repo giống nhau, tại repo Settings, Webhooks, Add webhook:
 - Payload URL: URL Discord + `/github`
 - Content type: `application/json`
 - Chọn **"Let me select individual events"** (không chọn "Send me everything").
@@ -133,7 +158,7 @@ URL webhook là bí mật: không dán vào chat, không commit vào repo, lưu 
 
 | Sự kiện | Bật? | Lý do |
 |---|---|---|
-| Pushes | Bật | Thấy ai commit gì (xem 4.3 để giảm nhiễu) |
+| Pushes | Tắt ở webhook organization | Repo vault tự commit mỗi vài phút nên sẽ ngập kênh. Tin commit lấy từ bản tin hằng ngày. Nếu một repo code cần tin push thì thêm webhook riêng cho repo đó (xem 4.3 để giảm nhiễu) |
 | Pull requests | Bật | Cần review |
 | Issues | Bật | Việc cần làm |
 | Releases | Bật | Mốc quan trọng |
@@ -176,8 +201,8 @@ jobs:
 Tương tự có thể làm workflow báo khi build LaTeX hoặc test **thất bại** (điều kiện `if: failure()`), thay vì báo mọi lần chạy. Cần kiểm tra lại nội dung tin (dài, ký tự đặc biệt) sau khi thử.
 
 ### 4.5 Bố trí theo repo
-- Mỗi repo nghiên cứu có kênh bot riêng trong Bí Cảnh của nó (`#p4-github`).
-- Repo vault Obsidian dùng kênh riêng `#cap-nhat-vault` và **không** bật Pushes (xem 6.2), vì auto-commit sinh rất nhiều tin.
+- Thực tế: một webhook organization gửi sự kiện của mọi repo vào `thiên-cơ-báo`. Bản tin hằng ngày của từng repo cũng vào kênh này.
+- Repo vault Obsidian **không** có tin push (xem 6.2), vì auto-commit sinh rất nhiều tin. Bản tin hằng ngày của vault liệt kê ghi chú mới hoặc đổi.
 
 ---
 
@@ -185,9 +210,9 @@ Tương tự có thể làm workflow báo khi build LaTeX hoặc test **thất b
 
 ### 5.1 Tổ chức repo
 - **Một repo cho mỗi paper** (ví dụ `paper4-uit`): code, dữ liệu nhỏ, LaTeX trong `docs/latex/`.
-- **Một repo cho vault** (`tang-kinh-cac`): ghi chú Obsidian.
+- **Một repo cho vault** (`knowledge-base`): ghi chú Obsidian, dùng chung cho mọi dự án và môn học.
 - **Repo mẫu/chung** (tùy chọn): template LaTeX, template ghi chú, script.
-- Tạo GitHub **Organization** để quản lý quyền theo Team (`research`, `courses`).
+- GitHub **Organization** `Heavenly-Secrets-Sect` đã tạo; quản lý quyền theo Team (`research`, `courses`) khi nhóm lớn hơn.
 - Repo mặc định **private**. Chuyển public chỉ khi đã đồng ý công bố.
 
 ### 5.2 Quy trình làm việc
@@ -225,23 +250,25 @@ Một workflow GitHub Actions biên dịch LaTeX mỗi khi có PR và đính kè
 ### 6.1 Cấu trúc vault
 
 ```
-tang-kinh-cac/
+knowledge-base/
   00_Inbox/            Ghi nhanh, chưa phân loại (dọn mỗi tuần)
   10_Mon-hoc/
     <ma-mon>/          Bài giảng, bài tập, ôn thi
   20_Nghien-cuu/
-    paper4/            Ý tưởng, nhật ký thí nghiệm, kết quả đã chốt
+    <ten-du-an>/       Mỗi dự án một thư mục, có trang <ten-du-an>-index.md (ví dụ paper4/paper4-index.md)
   30_Tai-lieu/         Ghi chú đọc paper (literature notes), mỗi paper một file
   40_Hop/              Biên bản họp theo ngày
   50_Template/         Mẫu ghi chú
+  60_Khai-niem/        Khái niệm, phương pháp dùng lại cho nhiều dự án
   90_Archive/          Đã xong
-  _MOC/                Map of Content: trang mục lục theo chủ đề
+  publish/             Chỉ những gì sẵn sàng công bố
 ```
 
 Quy ước ghi chú:
-- Tên file: `YYYY-MM-DD-chu-de` cho họp; `tac-gia-nam-tu-khoa` cho paper (ví dụ `chang-2026-post-selection`).
-- Frontmatter YAML thống nhất: `type`, `status`, `owner`, `date`, `tags`.
-- Link trong vault dạng `[[wikilink]]`; link ra ngoài ghi đầy đủ nguồn.
+- Tên file và thư mục không dấu, không dấu cách, dùng gạch ngang; tiêu đề có dấu viết trong nội dung. Lý do: tên có dấu lưu khác nhau giữa macOS, Windows và Linux nên Git có thể coi là hai file.
+- Tên file phải duy nhất trong toàn vault để wikilink gọn: `YYYY-MM-DD-chu-de` cho họp; `tac-gia-nam-tu-khoa` cho paper (ví dụ `chang-2026-post-selection`); `<ten-du-an>-index` cho trang dự án.
+- Frontmatter YAML thống nhất: `title`, `type`, `status`, `owner`, `date`, `project`, `tags` (dạng danh sách); thêm `repo`, `jira` khi có.
+- Link trong vault dạng `[[wikilink]]`, dùng alias khi cần hiển thị có dấu (`[[ten-file|Tên hiển thị]]`); link ra ngoài ghi đầy đủ nguồn.
 - Mỗi ghi chú paper có đủ: trích dẫn, ý chính, phương pháp, kết quả, liên quan đến project nào, và độ tin cậy (đã đọc toàn văn hay chỉ abstract).
 
 ### 6.2 Đồng bộ bằng Git
@@ -249,7 +276,8 @@ Quy ước ghi chú:
 - Thiết lập: tự **pull khi mở**, tự commit và push mỗi 10 đến 15 phút (hoặc thủ công nếu muốn ít commit).
 - `.gitignore` cho vault: `.obsidian/workspace*.json`, `.obsidian/cache`, `.trash/`, file tạm.
 - **Mỗi ghi chú có một chủ sở hữu** (`owner` trong frontmatter): sửa ghi chú của người khác thì bình luận hoặc nhắn trước. Điều này giảm xung đột merge ở file Markdown.
-- Plugin nên dùng thêm: Templater, Dataview (truy vấn theo frontmatter), tùy chọn Zotero Integration.
+- Core plugin **Templates** (thư mục `50_Template`). Plugin nên cân nhắc thêm khi vault lớn: Bases hoặc Dataview (danh sách tự động theo frontmatter), tùy chọn Zotero Integration.
+- Thư mục `.obsidian/` được commit để cả nhóm dùng chung cài đặt; `workspace.json` bị bỏ qua vì là trạng thái riêng của từng máy. Plugin cộng đồng mỗi người tự cài trên máy mình.
 - File PDF/ảnh lớn **không** đẩy vào vault; dùng Zotero group library hoặc ổ chung, rồi link trong ghi chú.
 
 **Về thông báo:** vì auto-commit sinh rất nhiều push, **không** gắn webhook push cho repo vault. Thay vào đó dùng **bản tin hằng ngày** (mục 6.4) để báo ghi chú nào mới hoặc đổi.
