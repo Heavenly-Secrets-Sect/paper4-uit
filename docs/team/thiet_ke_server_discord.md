@@ -2,6 +2,8 @@
 
 Tài liệu này là bản chi tiết của mục 3 đến 7 trong `ke_hoach_tong_mon.md`, điều chỉnh cho **nhóm 2 người, workload lớn**. Hệ thống công cụ: Discord (trao đổi, thông báo), GitHub (code, LaTeX), Obsidian (tri thức), Jira Kanban (task).
 
+> **Lưu ý (2026-11-09):** đây là bản thiết kế đầy đủ ban đầu. Server thực tế đã dựng bản rút gọn với tên kênh khác (ví dụ `thiên-cơ-báo`, `thiên-kiếp-bảng`, `hộ-sơn-đại-trận`), nên tên kênh, tên webhook và tên repo vault (`tang-kinh-cac`, nay là `knowledge-base`) trong tài liệu này là tên thiết kế. Danh sách kênh, webhook và secret đang dùng nằm ở mục "Trạng thái thực tế" của `ke_hoach_tong_mon.md`.
+
 ## 0. Nguyên tắc thiết kế cho nhóm 2 người
 
 1. **Giảm việc thủ công, không thêm việc.** Mọi thứ lặp lại (nhắc deadline, bản tin, báo build lỗi) do máy làm. Hai người chỉ trả lời và quyết định.
