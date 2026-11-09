@@ -1,0 +1,39 @@
+\section{Giới thiệu}\label{sec:gioi-thieu}
+
+Hiệu ứng nhân quả \emph{động} giữa các biến kinh tế--tài chính (cú sốc ở biến $i$ lan tới biến $j$ sau $h$ kỳ) thường được ước lượng từ một mô hình Dynamic SEM, hay recursive SVAR, trong đó cấu trúc nhân quả cùng kỳ do một đồ thị có hướng không chu trình quy định. Trong thực tế, đồ thị này (gọi là \emph{skeleton}) hiếm khi được biết chắc. Nó có thể được trích từ văn bản bằng mô hình ngôn ngữ, học từ dữ liệu bằng thuật toán khám phá nhân quả như GES, hoặc lấy từ tri thức chuyên gia. Cả ba nguồn đều có thể cho skeleton \emph{thiếu cạnh}, \emph{thừa cạnh} hoặc \emph{đảo chiều} một cạnh.
+
+Cách làm thông thường là coi skeleton như đúng, fit mô hình rồi dựng khoảng tin cậy bằng residual bootstrap \citep{kilian1998small}. Khoảng tin cậy này chỉ phản ánh nhiễu của dữ liệu, không phản ánh sai số cấu trúc, nên khi skeleton hỏng thì độ phủ (coverage) thực tế thấp hơn nhiều so với mức danh nghĩa 95\%. Bài báo này nghiên cứu cách ước lượng hiệu ứng tích lũy $C(H)$ và khoảng tin cậy 95\% của nó sao cho coverage vẫn đúng khi skeleton có lỗi, với điều kiện người dùng chỉ cần \emph{khai báo số lượng} cạnh thiếu, thừa, đảo mà họ cho rằng skeleton có, không cần chỉ ra cạnh nào.
+
+\paragraph{Đóng góp.}
+\begin{enumerate}
+  \item Một phương pháp ước lượng chịu lỗi skeleton (gọi tắt là \ours{}). Phương pháp chỉ mở khối lag cho các cặp biến có bằng chứng từ dữ liệu, số cặp mở dựa trên số cạnh thiếu khai báo, và chạy lại việc chọn cấu trúc trong từng lần bootstrap để khoảng tin cậy gộp được bất định về cấu trúc.
+  \item Một quy trình thực nghiệm có ground truth: sinh SVAR từ các topology cho trước, làm hỏng skeleton có kiểm soát, chấm khoảng tin cậy bằng coverage và interval score.
+  \item So sánh \ours{} với bảy nhóm phương pháp tham chiếu lấy từ các hướng tiếp cận khác nhau (bootstrap thông thường, local projection, IDA, BVAR Minnesota, post-selection inference, targeted local projection).
+  \item Bản đồ chi phí theo cạnh, cờ độ tin cậy cho từng cặp biến, và vùng dùng được của phương pháp theo cỡ mẫu và số lag.
+\end{enumerate}
+
+\paragraph{Câu hỏi nghiên cứu.}
+\begin{description}
+  \item[RQ4.1] Sai số cường độ và độ trễ thay đổi thế nào theo loại và mức hỏng của skeleton?
+  \item[RQ4.2] Khoảng tin cậy gộp bất định cấu trúc có coverage đúng danh nghĩa và hẹp hơn các cách báo một điểm không?
+  \item[RQ4.3] Cạnh nào của skeleton, khi sai, làm hiệu ứng lệch nhiều nhất? Bản đồ này có ổn định qua các topology không?
+  \item[RQ4.4] Có đại lượng quan sát được, không cần ground truth, dự báo được độ tin cậy của hiệu ứng không?
+\end{description}
+
+\paragraph{Bố cục.} Mục~\ref{sec:lien-quan} điểm các công trình liên quan. Mục~\ref{sec:bai-toan} nêu mô hình và ký hiệu. Mục~\ref{sec:ours} trình bày phương pháp. Mục~\ref{sec:thiet-lap} mô tả thiết lập thực nghiệm và các phương pháp tham chiếu. Mục~\ref{sec:ket-qua} báo cáo kết quả và mục~\ref{sec:ket-luan} kết luận.
+
+\section{Công trình liên quan}\label{sec:lien-quan}
+
+\paragraph{Suy luận nhân quả khi cấu trúc không chắc chắn.}
+\citet{strieder2021confidence,strieder2023confidence,strieder2024dual} dựng vùng tin cậy cho hiệu ứng nhân quả gộp cả bất định về cấu trúc và về độ lớn, nhưng trên dữ liệu i.i.d. và mô hình tuyến tính, không có lag. \citet{padh2025assumed} chặn trên và dưới hiệu ứng trên tập các đồ thị tương thích với tri thức không hoàn hảo, ở mức quần thể và không tính sai số lấy mẫu. \citet{maathuis2009estimating} đề xuất IDA, ước lượng tập các hiệu ứng khả dĩ khi đồ thị chỉ được biết đến lớp tương đương Markov.
+
+\paragraph{Suy luận sau khi chọn đồ thị.}
+\citet{chang2026post} xét suy luận cho hiệu ứng nhân quả sau khi khám phá đồ thị: bước chọn đồ thị được chạy lại với test statistic bị thêm nhiễu và khoảng tin cậy là union qua các đồ thị giữ lại. Đây là công trình gần \ours{} nhất về ý tưởng lấy union qua nhiều đồ thị khả dĩ; điểm khác là họ làm việc trên dữ liệu i.i.d. không có lag hay hàm phản ứng xung, và đồ thị được học từ dữ liệu chứ không phải skeleton cho sẵn kèm khai báo mức hỏng.
+
+\paragraph{Bất định về nhận diện trong SVAR.}
+\citet{giacomini2022uncertain} dùng robust Bayes để lấy trung bình qua các SVAR có ràng buộc nhận diện khác nhau; \citet{ahelegbey2016bayesian} dùng MCMC đồng thời cho đồ thị cùng kỳ, đồ thị lag và tham số VAR; \citet{keweloh2023uncertain} co hệ số về các ràng buộc zero và tự ngừng co khi dữ liệu bác bỏ, nhưng cần nhiễu không Gaussian và ước lượng GMM bậc cao nên chỉ khả thi với $T$ lớn. Các công trình này có SVAR và IRF nhưng không hiệu chỉnh coverage theo kiểu tần suất và không dùng skeleton cho sẵn kèm mức hỏng khai báo.
+
+\paragraph{Local projection và VAR.}
+Local projection \citep{jorda2005estimation,montiel2021local} ước lượng hiệu ứng trực tiếp bằng hồi quy theo từng horizon, không cần mô hình động đầy đủ nên ít phụ thuộc vào đặc tả sai; đổi lại phương sai lớn hơn. \citet{nemtyrev2026targeted} co ước lượng LP về một mô hình có cấu trúc để cân bằng sai lệch và phương sai. Đây là hướng đối chiếu tự nhiên với \ours{}, vốn giữ mô hình VAR nhưng nới ràng buộc theo bằng chứng dữ liệu.
+
+\paragraph{Vị trí của bài báo.} Theo hiểu biết của chúng tôi, chưa có công trình nào làm đồng thời: (i) khoảng tin cậy cho hiệu ứng \emph{động} (cumulative IRF); (ii) xuất phát từ một skeleton cho sẵn có lỗi; (iii) dùng số cạnh hỏng khai báo để nhắm chỗ nới lỏng cấu trúc; (iv) hiệu chỉnh coverage bằng thực nghiệm có ground truth.

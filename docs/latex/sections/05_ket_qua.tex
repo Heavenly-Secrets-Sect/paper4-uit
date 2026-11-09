@@ -1,0 +1,160 @@
+\section{Kết quả}\label{sec:ket-qua}
+
+Các kết quả được gắn nhãn theo nguồn dữ liệu (mục~\ref{sec:thiet-lap}): \emph{kiểm chứng} nghĩa là đo trên tập topology chưa dùng khi thiết kế phương pháp, với quy tắc ghi trước; \emph{thăm dò} nghĩa là đo trên tập phát triển.
+
+\subsection{Residual Bootstrap khi skeleton có lỗi (kiểm chứng)}\label{sec:rb}
+Bảng~\ref{tab:full} so sánh RB (cắm skeleton như đúng) với \ours{} ở mọi loại lỗi và mọi cỡ mẫu, mỗi ô là coverage / interval score trên 60 bộ dữ liệu.
+
+\begin{table}[H]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{$T=40$} & \multicolumn{2}{c}{$T=80$} & \multicolumn{2}{c}{$T=150$}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Loại và mức lỗi & RB & \ours{} & RB & \ours{} & RB & \ours{}\\
+\midrule
+Không hỏng & 0.86 / 4.5 & 0.92 / 4.24 & 0.88 / 2.6 & 0.95 / 2.37 & 0.91 / 1.6 & 0.96 / 1.56 \\
+Thừa 20\% & 0.87 / 4.5 & 0.93 / 4.33 & 0.88 / 2.7 & 0.93 / 2.51 & 0.92 / 1.6 & 0.96 / 1.59 \\
+Thừa 50\% & 0.87 / 4.8 & 0.94 / 4.52 & 0.89 / 2.8 & 0.94 / 2.52 & 0.91 / 1.7 & 0.96 / 1.62 \\
+Thiếu 20\% & 0.68 / 11.0 & 0.93 / 4.62 & 0.66 / 10.7 & 0.96 / 2.68 & 0.67 / 10.5 & 0.96 / 1.75 \\
+Thiếu 50\% & 0.34 / 28.3 & 0.95 / 4.99 & 0.33 / 28.9 & 0.97 / 2.89 & 0.33 / 29.3 & 0.96 / 1.99 \\
+Đảo 20\% & 0.84 / 5.1 & 0.94 / 4.52 & 0.83 / 3.9 & 0.95 / 2.73 & 0.83 / 2.9 & 0.95 / 1.84 \\
+Đảo 50\% & 0.77 / 6.7 & 0.92 / 5.02 & 0.74 / 5.4 & 0.94 / 2.91 & 0.72 / 5.4 & 0.94 / 2.00 \\
+Skeleton do GES$^{\dagger}$ & 0.38 / 22.8 & 0.98 / 9.19 & 0.34 / 23.0 & 0.95 / 3.58 & 0.32 / 21.7 & 0.93 / 2.74 \\
+\bottomrule
+\end{tabular}
+\caption{Coverage / interval score của RB và \ours{}. $^{\dagger}$Skeleton học bằng GES từ chính dữ liệu; khai báo là mức lỗi GES trung bình đo trên tập hiệu chỉnh, và cột \ours{} của dòng này là phiên bản trước chọn lọc lag (chưa chạy \ours{}).}\label{tab:full}
+\end{table}
+
+Ba nhận xét:
+\begin{itemize}
+  \item \textbf{RB hỏng nặng nhất khi thiếu cạnh và với skeleton do GES học ra.} Khi thiếu 50\% cạnh, RB chỉ phủ khoảng $0.33$ với IS gần $29$; với skeleton do GES học ra, RB phủ $0.32$--$0.38$ với IS khoảng $22$. Cạnh đảo làm coverage giảm xuống $0.72$--$0.84$; cạnh thừa chỉ giảm nhẹ.
+  \item \textbf{RB không đạt mức danh nghĩa ngay cả khi skeleton đúng:} coverage $0.86$, $0.88$, $0.91$ ở $T=40,80,150$. Một phần cải thiện của \ours{} là do hiệu chỉnh độ rộng, không phải do xử lý cấu trúc.
+  \item \textbf{\ours{} giữ coverage trong khoảng $0.92$--$0.97$} ở mọi ô, nhưng chưa đạt $0.95$ ở một số ô (ví dụ $0.92$ ở $T=40$ khi không hỏng hoặc đảo 50\%). Cái giá so với skeleton đúng nhỏ: ở $T=80$, IS là $2.37$ khi không hỏng và $2.68$ khi thiếu 20\% cạnh.
+\end{itemize}
+
+\subsection{So sánh với các phương pháp tham chiếu khi thiếu cạnh (RQ4.2, kiểm chứng)}\label{sec:main}
+Các phương pháp tham chiếu chỉ được chạy ở bốn cell thiếu cạnh với $T\in\{80,150\}$ và tỷ lệ cạnh thiếu 20\%, 50\% (60 bộ dữ liệu mỗi cell), nên so sánh dưới đây chỉ có giá trị trong phạm vi này. Bảng~\ref{tab:main} là interval score (coverage trong ngoặc); IS thấp hơn là tốt hơn.
+
+\begin{table}[H]
+\centering\small
+\begin{tabular}{lcccc}
+\toprule
+Phương pháp & $T{=}80$, 20\% & $T{=}80$, 50\% & $T{=}150$, 20\% & $T{=}150$, 50\%\\
+\midrule
+RB & 10.68 (0.655) & 28.94 (0.335) & 10.54 (0.668) & 29.25 (0.325)\\
+\textbf{\ours{}} & \textbf{2.68} (0.963) & \textbf{2.89} (0.969) & \textbf{1.75} (0.964) & \textbf{1.99} (0.960)\\
+PSel-Union & 3.46 (0.968) & 3.41 (0.978) & 2.15 (0.983) & 2.30 (0.988)\\
+PSel-Union (cal) & 3.30 (0.943) & 3.20 (0.952) & 1.95 (0.950) & 2.04 (0.959)\\
+PSel (cal) & 3.91 (0.962) & 4.12 (0.943) & 2.62 (0.972) & 3.06 (0.937)\\
+Full VAR (cal) & 3.41 (0.973) & 3.74 (0.953) & 2.62 (0.976) & 3.01 (0.953)\\
+TLP (cal) & 3.50 (0.955) & 3.75 (0.940) & 2.22 (0.979) & 2.43 (0.962)\\
+TLP-DB & 3.71 (0.872) & 4.83 (0.804) & 2.21 (0.905) & 2.88 (0.857)\\
+BVAR-Minnesota (cal) & 4.64 (0.969) & 4.44 (0.969) & 3.72 (0.953) & 3.79 (0.957)\\
+\bottomrule
+\end{tabular}
+\caption{Interval score (coverage), các cell thiếu cạnh, tập kiểm chứng.}\label{tab:main}
+\end{table}
+
+Bảng~\ref{tab:diff} là hiệu IS giữa \ours{} và từng phương pháp tham chiếu trên cùng bộ dữ liệu (âm nghĩa là \ours{} tốt hơn).
+
+\begin{table}[H]
+\centering\small
+\begin{tabular}{lcccc}
+\toprule
+Phương pháp tham chiếu & $T{=}80$, 20\% & $T{=}80$, 50\% & $T{=}150$, 20\% & $T{=}150$, 50\%\\
+\midrule
+PSel-Union & $-0.78$ & $-0.51$ & $-0.41$ & $-0.30$\\
+PSel-Union (cal) & $-0.61$ & $-0.30$ & $-0.20$ & $-0.05$ (hòa)\\
+PSel (cal) & $-1.22$ & $-1.22$ & $-0.87$ & $-1.07$\\
+Full VAR (cal) & $-0.72$ & $-0.85$ & $-0.87$ & $-1.02$\\
+TLP (cal) & $-0.82$ & $-0.85$ & $-0.47$ & $-0.44$\\
+TLP-DB & $-1.02$ & $-1.93$ & $-0.46$ & $-0.89$\\
+BVAR-Minnesota (cal) & $-1.96$ & $-1.54$ & $-1.97$ & $-1.80$\\
+\bottomrule
+\end{tabular}
+\caption{Hiệu interval score giữa \ours{} và phương pháp tham chiếu.}\label{tab:diff}
+\end{table}
+
+\ours{} thắng có ý nghĩa ở $27/28$ so sánh (khoảng tin cậy 95\% của hiệu không chứa 0, Holm trên 56 so sánh) và không thua so sánh nào. Trường hợp hòa duy nhất là PSel-Union (cal) ở $T=150$, thiếu 50\%: hiệu $-0.05$, khoảng $[-0.17,+0.04]$; phương pháp đó dùng gấp 32 lần số lần bootstrap. Coverage của \ours{} ở bốn cell là $0.96$--$0.97$, hơi trên mức danh nghĩa. Có ba điều cần lưu ý khi đọc kết quả này. Thứ nhất, mức chênh so với phương pháp tham chiếu gần nhất là $0.05$--$0.8$ trên mức IS $2$--$4$, tức khoảng $2$--$25\%$, nhỏ hơn nhiều so với khoảng cách với RB. Thứ hai, \ours{} nhận số cạnh thiếu khai báo $k_{\text{miss}}$ để quyết định số cặp được mở, trong khi PSel-Union, BVAR-Minnesota và TLP không dùng $k_{\text{miss}}$ khi chọn cấu trúc (chỉ hệ số độ rộng của bản (cal) biết loại lỗi), nên lợi thế gộp cả phương pháp và thông tin khai báo. Thứ ba, ở $T=40$ (kết quả thăm dò) BVAR-Minnesota (cal) hòa với \ours{} khi thiếu cạnh và có IS thấp hơn $0.6$--$0.9$ khi cạnh thừa, không hỏng hoặc đảo 20\%. Lợi thế thu hẹp khi $T$ tăng, vì khi dữ liệu nhiều thì việc mở mọi lag cũng không còn tốn kém.
+
+So với phiên bản không chọn lọc lag (mở mọi lag và chỉ hiệu chỉnh một phía), ở $T=40$ thiếu 20\% cạnh IS giảm từ $7.81$ xuống $4.62$ (hiệu $-3.19$, khoảng $[-3.54,-2.87]$) và thiếu 50\% giảm từ $7.54$ xuống $4.99$ ($-2.55$, $[-2.76,-2.34]$), với coverage $0.928$ và $0.947$; ở 19 cell còn lại không cell nào tệ hơn có ý nghĩa.
+
+\subsection{Đóng góp của từng thành phần (thăm dò)}
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{5.3cm}Y}
+\toprule
+Thành phần & Tác dụng đo được\\
+\midrule
+Bổ sung cạnh cùng kỳ và rút chiều ngẫu nhiên & Nguồn lợi thế so với chỉ mở mọi lag: Full VAR (cal) tệ hơn ở 19/21 cell sau Holm\\
+Hiệu chỉnh độ rộng hai phía & Giảm IS $0.71$--$0.79$ ở $T=40$ khi thiếu cạnh; ở cell khác gần như không đổi\\
+Mở lag có chọn lọc, chọn lại trong từng lần bootstrap & Giảm IS ở cả 6 cell thiếu cạnh ($-0.23$ đến $-2.93$), không làm tệ cell nào\\
+\bottomrule
+\end{tabularx}
+\caption{Đóng góp của từng thành phần của \ours{} trên tập phát triển.}
+\end{table}
+
+\subsection{Tác động của loại và mức hỏng (RQ4.1)}\label{sec:rq41}
+Chúng tôi đánh giá RQ4.1 bằng bốn tiêu chí, kiểm tra trên ba tập kiểm chứng độc lập (lần 1, 2, 3), mỗi tập gồm 20 topology mới:
+\begin{description}
+  \item[(a) Thứ tự mức nặng.] Với RB trên các cặp bị hỏng, sai số tương đối theo thứ tự thiếu $>$ đảo $>$ thừa ở ít nhất $5/6$ cell ($T\in\{40,80,150\}\times$ tỷ lệ $\{0.2,0.5\}$). Tiêu chí sửa (a$'$): thiếu $>$ đảo \emph{và} thiếu $>$ thừa ở $4/4$ cell $T\ge80$; $T=40$ chỉ để mô tả.
+  \item[(b)] Coverage của RB khi thiếu 50\% cạnh thấp hơn $0.60$ ở cả ba giá trị $T$.
+  \item[(c) \ours{} so với RB.] Giảm sai số ở $6/6$ cell thiếu cạnh. Coverage trên cặp bị hỏng $\ge0.90$ ở $4/4$ cell ($T\in\{80,150\}\times\{0.2,0.5\}$). Tiêu chí sửa (c2): với mỗi $T\in\{80,150\}$, gộp hai mức hỏng, cận dưới của khoảng tin cậy 95\% (cluster bootstrap) $\ge0.85$.
+  \item[(d)] Lỗi mean-lag của RB không giảm quá 25\% khi $T$ tăng từ $40$ lên $150$ ở các cell thiếu và đảo.
+\end{description}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{2.4cm}CCCCY}
+\toprule
+Lần & Quy tắc & (a) & (b) & (c) & (d) & Kết luận\\
+\midrule
+1 & Gốc & Trượt, $4/6$ & Đạt & Đạt & Đạt & Không đạt\\
+2 & (a$'$) & Đạt $4/4$ & Đạt & Trượt, $3/4$ & Đạt & Không đạt\\
+3 & (a$'$), (c2) & Đạt $4/4$ & Đạt & Đạt & Đạt & Đạt theo tiêu chí sửa\\
+\bottomrule
+\end{tabularx}
+\caption{Ba lần kiểm chứng RQ4.1.}
+\end{table}
+\begin{itemize}
+  \item \textbf{Lần 1:} tiêu chí (a) trượt vì hai cell $T=40$ không tách được cạnh đảo khỏi cạnh thừa (khoảng tin cậy của hiệu chứa 0). Coverage của RB khi thiếu 50\% là $0.349/0.336/0.315$ ở $T=40/80/150$.
+  \item \textbf{Lần 2:} (a$'$) đạt $4/4$. (c) trượt ở một cell: coverage của \ours{} trên cặp bị hỏng ở $T=80$, thiếu 20\% là $0.899$, thiếu $0.001$ so với ngưỡng $0.90$ (khoảng $[0.872,0.926]$ chứa $0.90$); coverage trên mọi cặp non-null là $0.953$--$0.967$. Coverage của RB khi thiếu 50\% là $0.373/0.350/0.335$.
+  \item \textbf{Lần 3:} (a$'$) và (b) đạt; (c2) đạt cho cả hai phiên bản: phiên bản không chọn lọc lag $0.956$ ($T=80$) và $0.957$ ($T=150$); \ours{} $0.929$ $[0.916,0.942]$ và $0.947$ $[0.936,0.957]$.
+\end{itemize}
+Các tiêu chí (a$'$) và (c2) được chọn sau khi đã thấy kết quả lần 1 và lần 2, nghĩa là quy tắc được sửa sau khi có dữ liệu; ngưỡng $0.85$ và cách gộp theo $T$ được khóa trước khi chạy lần 3. Theo quy tắc gốc, RQ4.1 không đạt ở lần 1, và thứ tự đầy đủ thiếu $>$ đảo $>$ thừa vẫn chỉ đạt $4/6$ ở lần 2 và lần 3. Phần kết luận định tính chắc chắn là: thiếu cạnh là loại lỗi nặng nhất, cạnh thừa gần như vô hại với cường độ, cạnh đảo làm sai cả lag; ở $T=40$ chưa tách được đảo khỏi thừa.
+
+\subsection{Bản đồ chi phí theo cạnh (RQ4.3, kiểm chứng)}
+Với mỗi cạnh của skeleton, chúng tôi đo hiệu ứng lệch bao nhiêu khi cạnh đó sai. Độ lệch trung vị của các cặp nằm \emph{trên đường truyền dẫn} của cạnh hỏng là: thiếu cạnh cùng kỳ $0.952$ $[0.929,0.965]$, thiếu cạnh có lag $0.844$ $[0.749,0.895]$, đảo cạnh cùng kỳ $0.541$ $[0.510,0.574]$. Bản đồ ổn định: hệ số tương quan Spearman giữa hai nửa topology là $0.993$ và giữa hai họ đồ thị (Erdős--Rényi và hub) là $0.965$; Holm đạt $12/12$.
+
+\subsection{Cờ độ tin cậy (RQ4.4, kiểm chứng)}
+Chúng tôi huấn luyện trước một mô hình logistic với ba đặc trưng quan sát được (độ rộng, độ rộng tương đối, mức hỏng khai báo) và không fit lại khi kiểm chứng. AUROC là $0.720$ $[0.698,0.744]$ ở $T=80/150$ và $0.812$ $[0.791,0.832]$ ở $T=40$, cao hơn comparator độ rộng tương đối $+0.089$ và $+0.220$. Cặp bị gắn cờ trượt nhiều gấp $3.98$ lần ($T=80/150$) và $6.77$ lần ($T=40$). Các diagnostic quen thuộc như độ ổn định hệ số hay phần dư không dự báo được theo chiều kỳ vọng.
+
+\subsection{Vùng dùng được (thăm dò)}\label{sec:vung}
+Một ô (số lag $p$, $T$, loại và mức hỏng) \emph{dùng được} với một phương pháp nếu: (i) ít nhất $57/60$ lượt chạy trả kết quả; (ii) coverage gộp $\ge0.90$; (iii) IS trung bình $\le3\times$ IS của Oracle ở cùng $(p,T)$, điều kiện này loại các khoảng ``phát nổ''. $T$ tối thiểu là $T$ nhỏ nhất sao cho mọi $T$ từ đó trở lên đều dùng được ở cả hai mức hỏng.
+\begin{table}[H]
+\centering\small
+\begin{tabular}{ccc}
+\toprule
+$p$ & $T$ tối thiểu, \ours{} & $T$ tối thiểu, phiên bản không chọn lọc lag\\
+\midrule
+1 & 19 & 25\\
+2 & 40 & 40\\
+4 & 80 & 150\\
+\bottomrule
+\end{tabular}
+\caption{$T$ tối thiểu khi thiếu cạnh.}\label{tab:vung}
+\end{table}
+Với $p=1$, một panel $14\times19$ nằm trong vùng dùng được của \ours{} ở các ô không hỏng, thiếu $0.2$ và $0.5$, đảo $0.2$; ô đảo $0.5$ thì không. Ở $T=19$, phiên bản không chọn lọc lag không chạy được lượt nào ($0/60$). Với $p=2$ và $T<40$, nhiều phương trình không ước lượng được, kể cả với RB, do số biến hồi quy vượt số dòng dữ liệu.
+
+\subsection{Thảo luận}
+\begin{itemize}
+  \item \textbf{Thiếu cạnh là lỗi nặng nhất.} RB cho khoảng hẹp nhưng sai nên coverage chỉ $0.33$--$0.68$ khi thiếu cạnh; cạnh thừa gần như vô hại.
+  \item \textbf{Mở mọi lag ở $T$ nhỏ làm khoảng phình rộng} ($28$ biến hồi quy trên $38$ dòng). \ours{} chỉ mở lag cho cặp có bằng chứng, nên IS thấp hơn rõ rệt ở $T=40$.
+  \item \textbf{Khoảng của \ours{} rộng hơn RB} vì RB hẹp mà sai. Do đó RQ4.2 nên được phát biểu theo interval score, thước đo gộp độ rộng và việc trượt, thay vì chỉ theo độ rộng.
+  \item \textbf{Lợi thế thu hẹp từ $T=150$:} phương pháp tham chiếu mạnh nhất hòa với \ours{} ở một cell.
+\end{itemize}
+
+\section{Kết luận}\label{sec:ket-luan}
+Chúng tôi trình bày \ours{}, phương pháp ước lượng hiệu ứng tích lũy của SVAR khi skeleton có lỗi, dùng số cạnh hỏng khai báo để quyết định mở bao nhiêu khối lag, chọn lại cấu trúc trong từng lần bootstrap và hiệu chỉnh độ rộng hai phía. Cắm skeleton hỏng vào residual bootstrap làm coverage giảm xuống khoảng $0.33$ khi thiếu 50\% cạnh và $0.32$--$0.38$ khi skeleton do GES học ra; \ours{} đưa coverage về $0.92$--$0.97$ ở mọi loại lỗi. Ở các cell thiếu cạnh với $T\ge80$, \ours{} có interval score thấp hơn các phương pháp tham chiếu đã thử (hòa một cell), với biên độ chênh khiêm tốn và với lưu ý rằng \ours{} dùng thêm số cạnh thiếu khai báo. Thiếu cạnh là loại lỗi nặng nhất, bản đồ chi phí theo cạnh ổn định giữa các topology, và một cờ độ tin cậy đơn giản dự báo được cặp nào dễ trượt. Vùng dùng được kéo xuống tới $T=19$ khi $p=1$, đủ cho panel thật 14 biến.

@@ -1,0 +1,51 @@
+\section{Bài toán và ký hiệu}\label{sec:bai-toan}
+
+\subsection{Dynamic SEM (recursive SVAR)}
+Với $n$ biến, $x_t\in\mathbb R^n$:
+\begin{equation}
+x_t = B_0 x_t + \sum_{l=1}^{p} B_l x_{t-l} + \varepsilon_t,\qquad \varepsilon_t\sim\mathcal N\bigl(0,\operatorname{diag}(\sigma_1^2,\dots,\sigma_n^2)\bigr).
+\label{eq:svar}
+\end{equation}
+$B_0$ chứa các cạnh cùng kỳ và là ma trận của một đồ thị có hướng không chu trình (nên $I-B_0$ khả nghịch); $B_l$ ($l\ge1$) chứa các cạnh có lag; $p$ là số lag tối đa.
+
+\subsection{Hiệu ứng tích lũy}
+Đặt $A=(I-B_0)^{-1}$. Phản ứng của $x_j$ tại $t+h$ trước cú sốc cấu trúc $\varepsilon_i$ tăng một đơn vị tại $t$ là $\Theta_h[j,i]$, với
+\begin{equation}
+\Theta_0=A,\qquad \Theta_h = A\sum_{l=1}^{\min(h,p)} B_l\,\Theta_{h-l}\quad(h\ge1).
+\label{eq:irf}
+\end{equation}
+Hiệu ứng tích lũy là
+\begin{equation}
+C_{ji}(H)=\sum_{h=0}^{H}\Theta_h[j,i],\qquad H=4\ \text{quý}.
+\label{eq:cumulative}
+\end{equation}
+Một cặp có thứ tự $(i\to j)$ được gọi là \emph{non-null} nếu $|C_{ji}(H)|>0.1$ theo giá trị thật; các số liệu coverage và interval score chỉ tính trên các cặp này.
+
+\subsection{Skeleton và các hạng tử hồi quy}
+Skeleton $\mathcal S$ gồm tập các cặp nối nhau và, với các cặp đã biết chiều, hướng $u\to v$. Skeleton không mang lag hay hệ số. Phương trình của nút $j$ gồm:
+\begin{itemize}
+  \item lag $1..p$ của chính nút $j$;
+  \item lag $1..p$ của mọi nút nối với $j$ (thứ tự thời gian đã quyết định chiều của cạnh có lag);
+  \item biến cùng kỳ $x_{u,t}$ cho mỗi cặp có hướng $u\to j$.
+\end{itemize}
+Vì phần cùng kỳ là không chu trình, mỗi phương trình được fit riêng bằng OLS.
+
+\subsection{Ba loại lỗi và khai báo}
+Skeleton đưa vào có thể bị hỏng theo ba cách: \emph{thiếu cạnh} (mất $k$ cạnh thật), \emph{thừa cạnh} (thêm $k$ cặp không có cạnh) và \emph{đảo chiều} (lật chiều $k$ cạnh cùng kỳ). Người dùng cung cấp \emph{khai báo} $(k_{\text{miss}},k_{\text{extra}},k_{\text{rev}})$, chỉ là số lượng, không cho biết cạnh nào hỏng.
+
+\subsection{Mục tiêu}
+Cho dữ liệu $X\in\mathbb R^{T\times n}$, skeleton $\mathcal S$ và khai báo, ước lượng $\hat C_{ji}(H)$ và khoảng $[\ell_{ji},u_{ji}]$ sao cho
+\[
+\Pr\bigl(C_{ji}(H)\in[\ell_{ji},u_{ji}]\bigr)\approx 0.95,
+\]
+với khoảng càng hẹp càng tốt. Để so sánh khoảng theo cả độ rộng lẫn việc trượt, chúng tôi dùng interval score (mục~\ref{sec:metric}).
+
+\subsection{Residual bootstrap}\label{sec:bootstrap}
+Với một bộ dữ liệu và một skeleton cố định, khoảng tin cậy được dựng như sau.
+\begin{enumerate}
+  \item Fit các phương trình, thu $\hat B$ và phần dư $\hat u_t$.
+  \item Sinh dữ liệu giả: rút phần dư có hoàn lại và dựng lại chuỗi theo mô hình đã fit.
+  \item Fit lại trên dữ liệu giả và tính $\hat C^{*}(H)$ từ \eqref{eq:irf}--\eqref{eq:cumulative}.
+  \item Lặp $B=199$ lần; khoảng tin cậy là phân vị 2.5\% và 97.5\% của $B$ giá trị $\hat C^*(H)$ (percentile interval).
+\end{enumerate}
+Với skeleton cố định, khoảng này chỉ đo nhiễu dữ liệu. Phương pháp đề xuất thay đổi bước 3: cấu trúc được chọn lại trong từng lần chạy bootstrap.

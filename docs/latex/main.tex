@@ -1,0 +1,55 @@
+% Tài liệu nội bộ nhóm: Paper 4. Biên dịch bằng XeLaTeX (xem build.sh).
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont[Scale=0.88]{Courier New}
+\usepackage[vietnamese]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[authoryear,round]{natbib}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+\setlength{\parskip}{4pt}
+\emergencystretch=3em
+\floatname{algorithm}{Thuật toán}
+\setlist{itemsep=2pt,topsep=3pt}
+\captionsetup{font=small,labelfont=bf}
+\renewcommand{\arraystretch}{1.15}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\ours}{\textbf{Ours}}
+\newcommand{\IS}{\mathrm{IS}}
+\newcommand{\C}{C}
+\DeclareMathOperator{\cov}{cov}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\title{\textbf{Báo cáo Paper 4}}
+\author{Nhóm NCKH UIT}
+\date{Tháng 11 năm 2026}
+
+\begin{document}
+\maketitle
+
+
+\tableofcontents
+\newpage
+
+\input{sections/01_gioi_thieu}
+\input{sections/02_bai_toan}
+\input{sections/03_phuong_phap}
+\input{sections/04_thiet_lap}
+\input{sections/05_ket_qua}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}
