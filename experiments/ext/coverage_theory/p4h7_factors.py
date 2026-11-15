@@ -55,7 +55,7 @@ def expected_runs(meta):
     cfg = build_cfg(meta["split"], ",".join(map(str, meta["T"])), meta["seed_base"], meta["lag"], "0.2,0.5")
     gen = R.generator_config(cfg)
     exp = collections.defaultdict(lambda: collections.defaultdict(int))  # (T-free) key -> unit -> count
-    for t_idx, topo in enumerate(load_bank(meta["bank"], meta["split"])):
+    for t_idx, topo in enumerate(load_bank(meta["bank"], meta["split"])[: meta.get("n_units")]):
         unit_seed = meta["seed_base"] + 500_000 + 1000 * t_idx
         sem = build_dynamic_sem(topo, gen, np.random.default_rng([unit_seed, 0]))
         for (kind, rate), skel in R.unit_skeletons(sem, unit_seed, cfg).items():

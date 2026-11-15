@@ -1,7 +1,7 @@
 """P4-H8 exploratory arm: the same topologies and frozen factors, but non-Gaussian innovations (violation of the
 clean-Gaussian assumption; NOT part of the guarantee). Protocol: docs/ext/p4h8_spec.md, section "Violations".
 
-Only the innovation law changes (unit variance in every case): t4 (Student-t, 4 degrees of freedom) and laplace.
+Only the innovation law changes (unit variance in every case): t4 (Student-t, 4 degrees of freedom) and laplace; me10 and me30 add classical measurement noise (variance 10% and 30% of each column) to Gaussian-innovation data.
 The unit dump has the same format as p4h7_units.py, so p4h7_test_eval.py evaluates it with the frozen factors:
 
     python experiments/ext/coverage_theory/p4h8_noise_arm.py --law t4 --lag 1 --T 19,30,40,80,150 --out results/ext_p4h8_noise_t4_lag1/units.json
@@ -34,7 +34,16 @@ def draw(law, rng, size):
 
 
 def install(law):
-    from paper4.generator import DynamicSEM
+    from paper4.generator import DynamicSEM, add_measurement_noise
+    if law.startswith("me"):  # classical measurement noise on the observed series, variance = ratio * var(column)
+        ratio = int(law[2:]) / 100.0
+        orig = DynamicSEM.simulate
+
+        def simulate_me(self, T, rng):
+            return add_measurement_noise(orig(self, T, rng), ratio, rng)
+
+        DynamicSEM.simulate = simulate_me
+        return
 
     def simulate(self, T, rng):
         n, p = self.n_all, self.lag_max
@@ -54,7 +63,7 @@ def install(law):
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("--law", required=True, choices=["t4", "laplace"])
+    ap.add_argument("--law", required=True, choices=["t4", "laplace", "me10", "me30"])
     ap.add_argument("--bank", default="P4-H8")
     ap.add_argument("--split", default="test", choices=["design", "test"])
     ap.add_argument("--lag", type=int, default=1)

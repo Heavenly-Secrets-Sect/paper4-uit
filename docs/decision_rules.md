@@ -850,3 +850,31 @@ On the guaranteed cells the mean topology hit rate (at most 10% of non-null pair
 Details: `results/ext_p4h8_test_lag{1,2,3}/test_eval.md`.
 
 **P4-H8 exploratory violation arm (2026-11-15, after the confirmatory runs).** Same test topologies, lag 1, frozen lag-1 factors, innovations Student-t(4) and Laplace with unit variance (`experiments/ext/coverage_theory/p4h8_noise_arm.py`); labelled a violation of the clean-Gaussian assumption, not part of the guarantee, no factor is re-tuned. Results: `results/ext_p4h8_noise_{t4,laplace}_lag1/`.
+
+**P4-H8 exploratory violation arm, measurement noise (2026-11-15).** Same test topologies, lag 1, frozen lag-1 factors, classical measurement noise added to the observed series (variance 10% and 30% of each column; truth unchanged), `p4h8_noise_arm.py --law me10|me30`. Not part of the guarantee. Mean topology hit rate (at most 10% of non-null pairs missed) for the shipped pooled rule / marginal / PAC factor: Gaussian clean 0.805 / 0.897 / 0.918; 10% noise 0.642 / 0.776 / 0.810 (cells from 0.53 to 0.93; T = 150: 0.53 to 0.59); 30% noise 0.363 / 0.501 / 0.544 (cells from 0.03 to 0.88). Pair coverage of the marginal factor: 0.971 clean, 0.948 at 10%, 0.878 at 30%. The guarantee does not survive measurement noise, and the loss grows with T (the attenuation bias does not shrink with more data). Results: `results/ext_p4h8_noise_me{10,30}_lag1/`.
+
+## P4-H8 reliability flag (feedback point 5): frozen 2026-11-15, test split NOT yet run for it
+
+Protocol: `docs/ext/p4h8_flag_spec.md`. Trained on the calibration dump only (grouped 5-fold CV by topology chose a gradient-boosting model, depth 5, learning rate 0.05, CV AUROC 0.868). Design split looked at once as a sanity check (AUROC new 0.861, old frozen flag 0.786, minus final width 0.711); nothing was chosen from it. Frozen artefacts (SHA-256):
+- `docs/ext/p4h8_flag_spec.md` `422c006eb59030173dea24631588697619d991f18a72963683f89517fdd2800f`
+- `experiments/ext/coverage_theory/p4h8_flag_units.py` `b89299fa0373bff10726c71fa8205ffab66bcbec00b534c504446ddd04c12ec9`
+- `experiments/ext/coverage_theory/p4h8_flag_model.py` `cf34794546e840aaead64eedcc666ed80984c86144f326d4b0450f1279ccc329`
+- `experiments/calibration/p4h8_flag_frozen.json` `2020659c8f11fa04f2bbb0f5f35d5d18f572aaa781dad6b60e7e5681fa0c248b`
+- `experiments/calibration/p4h8_flag_model.pkl` `e753513d7d62cdaf716630f8a6806b500077cb3238e0db95fc76c5c023425b82`
+- `results/ext_p4h8_flag/calibration.npz` `97f3ab10fdb77288351d7934ac5af989746d2534548fbee7f870ec6edb2a940a`
+
+The test dump and evaluation are run once after this entry.
+
+## P4-H8 comparison at the same guarantee level (feedback point 6): frozen 2026-11-15, test split NOT yet run for it
+
+Protocol: `docs/ext/p4h8_cmp_spec.md`. Factors computed with `p4h7_factors.py --expected-runs` on the first 150 calibration topologies, T in {40, 150}. **Correction before any test run:** `expected_runs` replayed all 550 calibration topologies even for a 150-topology dump, so units without a dump were counted as failures; it now truncates to `meta["n_units"]` (identical when the whole split is dumped; the three P4-H8 lag factor files were recomputed and are byte-identical to the frozen ones). New SHA-256 of `p4h7_factors.py`:
+- `experiments/ext/coverage_theory/p4h7_factors.py` `12e2f677f314d7cce81e886775a80c17298de8bb47fb648a0732458d8978371a`
+Frozen artefacts (SHA-256):
+- `docs/ext/p4h8_cmp_spec.md` `cc6db347e45606a6f309b7da750879865997aed40326316603971f83896f68d2`
+- `experiments/ext/coverage_theory/p4h8_cmp_units.py` `e7331a340defe5f06c938e4a0aaf58f29695759ed379c29e9acedea67e7fff34`
+- `experiments/calibration/p4h8_cmp_frozen.json` `879e350869f1618c3d76074afc9b30e89e969e504e4083a5df9e197eda10977b`
+- `results/ext_p4h8_cmp/calibration.json` `ab375809a74deea9683b964304517b9eab4feb822dc9e726a1967e0f7936cf8b`
+
+**Flag result, recorded here for completeness (test run once, 2026-11-15):** criterion NOT MET. AUROC new 0.869 vs old flag 0.792 overall; by T group 19-30: 0.928 vs 0.821 (+0.107); 40: 0.882 vs 0.868 (+0.014, below the 0.03 required); 80-150: 0.776 vs 0.744 (+0.032). Results: `results/ext_p4h8_flag/test_eval.md`.
+
+**P4-H8 comparison at the same guarantee level: test result (2026-11-15; first 200 test topologies, lag 1, T in {40, 150}, factors frozen above, run once).** Per the pre-registered rule, among the methods whose hit-rate interval reaches 0.90 the lowest mean interval score wins a (T, kind) cell: **BVAR-Minnesota 4 cells, SRCI 3, PSel-Union (32x budget) 1** (of 8). SRCI wins the cells with missing or reversed edges at T = 40 and reversed at T = 150; BVAR-Minnesota wins the undamaged and extra-edge cells at both T; PSel-Union wins T = 150 missing (IS 2.00 vs 2.12). Paired against SRCI (topology cluster bootstrap): SRCI better than PSel, Full VAR and TLP in 8 of 8 cells and than PSel-Union in 7 of 8; against BVAR-Minnesota 4 cells each way. Two methods miss the guarantee level in one cell each (BVAR-Minnesota T = 150 missing, hit rate 0.84; PSel-Union T = 150 reversed, 0.81). This contradicts the earlier reading (SRCI better in 27 of 28 comparisons with pooled pair-level factors): at an equal topology-level guarantee SRCI is not uniformly best. Results: `results/ext_p4h8_cmp/test_eval.md`.

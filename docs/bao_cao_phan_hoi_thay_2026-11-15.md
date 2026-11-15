@@ -12,8 +12,8 @@ Tên phương pháp trong báo cáo: **SRCI** (Skeleton-Robust Calibrated Interv
 | 2 | Điều kiện đủ để coverage đúng | **Đã có phát biểu, bản nháp chứng minh và kiểm chứng độc lập trên 1.200 topology, lag 1–3: đạt ở lag 1 và 3, không đạt ở lag 2** |
 | 3 | Hệ số 0,5 | **Xong (thăm dò):** giải thích và kiểm độ nhạy |
 | 4 | Mở rộng mô phỏng | **Xong phần chính:** tập 1.200 topology, lag 1–3, nhiễu đuôi dày (t4, Laplace) ở lag 1; chưa thêm số nút khác 14 |
-| 5 | AUROC của RQ4.4 | **Chưa làm** |
-| 6 | Rà phần so sánh chính | **Mới có bản rà soát** (`docs/ext/comparison_audit.md`) và đề xuất so sánh ở cùng mức đảm bảo; chưa chạy |
+| 5 | AUROC của RQ4.4 | **Đã làm, tiêu chí không đạt:** AUROC 0,869 so với 0,792 của cờ cũ (+0,077), nhưng chỉ +0,014 ở T = 40 (xem mục 12) |
+| 6 | Rà phần so sánh chính | **Đã chạy so sánh ở cùng mức đảm bảo:** SRCI thắng 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8 (xem mục 11) |
 | 7 | Vẽ architecture | **Xong** (hình đính kèm) |
 | 8 | Giải thích số liệu trong bảng | **Có bản nháp** (`docs/latex/draft_giai_thich_bang.md`), chưa chèn vào bài |
 | 9 | Tài liệu từ 2021 | **Xong phần tìm và kiểm chứng:** 79 mục; chưa đưa vào bài |
@@ -93,7 +93,17 @@ Hình: `docs/latex/figures/architecture_srci.png` (và .pdf). Gồm đầu vào,
 | Student-t(4) | 0,824 / 0,909 / 0,927 | 18/20 | 5,25 |
 | Laplace | 0,812 / 0,901 / 0,921 | 17/20 | 6,29 |
 
-Hệ số hiệu chỉnh trên Gaussian vẫn giữ tỉ lệ thỏa điều kiện ở mức 0,90 khi nhiễu đổi (khoảng rộng hơn một chút, Laplace rộng hơn 29%). Điều này **chỉ** nói về nhiễu động học (innovation) đuôi dày. Sai số đo (nhiễu cộng thêm lên dữ liệu quan sát) chưa được thử trong đợt này; các thử nghiệm sơ bộ của nhóm khác cho thấy coverage rơi xuống 0,66 đến 0,75 trong điều kiện đó, nên không suy rộng. Cần thầy cho ý kiến: có thêm tập topology với số nút khác 14 không.
+Hệ số hiệu chỉnh trên Gaussian vẫn giữ tỉ lệ thỏa điều kiện ở mức 0,90 khi nhiễu động học đổi (khoảng rộng hơn một chút, Laplace rộng hơn 29%).
+
+**Sai số đo (nhiễu cộng thêm lên dữ liệu quan sát, phương sai bằng 10% và 30% phương sai của mỗi cột)** thì khác hẳn, và đây là một hạn chế thật:
+
+| Sai số đo | Tỉ lệ thỏa điều kiện: luật cũ / biên / PAC | Ô thấp nhất đến cao nhất (biên) | Coverage cặp (biên) |
+|---|---|---|---|
+| Không | 0,805 / 0,897 / 0,918 | 0,86 đến 0,93 | 0,971 |
+| 10% | 0,642 / 0,776 / 0,810 | 0,53 đến 0,93 | 0,948 |
+| 30% | 0,363 / 0,501 / 0,544 | 0,03 đến 0,88 | 0,878 |
+
+Bảo đảm **không chịu được sai số đo**, và tệ hơn khi T lớn (ở 10% nhiễu, T = 150 chỉ còn 0,53 đến 0,59), vì sai lệch do sai số đo không giảm khi có thêm dữ liệu. Điều này nhất quán với các thử nghiệm sơ bộ của nhóm khác (coverage tụt xuống 0,66 đến 0,75). Bài cần nói rõ giới hạn này; hướng khắc phục (ví dụ ước lượng tỉ lệ nhiễu đo rồi nới khoảng, như nhánh adapt của repo gốc) chưa được đánh giá đầy đủ và không được đưa vào. Cần thầy cho ý kiến: có thêm tập topology với số nút khác 14 không.
 
 ## 7. Điểm 9: tài liệu từ 2021
 
@@ -131,3 +141,29 @@ Giới thiệu; Công trình liên quan; Bài toán; Phương pháp (hình archi
 3. Có mở rộng bank sang kích thước khác (số nút, số cạnh) không?
 4. Tên phương pháp và thứ tự các section.
 5. Phù hợp phạm vi Computational Statistics vì chưa thấy bài SVAR cùng tạp chí.
+
+## 11. Điểm 6: so sánh với các phương pháp tham chiếu ở cùng mức đảm bảo
+
+Mỗi phương pháp được hiệu chỉnh bằng **cùng một quy tắc** (thống kê hạng theo topology, β = 10%, δ = 10%) trên cùng 150 topology hiệu chỉnh, rồi chạy một lần trên 200 topology kiểm tra (lag 1, T = 40 và 150, bốn loại hỏng). Khi đó các phương pháp đạt cùng mức đảm bảo (tỉ lệ topology thỏa điều kiện quanh 0,90) và so sánh được bằng độ rộng và interval score.
+
+| Phương pháp | Số ô (trên 8) có IS thấp nhất | So cặp với SRCI (8 ô): SRCI tốt hơn / phương pháp đó tốt hơn |
+|---|---|---|
+| BVAR-Minnesota | 4 | 4 / 4 |
+| SRCI | 3 | , |
+| PSel-Union (ngân sách bootstrap gấp 32) | 1 | 7 / 1 |
+| PSel, Full VAR, TLP | 0 | 8 / 0 mỗi phương pháp |
+
+Đọc đúng: SRCI thắng ở các ô thiếu cạnh và đảo cạnh (T = 40 cả hai loại, T = 150 đảo cạnh); BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh ở cả hai T; PSel-Union thắng ở T = 150 thiếu cạnh với ngân sách tính toán gấp 32 lần. Hai phương pháp không đạt mức đảm bảo ở một ô (BVAR-Minnesota ở T = 150 thiếu cạnh: 0,84; PSel-Union ở T = 150 đảo cạnh: 0,81). **Điều này làm yếu kết luận cũ** (SRCI tốt hơn ở 27/28 so sánh khi mỗi phương pháp dùng hệ số riêng): ở cùng mức đảm bảo, lợi thế của SRCI có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Hạn chế: chỉ lag 1, hai giá trị T, 200 topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng ±0,04); một số phương pháp là bản do nhóm chuyển thể; SRCI dùng số cạnh thiếu khai báo.
+
+## 12. Điểm 5: cờ độ tin cậy
+
+Cờ mới là mô hình gradient boosting với các đặc trưng quan sát được (độ rộng, tỉ lệ |trung điểm| trên nửa độ rộng, khoảng có chứa 0 hay không, khai báo hỏng, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy...). Huấn luyện chỉ trên split hiệu chỉnh (kiểm định chéo theo topology), đóng băng trước khi chạy split kiểm tra (592.412 cặp).
+
+| Nhóm T | AUROC cờ mới | AUROC cờ cũ | Hiệu [khoảng tin cậy 95%] | Cặp trượt nhiều gấp (top 10%) |
+|---|---|---|---|---|
+| Tất cả | 0,869 | 0,792 | +0,077 [+0,065; +0,088] | 5,74 |
+| 19–30 | 0,928 | 0,821 | +0,107 [+0,082; +0,134] | 7,33 |
+| 40 | 0,882 | 0,868 | +0,014 [+0,010; +0,018] | 6,13 |
+| 80–150 | 0,776 | 0,744 | +0,032 [+0,026; +0,038] | 3,96 |
+
+Tiêu chí ghi trước (tăng ít nhất 0,03 AUROC ở **cả ba** nhóm T với khoảng tin cậy trên 0) **không đạt** vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cải thiện rõ ở T nhỏ và vừa phải ở T lớn, nơi AUROC vẫn chỉ 0,78.

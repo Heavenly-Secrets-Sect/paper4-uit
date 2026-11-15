@@ -32,3 +32,9 @@ results/ext_p4h8/calibration_lag*.json
 results/ext_p4h8/design_lag*.json
 results/ext_p4h8/design_eval_lag*/units.json
 results/ext_coverage_v1/v1_pairs.json
+results/ext_p4h8_cmp/calibration.json
+results/ext_p4h8_cmp/test.json
+results/ext_p4h8_flag/*.npz
+results/ext_p4h8_*DONE
+results/ext_p4h8_cmp/*DONE
+results/ext_p4h8_flag/*DONE

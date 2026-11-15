@@ -30,4 +30,8 @@ Ngày 2026-11-15. Dựa trên `docs/latex/sections/05_ket_qua.tex`, mục "So s�
 2. Tập tham chiếu nào bắt buộc: PSel-Union, Full VAR, TLP, BVAR-Minnesota (đã có); DYNOTEARS hoặc PCMCI+ (chưa có bản chạy được; gói tham chiếu của repo gốc tự ghi chưa kiểm chứng)?
 
 ## Trạng thái
-Chưa chạy. Chạy A và B cần một đặc tả ghi trước với hash, và dùng cùng hai split hiệu chỉnh và kiểm tra của P4-H8 (phương pháp tham chiếu không được chỉnh trên split kiểm tra).
+**Đã chạy (2026-11-15):** so sánh ở cùng mức đảm bảo (đề xuất A) trên 200 topology kiểm tra, lag 1, T = 40 và 150, bốn loại hỏng, sáu phương pháp, hệ số của mọi phương pháp tính bằng cùng quy tắc trên 150 topology hiệu chỉnh (đặc tả `p4h8_cmp_spec.md`, kết quả `results/ext_p4h8_cmp/test_eval.md`).
+
+**Kết quả:** ở cùng mức đảm bảo, SRCI **không** tốt nhất ở mọi ô. Theo quy tắc ghi trước, số ô thắng (IS thấp nhất trong các phương pháp đạt mức đảm bảo): BVAR-Minnesota 4, SRCI 3, PSel-Union (ngân sách bootstrap gấp 32) 1, trên 8 ô. SRCI thắng ở các ô thiếu và đảo cạnh (T = 40 cả hai loại, T = 150 đảo); BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh; PSel-Union thắng ở T = 150, thiếu cạnh. So cặp với SRCI: SRCI tốt hơn PSel, Full VAR, TLP ở 8/8 ô và PSel-Union ở 7/8 ô, nhưng với BVAR-Minnesota thì 4 ô mỗi bên. Điều này điều chỉnh kết luận cũ (27/28 so sánh có lợi cho SRCI khi mỗi phương pháp dùng hệ số riêng): lợi thế thật nhưng hẹp hơn, và tập trung ở các loại hỏng cần mở cấu trúc.
+
+**Chưa làm:** đề xuất B (thêm lag 2, T khác), biến thể SRCI không dùng số cạnh thiếu khai báo (đề xuất C).

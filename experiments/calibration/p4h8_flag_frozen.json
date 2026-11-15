@@ -1,0 +1,100 @@
+{
+  "_note": "P4-H8 frozen flag (docs/ext/p4h8_flag_spec.md); fitted on the calibration dump only.",
+  "selected": {
+    "kind": "gbm",
+    "params": {
+      "max_depth": 5,
+      "learning_rate": 0.05
+    },
+    "cv_auroc": 0.8681457896042298
+  },
+  "cv_all": [
+    [
+      "logit",
+      {
+        "C": 0.01
+      },
+      0.7914588537444285
+    ],
+    [
+      "logit",
+      {
+        "C": 0.1
+      },
+      0.7920917860199085
+    ],
+    [
+      "logit",
+      {
+        "C": 1.0
+      },
+      0.7928064120024644
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 3,
+        "learning_rate": 0.05
+      },
+      0.8663072127475125
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 3,
+        "learning_rate": 0.1
+      },
+      0.8676793643457167
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 5,
+        "learning_rate": 0.05
+      },
+      0.8681457896042298
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 5,
+        "learning_rate": 0.1
+      },
+      0.8674454443623241
+    ]
+  ],
+  "features": [
+    "mid",
+    "half",
+    "ratio",
+    "zero_in",
+    "logT",
+    "lag",
+    "k_miss",
+    "k_extra",
+    "k_rev",
+    "has_path",
+    "path_len",
+    "adjacent",
+    "out_deg_cause",
+    "in_deg_effect",
+    "row_med_half",
+    "col_med_half",
+    "half_rank",
+    "v51_ratio",
+    "v51_targeted",
+    "n_repair",
+    "final_width",
+    "log1p_final_relwidth",
+    "zero_in_final",
+    "factor"
+  ],
+  "model_sha256": "e753513d7d62cdaf716630f8a6806b500077cb3238e0db95fc76c5c023425b82",
+  "n_pairs_train": 591957,
+  "miss_rate_train": 0.029407541426150884,
+  "design_auroc": {
+    "new": 0.8606604847286229,
+    "old": 0.7859002479287142,
+    "neg_width": 0.7113359971859707
+  }
+}
