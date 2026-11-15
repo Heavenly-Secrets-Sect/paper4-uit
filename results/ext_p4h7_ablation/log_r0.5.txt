@@ -1,0 +1,5 @@
+60 units
+0 8 s
+20 25 s
+40 41 s
+done 1194 records 50 s

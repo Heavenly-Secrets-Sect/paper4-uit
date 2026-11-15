@@ -739,3 +739,114 @@ Next: one run of the same rules on the sealed bank P4-H3 (specs under `experimen
 - (d) PASS 4/4 (Holm 2/4).
 
 **Caveats.** The confirmation holds only under rules revised after seeing P4-H3 and P4-H4 (post-hoc twice). Under the original rules RQ4.1 was NOT CONFIRMED on P4-H3, and on P4-H4 under (c). Report all three runs.
+
+## P4-H6 E2 run (frozen tolerant_v5_1 under non-Gaussian shocks), recorded before running
+
+**Approval.** On 2026-11-13 the user approved the proposal of two round-6 experiments (E1 width-factor study, E2 non-Gaussian robustness) and the creation of bank P4-H6 (message "duyêkt bắt đầu làm đi"). The thresholds were not specified by the user and were chosen by the assistant following the tolerance-margin precedent of (c2). E1 is not part of this run. Bank P4-H6 (seed 20261113, manifest sha256 `2102a388f0bb369f3f1cc1fd3c31ccec56236530a888889f453b589891d2c481`) was generated on 2026-11-13 for this purpose and sealed; none of its edge sets matches D-07, D-07H, P4-H1..P4-H5. Only its confirmatory split is used here; the development split stays unopened.
+
+**Question and rules.** Validity (coverage of the 95% interval of C(H) on non-null pairs) of the frozen `tolerant_v5_1` under `ng_mix` and `ng_t10` shocks, paired with a `gauss` control. Rule V0 to V3 and the verdict wording are in `docs/ext/p4h6_e2.md` (frozen, hashed). No baseline is run, so no claim of superiority under non-Gaussian shocks is possible.
+
+**Known weaknesses stated in advance.** Thresholds 0.90 / 0.85 / -0.03 / -0.05 are the authors' choice. Two scenarios and one generator family only. An exploratory hint from D-07 development (v5_1 coverage 0.937 to 0.970) exists, so a CONFIRMED result strengthens an already-suspected claim. T = 40 and the oracle are descriptive only.
+
+**Guard.** `experiments/ext/p4h6/e2/guard_e2.py` (sha256 `47a3e4da0adc847b09ac71228fe40c1a1b901a4921bde366f856aeab18580548`) checks every frozen hash in `experiments/ext/p4h6/e2/spec_files.json` (50 files, including the three configs and `docs/ext/p4h6_e2.md`), the bank manifest hash, and that no P4-H6 output exists. The pre phase PASSED. A smoke test of the runner and the analyzer on D-07 development (2 units, outputs deleted) and the 29 unit tests passed before freezing.
+
+**Commands, in order, each run once.** guard pre, three runners (`gauss`, `ngmix`, `ngt10`, `--workers 4`), analyzer, guard post; interpreter `/Users/kietnt/miniconda3/bin/python`.
+
+**Stop rules.** As in `docs/ext/p4h6_e2.md` section 5. Results are not read before all runs and the analyzer have finished.
+
+**Amendment before the run (2026-11-13, disclosed).** The first launch of the pipeline stopped at the first runner (`gauss`) with `TopologyError: unknown bank 'P4-H6'` in `src/paper4/topology.py`: the bank had not been registered in the loader's `BANKS` table (a step I forgot; the smoke test used D-07 and did not exercise it). The crash happened inside `load_bank`, before any topology, data or result was produced or read (log kept in `results/ext_p4h6_e2_logs_attempt1_crash/`; no P4-H6 output directory existed afterwards, and the guard `pre` phase still passed). Fix: one line registering `"P4-H6": "P4-H6/p4h6_manifest.json"` in `topology.py`, plus the provenance entry for P4-H6; the 29 unit tests and a load of the P4-H6 confirmatory split (20 topologies) passed. `experiments/ext/p4h6/e2/spec_files.json` was regenerated (50 files; only the hash of `topology.py` changed). The design, the rules V0 to V3 and `docs/ext/p4h6_e2.md` are unchanged. I read the stop rule "a crash makes E2 NOT CONFIRMED (incomplete)" as applying to a runner that starts computing on the sealed bank; a loader error before any data is not that case. This interpretation is stated here so a reader can disagree; it does not change what any result will be.
+
+## Outcome of the P4-H6 E2 run (frozen tolerant_v5_1 under non-Gaussian shocks)
+
+**Run.** Three runners (gauss, ng_mix, ng_t10; 60 units each, 2520 rows each, 153 to 156 s with 4 workers, 0 failed runs), then the analyzer and the post guard (`E2 GUARD POST PASS`, manifests with bank P4-H6: the three run directories). Frozen hashes unchanged. Results: `results/ext_p4h6_e2_analysis/analysis.md`. The first pipeline launch crashed before any data (see the amendment above); the second launch is the only run that produced output.
+
+**Verdict: CONFIRMED on the sealed bank P4-H6.** V0 integrity PASS (1260 rows per run, all ok, 20 topologies).
+- **ng_mix:** pooled coverage (T in 80, 150; 7 cells) 0.9538 against gauss 0.9499 (difference +0.0039). V1 lower 97.5% bound 0.9479 (>= 0.90) PASS. V2 minimum cell coverage 0.9207 (>= 0.85) PASS. V3 lower 97.5% bound of the difference -0.0019 (>= -0.05) PASS.
+- **ng_t10:** pooled 0.9524 against gauss 0.9499 (difference +0.0024). V1 lower bound 0.9429 PASS. V2 minimum 0.9243 PASS. V3 lower bound -0.0065 PASS.
+
+**Descriptive, outside the verdict.** At T = 40, ng_mix coverage is 0.896 to 0.937 over the seven cells (0.896 in the `none` cell and 0.904 to 0.905 in two others fall below 0.90; the Gaussian control is 0.917 to 0.947 there). At T = 150 the lowest cell is reversed 0.5 under ng_mix, 0.921. Coverage under non-Gaussian shocks is not lower than under Gaussian shocks at T = 80 and 150 in the pooled sense, and the per-cell differences have both signs.
+
+**Caveats.** This is a validity claim only (coverage of the 95% interval on non-null pairs for the frozen v5_1); no baseline was run, so nothing is claimed about narrowness or superiority under non-Gaussian shocks. Two shock scenarios and one linear generator family. The thresholds were chosen by the assistant before the run (see the pre-registration above). A CONFIRMED result strengthens a claim that exploratory work on D-07 development had already suggested. T = 40 is not covered by the claim.
+
+**Split usage.** P4-H6 confirmatory has been used once, for E2. P4-H6 development was not opened and is reserved for E1.
+
+## P4-H6 E1 run (one global width factor), recorded before running
+
+**Approval.** On 2026-11-13 the user asked to run E1 and the journal scoring in parallel (message "Làm cả 2 song song giúp tôi"), after approving the round-6 proposal. The thresholds were again not specified by the user and were chosen by the assistant (0.90, 0.85, -0.01, -0.03, 1.10). E1 uses the **development** split of P4-H6 (the confirmatory split was used once, for E2).
+
+**Design in two frozen stages** (`docs/ext/p4h6_e1.md`, hashed). Stage A collects calibration pairs of the frozen `tolerant_v5_1` on D-07H development with the same units as the v5.1 calibration (1 replicate, seed_base 20261102). Stage B builds R1 (one factor), R2 (per T) and R3 (per kind) from those pairs with the runner's choice rule, R0 being the frozen 12-factor table. Stage C evaluates the four tables once on P4-H6 development, Gaussian shocks, with the same seeds. Verdict wording: "A single global width factor is sufficient (on P4-H6 development)" or "Not sufficient"; the word CONFIRMED is not used because the split is not sealed.
+
+**Known weaknesses stated in advance.** Thresholds are the authors' choice. Development split, not sealed. Calibration on 20 units shared with R0. Gaussian shocks and one generator family only. A global factor may buy coverage with wider intervals in easy cells (V3 bounds it).
+
+**Guard.** `experiments/ext/p4h6/e1/guard_e1.py` (sha256 `81294dc6dcd8f3288bb9b5626777bbb4985be8735d8af131585de5add6a0d2f9`) with `spec_stage1.json` (50 files). Phase `pre_cal` PASSED before the calibration run. A smoke test of every script on D-07 (2 units, outputs deleted) and the 29 unit tests passed before freezing. Stage 2 (factor files, evaluation configs, calibration outputs) is frozen after the calibration and before touching P4-H6 development. The calibration output and the factor tables may be looked at before that freeze; the evaluation results may not be looked at before all four runs and the analyzer finished.
+
+**Stop rules.** As in `docs/ext/p4h6_e1.md` section 5.
+
+**Stage-2 freeze note (E1).** After the calibration run (recomputed per-cell factors equal the frozen R0 in 12/12 cells), the factor tables were R1 = 2.5, R2 = {40: 2.6, 80: 2.6, 150: 2.4}, R3 = {none 2.5, extra 2.5, missing 2.4, reversed 2.7}. `spec_stage2.json` (9 files: calibration pairs, replication check, three factor files, four evaluation configs) was frozen and `guard_e1.py --phase pre_eval` PASSED before the evaluation. The four evaluation runs were then executed without reading any of their output.
+
+## Outcome of the P4-H6 E1 run (one global width factor), development split
+
+**Run.** Four runners (R0 to R3; 60 units, 2520 rows each, 152 to 155 s with 4 workers, 0 failed runs), the analyzer and the post guard (`E1 GUARD POST PASS`, the four P4-H6 development manifests). Results: `results/ext_p4h6_e1_analysis/analysis.md`.
+
+**Verdict: A single global width factor is sufficient (on P4-H6 development).** V0 PASS (1260 rows per run, all ok).
+- **V1:** R1 pooled coverage (T in 80, 150; 7 cells) 0.9586, lower 97.5% bound 0.9477 (>= 0.90); minimum cell 0.9340 (>= 0.85). PASS.
+- **V2:** R1 minus R0 = +0.0020, lower 97.5% bound +0.0007 (>= -0.03). PASS.
+- **V3:** pooled interval-score ratio R1 / R0 = 1.0050, upper 97.5% bound 1.0094 (<= 1.10). PASS.
+
+**Descriptive, outside the verdict.** At T = 40, pooled coverage is R0 0.9321, R1 0.9271, R2 0.9336, R3 0.9300; R1 is lowest in the cells reversed 0.5 (0.912, R0 0.937) and none (0.913, R0 0.921), so T = 40 is where the grid has a small edge. Pooled coverage at T = 80 and 150: R0 0.9566, R1 0.9586, R2 0.9584, R3 0.9609. Pooled interval score: 2.1475, 2.1582, 2.1532, 2.1611.
+
+**Caveats.** The word CONFIRMED is not used: the split is development, not sealed. The thresholds were chosen by the assistant before the run. The calibrated factors only span 2.3 to 2.8, so a single value of 2.5 lies inside the range of the 12-factor table by construction and the result mainly says that the per-cell variation is small; it does not say that any single value works (R1 was fixed by the rule, not tuned). Gaussian shocks and one generator family; E2 covers non-Gaussian shocks with the 12-factor table only, so the single factor has not been checked under non-Gaussian shocks. T = 40 is not covered by the claim. A sealed confirmation of the single-factor claim would need a new bank (P4-H7).
+
+**Split usage.** P4-H6 development has been used once, for E1. P4-H6 confirmatory was used once, for E2. P4-H6 is now exhausted.
+
+## P4-H7: calibration with a topology-level coverage guarantee (frozen 2026-11-15, test split NOT yet run)
+
+Exploratory so far: the design split (60 topologies) was looked at for a feasibility check and a dry run of the evaluation script; the calibration split (150) was used once to compute the factors. The test split (150) has not been run.
+
+Protocol: `docs/ext/p4h7_spec.md`. Success criteria and the abstention rule are in the spec and do not change after this entry. Choices fixed: unit = topology, beta = 0.10 headline, delta = 0.10, PAC alpha = 0.05, T in {19, 30, 40, 80, 150}, lag_max 1, clean Gaussian scenario, exact order-statistic factors rounded up to 3 decimals.
+
+Frozen artefacts (SHA-256):
+- `docs/ext/p4h7_spec.md` `53936650a88fd02fb2ddc1e84acb2acad912152453ad7af04b51b3ed2a1c383d`
+- `experiments/calibration/p4h7_frozen.json` `34a745364bc17b85e5e18ba5f3a044e2a11bf130d9c558f981f4be7bd35b313f`
+- `experiments/ext/coverage_theory/p4h7_units.py` `160a480c85d588910226b1d46f409a736819861c5ddb54e7f1b044655d71733b`
+- `experiments/ext/coverage_theory/p4h7_factors.py` `1f2ae5a780d0597f0d51365ecc99d26b9ec7548d62aa124b1ac571cd9fad71d8`
+- `experiments/ext/coverage_theory/p4h7_test_eval.py` `40d78ec429ef5e9da2196a9414a4f3e9a66c3dfcb239e8801269b93be8b19524`
+- `data/topology_bank/P4-H7/p4h7_manifest.json` `8286170e4dd297285183d016c3619083137090f583ea36b425fc15e4e6866220`
+- calibration units dump `results/ext_p4h7_cal/units.json` `1cf04e0959dfe2e65c51cbd1edfd43aa1a35ac2a30f6bd3707afdbaf8ce1f7cc`
+
+Split usage: P4-H7 design = exploratory (feasibility look and dry run, no tuning of the frozen choices); calibration = one pass; **test = one confirmatory run, awaiting the user's approval**.
+
+**Amendment (2026-11-15, before any test-split run).** `p4h7_units.py` gained a `--rates` option (default "0.2,0.5", identical behaviour) to run the damage-level ablation on the design split. New SHA-256 `6d93ded0b8bd3385ecfa463a518b2f853f861c3ea5515d72998923a02d8005c2`. The frozen factors, the spec and the evaluation script are unchanged. Design split looks since the freeze: pre-scale sensitivity (offline) and the T x damage-rate ablation (`results/ext_p4h7_ablation`), both exploratory.
+
+## P4-H8: confirmatory study of the topology-level coverage guarantee (frozen 2026-11-15, test split NOT yet run)
+
+Protocol: `docs/ext/p4h8_spec.md` (includes the expected-runs rule, the abstention rule and the correction of the P4-H7 pilot, all written before any test topology was run). Set: 1200 topologies, design 100 / calibration 550 / test 550, lags 1 to 3. The design split was looked at for feasibility and for a dry run of the evaluation; the calibration split was used once per lag to compute the factors (`--expected-runs`); the test split has not been run.
+
+Frozen artefacts (SHA-256):
+- `docs/ext/p4h8_spec.md` `57690e879d167677d06285a08fab2a986bb042f94c70d0aa06baa3c4713e7c85`
+- `experiments/calibration/p4h8_frozen_lag1.json` `ce25951b403dd62959985cbbad10f13a01050de370892922c1b5e3726051e7a7`
+- `experiments/calibration/p4h8_frozen_lag2.json` `4493dcec4d758588a1421be7bf2c85e787360f068629c7bff28b19319c9e74c3`
+- `experiments/calibration/p4h8_frozen_lag3.json` `124772ed1221e623084b11ea7e88b7e7105adb701c660c305629431c33132f89`
+- `experiments/ext/coverage_theory/p4h7_units.py` `8a1b6615d9b0700e6e2de7e56f6db389fa366292ffbb0a37ad8c49606f28b3cb`
+- `experiments/ext/coverage_theory/p4h7_factors.py` `63a3965257af7d8f6674585bcc3174c0dcfe8b542a9736f65c485dff8a3bac35`
+- `experiments/ext/coverage_theory/p4h7_test_eval.py` `5f7fce2241d42cb90b5226bb99a42a0e2b7961b30f6ebc2bcf7f3379ef71d826`
+- `data/topology_bank/P4-H8/p4h8_manifest.json` `4a506c4445edae44fa58b50f1e1c832b99d7198c79b2cc6089aab7e930843934`
+- calibration dumps `results/ext_p4h8/calibration_lag{1,2,3}.json`: `dbd61b719418b8bfea0e56ceca12daa8c05ca224fa35edd5b420e1be69bca696`, `cfa8d47fd00a2c453c28169c56e70b30467ca0f85ea021b8270d805ccf12fc9b`, `c63c6ca43aad487b9f3162cf71dc47cd51a4806b0b06ad96b0f5c8844b062cbe`
+
+Calibration outcome that bears on the claim (not a choice): factors are finite and stable for lag 1 at all T in {19, 30, 40, 80, 150}, for lag 2 at T >= 40 and for lag 3 at T >= 80. Abstentions (infinite or above 10): lag 2 at T = 30 (fit failure 9% to 37% depending on the stated kind) and lag 3 at T = 40 (31% to 92%).
+
+Split usage: P4-H8 design = exploratory; calibration = one pass per lag; **test = one confirmatory run per lag, awaiting the user's approval**. P4-H7 test split remains sealed.
+
+**P4-H8 test split opened (2026-11-15, after the user's approval, all frozen hashes verified unchanged).** One run per lag with `p4h7_units.py --bank P4-H8 --split test --lag <k> --frozen experiments/calibration/p4h8_frozen_lag<k>.json --confirm-frozen` and `p4h7_test_eval.py --expected-runs`. Results: `results/ext_p4h8_test_lag{1,2,3}/`. No choice may be changed after this entry.
+
+## P4-H8 confirmatory results (2026-11-15; test split run once per lag, frozen factors, hashes verified)
+
+Criterion (i) of the spec, evaluated as pre-registered, per lag, on the non-abstaining cells (marginal beta = 0.10 hit rate, exact 95% binomial interval reaching 0.90):
+- **Lag 1: met.** 17 of 20 cells (85%, need 80%); smallest upper limit 0.891 (need 0.85). No abstention.
+- **Lag 2: NOT met.** 9 of 12 non-abstaining cells (75%, need 80%); smallest upper limit 0.880. Per the spec the guarantee claim is withdrawn for the failing cells: T = 80 extra, T = 80 reversed, T = 150 reversed. Abstentions: T = 30, all four kinds.
+- **Lag 3: met.** 8 of 8 non-abstaining cells; smallest upper limit 0.903. Abstentions: T = 40, all four kinds.
+
+On the guaranteed cells the mean topology hit rate (at most 10% of non-null pairs missed) is, for the shipped pooled rule / marginal factor / PAC factor: lag 1 0.805 / 0.897 / 0.918; lag 2 0.805 / 0.890 / 0.912; lag 3 0.801 / 0.888 / 0.906. Cost relative to the pooled rule with the marginal factor: width x1.18 (lag 1), x1.14 (lag 2), x1.10 (lag 3); interval score +11%, +6%, +3%. In the abstaining cells the shipped pooled rule still returns intervals whose topology hit rate is 0.07 to 0.76 (lag 3 T = 40 missing: 0.071).
+Details: `results/ext_p4h8_test_lag{1,2,3}/test_eval.md`.
+
+**P4-H8 exploratory violation arm (2026-11-15, after the confirmatory runs).** Same test topologies, lag 1, frozen lag-1 factors, innovations Student-t(4) and Laplace with unit variance (`experiments/ext/coverage_theory/p4h8_noise_arm.py`); labelled a violation of the clean-Gaussian assumption, not part of the guarantee, no factor is re-tuned. Results: `results/ext_p4h8_noise_{t4,laplace}_lag1/`.

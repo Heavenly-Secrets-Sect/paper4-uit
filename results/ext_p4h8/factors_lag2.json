@@ -1,0 +1,274 @@
+{
+  "tolerant_v5_1|30|extra|pooled": 3.3,
+  "tolerant_v5_1|30|extra|beta0.05": {
+    "N": 550,
+    "marginal": Infinity,
+    "pac": Infinity,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.14545454545454545
+  },
+  "tolerant_v5_1|30|extra|beta0.1": {
+    "N": 550,
+    "marginal": Infinity,
+    "pac": Infinity,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.14545454545454545
+  },
+  "tolerant_v5_1|30|missing|pooled": 1.9,
+  "tolerant_v5_1|30|missing|beta0.05": {
+    "N": 550,
+    "marginal": Infinity,
+    "pac": Infinity,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.37272727272727274
+  },
+  "tolerant_v5_1|30|missing|beta0.1": {
+    "N": 550,
+    "marginal": Infinity,
+    "pac": Infinity,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.37272727272727274
+  },
+  "tolerant_v5_1|30|none|pooled": 3.5,
+  "tolerant_v5_1|30|none|beta0.05": {
+    "N": 550,
+    "marginal": 14.279,
+    "pac": Infinity,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.08727272727272728
+  },
+  "tolerant_v5_1|30|none|beta0.1": {
+    "N": 550,
+    "marginal": 11.771,
+    "pac": Infinity,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.08727272727272728
+  },
+  "tolerant_v5_1|30|reversed|pooled": 3.1,
+  "tolerant_v5_1|30|reversed|beta0.05": {
+    "N": 546,
+    "marginal": Infinity,
+    "pac": Infinity,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.21794871794871795
+  },
+  "tolerant_v5_1|30|reversed|beta0.1": {
+    "N": 546,
+    "marginal": Infinity,
+    "pac": Infinity,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.21794871794871795
+  },
+  "tolerant_v5_1|40|extra|pooled": 3.1,
+  "tolerant_v5_1|40|extra|beta0.05": {
+    "N": 550,
+    "marginal": 4.543,
+    "pac": 4.723,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|extra|beta0.1": {
+    "N": 550,
+    "marginal": 3.664,
+    "pac": 3.938,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|missing|pooled": 2.6,
+  "tolerant_v5_1|40|missing|beta0.05": {
+    "N": 550,
+    "marginal": 3.801,
+    "pac": 3.927,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|missing|beta0.1": {
+    "N": 550,
+    "marginal": 3.118,
+    "pac": 3.205,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|none|pooled": 3.3,
+  "tolerant_v5_1|40|none|beta0.05": {
+    "N": 550,
+    "marginal": 4.569,
+    "pac": 4.847,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|none|beta0.1": {
+    "N": 550,
+    "marginal": 3.653,
+    "pac": 3.88,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|reversed|pooled": 3.3,
+  "tolerant_v5_1|40|reversed|beta0.05": {
+    "N": 546,
+    "marginal": 5.008,
+    "pac": 5.278,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|40|reversed|beta0.1": {
+    "N": 546,
+    "marginal": 4.133,
+    "pac": 4.28,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|extra|pooled": 2.6,
+  "tolerant_v5_1|80|extra|beta0.05": {
+    "N": 550,
+    "marginal": 3.43,
+    "pac": 3.5,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|extra|beta0.1": {
+    "N": 550,
+    "marginal": 2.797,
+    "pac": 2.892,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|missing|pooled": 2.4,
+  "tolerant_v5_1|80|missing|beta0.05": {
+    "N": 550,
+    "marginal": 3.236,
+    "pac": 3.277,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|missing|beta0.1": {
+    "N": 550,
+    "marginal": 2.684,
+    "pac": 2.776,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|none|pooled": 2.6,
+  "tolerant_v5_1|80|none|beta0.05": {
+    "N": 550,
+    "marginal": 3.272,
+    "pac": 3.427,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|none|beta0.1": {
+    "N": 550,
+    "marginal": 2.79,
+    "pac": 2.89,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|reversed|pooled": 2.8,
+  "tolerant_v5_1|80|reversed|beta0.05": {
+    "N": 546,
+    "marginal": 3.861,
+    "pac": 4.035,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|80|reversed|beta0.1": {
+    "N": 546,
+    "marginal": 3.093,
+    "pac": 3.193,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|extra|pooled": 2.4,
+  "tolerant_v5_1|150|extra|beta0.05": {
+    "N": 550,
+    "marginal": 3.056,
+    "pac": 3.219,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|extra|beta0.1": {
+    "N": 550,
+    "marginal": 2.543,
+    "pac": 2.608,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|missing|pooled": 2.2,
+  "tolerant_v5_1|150|missing|beta0.05": {
+    "N": 550,
+    "marginal": 2.952,
+    "pac": 3.06,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|missing|beta0.1": {
+    "N": 550,
+    "marginal": 2.514,
+    "pac": 2.566,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|none|pooled": 2.4,
+  "tolerant_v5_1|150|none|beta0.05": {
+    "N": 550,
+    "marginal": 2.935,
+    "pac": 3.008,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|none|beta0.1": {
+    "N": 550,
+    "marginal": 2.462,
+    "pac": 2.543,
+    "k_marginal": 496,
+    "k_pac": 507,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|reversed|pooled": 2.6,
+  "tolerant_v5_1|150|reversed|beta0.05": {
+    "N": 546,
+    "marginal": 3.485,
+    "pac": 3.639,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.0
+  },
+  "tolerant_v5_1|150|reversed|beta0.1": {
+    "N": 546,
+    "marginal": 2.856,
+    "pac": 2.999,
+    "k_marginal": 493,
+    "k_pac": 504,
+    "frac_inf": 0.0
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "_note": "P4-H7 frozen width factors from the calibration split (docs/ext/p4h7_spec.md). Keys: cell|beta<b> -> {marginal, pac}; cell|pooled -> shipped pooled pair-level rule recomputed on the same split.",
+  "delta": 0.1,
+  "alpha": 0.05,
+  "factors": {
+    "tolerant_v5_1|19|extra|pooled": 3.0,
+    "tolerant_v5_1|19|extra|beta0.05": {
+      "N": 550,
+      "marginal": 4.991,
+      "pac": 5.817,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.04
+    },
+    "tolerant_v5_1|19|extra|beta0.1": {
+      "N": 550,
+      "marginal": 4.044,
+      "pac": 4.331,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.04
+    },
+    "tolerant_v5_1|19|missing|pooled": 2.3,
+    "tolerant_v5_1|19|missing|beta0.05": {
+      "N": 550,
+      "marginal": 3.213,
+      "pac": 3.409,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0018181818181818182
+    },
+    "tolerant_v5_1|19|missing|beta0.1": {
+      "N": 550,
+      "marginal": 2.657,
+      "pac": 2.787,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0018181818181818182
+    },
+    "tolerant_v5_1|19|none|pooled": 3.5,
+    "tolerant_v5_1|19|none|beta0.05": {
+      "N": 550,
+      "marginal": 4.843,
+      "pac": 5.029,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|19|none|beta0.1": {
+      "N": 550,
+      "marginal": 3.888,
+      "pac": 4.003,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|19|reversed|pooled": 3.3,
+    "tolerant_v5_1|19|reversed|beta0.05": {
+      "N": 546,
+      "marginal": 5.823,
+      "pac": 6.525,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.038461538461538464
+    },
+    "tolerant_v5_1|19|reversed|beta0.1": {
+      "N": 546,
+      "marginal": 4.443,
+      "pac": 4.695,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.038461538461538464
+    },
+    "tolerant_v5_1|30|extra|pooled": 3.1,
+    "tolerant_v5_1|30|extra|beta0.05": {
+      "N": 550,
+      "marginal": 4.269,
+      "pac": 4.468,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|extra|beta0.1": {
+      "N": 550,
+      "marginal": 3.514,
+      "pac": 3.677,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|missing|pooled": 2.8,
+    "tolerant_v5_1|30|missing|beta0.05": {
+      "N": 550,
+      "marginal": 3.895,
+      "pac": 3.981,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|missing|beta0.1": {
+      "N": 550,
+      "marginal": 3.119,
+      "pac": 3.237,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|none|pooled": 3.3,
+    "tolerant_v5_1|30|none|beta0.05": {
+      "N": 550,
+      "marginal": 4.196,
+      "pac": 4.478,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|none|beta0.1": {
+      "N": 550,
+      "marginal": 3.473,
+      "pac": 3.644,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|reversed|pooled": 3.4,
+    "tolerant_v5_1|30|reversed|beta0.05": {
+      "N": 546,
+      "marginal": 4.988,
+      "pac": 5.199,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|30|reversed|beta0.1": {
+      "N": 546,
+      "marginal": 3.895,
+      "pac": 4.119,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|extra|pooled": 3.0,
+    "tolerant_v5_1|40|extra|beta0.05": {
+      "N": 550,
+      "marginal": 4.566,
+      "pac": 4.738,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|extra|beta0.1": {
+      "N": 550,
+      "marginal": 3.722,
+      "pac": 3.836,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|missing|pooled": 2.9,
+    "tolerant_v5_1|40|missing|beta0.05": {
+      "N": 550,
+      "marginal": 3.982,
+      "pac": 4.067,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|missing|beta0.1": {
+      "N": 550,
+      "marginal": 3.297,
+      "pac": 3.39,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|none|pooled": 3.2,
+    "tolerant_v5_1|40|none|beta0.05": {
+      "N": 550,
+      "marginal": 4.618,
+      "pac": 4.865,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|none|beta0.1": {
+      "N": 550,
+      "marginal": 3.598,
+      "pac": 3.83,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|reversed|pooled": 3.3,
+    "tolerant_v5_1|40|reversed|beta0.05": {
+      "N": 546,
+      "marginal": 5.005,
+      "pac": 5.221,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|40|reversed|beta0.1": {
+      "N": 546,
+      "marginal": 3.957,
+      "pac": 4.21,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|extra|pooled": 2.7,
+    "tolerant_v5_1|80|extra|beta0.05": {
+      "N": 550,
+      "marginal": 3.583,
+      "pac": 3.707,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|extra|beta0.1": {
+      "N": 550,
+      "marginal": 3.04,
+      "pac": 3.134,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|missing|pooled": 2.6,
+    "tolerant_v5_1|80|missing|beta0.05": {
+      "N": 550,
+      "marginal": 3.469,
+      "pac": 3.639,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|missing|beta0.1": {
+      "N": 550,
+      "marginal": 2.836,
+      "pac": 2.988,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|none|pooled": 2.8,
+    "tolerant_v5_1|80|none|beta0.05": {
+      "N": 550,
+      "marginal": 3.481,
+      "pac": 3.677,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|none|beta0.1": {
+      "N": 550,
+      "marginal": 2.983,
+      "pac": 3.089,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|reversed|pooled": 2.9,
+    "tolerant_v5_1|80|reversed|beta0.05": {
+      "N": 546,
+      "marginal": 4.101,
+      "pac": 4.156,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|80|reversed|beta0.1": {
+      "N": 546,
+      "marginal": 3.374,
+      "pac": 3.463,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|extra|pooled": 2.4,
+    "tolerant_v5_1|150|extra|beta0.05": {
+      "N": 550,
+      "marginal": 3.179,
+      "pac": 3.297,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|extra|beta0.1": {
+      "N": 550,
+      "marginal": 2.734,
+      "pac": 2.775,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|missing|pooled": 2.4,
+    "tolerant_v5_1|150|missing|beta0.05": {
+      "N": 550,
+      "marginal": 3.02,
+      "pac": 3.072,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|missing|beta0.1": {
+      "N": 550,
+      "marginal": 2.584,
+      "pac": 2.643,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|none|pooled": 2.4,
+    "tolerant_v5_1|150|none|beta0.05": {
+      "N": 550,
+      "marginal": 3.036,
+      "pac": 3.204,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|none|beta0.1": {
+      "N": 550,
+      "marginal": 2.59,
+      "pac": 2.698,
+      "k_marginal": 496,
+      "k_pac": 507,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|reversed|pooled": 2.6,
+    "tolerant_v5_1|150|reversed|beta0.05": {
+      "N": 546,
+      "marginal": 3.653,
+      "pac": 3.835,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    },
+    "tolerant_v5_1|150|reversed|beta0.1": {
+      "N": 546,
+      "marginal": 3.003,
+      "pac": 3.118,
+      "k_marginal": 493,
+      "k_pac": 504,
+      "frac_inf": 0.0
+    }
+  }
+}

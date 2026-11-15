@@ -1,0 +1,1202 @@
+[
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9747113798790544,
+  "IS": 8.608039945223874,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9780098955470038,
+  "IS": 9.154587224863587,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9796591533809785,
+  "IS": 9.769312819104401,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.976910390324354,
+  "IS": 11.268840128018985,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.5,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9892957746478873,
+  "IS": 12.395868576366324,
+  "success": 0.9833333333333333,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.6,
+  "success_raw": 0.95,
+  "coverage": 0.9924330616996507,
+  "IS": 15.00854435384406,
+  "success": 0.95,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.7,
+  "success_raw": 0.9166666666666666,
+  "coverage": 0.9921780986762936,
+  "IS": 166.97897100315404,
+  "success": 0.9166666666666666,
+  "usable": false
+ },
+ {
+  "kind": "extra",
+  "T": 19,
+  "rate": 0.8,
+  "success_raw": 0.8666666666666667,
+  "coverage": 0.9949206349206349,
+  "IS": 161.43857615506167,
+  "success": 0.8666666666666667,
+  "usable": false
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9747113798790544,
+  "IS": 8.558804595303009,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.965915338097856,
+  "IS": 9.945215950199259,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9758108851017042,
+  "IS": 9.744028789376761,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9747113798790544,
+  "IS": 10.24888658598924,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9824079164376031,
+  "IS": 11.803710891197161,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9934029686641012,
+  "IS": 15.837954138378917,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.7,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9922135706340378,
+  "IS": 21.047883265848245,
+  "success": 0.9833333333333333,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 19,
+  "rate": 0.8,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9983314794215795,
+  "IS": 25.293819591387518,
+  "success": 0.9833333333333333,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.1,
+  "success_raw": 0.7833333333333333,
+  "coverage": 0.9875259875259875,
+  "IS": 29.160809592501533,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.2,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9865168539325843,
+  "IS": 26.65250992653786,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.3,
+  "success_raw": 0.95,
+  "coverage": 0.9868345735546652,
+  "IS": 19.279600710160672,
+  "success": 0.95,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.4,
+  "success_raw": 0.9666666666666667,
+  "coverage": 0.9819004524886877,
+  "IS": 19.026012148117044,
+  "success": 0.9666666666666667,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.5,
+  "success_raw": 0.9166666666666666,
+  "coverage": 0.9818075117370892,
+  "IS": 16.059833069888843,
+  "success": 0.9166666666666666,
+  "usable": false
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.6,
+  "success_raw": 0.9,
+  "coverage": 0.9815256257449344,
+  "IS": 14.553062246804043,
+  "success": 0.9,
+  "usable": false
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.7,
+  "success_raw": 0.9,
+  "coverage": 0.9827175208581644,
+  "IS": 13.53867786734568,
+  "success": 0.9,
+  "usable": false
+ },
+ {
+  "kind": "reversed",
+  "T": 19,
+  "rate": 0.8,
+  "success_raw": 0.8833333333333333,
+  "coverage": 0.980060422960725,
+  "IS": 12.345017610296658,
+  "success": 0.8833333333333333,
+  "usable": false
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9609675645959318,
+  "IS": 4.840340491862383,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9648158328752061,
+  "IS": 4.986506388375155,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9670148433205058,
+  "IS": 5.100028881957878,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.965915338097856,
+  "IS": 5.1623810202636555,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 5.397663820458163,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9747113798790544,
+  "IS": 5.527211124785455,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9741616272677295,
+  "IS": 5.6492393776457375,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 30,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9785596481583287,
+  "IS": 5.741390891160143,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9719626168224299,
+  "IS": 5.257778161448876,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9703133589884552,
+  "IS": 5.333001547982439,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9703133589884552,
+  "IS": 5.458511545631612,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9681143485431556,
+  "IS": 5.522895415712259,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 5.6353315657471095,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.971412864211105,
+  "IS": 5.712291000229709,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9725123694337549,
+  "IS": 5.956157845190846,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 30,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9851566794942276,
+  "IS": 5.9994981912173415,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.1,
+  "success_raw": 0.7833333333333333,
+  "coverage": 0.9833679833679834,
+  "IS": 5.585937668406757,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.2,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9803370786516854,
+  "IS": 5.513962796735207,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9802089059923035,
+  "IS": 5.571041493240633,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.977460142935679,
+  "IS": 5.641131134613552,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 5.582543366735559,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9686641011544805,
+  "IS": 5.573602380535536,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9686641011544805,
+  "IS": 5.502358624377675,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 30,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.971412864211105,
+  "IS": 5.497795425498803,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9692138537658054,
+  "IS": 4.059421028495779,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9681143485431556,
+  "IS": 4.138086251006356,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9675645959318306,
+  "IS": 4.177524451379935,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9697636063771303,
+  "IS": 4.283713180010213,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9736118746564046,
+  "IS": 4.346032834307828,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9763606377130292,
+  "IS": 4.424653072059717,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9752611324903794,
+  "IS": 4.474084870129355,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 40,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9802089059923035,
+  "IS": 4.539780804846788,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9719626168224299,
+  "IS": 4.236102889749683,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9703133589884552,
+  "IS": 4.2936237341683015,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.971412864211105,
+  "IS": 4.344196355724924,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 4.443512442044479,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9675645959318306,
+  "IS": 4.5412885916755785,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 4.644742453623501,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9791094007696537,
+  "IS": 4.725318364035479,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 40,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9791094007696537,
+  "IS": 4.776173710152063,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.1,
+  "success_raw": 0.7833333333333333,
+  "coverage": 0.9805959805959806,
+  "IS": 4.735661135882647,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.2,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9803370786516854,
+  "IS": 4.6336878355154525,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9791094007696537,
+  "IS": 4.6443649756203085,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9785596481583287,
+  "IS": 4.625335185046646,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.977460142935679,
+  "IS": 4.631866170848353,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9791094007696537,
+  "IS": 4.603660841607582,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9763606377130292,
+  "IS": 4.564984659020733,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 40,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.977460142935679,
+  "IS": 4.520786465111592,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9725123694337549,
+  "IS": 2.4384652746027133,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 2.479173841877347,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9736118746564046,
+  "IS": 2.5244061322675644,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.971412864211105,
+  "IS": 2.568566503090719,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9758108851017042,
+  "IS": 2.621922834121164,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9741616272677295,
+  "IS": 2.65448538323939,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9763606377130292,
+  "IS": 2.682459793519517,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 80,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9747113798790544,
+  "IS": 2.728819305839843,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9653655854865311,
+  "IS": 2.7428089965371463,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9703133589884552,
+  "IS": 2.789842803549455,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9692138537658054,
+  "IS": 2.8693659575156114,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9620670698185816,
+  "IS": 2.969054081818792,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9620670698185816,
+  "IS": 3.1347759520021596,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9686641011544805,
+  "IS": 3.1568036165495568,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.959868059373282,
+  "IS": 3.264843636822966,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 80,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9615173172072567,
+  "IS": 3.334301382970438,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.1,
+  "success_raw": 0.7833333333333333,
+  "coverage": 0.9764379764379765,
+  "IS": 2.997535397808298,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.2,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9775280898876404,
+  "IS": 2.9936377798148963,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9785596481583287,
+  "IS": 3.0111052126724935,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9752611324903794,
+  "IS": 3.044125889386021,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9675645959318306,
+  "IS": 3.122801928095809,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.965915338097856,
+  "IS": 3.090215324277855,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9637163276525563,
+  "IS": 3.0463979484542967,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 80,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9664650907091809,
+  "IS": 3.0169307733472994,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9626168224299065,
+  "IS": 1.5937254300539176,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9637163276525563,
+  "IS": 1.6283149266993548,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9675645959318306,
+  "IS": 1.6554111072736954,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9653655854865311,
+  "IS": 1.6791450241297528,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9670148433205058,
+  "IS": 1.7026528112651007,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9642660802638813,
+  "IS": 1.7375828243637732,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9637163276525563,
+  "IS": 1.7586246067708362,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "extra",
+  "T": 150,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.965915338097856,
+  "IS": 1.7697143945637113,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.1,
+  "success_raw": 1.0,
+  "coverage": 0.9648158328752061,
+  "IS": 1.9637291798783931,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.2,
+  "success_raw": 1.0,
+  "coverage": 0.9626168224299065,
+  "IS": 1.995834565137196,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9648158328752061,
+  "IS": 2.031049894778588,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.9620670698185816,
+  "IS": 2.0348390718088343,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.959868059373282,
+  "IS": 2.1095331266689246,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9593183067619572,
+  "IS": 2.134794924457048,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9582188015393073,
+  "IS": 2.1928777765143153,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "missing",
+  "T": 150,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9560197910940077,
+  "IS": 2.240442058961086,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.1,
+  "success_raw": 0.7833333333333333,
+  "coverage": 0.9757449757449758,
+  "IS": 2.0624268702415733,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.2,
+  "success_raw": 0.9833333333333333,
+  "coverage": 0.9719101123595506,
+  "IS": 2.0945384144215424,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.3,
+  "success_raw": 1.0,
+  "coverage": 0.9730621220450797,
+  "IS": 2.144440735640046,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.4,
+  "success_raw": 1.0,
+  "coverage": 0.971412864211105,
+  "IS": 2.1516861291370994,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.5,
+  "success_raw": 1.0,
+  "coverage": 0.9653655854865311,
+  "IS": 2.1765770897533407,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.6,
+  "success_raw": 1.0,
+  "coverage": 0.9653655854865311,
+  "IS": 2.168850489504033,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.7,
+  "success_raw": 1.0,
+  "coverage": 0.9609675645959318,
+  "IS": 2.158049565137606,
+  "success": 1.0,
+  "usable": true
+ },
+ {
+  "kind": "reversed",
+  "T": 150,
+  "rate": 0.8,
+  "success_raw": 1.0,
+  "coverage": 0.9637163276525563,
+  "IS": 2.1166401569261084,
+  "success": 1.0,
+  "usable": true
+ }
+]
