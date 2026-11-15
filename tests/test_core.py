@@ -303,6 +303,68 @@ class RunnerGuardTest(unittest.TestCase):
         self.assertEqual(R.ext_seed("tolerant_v5"), R.ext_seed("tolerant_v5"))
         self.assertNotEqual(R.ext_seed("tolerant_v5"), R.ext_seed("targeted_lp"))
 
+    def test_misstated_rows_dispatches_registered_extensions(self):
+        from types import SimpleNamespace
+        from unittest.mock import patch
+
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "experiments"))
+        import run_experiment as R
+
+        seen = []
+
+        def extension(data, skel, lag_max, H, n_boot, rng):
+            seen.append(dict(skel.damage))
+            return M.MethodResult("tolerant_v5_1", "ok")
+
+        config = {"tau_effect": 0.1,
+                  "misstated": {"factors": [0.0, 0.5, 1.0, 2.0], "methods": ["tolerant_v5_1"]},
+                  "calibrate_methods": ["tolerant_v5_1"]}
+        skel = Skeleton(3, {(0, 1)}, set(), damage={"kind": "missing", "rate": 0.2, "k": 4})
+        base = M.MethodResult("tolerant_v5_1", "ok")
+        with patch.object(R, "ext_methods", return_value={"tolerant_v5_1": extension}), \
+             patch.object(R, "evaluate", side_effect=lambda sem, res, H, **kw: {"status": res.status}), \
+             patch.object(R.M, "calibrate_width", side_effect=lambda res, c, name: res):
+            rows = R.misstated_rows(config, object(), np.zeros((19, 3)), skel, "missing", 0.2,
+                                    {"tolerant_v5_1": base}, {"tolerant_v5_1|19|missing": 2.1},
+                                    19, 4, 1, 199, lambda tag: np.random.default_rng(tag),
+                                    SimpleNamespace(id="toy", profile="toy"), 0, scenario="noise0.1")
+
+        self.assertEqual([r["k_stated"] for r in rows], [0, 2, 4, 8])
+        self.assertEqual([d["k"] for d in seen], [0, 2, 8])
+        self.assertEqual([r["method"] for r in rows],
+                         ["tolerant_v5_1@x0.0", "tolerant_v5_1@x0.5",
+                          "tolerant_v5_1@x1.0", "tolerant_v5_1@x2.0"])
+        self.assertEqual({r["scenario"] for r in rows}, {"noise0.1"})
+
+    def test_misstated_rows_can_add_a_false_alarm_to_a_correct_skeleton(self):
+        from types import SimpleNamespace
+        from unittest.mock import patch
+
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "experiments"))
+        import run_experiment as R
+
+        seen = []
+
+        def extension(data, skel, lag_max, H, n_boot, rng):
+            seen.append(dict(skel.damage))
+            return M.MethodResult("tolerant_v5_1", "ok")
+
+        config = {"tau_effect": 0.1,
+                  "misstated": {"false_alarm": [["missing", 2]], "methods": ["tolerant_v5_1"]},
+                  "calibrate_methods": ["tolerant_v5_1"]}
+        skel = Skeleton(3, set(), set(), damage={"kind": "none", "rate": 0.0, "k": 0})
+        with patch.object(R, "ext_methods", return_value={"tolerant_v5_1": extension}), \
+             patch.object(R, "evaluate", side_effect=lambda sem, res, H, **kw: {"status": res.status}), \
+             patch.object(R.M, "calibrate_width", side_effect=lambda res, c, name: res):
+            rows = R.misstated_rows(config, object(), np.zeros((19, 3)), skel, "none", 0.0,
+                                    {}, {"tolerant_v5_1|19|missing": 2.1},
+                                    19, 4, 1, 199, lambda tag: np.random.default_rng(tag),
+                                    SimpleNamespace(id="toy", profile="toy"), 0)
+
+        self.assertEqual(seen, [{"kind": "missing", "rate": None, "k": 2}])
+        self.assertEqual(rows[0]["method"], "tolerant_v5_1@alarm-missing2")
+        self.assertEqual(rows[0]["k_stated"], 2)
+
 
 if __name__ == "__main__":
     unittest.main()

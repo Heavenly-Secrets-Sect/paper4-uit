@@ -235,7 +235,7 @@ def _run_scenario(cfg, sc, sem, sem_s, skels, oracle_skel, methods, calib_c, pha
                 rows.append(row)
             if phase == "main" and cfg.get("misstated"):
                 rows.extend(misstated_rows(cfg, sem_s, data, skel, kind, rate, results, calib_c, T, H, lag_max,
-                                           n_boot, rng, topo, rep))
+                                           n_boot, rng, topo, rep, scenario=sc["name"]))
             if phase == "calibration":
                 cal_cells = [("plugin", f"{T}|{kind}|{rate}")]
                 if "tolerant_v3" in methods and kind in ("none", "extra", "missing", "reversed"):
@@ -268,7 +268,8 @@ def _tolerant_auto(data, skel, sem_s, lag_max, H, n_boot, rng, calib_c, T):
     return res
 
 
-def misstated_rows(cfg, sem, data, skel, kind, rate, results, calib_c, T, H, lag_max, n_boot, rng, topo, rep):
+def misstated_rows(cfg, sem, data, skel, kind, rate, results, calib_c, T, H, lag_max, n_boot, rng, topo, rep,
+                   scenario: str = "clean"):
     """Refit the damage-reading methods with a wrong stated damage.
 
     Damaged cells: stated k = floor(true k * factor + 0.5) for each factor (0 = damage not
@@ -283,14 +284,28 @@ def misstated_rows(cfg, sem, data, skel, kind, rate, results, calib_c, T, H, lag
         for f in ms.get("factors", []):
             variants.append((f"x{f}", {**skel.damage, "k": int(np.floor(skel.damage["k"] * f + 0.5))}))
     out = []
+    extensions = ext_methods()
     for v_idx, (tag, stated) in enumerate(variants):
         s = skel.copy()
         s.damage = stated
-        res = M.tolerant_v3(data, s, lag_max, H, n_boot, rng(100 + v_idx))
+        tolerant_v3 = None
         for name in ms["methods"]:
-            r = res if name == "tolerant_v3" else M.calibrate_width(res, calib_c.get(f"{T}|none|0.0"), name)
+            if name in extensions:
+                if stated == skel.damage and name in results:
+                    r = results[name]
+                else:
+                    r = extensions[name](data, s, lag_max, H, n_boot, rng(ext_seed(name) + 100 + v_idx))
+                    if name in cfg.get("calibrate_methods", []):
+                        key = f"{name}|{T}|{M.width_key(s.damage)}"
+                        r = M.calibrate_width(r, calib_c.get(key), name)
+            else:
+                if tolerant_v3 is None:
+                    tolerant_v3 = M.tolerant_v3(data, s, lag_max, H, n_boot, rng(100 + v_idx))
+                r = tolerant_v3 if name == "tolerant_v3" else \
+                    M.calibrate_width(tolerant_v3, calib_c.get(f"{T}|none|0.0"), name)
             row = evaluate(sem, r, H, tau_effect=cfg["tau_effect"])
             row.update({"method": f"{name}@{tag}", "topology": topo.id, "profile": topo.profile, "replicate": rep,
+                        "scenario": scenario,
                         "T": T, "kind": kind, "rate": rate, "k": skel.damage.get("k", 0), "k_stated": stated["k"]})
             out.append(row)
     return out
@@ -424,7 +439,7 @@ def main(argv=None) -> int:
     start = time.perf_counter()
 
     calib_c = {}
-    if {"inflate", "tolerant_v3_cal", "tolerant_v4"} & set(cfg["methods"]) or cfg.get("calibrate_methods"):
+    if ({"inflate", "tolerant_v3_cal", "tolerant_v4"} & set(cfg["methods"]) or cfg.get("calibrate_methods")) and "calibration" in cfg:
         calib_c = calibrate(cfg, args.workers)
     if cfg.get("frozen_calibration"):
         # Width factors of a frozen method (e.g. tolerant_v4's "mod|T|kind") are read from a fixed file
