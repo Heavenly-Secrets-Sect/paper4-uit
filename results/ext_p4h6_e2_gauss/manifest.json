@@ -1,0 +1,169 @@
+{
+  "config": {
+    "name": "ext_p4h6_e2_gauss",
+    "phase": "main",
+    "bank": "P4-H6",
+    "split": "confirmatory",
+    "replicates": 3,
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 90261113,
+    "methods": [
+      "oracle",
+      "tolerant_v5_1"
+    ],
+    "calibrate_methods": [
+      "tolerant_v5_1"
+    ],
+    "frozen_calibration": "experiments/ext/v51/frozen_v4_v51.json",
+    "frozen_calibration_sha256": "43ac16aa457a534e5785b9df9502d690e2074bddd2643b7a879cfde1cb60aab1",
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "shock": "gauss",
+    "purpose": "E2 SEALED confirmatory run on P4-H6, shock gauss: frozen tolerant_v5_1, width factors verbatim from frozen_v4_v51.json. Spec: docs/ext/p4h6_e2.md."
+  },
+  "phase": "main",
+  "seconds": 155.7,
+  "n_units": 60,
+  "n_rows": 2520,
+  "workers": 4,
+  "python": "/Users/kietnt/miniconda3/bin/python",
+  "numpy": "2.5.4",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "frozen_calibration_sha256": "43ac16aa457a534e5785b9df9502d690e2074bddd2643b7a879cfde1cb60aab1",
+  "topologies": [
+    {
+      "id": "syn_dag_20",
+      "profile": "erdos_renyi",
+      "sha256": "ea3c5fc96604b95924cd508fd184f0eb31a26db3ac7d639b4c4d6ee15b09883b"
+    },
+    {
+      "id": "syn_dag_21",
+      "profile": "erdos_renyi",
+      "sha256": "f1c6be505f74a7aef09595e5ef207d6f0817aeee7fd981e414ae628afa7d94e0"
+    },
+    {
+      "id": "syn_dag_22",
+      "profile": "erdos_renyi",
+      "sha256": "4bd0da7468427e44ee0876111e163d9823a8e6b5822b04878ded2b29c1eaa991"
+    },
+    {
+      "id": "syn_dag_23",
+      "profile": "erdos_renyi",
+      "sha256": "0ca997502cfa1967292b8205f8b17c21035ee706e975791061c5db1a24e9d576"
+    },
+    {
+      "id": "syn_dag_24",
+      "profile": "erdos_renyi",
+      "sha256": "875ca609d26cd2ef500d91b1e1827df67da4168ea358175aca92515b00875dd8"
+    },
+    {
+      "id": "syn_dag_25",
+      "profile": "erdos_renyi",
+      "sha256": "a0065a8948d74d663df45f26b764a1e0ceafec3f7bc52ce7cf7e9c7b090a5694"
+    },
+    {
+      "id": "syn_dag_26",
+      "profile": "erdos_renyi",
+      "sha256": "2b1058db6b68c4fef3b0941fc5ab4b2b8f4447817bf821778866fd9923e12fa9"
+    },
+    {
+      "id": "syn_dag_27",
+      "profile": "erdos_renyi",
+      "sha256": "76da92ecc47b9ce2a30dff0b591a27486a48214ad0abcee57e6ac50cec244c7b"
+    },
+    {
+      "id": "syn_dag_28",
+      "profile": "erdos_renyi",
+      "sha256": "fd44b5be4704b23212014c8406a0f58754c584a9ce55d6b1da4593e8dff9262b"
+    },
+    {
+      "id": "syn_dag_29",
+      "profile": "erdos_renyi",
+      "sha256": "353ada2ad14e7f0aa477fb7d26d19b079809fee674e1f7e74c253ee0a5fe1769"
+    },
+    {
+      "id": "syn_dag_30",
+      "profile": "scale_free_hub",
+      "sha256": "224f6af4b8498f8cad393d0b976903a066eab7e813ffea72e16d3cbfddd4cb35"
+    },
+    {
+      "id": "syn_dag_31",
+      "profile": "scale_free_hub",
+      "sha256": "721eb490c0c92743b8a166db781ab80813c95f7af22178a8b1743a46f9c983f3"
+    },
+    {
+      "id": "syn_dag_32",
+      "profile": "scale_free_hub",
+      "sha256": "37d5ee7556e0170f17b1565363a076825936aa5a746db406a0ab530e2c3d6485"
+    },
+    {
+      "id": "syn_dag_33",
+      "profile": "scale_free_hub",
+      "sha256": "f2cd0e62da633da7bbebc2b049d046612c81ecb27766455a67b29cc83b68b2e7"
+    },
+    {
+      "id": "syn_dag_34",
+      "profile": "scale_free_hub",
+      "sha256": "82b6d3cb51575a5f881892a5f51207dfef6efb2f897e6135228306b365b73cb6"
+    },
+    {
+      "id": "syn_dag_35",
+      "profile": "scale_free_hub",
+      "sha256": "4e56d74b41af7bf17d44707cf0d7cb4bd7a70321e88f9a9b7c53d973093d6d27"
+    },
+    {
+      "id": "syn_dag_36",
+      "profile": "scale_free_hub",
+      "sha256": "e5065b6ca8568c4858fec3488870fc995474d0ec1c6d6f309dc8d1e530f4d797"
+    },
+    {
+      "id": "syn_dag_37",
+      "profile": "scale_free_hub",
+      "sha256": "2d1355b6cf397f06035c4b17f92175e5ff9181afd56935ad4c5b25db8f6e82ee"
+    },
+    {
+      "id": "syn_dag_38",
+      "profile": "scale_free_hub",
+      "sha256": "05526ac57d551a3e78385dec31ae40028a5fde1493b36f4dba49afdfb748f445"
+    },
+    {
+      "id": "syn_dag_39",
+      "profile": "scale_free_hub",
+      "sha256": "f72b6f7cb61a31f0aee9c3513d8499001009b321350b538bdc8376947c7f8e6b"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "config": {
+    "name": "ext_p4h6_e1_r3",
+    "phase": "main",
+    "bank": "P4-H6",
+    "split": "development",
+    "replicates": 3,
+    "damage": {
+      "kinds": [
+        "extra",
+        "missing",
+        "reversed"
+      ],
+      "rates": [
+        0.2,
+        0.5
+      ]
+    },
+    "H": 4,
+    "n_boot": 199,
+    "tau_effect": 0.1,
+    "generator": {
+      "lag_max": 2,
+      "q0": 0.3,
+      "cross_coef": [
+        0.3,
+        0.8
+      ],
+      "self_coef": [
+        0.2,
+        0.6
+      ],
+      "noise_var": [
+        0.5,
+        1.5
+      ],
+      "rho_max": 0.9,
+      "burn_in": 200
+    },
+    "seed_base": 90261114,
+    "methods": [
+      "oracle",
+      "tolerant_v5_1"
+    ],
+    "calibrate_methods": [
+      "tolerant_v5_1"
+    ],
+    "frozen_calibration": "experiments/ext/p4h6/e1/factors_r3.json",
+    "frozen_calibration_sha256": "cf079bed1009421c6f7c2580c4a063c6145795915183bc2c28f9f28c128215ed",
+    "T": [
+      40,
+      80,
+      150
+    ],
+    "shock": "gauss",
+    "purpose": "E1 evaluation on P4-H6 development, rule R3. Spec: docs/ext/p4h6_e1.md."
+  },
+  "phase": "main",
+  "seconds": 153.2,
+  "n_units": 60,
+  "n_rows": 2520,
+  "workers": 4,
+  "python": "/Users/kietnt/miniconda3/bin/python",
+  "numpy": "2.5.4",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "frozen_calibration_sha256": "cf079bed1009421c6f7c2580c4a063c6145795915183bc2c28f9f28c128215ed",
+  "topologies": [
+    {
+      "id": "syn_dag_00",
+      "profile": "erdos_renyi",
+      "sha256": "a9ceb298e7239de4cf459863b94206cd273d6a677200a1b0c0fdef364aed5729"
+    },
+    {
+      "id": "syn_dag_01",
+      "profile": "erdos_renyi",
+      "sha256": "07394dbf5fd5da849c0b2c13ae6f13886e477eec838638da5409821ce067fc19"
+    },
+    {
+      "id": "syn_dag_02",
+      "profile": "erdos_renyi",
+      "sha256": "2b66bdf8780d4a68f148d6165ee459f829809da54ff64c3bc8f65e7955ac6414"
+    },
+    {
+      "id": "syn_dag_03",
+      "profile": "erdos_renyi",
+      "sha256": "91bfb0a8a08a74d93c2f68bb23d589aee66ccbc3a5caf224e2a273d72dcd0bd9"
+    },
+    {
+      "id": "syn_dag_04",
+      "profile": "erdos_renyi",
+      "sha256": "d0ca09c83c7d006f5246c38bd452a87adc3891d4a15b1d11299a037816c77beb"
+    },
+    {
+      "id": "syn_dag_05",
+      "profile": "erdos_renyi",
+      "sha256": "a61bb18cb6ea71fd3224ee5d8e0b241c02c8fe8be9f5636281bb662827601c2b"
+    },
+    {
+      "id": "syn_dag_06",
+      "profile": "erdos_renyi",
+      "sha256": "174843e3e5277a946e5664822f8d2903935d3a28f707ee9c0e4c6a3e3c0e395a"
+    },
+    {
+      "id": "syn_dag_07",
+      "profile": "erdos_renyi",
+      "sha256": "0072757e492e813a420879e91a0599aa672c965e850c81c853e352150072975a"
+    },
+    {
+      "id": "syn_dag_08",
+      "profile": "erdos_renyi",
+      "sha256": "6a6dc85cd73e217c350e2775b9082fc161ec03f023c2dd49b3ffd51c3b485941"
+    },
+    {
+      "id": "syn_dag_09",
+      "profile": "erdos_renyi",
+      "sha256": "bc83f700136a5521408583d0713bf4ed0fbf160c8e4db65ed34936e17f3620d9"
+    },
+    {
+      "id": "syn_dag_10",
+      "profile": "scale_free_hub",
+      "sha256": "fc5b11931a387270e46a3390229b9259ce85f027c8158fdbcffbe35d9d81b5ba"
+    },
+    {
+      "id": "syn_dag_11",
+      "profile": "scale_free_hub",
+      "sha256": "95563dfbb64252fe4cf885b0b1af15b84c3afea245000d0b2ab07d48dfc8d634"
+    },
+    {
+      "id": "syn_dag_12",
+      "profile": "scale_free_hub",
+      "sha256": "e01f9a4f4dd2cc3a6fa86b966e091a862164167440a71570d081c6ad7bbe2d5f"
+    },
+    {
+      "id": "syn_dag_13",
+      "profile": "scale_free_hub",
+      "sha256": "e6c4aa389d34788d7f6a8efcfba1dea1c2573486017cad72d32b72184d7aca69"
+    },
+    {
+      "id": "syn_dag_14",
+      "profile": "scale_free_hub",
+      "sha256": "cacda054320453414f8462f63af08a0d206a7e7a93031bf5d93c38958ad2bd85"
+    },
+    {
+      "id": "syn_dag_15",
+      "profile": "scale_free_hub",
+      "sha256": "8dc8f7120c5ed54a44f7b75eb4c248623d7beb35de940fa59533493e2bb7ea12"
+    },
+    {
+      "id": "syn_dag_16",
+      "profile": "scale_free_hub",
+      "sha256": "92cbef0c87c8586cf4938a33e3c7e1b9f2381d639a247ab1a4de95ff7c8b6651"
+    },
+    {
+      "id": "syn_dag_17",
+      "profile": "scale_free_hub",
+      "sha256": "998a14932d0ad20e107204350de5a699e4ba6650e141cf58f4626bfc707b5c7b"
+    },
+    {
+      "id": "syn_dag_18",
+      "profile": "scale_free_hub",
+      "sha256": "7e59f2af0b8e61d556d8964b5f0587bc1fe4e6a58453ea5bc9ba4903ca64fb3b"
+    },
+    {
+      "id": "syn_dag_19",
+      "profile": "scale_free_hub",
+      "sha256": "835602fd0145baae8b2dbe56e10dbb949a22c9a4484f30bcd65b223fdc6623eb"
+    }
+  ]
+}

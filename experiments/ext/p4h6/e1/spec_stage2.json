@@ -1,0 +1,16 @@
+{
+ "id": "p4h6_e1_stage2",
+ "frozen_utc": "2026-11-13T05:40:27.010323+00:00",
+ "bank": "P4-H6",
+ "files": {
+  "results/ext_p4h6_e1_cal/calpairs.json": "7abb2fba1165469250ce4526a8d28ec5d7b78a38059a88de665056e4714c9990",
+  "results/ext_p4h6_e1_cal/replication.json": "ad0836db54a98d192fe191cda84bafc151f35903b4c1f222599cbd8515d12f57",
+  "experiments/ext/p4h6/e1/factors_r1.json": "6351c51d21352976d40ffabaa3ad9e407cfd206c8f9b7e5d9331433ff218bc5d",
+  "experiments/ext/p4h6/e1/factors_r2.json": "79b965e78652dff82475d846ff595dd0642e266258f0e4fa6e16615a54df5148",
+  "experiments/ext/p4h6/e1/factors_r3.json": "cf079bed1009421c6f7c2580c4a063c6145795915183bc2c28f9f28c128215ed",
+  "experiments/configs/ext_p4h6_e1_r0.json": "6dc53e5c376340f8d630fca990ea6d72322b56852bba998688c4d11ddb274a3f",
+  "experiments/configs/ext_p4h6_e1_r1.json": "4fee5306a162b347de974550adf5b12ec29eacf5a2c0e198366357e25034ea04",
+  "experiments/configs/ext_p4h6_e1_r2.json": "c44caf78d099170dca1327d422946ef880b42705205cbed635e18fa734ef7ba9",
+  "experiments/configs/ext_p4h6_e1_r3.json": "c182f3b8d502d6c550eb54c19df959b5bbfc68f9e92d8cd5a109b276dcdc3aab"
+ }
+}

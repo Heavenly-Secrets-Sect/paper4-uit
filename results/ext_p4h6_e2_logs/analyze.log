@@ -1,0 +1,14 @@
+# E2 on P4-H6: frozen tolerant_v5_1 under non-Gaussian shocks
+
+**Verdict: CONFIRMED on the sealed bank P4-H6**
+V0 integrity: PASS {"gauss": {"rows": 1260, "ok": 1260, "need": 1260, "topologies": 20}, "ng_mix": {"rows": 1260, "ok": 1260, "need": 1260, "topologies": 20}, "ng_t10": {"rows": 1260, "ok": 1260, "need": 1260, "topologies": 20}}
+
+## ng_mix
+- pooled coverage (T in 80,150; 7 cells) 0.9538; gauss 0.9499; diff +0.0039
+- V1 lower 97.5% bound 0.9479 (>= 0.90): PASS
+- V2 min cell coverage 0.9207 (>= 0.85): PASS
+- V3 diff +0.0039 (>= -0.03), lower 97.5% bound -0.0019 (>= -0.05): PASS
+- verdict ng_mix: PASS
+
+## ng_t10
+- pooled coverage (T in 80,150; 7 cells) 0.9524; gauss 0.9499; diff +0.0024

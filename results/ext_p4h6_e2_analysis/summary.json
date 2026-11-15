@@ -1,0 +1,50 @@
+{
+  "verdict": "CONFIRMED on the sealed bank P4-H6",
+  "integrity": {
+    "pass": true,
+    "gauss": {
+      "rows": 1260,
+      "ok": 1260,
+      "need": 1260,
+      "topologies": 20
+    },
+    "ng_mix": {
+      "rows": 1260,
+      "ok": 1260,
+      "need": 1260,
+      "topologies": 20
+    },
+    "ng_t10": {
+      "rows": 1260,
+      "ok": 1260,
+      "need": 1260,
+      "topologies": 20
+    }
+  },
+  "shocks": {
+    "ng_mix": {
+      "pooled": 0.9537947601531417,
+      "pooled_gauss": 0.9499286840327302,
+      "lo97.5_pooled": 0.9478933942340194,
+      "diff_vs_gauss": 0.0038660761204114547,
+      "lo97.5_diff": -0.001940427008646392,
+      "min_cell": 0.9206516027325276,
+      "V1": true,
+      "V2": true,
+      "V3": true,
+      "pass": true
+    },
+    "ng_t10": {
+      "pooled": 0.9523684408077472,
+      "pooled_gauss": 0.9499286840327302,
+      "lo97.5_pooled": 0.9429207020749385,
+      "diff_vs_gauss": 0.0024397567750169546,
+      "lo97.5_diff": -0.006497001383976575,
+      "min_cell": 0.9243300052548608,
+      "V1": true,
+      "V2": true,
+      "V3": true,
+      "pass": true
+    }
+  }
+}

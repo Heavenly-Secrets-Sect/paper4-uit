@@ -1,0 +1,56 @@
+{
+  "name": "ext_p4h6_e1_r1",
+  "phase": "main",
+  "bank": "P4-H6",
+  "split": "development",
+  "replicates": 3,
+  "damage": {
+    "kinds": [
+      "extra",
+      "missing",
+      "reversed"
+    ],
+    "rates": [
+      0.2,
+      0.5
+    ]
+  },
+  "H": 4,
+  "n_boot": 199,
+  "tau_effect": 0.1,
+  "generator": {
+    "lag_max": 2,
+    "q0": 0.3,
+    "cross_coef": [
+      0.3,
+      0.8
+    ],
+    "self_coef": [
+      0.2,
+      0.6
+    ],
+    "noise_var": [
+      0.5,
+      1.5
+    ],
+    "rho_max": 0.9,
+    "burn_in": 200
+  },
+  "seed_base": 90261114,
+  "methods": [
+    "oracle",
+    "tolerant_v5_1"
+  ],
+  "calibrate_methods": [
+    "tolerant_v5_1"
+  ],
+  "frozen_calibration": "experiments/ext/p4h6/e1/factors_r1.json",
+  "frozen_calibration_sha256": "6351c51d21352976d40ffabaa3ad9e407cfd206c8f9b7e5d9331433ff218bc5d",
+  "T": [
+    40,
+    80,
+    150
+  ],
+  "shock": "gauss",
+  "purpose": "E1 evaluation on P4-H6 development, rule R1. Spec: docs/ext/p4h6_e1.md."
+}

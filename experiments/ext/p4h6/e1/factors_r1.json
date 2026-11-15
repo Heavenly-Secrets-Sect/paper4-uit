@@ -1,0 +1,15 @@
+{
+ "_note": "E1 rule R1: factors from the calibration pairs of D-07H development (docs/ext/p4h6_e1.md).",
+ "tolerant_v5_1|40|none": 2.5,
+ "tolerant_v5_1|40|extra": 2.5,
+ "tolerant_v5_1|40|missing": 2.5,
+ "tolerant_v5_1|40|reversed": 2.5,
+ "tolerant_v5_1|80|none": 2.5,
+ "tolerant_v5_1|80|extra": 2.5,
+ "tolerant_v5_1|80|missing": 2.5,
+ "tolerant_v5_1|80|reversed": 2.5,
+ "tolerant_v5_1|150|none": 2.5,
+ "tolerant_v5_1|150|extra": 2.5,
+ "tolerant_v5_1|150|missing": 2.5,
+ "tolerant_v5_1|150|reversed": 2.5
+}

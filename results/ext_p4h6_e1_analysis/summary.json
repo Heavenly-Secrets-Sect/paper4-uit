@@ -1,0 +1,13 @@
+{
+ "verdict": "A single global width factor is sufficient (on P4-H6 development)",
+ "V0": true,
+ "V1": true,
+ "V2": true,
+ "V3": true,
+ "cov_R1": 0.9585684585684585,
+ "cov_R0": 0.9565637065637066,
+ "lo_cov_R1": 0.9476824345389419,
+ "lo_diff": 0.0006753441823313417,
+ "ratio_IS": 1.0050037693247726,
+ "hi_ratio": 1.0093823403404663
+}
