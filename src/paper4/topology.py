@@ -21,8 +21,11 @@ BANKS = {
     "P4-H3": "P4-H3/p4h3_manifest.json",   # sealed for the RQ4.1/4.3/4.4 confirmatory run; see PROVENANCE.md
     "P4-H5": "P4-H5/p4h5_manifest.json",   # sealed for the RQ4.1 rule (c2) confirmatory run; see PROVENANCE.md
     "P4-H4": "P4-H4/p4h4_manifest.json",   # sealed for the RQ4.1 revised-rule confirmatory run; see PROVENANCE.md
+    "P4-H6": "P4-H6/p4h6_manifest.json",   # sealed for the E2 (non-Gaussian) confirmatory run; see PROVENANCE.md
+    "P4-H8": "P4-H8/p4h8_manifest.json",   # 1200 topologies, random design/calibration/test split; see docs/ext/p4h8_spec.md
+    "P4-H7": "P4-H7/p4h7_manifest.json",   # 360 topologies, random design/calibration/test split; see docs/ext/p4h7_spec.md
 }
-SPLITS = ("development", "confirmatory")
+SPLITS = ("development", "confirmatory", "design", "calibration", "test")
 
 
 class TopologyError(ValueError):

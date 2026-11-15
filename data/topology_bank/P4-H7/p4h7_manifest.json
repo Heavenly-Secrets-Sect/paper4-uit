@@ -1,0 +1,3258 @@
+{
+  "schema": "topology_bank_manifest/v1",
+  "protocol": "docs/ext/p4h7_spec.md",
+  "decision_id": "P4-H7",
+  "generator_seed": 20261115,
+  "n_topologies": 360,
+  "split_summary": {
+    "design": 60,
+    "calibration": 150,
+    "test": 150
+  },
+  "profile_summary": {
+    "erdos_renyi": 180,
+    "scale_free_hub": 180
+  },
+  "topologies": [
+    {
+      "id": "syn_dag_000",
+      "file": "topologies/synthetic_dag_000.json",
+      "sha256": "b30eca879e08f51463beedecf5f7680a427a1bcdcae94f777e9ffe35d980f966",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_001",
+      "file": "topologies/synthetic_dag_001.json",
+      "sha256": "b8f096af8bff80ef54d6f2b7f368cdf6243ee1ff48ca9ae7b331270cf4ed7702",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_002",
+      "file": "topologies/synthetic_dag_002.json",
+      "sha256": "6cb66fada98656fe403b6baf386286aee61b834c18d95033e8833be59ae8ff67",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_003",
+      "file": "topologies/synthetic_dag_003.json",
+      "sha256": "f5e8f64f7297e175e610f836e0b0f81802c8478ac4581c99efc5faf359b7f97b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 7,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_004",
+      "file": "topologies/synthetic_dag_004.json",
+      "sha256": "74243ff06cc750a962a5e880a4478a859595d71bd9a6d2d3eb58a91e094590eb",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_005",
+      "file": "topologies/synthetic_dag_005.json",
+      "sha256": "27eea2434a0580f3a549dc66ae4c7e0e23ea6b342b01db0dea4159fb4f2aad81",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_006",
+      "file": "topologies/synthetic_dag_006.json",
+      "sha256": "656d8bec1c95ceeb071f703a00b85eef49bf988ff03a24526a13d392e47f2bba",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_007",
+      "file": "topologies/synthetic_dag_007.json",
+      "sha256": "9fdea7c6e8c651f46d8efa226fa4445617457f664affcd86a444b59b7b84690e",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 30,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_008",
+      "file": "topologies/synthetic_dag_008.json",
+      "sha256": "93a1cefd400590a15da38a01cafffb4b7524839825cb90d2c4291d84b42e212f",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_009",
+      "file": "topologies/synthetic_dag_009.json",
+      "sha256": "76b8e815ce79caa4acb520048ae72456acdb89ca268a72b1b20b4909e135bcb5",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_010",
+      "file": "topologies/synthetic_dag_010.json",
+      "sha256": "62c3f5820ef2bb0d90055c3a58dbfcff8d4d0c4d768b18569e8021f3a3b7b406",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_011",
+      "file": "topologies/synthetic_dag_011.json",
+      "sha256": "4b2fae007f78f22b7927040c7a6f16982e3343e1e96db0a7b59f497fe0e274ce",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 22,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_012",
+      "file": "topologies/synthetic_dag_012.json",
+      "sha256": "ec808c86bdab67ab4480881cb49471c94570883cd2d8d5144127135edbe3469e",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_013",
+      "file": "topologies/synthetic_dag_013.json",
+      "sha256": "bcf385f11079e6e17e8ddc73cc28d1b89b4366738160c73fcabef04aeb4024be",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 7,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_014",
+      "file": "topologies/synthetic_dag_014.json",
+      "sha256": "a6e0ca91707c7133854ad6000b408e414c562a15dfff346798a9e9e38b3b826e",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 20,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_015",
+      "file": "topologies/synthetic_dag_015.json",
+      "sha256": "e43a34f9ef786ccc1021b81a71a672e76753c866fa2417078e3f706351108414",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_016",
+      "file": "topologies/synthetic_dag_016.json",
+      "sha256": "d5b79f8ec5ceede2fb254dfab4e2a801c94818d303d82e8e08620bf39fbb7dd7",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_017",
+      "file": "topologies/synthetic_dag_017.json",
+      "sha256": "f826648c5194264e99cd8a48956136d15d59dc9df622eb8d708646a58e6dfed6",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 7,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_018",
+      "file": "topologies/synthetic_dag_018.json",
+      "sha256": "50cb7b2e46de76863d411d0741998505a2821dd5ad7eb399bb50439208e41623",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_019",
+      "file": "topologies/synthetic_dag_019.json",
+      "sha256": "32dde5b75123a5a9d5c82ee1ab3b722c58f2573a06d588c5d0addc3d5a0fb609",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_020",
+      "file": "topologies/synthetic_dag_020.json",
+      "sha256": "fdb65a2d5dff468719beba41ae3566cb1cedf390a84dbd19a5101bf83dbb69c3",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_021",
+      "file": "topologies/synthetic_dag_021.json",
+      "sha256": "04c545bfca47583d35a340c783f810cb0633c7352f7adeee01b4179fe7072d46",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_022",
+      "file": "topologies/synthetic_dag_022.json",
+      "sha256": "e36514937f641ee15fffc3f3c337699509ff3ad6c731dc7cb3da73d4805e1a91",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_023",
+      "file": "topologies/synthetic_dag_023.json",
+      "sha256": "a6d00e4ab87a336f9d18fa09230cfe29835e1bfaa73605332b488ab8ff743097",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_024",
+      "file": "topologies/synthetic_dag_024.json",
+      "sha256": "a3ac21ff008c249bbc015bc7b42285cb45cf0b35b97ededda242719e48ee0064",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 7,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_025",
+      "file": "topologies/synthetic_dag_025.json",
+      "sha256": "462bb8efd4102c63b53ba5ac62673a257c71a4333c11fa3e4da39c728a5d7225",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_026",
+      "file": "topologies/synthetic_dag_026.json",
+      "sha256": "f4bfc0796b9b25e99fdc3b2f7345cd70490ed51df8d263108b3531a340658a26",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 26,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_027",
+      "file": "topologies/synthetic_dag_027.json",
+      "sha256": "52dc5f25ec74d669810e861c2251eb7a345253096dc842fde5dd9f16bf3171c9",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_028",
+      "file": "topologies/synthetic_dag_028.json",
+      "sha256": "f5b073e7274efc09999a9acb8a2abd732b6c322f7c25a5af080f875df33a69b3",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_029",
+      "file": "topologies/synthetic_dag_029.json",
+      "sha256": "49f90af0adb9da1cc266bb0957f30ae2e84a5de025f9f0b227aa162eb5cfb62f",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_030",
+      "file": "topologies/synthetic_dag_030.json",
+      "sha256": "9158b3c91b16020a4c3fbfe96febb1c471f239c464dcb924baeb26ab12bed577",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_031",
+      "file": "topologies/synthetic_dag_031.json",
+      "sha256": "d4632bb3701048e123172d6aa8ca64f9ad4e0befb5cd611c94933e3c4812eef7",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_032",
+      "file": "topologies/synthetic_dag_032.json",
+      "sha256": "3f56a3dfbc435ea4aa4d0836232bfff7e3b760824d6ac62ab3be3df866623a64",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_033",
+      "file": "topologies/synthetic_dag_033.json",
+      "sha256": "2a87b14b8493162dbb33f4557379765d914263b4a9fda912db0ca32ac0035b22",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_034",
+      "file": "topologies/synthetic_dag_034.json",
+      "sha256": "d1e415f50c57f7dcd9fda5e016495b4b7cb065ad44c2ae22ff999ee369d8938f",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_035",
+      "file": "topologies/synthetic_dag_035.json",
+      "sha256": "e76deec6f423464cc0ff441a2e4e9c232fcdf4d03e21fccc0912f2cebe41ed59",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_036",
+      "file": "topologies/synthetic_dag_036.json",
+      "sha256": "237f24a743dda8b1072000e079f884832864f18337d6fc1fb585497fb1622ec1",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_037",
+      "file": "topologies/synthetic_dag_037.json",
+      "sha256": "c088aa2c2a0ba2d4f511300b96a4afc38391cb2cb2f3fd02266e1750143d6cf8",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_038",
+      "file": "topologies/synthetic_dag_038.json",
+      "sha256": "1d64fedcef2165ed47a8acb28550fbe04d3b64baefc6513f9e750c7057271557",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 19,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_039",
+      "file": "topologies/synthetic_dag_039.json",
+      "sha256": "0bbbcd2666b2771b892e3e9071340162b1f18047d7af909296d6ff3abd24781d",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_040",
+      "file": "topologies/synthetic_dag_040.json",
+      "sha256": "b09c9be51c7ac2a65f5edb65ea24aa32d4279e532fb502b7d1f440420b0cd2bc",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_041",
+      "file": "topologies/synthetic_dag_041.json",
+      "sha256": "4ea11af8e2f346ab2a8772a193670702ba8d518e4571284a79648cdae08a5dab",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_042",
+      "file": "topologies/synthetic_dag_042.json",
+      "sha256": "5f813dfbfc2d333a3ca4bfc0b09d3a90c3c4b03527c6bbe8a7c057c3037d8d5b",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_043",
+      "file": "topologies/synthetic_dag_043.json",
+      "sha256": "da1b4380c514fec04c1f3dbb415344c522e85d0d624857c0a2eef8a0083483b3",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_044",
+      "file": "topologies/synthetic_dag_044.json",
+      "sha256": "b60bf9a7e90f4596d2fd52e6f26d0869df99d4b936a6e02afd9fb80f6aa22fc8",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_045",
+      "file": "topologies/synthetic_dag_045.json",
+      "sha256": "99dcde5f0d45a64910ab5992a454aa425d6da49758b3f7cba710f2740e8e3141",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_046",
+      "file": "topologies/synthetic_dag_046.json",
+      "sha256": "51d5114dc30a97908b5f7183d7dd2ac28ee7388b1dcf44b9d9ce33dafbc3ce55",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 20,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_047",
+      "file": "topologies/synthetic_dag_047.json",
+      "sha256": "e5d2b3ad976687822dee179283b715a9cb3141213672a97f74e74a8fca085e4d",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 7,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_048",
+      "file": "topologies/synthetic_dag_048.json",
+      "sha256": "63365e1ce1920079b31572c8a3bc6bbc82a449703ce5b311201ba8ac7fcafa3b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_049",
+      "file": "topologies/synthetic_dag_049.json",
+      "sha256": "2f8b598cbbc24b62b852c7005bf799600951b633cbcbf35fef8e71b9fba08875",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_050",
+      "file": "topologies/synthetic_dag_050.json",
+      "sha256": "a6a7614a4bf00d9adb23c6640778efb016f8c28a5a22d60d9b5bf13bb1c2ca40",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_051",
+      "file": "topologies/synthetic_dag_051.json",
+      "sha256": "89567cf5995fd57fe80f880b31c630f6519c97daa3e9f917430fe850e844e53a",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_052",
+      "file": "topologies/synthetic_dag_052.json",
+      "sha256": "e40d2ca4b646aea140b8caa225605a20b07eb5bf71f7fcb57757a9f9b85306d9",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_053",
+      "file": "topologies/synthetic_dag_053.json",
+      "sha256": "c85bd12b8867e3c746bc29027dd388ed875922bb6087f83096104f6c382d7263",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_054",
+      "file": "topologies/synthetic_dag_054.json",
+      "sha256": "c9dba9079d2c04c9a3a6b544395f9bae37ca2ef5bba0205bb7f7049923f8326c",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 20,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_055",
+      "file": "topologies/synthetic_dag_055.json",
+      "sha256": "944ae78c26c221ed33a2ea9324351fdc1b79257d9b622be9879818c2a65aff93",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_056",
+      "file": "topologies/synthetic_dag_056.json",
+      "sha256": "0be5aff967f1ed8bb057b29cfa33dd4b03923caa2f3cfead119a1c658aca7525",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_057",
+      "file": "topologies/synthetic_dag_057.json",
+      "sha256": "fd7233c94f0a6bf37d1ca46e5724efa0e548d25b1124549349438348072969df",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_058",
+      "file": "topologies/synthetic_dag_058.json",
+      "sha256": "514bc7759bda571d1b1b2c270a4e529732699ba4ec374c08a70c5bab0a04c4b6",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_059",
+      "file": "topologies/synthetic_dag_059.json",
+      "sha256": "63bef374ac0e93b71c9d5d0d0d069e75bce73e3e891ade94d832a9a0628ab06a",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_060",
+      "file": "topologies/synthetic_dag_060.json",
+      "sha256": "6f50a4e1ef9e854572f8d547e0292098cc64effbfba1723574806a652587c995",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_061",
+      "file": "topologies/synthetic_dag_061.json",
+      "sha256": "3e83ab4c8ed7263e8dd20a1b4cc7af6a4fa4f6ac90154b4704c2acbb1398ec87",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_062",
+      "file": "topologies/synthetic_dag_062.json",
+      "sha256": "aa298dd5478eda080220fa1b711c343911b9561e3c15604795747f5e61cfb775",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_063",
+      "file": "topologies/synthetic_dag_063.json",
+      "sha256": "ea3157762ef9b24f27224c4ebe043f0263837ff32c0e32bc3f3095ee16393b63",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_064",
+      "file": "topologies/synthetic_dag_064.json",
+      "sha256": "a03e6e3430749ee113b92a667e01d6d772bce1c67235eea57a580cfd8c71484b",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_065",
+      "file": "topologies/synthetic_dag_065.json",
+      "sha256": "43074a979b8603b67cf844921ae771b1dff7b5a00be3215ec852f46e99485d4c",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_066",
+      "file": "topologies/synthetic_dag_066.json",
+      "sha256": "7997cdb598c6d305bb385c88a4dc6962f0a401fc005aed8fea3270744b34deef",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_067",
+      "file": "topologies/synthetic_dag_067.json",
+      "sha256": "e89dd63f668dc80af5762ea4984c43e911195dfe4f0a125e03aed42894534eb6",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 23,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_068",
+      "file": "topologies/synthetic_dag_068.json",
+      "sha256": "08f90979004cbcb95a7139466b6f5291b03a62f12f114c3d6d1ab6bf08290a94",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_069",
+      "file": "topologies/synthetic_dag_069.json",
+      "sha256": "bed648d45a606e53a0a3ed84410e41dba2c5acf73bc2b42f25f58a1fbea8b48b",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_070",
+      "file": "topologies/synthetic_dag_070.json",
+      "sha256": "ebd0b314b092cb59548e1384c6079f8a6b08b3c3859a530d9370224cf397857e",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_071",
+      "file": "topologies/synthetic_dag_071.json",
+      "sha256": "6ef3adc31a01453a2bb085d88773455947b1ac7ef59e1442bfc1355284fa7efc",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_072",
+      "file": "topologies/synthetic_dag_072.json",
+      "sha256": "ee5cbb9a89694cf9476c119c5f1492a418c706cc03899c0850eafe7061e44a7f",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_073",
+      "file": "topologies/synthetic_dag_073.json",
+      "sha256": "3ca8a8eead26c49fc03e395dd214a44988f7c148584dff5fa6c727e765f91dea",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_074",
+      "file": "topologies/synthetic_dag_074.json",
+      "sha256": "fed89524b054ced99e9da5ee14685934f62c86d21d1846165291a32aef9af80e",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_075",
+      "file": "topologies/synthetic_dag_075.json",
+      "sha256": "09bd5e624572512973f88f7e4475432bf0cb12c6ee03acb6abe1d5559d9a4f5f",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_076",
+      "file": "topologies/synthetic_dag_076.json",
+      "sha256": "abadbabcef3f1039ff77fb24035cf1717bbb964ccb8a80176ab30f4c0bb3c6ae",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 10,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_077",
+      "file": "topologies/synthetic_dag_077.json",
+      "sha256": "c340273f57e164f312f3828c719bc5c06f31e1408b5bd720657e3f7101d0a014",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_078",
+      "file": "topologies/synthetic_dag_078.json",
+      "sha256": "3bda70699c3148fbca9147f4de4f5d878543e2e140daf41a9ed70530f480085c",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_079",
+      "file": "topologies/synthetic_dag_079.json",
+      "sha256": "b8e59ea54f8354df7003b7e7802b13eed64a4bf0eb4ef701b56faea600e2767b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_080",
+      "file": "topologies/synthetic_dag_080.json",
+      "sha256": "e5108f42f91f836db7ad3eb3f5d376a35c52204ca062869854f3fdc4308dde02",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_081",
+      "file": "topologies/synthetic_dag_081.json",
+      "sha256": "5e0067e0ffca241810a68adcaa4130f5c8d4356a0b644238bda5436996e7950f",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_082",
+      "file": "topologies/synthetic_dag_082.json",
+      "sha256": "8efc82faba950d0a444d81727e5f1a69de1c646db3084379cedd9c09473aff24",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 26,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_083",
+      "file": "topologies/synthetic_dag_083.json",
+      "sha256": "31000476d3acb699b7cea59c05c7624b7dde5b70d23ac47bf0133fd53424de8e",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_084",
+      "file": "topologies/synthetic_dag_084.json",
+      "sha256": "610478e205b2642c9f11fd56ec1f071c89aabec76baf846c590c4604232cf78b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_085",
+      "file": "topologies/synthetic_dag_085.json",
+      "sha256": "0b20706e6232125a73ebb1fd326ba6902229f684367078b24b7d8f8bc5bcbdc4",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_086",
+      "file": "topologies/synthetic_dag_086.json",
+      "sha256": "c200cd6f957f023bdb6222d6d503f7a745a19b4f91b48c67bbd119d5770f94c4",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_087",
+      "file": "topologies/synthetic_dag_087.json",
+      "sha256": "9ef69f598d1a580ff1fb22c15e414e487a988ca72e394c6b2449af976e63a237",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 8
+    },
+    {
+      "id": "syn_dag_088",
+      "file": "topologies/synthetic_dag_088.json",
+      "sha256": "4203a195424732e4615b86c851ed880915cae36583490f40c9a9e51bf3f09b87",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_089",
+      "file": "topologies/synthetic_dag_089.json",
+      "sha256": "25cad489c1ce83e8b7d558dfb870e0feee989f89d17794b76eff09c87aa2eecb",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_090",
+      "file": "topologies/synthetic_dag_090.json",
+      "sha256": "3aca3490a8b8664f6f75bbb63ad921f356dc71b41e55093cd826ea570e1dd05d",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_091",
+      "file": "topologies/synthetic_dag_091.json",
+      "sha256": "f445561d9b63b1fc7dfe1d54a2ef6aefa6e6ac9b779183048f7ddd6cbfd8fadd",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_092",
+      "file": "topologies/synthetic_dag_092.json",
+      "sha256": "9ac05aafbd008a790918f6160d9394e482b12923f9f365d95b56cb8c26c0b490",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_093",
+      "file": "topologies/synthetic_dag_093.json",
+      "sha256": "64b1d3be568209d98426907d05736ab4e21345d28d808ef41a3c757347be7bce",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_094",
+      "file": "topologies/synthetic_dag_094.json",
+      "sha256": "b38bfaeede396602482e4bf22ff7a14621e933aead10249a88f27e9b025e00c3",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_095",
+      "file": "topologies/synthetic_dag_095.json",
+      "sha256": "ad11819f110b83ab80e0f6a25b9207a5314c3650aad0468b24573495d983cc23",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_096",
+      "file": "topologies/synthetic_dag_096.json",
+      "sha256": "7e0edb250a0574ccbbf54b967317253e0f873f34d51cffc6e2d4445461c016a8",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_097",
+      "file": "topologies/synthetic_dag_097.json",
+      "sha256": "b7ea33dd35a32ebe9bfaf6b39d128911279f9391b5ffdc42d2a2205ac7fe17d9",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_098",
+      "file": "topologies/synthetic_dag_098.json",
+      "sha256": "16fff067a62b335810e3cd95fc95a813b09f19e6e4cb4a1bf845ff555ddb14ba",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_099",
+      "file": "topologies/synthetic_dag_099.json",
+      "sha256": "02d405ecb71125d61cb426d7b1620dd66356a8a1fd08121e9b2410c319a52223",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_100",
+      "file": "topologies/synthetic_dag_100.json",
+      "sha256": "31548edf2670cb9459f796c3f46e1d292d97566c01a5c928820b7ffe65bc305f",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 10,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_101",
+      "file": "topologies/synthetic_dag_101.json",
+      "sha256": "c49fecf171303c78428a68d9833f2cd7087933715e8a365177be4d8686586332",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_102",
+      "file": "topologies/synthetic_dag_102.json",
+      "sha256": "2998fc67ac475a1a93fe33366a11adf8222607146c8b2b1e6889f51eb3bc35cb",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_103",
+      "file": "topologies/synthetic_dag_103.json",
+      "sha256": "77b896b13acb1f8ffd14833bcac6661ec1fe10811f499f15661a113e5713c135",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 11,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_104",
+      "file": "topologies/synthetic_dag_104.json",
+      "sha256": "975bcde080b25e54b6c53aa6c2be25a1bdfdb3315b998329ccb5b9c8a9154558",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_105",
+      "file": "topologies/synthetic_dag_105.json",
+      "sha256": "13e6b0aeea8bdedd058c5806724e8aee58ed6b4e6a0aab8f673df308dfabc1fb",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_106",
+      "file": "topologies/synthetic_dag_106.json",
+      "sha256": "b10086d385d8d2e9f42acacbc7c76b5f5e3692a07803e057db9d4ce5f623dae6",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 7
+    },
+    {
+      "id": "syn_dag_107",
+      "file": "topologies/synthetic_dag_107.json",
+      "sha256": "fbfb07c38fd9239631c9471fa853f53d1a84cf16b9a6c9e5c92f375bad103876",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 12,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_108",
+      "file": "topologies/synthetic_dag_108.json",
+      "sha256": "363a7b5ddf27c366bf8b2bd13485476a4fdd77249da7eeb2817f0b9482fd20a6",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_109",
+      "file": "topologies/synthetic_dag_109.json",
+      "sha256": "7c4baf16927aacbc1519882eb22e2b288673e0461b39f981c0d6566842849533",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_110",
+      "file": "topologies/synthetic_dag_110.json",
+      "sha256": "729ce5327dd96d5c332d4a128988d65b09c81df3440652a28ce7d10fc3465d8b",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_111",
+      "file": "topologies/synthetic_dag_111.json",
+      "sha256": "7f9f3893446635e8d0390b4800934554b9b65cc793c5a4bcba3d66be4a343546",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_112",
+      "file": "topologies/synthetic_dag_112.json",
+      "sha256": "4ee070e1c6d749e7e3660a7c9a599977e8bb547c6dd59282f78ec91693a5056e",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_113",
+      "file": "topologies/synthetic_dag_113.json",
+      "sha256": "160a0af3d5d8109b6a06f70d93941ebcfe17a5c7e1f1f3d120ad87cf780c43c4",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_114",
+      "file": "topologies/synthetic_dag_114.json",
+      "sha256": "248e96a360593c33c8413055ea00292141cbf05806a35a18f41609ed378a6ddf",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_115",
+      "file": "topologies/synthetic_dag_115.json",
+      "sha256": "be7e8f9ab87f3712f947b586856366607f610613bc09f394e927c828d5aca251",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_116",
+      "file": "topologies/synthetic_dag_116.json",
+      "sha256": "4244e29e9e04361bb22ff779ddeda3c1d1b720ad16981ff9299c466d10b15732",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_117",
+      "file": "topologies/synthetic_dag_117.json",
+      "sha256": "8b3f1502586db4495ab4816dfddd768f08995e7464accd6d02a50c6593b6a1da",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_118",
+      "file": "topologies/synthetic_dag_118.json",
+      "sha256": "10cd4defe871e06153855b68b2c8fbdca41bef1a38eef2081bc2bbb4390ab08f",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_119",
+      "file": "topologies/synthetic_dag_119.json",
+      "sha256": "5460584762b587499913fd3aa2fd60d26db36d005bd2e63b5e70a74876c7c981",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_120",
+      "file": "topologies/synthetic_dag_120.json",
+      "sha256": "29dad422bef94afb6f862339a20318ad6a7c0b090a33c36b2d3f145d030dac75",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_121",
+      "file": "topologies/synthetic_dag_121.json",
+      "sha256": "3a1faad7096d6a2f75c5082e41d053922824f24dabda07dc4407329eff540242",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_122",
+      "file": "topologies/synthetic_dag_122.json",
+      "sha256": "93d654dd8d72c39b390950869d37049573337b83d925ec89e2a4ec9b73a9104d",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_123",
+      "file": "topologies/synthetic_dag_123.json",
+      "sha256": "bcde8a5c6db04d01dc7bef8ccd173e804040f102ea0ed0eaf306dd5cc5879254",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_124",
+      "file": "topologies/synthetic_dag_124.json",
+      "sha256": "5c73bed7626565316e8c70ca3de5c7f93af847d7dc05798991559a72a6cfefbf",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_125",
+      "file": "topologies/synthetic_dag_125.json",
+      "sha256": "0025d3f470d1d33467f60015d076f8c9d835e8dbcb5f91e55f241465dc43fb1d",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_126",
+      "file": "topologies/synthetic_dag_126.json",
+      "sha256": "6b0120485f23fbdf45803a7904d37c78887961a8b252e81c1eaac02070322e9e",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_127",
+      "file": "topologies/synthetic_dag_127.json",
+      "sha256": "5a559737ac83cb08fab4759972bd19dca8ed1d99789b7b5e272a05c3dc2fc12d",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_128",
+      "file": "topologies/synthetic_dag_128.json",
+      "sha256": "7ed9eb0efc361870e72807d52ef42b5fbea108f1bef52c66de5437d1881c660d",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 7
+    },
+    {
+      "id": "syn_dag_129",
+      "file": "topologies/synthetic_dag_129.json",
+      "sha256": "356c9fd2aa3e39f3c3671a5dcc31c6183eba8c6f4e54b4337e53a9a50a8b1ebb",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_130",
+      "file": "topologies/synthetic_dag_130.json",
+      "sha256": "c8fdbb4feda0284074a4d9c773375b570fc84781a82b5d7c68e5cfa4f0ceb9f8",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_131",
+      "file": "topologies/synthetic_dag_131.json",
+      "sha256": "388734b450973e332c213d416c2ee3d242ce32a820943b253da0abd7ca3d48e5",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_132",
+      "file": "topologies/synthetic_dag_132.json",
+      "sha256": "976fa6267ae12156f27a348c3078ef5b8d124ceffda314f795a243917cf136d9",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_133",
+      "file": "topologies/synthetic_dag_133.json",
+      "sha256": "c8b8a5267e55c3d9934240bc75cd497eba1a1d78f64e6d738b31b6c21a030179",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 24,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_134",
+      "file": "topologies/synthetic_dag_134.json",
+      "sha256": "9c9a26469a659b3d00ef9abc4d3b142eac6ae0daa852db75b331a40eb3ed35cd",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_135",
+      "file": "topologies/synthetic_dag_135.json",
+      "sha256": "2d09cbda49b81dd9136735a04ed5032d2835cfbdbcb5e4e882ef4ad3065eec07",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_136",
+      "file": "topologies/synthetic_dag_136.json",
+      "sha256": "67d70d6ce938b08f571bd0d854e1482a604598cfa09a1a3d04dd602dc83efee6",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_137",
+      "file": "topologies/synthetic_dag_137.json",
+      "sha256": "b67da689b310e4ea14a7dfd0a7d11c57218030de2bc444a934d9ffefe1409477",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_138",
+      "file": "topologies/synthetic_dag_138.json",
+      "sha256": "4f20da0d6ea9e67fc66fe1e3dca4b48d17350be3bbaaa9af973f5a0508796c4b",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_139",
+      "file": "topologies/synthetic_dag_139.json",
+      "sha256": "195ad4ab83348805c90be5da21a87c1cb40081223fe9d2283e2bd1562222d1db",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_140",
+      "file": "topologies/synthetic_dag_140.json",
+      "sha256": "0a79f3a9d4d0057db3d03350fe578c2bd94c4eb150323c1019d02fae00f7b2d1",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_141",
+      "file": "topologies/synthetic_dag_141.json",
+      "sha256": "70c1ee525a26cb31036ef24b1b373dd29a31321270510d28185c3545a59d892c",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_142",
+      "file": "topologies/synthetic_dag_142.json",
+      "sha256": "107e55c354d78fcb907b7a0387fbb51cf4072464fe5dee769b894b3f27feb856",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 19,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_143",
+      "file": "topologies/synthetic_dag_143.json",
+      "sha256": "a8dc07830ac0a284472b2b00194ebbe58c9f93a089fe8db375e5bf1d74ab2330",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_144",
+      "file": "topologies/synthetic_dag_144.json",
+      "sha256": "6ad1bb41fe2e936e5de49ec2c4a355fa03d394081de1f5c7d9d95cf8b6a097b9",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_145",
+      "file": "topologies/synthetic_dag_145.json",
+      "sha256": "92a772d75ea52729dd2e65132db56dc7a389a31d3a11c807917ac9bb5a13faf1",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_146",
+      "file": "topologies/synthetic_dag_146.json",
+      "sha256": "bfad743281d0810c0b45e9a1e3e8381fc77798c43ab4b72c01939c691b20b3f8",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_147",
+      "file": "topologies/synthetic_dag_147.json",
+      "sha256": "2cccf821670843ee6cef86e705a34d88f90856b5ecb1f239dd39947b81a4f7c2",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_148",
+      "file": "topologies/synthetic_dag_148.json",
+      "sha256": "0dc84c5ed54c14c02362d5053f3885dd466f74a14aba1f84f113afcfe08daf4a",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_149",
+      "file": "topologies/synthetic_dag_149.json",
+      "sha256": "54b6395d99be28dda5e9393613d494487cb24b6bdd75a5cd11c4c1e4439f40f5",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 20,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_150",
+      "file": "topologies/synthetic_dag_150.json",
+      "sha256": "afc773b36dcddc75e04614eba88cea71d2f2bc9e76131600a80fa004a70ddf22",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_151",
+      "file": "topologies/synthetic_dag_151.json",
+      "sha256": "99b3042d048fc05eed60460775316d7085a3c274fa1ebf8b179b46563c5cf01b",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_152",
+      "file": "topologies/synthetic_dag_152.json",
+      "sha256": "12f12ab1c1dad8668fa9e896000967431ad59446c7fb171c99fa2c76471cfa6f",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_153",
+      "file": "topologies/synthetic_dag_153.json",
+      "sha256": "8b1006797ed57cfa80fc8794d90c84f27ed048d7fbe20c71a3db6cc145a1c6de",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_154",
+      "file": "topologies/synthetic_dag_154.json",
+      "sha256": "7c9553b484f349af004da4626c5b8c2c4172dd53d7edfd46668e34256961cf81",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_155",
+      "file": "topologies/synthetic_dag_155.json",
+      "sha256": "e9cc376e8e9df97c3d7d3dfac264adac300457bdb5a6ae8daeddf453edff1cf6",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_156",
+      "file": "topologies/synthetic_dag_156.json",
+      "sha256": "f5f5167277a8d1b17639fbd599f0d29059f58dc64d5d060f342fb98824549d46",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_157",
+      "file": "topologies/synthetic_dag_157.json",
+      "sha256": "959b278156c16e3747ce8154cf81ab55f053b864f10fb7dc0249dc515fd77d9e",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_158",
+      "file": "topologies/synthetic_dag_158.json",
+      "sha256": "24959f841e10f97be787562f318c12ec236c8e0a1ae26864322a0284c3f4bee0",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_159",
+      "file": "topologies/synthetic_dag_159.json",
+      "sha256": "34d12db682d3c5b4e69a78f6ec4b8c09e4ce583b831c2bc8f819987d28884351",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_160",
+      "file": "topologies/synthetic_dag_160.json",
+      "sha256": "dfeb673383e1724a114819f0a5039a69777576d62dae4728112b88f6ff25640a",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_161",
+      "file": "topologies/synthetic_dag_161.json",
+      "sha256": "8885cb5d9bb10948ba998c42106351ae6c1d81b634177b44a92e3dabe129e23e",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_162",
+      "file": "topologies/synthetic_dag_162.json",
+      "sha256": "3fa193ed6c48563413cc79db8560d3b8556ba8d71f84a8277b2cd4ba301216cd",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_163",
+      "file": "topologies/synthetic_dag_163.json",
+      "sha256": "8be011c510b493bcd33cbf3a7524b92d5ffe0b8b3bbd6edcec37077caf4951af",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_164",
+      "file": "topologies/synthetic_dag_164.json",
+      "sha256": "d4c74985b77a4727c6e2e1aee205d8fba9ddcbc893615167036b7039ea2f06d9",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_165",
+      "file": "topologies/synthetic_dag_165.json",
+      "sha256": "37120aab2e25ebb34e5d738fbf5aaec89459cb27b78571e942a6a803a267667b",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_166",
+      "file": "topologies/synthetic_dag_166.json",
+      "sha256": "7e7bc0510c52b1a906bd2d927ab4ac906d64cb978fe6704150720d1ab81b94ad",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_167",
+      "file": "topologies/synthetic_dag_167.json",
+      "sha256": "4cd2718704d952cdb74d45e6827bb9924b296e0718dde9ab42eb898975e03b8f",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_168",
+      "file": "topologies/synthetic_dag_168.json",
+      "sha256": "2807bcfd15cd091eb68311c2f456f876f6920b3f100250c3b19d4d17e5f735a2",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_169",
+      "file": "topologies/synthetic_dag_169.json",
+      "sha256": "dcef90062e987b1b34c7214756d422d19be0501958a52a3f3e28ff5bc43a271e",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_170",
+      "file": "topologies/synthetic_dag_170.json",
+      "sha256": "8498b81381ead9bb9d2518c753bebc2fa7832169ec7262cdce9c912d6275f775",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_171",
+      "file": "topologies/synthetic_dag_171.json",
+      "sha256": "21a1bb55f5dbabdb00d400b8996e45b86d651eb4a12a6ff959c48cce8eeee53a",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 26,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_172",
+      "file": "topologies/synthetic_dag_172.json",
+      "sha256": "7a407a18bef5768ba016c1a49978aa3ef3a33f9eed4f784eb10f678a4ea38dbf",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_173",
+      "file": "topologies/synthetic_dag_173.json",
+      "sha256": "5cea450d4d10787402904f1ac006760e6013f779d1f32ef4b4af7695d3b7074a",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_174",
+      "file": "topologies/synthetic_dag_174.json",
+      "sha256": "41b79994c2d64bb10e885616209b296f882c20f18b8890852840aed7ec503b26",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_175",
+      "file": "topologies/synthetic_dag_175.json",
+      "sha256": "684db5f8c9d3481d13993621d3328bf9abda1834197b805d4590abd39e04c15e",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_176",
+      "file": "topologies/synthetic_dag_176.json",
+      "sha256": "e3b84ca37581b448bb7157213be16d3f31a085385bbd5cac70b0290ff0a52df3",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_177",
+      "file": "topologies/synthetic_dag_177.json",
+      "sha256": "a15776c4021b895346cf1515457e0e292dd9f6207b1888059d1851fd7cfb76d9",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_178",
+      "file": "topologies/synthetic_dag_178.json",
+      "sha256": "6dc0d199a6ba78e343d2653742c9c1d7933892461d2447dbee331a0aff5cd81f",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_179",
+      "file": "topologies/synthetic_dag_179.json",
+      "sha256": "a8b9dcd60c7f3a8a1bede7a32919a12d72e3f7813abe5fa48fbde81ab3459156",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_180",
+      "file": "topologies/synthetic_dag_180.json",
+      "sha256": "1ad2e947b0d23f427fd3fb5e122daf284571f79e83a9029b061ce50a0cfbb1e8",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_181",
+      "file": "topologies/synthetic_dag_181.json",
+      "sha256": "d36398a16434e42f8e9af330f3405e92a86979700457474afc8250b57a2f95f2",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_182",
+      "file": "topologies/synthetic_dag_182.json",
+      "sha256": "01e9c3e6cbca2be37f3c59c969c8ca7e3680d7d464bf4f812808f6043aceafd3",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 30,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_183",
+      "file": "topologies/synthetic_dag_183.json",
+      "sha256": "fb9c5475f2c2df0e33e8d578a0f679de79be989b871ddd76c7b5bb48facfc495",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_184",
+      "file": "topologies/synthetic_dag_184.json",
+      "sha256": "b8782693cc823ddf9edc05a1748d7304ad7aee21af8f628515614ee6dc5c78f7",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_185",
+      "file": "topologies/synthetic_dag_185.json",
+      "sha256": "1d3083f1c08a548d78c61e03df1eae1b53ea1f0db98b27c0565a57104ae0f2ff",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_186",
+      "file": "topologies/synthetic_dag_186.json",
+      "sha256": "a863bee7bf53af0496510e6976f65df37b81d9d826cf1ac4d48b2ef9d070441c",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_187",
+      "file": "topologies/synthetic_dag_187.json",
+      "sha256": "d842ee2198a48e7aed5646252bd2c6d1a54acf69c4469b9ed80b2c134b1204b4",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_188",
+      "file": "topologies/synthetic_dag_188.json",
+      "sha256": "ef3e5ebf171ac8cde044e5c1b274e948fa8608ca3e0b4dce07d3efeaad44848f",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_189",
+      "file": "topologies/synthetic_dag_189.json",
+      "sha256": "c8dc20fd11b95d622bf8dc15115f5804abb1428a966b5c561040a5265408d2c1",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_190",
+      "file": "topologies/synthetic_dag_190.json",
+      "sha256": "ccfb8b57853a1fe86240811f846627bc3907c13beeda6b0f956b5a8f4da1a463",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_191",
+      "file": "topologies/synthetic_dag_191.json",
+      "sha256": "37b193c27325829990d5edae233fe65c78be14ebc485cb3f02791fd0e668581b",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_192",
+      "file": "topologies/synthetic_dag_192.json",
+      "sha256": "e63b94b7e30ce7582f6adfb026e290aa0293c85c198559ea55f0be0bc019ec28",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_193",
+      "file": "topologies/synthetic_dag_193.json",
+      "sha256": "fca393665996a78dc57bba887a54c4d594b741c761afc630335f11c078d56270",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 7
+    },
+    {
+      "id": "syn_dag_194",
+      "file": "topologies/synthetic_dag_194.json",
+      "sha256": "4921484e6b0380920a6c83f7b865c1b618a09acc5c2b1eff0a92a2960abef255",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_195",
+      "file": "topologies/synthetic_dag_195.json",
+      "sha256": "9abb254a41978de98516ff28bc47280188aafeb125f0057803b0de53a67b02b1",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_196",
+      "file": "topologies/synthetic_dag_196.json",
+      "sha256": "98418d0abcf702385edeb8d039b642f89498e08a009b743f47fdf7d828ce7028",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_197",
+      "file": "topologies/synthetic_dag_197.json",
+      "sha256": "cf13cc45f5596f6da0cb087afbe956b94c36633ad216f0e334f753bf5375f0fa",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_198",
+      "file": "topologies/synthetic_dag_198.json",
+      "sha256": "b1a2afa3ac98d2eaf546ac508c12632489ba1e858d8256a46e60d55f5700e56e",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_199",
+      "file": "topologies/synthetic_dag_199.json",
+      "sha256": "cbcd15ee61e7ca39dd6472f87a5e908ed50f1ec26e336610c36f3d79cab772f9",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_200",
+      "file": "topologies/synthetic_dag_200.json",
+      "sha256": "998db85f9a54d5c2d485d8bc6a75cd735b93a2a35d9ba075f39028a7ade9efac",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_201",
+      "file": "topologies/synthetic_dag_201.json",
+      "sha256": "8155583d762a2119afe049874a3aadb6a4adf11a7ab48d19f6f2239df0146199",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_202",
+      "file": "topologies/synthetic_dag_202.json",
+      "sha256": "3d42c41973756c9d0e5d93e969096cb35f026dd13a40b4f8a781c26306d64142",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_203",
+      "file": "topologies/synthetic_dag_203.json",
+      "sha256": "509724d31a3391771de0a1732ea7193a0e0293325b318dfb6db2186e37d11bf9",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_204",
+      "file": "topologies/synthetic_dag_204.json",
+      "sha256": "dcc004f83c70966404610ae0dcae38ba2ce044b997f1a32af1562145dc003b7e",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 12,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_205",
+      "file": "topologies/synthetic_dag_205.json",
+      "sha256": "0594a25e9fbb5e30d7ed7869ba27709812b33b46968b37d32682cec4b1049bf7",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_206",
+      "file": "topologies/synthetic_dag_206.json",
+      "sha256": "907ba36015b8bfb7b01ddbd16df50e1fef66a518c8f289efc734bf5d7181c96b",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_207",
+      "file": "topologies/synthetic_dag_207.json",
+      "sha256": "c9f46057bda462370bb04298302210c26dde23375189ad576590f5c299cedbc9",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_208",
+      "file": "topologies/synthetic_dag_208.json",
+      "sha256": "2083cc95f226293371b340366f6c6341ad771039a719d7c772c3e73c5ae5c8cc",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_209",
+      "file": "topologies/synthetic_dag_209.json",
+      "sha256": "fc8bdd122c3c6eff81eb4e8c12cf9b5bf7b249d95a1ef0b86bd038323f5cc914",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_210",
+      "file": "topologies/synthetic_dag_210.json",
+      "sha256": "0ae18f43ca0cee3df6bb1ea99aa5c62cc7f1bcb83c4d6d491fe97c493457fc50",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_211",
+      "file": "topologies/synthetic_dag_211.json",
+      "sha256": "444b481d6d57b2f915287ba11e35a25178d6786619a0498d788e2c23e1f3a9b8",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 19,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_212",
+      "file": "topologies/synthetic_dag_212.json",
+      "sha256": "77597fb19f0a9c0990439073957074a7fd1e0eca7e6995a7784c6f35c9723d58",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_213",
+      "file": "topologies/synthetic_dag_213.json",
+      "sha256": "30d12f2f80159ac9bc4e457089670c5018a40ed7e594c2b0050faa40f6b66375",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_214",
+      "file": "topologies/synthetic_dag_214.json",
+      "sha256": "11b52ed177dd8448ab66cf912373e069eb36e3722baf64276dab0cc804022c84",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_215",
+      "file": "topologies/synthetic_dag_215.json",
+      "sha256": "26d3ef2f95114314fe9161b5a91f6501a2906cd887455e6d1f337fc9ffb76e54",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_216",
+      "file": "topologies/synthetic_dag_216.json",
+      "sha256": "9a7584c43193086f39339f88e99e12e8a95e732634f43758af874f54882678a1",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_217",
+      "file": "topologies/synthetic_dag_217.json",
+      "sha256": "ee6e25d3381ddd3cef6b4c73e292ca73a8ac01538d22cd7fbffea003b302d006",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_218",
+      "file": "topologies/synthetic_dag_218.json",
+      "sha256": "004bb4cc0d5c346ed529917d05cac4f9b5c6a9977243f0cb049157b50f0638f8",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_219",
+      "file": "topologies/synthetic_dag_219.json",
+      "sha256": "3c3d1a834873dc7f4fc7cffadd89e72ebed6b8a1ae9348a71fd76da3ab353b4f",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_220",
+      "file": "topologies/synthetic_dag_220.json",
+      "sha256": "036cb1d8c6bfced3c0bc20211e38fdf84b6d0313b9aabd3b62bf48935622d5e6",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_221",
+      "file": "topologies/synthetic_dag_221.json",
+      "sha256": "f50a9fd03860b04d33fba1c6558b1c5665de507d95427676399be4fcb1b55af0",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_222",
+      "file": "topologies/synthetic_dag_222.json",
+      "sha256": "bc4b5503e6fef97d5a1ca0d5b5b1c90dc4398e8f2417f5f3c4142786f5c868d0",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_223",
+      "file": "topologies/synthetic_dag_223.json",
+      "sha256": "e2af0de6bcea036199fda6d4deac93c0b884cd48108eee8ddf4c8efdaf7cdbaf",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_224",
+      "file": "topologies/synthetic_dag_224.json",
+      "sha256": "d2ac4b90c7ad39d7e865cba0f535391e964ffd80a6a50e1f6c761ce29b67cf31",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 8
+    },
+    {
+      "id": "syn_dag_225",
+      "file": "topologies/synthetic_dag_225.json",
+      "sha256": "d36f1f96852d3496e53dc65f3efa8070ce568ae97b257701e8c0c6c6ba864652",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_226",
+      "file": "topologies/synthetic_dag_226.json",
+      "sha256": "456db442bf47fd247dd627217c9e6a8b23952af86cb982ca63ed02b99255cfd6",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_227",
+      "file": "topologies/synthetic_dag_227.json",
+      "sha256": "a1fb1f917df18bc3738ad373954d5bc2ec243cf4c1bf7fa6af2e89a381ced57c",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_228",
+      "file": "topologies/synthetic_dag_228.json",
+      "sha256": "b1b929a504c612fd5fb9daeb2f9f7e8b96712ef80948c8cdc710781f8d50482d",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 8,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_229",
+      "file": "topologies/synthetic_dag_229.json",
+      "sha256": "f01d57f9a6eb45d96d8ccb62498f5f012a1f4b0a6169b2b56e73e1dd11ff2192",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_230",
+      "file": "topologies/synthetic_dag_230.json",
+      "sha256": "41f5de9f06969b09855d6b83cd68973466496fb1ed9b31debd58401ba501c235",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_231",
+      "file": "topologies/synthetic_dag_231.json",
+      "sha256": "5bb6f70f24c6518e2cae3d5b8dcf871d2df8ce4f722b98f15dbb8de9c53539ae",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_232",
+      "file": "topologies/synthetic_dag_232.json",
+      "sha256": "8288cde61625f00af1d12c458bd85f5655c2d9f79da34fff0c05d6c709600e86",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_233",
+      "file": "topologies/synthetic_dag_233.json",
+      "sha256": "48dc482aa867623dd97c7498c28324d6cf38118960c707e5ff989ff945381042",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_234",
+      "file": "topologies/synthetic_dag_234.json",
+      "sha256": "a12fc3a54e72c9a6f44ebce1d2cae889b5a7428c038e49a5f5bc34cc4c5a1405",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_235",
+      "file": "topologies/synthetic_dag_235.json",
+      "sha256": "b06842270c9b50555a0ff424fab9c1ef3ca3e3e06d89d2d0ed6087c7e88dd3be",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_236",
+      "file": "topologies/synthetic_dag_236.json",
+      "sha256": "0f866973fbddd8303413d6b341ca1f27e04e8e8a364f6685b3e99bfc4c742cc8",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_237",
+      "file": "topologies/synthetic_dag_237.json",
+      "sha256": "0d62026c548d60f9306eace8caee50a1db273678ce48e00ac2f55c1ec6732dfb",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_238",
+      "file": "topologies/synthetic_dag_238.json",
+      "sha256": "799ed6530c60e50b2d7a8eabb2851eb3d3771034a72c2cb71bb30097d2fd66ae",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_239",
+      "file": "topologies/synthetic_dag_239.json",
+      "sha256": "0230e25d15647a30b803599c06e1c891c0e0f2bd896205babdcc33fb23eb1c0c",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_240",
+      "file": "topologies/synthetic_dag_240.json",
+      "sha256": "d9abb0962956e8932fc84bf67eaaa551eb28ed67fe86224fad3c348a3efd6e2f",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 7
+    },
+    {
+      "id": "syn_dag_241",
+      "file": "topologies/synthetic_dag_241.json",
+      "sha256": "c9507bb261958a7914b631c222e6481371c463b00d802149ec4a20ebe2c602f2",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_242",
+      "file": "topologies/synthetic_dag_242.json",
+      "sha256": "7b58571aa63c50431191aa09600570e88915a738007cf5787d1abab1a52da312",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_243",
+      "file": "topologies/synthetic_dag_243.json",
+      "sha256": "5d7b28508bfa608f4cd037c3fd2ace6d3227518cab9716c1201269f98f39a6b3",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_244",
+      "file": "topologies/synthetic_dag_244.json",
+      "sha256": "1e3ca52401c2fc6532191e11dc70d1c61064c1a1ba1d60c1b616d30d0d98b9ed",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_245",
+      "file": "topologies/synthetic_dag_245.json",
+      "sha256": "ac264893e360693f4d1faa75806044ab21237eabc2792465cf138a31d55a9b43",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 22,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_246",
+      "file": "topologies/synthetic_dag_246.json",
+      "sha256": "4cb5eec4e8ed566f92725d0143d4c8f4ddca20311b3f0b0aeed0d01e8cab7f53",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_247",
+      "file": "topologies/synthetic_dag_247.json",
+      "sha256": "81aabd63f129db5dd49b6d196cde61c4496b5eae783e05a4f6736fcff566d76f",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_248",
+      "file": "topologies/synthetic_dag_248.json",
+      "sha256": "d2bcce1d8c4547d02de5ba88f4568d44e0cd2519e7aad633d0dbd0e5fa17c2cd",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_249",
+      "file": "topologies/synthetic_dag_249.json",
+      "sha256": "ece7362752a91108b2186b2cbd6c291e57360375495bf0c1637089293c75a060",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 2
+    },
+    {
+      "id": "syn_dag_250",
+      "file": "topologies/synthetic_dag_250.json",
+      "sha256": "2c3c48573d4f0de7109724abb2c9826c73feb01b69348591b348b884c23e5390",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_251",
+      "file": "topologies/synthetic_dag_251.json",
+      "sha256": "efa05c83728c27946442ca42422f9c3052391502c655cff6d20bddef1207b4d9",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_252",
+      "file": "topologies/synthetic_dag_252.json",
+      "sha256": "76c9ac69d6aca3b4f3f942941eaa708db3a5f5d368071b60c66ed75906e7c8d6",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_253",
+      "file": "topologies/synthetic_dag_253.json",
+      "sha256": "2434ff267bf9f53843f3c3a8c4ca31b9cd8f5b36c4f5faca7e2a940e0cf5f8f5",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_254",
+      "file": "topologies/synthetic_dag_254.json",
+      "sha256": "e9e74043d6582bc88c1e0df16339586e27662a88391fff08e10b4e56b54fcb5b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_255",
+      "file": "topologies/synthetic_dag_255.json",
+      "sha256": "c9c519b3703fbd27aba0a14b9ba34a3e00df9058cfdb0e6c24000e118bf87f2f",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_256",
+      "file": "topologies/synthetic_dag_256.json",
+      "sha256": "a2f7ccc370984c0c46e061b038d2dc9816049e30b03cb13af289727ee312636e",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_257",
+      "file": "topologies/synthetic_dag_257.json",
+      "sha256": "7c2f72e47f1fa5cb1ff62a1bfe0afcd37581aa0f8826fa85078ea5a8dd189956",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_258",
+      "file": "topologies/synthetic_dag_258.json",
+      "sha256": "20ff530b774b1533805fc3d6812104a55198ed1ede51a8a6a19399979837ae61",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_259",
+      "file": "topologies/synthetic_dag_259.json",
+      "sha256": "55b10da129ba42096f51c33d2e68090a190f1f9732e6938cf6b49753177b6fa7",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 7
+    },
+    {
+      "id": "syn_dag_260",
+      "file": "topologies/synthetic_dag_260.json",
+      "sha256": "c17dd491bbe68c87bb1e90ad5b795ca469d8b8f1ded07d931c3188dc74983d73",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_261",
+      "file": "topologies/synthetic_dag_261.json",
+      "sha256": "911ecffd8d7833c4912fd6428e2c10baddbbcc1e95036f97667e8aa6bacd2cd8",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 21,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_262",
+      "file": "topologies/synthetic_dag_262.json",
+      "sha256": "00f53bcf71042f4d82da75ae2de190d8e6f51b8d7f1b0a8e9f37d79ae571494f",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_263",
+      "file": "topologies/synthetic_dag_263.json",
+      "sha256": "89b244d004cdc7ff76f16e66c3698c6a52198df1281de4a4383c2a26f6b7a304",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_264",
+      "file": "topologies/synthetic_dag_264.json",
+      "sha256": "cf607b59cc88e874228ebedb1c07636b3943ce436e107d4732cecf4ee63c8929",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_265",
+      "file": "topologies/synthetic_dag_265.json",
+      "sha256": "764e3e125de7de78cf905040cdd95ab98f7ef9b1ff6000aaa7da868fc17f4b32",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_266",
+      "file": "topologies/synthetic_dag_266.json",
+      "sha256": "9d23db96b0d1881f5adcfc4b3679eabc587c35a33afd736771ac762d76ed8e50",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_267",
+      "file": "topologies/synthetic_dag_267.json",
+      "sha256": "c46966d1c241e8aef31a2d09e8fd65151e22557544f1d1a2f4dabfdc645ab402",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_268",
+      "file": "topologies/synthetic_dag_268.json",
+      "sha256": "e8339d5c8edd66258dc1f24fe8d253e3019b9a6c2fcbf34656c9c8a2f550e54d",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_269",
+      "file": "topologies/synthetic_dag_269.json",
+      "sha256": "a94de44637cd73b0566d85c41bbcd6dd0c9bce9c49db6fd755952ff0554d93a2",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_270",
+      "file": "topologies/synthetic_dag_270.json",
+      "sha256": "dee5e7000e55811883d784e1f2937a6b71a13f52ca0a37b5b9499bff775c1348",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_271",
+      "file": "topologies/synthetic_dag_271.json",
+      "sha256": "8cc53d357177a997e6346238db6a695f59f454d8f24309bfd1440aeb3a17539b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_272",
+      "file": "topologies/synthetic_dag_272.json",
+      "sha256": "41183574f834f60399f3c2d692d2dfc55c57d71a61094483664da4670ac540a8",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_273",
+      "file": "topologies/synthetic_dag_273.json",
+      "sha256": "5d8c516ecbb3169dc7b9dccf9a349d431a00f1752b45ef776e87fdd11e79a2ac",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_274",
+      "file": "topologies/synthetic_dag_274.json",
+      "sha256": "3318df20d3599848104b18234b3a0116bc3832d0e320a739dd0a7ab5a880c70c",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_275",
+      "file": "topologies/synthetic_dag_275.json",
+      "sha256": "5976179ae045afcd5775a587a5b065064d6ac4dabb7ba0489a811cbb9bc8d947",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_276",
+      "file": "topologies/synthetic_dag_276.json",
+      "sha256": "44312fecc1a65db4eb4fa9b2385b076a08dcae001c601be72ac075ad3bd520aa",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_277",
+      "file": "topologies/synthetic_dag_277.json",
+      "sha256": "3885d86a480f001daf135b138d1c3f2ea6abada09d1fd8a68cd9378e559e12ce",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_278",
+      "file": "topologies/synthetic_dag_278.json",
+      "sha256": "f12adb43f152f324cb054917a783fdcb27edd231e733fd38238034a3bd574c06",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_279",
+      "file": "topologies/synthetic_dag_279.json",
+      "sha256": "fadf9dbd72cbce98c11dc48d98be3caf87b0d6ee50e047de6aa83ffdb7bb6f66",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_280",
+      "file": "topologies/synthetic_dag_280.json",
+      "sha256": "69f15fbf77dff050333d8513be91ab4f3e11c41dfa5f62e252d55d80aa374e98",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_281",
+      "file": "topologies/synthetic_dag_281.json",
+      "sha256": "53ebc60cdd0db3c5e56869cd032e36670a71578f12a3525e46b407a697a61f5f",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_282",
+      "file": "topologies/synthetic_dag_282.json",
+      "sha256": "2cca7e4192a75cf1115a399333b50b6a2b830245a871033c39978b6a04f18839",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_283",
+      "file": "topologies/synthetic_dag_283.json",
+      "sha256": "c6a21fb59916d45acb801a966024f86303cad28718d88b849f9930ad6f76fde6",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_284",
+      "file": "topologies/synthetic_dag_284.json",
+      "sha256": "57aebcc7de49c29abb5678e125bd390283c17ed9dacf4c49fbad3648eb8d3b20",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_285",
+      "file": "topologies/synthetic_dag_285.json",
+      "sha256": "f53b4559f2a788d180f5bdabb87a65776801b6034265698e65907a9bb7012c82",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_286",
+      "file": "topologies/synthetic_dag_286.json",
+      "sha256": "71f2396b5e853641dfa1001d42357f5fb99b9dfd94c3f29cdf020107e92cc19e",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_287",
+      "file": "topologies/synthetic_dag_287.json",
+      "sha256": "44cc97cda36d39b9b6aa031f9e940661199d441fa7a96b80ae101450ae79d5ed",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_288",
+      "file": "topologies/synthetic_dag_288.json",
+      "sha256": "2c0b02da3d003b40ca2f2a535ffdc1a4763fbd6cad7ba82d3c47a137575c39f3",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 10,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_289",
+      "file": "topologies/synthetic_dag_289.json",
+      "sha256": "4146ba80d8821db825b1321f7fba5a36cfcef12778ce19f9eccef29fb8d68b69",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_290",
+      "file": "topologies/synthetic_dag_290.json",
+      "sha256": "88f3f7bb6946c1e9b118ab4936ed83214eaca6d5beffe2727b214813395d7e10",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 18,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_291",
+      "file": "topologies/synthetic_dag_291.json",
+      "sha256": "4fcda63ae8c1dece0a4bc5becad0af3fa4e84f7c12885ab60aade22389fecbe3",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_292",
+      "file": "topologies/synthetic_dag_292.json",
+      "sha256": "baafe2902201114f2b8477fac7a238425bd4063709f840766fc52329d14cb3cc",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_293",
+      "file": "topologies/synthetic_dag_293.json",
+      "sha256": "4839aa2bfa5688087cd444494999eb260d7c2e94151a0ad72d8fe0151949335d",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_294",
+      "file": "topologies/synthetic_dag_294.json",
+      "sha256": "b02b5a4203bdaeed4e9103e0f147c3683f189144c3144327dd3e6a79aba40794",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_295",
+      "file": "topologies/synthetic_dag_295.json",
+      "sha256": "1851eee7c2a8321d849996e7e97be86d40060be4b95d6905d4ff99a53eeabcb6",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_296",
+      "file": "topologies/synthetic_dag_296.json",
+      "sha256": "174700977c0e16f1ec1bc981b709863a9620e1eb37a21fcaa168ba494acdd8a4",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 28,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_297",
+      "file": "topologies/synthetic_dag_297.json",
+      "sha256": "db030ab38ad11a8f6d455cad6a20db6e60967d4e980a6984dc87ee3366a31c3b",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_298",
+      "file": "topologies/synthetic_dag_298.json",
+      "sha256": "687261c7b481151d91432bc51e536976f407582c8ed5b6593e4a31c4db5c9620",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 9,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_299",
+      "file": "topologies/synthetic_dag_299.json",
+      "sha256": "3ed65f0c9a7a45eb1cfe84dc37fba7fc98c8924a6509988498971f4263990a3b",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 19,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_300",
+      "file": "topologies/synthetic_dag_300.json",
+      "sha256": "c9641335932a30ff19d0111c25f727cabfcb6fd8a1641ae5b6759f38fa833a7e",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_301",
+      "file": "topologies/synthetic_dag_301.json",
+      "sha256": "8ea177902c1739898692ed8d6c6eff00a5b5e2a711d23605d3b996122cf1d7e1",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_302",
+      "file": "topologies/synthetic_dag_302.json",
+      "sha256": "b55d8a1ef4c2f4d2c3ea1150f8d12ccdd347b23037f1505adde229151b325b77",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_303",
+      "file": "topologies/synthetic_dag_303.json",
+      "sha256": "089e81345ac4687d8c342b531bfbf89951b7aa886d680ec2c016800099e23bad",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 8,
+      "max_out_degree": 7
+    },
+    {
+      "id": "syn_dag_304",
+      "file": "topologies/synthetic_dag_304.json",
+      "sha256": "f697715f959cbefffd277fdb759a665d3349d0c565cb5df0a187f8d675022edc",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_305",
+      "file": "topologies/synthetic_dag_305.json",
+      "sha256": "6998ec648f91cfb422f7d763af1e744b2304373fce332e6a85a93e1f09eca323",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_306",
+      "file": "topologies/synthetic_dag_306.json",
+      "sha256": "2a64ec43c5679c06cb66e63564e381962df334b0301ceaa26b5b0ca211e85b1d",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 20,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_307",
+      "file": "topologies/synthetic_dag_307.json",
+      "sha256": "086a5c34ad681e5e6580076cfb5ec0cc7492a2f9a72dd48d2ab791e023ef0bf0",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_308",
+      "file": "topologies/synthetic_dag_308.json",
+      "sha256": "c3bee651aa618ef196f13ef0ea95572409cd4fce298e1379eab73fa16613c78f",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_309",
+      "file": "topologies/synthetic_dag_309.json",
+      "sha256": "cf56aa800ae9a6a0e34ee3cf10acf20008df980abe4c9a75a47cf9b8bb411f4a",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 16,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_310",
+      "file": "topologies/synthetic_dag_310.json",
+      "sha256": "05cc06aea4e0a3b48c4d46ad5396f68aef4dfb82773c266756106c2aec50b9cf",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_311",
+      "file": "topologies/synthetic_dag_311.json",
+      "sha256": "0cbcd019393948532a5e536bec2413896650062d7ea02d2e8563c4d703b3e7c4",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 13,
+      "max_out_degree": 8
+    },
+    {
+      "id": "syn_dag_312",
+      "file": "topologies/synthetic_dag_312.json",
+      "sha256": "4653f81c316b9059383f2eb2cebb92e1efb62c33a3e2cd57375c49f2828fea0d",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_313",
+      "file": "topologies/synthetic_dag_313.json",
+      "sha256": "655df666794e939b74d54fdcf8057d99508410ec9c680287f8e82f815a66d83b",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_314",
+      "file": "topologies/synthetic_dag_314.json",
+      "sha256": "ee647c83cdb42e2f9d26a7124db1a5f092de8c9c153a806de92078f07bd521f0",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_315",
+      "file": "topologies/synthetic_dag_315.json",
+      "sha256": "3b37529461b2f5aa2bf5860e9378cb9fd277220a3827e313cb1aed156bbed9b6",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_316",
+      "file": "topologies/synthetic_dag_316.json",
+      "sha256": "579b33af24d146c0783f765bc7cc8c8ef970620d1effb28ede12a281261d70e6",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_317",
+      "file": "topologies/synthetic_dag_317.json",
+      "sha256": "c4ef9f213a974d7c4dabc13cd49479df1884032fecded2ea03282952fd2c445c",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_318",
+      "file": "topologies/synthetic_dag_318.json",
+      "sha256": "f90124b760639a8f4f91142741356f2126ff1626d5c0108ed5b445089cf26f32",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_319",
+      "file": "topologies/synthetic_dag_319.json",
+      "sha256": "4e4cebbdc7742fe94afbe76c7dbb1d43882a797eff5efa62cec6092f9b8b2746",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_320",
+      "file": "topologies/synthetic_dag_320.json",
+      "sha256": "4629081ce69eb1d3a7020c10655e97157d99708acb34dca6da1ebf600af3d7bf",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_321",
+      "file": "topologies/synthetic_dag_321.json",
+      "sha256": "ff9a964f100a70c65aed62d0a7e9e4f1481effc2629f39bf936e1e9fb9af29b5",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 8
+    },
+    {
+      "id": "syn_dag_322",
+      "file": "topologies/synthetic_dag_322.json",
+      "sha256": "e5a58fc698aa2b83e44237d93907803f907ad7777216b3dc0ff204ab160df79d",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 21,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_323",
+      "file": "topologies/synthetic_dag_323.json",
+      "sha256": "3ef5f31280f30ed520b938852348f23c41e26f0d783b494e301787caa6bfae16",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_324",
+      "file": "topologies/synthetic_dag_324.json",
+      "sha256": "a0956bf7dc0cb0955f05b9254eb69aad4e2985886fa11c7ab5d88a423d55061a",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_325",
+      "file": "topologies/synthetic_dag_325.json",
+      "sha256": "c1566b91f3e73d12f25752733f7cbcdc31551dbf87caf6ec2104db24e2c07b2d",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_326",
+      "file": "topologies/synthetic_dag_326.json",
+      "sha256": "9e2261852cd14a73d42359fb54027792147db2702a575fb55c426ee7959af6c6",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_327",
+      "file": "topologies/synthetic_dag_327.json",
+      "sha256": "3b14aa526cff46b92869aafed7ba53e46371f3c3751f21adde71f89f6f84ae06",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_328",
+      "file": "topologies/synthetic_dag_328.json",
+      "sha256": "a27125374a97c85c8e834e9dd80e8ced96a754ca38e3f06ebdf59497e96f1e56",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 10,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_329",
+      "file": "topologies/synthetic_dag_329.json",
+      "sha256": "c4d931933b8d002dd7eeb39e1ee957712300aa00406149330aad292b490add19",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_330",
+      "file": "topologies/synthetic_dag_330.json",
+      "sha256": "3d6e5b6927d3e6c4a2d1ec14bed29a72658cc899041aff82b6a01e68efeff1d1",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_331",
+      "file": "topologies/synthetic_dag_331.json",
+      "sha256": "4652ff1880be60b0b8f1a1312791bfb49d50883e93dfcaacadb38b3b8fe6bc58",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 12
+    },
+    {
+      "id": "syn_dag_332",
+      "file": "topologies/synthetic_dag_332.json",
+      "sha256": "f0cdd79c07cd72cdf48164eedb4bca32adb0fc5e94433faf73e5117a0c393ddc",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_333",
+      "file": "topologies/synthetic_dag_333.json",
+      "sha256": "2d37f30ebaffe3131c85e71df3149b738bd8392a03e0893f65c119923520bcd0",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_334",
+      "file": "topologies/synthetic_dag_334.json",
+      "sha256": "94f4a5a69cf97c4d4e9be8e5464e36d147ff2b66f92d88184a9041d0c6dd93b5",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_335",
+      "file": "topologies/synthetic_dag_335.json",
+      "sha256": "ec11db4ead9149df5840d7102f76c56621976bc99c2fc856a11be610c938adde",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_336",
+      "file": "topologies/synthetic_dag_336.json",
+      "sha256": "4274316eeef5dc6eec949e93d472fff0bbdbed59c74ac61fafd24f8c7fdd3d16",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_337",
+      "file": "topologies/synthetic_dag_337.json",
+      "sha256": "b2f51e43909abe1e34792077f916ac4b39c90e8d22c3110ccb65ca89b9b9833a",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_338",
+      "file": "topologies/synthetic_dag_338.json",
+      "sha256": "332392d1ea86dfcd834731a7db0aa66ffc785fe650c8670ab3fa1823df5485e6",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 6
+    },
+    {
+      "id": "syn_dag_339",
+      "file": "topologies/synthetic_dag_339.json",
+      "sha256": "d3f82862c4519062361e403967f5fdc0bac217867143be1d03829c21d29b4894",
+      "split": "design",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_340",
+      "file": "topologies/synthetic_dag_340.json",
+      "sha256": "8a05efd4a84edc447232820e352a19c76f24ccd5750050add4dbc8e4adc3ebe8",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 17,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_341",
+      "file": "topologies/synthetic_dag_341.json",
+      "sha256": "84ad01b1e1c7f4107e4b7de311b8d473564fc3f5f9d03f645ddc82a5641c0288",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_342",
+      "file": "topologies/synthetic_dag_342.json",
+      "sha256": "b759027d64132df61186b9f62d5c24e58af4456f37efe2375ce0f6965fa03fae",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 6,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_343",
+      "file": "topologies/synthetic_dag_343.json",
+      "sha256": "512a3120f0c5a6fcd9a7616a3832df330ac1cf921e8c7e7a91e9518bf5369dde",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 6,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_344",
+      "file": "topologies/synthetic_dag_344.json",
+      "sha256": "057c31dd3a0bb41319a17f7adbe37c58e3a2ccdb464d60509db0a3023b1020e1",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 15,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_345",
+      "file": "topologies/synthetic_dag_345.json",
+      "sha256": "306112f8d6156e3dc8d4bb69b6280c6e0a987af6fc17c01da99ff9bed37e670c",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 11,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_346",
+      "file": "topologies/synthetic_dag_346.json",
+      "sha256": "07133858fd412bf39798eca03946be7bb38dd722ac5cd520d8452d092d0ac1e5",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 14,
+      "max_out_degree": 3
+    },
+    {
+      "id": "syn_dag_347",
+      "file": "topologies/synthetic_dag_347.json",
+      "sha256": "ec6b08cbfafb73efa161eae1f087aed23634fff7185c6faba98d502854d21dc4",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 8,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_348",
+      "file": "topologies/synthetic_dag_348.json",
+      "sha256": "5ebd6f1a65f65c3927a99f61a9bfa3585ea8bef87c54d0e3ec69b6836fd2e726",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 19,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_349",
+      "file": "topologies/synthetic_dag_349.json",
+      "sha256": "88030deac13abd512063476b6e6e9ee8dfcee19025444c2450cef111a6193417",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_350",
+      "file": "topologies/synthetic_dag_350.json",
+      "sha256": "0ead9f2309b52d7bad29603876fed48d0603bf96bb6257e5d2536a26b55b14a2",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 10,
+      "max_out_degree": 10
+    },
+    {
+      "id": "syn_dag_351",
+      "file": "topologies/synthetic_dag_351.json",
+      "sha256": "f64e25193dced2eaf153d2dc12f0245a11f947b349af1fe45c1ae47f928e71cd",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 5
+    },
+    {
+      "id": "syn_dag_352",
+      "file": "topologies/synthetic_dag_352.json",
+      "sha256": "21fcad7ff830f521aad1e2c968e032503dd1fae33a2099c97d6ca6d1e738dfd7",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 7,
+      "max_out_degree": 9
+    },
+    {
+      "id": "syn_dag_353",
+      "file": "topologies/synthetic_dag_353.json",
+      "sha256": "03512f093af147adb147b30a26f695ce213d81045b3e2e36366cd831a45d8242",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 9,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_354",
+      "file": "topologies/synthetic_dag_354.json",
+      "sha256": "c7d7a4ac9f8352abed00d8ac7d1db7a58c662336324da7327c087b7d588e846c",
+      "split": "calibration",
+      "profile": "erdos_renyi",
+      "n_v_structures": 26,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_355",
+      "file": "topologies/synthetic_dag_355.json",
+      "sha256": "1108f64f503f10849c47dadad5a79f18d4be75e06284ff7e5884a399ae26524d",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 5,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_356",
+      "file": "topologies/synthetic_dag_356.json",
+      "sha256": "c6fd2c61de6cf72a25a2de7f5586cd67368d70d24c5dbe53d15c6fc4c81153df",
+      "split": "design",
+      "profile": "erdos_renyi",
+      "n_v_structures": 12,
+      "max_out_degree": 4
+    },
+    {
+      "id": "syn_dag_357",
+      "file": "topologies/synthetic_dag_357.json",
+      "sha256": "4ecf4a15c04bea5c617ef4457346d7add9871d5ace0609cfeca84b6d6df416fb",
+      "split": "calibration",
+      "profile": "scale_free_hub",
+      "n_v_structures": 4,
+      "max_out_degree": 13
+    },
+    {
+      "id": "syn_dag_358",
+      "file": "topologies/synthetic_dag_358.json",
+      "sha256": "e0bde52aa39a742fe30d588da621a55213a813bed362608ed8b53213c7f9389d",
+      "split": "test",
+      "profile": "scale_free_hub",
+      "n_v_structures": 3,
+      "max_out_degree": 11
+    },
+    {
+      "id": "syn_dag_359",
+      "file": "topologies/synthetic_dag_359.json",
+      "sha256": "23af4a5772c3b1f140e2f459211b9a03a9347490afb9bcafc70a16a2e75d6b6a",
+      "split": "test",
+      "profile": "erdos_renyi",
+      "n_v_structures": 13,
+      "max_out_degree": 4
+    }
+  ]
+}

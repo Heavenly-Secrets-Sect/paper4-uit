@@ -48,3 +48,17 @@ Verbatim copies of the static DAG banks built for Paper 2. Paper 4 turns each to
 - **How:** generated on 2026-11-03 by `D-07/generate_d07_bank.py --seed 20261106 --bank-dir P4-H5 --manifest-name p4h5_manifest.json --decision-id P4-H5`. None of its edge sets matches D-07, D-07H, P4-H1..P4-H4.
 - **Manifest SHA-256:** `86827ed5c2b7a387d0989cb9edfe945976c8759430b86015cf59322ce4424261`.
 - **Sealed:** reserved for ONE run of RQ4.1 with revised rules (a') and (c2). No design, tuning or look before that run.
+
+## P4-H6 (generated for Paper 4, sealed)
+
+- **What:** 40 topologies (20 development / 20 confirmatory; 20 Erdős–Rényi / 20 scale-free hub), 14 nodes, 21 edges.
+- **How:** generated on 2026-11-13 by `D-07/generate_d07_bank.py --seed 20261113 --bank-dir P4-H6 --manifest-name p4h6_manifest.json --decision-id P4-H6`. None of its edge sets matches D-07, D-07H, P4-H1..P4-H5.
+- **Manifest SHA-256:** `2102a388f0bb369f3f1cc1fd3c31ccec56236530a888889f453b589891d2c481`.
+- **Sealed:** reserved for ONE run of E2 (frozen tolerant_v5_1 under non-Gaussian shocks), confirmatory split only; the development split stays unopened. No design, tuning or look before that run.
+
+## P4-H7 (generated for Paper 4, split sealed)
+
+- **What:** 360 topologies (60 design / 150 calibration / 150 test; 180 Erdős–Rényi / 180 scale-free hub), 14 nodes, 21 edges, drawn i.i.d. and assigned to splits by a seeded permutation stratified by profile; ids carry no split or profile information.
+- **How:** generated on 2026-11-15 by `generate_scalable_bank.py --seed 20261115 --bank-dir data/topology_bank/P4-H7 --manifest-name p4h7_manifest.json --decision-id P4-H7 --splits design=60,calibration=150,test=150`. Uses the DAG samplers of `D-07/generate_d07_bank.py` unchanged.
+- **Manifest SHA-256:** `8286170e4dd297285183d016c3619083137090f583ea36b425fc15e4e6866220`. No edge set is shared with D-07, D-07H or P4-H1 to P4-H6.
+- **Reserved:** design split for design choices and exploratory sensitivity work; calibration split for the one pass computing the guaranteed width factors; **test split for ONE confirmatory run** with factors frozen in `experiments/calibration/p4h7_frozen.json`. Protocol: `docs/ext/p4h7_spec.md`.
