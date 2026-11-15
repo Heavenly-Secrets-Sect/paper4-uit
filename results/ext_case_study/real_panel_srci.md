@@ -1,0 +1,32 @@
+| pair | data | stated | C(H=4) median over seeds | interval (median bounds) | excludes 0 in seeds | width |
+|---|---|---|---|---|---|---|
+| macro_policy_rate_pct -> stock_return_qoq_pct | REAL | none-0.0 | 0.096 | [-0.340, 0.578] | 0/5 | 0.917 |
+| macro_policy_rate_pct -> stock_return_qoq_pct | REAL | missing-0.2 | -0.157 | [-1.999, 2.370] | 0/5 | 4.369 |
+| macro_policy_rate_pct -> stock_return_qoq_pct | REAL | missing-0.5 | -0.080 | [-3.189, 4.079] | 0/5 | 7.268 |
+| macro_policy_rate_pct -> stock_avg_daily_trade_value_vnd | REAL | none-0.0 | -1.331 | [-7.689, 4.339] | 0/5 | 12.028 |
+| macro_policy_rate_pct -> stock_avg_daily_trade_value_vnd | REAL | missing-0.2 | -0.783 | [-5.579, 3.831] | 0/5 | 9.410 |
+| macro_policy_rate_pct -> stock_avg_daily_trade_value_vnd | REAL | missing-0.5 | -0.440 | [-6.035, 5.498] | 0/5 | 11.533 |
+| macro_policy_rate_pct -> macro_gdp_yoy_pct | REAL | none-0.0 | 0.123 | [-0.329, 0.569] | 0/5 | 0.899 |
+| macro_policy_rate_pct -> macro_gdp_yoy_pct | REAL | missing-0.2 | 0.040 | [-1.085, 1.131] | 0/5 | 2.216 |
+| macro_policy_rate_pct -> macro_gdp_yoy_pct | REAL | missing-0.5 | 0.102 | [-2.425, 2.559] | 0/5 | 4.984 |
+| macro_policy_rate_pct -> macro_cpi_avg_pct | REAL | none-0.0 | 0.069 | [-2.186, 2.261] | 0/5 | 4.447 |
+| macro_policy_rate_pct -> macro_cpi_avg_pct | REAL | missing-0.2 | -0.444 | [-2.794, 1.682] | 0/5 | 4.476 |
+| macro_policy_rate_pct -> macro_cpi_avg_pct | REAL | missing-0.5 | -0.139 | [-3.258, 2.994] | 0/5 | 6.252 |
+| macro_cpi_avg_pct -> stock_avg_daily_volume_cp | REAL | none-0.0 | -2.634 | [-7.757, 3.286] | 0/5 | 11.044 |
+| macro_cpi_avg_pct -> stock_avg_daily_volume_cp | REAL | missing-0.2 | -0.305 | [-4.570, 2.907] | 0/5 | 7.476 |
+| macro_cpi_avg_pct -> stock_avg_daily_volume_cp | REAL | missing-0.5 | -0.496 | [-6.297, 4.581] | 0/5 | 10.878 |
+| macro_policy_rate_pct -> bank_npl_ratio | illustrative | none-0.0 | -0.115 | [-2.019, 1.842] | 0/5 | 3.861 |
+| macro_policy_rate_pct -> bank_npl_ratio | illustrative | missing-0.2 | -0.239 | [-3.219, 2.600] | 0/5 | 5.819 |
+| macro_policy_rate_pct -> bank_npl_ratio | illustrative | missing-0.5 | -0.267 | [-4.845, 3.609] | 0/5 | 8.454 |
+| macro_policy_rate_pct -> bank_roe_ratio | illustrative | none-0.0 | 0.288 | [-1.903, 2.545] | 0/5 | 4.449 |
+| macro_policy_rate_pct -> bank_roe_ratio | illustrative | missing-0.2 | 0.250 | [-3.070, 3.886] | 0/5 | 6.957 |
+| macro_policy_rate_pct -> bank_roe_ratio | illustrative | missing-0.5 | 0.163 | [-3.950, 5.374] | 0/5 | 9.324 |
+| macro_cpi_avg_pct -> bank_roe_ratio | illustrative | none-0.0 | -0.175 | [-3.507, 3.021] | 0/5 | 6.529 |
+| macro_cpi_avg_pct -> bank_roe_ratio | illustrative | missing-0.2 | 0.125 | [-3.991, 4.777] | 0/5 | 8.767 |
+| macro_cpi_avg_pct -> bank_roe_ratio | illustrative | missing-0.5 | -0.327 | [-7.401, 5.813] | 0/5 | 13.215 |
+| macro_gdp_yoy_pct -> bank_car_ratio | illustrative | none-0.0 | -0.268 | [-1.145, 0.513] | 0/5 | 1.657 |
+| macro_gdp_yoy_pct -> bank_car_ratio | illustrative | missing-0.2 | -0.313 | [-1.636, 0.696] | 0/5 | 2.331 |
+| macro_gdp_yoy_pct -> bank_car_ratio | illustrative | missing-0.5 | -0.255 | [-1.643, 0.711] | 0/5 | 2.354 |
+| bank_ldr_ratio -> bank_npl_ratio | illustrative | none-0.0 | -0.043 | [-0.954, 0.841] | 0/5 | 1.795 |
+| bank_ldr_ratio -> bank_npl_ratio | illustrative | missing-0.2 | -0.045 | [-2.148, 1.869] | 0/5 | 4.017 |
+| bank_ldr_ratio -> bank_npl_ratio | illustrative | missing-0.5 | 0.035 | [-4.426, 4.328] | 0/5 | 8.754 |
