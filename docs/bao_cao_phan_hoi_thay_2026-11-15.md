@@ -79,6 +79,8 @@ Hạn chế: "thành công" chỉ là bước fit hoàn tất; coverage chỉ t�
 
 ## 5. Điểm 7: sơ đồ phương pháp
 
+![Sơ đồ phương pháp SRCI](latex/figures/architecture_srci.png){width=100%}
+
 Hình: `docs/latex/figures/architecture_srci.png` (và .pdf). Gồm đầu vào, 6 bước (chấm bằng chứng, mở lag có chọn lọc, bổ sung cạnh cùng kỳ bằng Benjamini–Hochberg, đảo chiều có chọn lọc, bootstrap có chọn lại cấu trúc, hiệu chỉnh độ rộng) và đầu ra, kèm luật chuyển nhánh theo tỉ số hàng trên số biến hồi quy.
 
 ## 6. Điểm 4: mô phỏng
@@ -157,7 +159,7 @@ Mỗi phương pháp được hiệu chỉnh bằng **cùng một quy tắc** (t
 
 ## 12. Điểm 5: cờ độ tin cậy
 
-Cờ mới là mô hình gradient boosting với các đặc trưng quan sát được (độ rộng, tỉ lệ |trung điểm| trên nửa độ rộng, khoảng có chứa 0 hay không, khai báo hỏng, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy...). Huấn luyện chỉ trên split hiệu chỉnh (kiểm định chéo theo topology), đóng băng trước khi chạy split kiểm tra (592.412 cặp).
+Cờ (phiên bản 1) là mô hình gradient boosting với các đặc trưng quan sát được (độ rộng, tỉ lệ |trung điểm| trên nửa độ rộng, khoảng có chứa 0 hay không, khai báo hỏng, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy...). Huấn luyện chỉ trên split hiệu chỉnh (kiểm định chéo theo topology), đóng băng trước khi chạy split kiểm tra (592.412 cặp).
 
 | Nhóm T | AUROC cờ mới | AUROC cờ cũ | Hiệu [khoảng tin cậy 95%] | Cặp trượt nhiều gấp (top 10%) |
 |---|---|---|---|---|
@@ -167,3 +169,17 @@ Cờ mới là mô hình gradient boosting với các đặc trưng quan sát đ
 | 80–150 | 0,776 | 0,744 | +0,032 [+0,026; +0,038] | 3,96 |
 
 Tiêu chí ghi trước (tăng ít nhất 0,03 AUROC ở **cả ba** nhóm T với khoảng tin cậy trên 0) **không đạt** vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cải thiện rõ ở T nhỏ và vừa phải ở T lớn, nơi AUROC vẫn chỉ 0,78.
+
+**AUROC theo kịch bản (lag 1, tập kiểm tra 550 topology; cờ mới / cờ cũ; gộp hai mức hỏng):**
+
+| T | Không hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh | Cả T |
+|---|---|---|---|---|---|
+| 19 | 0,935 / 0,931 | 0,942 / 0,922 | 0,945 / 0,676 | 0,968 / 0,586 | 0,952 / 0,729 |
+| 30 | 0,897 / 0,888 | 0,907 / 0,898 | 0,886 / 0,877 | 0,912 / 0,899 | 0,902 / 0,891 |
+| 40 | 0,878 / 0,865 | 0,897 / 0,883 | 0,855 / 0,846 | 0,894 / 0,877 | 0,882 / 0,868 |
+| 80 | 0,789 / 0,763 | 0,791 / 0,776 | 0,793 / 0,774 | 0,834 / 0,811 | 0,806 / 0,784 |
+| 150 | 0,707 / 0,688 | 0,712 / 0,706 | 0,694 / 0,691 | 0,813 / 0,791 | 0,743 / 0,726 |
+
+AUROC giảm khi T lớn (từ 0,95 xuống 0,74). Cờ mới hơn cờ cũ rõ nhất ở T = 19 với thiếu cạnh và đảo cạnh, nơi cờ cũ gần như vô dụng (0,676 và 0,586). Đây là phân tích mô tả thêm trên chính tập kiểm tra đã dùng.
+
+**Hai lỗi đã phát hiện và đang sửa.** Khi tách theo kịch bản, tôi thấy (1) các đặc trưng về số cạnh khai báo bị ghi bằng 0 ở mọi dòng, nên mô hình không biết mức hỏng khai báo và không tách được theo mức hỏng; (2) các đặc trưng về skeleton khai báo chỉ dùng cạnh cùng kỳ, bỏ qua cạnh có lag (khoảng 70% số cạnh). Cờ mới vẫn hơn cờ cũ dù mắc hai lỗi này. Phiên bản 2 đã có đặc tả (`docs/ext/p4h8_flag_spec_v2.md`, viết trước khi đọc dữ liệu): một mô hình cho cả lag 1, 2, 3, chấm trên tập kiểm tra chưa dùng cho cờ, báo theo lag, T, loại và mức hỏng. Đang chạy; kết quả phiên bản 2 sẽ thay thế bảng trên.
