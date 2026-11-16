@@ -5,8 +5,8 @@ Khi khai báo có cạnh thiếu, cách an toàn nhất là đưa lag của \emp
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figures/buoc_phuong_phap_ours.png}
-\caption{Sáu bước của \ours{}.}\label{fig:ours}
+\includegraphics[width=\textwidth]{figures/architecture_srci.png}
+\caption{Kiến trúc của \ours{}: đầu vào (dữ liệu, skeleton và mức hỏng khai báo), sáu bước và đầu ra (khoảng tin cậy kèm cờ độ tin cậy). Hệ số hiệu chỉnh ở bước 6 là thống kê hạng trên các topology hiệu chỉnh (mục~\ref{sec:bao-dam}).}\label{fig:ours}
 \end{figure}
 
 Đầu vào gồm dữ liệu $X\in\mathbb R^{T\times n}$, skeleton $\mathcal S$ (với tập cạnh cùng kỳ có hướng $\mathcal O$) và khai báo $(k_{\text{miss}},k_{\text{extra}},k_{\text{rev}})$. Gọi $\mathcal N$ là tập các cặp \emph{không nối} trong $\mathcal S$. Đầu ra là $\hat C_{ji}(H)$ và $[\ell_{ji},u_{ji}]$ cho mọi cặp có thứ tự.
@@ -41,7 +41,7 @@ Khi $k_{\text{rev}}>0$, mỗi lần chạy bootstrap lật $k_{\text{rev}}$ cạ
 Mỗi lần chạy bootstrap sinh dữ liệu giả $X^*$ từ phần dư (mục~\ref{sec:bootstrap}), rồi \emph{làm lại các bước 1--4 trên $X^*$} (chọn lại $K$ cặp, bổ sung cạnh, đảo chiều) và fit để được $\hat C^*(H)$. Với $B=199$ lần chạy, khoảng tin cậy là phân vị $2.5\%$--$97.5\%$ và điểm ước lượng là trung bình của các lần. Vì cấu trúc được chọn lại trong từng lần, khoảng tin cậy phản ánh nhiễu dữ liệu và bất định về cấu trúc, tức khoảng hiệu ứng trên các skeleton khả dĩ quanh skeleton đã cho.
 
 \subsection{Bước 6: hiệu chỉnh độ rộng hai phía}
-Khoảng từ bước 5 được co về trung điểm với hệ số $0.5$, rồi nhân với hệ số $c(T,\text{loại lỗi})$ chọn trên một tập dữ liệu hiệu chỉnh riêng, không dùng để chấm điểm, bằng lưới $1.0$--$10$ bước $0.1$. Hệ số hiệu dụng $0.5$--$5$ có thể nhỏ hơn 1, nên bước này nới được khoảng khi under-cover và thu hẹp được khi over-cover. Ví dụ khi thiếu cạnh, hệ số hiệu dụng là $1.3$ ở $T=80$ và $1.15$ ở $T=150$. Các hệ số được cố định trước và không chỉnh lại trên dữ liệu kiểm chứng; loại lỗi dùng để chọn hệ số là thành phần khai báo lớn nhất.
+Khoảng từ bước 5 được nhân nửa độ rộng với một hệ số $c(T,\text{loại lỗi})$ chọn trên một tập topology hiệu chỉnh riêng, không dùng để chấm điểm; loại lỗi dùng để chọn hệ số là thành phần khai báo lớn nhất. Phiên bản cuối chọn $c$ là \emph{thống kê hạng theo topology} (mục~\ref{sec:bao-dam}), nên khoảng có bảo đảm hữu hạn mẫu ở mức topology, và phương pháp từ chối khi hệ số vô hạn. Phiên bản trước chọn $c$ là phân vị gộp mức cặp trên một lưới $1.0$--$10$ bước $0.1$, sau một bước co nửa độ rộng với hệ số $0.5$ (mục~\ref{sec:prescale}); các kết quả thăm dò ở mục~\ref{sec:ket-qua} dùng phiên bản đó. Hệ số hiệu dụng khi thiếu cạnh là khoảng $1.3$ ở $T=80$ và $1.15$ ở $T=150$ trong phiên bản cũ; các hệ số được cố định trước và không chỉnh lại trên dữ liệu kiểm chứng.
 
 \begin{algorithm}[H]
 \caption{\ours{}}

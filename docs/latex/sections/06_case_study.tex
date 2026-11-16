@@ -1,0 +1,31 @@
+\section{Case study: panel kinh tế--tài chính Việt Nam}\label{sec:case-study}
+
+Mục này áp dụng \ours{} trên một panel thực để minh họa cách dùng, không để đánh giá độ chính xác. Dữ liệu thật không có giá trị nhân quả thật, nên \textbf{chúng tôi không báo coverage hay độ chính xác ở mục này}; chỉ báo khoảng tin cậy, độ rộng và độ ổn định.
+
+\subsection{Dữ liệu và khai báo}
+Panel gồm $14$ biến theo quý, $19$ quý (Q2/2020 đến Q4/2024): $7$ biến chỉ số ngành ngân hàng (nợ xấu, tỉ lệ an toàn vốn, biên lãi ròng, ROE, tỉ lệ cho vay/huy động, dự phòng, Z-score), $3$ biến vĩ mô (tăng trưởng GDP, CPI, lãi suất chính sách) và $4$ biến thị trường chứng khoán (giá, lợi suất, khối lượng và giá trị giao dịch). Mỗi cột được chuẩn hóa z-score. Skeleton là đồ thị tri thức tiên nghiệm $21$ cạnh được chiếu lên $14$ biến.
+
+\textbf{Khai báo về nguồn dữ liệu.} Các biến vĩ mô và thị trường là số liệu quan sát. \emph{Bảy biến ngân hàng là dữ liệu mô phỏng hiệu chỉnh (simulated-calibrated)}, không phải số liệu báo cáo thật của ngành: chỉ có một số ít điểm thật dùng để kiểm tra mô phỏng, và so với các điểm đó sai số tương đối là $79\%$ ở nợ xấu và $26\%$ ở ROE, chỉ $11\%$ ở biên lãi ròng và $8\%$ ở tỉ lệ cho vay/huy động. Chúng tôi đã thăm dò việc thu số liệu thật qua các nguồn công khai và kết luận là không khả thi với công sức hợp lý (báo cáo dạng ảnh quét, trang chặn truy cập tự động, định nghĩa nợ xấu đổi qua các thông tư). Vì vậy mọi cặp có biến ngân hàng ở dưới chỉ mang tính \emph{minh họa}; chỉ các cặp giữa hai biến quan sát được là dữ liệu thật.
+
+\subsection{Khoảng tin cậy của các cặp quan tâm}
+Mười cặp được chọn trước khi chạy, từ các đường đi của skeleton và ý nghĩa kinh tế. Chúng tôi chạy ba mức khai báo (không hỏng, thiếu $4$ và thiếu $11$ cạnh) với năm hạt giống bootstrap, hệ số hiệu chỉnh của lag 1 và $T=19$.
+
+\begin{table}[H]
+\centering\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\input{tables/tab_realpanel}
+\caption{Hiệu ứng tích lũy $C(H{=}4)$ (trung vị trên năm hạt giống) và khoảng tin cậy. Đơn vị: độ lệch chuẩn của biến kết quả cho một độ lệch chuẩn của nguyên nhân.}\label{tab:realpanel}
+\end{table}
+
+\emph{Cách đọc.} \textbf{Khoảng tin cậy của cả mười cặp, ở cả ba mức khai báo và mọi hạt giống, đều chứa $0$.} Khoảng rộng ra khi khai báo nhiều cạnh thiếu hơn (ví dụ lãi suất chính sách $\to$ lợi suất cổ phiếu: nửa độ rộng khoảng $0.46$ khi không hỏng, $2.2$ khi thiếu $4$ và $3.6$ khi thiếu $11$ cạnh). Nói cách khác, $19$ quý quá ngắn để kết luận dấu của bất kỳ hiệu ứng nào trong các cặp đã chọn; \ours{} phản ánh đúng mức bất định đó thay vì tạo ra một kết quả có ý nghĩa kinh tế. Nếu hướng tới kết luận kinh tế thì cần chuỗi dài hơn hoặc số liệu ngân hàng thật.
+
+\subsection{Mô phỏng theo panel có giá trị thật}
+Để biết \ours{} hoạt động ra sao trong đúng vùng của panel ($n=14$, $T=19$) với cấu trúc tương quan của nó, chúng tôi fit một SVAR (lag 1, theo skeleton tiên nghiệm) lên panel và coi mô hình fit làm giá trị thật, rồi sinh $400$ chuỗi độ dài $19$ từ đó, làm hỏng skeleton và chạy phương pháp. Mô hình giá trị thật này được fit trên panel có $7$ biến mô phỏng, và chỉ là \emph{một} mô hình cố định, nên kết quả không phải bảo đảm theo topology.
+
+\begin{table}[H]
+\centering\small
+\input{tables/tab_panelsim}
+\caption{Mô phỏng theo panel ($400$ lần sinh, $T=19$, $n=14$).}\label{tab:panelsim}
+\end{table}
+
+\ours{} giữ coverage cặp $0.98$--$0.99$ trong khi RB cắm skeleton tụt xuống $0.29$ khi thiếu $50\%$ cạnh. \textbf{Hạn chế quan trọng:} khi thiếu cạnh, một số lần sinh cho khoảng rộng đột biến (độ rộng trung bình lên tới vài trăm đến vài nghìn, trong khi trung vị là $5$ đến $14$), và $10\%$ lần fit thất bại ở mức thiếu $50\%$. Ở $T=19$ với $11$ cạnh thiếu, bài toán gần vô định.

@@ -30,7 +30,9 @@ Cấu trúc bài đề xuất: Giới thiệu; Công trình liên quan; Bài to�
 | `sections/05_ket_qua.tex` | Thêm 6 đoạn "cách đọc bảng" và 2 bảng mới (RQ4.3, RQ4.4) |
 | `figures/architecture_srci.png` | Hình sơ đồ phương pháp (chưa chèn vào bài) |
 
-**Chưa được cập nhật trong bài (quan trọng):** các section Kết quả vẫn mô tả kết quả cũ. Chưa có section về bảo đảm coverage, về tập topology 1.200 và lag 1–3, về so sánh ở cùng mức đảm bảo, về cờ mới, về nhiễu đo, và về case study. Lý do: chờ các thầy xem xét trước khi viết lại.
+**Cập nhật ngày 16/11 (bản thảo đã viết lại theo kết quả mới):** thêm section "Bảo đảm coverage ở mức topology" (mệnh đề, phác thảo chứng minh, giải thích hệ số 0,5 và bảng độ nhạy); mô tả tập 1.200 topology, lưới lag và quy trình hiệu chỉnh/kiểm tra trong phần thiết lập; viết lại phần Kết quả (xác nhận bảo đảm, vùng dùng được, so sánh ở cùng mức đảm bảo, phần lợi thế do thông tin khai báo, cờ độ tin cậy, độ bền với nhiễu đuôi dày và sai số đo, thảo luận); thêm section Case study (khai báo nguồn dữ liệu, 10 cặp chọn trước, mô phỏng theo panel); đổi đóng góp, câu hỏi nghiên cứu và kết luận; thay hình sơ đồ bằng hình architecture mới. Các bảng mới sinh tự động từ file kết quả (`latex/tables/make_tables.py`). Bản PDF: `latex/Paper4-Bao-cao-day-du-2026-11-16.pdf` (27 trang).
+
+**Vẫn chưa làm:** hướng khắc phục sai số đo; so sánh ở lag 2 và T khác; thu số liệu ngân hàng thật; thẩm định ngoài bản chứng minh; tra trùng tên SRCI đầy đủ.
 
 ## C. Hai kết quả làm yếu kết luận cũ
 
@@ -42,7 +44,7 @@ Ngoài ra lag 2 không đạt tiêu chí (9/12 ô, cần 80%); phương pháp t�
 ## D. Các file kèm theo
 
 - `bao_cao_phan_hoi_thay_2026-11-15.pdf`: báo cáo cho các thầy (12 mục, có số liệu).
-- `latex/main.pdf`: bản thảo LaTeX đã cập nhật một phần (19 trang).
+- `latex/Paper4-Bao-cao-day-du-2026-11-16.pdf`: bản thảo LaTeX đã viết lại theo kết quả mới (27 trang).
 - `ext/decision_rules.md`: nhật ký các quy tắc, hash và kết quả (ghi trước khi chạy).
 - Đặc tả: `ext/p4h8_spec.md`, `ext/p4h8_cmp_spec.md`, `ext/p4h8_flag_spec.md`, `ext/p4h8_flag_spec_v2.md`.
 

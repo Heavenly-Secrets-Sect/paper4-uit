@@ -894,3 +894,17 @@ Protocol: `docs/ext/p4h8_flag_spec_v2.md` (written before any v2 dump was read; 
 The test dumps and the single evaluation are run after this entry. The P4-H7 test split is opened for this purpose only.
 
 **P4-H8 flag version 2: test result (2026-11-16; one evaluation per lag, frozen model, lag 1 on the P4-H7 test split, lags 2 and 3 on the P4-H8 test split).** Per-lag criterion (new flag beats the old flag by at least 0.03 AUROC in each T group, 95% topology cluster interval above 0): **lag 1 NOT MET** (T 19-30: 0.924 vs 0.808, +0.115; T 40: 0.885 vs 0.870, +0.015; T 80-150: 0.786 vs 0.737, +0.049); **lag 2 NOT MET** (T 40: 0.894 vs 0.865, +0.028; T 80-150: 0.790 vs 0.737, +0.053); **lag 3 MET** (T 80-150: 0.790 vs 0.731, +0.059; T 40 abstains). The version-1 result (not met, T = 40) is thus not overturned by fixing the two defects. AUROC falls with T (about 0.93 at T = 19, 0.66 to 0.70 at T = 150 without damage). Details: `results/ext_p4h8_flag_v2/test_eval_v2.md`.
+
+## P4-H8: SRCI without the stated damage, at the same guarantee level: frozen 2026-11-16, test NOT yet run
+
+Protocol: `docs/ext/p4h8_auto_spec.md` (written before any run of the method). Factors computed with `p4h7_factors.py --expected-runs` on the first 150 calibration topologies, T in {40, 150}. Frozen artefacts (SHA-256):
+- `docs/ext/p4h8_auto_spec.md` `2872d47ea562072773e0ca62517bea029f162ca6577350c89ad37ca7543a83cd`
+- `src/paper4/ext_srci_auto.py` `e46fd6a45107f97c3139278d48562915018afe471b14e0195f223bea2799fb06`
+- `experiments/calibration/p4h8_auto_frozen.json` `877def412e521af07d9eded5864efc0c4be8963a767e5fa25b85fb234b1adb48`
+- `results/ext_p4h8_auto/calibration.json` `8cd00fef428a9c6be3249490bf667f95a6f93eeacb652d85ff0d19c58845fbcd`
+
+The test dump (first 200 test topologies, lag 1, T = 40 and 150) is run once after this entry.
+
+**P4-H8: SRCI without the stated damage, test result (2026-11-16; first 200 test topologies, lag 1, T in {40, 150}, run once).** Hit rates 0.83 to 0.93, all intervals reach 0.90. Interval score of the variant vs SRCI (paired, topology cluster bootstrap): equal at T = 40 none (-0.01), +0.06 extra, **+5.26 missing (9.95 vs 4.69)**, +0.15 reversed; at T = 150 +0.17 none, +0.11 extra, +0.05 missing (2.16 vs 2.12), **-0.10 reversed (better)**. Versus BVAR-Minnesota the variant is worse in the undamaged and extra cells (+0.2 to +0.3), and better in the missing and reversed cells at T = 150 (-1.75, -0.94) and reversed at T = 40 (-0.13), but worse at T = 40 missing (+3.82). The stated number of missing edges thus matters mainly at T = 40 with missing edges; elsewhere SRCI keeps most of its position without it. Results: `results/ext_p4h8_auto/test_eval.md`.
+
+**Correction to the entry above (2026-11-16).** The statement "all intervals reach 0.90" is wrong: the hit-rate interval of the variant at T = 150 reversed is [0.775, 0.883] and does not reach 0.90; it does in the other seven cells. The paired interval-score differences are unchanged.

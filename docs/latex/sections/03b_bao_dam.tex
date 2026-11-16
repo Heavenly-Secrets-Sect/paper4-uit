@@ -1,0 +1,66 @@
+\section{Bảo đảm coverage ở mức topology}\label{sec:bao-dam}
+
+\subsection{Vì sao cần một bảo đảm mới}
+Bước hiệu chỉnh độ rộng của \ours{} (bước 6) nhân nửa độ rộng của khoảng bootstrap với một hệ số $c$. Trong các kết quả trước, $c$ là một phân vị gộp mức cặp, chọn trên khoảng $20$ topology, nhằm đưa coverage \emph{trung bình trên mọi cặp} về gần $0.95$. Hệ số đó không bảo đảm gì cho từng topology: trên tập hiệu chỉnh, nó xấp xỉ \emph{trung vị} của điểm theo đơn vị (xem dưới), nên khoảng một nửa số topology vẫn có tỉ lệ cặp trượt vượt mức mong muốn. Mục này phát biểu một bảo đảm hữu hạn mẫu ở mức topology, theo khung conformal \citep{barber2023conformal,dunn2023distribution}, và nêu điều kiện cần để nó đúng.
+
+\subsection{Đơn vị, điểm và hệ số}
+Một \emph{đơn vị} là một topology cùng toàn bộ phần ngẫu nhiên bên trong nó: hệ số và lag của SVAR, phép làm hỏng skeleton, chuỗi dữ liệu và các lần bootstrap. Với mỗi lượt chạy $r$ (một mức hỏng) của một đơn vị, gọi $\mathcal P$ là tập cặp non-null ($|C_{\text{thật}}|>0.1$) và, với cặp $p\in\mathcal P$,
+\begin{equation}
+\rho_{r,p}=\frac{|C_{\text{thật},p}-m_p|}{h_p},
+\end{equation}
+trong đó $m_p$ và $h_p$ là trung điểm và nửa độ rộng của khoảng sau bước co. Khoảng cuối cùng là $[m_p-c\,h_p,\;m_p+c\,h_p]$, nên cặp $p$ được phủ khi và chỉ khi $\rho_{r,p}\le c$. Với ngưỡng $\beta\in(0,1)$, \emph{điểm của lượt chạy} là hệ số nhỏ nhất làm cho không quá một tỉ lệ $\beta$ số cặp của $\mathcal P$ bị trượt:
+\begin{equation}
+S_r(\beta)=\min\{c:\ \tfrac1{|\mathcal P|}\#\{p\in\mathcal P:\rho_{r,p}>c\}\le\beta\},
+\end{equation}
+và \emph{điểm của đơn vị} là $S=\max_r S_r(\beta)$ trên các mức hỏng $r$ (hai mức $20\%$ và $50\%$). Lần fit thất bại được tính là trượt ở mọi $c$ hữu hạn, nghĩa là $S=+\infty$.
+
+Cho $N$ đơn vị hiệu chỉnh và $k_0\le N$, \emph{hệ số theo thống kê hạng} $\hat c$ là điểm lớn thứ $k_0$ từ dưới lên trong $N$ điểm đó. Hai cách chọn $k_0$ được báo cáo: (i) \emph{biên}, $k_0=\lceil(N+1)(1-\delta)\rceil$; (ii) \emph{PAC}, $k_0$ nhỏ nhất sao cho hàm phân phối Beta$(k_0,N+1-k_0)$ tại $1-\delta$ không quá $\alpha_0$. Chúng tôi dùng $\beta=\delta=0.10$ và $\alpha_0=0.05$. Hệ số được chọn riêng cho từng $(T,\text{loại lỗi khai báo})$.
+
+\subsection{Mệnh đề}
+\textbf{Giả định.}
+\begin{enumerate}
+  \item[(H1)] \emph{Hoán vị được.} $N$ đơn vị hiệu chỉnh và đơn vị kiểm tra hoán vị được với nhau; để có phần (b), các đơn vị độc lập và cùng phân phối.
+  \item[(H2)] \emph{Quy trình cố định.} Ước lượng, $B$, các hằng số thiết kế (kể cả hệ số co) và $\beta$ không phụ thuộc vào các đơn vị đang xét.
+  \item[(H3)] \emph{Cùng bối cảnh.} Cùng $T$, cùng loại lỗi khai báo, cùng bộ sinh dữ liệu và cùng kịch bản nhiễu ở hiệu chỉnh và kiểm tra.
+\end{enumerate}
+
+\begin{menhde}\label{prop:rank}
+Với $N'$ đơn vị hiệu chỉnh còn lại sau khi bỏ các đơn vị có $\mathcal P=\emptyset$, và dưới (H1)--(H3):
+\begin{enumerate}
+  \item[(a)] $\mathbb P\bigl(S_{\text{kiểm tra}}\le\hat c\bigr)\ge k_0/(N'+1)$.
+  \item[(b)] Gọi $F$ là hàm phân phối của $S$. Nếu các đơn vị độc lập, thì $F(\hat c)$ trội ngẫu nhiên (stochastically dominates) phân phối Beta$(k_0,N'+1-k_0)$; do đó $\mathbb P(F(\hat c)\le u)\le\mathbb P(\mathrm{Beta}(k_0,N'+1-k_0)\le u)$.
+\end{enumerate}
+\end{menhde}
+
+\emph{Chứng minh (phác thảo).} (a) Với (H1), thứ hạng của $S_{\text{kiểm tra}}$ trong $N'+1$ điểm có phân phối đều trên $\{1,\dots,N'+1\}$ nếu không có điểm trùng, và khi có điểm trùng thì xác suất $S_{\text{kiểm tra}}\le\hat c$ chỉ lớn hơn; xác suất đó bằng ít nhất $k_0/(N'+1)$. (b) Nếu $F$ liên tục thì $F(S_{(k_0)})\sim\mathrm{Beta}(k_0,N'+1-k_0)$ cho $N'$ biến độc lập cùng phân phối; khi $F$ không liên tục (do lưới hoặc điểm trùng) $F(S_{(k_0)})$ chỉ trội ngẫu nhiên hơn Beta. $\square$
+
+\begin{nhanxet}
+Kết quả là một sự kiện chuẩn về thống kê hạng; điều mới là chọn \emph{topology} làm đơn vị hoán vị và điểm $S$ làm đại lượng được bảo đảm. Bản chứng minh chưa được thẩm định độc lập. Với $N'=20$ và lấy điểm lớn nhất ($k_0=N'$), cận (b) cho thấy xác suất $F(\hat c)\le0.90$ có thể lên tới $0.12$ và $F(\hat c)\le0.95$ có thể lên tới $0.36$; muốn tin cậy $95\%$ rằng $F(\hat c)>0.95$ cần ít nhất $N'=59$ đơn vị (vì $0.95^{59}<0.05$). Đây là lý do tập hiệu chỉnh mở rộng ở mục~\ref{sec:thiet-lap}.
+\end{nhanxet}
+
+\subsection{Điều mệnh đề không bảo đảm}
+\begin{itemize}
+  \item Không bảo đảm gì cho từng cặp, hay cho coverage trung bình trên mọi cặp. Cái được bảo đảm là phân phối của \emph{tỉ lệ cặp trượt trên một topology mới}.
+  \item Chỉ đúng cho topology mới \emph{cùng họ bộ sinh} (hoán vị được) và cùng bối cảnh (H3). Hệ quả: hệ số hiệu chỉnh trên một tập cố định, như các tập phát triển và kiểm chứng dùng trước đây, không có cơ sở hoán vị.
+  \item Không nói gì về dữ liệu thật, nhiễu đo hay khai báo sai; mục~\ref{sec:ket-qua} đo thực nghiệm mức độ bền ở các kịch bản vi phạm (H3).
+  \item Khi hệ số vô hạn (quá nhiều lượt fit thất bại), phương pháp \emph{từ chối} (abstain) thay vì đưa ra một khoảng không có bảo đảm.
+\end{itemize}
+
+\subsection{Hệ số co $0.5$}\label{sec:prescale}
+Nửa độ rộng của khoảng bootstrap được nhân với $\kappa=0.5$ \emph{trước} bước hiệu chỉnh. Hằng số này không có cơ sở lý thuyết: nó được thêm vì lưới hiệu chỉnh cũ chỉ cho phép nới ($c\ge1$), trong khi ở $T$ nhỏ khoảng bootstrap đã quá rộng. Nếu $\kappa$ được áp dụng \emph{giống hệt} cho hiệu chỉnh và kiểm tra (H2), khoảng cuối chỉ phụ thuộc vào tích $\kappa c$, nên mệnh đề~\ref{prop:rank} không phụ thuộc vào giá trị của nó; hệ số theo thống kê hạng ở trên là chính xác (không qua lưới) nên $\kappa$ không còn vai trò. Bảng~\ref{tab:prescale} kiểm độ nhạy: hiệu chỉnh theo quy tắc cũ trên tập hiệu chỉnh và đánh giá trên tập thiết kế.
+
+\begin{table}[H]
+\centering\small
+\begin{tabular}{lcccc}
+\toprule
+$\kappa$ & Hệ số hiệu dụng & Chạm sàn lưới & Coverage & IS\\
+\midrule
+$0.25$ & $1.424$ & $0/20$ & $0.951$ & $5.24$\\
+$0.5$ & $1.435$ & $0/20$ & $0.952$ & $5.26$\\
+$1.0$ & $1.460$ & $0/20$ & $0.955$ & $5.33$\\
+$2.0$ & $2.000$ & $20/20$ & $0.988$ & $6.55$\\
+\bottomrule
+\end{tabular}
+\caption{Độ nhạy với hệ số co $\kappa$ (hiệu chỉnh trên 150 topology, đánh giá trên 60 topology thiết kế, 20 ô).}\label{tab:prescale}
+\end{table}
+Với $\kappa\in[0.25,1]$ kết quả gần như trùng nhau; $\kappa=2$ làm lưới chạm sàn nên khoảng quá rộng. Vậy $0.5$ không quan trọng miễn là sàn lưới không bị chạm, và có thể bỏ.

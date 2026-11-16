@@ -43,6 +43,8 @@ Cỡ mẫu & $T\in\{40,80,150\}$ trong thực nghiệm chính; $T$ nhỏ tới $
 Số cặp bị hỏng là $k=\lfloor \text{tỷ lệ}\times\text{cơ sở}+0.5\rfloor$, với cơ sở là số cạnh thật (21), hoặc, với đảo chiều, số cạnh cùng kỳ có thể đảo. Với 21 cạnh, tỷ lệ 20\% cho $k=4$ và 50\% cho $k=11$. Mỗi loại lỗi (thiếu, thừa, đảo) được thử ở hai mức 20\% và 50\%, cộng với trường hợp không hỏng: tổng cộng 7 cell. Phương pháp chỉ nhận cặp nối, chiều cạnh cùng kỳ và khai báo; không nhận danh sách cạnh hỏng, lag, hệ số hay $C(H)$ thật.
 
 \subsection{Quy mô thực nghiệm}\label{sec:quymo}
+Có hai quy mô. Các so sánh với RB, đóng góp thành phần và RQ4.1 dùng quy mô nhỏ dưới đây (20 topology, 60 bộ dữ liệu mỗi cell). Phần xác nhận bảo đảm coverage, vùng dùng được theo số lag, so sánh ở cùng mức đảm bảo và cờ độ tin cậy dùng tập topology mở rộng ở mục~\ref{sec:topology-study}.
+
 Với mỗi cell, chúng tôi dùng một tập gồm 20 topology, mỗi topology 3 lần sinh dữ liệu độc lập, tổng cộng 60 bộ dữ liệu. Trên mỗi bộ dữ liệu, mỗi phương pháp chạy residual bootstrap $B=199$ lần để dựng khoảng tin cậy 95\% (phân vị 2.5\%--97.5\%). Thực nghiệm chính gồm 3 giá trị $T$, 7 cell và 60 bộ dữ liệu, tức $1260$ bộ cho mỗi phương pháp và khoảng $250$ nghìn lần fit.
 
 Mỗi bộ có khoảng 30--40 cặp non-null, nên coverage của một cell được tính trên khoảng 2000 phép kiểm. Cặp mà phương pháp làm mất đường truyền ($\hat C=0$, khoảng $[0,0]$) được tính là trượt.
@@ -55,6 +57,21 @@ Chúng tôi dùng ba loại tập dữ liệu, mỗi loại gồm các topology 
   \item \textbf{Tập kiểm chứng:} các tập topology sinh riêng bằng seed khác, chưa từng được dùng khi thiết kế phương pháp, không trùng cạnh với tập nào trước. Quy tắc kết luận được ghi trước khi chạy cùng giá trị băm (sha256) của code và cấu hình, và mỗi tập kiểm chứng chỉ được dùng một lần cho mỗi nhóm kết luận.
 \end{itemize}
 Các kết quả trong mục~\ref{sec:ket-qua} được gắn nhãn \emph{kiểm chứng} hoặc \emph{thăm dò} theo đúng nguồn dữ liệu này.
+
+\subsection{Nghiên cứu ở mức topology}\label{sec:topology-study}
+\paragraph{Tập topology.} Chúng tôi sinh $1200$ topology (14 nút, 21 cạnh; một nửa Erdős--Rényi, một nửa scale-free có hub), rút độc lập từ cùng một bộ sinh với các tập trước nhưng seed mới, rồi gán ngẫu nhiên, phân tầng theo họ đồ thị, vào ba phần: \emph{thiết kế} ($100$), \emph{hiệu chỉnh} ($550$) và \emph{kiểm tra} ($550$). Mã định danh không chứa thông tin về phần hay họ đồ thị, và không topology nào trùng tập cạnh với một tập đã dùng trước. Cách chia ngẫu nhiên này là điều kiện hoán vị (H1) của mệnh đề~\ref{prop:rank}; ở các tập cũ, tập hiệu chỉnh và tập kiểm chứng là các tập cố định, không có cơ sở đó. Một tập thí điểm $360$ topology ($60/150/150$) đã được dùng để chọn quy tắc và viết mã; phần kiểm tra của nó vẫn niêm phong cho tới khi được dùng một lần cho cờ độ tin cậy ở lag 1.
+
+\paragraph{Lưới.} Số lag sinh dữ liệu $p\in\{1,2,3\}$. Lag 1: $T\in\{19,30,40,80,150\}$; lag 2: $T\in\{30,40,80,150\}$; lag 3: $T\in\{40,80,150\}$ (ở $T$ nhỏ hơn thì quá ít dòng cho lag cao). Mỗi đơn vị gồm lượt không hỏng và các lượt thiếu, thừa, đảo cạnh ở mức $20\%$ và $50\%$; mỗi topology một chuỗi dữ liệu cho mỗi $T$.
+
+\paragraph{Hiệu chỉnh và kiểm tra.} Hệ số theo thống kê hạng (mục~\ref{sec:bao-dam}) được tính một lần trên $550$ topology hiệu chỉnh cho từng lag, từng $(T,\text{loại lỗi})$, rồi đóng băng. Phần kiểm tra được chạy \emph{một lần cho mỗi lag} với hệ số đóng băng. Mức đảm bảo được đo bằng \emph{tỉ lệ topology thỏa điều kiện}, tức có không quá $10\%$ cặp non-null bị trượt, kèm khoảng tin cậy nhị thức chính xác; bên cạnh đó báo coverage gộp theo cặp, độ rộng và interval score. Ô mà hệ số vô hạn hoặc lớn hơn $10$ (tối đa của lưới cũ) là ô \emph{từ chối}.
+
+\paragraph{Đăng ký trước.} Mỗi nghiên cứu có một đặc tả viết trước khi chạy, ghi tiêu chí, ngưỡng và giá trị băm (sha256) của mã, cấu hình, hệ số và dữ liệu. Các ngưỡng (ví dụ ``khoảng tin cậy của tỉ lệ topology chạm $0.90$ ở ít nhất $80\%$ số ô'') do nhóm tự đặt, không do nguồn bên ngoài; chúng được ghi trước khi thấy kết quả và không đổi sau đó. Hai lỗi của mã được phát hiện và sửa \emph{trước} khi chạy phần kiểm tra tương ứng, và được ghi lại (xem mục~\ref{sec:thao-luan}).
+
+\paragraph{Kịch bản vi phạm giả định.} Trên cùng các topology kiểm tra ở lag 1, với hệ số \emph{không chỉnh lại}: nhiễu động học Student-$t$ ($\nu=4$) và Laplace, phương sai bằng $1$; và sai số đo cộng thêm lên chuỗi quan sát với phương sai bằng $10\%$ và $30\%$ phương sai mỗi cột. Giá trị thật vẫn là $C(H)$ của mô hình không có sai số đo.
+
+\paragraph{So sánh ở cùng mức đảm bảo.} Mọi phương pháp ở bảng~\ref{tab:baselines}, trừ RB, Oracle, Inflate, Bagging, LP và IDA, được hiệu chỉnh bằng cùng một quy tắc thống kê hạng trên $150$ topology hiệu chỉnh đầu tiên rồi chạy một lần trên $200$ topology kiểm tra đầu tiên, ở lag 1 và $T\in\{40,150\}$. Một ô được tính thuộc về phương pháp có interval score thấp nhất trong các phương pháp có khoảng tin cậy của tỉ lệ topology chạm $0.90$.
+
+\paragraph{Cờ độ tin cậy.} Nhãn của một cặp non-null là $1$ nếu khoảng cuối cùng (với hệ số đóng băng) trượt giá trị thật. Đặc trưng chỉ gồm thứ người dùng thấy được: độ rộng, tỉ lệ $|\text{trung điểm}|/\text{nửa độ rộng}$, khoảng có chứa $0$, số cạnh thiếu, thừa, đảo khai báo, cặp có kề hoặc có đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy và số cạnh được bổ sung. Mô hình gradient boosting được huấn luyện chỉ trên các topology hiệu chỉnh của ba lag, chọn siêu tham số bằng kiểm định chéo theo topology, rồi đóng băng. Cờ cũ (logistic ba đặc trưng) được chấm lại trên cùng dữ liệu để so sánh.
 
 \subsection{Các phương pháp tham chiếu}\label{sec:baseline}
 Bảng~\ref{tab:baselines} liệt kê các phương pháp tham chiếu cùng tên gọi trong tài liệu gốc. Phần sau mô tả từng phương pháp theo công trình gốc và cách áp dụng vào bài toán SVAR có skeleton cho sẵn. Hậu tố ``(cal)'' nghĩa là khoảng được nhân thêm hệ số độ rộng chọn theo $(T,\text{loại lỗi khai báo})$ trên tập hiệu chỉnh, theo đúng cách áp dụng cho \ours{}.

@@ -6,21 +6,23 @@ Cách làm thông thường là coi skeleton như đúng, fit mô hình rồi d�
 
 \paragraph{Đóng góp.}
 \begin{enumerate}
-  \item Một phương pháp ước lượng chịu lỗi skeleton (gọi tắt là \ours{}). Phương pháp chỉ mở khối lag cho các cặp biến có bằng chứng từ dữ liệu, số cặp mở dựa trên số cạnh thiếu khai báo, và chạy lại việc chọn cấu trúc trong từng lần bootstrap để khoảng tin cậy gộp được bất định về cấu trúc.
-  \item Một quy trình thực nghiệm có ground truth: sinh SVAR từ các topology cho trước, làm hỏng skeleton có kiểm soát, chấm khoảng tin cậy bằng coverage và interval score.
-  \item So sánh \ours{} với bảy nhóm phương pháp tham chiếu lấy từ các hướng tiếp cận khác nhau (bootstrap thông thường, local projection, IDA, BVAR Minnesota, post-selection inference, targeted local projection).
-  \item Bản đồ chi phí theo cạnh, cờ độ tin cậy cho từng cặp biến, và vùng dùng được của phương pháp theo cỡ mẫu và số lag.
+  \item Một phương pháp ước lượng chịu lỗi skeleton, gọi tắt là \ours{} (Skeleton-Robust Calibrated Intervals). Phương pháp chỉ mở khối lag cho các cặp biến có bằng chứng từ dữ liệu, số cặp mở dựa trên số cạnh thiếu khai báo, chạy lại việc chọn cấu trúc trong từng lần bootstrap để khoảng tin cậy gộp được bất định về cấu trúc, và hiệu chỉnh độ rộng.
+  \item Một bảo đảm coverage hữu hạn mẫu \emph{ở mức topology} dựa trên thống kê hạng, kèm điều kiện cần, một cách giải thích cho hệ số co $0.5$ (không có cơ sở lý thuyết và có thể bỏ), và một xác nhận thực nghiệm trên $1200$ topology với số lag từ $1$ đến $3$, trong đó có ô mà bảo đảm không đạt tiêu chí và ô mà phương pháp từ chối.
+  \item Một quy trình thực nghiệm có ground truth: sinh SVAR từ các topology cho trước, làm hỏng skeleton có kiểm soát, chấm khoảng tin cậy bằng coverage ở cả mức cặp và mức topology, và bằng interval score; quy tắc kết luận được ghi trước cùng giá trị băm.
+  \item So sánh \ours{} với các phương pháp tham chiếu \emph{ở cùng mức đảm bảo}, trong đó \ours{} thắng ở các ô thiếu và đảo cạnh nhưng không thắng ở các ô không hỏng và thừa cạnh.
+  \item Cờ độ tin cậy cho từng cặp biến, vùng dùng được theo cỡ mẫu và số lag, phân tích độ bền khi nhiễu đuôi dày và khi có sai số đo (bảo đảm không chịu được sai số đo), và một case study trên panel Việt Nam có khai báo rõ nguồn dữ liệu.
 \end{enumerate}
 
 \paragraph{Câu hỏi nghiên cứu.}
 \begin{description}
   \item[RQ4.1] Sai số cường độ và độ trễ thay đổi thế nào theo loại và mức hỏng của skeleton?
-  \item[RQ4.2] Khoảng tin cậy gộp bất định cấu trúc có coverage đúng danh nghĩa và hẹp hơn các cách báo một điểm không?
+  \item[RQ4.2] Ở cùng mức đảm bảo, khoảng tin cậy gộp bất định cấu trúc có hẹp hơn các phương pháp tham chiếu không?
   \item[RQ4.3] Cạnh nào của skeleton, khi sai, làm hiệu ứng lệch nhiều nhất? Bản đồ này có ổn định qua các topology không?
-  \item[RQ4.4] Có đại lượng quan sát được, không cần ground truth, dự báo được độ tin cậy của hiệu ứng không?
+  \item[RQ4.4] Có đại lượng quan sát được, không cần ground truth, dự báo được cặp nào bị khoảng tin cậy trượt không?
+  \item[RQ4.5] Có thể bảo đảm tỉ lệ cặp bị trượt ở mức topology không, trong điều kiện nào, và bền đến đâu khi vi phạm giả định?
 \end{description}
 
-\paragraph{Bố cục.} Mục~\ref{sec:lien-quan} điểm các công trình liên quan. Mục~\ref{sec:bai-toan} nêu mô hình và ký hiệu. Mục~\ref{sec:ours} trình bày phương pháp. Mục~\ref{sec:thiet-lap} mô tả thiết lập thực nghiệm và các phương pháp tham chiếu. Mục~\ref{sec:ket-qua} báo cáo kết quả và mục~\ref{sec:ket-luan} kết luận.
+\paragraph{Bố cục.} Mục~\ref{sec:lien-quan} điểm các công trình liên quan. Mục~\ref{sec:bai-toan} nêu mô hình và ký hiệu. Mục~\ref{sec:ours} trình bày phương pháp và mục~\ref{sec:bao-dam} nêu bảo đảm coverage ở mức topology. Mục~\ref{sec:thiet-lap} mô tả thiết lập thực nghiệm và các phương pháp tham chiếu. Mục~\ref{sec:ket-qua} báo cáo kết quả, mục~\ref{sec:case-study} là case study trên dữ liệu thật và mục~\ref{sec:ket-luan} kết luận.
 
 \section{Công trình liên quan}\label{sec:lien-quan}
 

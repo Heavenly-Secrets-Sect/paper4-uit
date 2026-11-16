@@ -1,6 +1,27 @@
 \section{Kết quả}\label{sec:ket-qua}
 
-Các kết quả được gắn nhãn theo nguồn dữ liệu (mục~\ref{sec:thiet-lap}): \emph{kiểm chứng} nghĩa là đo trên tập topology chưa dùng khi thiết kế phương pháp, với quy tắc ghi trước; \emph{thăm dò} nghĩa là đo trên tập phát triển.
+Các kết quả được gắn nhãn theo nguồn dữ liệu (mục~\ref{sec:thiet-lap}): \emph{xác nhận} nghĩa là đo một lần trên tập topology kiểm tra chưa dùng cho đại lượng đó, với hệ số và quy tắc đóng băng trước; \emph{kiểm chứng} (các tập cũ cố định) và \emph{thăm dò} (tập phát triển) có giá trị yếu hơn. Các ngưỡng đạt hay không đạt là do nhóm tự đặt trước khi chạy.
+
+\subsection{Bảo đảm coverage ở mức topology (xác nhận)}\label{sec:kq-baodam}
+Bảng~\ref{tab:guarantee} báo kết quả của mệnh đề~\ref{prop:rank} trên $550$ topology kiểm tra cho từng lag. Mức đảm bảo mục tiêu là $0.90$ (không quá $10\%$ cặp bị trượt ở $90\%$ topology).
+
+\begin{table}[H]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/tab_guarantee}
+\caption{Tỉ lệ topology thỏa điều kiện trên tập kiểm tra, trung bình trên các ô có hệ số hữu hạn. ``Luật cũ'' là phân vị gộp mức cặp tính lại trên cùng tập hiệu chỉnh. Cột ``Ô đạt $0.90$'' đếm số ô mà cận trên của khoảng tin cậy nhị thức chính xác $95\%$ đạt $0.90$.}\label{tab:guarantee}
+\end{table}
+
+\emph{Cách đọc.} Luật cũ chỉ đạt khoảng $0.80$ ở cả ba lag: cứ năm topology thì một có hơn $10\%$ cặp bị trượt. Hệ số theo thống kê hạng đưa tỉ lệ này lên $0.89$--$0.90$ (biên) hoặc $0.91$--$0.92$ (PAC), đúng mức mục tiêu chứ không dư. Cái giá là khoảng rộng hơn $10$--$18\%$ và interval score cao hơn $3$--$11\%$ so với luật cũ.
+
+Theo tiêu chí ghi trước (khoảng tin cậy của tỉ lệ chạm $0.90$ ở ít nhất $80\%$ số ô có hệ số hữu hạn, và không ô nào có cận trên dưới $0.85$), kết quả đạt ở lag 1 ($17/20$ ô) và lag 3 ($8/8$ ô) và \textbf{không đạt ở lag 2} ($9/12$ ô, tức $75\%$). Theo quy tắc đã ghi, tuyên bố đảm bảo bị rút ở ba ô lag 2 không đạt: $T=80$ thừa cạnh, $T=80$ đảo cạnh và $T=150$ đảo cạnh. Cận trên nhỏ nhất ở lag 2 vẫn là $0.880$.
+
+Phương pháp \emph{từ chối} đưa ra đảm bảo ở lag 2 với $T=30$ và lag 3 với $T=40$, vì ở đó từ $9\%$ đến $92\%$ lượt fit thất bại (nhiều biến hồi quy so với số dòng). Ở chính các ô này, luật cũ vẫn trả về khoảng tin cậy, nhưng chỉ $7\%$ đến $76\%$ topology thỏa điều kiện (lag 3, $T=40$, thiếu cạnh: $7\%$). Hệ số hiệu chỉnh mới vì vậy đồng thời là một \emph{chỉ báo khi nào không nên tin khoảng}.
+
+\subsection{Vùng dùng được theo $T$ và số lag (xác nhận)}\label{sec:vung}
+Hệ số bảo đảm hữu hạn từ $T=19$ ở lag 1, $T=40$ ở lag 2 và $T=80$ ở lag 3. Dưới các ngưỡng đó phương pháp từ chối. Như vậy $T$ tối thiểu tăng theo số lag, khớp với bản đồ thăm dò cũ (bảng~\ref{tab:vung}, mục~\ref{sec:vung-cu}) dùng tiêu chí khác.
+
+Quét mức hỏng từ $10\%$ đến $80\%$ ở lag 1 (thăm dò, $60$ topology thiết kế; một ô dùng được nếu $\ge95\%$ lượt fit thành công và coverage cặp tại hệ số hiệu chỉnh $\ge0.90$): thiếu cạnh dùng được ở mọi $T$ thử, kể cả $T=19$ ở mức hỏng $80\%$; thừa cạnh và đảo cạnh dùng được ở $T\ge30$ ở mọi mức đến $80\%$, còn ở $T=19$ thất bại từ mức $70\%$ (thừa) và $50\%$ (đảo). Hạn chế: ``thành công'' chỉ là bước fit hoàn tất, coverage chỉ tính trên các lần fit thành công.
 
 \subsection{Residual Bootstrap khi skeleton có lỗi (kiểm chứng)}\label{sec:rb}
 Bảng~\ref{tab:full} so sánh RB (cắm skeleton như đúng) với \ours{} ở mọi loại lỗi và mọi cỡ mẫu, mỗi ô là coverage / interval score trên 60 bộ dữ liệu.
@@ -36,54 +57,31 @@ Ba nhận xét:
   \item \textbf{\ours{} giữ coverage trong khoảng $0.92$--$0.97$} ở mọi ô, nhưng chưa đạt $0.95$ ở một số ô (ví dụ $0.92$ ở $T=40$ khi không hỏng hoặc đảo 50\%). Cái giá so với skeleton đúng nhỏ: ở $T=80$, IS là $2.37$ khi không hỏng và $2.68$ khi thiếu 20\% cạnh.
 \end{itemize}
 
-\subsection{So sánh với các phương pháp tham chiếu khi thiếu cạnh (RQ4.2, kiểm chứng)}\label{sec:main}
-Các phương pháp tham chiếu chỉ được chạy ở bốn cell thiếu cạnh với $T\in\{80,150\}$ và tỷ lệ cạnh thiếu 20\%, 50\% (60 bộ dữ liệu mỗi cell), nên so sánh dưới đây chỉ có giá trị trong phạm vi này. Bảng~\ref{tab:main} là interval score (coverage trong ngoặc); IS thấp hơn là tốt hơn.
+\subsection{So sánh với các phương pháp tham chiếu ở cùng mức đảm bảo (xác nhận)}\label{sec:main}
+Ở các phiên bản trước, mỗi phương pháp tham chiếu mang một hệ số độ rộng riêng chọn theo phân vị gộp mức cặp, nên chúng đạt các mức coverage khác nhau ($0.94$--$0.99$) và interval score được so giữa các mức không ngang nhau. Ở đây mọi phương pháp được hiệu chỉnh bằng \emph{cùng} quy tắc thống kê hạng trên cùng $150$ topology rồi chạy một lần trên $200$ topology kiểm tra (lag 1, $T\in\{40,150\}$), nên câu hỏi trở thành: ở cùng mức đảm bảo, phương pháp nào cho khoảng hẹp nhất?
 
 \begin{table}[H]
 \centering\small
-\begin{tabular}{lcccc}
-\toprule
-Phương pháp & $T{=}80$, 20\% & $T{=}80$, 50\% & $T{=}150$, 20\% & $T{=}150$, 50\%\\
-\midrule
-RB & 10.68 (0.655) & 28.94 (0.335) & 10.54 (0.668) & 29.25 (0.325)\\
-\textbf{\ours{}} & \textbf{2.68} (0.963) & \textbf{2.89} (0.969) & \textbf{1.75} (0.964) & \textbf{1.99} (0.960)\\
-PSel-Union & 3.46 (0.968) & 3.41 (0.978) & 2.15 (0.983) & 2.30 (0.988)\\
-PSel-Union (cal) & 3.30 (0.943) & 3.20 (0.952) & 1.95 (0.950) & 2.04 (0.959)\\
-PSel (cal) & 3.91 (0.962) & 4.12 (0.943) & 2.62 (0.972) & 3.06 (0.937)\\
-Full VAR (cal) & 3.41 (0.973) & 3.74 (0.953) & 2.62 (0.976) & 3.01 (0.953)\\
-TLP (cal) & 3.50 (0.955) & 3.75 (0.940) & 2.22 (0.979) & 2.43 (0.962)\\
-TLP-DB & 3.71 (0.872) & 4.83 (0.804) & 2.21 (0.905) & 2.88 (0.857)\\
-BVAR-Minnesota (cal) & 4.64 (0.969) & 4.44 (0.969) & 3.72 (0.953) & 3.79 (0.957)\\
-\bottomrule
-\end{tabular}
-\caption{Interval score (coverage), các cell thiếu cạnh, tập kiểm chứng.}\label{tab:main}
+\input{tables/tab_cmp}
+\caption{Interval score trung bình ở cùng mức đảm bảo (thấp hơn là tốt hơn; đậm là thấp nhất trong các phương pháp mà khoảng tin cậy của tỉ lệ topology chạm $0.90$). $^{*}$: phương pháp không đạt mức đảm bảo ở ô đó. PSel-U: PSel-Union với ngân sách bootstrap gấp $32$ lần.}\label{tab:cmp}
 \end{table}
 
-Bảng~\ref{tab:diff} là hiệu IS giữa \ours{} và từng phương pháp tham chiếu trên cùng bộ dữ liệu (âm nghĩa là \ours{} tốt hơn).
+\emph{Cách đọc.} Mỗi hàng là một ô $(T,\text{loại lỗi})$. Trên $8$ ô, BVAR-Minnesota thắng $4$ ô, \ours{} $3$ ô và PSel-Union $1$ ô. \ours{} thắng ở các ô thiếu cạnh và đảo cạnh ($T=40$ cả hai loại; $T=150$ đảo cạnh) tức các loại hỏng cần mở cấu trúc; BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh ở cả hai $T$, nơi mở cấu trúc không có ích; PSel-Union thắng ở $T=150$ thiếu cạnh với ngân sách tính toán gấp $32$ lần. So cặp với \ours{} (cluster bootstrap theo topology): \ours{} tốt hơn PSel, Full VAR và TLP ở $8/8$ ô và PSel-Union ở $7/8$ ô; với BVAR-Minnesota là $4$ ô mỗi bên. Hai phương pháp không đạt mức đảm bảo ở một ô (BVAR-Minnesota ở $T=150$ thiếu cạnh, PSel-Union ở $T=150$ đảo cạnh).
+
+\textbf{Điều này làm yếu kết luận trước đây} rằng \ours{} tốt hơn ở $27/28$ so sánh: khi mỗi phương pháp dùng hệ số riêng, lợi thế nhìn thấy được một phần đến từ chênh lệch mức coverage. Ở cùng mức đảm bảo, lợi thế của \ours{} có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Hạn chế: chỉ lag 1, hai giá trị $T$, $200$ topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng $\pm0.04$); một số phương pháp là bản do nhóm chuyển thể; \ours{} nhận số cạnh thiếu khai báo, còn các phương pháp tham chiếu thì hầu như không.
+
+\subsubsection*{Phần lợi thế do thông tin khai báo}
+\ours{} nhận số cạnh thiếu khai báo để quyết định số cặp được mở, còn hầu hết phương pháp tham chiếu thì không. Để đo phần lợi thế này, chúng tôi chạy một biến thể không dùng số cạnh khai báo (cổng và ngân sách mở lag do dữ liệu quyết định), hiệu chỉnh bằng cùng quy tắc trên $150$ topology và chạy một lần trên $200$ topology kiểm tra. Hệ số vẫn được chọn theo loại lỗi khai báo, nên \emph{loại} lỗi (không phải số cạnh) vẫn được dùng qua hệ số.
 
 \begin{table}[H]
-\centering\small
-\begin{tabular}{lcccc}
-\toprule
-Phương pháp tham chiếu & $T{=}80$, 20\% & $T{=}80$, 50\% & $T{=}150$, 20\% & $T{=}150$, 50\%\\
-\midrule
-PSel-Union & $-0.78$ & $-0.51$ & $-0.41$ & $-0.30$\\
-PSel-Union (cal) & $-0.61$ & $-0.30$ & $-0.20$ & $-0.05$ (hòa)\\
-PSel (cal) & $-1.22$ & $-1.22$ & $-0.87$ & $-1.07$\\
-Full VAR (cal) & $-0.72$ & $-0.85$ & $-0.87$ & $-1.02$\\
-TLP (cal) & $-0.82$ & $-0.85$ & $-0.47$ & $-0.44$\\
-TLP-DB & $-1.02$ & $-1.93$ & $-0.46$ & $-0.89$\\
-BVAR-Minnesota (cal) & $-1.96$ & $-1.54$ & $-1.97$ & $-1.80$\\
-\bottomrule
-\end{tabular}
-\caption{Hiệu interval score giữa \ours{} và phương pháp tham chiếu.}\label{tab:diff}
+\centering\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\input{tables/tab_auto}
+\caption{Biến thể không dùng số cạnh khai báo ở cùng mức đảm bảo (lag 1). Hiệu là IS của biến thể trừ IS của phương pháp so sánh, kèm khoảng tin cậy bootstrap theo topology; dương nghĩa là biến thể kém hơn.}\label{tab:auto}
 \end{table}
 
-\emph{Cách đọc hai bảng.} Bảng~\ref{tab:main} có dạng IS (coverage), mỗi cột là một ô gồm cỡ mẫu $T$ và tỉ lệ cạnh thiếu; chữ ``(cal)'' chỉ bản đã được hiệu chỉnh độ rộng để so sánh ngang hàng với \ours{}. Ở bảng~\ref{tab:diff}, số âm nghĩa là \ours{} có IS thấp hơn trên cùng bộ dữ liệu. Chênh lệch với phương pháp tham chiếu gần nhất nhỏ hơn nhiều so với khoảng cách với RB (IS $10$--$29$), nên phần lớn lợi ích đến từ việc tính đến cấu trúc, còn việc so với các phương pháp đã hiệu chỉnh chỉ cho lợi thế khiêm tốn.
+Tỉ lệ topology thỏa điều kiện của biến thể nằm trong khoảng $0.83$--$0.93$; khoảng tin cậy chạm $0.90$ ở bảy trong tám ô, trừ $T=150$ đảo cạnh ($0.834$, khoảng $[0.775;0.883]$). Phần lớn lợi thế của \ours{} còn lại khi không có số cạnh khai báo: IS chênh từ $-0.10$ đến $+0.17$ ở bảy trong tám ô, và ở $T=150$ đảo cạnh biến thể còn tốt hơn ($-0.10$). Ngoại lệ lớn là $T=40$ với thiếu cạnh: IS tăng từ $4.69$ lên $9.95$, kém cả BVAR-Minnesota ($6.13$). Vậy số cạnh thiếu khai báo là thông tin có giá trị chủ yếu ở $T$ nhỏ khi thiếu cạnh; ở các ô khác, kết quả ở bảng~\ref{tab:cmp} không phụ thuộc nhiều vào thông tin đó.
 
-\ours{} thắng có ý nghĩa ở $27/28$ so sánh (khoảng tin cậy 95\% của hiệu không chứa 0, Holm trên 56 so sánh) và không thua so sánh nào. Trường hợp hòa duy nhất là PSel-Union (cal) ở $T=150$, thiếu 50\%: hiệu $-0.05$, khoảng $[-0.17,+0.04]$; phương pháp đó dùng gấp 32 lần số lần bootstrap. Coverage của \ours{} ở bốn cell là $0.96$--$0.97$, hơi trên mức danh nghĩa. Có ba điều cần lưu ý khi đọc kết quả này. Thứ nhất, mức chênh so với phương pháp tham chiếu gần nhất là $0.05$--$0.8$ trên mức IS $2$--$4$, tức khoảng $2$--$25\%$, nhỏ hơn nhiều so với khoảng cách với RB. Thứ hai, \ours{} nhận số cạnh thiếu khai báo $k_{\text{miss}}$ để quyết định số cặp được mở, trong khi PSel-Union, BVAR-Minnesota và TLP không dùng $k_{\text{miss}}$ khi chọn cấu trúc (chỉ hệ số độ rộng của bản (cal) biết loại lỗi), nên lợi thế gộp cả phương pháp và thông tin khai báo. Thứ ba, ở $T=40$ (kết quả thăm dò) BVAR-Minnesota (cal) hòa với \ours{} khi thiếu cạnh và có IS thấp hơn $0.6$--$0.9$ khi cạnh thừa, không hỏng hoặc đảo 20\%. Lợi thế thu hẹp khi $T$ tăng, vì khi dữ liệu nhiều thì việc mở mọi lag cũng không còn tốn kém.
-
-So với phiên bản không chọn lọc lag (mở mọi lag và chỉ hiệu chỉnh một phía), ở $T=40$ thiếu 20\% cạnh IS giảm từ $7.81$ xuống $4.62$ (hiệu $-3.19$, khoảng $[-3.54,-2.87]$) và thiếu 50\% giảm từ $7.54$ xuống $4.99$ ($-2.55$, $[-2.76,-2.34]$), với coverage $0.928$ và $0.947$; ở 19 cell còn lại không cell nào tệ hơn có ý nghĩa.
 
 \subsection{Đóng góp của từng thành phần (thăm dò)}
 \begin{table}[H]
@@ -151,24 +149,36 @@ Thiếu cạnh có lag & $0.844$ & $[0.749,0.895]$\\
 \end{table}
 Bảng~\ref{tab:rq43} cho thấy thiếu một cạnh cùng kỳ làm lệch hiệu ứng của các cặp trên đường truyền dẫn gần $0.95$ đơn vị, nhiều hơn đảo cạnh ($0.54$); khoảng tin cậy hẹp cho thấy ước lượng này ổn định.
 
-\subsection{Cờ độ tin cậy (RQ4.4, kiểm chứng)}
-Chúng tôi huấn luyện trước một mô hình logistic với ba đặc trưng quan sát được (độ rộng, độ rộng tương đối, mức hỏng khai báo) và không fit lại khi kiểm chứng. AUROC là $0.720$ $[0.698,0.744]$ ở $T=80/150$ và $0.812$ $[0.791,0.832]$ ở $T=40$, cao hơn comparator độ rộng tương đối $+0.089$ và $+0.220$. Cặp bị gắn cờ trượt nhiều gấp $3.98$ lần ($T=80/150$) và $6.77$ lần ($T=40$). Các diagnostic quen thuộc như độ ổn định hệ số hay phần dư không dự báo được theo chiều kỳ vọng.
+\subsection{Cờ độ tin cậy (xác nhận)}
+Cờ độ tin cậy phân loại cặp nào sẽ bị khoảng cuối trượt (nhãn $1$) từ các đặc trưng quan sát được (mục~\ref{sec:topology-study}). \emph{AUROC} là xác suất cờ cho một cặp trượt điểm cao hơn một cặp được phủ, được chọn ngẫu nhiên: $0.5$ là đoán ngẫu nhiên, $1$ là phân loại hoàn hảo; chọn AUROC vì chỉ khoảng $3\%$ số cặp bị trượt, nên độ chính xác thông thường không có ý nghĩa.
 
 \begin{table}[H]
 \centering\small
-\begin{tabular}{lcccc}
-\toprule
-Cỡ mẫu & AUROC & Khoảng tin cậy 95\% & Hơn comparator độ rộng tương đối & Cặp gắn cờ trượt nhiều gấp\\
-\midrule
-$T=80/150$ & $0.720$ & $[0.698,0.744]$ & $+0.089$ & $3.98$\\
-$T=40$ & $0.812$ & $[0.791,0.832]$ & $+0.220$ & $6.77$\\
-\bottomrule
-\end{tabular}
-\caption{Hiệu năng của cờ độ tin cậy.}\label{tab:rq44}
+\input{tables/tab_flag}
+\caption{AUROC của cờ mới, cờ cũ (logistic ba đặc trưng) và độ rộng đơn thuần, theo nhóm $T$ và lag, trên tập kiểm tra chưa dùng cho cờ. KTC: khoảng tin cậy bootstrap theo topology. Ô từ chối được bỏ.}\label{tab:flag}
 \end{table}
-AUROC bằng $0.5$ là đoán ngẫu nhiên và bằng $1$ là phân loại hoàn hảo, nên cờ ở mức $0.72$ khi $T=80/150$ là khiêm tốn; ở $T=40$ cờ tốt hơn rõ rệt.
 
-\subsection{Vùng dùng được (thăm dò)}\label{sec:vung}
+Cờ mới hơn cờ cũ ở mọi nhóm $T$ và lag, khoảng tin cậy nằm trên $0$, nhưng mức hơn ở $T=40$ nhỏ ($+0.015$ ở lag 1, $+0.028$ ở lag 2) vì cờ cũ ở đó đã đạt khoảng $0.87$. Theo ngưỡng do nhóm tự đặt (hơn ít nhất $0.03$ ở \emph{mọi} nhóm $T$) kết quả đạt ở lag 3 và không đạt ở lag 1 và 2. AUROC giảm mạnh khi $T$ lớn (bảng~\ref{tab:flagscn}): từ khoảng $0.93$ ở $T=19$ xuống $0.66$--$0.70$ ở $T=150$ khi không hỏng, vì khi $T$ lớn ít cặp bị trượt hơn và các cặp trượt giống các cặp được phủ hơn. Cờ cũ gần như vô dụng ở $T=19$ khi thiếu hoặc đảo cạnh ($0.48$--$0.67$), còn cờ mới đạt $0.92$--$0.98$. AUROC gần như không phụ thuộc mức hỏng ($20\%$ so với $50\%$).
+
+\begin{table}[H]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{tables/tab_flag_scn}
+\caption{AUROC theo kịch bản ở lag 1 (cờ mới / cờ cũ; hai giá trị trong ô là mức hỏng $20\%$ và $50\%$).}\label{tab:flagscn}
+\end{table}
+
+Trong quá trình làm, hai lỗi của mã dựng đặc trưng được phát hiện và sửa trước khi chạy phiên bản cuối: số cạnh khai báo bị ghi bằng $0$, và đặc trưng về skeleton chỉ tính cạnh cùng kỳ. Sửa chúng không đổi kết luận (phiên bản đầu cho $0.869$ so với $0.792$ ở lag 1).
+
+\subsection{Độ bền khi vi phạm giả định (thăm dò)}\label{sec:ben}
+Bảng~\ref{tab:violation} dùng cùng các topology kiểm tra ở lag 1 và hệ số không chỉnh lại. Nhiễu động học đuôi dày (Student-$t_4$, Laplace) không làm tụt tỉ lệ topology thỏa điều kiện; khoảng rộng hơn một chút (Laplace rộng hơn khoảng $29\%$). Sai số đo thì khác: với phương sai $10\%$ tỉ lệ tụt từ $0.897$ xuống $0.776$ (các ô từ $0.53$ đến $0.93$), và với $30\%$ còn $0.501$. Hơn nữa, mất mát tăng theo $T$ (ở $10\%$ nhiễu, $T=150$ chỉ còn $0.53$--$0.59$), vì sai lệch do sai số đo không giảm khi có thêm dữ liệu. \textbf{Bảo đảm không chịu được sai số đo}, và đây là một hạn chế thật của phương pháp; hướng khắc phục (ví dụ ước lượng tỉ lệ nhiễu đo rồi nới khoảng) chưa được đánh giá.
+
+\begin{table}[H]
+\centering\small
+\input{tables/tab_violation}
+\caption{Tỉ lệ topology thỏa điều kiện khi vi phạm giả định Gaussian sạch (lag 1, $550$ topology kiểm tra).}\label{tab:violation}
+\end{table}
+
+\subsection{Bản đồ vùng dùng được theo tiêu chí cũ (thăm dò)}\label{sec:vung-cu}
 Một ô (số lag $p$, $T$, loại và mức hỏng) \emph{dùng được} với một phương pháp nếu: (i) ít nhất $57/60$ lượt chạy trả kết quả; (ii) coverage gộp $\ge0.90$; (iii) IS trung bình $\le3\times$ IS của Oracle ở cùng $(p,T)$, điều kiện này loại các khoảng ``phát nổ''. $T$ tối thiểu là $T$ nhỏ nhất sao cho mọi $T$ từ đó trở lên đều dùng được ở cả hai mức hỏng.
 \begin{table}[H]
 \centering\small
@@ -187,13 +197,13 @@ $p$ & $T$ tối thiểu, \ours{} & $T$ tối thiểu, phiên bản không chọn
 \emph{Cách đọc bảng.} Mỗi hàng là số lag $p$; hai cột là $T$ nhỏ nhất mà từ đó trở lên phương pháp dùng được (đủ ba điều kiện (i)--(iii) ở trên) ở cả hai mức hỏng. \ours{} dùng được từ $T=19$ khi $p=1$, từ $40$ khi $p=2$ và từ $80$ khi $p=4$; phiên bản không chọn lọc lag đòi $T$ lớn hơn ở $p=1$ ($25$) và $p=4$ ($150$).
 Với $p=1$, một panel $14\times19$ nằm trong vùng dùng được của \ours{} ở các ô không hỏng, thiếu $0.2$ và $0.5$, đảo $0.2$; ô đảo $0.5$ thì không. Ở $T=19$, phiên bản không chọn lọc lag không chạy được lượt nào ($0/60$). Với $p=2$ và $T<40$, nhiều phương trình không ước lượng được, kể cả với RB, do số biến hồi quy vượt số dòng dữ liệu.
 
-\subsection{Thảo luận}
+\subsection{Thảo luận}\label{sec:thao-luan}
 \begin{itemize}
   \item \textbf{Thiếu cạnh là lỗi nặng nhất.} RB cho khoảng hẹp nhưng sai nên coverage chỉ $0.33$--$0.68$ khi thiếu cạnh; cạnh thừa gần như vô hại.
   \item \textbf{Mở mọi lag ở $T$ nhỏ làm khoảng phình rộng} ($28$ biến hồi quy trên $38$ dòng). \ours{} chỉ mở lag cho cặp có bằng chứng, nên IS thấp hơn rõ rệt ở $T=40$.
-  \item \textbf{Khoảng của \ours{} rộng hơn RB} vì RB hẹp mà sai. Do đó RQ4.2 nên được phát biểu theo interval score, thước đo gộp độ rộng và việc trượt, thay vì chỉ theo độ rộng.
-  \item \textbf{Lợi thế thu hẹp từ $T=150$:} phương pháp tham chiếu mạnh nhất hòa với \ours{} ở một cell.
+  \item \textbf{Khoảng của \ours{} rộng hơn RB} vì RB hẹp mà sai; do đó so sánh nên dùng interval score, thước đo gộp độ rộng và việc trượt.
+  \item \textbf{Ở cùng mức đảm bảo, lợi thế so với phương pháp tham chiếu hẹp hơn đã tưởng,} và BVAR-Minnesota cạnh tranh được ở các ô không cần mở cấu trúc.
+  \item \textbf{Bảo đảm ở mức topology có giá:} khoảng rộng hơn $10$--$18\%$ so với luật gộp mức cặp, đổi lại độ phủ ở mức topology đo được và một chỉ báo từ chối.
+  \item \textbf{Giới hạn.} Một bộ sinh, 14 nút, nhiễu Gaussian sạch cho mệnh đề; bảo đảm không bền với sai số đo; lag 2 không đạt tiêu chí; phần đánh giá chỉ chạy trên dữ liệu mô phỏng, nên không nói được gì về hiệu ứng nhân quả thật.
+  \item \textbf{Hai lỗi của mã} đã được sửa trước khi chạy phần kiểm tra tương ứng: (i) với hệ số hiệu chỉnh, đơn vị không có bản ghi nào bị bỏ khỏi mẫu số thay vì tính là trượt, và đơn vị chỉ có lượt không hỏng bị coi là fit thất bại; (ii) hai nhóm đặc trưng của cờ. Mọi sửa đổi và giá trị băm nằm trong nhật ký quy tắc của kho mã.
 \end{itemize}
-
-\section{Kết luận}\label{sec:ket-luan}
-Chúng tôi trình bày \ours{}, phương pháp ước lượng hiệu ứng tích lũy của SVAR khi skeleton có lỗi, dùng số cạnh hỏng khai báo để quyết định mở bao nhiêu khối lag, chọn lại cấu trúc trong từng lần bootstrap và hiệu chỉnh độ rộng hai phía. Cắm skeleton hỏng vào residual bootstrap làm coverage giảm xuống khoảng $0.33$ khi thiếu 50\% cạnh và $0.32$--$0.38$ khi skeleton do GES học ra; \ours{} đưa coverage về $0.92$--$0.97$ ở mọi loại lỗi. Ở các cell thiếu cạnh với $T\ge80$, \ours{} có interval score thấp hơn các phương pháp tham chiếu đã thử (hòa một cell), với biên độ chênh khiêm tốn và với lưu ý rằng \ours{} dùng thêm số cạnh thiếu khai báo. Thiếu cạnh là loại lỗi nặng nhất, bản đồ chi phí theo cạnh ổn định giữa các topology, và một cờ độ tin cậy đơn giản dự báo được cặp nào dễ trượt. Vùng dùng được kéo xuống tới $T=19$ khi $p=1$, đủ cho panel thật 14 biến.

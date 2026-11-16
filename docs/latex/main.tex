@@ -6,7 +6,7 @@
 \setmonofont[Scale=0.88]{Courier New}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper,margin=2.5cm]{geometry}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs,tabularx,array,multirow}
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -25,6 +25,9 @@
 \captionsetup{font=small,labelfont=bf}
 \renewcommand{\arraystretch}{1.15}
 
+\newtheorem{menhde}{Mệnh đề}
+\theoremstyle{remark}
+\newtheorem{nhanxet}{Nhận xét}
 \newcommand{\code}[1]{\texttt{\detokenize{#1}}}
 \newcommand{\ours}{\textbf{SRCI}}
 \newcommand{\IS}{\mathrm{IS}}
@@ -47,8 +50,11 @@
 \input{sections/01_gioi_thieu}
 \input{sections/02_bai_toan}
 \input{sections/03_phuong_phap}
+\input{sections/03b_bao_dam}
 \input{sections/04_thiet_lap}
 \input{sections/05_ket_qua}
+\input{sections/06_case_study}
+\input{sections/07_ket_luan}
 
 \bibliographystyle{plainnat}
 \bibliography{references,references_2021}
