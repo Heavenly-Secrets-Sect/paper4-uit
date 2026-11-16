@@ -1,0 +1,107 @@
+{
+  "_note": "P4-H8 flag v2 (docs/ext/p4h8_flag_spec_v2.md); fitted on the calibration dumps of lags 1-3 only.",
+  "selected": {
+    "kind": "gbm",
+    "params": {
+      "max_depth": 5,
+      "learning_rate": 0.05
+    },
+    "cv_auroc_on_40pct_sample": 0.8448481014313213
+  },
+  "cv_all": [
+    [
+      "logit",
+      {
+        "C": 1.0
+      },
+      0.7861161702582358
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 3,
+        "learning_rate": 0.1
+      },
+      0.8435242565094055
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 5,
+        "learning_rate": 0.05
+      },
+      0.8448481014313213
+    ],
+    [
+      "gbm",
+      {
+        "max_depth": 5,
+        "learning_rate": 0.1
+      },
+      0.8432332267798655
+    ]
+  ],
+  "features": [
+    "mid",
+    "half",
+    "ratio",
+    "zero_in",
+    "logT",
+    "lag",
+    "k_miss",
+    "k_extra",
+    "k_rev",
+    "has_path",
+    "path_len",
+    "adjacent",
+    "adj_any",
+    "und_dist",
+    "out_deg_cause",
+    "in_deg_effect",
+    "row_med_half",
+    "col_med_half",
+    "half_rank",
+    "v51_ratio",
+    "v51_targeted",
+    "n_repair",
+    "final_width",
+    "log1p_final_relwidth",
+    "zero_in_final",
+    "factor"
+  ],
+  "model_sha256": "98dcf4335b2d172938a9dd7a18c15ee1bbbc6687e7fac0cf138ba1d632696bf5",
+  "n_pairs_train": 1163122,
+  "miss_rate_train": 0.030055316639183163,
+  "abstain_cells": {
+    "1": [],
+    "2": [
+      "tolerant_v5_1|30|extra",
+      "tolerant_v5_1|30|missing",
+      "tolerant_v5_1|30|none",
+      "tolerant_v5_1|30|reversed"
+    ],
+    "3": [
+      "tolerant_v5_1|40|extra",
+      "tolerant_v5_1|40|missing",
+      "tolerant_v5_1|40|none",
+      "tolerant_v5_1|40|reversed"
+    ]
+  },
+  "design_auroc": {
+    "1": {
+      "new": 0.866701667345297,
+      "old": 0.7859002479287142,
+      "neg_width": 0.7113359971859707
+    },
+    "2": {
+      "new": 0.8302094311040756,
+      "old": 0.7702090643708842,
+      "neg_width": 0.6980912435445733
+    },
+    "3": {
+      "new": 0.8011153591902049,
+      "old": 0.7470093680664199,
+      "neg_width": 0.6441736997079264
+    }
+  }
+}

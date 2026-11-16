@@ -10,7 +10,7 @@ Ngày 15/11/2026. File này đi kèm báo cáo `bao_cao_phan_hoi_thay_2026-11-15
 | 2 | Chứng minh điều kiện đủ để coverage đúng | Có một phát biểu hữu hạn mẫu, kèm điều kiện, về việc khoảng tin cậy phủ đúng | Phát biểu theo conformal ở mức topology: hệ số nới độ rộng là thống kê hạng trên các topology hiệu chỉnh | Có phát biểu và xác nhận độc lập (lag 1, 3 đạt; lag 2 không đạt) | Mức bảo đảm "ít nhất 90% topology có không quá 10% cặp trượt" có đúng ý các thầy không? Bản chứng minh chưa được thẩm định ngoài |
 | 3 | Chứng minh hệ số 0,5 | Giải thích vì sao có hằng số này | Không có lý thuyết; kiểm độ nhạy và đề xuất bỏ hằng số | Xong | Có đồng ý bỏ hằng số? |
 | 4 | Mở rộng mô phỏng (cấu hình phân phối Gaussian, tăng số topology) | Nhiều topology hơn, đa dạng nhiễu và lag hơn | Tập 1.200 topology (trước đây 40), lag 1–3, nhiễu t4/Laplace, sai số đo | Xong, trừ số nút khác 14 | Có cần số nút khác 14 không? |
-| 5 | Cải thiện AUROC ở RQ4.4 | Cờ độ tin cậy phân biệt cặp nào sẽ bị trượt tốt hơn | Mô hình mới với đặc trưng quan sát được | Tiêu chí không đạt (+0,014 ở T = 40); phát hiện hai lỗi đặc trưng; **đang chạy lại phiên bản 2** | Định nghĩa "cặp bị trượt" làm nhãn có hợp lý không? |
+| 5 | Cải thiện AUROC ở RQ4.4 | Cờ độ tin cậy phân biệt cặp nào sẽ bị trượt tốt hơn | Mô hình mới với đặc trưng quan sát được | Phiên bản 2 (đã sửa hai lỗi đặc trưng) xong: tiêu chí đạt ở lag 3, không đạt ở lag 1 và 2 (T = 40 chỉ hơn cờ cũ +0,015 và +0,028) | Định nghĩa "cặp bị trượt" làm nhãn có hợp lý không? |
 | 6 | Xem kỹ phần so sánh trong kết quả chính | Phép so sánh với baseline phải công bằng | Hiệu chỉnh mọi phương pháp bằng cùng quy tắc ở cùng mức đảm bảo | Đã chạy (lag 1, T = 40 và 150) | Tập baseline bắt buộc gồm những gì? |
 | 7 | Vẽ architecture | Sơ đồ khối của phương pháp | Hình 6 bước, đầu vào và đầu ra | Xong | Hình có đúng ý? |
 | 8 | Giải thích số liệu trong các bảng kết quả | Mỗi bảng có đoạn "cách đọc" | Đã chèn vào LaTeX cho 6 bảng, thêm 2 bảng cho RQ4.3 và RQ4.4 | Xong | , |
@@ -48,4 +48,4 @@ Ngoài ra lag 2 không đạt tiêu chí (9/12 ô, cần 80%); phương pháp t�
 
 ## E. Đang chạy
 
-Phiên bản 2 của cờ tin cậy (sửa hai lỗi đặc trưng, thêm lag 2 và 3, báo AUROC theo lag × T × loại hỏng × mức hỏng). Khi có kết quả, bảng AUROC trong báo cáo sẽ được thay.
+Không còn lượt chạy nền nào. Cờ tin cậy phiên bản 2 (sửa hai lỗi đặc trưng, thêm lag 2 và 3) đã chạy xong ngày 16/11: AUROC theo lag × T × loại hỏng × mức hỏng nằm ở mục 12 của báo cáo.

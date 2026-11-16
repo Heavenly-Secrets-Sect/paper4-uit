@@ -12,7 +12,7 @@ Tên phương pháp trong báo cáo: **SRCI** (Skeleton-Robust Calibrated Interv
 | 2 | Điều kiện đủ để coverage đúng | **Đã có phát biểu, bản nháp chứng minh và kiểm chứng độc lập trên 1.200 topology, lag 1–3: đạt ở lag 1 và 3, không đạt ở lag 2** |
 | 3 | Hệ số 0,5 | **Xong (thăm dò):** giải thích và kiểm độ nhạy |
 | 4 | Mở rộng mô phỏng | **Xong phần chính:** tập 1.200 topology, lag 1–3, nhiễu đuôi dày (t4, Laplace) ở lag 1; chưa thêm số nút khác 14 |
-| 5 | AUROC của RQ4.4 | **Đã làm, tiêu chí không đạt:** AUROC 0,869 so với 0,792 của cờ cũ (+0,077), nhưng chỉ +0,014 ở T = 40 (xem mục 12) |
+| 5 | AUROC của RQ4.4 | **Đã làm: tiêu chí đạt ở lag 3, không đạt ở lag 1 và 2** (T = 40 chỉ hơn cờ cũ +0,015 và +0,028); xem mục 12 |
 | 6 | Rà phần so sánh chính | **Đã chạy so sánh ở cùng mức đảm bảo:** SRCI thắng 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8 (xem mục 11) |
 | 7 | Vẽ architecture | **Xong** (hình đính kèm) |
 | 8 | Giải thích số liệu trong bảng | **Có bản nháp** (`docs/latex/draft_giai_thich_bang.md`), chưa chèn vào bài |
@@ -170,16 +170,24 @@ Cờ (phiên bản 1) là mô hình gradient boosting với các đặc trưng q
 
 Tiêu chí ghi trước (tăng ít nhất 0,03 AUROC ở **cả ba** nhóm T với khoảng tin cậy trên 0) **không đạt** vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cải thiện rõ ở T nhỏ và vừa phải ở T lớn, nơi AUROC vẫn chỉ 0,78.
 
-**AUROC theo kịch bản (lag 1, tập kiểm tra 550 topology; cờ mới / cờ cũ; gộp hai mức hỏng):**
+**Phiên bản 2** (sửa hai lỗi đặc trưng ở phiên bản 1: số cạnh khai báo bị ghi bằng 0, và skeleton chỉ tính cạnh cùng kỳ; một mô hình cho cả lag 1, 2, 3; đặc tả viết trước khi đọc dữ liệu; chấm trên tập chưa dùng cho cờ, một lần cho mỗi lag). AUROC cờ mới / cờ cũ theo nhóm T:
 
-| T | Không hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh | Cả T |
-|---|---|---|---|---|---|
-| 19 | 0,935 / 0,931 | 0,942 / 0,922 | 0,945 / 0,676 | 0,968 / 0,586 | 0,952 / 0,729 |
-| 30 | 0,897 / 0,888 | 0,907 / 0,898 | 0,886 / 0,877 | 0,912 / 0,899 | 0,902 / 0,891 |
-| 40 | 0,878 / 0,865 | 0,897 / 0,883 | 0,855 / 0,846 | 0,894 / 0,877 | 0,882 / 0,868 |
-| 80 | 0,789 / 0,763 | 0,791 / 0,776 | 0,793 / 0,774 | 0,834 / 0,811 | 0,806 / 0,784 |
-| 150 | 0,707 / 0,688 | 0,712 / 0,706 | 0,694 / 0,691 | 0,813 / 0,791 | 0,743 / 0,726 |
+| Lag | T 19–30 | T 40 | T 80–150 | Tiêu chí (mỗi nhóm T hơn ít nhất 0,03) |
+|---|---|---|---|---|
+| 1 | 0,924 / 0,808 (+0,115) | 0,885 / 0,870 (+0,015) | 0,786 / 0,737 (+0,049) | **Không đạt** (T = 40) |
+| 2 | không có (từ chối) | 0,894 / 0,865 (+0,028) | 0,790 / 0,737 (+0,053) | **Không đạt** (T = 40, thiếu 0,002) |
+| 3 | không có (từ chối) | không có (từ chối) | 0,790 / 0,731 (+0,059) | **Đạt** |
 
-AUROC giảm khi T lớn (từ 0,95 xuống 0,74). Cờ mới hơn cờ cũ rõ nhất ở T = 19 với thiếu cạnh và đảo cạnh, nơi cờ cũ gần như vô dụng (0,676 và 0,586). Đây là phân tích mô tả thêm trên chính tập kiểm tra đã dùng.
+Tiêu chí không đạt ở lag 1 và lag 2, đạt ở lag 3. Cờ mới hơn cờ cũ ở mọi nhóm T với khoảng tin cậy trên 0, nhưng mức hơn ở T = 40 nhỏ (cờ cũ ở đó đã 0,87). Sửa hai lỗi đặc trưng **không đổi kết luận** của phiên bản 1.
 
-**Hai lỗi đã phát hiện và đang sửa.** Khi tách theo kịch bản, tôi thấy (1) các đặc trưng về số cạnh khai báo bị ghi bằng 0 ở mọi dòng, nên mô hình không biết mức hỏng khai báo và không tách được theo mức hỏng; (2) các đặc trưng về skeleton khai báo chỉ dùng cạnh cùng kỳ, bỏ qua cạnh có lag (khoảng 70% số cạnh). Cờ mới vẫn hơn cờ cũ dù mắc hai lỗi này. Phiên bản 2 đã có đặc tả (`docs/ext/p4h8_flag_spec_v2.md`, viết trước khi đọc dữ liệu): một mô hình cho cả lag 1, 2, 3, chấm trên tập kiểm tra chưa dùng cho cờ, báo theo lag, T, loại và mức hỏng. Đang chạy; kết quả phiên bản 2 sẽ thay thế bảng trên.
+AUROC theo kịch bản (lag 1; cờ mới / cờ cũ; "thấp" và "cao" là mức hỏng 0,2 và 0,5):
+
+| T | Không hỏng | Thừa cạnh thấp / cao | Thiếu cạnh thấp / cao | Đảo cạnh thấp / cao |
+|---|---|---|---|---|
+| 19 | 0,932 / 0,918 | 0,943 / 0,938; 0,940 / 0,921 | 0,915 / 0,840; **0,954 / 0,530** | **0,981 / 0,477**; 0,966 / 0,667 |
+| 30 | 0,894 / 0,878 | 0,888 / 0,872; 0,889 / 0,875 | 0,875 / 0,861; 0,856 / 0,848 | 0,907 / 0,897; 0,912 / 0,901 |
+| 40 | 0,892 / 0,875 | 0,869 / 0,854; 0,907 / 0,881 | 0,868 / 0,852; 0,859 / 0,858 | 0,889 / 0,872; 0,910 / 0,892 |
+| 80 | 0,808 / 0,771 | 0,828 / 0,798; 0,840 / 0,803 | 0,796 / 0,775; 0,781 / 0,772 | 0,877 / 0,841; 0,865 / 0,839 |
+| 150 | 0,660 / 0,609 | 0,696 / 0,631; 0,696 / 0,635 | 0,686 / 0,661; 0,702 / 0,671 | 0,796 / 0,759; 0,815 / 0,773 |
+
+Điều đọc được: (1) AUROC giảm mạnh khi T lớn, từ khoảng 0,93 ở T = 19 xuống 0,66 đến 0,70 ở T = 150 khi không hỏng, vì khi T lớn ít cặp bị trượt hơn và các cặp trượt giống các cặp chứa hơn; (2) cờ cũ gần như vô dụng ở T = 19 khi thiếu hoặc đảo cạnh (0,48 đến 0,67) còn cờ mới đạt 0,92 đến 0,98; (3) AUROC gần như không phụ thuộc mức hỏng (thấp so với cao); (4) lag 2 và 3 có xu hướng tương tự (xem `results/ext_p4h8_flag_v2/test_eval_v2.md`). Bảng này loại các ô mà phương pháp từ chối đưa ra đảm bảo (lag 2 với T = 30, lag 3 với T = 40), vì ở đó không có khoảng cuối để chấm.
