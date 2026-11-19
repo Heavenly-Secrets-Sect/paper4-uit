@@ -13,15 +13,16 @@ ORDER = ["none", "extra", "missing", "reversed"]
 fm = lambda x: x.replace(".", ",")
 
 
-def longtable(colspec, header, body):
-    return ("{\\small\n\\begin{longtable}{" + colspec + "}\n\\toprule\n" + header + " \\\\\n\\midrule\n\\endfirsthead\n"
+def longtable(colspec, header, body, caption, label):
+    cap = "\\caption{" + caption + "}\\label{" + label + "}\\\\\n"
+    return ("{\\small\n\\begin{longtable}{" + colspec + "}\n" + cap + "\\toprule\n" + header + " \\\\\n\\midrule\n\\endfirsthead\n"
             "\\toprule\n" + header + " \\\\\n\\midrule\n\\endhead\n\\bottomrule\n\\endfoot\n" + body + "\n\\end{longtable}\n}\n")
 
 
-def plain(colspec, header, body):
+def plain(colspec, header, body, caption, label):
     """Short table that must not be split across pages."""
-    return ("\\begin{center}\n{\\small\n\\begin{tabular}{" + colspec + "}\n\\toprule\n" + header + " \\\\\n\\midrule\n"
-            + body + "\n\\bottomrule\n\\end{tabular}\n}\n\\end{center}\n")
+    return ("\\begin{table}[H]\n\\centering\n\\caption{" + caption + "}\\label{" + label + "}\n{\\small\n\\begin{tabular}{" + colspec + "}\n\\toprule\n" + header + " \\\\\n\\midrule\n"
+            + body + "\n\\bottomrule\n\\end{tabular}\n}\n\\end{table}\n")
 
 
 def mr(n, text):
@@ -55,7 +56,8 @@ def guarantee():
         if li < len(lags) - 1:
             body.append("\\midrule")
     header = ("Lag & T & Loại hỏng & Hệ số (biên) & Luật cũ & Biên [CI 95\\%] & PAC & Chạm 0,90")
-    return longtable("llllrrrc", header, "\n".join(body))
+    return longtable("llllrrrc", header, "\n".join(body),
+                     "Tỉ lệ topology đạt ngưỡng theo từng ô (lag, $T$, loại hỏng), trên 550 topology kiểm tra. Mục tiêu là $0{,}90$.", "tab:guarantee")
 
 
 def flag():
@@ -87,10 +89,11 @@ def flag():
         if li < len(lags) - 1:
             body.append("\\midrule")
     header = "Lag & T & Loại hỏng & Mức hỏng & Cờ mới & Cờ cũ"
-    return longtable("lllccc", header, "\n".join(body))
+    return longtable("lllccc", header, "\n".join(body),
+                     "AUROC của cờ mới và cờ cũ theo từng lag, $T$, loại hỏng và mức hỏng.", "tab:flag")
 
 
-def comparison(col, boldmin):
+def comparison(col, boldmin, caption, label):
     meths = [("SRCI", "STRIDE"), ("BVAR-Minnesota", "BVAR-Minnesota"), ("PSel-Union (32x)", "PSel-Union"),
              ("PSel", "PSel"), ("Full VAR", "Full VAR"), ("TLP", "TLP")]
     d = {}
@@ -115,12 +118,12 @@ def comparison(col, boldmin):
         if ti == 0:
             body.append("\\midrule")
     header = "T & Loại hỏng & " + " & ".join(n for _, n in meths)
-    return plain("llrrrrrr", header, "\n".join(body))
+    return plain("llrrrrrr", header, "\n".join(body), caption, label)
 
 
 OUT.mkdir(exist_ok=True)
 (OUT / "guarantee.tex").write_text(guarantee())
 (OUT / "flag.tex").write_text(flag())
-(OUT / "cmp_is.tex").write_text(comparison(7, True))
-(OUT / "cmp_hit.tex").write_text(comparison(4, False))
+(OUT / "cmp_is.tex").write_text(comparison(7, True, "Interval score trung bình ở lag 1 (càng thấp càng tốt). In đậm là giá trị thấp nhất trong các phương pháp đạt mức đảm bảo; $^{\\dagger}$ là phương pháp không đạt mức đảm bảo ở ô đó.", "tab:cmp-is"))
+(OUT / "cmp_hit.tex").write_text(comparison(4, False, "Tỉ lệ topology đạt ngưỡng của các phương pháp ở lag 1 (mục tiêu $0{,}90$).", "tab:cmp-hit"))
 print("wrote", sorted(p.name for p in OUT.glob("*.tex")))
