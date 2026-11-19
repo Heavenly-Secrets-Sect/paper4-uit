@@ -23,13 +23,76 @@ Mệnh đề chỉ áp dụng cho topology mới cùng họ bộ sinh, trong k�
 
 Kết quả xác nhận đo trên 550 topology kiểm tra cho từng lag, với hệ số đóng băng và tiêu chí ghi trước.
 
-| Lag | Ô có hệ số hữu hạn | Tỉ lệ topology đạt ngưỡng: luật cũ / phân vị biên / PAC | Ô mà khoảng tin cậy chạm 0,90 | Tiêu chí (cần ≥ 80% số ô) |
-|---|---|---|---|---|
-| 1 | 20/20 | 0,805 / 0,897 / 0,918 | 17/20 (85%) | đạt |
-| 2 | 12/16 | 0,805 / 0,890 / 0,912 | 9/12 (75%) | không đạt |
-| 3 | 8/12 | 0,801 / 0,888 / 0,906 | 8/8 | đạt |
+Ba bảng dưới đây (mỗi lag một bảng) cho kết quả theo từng ô (cell), tức từng tổ hợp (T, loại hỏng): lag 1 có 5 giá trị T × 4 loại hỏng = 20 ô, lag 2 có 16 ô và lag 3 có 12 ô. Các cột là:
+- Hệ số (biên): hệ số hiệu chỉnh c của phiên bản biên. "Từ chối" nghĩa là bước hiệu chỉnh không tìm được hệ số hữu hạn nên phương pháp không đưa ra bảo đảm (abstain).
+- Tỉ lệ đạt: luật cũ, Biên và PAC: tỉ lệ topology đạt ngưỡng trên 550 topology kiểm tra khi dùng luật cũ, hệ số biên và hệ số PAC. Mục tiêu là 0,90.
+- Biên [CI 95%]: khoảng tin cậy 95% của tỉ lệ đạt ngưỡng ở phiên bản biên.
+- Chạm 0,90: "có" nếu cận trên của khoảng tin cậy đó không thấp hơn 0,90, tức kết quả phù hợp với mục tiêu.
 
-Một ô (cell) là một tổ hợp (T, loại hỏng): lag 1 có 5 giá trị T × 4 loại hỏng = 20 ô, lag 2 có 16 ô và lag 3 có 12 ô. Cột "ô có hệ số hữu hạn" đếm số ô mà bước hiệu chỉnh tìm được hệ số; ở các ô còn lại phương pháp từ chối đưa ra bảo đảm (abstain), như nói ở dưới. Ba giá trị ở cột tỉ lệ topology đạt ngưỡng là của luật cũ, phiên bản biên và phiên bản PAC, tính trên cùng 550 topology kiểm tra. Cột "ô mà khoảng tin cậy chạm 0,90" đếm số ô có cận trên của khoảng tin cậy 95% của tỉ lệ đạt ngưỡng (bản biên) không thấp hơn 0,90, nghĩa là kết quả phù hợp với mục tiêu. Tiêu chí ghi trước là phải có ít nhất 80% số ô như vậy.
+Lag 1:
+
+| T | Loại hỏng | Hệ số (biên) | Tỉ lệ đạt: luật cũ | Biên [CI 95%] | PAC | Chạm 0,90 |
+|---|---|---|---|---|---|---|
+| 19 | Không hỏng | 3,888 | 0,869 | 0,922 [0,896; 0,943] | 0,935 | có |
+| 19 | Thừa cạnh | 4,044 | 0,780 | 0,922 [0,896; 0,943] | 0,936 | có |
+| 19 | Thiếu cạnh | 2,657 | 0,789 | 0,889 [0,860; 0,914] | 0,920 | có |
+| 19 | Đảo cạnh | 4,443 | 0,767 | 0,886 [0,857; 0,912] | 0,907 | có |
+| 30 | Không hỏng | 3,473 | 0,825 | 0,864 [0,832; 0,891] | 0,885 | không |
+| 30 | Thừa cạnh | 3,514 | 0,775 | 0,871 [0,840; 0,898] | 0,895 | không |
+| 30 | Thiếu cạnh | 3,119 | 0,775 | 0,875 [0,844; 0,901] | 0,909 | có |
+| 30 | Đảo cạnh | 3,895 | 0,780 | 0,866 [0,835; 0,894] | 0,899 | không |
+| 40 | Không hỏng | 3,598 | 0,858 | 0,902 [0,874; 0,925] | 0,925 | có |
+| 40 | Thừa cạnh | 3,722 | 0,778 | 0,927 [0,902; 0,948] | 0,933 | có |
+| 40 | Thiếu cạnh | 3,297 | 0,807 | 0,922 [0,896; 0,943] | 0,933 | có |
+| 40 | Đảo cạnh | 3,957 | 0,791 | 0,905 [0,877; 0,928] | 0,936 | có |
+| 80 | Không hỏng | 2,983 | 0,885 | 0,920 [0,894; 0,941] | 0,933 | có |
+| 80 | Thừa cạnh | 3,04 | 0,820 | 0,920 [0,894; 0,941] | 0,936 | có |
+| 80 | Thiếu cạnh | 2,836 | 0,831 | 0,913 [0,886; 0,935] | 0,944 | có |
+| 80 | Đảo cạnh | 3,374 | 0,800 | 0,907 [0,879; 0,930] | 0,919 | có |
+| 150 | Không hỏng | 2,59 | 0,818 | 0,876 [0,846; 0,903] | 0,900 | có |
+| 150 | Thừa cạnh | 2,734 | 0,789 | 0,895 [0,866; 0,919] | 0,902 | có |
+| 150 | Thiếu cạnh | 2,584 | 0,793 | 0,875 [0,844; 0,901] | 0,896 | có |
+| 150 | Đảo cạnh | 3,003 | 0,771 | 0,888 [0,859; 0,913] | 0,908 | có |
+
+Lag 2:
+
+| T | Loại hỏng | Hệ số (biên) | Tỉ lệ đạt: luật cũ | Biên [CI 95%] | PAC | Chạm 0,90 |
+|---|---|---|---|---|---|---|
+| 30 | Không hỏng | từ chối | 0,762 | — | — | — |
+| 30 | Thừa cạnh | từ chối | 0,671 | — | — | — |
+| 30 | Thiếu cạnh | từ chối | 0,438 | — | — | — |
+| 30 | Đảo cạnh | từ chối | 0,566 | — | — | — |
+| 40 | Không hỏng | 3,653 | 0,827 | 0,889 [0,860; 0,914] | 0,909 | có |
+| 40 | Thừa cạnh | 3,664 | 0,782 | 0,891 [0,862; 0,916] | 0,916 | có |
+| 40 | Thiếu cạnh | 3,118 | 0,782 | 0,904 [0,876; 0,927] | 0,916 | có |
+| 40 | Đảo cạnh | 4,133 | 0,765 | 0,890 [0,860; 0,915] | 0,910 | có |
+| 80 | Không hỏng | 2,79 | 0,847 | 0,900 [0,872; 0,924] | 0,916 | có |
+| 80 | Thừa cạnh | 2,797 | 0,807 | 0,869 [0,838; 0,896] | 0,902 | không |
+| 80 | Thiếu cạnh | 2,684 | 0,776 | 0,904 [0,876; 0,927] | 0,915 | có |
+| 80 | Đảo cạnh | 3,093 | 0,790 | 0,868 [0,836; 0,895] | 0,893 | không |
+| 150 | Không hỏng | 2,462 | 0,873 | 0,896 [0,868; 0,921] | 0,916 | có |
+| 150 | Thừa cạnh | 2,543 | 0,816 | 0,891 [0,862; 0,916] | 0,922 | có |
+| 150 | Thiếu cạnh | 2,514 | 0,798 | 0,927 [0,902; 0,948] | 0,938 | có |
+| 150 | Đảo cạnh | 2,856 | 0,792 | 0,851 [0,818; 0,880] | 0,888 | không |
+
+Lag 3:
+
+| T | Loại hỏng | Hệ số (biên) | Tỉ lệ đạt: luật cũ | Biên [CI 95%] | PAC | Chạm 0,90 |
+|---|---|---|---|---|---|---|
+| 40 | Không hỏng | từ chối | 0,585 | — | — | — |
+| 40 | Thừa cạnh | từ chối | 0,507 | — | — | — |
+| 40 | Thiếu cạnh | từ chối | 0,071 | — | — | — |
+| 40 | Đảo cạnh | từ chối | 0,531 | — | — | — |
+| 80 | Không hỏng | 2,87 | 0,845 | 0,887 [0,858; 0,912] | 0,904 | có |
+| 80 | Thừa cạnh | 2,94 | 0,755 | 0,882 [0,852; 0,908] | 0,900 | có |
+| 80 | Thiếu cạnh | 2,718 | 0,740 | 0,876 [0,846; 0,903] | 0,893 | có |
+| 80 | Đảo cạnh | 3,18 | 0,778 | 0,879 [0,848; 0,905] | 0,886 | có |
+| 150 | Không hỏng | 2,424 | 0,889 | 0,891 [0,862; 0,916] | 0,915 | có |
+| 150 | Thừa cạnh | 2,544 | 0,835 | 0,895 [0,866; 0,919] | 0,918 | có |
+| 150 | Thiếu cạnh | 2,461 | 0,804 | 0,911 [0,884; 0,933] | 0,935 | có |
+| 150 | Đảo cạnh | 2,848 | 0,767 | 0,882 [0,852; 0,908] | 0,897 | có |
+
+Kết quả: 17/20 ô chạm 0,90 ở lag 1 (85%), 9/12 ô có hệ số ở lag 2 (75%) và 8/8 ô có hệ số ở lag 3. Tiêu chí ghi trước là ít nhất 80% số ô có hệ số phải chạm 0,90, nên đạt ở lag 1 và lag 3, không đạt ở lag 2.
 
 So với luật cũ, trên cùng các ô có hệ số hữu hạn, khoảng tin cậy rộng hơn ×1,18, ×1,14 và ×1,10 và interval score cao hơn 11%, 6% và 3% (lần lượt ở lag 1, 2, 3, với hệ số biên). Phiên bản PAC rộng hơn khoảng 5% so với phiên bản biên.
 
