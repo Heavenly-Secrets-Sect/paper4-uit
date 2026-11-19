@@ -98,7 +98,7 @@ Full VAR & Unrestricted VAR & \citet{sims1980macroeconomics}\\
 \end{table}
 
 \paragraph{Residual Bootstrap và Oracle.}
-Ước lượng SVAR đệ quy bằng OLS từng phương trình rồi dựng khoảng tin cậy cho IRF bằng cách rút phần dư có hoàn lại và fit lại \citep{kilian1998small,lutkepohl2005new,kilian2017structural}. Chúng tôi cắm skeleton vào mô hình \eqref{eq:svar}, chạy bootstrap $B=199$ lần và lấy phân vị 2.5\%--97.5\% (mục~\ref{sec:bootstrap}). Skeleton được giữ nguyên ở mọi lần chạy. Oracle là cùng quy trình trên đồ thị thật với lag đúng.
+Ước lượng SVAR đệ quy bằng OLS từng phương trình rồi dựng khoảng tin cậy cho IRF bằng cách rút phần dư có hoàn lại và fit lại \citep{kilian1998small,lutkepohl2005new,kilian2017structural}. Chúng tôi dùng nguyên skeleton vào mô hình \eqref{eq:svar}, chạy bootstrap $B=199$ lần và lấy phân vị 2.5\%--97.5\% (mục~\ref{sec:bootstrap}). Skeleton được giữ nguyên ở mọi lần chạy. Oracle là cùng quy trình trên đồ thị thật với lag đúng.
 
 \paragraph{Inflate.}
 Khoảng của RB được nới quanh trung điểm bởi hằng số $c$: $[m-c\,h,\;m+c\,h]$, với $m$ là trung điểm và $h$ là nửa độ rộng. $c$ được chọn theo từng $T$ trên tập hiệu chỉnh.

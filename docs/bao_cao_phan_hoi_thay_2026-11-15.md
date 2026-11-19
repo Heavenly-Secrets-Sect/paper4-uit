@@ -91,14 +91,14 @@ Trên panel hiện có (14 biến, 19 quý, skeleton 21 cạnh, hệ số mới,
 
 | Khai báo | Phương pháp | Coverage theo cặp phi-null | Tỉ lệ lần sinh có ≤10% cặp trượt | Độ rộng trung vị | Fit thành công |
 |---|---|---|---|---|---|
-| Không hỏng | RB cắm skeleton | 0,904 | 0,620 | 1,87 | 400/400 |
+| Không hỏng | RB dùng nguyên skeleton | 0,904 | 0,620 | 1,87 | 400/400 |
 | Không hỏng | STRIDE | 0,990 | 0,990 | 3,64 | 400/400 |
-| Thiếu 20% | RB cắm skeleton | 0,663 | 0,000 | 1,70 | 400/400 |
+| Thiếu 20% | RB dùng nguyên skeleton | 0,663 | 0,000 | 1,70 | 400/400 |
 | Thiếu 20% | STRIDE | 0,981 | 0,959 | 5,09 | 390/400 |
-| Thiếu 50% | RB cắm skeleton | 0,291 | 0,000 | 1,45 | 400/400 |
+| Thiếu 50% | RB dùng nguyên skeleton | 0,291 | 0,000 | 1,45 | 400/400 |
 | Thiếu 50% | STRIDE | 0,993 | 0,978 | 13,94 | 359/400 |
 
-STRIDE giữ coverage ở mức 0,98 đến 0,99 trong khi RB giảm xuống 0,29 khi thiếu 50% cạnh. Tuy nhiên, khi thiếu cạnh, một số lần sinh cho khoảng rộng đột biến (độ rộng trung bình lên tới vài trăm đến vài nghìn, trong khi trung vị chỉ từ 5 đến 14) và 10% lần fit thất bại ở mức thiếu 50%. Với T = 19 và 11 cạnh thiếu, bài toán gần như vô định, và các thầy cần lưu ý điều này khi đọc phần ứng dụng. Kết quả dựa trên một ground truth duy nhất nên không phải bảo đảm theo topology, và panel gốc có 7 biến là mô phỏng.
+Ở đây "RB dùng nguyên skeleton" là phương pháp đối chứng: nó nhận cùng skeleton đã bị làm hỏng như STRIDE nhưng coi skeleton là đúng, không sửa cấu trúc và không dùng mức hỏng. STRIDE giữ coverage ở mức 0,98 đến 0,99 trong khi RB giảm xuống 0,29 khi thiếu 50% cạnh. Tuy nhiên, khi thiếu cạnh, một số lần sinh cho khoảng rộng đột biến (độ rộng trung bình lên tới vài trăm đến vài nghìn, trong khi trung vị chỉ từ 5 đến 14) và 10% lần fit thất bại ở mức thiếu 50%. Với T = 19 và 11 cạnh thiếu, bài toán gần như vô định, và các thầy cần lưu ý điều này khi đọc phần ứng dụng. Kết quả dựa trên một ground truth duy nhất nên không phải bảo đảm theo topology, và panel gốc có 7 biến là mô phỏng.
 
 Phương án bán mô phỏng neo vào số thật mà nhóm từng cân nhắc chưa được xây dựng. Vì các cột của panel được chuẩn hóa z-score, việc neo mức trung bình và độ lệch chuẩn không làm thay đổi kết quả của phương pháp; chỉ cấu trúc theo thời gian mới có ảnh hưởng, mà số điểm thật để neo lại rất ít. Mô phỏng theo panel ở trên đã thay thế phương án này.
 

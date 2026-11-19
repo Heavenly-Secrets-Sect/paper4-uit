@@ -105,7 +105,7 @@ write("tab_violation.tex", "\\begin{tabular}{lccccc}\n\\toprule\nKịch bản & 
 ps = json.loads((R / "ext_case_study/panel_calibrated_sim.json").read_text())["rows"]
 lines = []
 for case, nm in [("none-0.0", "Không hỏng"), ("missing-0.2", "Thiếu 20\\%"), ("missing-0.5", "Thiếu 50\\%")]:
-    for meth, mn in [("plugin", "RB cắm skeleton"), ("srci", "STRIDE")]:
+    for meth, mn in [("plugin", "RB dùng nguyên skeleton"), ("srci", "STRIDE")]:
         rs = [r for r in ps if r["case"] == case and r["method"] == meth]
         ok = [r for r in rs if r["status"] == "ok"]
         cov = sum(r["n_covered_nonnull"] for r in ok) / sum(r["n_nonnull"] for r in ok)
