@@ -50,12 +50,12 @@ def guarantee():
                             "có" if float(ci[1]) >= 0.90 else "không"]
                 c1 = mr(len(Ts) * 4, lag) if (ti == 0 and ki == 0) else ""
                 c2 = mr(4, T) if ki == 0 else ""
-                body.append(" & ".join([c1, c2, KN[k]] + vals) + " \\\\")
+                body.append(" & ".join([c1, c2, KN[k]] + vals) + (" \\\\*" if ki < 3 else " \\\\"))
             if ti < len(Ts) - 1:
                 body.append("\\cmidrule(l){2-8}")
         if li < len(lags) - 1:
             body.append("\\midrule")
-    header = ("Lag & T & Loại hỏng & Hệ số (biên) & Luật cũ & Biên [CI 95\\%] & PAC & Chạm 0,90")
+    header = ("Lag & T & Loại hỏng & Hệ số $c$ (biên) & Luật cũ & Biên [CI 95\\%] & PAC & Chạm 0,90")
     return longtable("llllrrrc", header, "\n".join(body),
                      "Tỉ lệ topology đạt ngưỡng theo từng ô (lag, $T$, loại hỏng), trên 550 topology kiểm tra. Mục tiêu là $0{,}90$.", "tab:guarantee")
 
@@ -80,7 +80,8 @@ def flag():
                     c2 = mr(7, T) if first else ""
                     c3 = mr(len(levels), KN[k]) if si == 0 else ""
                     n, o = d[(T, k, l)]
-                    body.append(" & ".join([c1, c2, c3, lv[l], n, o]) + " \\\\")
+                    last = (k == ORDER[-1] and si == len(levels) - 1)
+                    body.append(" & ".join([c1, c2, c3, lv[l], n, o]) + (" \\\\" if last else " \\\\*"))
                     first = False
                 if k != ORDER[-1]:
                     body.append("\\cmidrule(l){3-6}")
