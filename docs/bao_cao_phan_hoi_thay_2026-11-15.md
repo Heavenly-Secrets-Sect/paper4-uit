@@ -8,7 +8,13 @@ Phương pháp được gọi là STRIDE (Skeleton-Tolerant Re-selecting Interva
 
 Trước đây hệ số nới độ rộng là một phân vị gộp ở mức cặp, tính trên khoảng 20 topology. Hệ số này nhắm tới độ phủ trung bình quanh 0,95 trên mọi cặp, nhưng không bảo đảm điều gì cho từng topology. Kiểm tra trên 20 topology cũ cho thấy hệ số đó xấp xỉ trung vị của điểm theo đơn vị, nghĩa là khoảng một nửa số topology vẫn vượt mức trượt mong muốn.
 
-Trong báo cáo, cặp non-null là cặp (biến nguồn, biến đích) có hiệu ứng thật khác 0 trong mô hình sinh dữ liệu; coverage chỉ được đo trên các cặp này. Nhóm phát biểu lại bảo đảm ở mức topology. Mỗi topology (cùng toàn bộ phần ngẫu nhiên bên trong nó) là một đơn vị. Điểm của đơn vị là hệ số nhỏ nhất sao cho không quá β = 10% số cặp non-null bị trượt, lấy giá trị lớn nhất trên hai mức hỏng. Hệ số hiệu chỉnh là thống kê hạng của các điểm này trên N topology hiệu chỉnh. Có hai cách chọn hạng k0. Ở phiên bản biên, k0 = ⌈(N+1)(1−δ)⌉ với δ = 0,10; khi các topology hiệu chỉnh và kiểm tra hoán vị được, xác suất điểm của một topology mới không vượt hệ số này ít nhất là k0/(N+1). Ở phiên bản PAC, k0 là giá trị nhỏ nhất sao cho phân phối Beta(k0, N+1−k0) tại 0,90 không quá 0,05; khi đó có độ tin cậy 0,95 (theo mẫu hiệu chỉnh) rằng ít nhất 90% topology mới đạt ngưỡng, và cần N ≥ 59.
+Một số khái niệm dùng xuyên suốt. Cặp non-null là cặp (biến nguồn, biến đích) có hiệu ứng thật khác 0 trong mô hình sinh dữ liệu; coverage chỉ được đo trên các cặp này. Một cặp bị trượt (missed) khi giá trị thật nằm ngoài khoảng tin cậy.
+
+Nhóm phát biểu lại bảo đảm ở mức topology: mỗi topology (cùng toàn bộ phần ngẫu nhiên bên trong nó) là một đơn vị. Điểm của đơn vị (unit score) là hệ số nới nhỏ nhất sao cho không quá β = 10% số cặp non-null bị trượt, lấy giá trị lớn nhất trên hai mức hỏng. Nếu một topology có điểm nhỏ hơn hoặc bằng hệ số đang dùng thì topology đó "đạt ngưỡng" (hit). Tỉ lệ topology đạt ngưỡng (topology hit rate) là phần trăm topology kiểm tra đạt ngưỡng; đây là đại lượng mà bảo đảm nhắm tới, với mục tiêu 0,90.
+
+Hệ số hiệu chỉnh c được chọn từ N topology hiệu chỉnh: xếp N điểm theo thứ tự tăng dần rồi lấy điểm ở hạng k0 (order statistic). Có hai cách chọn k0.
+- Phiên bản biên (marginal): k0 = ⌈(N+1)(1−δ)⌉ với δ = 0,10, tức khoảng hạng 90%. Khi các topology hiệu chỉnh và kiểm tra hoán vị được, xác suất một topology mới đạt ngưỡng ít nhất là k0/(N+1). Đây là bảo đảm ở mức trung bình trên mọi cách rút tập hiệu chỉnh; với một tập hiệu chỉnh cụ thể, tỉ lệ đạt thật có thể thấp hơn 0,90 do may rủi của mẫu.
+- Phiên bản PAC (probably approximately correct): k0 là hạng nhỏ nhất sao cho phân phối Beta(k0, N+1−k0) tại 0,90 không quá 0,05. Khi đó, với độ tin cậy 0,95 theo mẫu hiệu chỉnh, ít nhất 90% topology mới đạt ngưỡng. Với N = 550, bản biên chọn hạng 496 còn bản PAC chọn hạng 507, nên hệ số lớn hơn và khoảng rộng hơn khoảng 5%. Cần N ≥ 59.
 
 Điều kiện hoán vị được bảo đảm bằng cách xây dựng tập topology. Nhóm sinh 1.200 topology độc lập từ cùng một bộ sinh và chia ngẫu nhiên thành ba phần: thiết kế (100), hiệu chỉnh (550) và kiểm tra (550). Một tập thí điểm gồm 360 topology (60/150/150) được dùng để chọn quy tắc và viết mã; phần kiểm tra của tập này chỉ được mở một lần, để chấm cờ độ tin cậy ở lag 1. Ở các tập cũ, tập hiệu chỉnh và tập kiểm chứng là các tập cố định nên không có cơ sở hoán vị như vậy.
 
@@ -22,15 +28,17 @@ Kết quả xác nhận được đo trên 550 topology kiểm tra cho từng la
 | 2 | 12/16 | 0,805 / 0,890 / 0,912 | 9/12 (75%) | không đạt |
 | 3 | 8/12 | 0,801 / 0,888 / 0,906 | 8/8 | đạt |
 
+Một ô (cell) là một tổ hợp (T, loại hỏng): lag 1 có 5 giá trị T × 4 loại hỏng = 20 ô, lag 2 có 16 ô và lag 3 có 12 ô. Cột "ô có hệ số hữu hạn" đếm số ô mà bước hiệu chỉnh tìm được hệ số; ở các ô còn lại phương pháp từ chối đưa ra bảo đảm (abstain), như nói ở dưới. Ba giá trị ở cột tỉ lệ topology đạt ngưỡng là của luật cũ, phiên bản biên và phiên bản PAC, tính trên cùng 550 topology kiểm tra. Cột "ô mà khoảng tin cậy chạm 0,90" đếm số ô có cận trên của khoảng tin cậy 95% của tỉ lệ đạt ngưỡng (bản biên) không thấp hơn 0,90, nghĩa là kết quả phù hợp với mục tiêu. Tiêu chí ghi trước là phải có ít nhất 80% số ô như vậy.
+
 So với luật cũ, trên cùng các ô có hệ số hữu hạn, khoảng tin cậy rộng hơn ×1,18, ×1,14 và ×1,10 và interval score cao hơn 11%, 6% và 3% (lần lượt ở lag 1, 2, 3, với hệ số biên). Phiên bản PAC rộng hơn khoảng 5% so với phiên bản biên.
 
 Ở lag 2, tiêu chí ghi trước không đạt (75% so với 80%). Theo đặc tả, nhóm rút tuyên bố bảo đảm ở ba ô không đạt: T = 80 thừa cạnh, T = 80 đảo cạnh và T = 150 đảo cạnh; cận trên nhỏ nhất ở lag 2 vẫn là 0,880. Ở lag 2 với T = 30 và lag 3 với T = 40, phương pháp từ chối đưa ra đảm bảo (abstain) vì từ 9% đến 92% số lượt fit thất bại. Ngay tại các ô này, luật cũ vẫn trả về một khoảng tin cậy nhưng chỉ 7% đến 76% topology đạt ngưỡng (thấp nhất là 7% ở lag 3, T = 40, thiếu cạnh). Vì vậy hệ số mới đồng thời đóng vai trò một chỉ báo cho biết khi nào không nên tin khoảng tin cậy. Ở các ô đạt, tỉ lệ topology đạt ngưỡng nằm quanh 0,89–0,90, xấp xỉ mục tiêu và không dư, với sai số lấy mẫu của 550 topology khoảng ±0,025. Toàn bộ kết quả này dùng một bộ sinh, 14 nút, 21 cạnh và nhiễu Gaussian sạch.
 
 ## Hệ số 0,5
 
-Hệ số co (pre-shrink) κ là hằng số nhân vào nửa độ rộng của khoảng bootstrap trước bước hiệu chỉnh, nên khoảng cuối cùng là trung điểm ± κ·c·(nửa độ rộng). Với κ = 0,5, nửa độ rộng bị co xuống một nửa; về bản chất κ là một hệ số tỉ lệ, và κ lớn hơn 1 sẽ làm khoảng rộng ra thay vì co lại. Hằng số này được thêm vào vì lưới hiệu chỉnh cũ chỉ cho phép nới (từ 1,0), trong khi ở T nhỏ khoảng bootstrap vốn đã quá rộng. Không có cơ sở lý thuyết nào dẫn tới đúng giá trị 0,5. Nếu κ được áp dụng giống hệt nhau ở hiệu chỉnh và kiểm tra thì khoảng cuối cùng chỉ phụ thuộc vào tích κ·c, nên bảo đảm ở mục 2 không phụ thuộc vào giá trị này.
+Hệ số co (pre-shrink) κ là hằng số nhân vào nửa độ rộng của khoảng bootstrap trước bước hiệu chỉnh, nên khoảng cuối cùng là trung điểm ± κ·c·(nửa độ rộng). Với κ = 0,5, nửa độ rộng bị co xuống một nửa; về bản chất κ là một hệ số tỉ lệ, và κ lớn hơn 1 sẽ làm khoảng rộng ra thay vì co lại. Hằng số này được thêm vào vì lưới hiệu chỉnh cũ chỉ cho phép nới (từ 1,0), trong khi ở T nhỏ khoảng bootstrap vốn đã quá rộng. Không có cơ sở lý thuyết nào dẫn tới đúng giá trị 0,5. Nếu κ được áp dụng giống hệt nhau ở hiệu chỉnh và kiểm tra thì khoảng cuối cùng chỉ phụ thuộc vào tích κ·c, nên bảo đảm ở phần Điều kiện đủ để coverage đúng không phụ thuộc vào giá trị này.
 
-Nhóm kiểm độ nhạy bằng cách hiệu chỉnh theo quy tắc cũ trên tập hiệu chỉnh và đánh giá trên tập thiết kế.
+Nhóm kiểm độ nhạy bằng cách hiệu chỉnh theo quy tắc cũ trên tập hiệu chỉnh và đánh giá trên tập thiết kế. Quy tắc cũ chọn hệ số c từ một lưới giá trị định sẵn, bắt đầu từ 1,0 (grid floor, tạm gọi là sàn lưới) và chỉ cho phép nới, không cho thu hẹp. Hệ số hiệu dụng (effective factor) là κ × c, tức bội số thực sự nhân vào nửa độ rộng của khoảng bootstrap. Cột "số ô chạm sàn lưới" đếm số ô (trên 20) mà c được chọn đúng bằng 1,0, nghĩa là phép hiệu chỉnh muốn thu hẹp thêm nhưng lưới không cho.
 
 | Hệ số co κ | Hệ số hiệu dụng | Số ô chạm sàn lưới | Coverage | Interval score |
 |---|---|---|---|---|
@@ -39,11 +47,11 @@ Nhóm kiểm độ nhạy bằng cách hiệu chỉnh theo quy tắc cũ trên t
 | 1,0 | 1,460 | 0/20 | 0,955 | 5,33 |
 | 2,0 | 2,000 | 20/20 | 0,988 | 6,55 |
 
-Với κ từ 0,25 đến 1,0, kết quả gần như trùng nhau và chênh lệch chủ yếu do làm tròn của lưới. Với κ = 2, lưới chạm sàn nên khoảng tin cậy quá rộng. Như vậy giá trị 0,5 không quan trọng miễn là sàn của lưới không bị chạm, và nhóm đề xuất bỏ hằng số này, dùng hệ số là thống kê hạng chính xác (không qua lưới) như ở mục 2.
+Với κ từ 0,25 đến 1,0, kết quả gần như trùng nhau và chênh lệch chủ yếu do làm tròn của lưới. Với κ = 2, lưới chạm sàn nên khoảng tin cậy quá rộng. Như vậy giá trị 0,5 không quan trọng miễn là sàn của lưới không bị chạm, và nhóm đề xuất bỏ hằng số này, dùng hệ số là thống kê hạng chính xác (không qua lưới) như ở phần Điều kiện đủ để coverage đúng.
 
 ## T nhỏ nhất và mức hỏng mà phương pháp còn chạy được
 
-Trên tập 1.200 topology (mục 2), hệ số bảo đảm hữu hạn từ T = 19 ở lag 1, từ T = 40 ở lag 2 và từ T = 80 ở lag 3. Dưới các ngưỡng này (lag 2 với T = 30, lag 3 với T = 40), tỉ lệ fit thất bại nằm trong khoảng 9% đến 92% và phương pháp từ chối đưa ra đảm bảo. Như vậy T tối thiểu tăng theo số lag, phù hợp với bản đồ thăm dò đã có từ trước (19, 40 và 80 cho lag 1, 2 và 4).
+Trên tập 1.200 topology (phần Điều kiện đủ), hệ số bảo đảm hữu hạn từ T = 19 ở lag 1, từ T = 40 ở lag 2 và từ T = 80 ở lag 3. Dưới các ngưỡng này (lag 2 với T = 30, lag 3 với T = 40), tỉ lệ fit thất bại nằm trong khoảng 9% đến 92% và phương pháp từ chối đưa ra đảm bảo. Như vậy T tối thiểu tăng theo số lag, phù hợp với bản đồ thăm dò đã có từ trước (19, 40 và 80 cho lag 1, 2 và 4).
 
 Phần quét theo mức hỏng chỉ được chạy ở lag 1, trên 60 topology thiết kế của tập thí điểm (T ∈ {19, 30, 40, 80, 150}, mức hỏng từ 0,1 đến 0,8, ba loại hỏng, 14 nút và 21 cạnh). Quy tắc ghi trước: một ô được coi là dùng được nếu fit thành công ở ít nhất 95% số lượt và coverage của các cặp non-null tại hệ số hiệu chỉnh đạt ít nhất 0,90. Với thiếu cạnh, phương pháp dùng được ở mọi T đã thử, kể cả T = 19 ở mức hỏng 0,8. Với thừa cạnh và đảo cạnh, phương pháp dùng được từ T = 30 ở mọi mức đến 0,8; ở T = 19, thừa cạnh thất bại từ mức 0,7 (tỉ lệ fit thành công 0,92 rồi 0,87) và đảo cạnh thất bại từ mức 0,5 (tỉ lệ thành công từ 0,92 xuống 0,88).
 
@@ -55,7 +63,7 @@ Kết quả quét này có một số hạn chế. "Thành công" chỉ có ngh�
 
 ## Mô phỏng
 
-Nhóm đã viết bộ sinh tập topology có tham số (số topology, kích thước từng phần) và tạo hai tập mới gồm 360 và 1.200 topology, so với 40 topology trước đây. Các thực nghiệm đã chạy ở lag 1, 2 và 3 (mục 2).
+Nhóm đã viết bộ sinh tập topology có tham số (số topology, kích thước từng phần) và tạo hai tập mới gồm 360 và 1.200 topology, so với 40 topology trước đây. Các thực nghiệm đã chạy ở lag 1, 2 và 3 (phần Điều kiện đủ).
 
 Để kiểm tra khi nhiễu không còn là Gaussian, nhóm giữ nguyên hệ số đóng băng và chạy lại trên các topology kiểm tra ở lag 1 với nhiễu động học Student-t bốn bậc tự do hoặc Laplace, phương sai bằng 1. Đây là các kịch bản vi phạm giả định Gaussian sạch và không nằm trong phạm vi bảo đảm.
 
@@ -83,7 +91,7 @@ Nhóm đã kiểm chứng 79 mục (trong đó 69 mục từ 2021 trở đi), ph
 
 ## Dữ liệu thực tế
 
-Việc thu số liệu thật từ nguồn công khai không khả thi với công sức hợp lý. Một thăm dò nhỏ (3 ngân hàng × 2 quý) chỉ mở được 1 trong 6 tài liệu: báo cáo ACB quý 3/2024 là ảnh quét nên phải OCR (số đọc khá tốt, nhãn bị méo), MBB chặn truy cập bằng cơ chế chống bot, và trang nhà đầu tư của VCB tải danh sách bằng JavaScript nên không có đường dẫn trực tiếp. Ước tính thu đủ 14 ngân hàng × 19 quý mất 80 đến 150 giờ (dựa trên một tài liệu, chưa đo), tự động hóa được tối đa khoảng 30%, và điều khoản sử dụng chưa được kiểm chứng. Vì vậy phần ngân hàng của panel vẫn là dữ liệu mô phỏng hiệu chỉnh (7 biến) và bài phải khai báo rõ điều này. Nếu nhà trường có cơ sở dữ liệu tài chính trả phí, việc xuất dữ liệu một lần có thể thay thế cho cách làm thủ công.
+Panel gồm 14 biến: 3 biến vĩ mô và 4 biến cổ phiếu là dữ liệu thật, còn 7 biến ngân hàng là dữ liệu mô phỏng hiệu chỉnh, không phải số liệu thật; bài sẽ khai báo rõ điều này.
 
 Trên panel hiện có (14 biến, 19 quý, skeleton 21 cạnh, hệ số mới, 5 hạt giống bootstrap, 3 mức khai báo), khoảng tin cậy của cả 10 cặp được chọn trước, ở mọi mức khai báo và mọi hạt giống, đều chứa 0. Các cặp giữa hai biến quan sát được (lãi suất chính sách tới lợi suất cổ phiếu, tới GDP và tới CPI; CPI tới khối lượng giao dịch) là dữ liệu thật; các cặp có biến ngân hàng chỉ mang tính minh họa. Khoảng tin cậy rộng ra khi khai báo nhiều cạnh thiếu hơn: ví dụ với cặp lãi suất chính sách tới lợi suất cổ phiếu, độ rộng là 0,92 khi không hỏng, 4,4 khi thiếu 20% và 7,3 khi thiếu 50%. Nói cách khác, 19 quý quá ngắn để xác định dấu của bất kỳ hiệu ứng nào trong các cặp đã chọn; phương pháp phản ánh đúng mức bất định đó thay vì tạo ra một kết quả có ý nghĩa kinh tế.
 
@@ -99,16 +107,6 @@ Trên panel hiện có (14 biến, 19 quý, skeleton 21 cạnh, hệ số mới,
 | Thiếu 50% | STRIDE | 0,993 | 0,978 | 13,94 | 359/400 |
 
 "RB plug-in" là phương pháp đối chứng: residual bootstrap (RB) cắm thẳng (plug-in) skeleton khai báo vào mô hình như thể nó đúng. Nó nhận cùng skeleton đã bị làm hỏng như STRIDE nhưng không nghi ngờ, không sửa cấu trúc và không dùng mức hỏng. STRIDE thì ngược lại: coi skeleton là giả thuyết có thể sai, kiểm tra và sửa nó trước khi dựng khoảng tin cậy. STRIDE giữ coverage ở mức 0,98 đến 0,99 trong khi RB giảm xuống 0,29 khi thiếu 50% cạnh. Tuy nhiên, khi thiếu cạnh, một số lần sinh cho khoảng rộng đột biến (độ rộng trung bình lên tới vài trăm đến vài nghìn, trong khi trung vị chỉ từ 5 đến 14) và 10% lần fit thất bại ở mức thiếu 50%. Với T = 19 và 11 cạnh thiếu, bài toán gần như vô định, và các thầy cần lưu ý điều này khi đọc phần ứng dụng. Kết quả dựa trên một ground truth duy nhất nên không phải bảo đảm theo topology, và panel gốc có 7 biến là mô phỏng.
-
-Phương án bán mô phỏng neo vào số thật mà nhóm từng cân nhắc chưa được xây dựng. Vì các cột của panel được chuẩn hóa z-score, việc neo mức trung bình và độ lệch chuẩn không làm thay đổi kết quả của phương pháp; chỉ cấu trúc theo thời gian mới có ảnh hưởng, mà số điểm thật để neo lại rất ít. Mô phỏng theo panel ở trên đã thay thế phương án này.
-
-## Cấu trúc bài đề xuất
-
-Nhóm đề xuất thứ tự sau: Giới thiệu, Công trình liên quan, Bài toán, Phương pháp (kèm hình architecture), Bảo đảm lý thuyết, Thiết lập mô phỏng, Kết quả chính (so sánh, tác động của mức hỏng, ablation), Case study (dữ liệu thật), Thảo luận và Kết luận. Khảo sát khoảng 80 bài ở Computational Statistics (qua bản arXiv) cho thấy mẫu phổ biến nhất là phần mô phỏng chiếm tỉ trọng chính, kèm một section ứng dụng dữ liệu thật ngắn. Nhóm chưa thấy bài về SVAR nào ở tạp chí này, nên mức độ phù hợp phạm vi cần các thầy xác nhận.
-
-## Các điểm cần ý kiến của các thầy
-
-Nhóm mong các thầy cho ý kiến về năm điểm. Thứ nhất, mức bảo đảm mong muốn: phiên bản biên hay phiên bản PAC (PAC rộng hơn khoảng 5% so với biên ở các ô đạt). Thứ hai, dữ liệu ngân hàng: có nên đầu tư 80 đến 150 giờ để thu số liệu thật, hay chấp nhận dữ liệu bán mô phỏng với khai báo rõ ràng. Thứ ba, có nên mở rộng sang kích thước khác (số nút, số cạnh) hay không. Thứ tư, tên phương pháp và thứ tự các section. Thứ năm, mức phù hợp với phạm vi của Computational Statistics, vì chưa thấy bài về SVAR cùng tạp chí.
 
 ## So sánh với các phương pháp tham chiếu ở cùng mức đảm bảo
 
@@ -131,14 +129,14 @@ Cờ độ tin cậy là một bộ phân loại: với mỗi cặp non-null, n�
 
 Phiên bản 1 là một mô hình gradient boosting dùng các đặc trưng quan sát được (độ rộng, tỉ lệ |trung điểm| trên nửa độ rộng, khoảng có chứa 0 hay không, mức hỏng khai báo, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy, v.v.). Mô hình được huấn luyện chỉ trên tập hiệu chỉnh (kiểm định chéo theo topology), đóng băng rồi chấm một lần trên 592.412 cặp của tập kiểm tra.
 
-| Nhóm T | AUROC cờ mới | AUROC cờ cũ | Hiệu [khoảng tin cậy 95%] | Cặp trượt nhiều gấp (top 10%) |
-|---|---|---|---|---|
-| Tất cả | 0,869 | 0,792 | +0,077 [+0,065; +0,088] | 5,74 |
-| 19–30 | 0,928 | 0,821 | +0,107 [+0,082; +0,134] | 7,33 |
-| 40 | 0,882 | 0,868 | +0,014 [+0,010; +0,018] | 6,13 |
-| 80–150 | 0,776 | 0,744 | +0,032 [+0,026; +0,038] | 3,96 |
+| Nhóm T | AUROC cờ mới | AUROC cờ cũ | Chênh lệch |
+|---|---|---|---|
+| Tất cả | 0,869 | 0,792 | +0,077 |
+| 19–30 | 0,928 | 0,821 | +0,107 |
+| 40 | 0,882 | 0,868 | +0,014 |
+| 80–150 | 0,776 | 0,744 | +0,032 |
 
-Ngưỡng nhóm đặt trước là tăng ít nhất 0,03 AUROC ở cả ba nhóm T với khoảng tin cậy nằm trên 0. Ngưỡng này không đạt vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cờ mới cải thiện rõ ở T nhỏ và cải thiện vừa phải ở T lớn, nơi AUROC vẫn chỉ khoảng 0,78.
+Khoảng tin cậy 95% (cluster bootstrap theo topology) của cả bốn chênh lệch đều nằm trên 0. Ngưỡng nhóm đặt trước là tăng ít nhất 0,03 AUROC ở cả ba nhóm T. Ngưỡng này không đạt vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cờ mới cải thiện rõ ở T nhỏ và cải thiện vừa phải ở T lớn, nơi AUROC vẫn chỉ khoảng 0,78.
 
 Phiên bản 2 sửa hai lỗi đặc trưng của phiên bản 1 (số cạnh khai báo bị ghi bằng 0, và skeleton chỉ tính cạnh cùng kỳ), dùng một mô hình chung cho lag 1, 2 và 3, và được chấm một lần cho mỗi lag trên tập chưa dùng cho cờ. Đặc tả được viết trước khi đọc dữ liệu.
 
