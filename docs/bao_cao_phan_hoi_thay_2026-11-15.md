@@ -128,50 +128,55 @@ STRIDE có interval score thấp nhất ở các ô thiếu cạnh và đảo c�
 
 Cờ độ tin cậy là một bộ phân loại: với mỗi cặp non-null, nó dự đoán xem khoảng tin cậy cuối cùng có trượt giá trị thật hay không. AUROC là xác suất cờ cho một cặp bị trượt điểm cao hơn một cặp được phủ, chọn ngẫu nhiên; giá trị 0,5 tương đương đoán ngẫu nhiên và 1 là phân loại hoàn hảo. Nhóm dùng AUROC vì chỉ khoảng 3% số cặp bị trượt, nên độ chính xác thông thường không có nhiều ý nghĩa.
 
-Phiên bản 1 là một mô hình gradient boosting dùng các đặc trưng quan sát được (độ rộng, tỉ lệ |trung điểm| trên nửa độ rộng, khoảng có chứa 0 hay không, mức hỏng khai báo, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy, v.v.). Mô hình được huấn luyện chỉ trên tập hiệu chỉnh (kiểm định chéo theo topology), đóng băng rồi chấm một lần trên 592.412 cặp của tập kiểm tra.
+Phiên bản 1 là một mô hình gradient boosting dùng các đặc trưng quan sát được (độ rộng, tỉ lệ |trung điểm| trên nửa độ rộng, khoảng có chứa 0 hay không, mức hỏng khai báo, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy, v.v.). Mô hình được huấn luyện chỉ trên tập hiệu chỉnh (kiểm định chéo theo topology), đóng băng rồi chấm một lần trên tập kiểm tra. Phiên bản 2 sửa hai lỗi đặc trưng của phiên bản 1 (số cạnh khai báo bị ghi bằng 0, và skeleton chỉ tính cạnh cùng kỳ), dùng một mô hình chung cho lag 1, 2 và 3, và được chấm một lần cho mỗi lag trên tập chưa dùng cho cờ; đặc tả được viết trước khi đọc dữ liệu. Phiên bản 1 và 2 cho kết luận giống nhau, nên báo cáo chỉ trình bày phiên bản 2.
 
-| Nhóm T | AUROC cờ mới | AUROC cờ cũ | Chênh lệch |
-|---|---|---|---|
-| Tất cả | 0,869 | 0,792 | +0,077 |
-| 19–30 | 0,928 | 0,821 | +0,107 |
-| 40 | 0,882 | 0,868 | +0,014 |
-| 80–150 | 0,776 | 0,744 | +0,032 |
+Mỗi bảng dưới đây ứng với một lag; mỗi ô ghi AUROC của cờ mới / cờ cũ, theo từng T, loại hỏng và mức hỏng (tỉ lệ cạnh bị hỏng; mức 0 là skeleton không hỏng). Các ô mà phương pháp từ chối đưa ra bảo đảm (lag 2 với T = 30, lag 3 với T = 40) không có khoảng cuối cùng để chấm nên không xuất hiện.
 
-Các giá trị T được gộp thành ba nhóm (19–30, 40, 80–150) vì ở mỗi giá trị T riêng lẻ chỉ có rất ít cặp bị trượt (khoảng 3%), nên AUROC từng T dao động mạnh; gộp các T gần nhau cho khoảng tin cậy ổn định hơn. T = 40 được giữ riêng vì là mốc trung gian mà cờ cũ đã mạnh. Số liệu từng T nằm ở hai bảng phía dưới. Khoảng tin cậy 95% (cluster bootstrap theo topology) của cả bốn chênh lệch đều nằm trên 0. Ngưỡng nhóm đặt trước là tăng ít nhất 0,03 AUROC ở cả ba nhóm T. Ngưỡng này không đạt vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cờ mới cải thiện rõ ở T nhỏ và cải thiện vừa phải ở T lớn, nơi AUROC vẫn chỉ khoảng 0,78.
+Lag 1:
 
-Phiên bản 2 sửa hai lỗi đặc trưng của phiên bản 1 (số cạnh khai báo bị ghi bằng 0, và skeleton chỉ tính cạnh cùng kỳ), dùng một mô hình chung cho lag 1, 2 và 3, và được chấm một lần cho mỗi lag trên tập chưa dùng cho cờ. Đặc tả được viết trước khi đọc dữ liệu.
+| T | Mức hỏng | Không hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh |
+|---|---|---|---|---|---|
+| 19 | 0 | 0,932 / 0,918 | — | — | — |
+| 19 | 0,2 | — | 0,943 / 0,938 | 0,915 / 0,840 | 0,981 / 0,477 |
+| 19 | 0,5 | — | 0,940 / 0,921 | 0,954 / 0,530 | 0,966 / 0,667 |
+| 30 | 0 | 0,894 / 0,878 | — | — | — |
+| 30 | 0,2 | — | 0,888 / 0,872 | 0,875 / 0,861 | 0,907 / 0,897 |
+| 30 | 0,5 | — | 0,889 / 0,875 | 0,856 / 0,848 | 0,912 / 0,901 |
+| 40 | 0 | 0,892 / 0,875 | — | — | — |
+| 40 | 0,2 | — | 0,869 / 0,854 | 0,868 / 0,852 | 0,889 / 0,872 |
+| 40 | 0,5 | — | 0,907 / 0,881 | 0,859 / 0,858 | 0,910 / 0,892 |
+| 80 | 0 | 0,808 / 0,771 | — | — | — |
+| 80 | 0,2 | — | 0,828 / 0,798 | 0,796 / 0,775 | 0,877 / 0,841 |
+| 80 | 0,5 | — | 0,840 / 0,803 | 0,781 / 0,772 | 0,865 / 0,839 |
+| 150 | 0 | 0,660 / 0,609 | — | — | — |
+| 150 | 0,2 | — | 0,696 / 0,631 | 0,686 / 0,661 | 0,796 / 0,759 |
+| 150 | 0,5 | — | 0,696 / 0,635 | 0,702 / 0,671 | 0,815 / 0,773 |
 
-| Lag | T 19–30 | T 40 | T 80–150 | Ngưỡng (mỗi nhóm T hơn ≥ 0,03) |
-|---|---|---|---|---|
-| 1 | 0,924 / 0,808 (+0,115) | 0,885 / 0,870 (+0,015) | 0,786 / 0,737 (+0,049) | không đạt (T = 40) |
-| 2 | không có (từ chối) | 0,894 / 0,865 (+0,028) | 0,790 / 0,737 (+0,053) | không đạt (T = 40, thiếu 0,002) |
-| 3 | không có (từ chối) | không có (từ chối) | 0,790 / 0,731 (+0,059) | đạt |
+Lag 2:
 
-Mỗi ô ghi AUROC của cờ mới / cờ cũ. Cờ mới hơn cờ cũ ở mọi nhóm T với khoảng tin cậy nằm trên 0, nhưng mức tăng ở T = 40 nhỏ vì cờ cũ ở đó đã đạt khoảng 0,87. Việc sửa hai lỗi đặc trưng không làm đổi kết luận của phiên bản 1.
+| T | Mức hỏng | Không hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh |
+|---|---|---|---|---|---|
+| 40 | 0 | 0,904 / 0,862 | — | — | — |
+| 40 | 0,2 | — | 0,903 / 0,871 | 0,859 / 0,840 | 0,915 / 0,885 |
+| 40 | 0,5 | — | 0,900 / 0,873 | 0,857 / 0,852 | 0,900 / 0,868 |
+| 80 | 0 | 0,815 / 0,762 | — | — | — |
+| 80 | 0,2 | — | 0,820 / 0,771 | 0,789 / 0,765 | 0,854 / 0,807 |
+| 80 | 0,5 | — | 0,800 / 0,755 | 0,802 / 0,786 | 0,856 / 0,816 |
+| 150 | 0 | 0,694 / 0,647 | — | — | — |
+| 150 | 0,2 | — | 0,720 / 0,673 | 0,729 / 0,685 | 0,811 / 0,763 |
+| 150 | 0,5 | — | 0,717 / 0,669 | 0,753 / 0,721 | 0,808 / 0,772 |
 
-Hai bảng sau cho AUROC theo từng T ở lag 1, mỗi ô ghi cờ mới / cờ cũ. Bảng đầu là trường hợp skeleton không hỏng.
+Lag 3:
 
-| T | Không hỏng |
-|---|---|
-| 19 | 0,932 / 0,918 |
-| 30 | 0,894 / 0,878 |
-| 40 | 0,892 / 0,875 |
-| 80 | 0,808 / 0,771 |
-| 150 | 0,660 / 0,609 |
+| T | Mức hỏng | Không hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh |
+|---|---|---|---|---|---|
+| 80 | 0 | 0,806 / 0,752 | — | — | — |
+| 80 | 0,2 | — | 0,820 / 0,765 | 0,807 / 0,776 | 0,849 / 0,790 |
+| 80 | 0,5 | — | 0,806 / 0,766 | 0,822 / 0,797 | 0,853 / 0,803 |
+| 150 | 0 | 0,703 / 0,631 | — | — | — |
+| 150 | 0,2 | — | 0,704 / 0,631 | 0,716 / 0,671 | 0,802 / 0,739 |
+| 150 | 0,5 | — | 0,706 / 0,644 | 0,763 / 0,725 | 0,807 / 0,765 |
 
-Bảng thứ hai là trường hợp skeleton bị hỏng, theo loại hỏng và mức hỏng (tỉ lệ cạnh bị hỏng).
+Cờ mới cao hơn hoặc bằng cờ cũ ở mọi ô của ba bảng. Mức cải thiện lớn nhất ở T = 19, nơi cờ cũ kém: với thiếu cạnh mức 0,5 và đảo cạnh mức 0,2 và 0,5, cờ cũ chỉ đạt 0,53, 0,48 và 0,67 trong khi cờ mới đạt 0,95 đến 0,98. Ở T = 40 mức cải thiện nhỏ, vì cờ cũ ở đó đã đạt khoảng 0,84 đến 0,89. AUROC của cả hai cờ giảm khi T tăng: ở skeleton không hỏng, cờ mới từ 0,93 ở T = 19 xuống 0,66–0,70 ở T = 150. AUROC gần như không phụ thuộc vào mức hỏng (0,2 so với 0,5).
 
-| T | Mức hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh |
-|---|---|---|---|---|
-| 19 | 0,2 | 0,943 / 0,938 | 0,915 / 0,840 | 0,981 / 0,477 |
-| 19 | 0,5 | 0,940 / 0,921 | 0,954 / 0,530 | 0,966 / 0,667 |
-| 30 | 0,2 | 0,888 / 0,872 | 0,875 / 0,861 | 0,907 / 0,897 |
-| 30 | 0,5 | 0,889 / 0,875 | 0,856 / 0,848 | 0,912 / 0,901 |
-| 40 | 0,2 | 0,869 / 0,854 | 0,868 / 0,852 | 0,889 / 0,872 |
-| 40 | 0,5 | 0,907 / 0,881 | 0,859 / 0,858 | 0,910 / 0,892 |
-| 80 | 0,2 | 0,828 / 0,798 | 0,796 / 0,775 | 0,877 / 0,841 |
-| 80 | 0,5 | 0,840 / 0,803 | 0,781 / 0,772 | 0,865 / 0,839 |
-| 150 | 0,2 | 0,696 / 0,631 | 0,686 / 0,661 | 0,796 / 0,759 |
-| 150 | 0,5 | 0,696 / 0,635 | 0,702 / 0,671 | 0,815 / 0,773 |
-
-AUROC giảm mạnh khi T lớn: khi không hỏng, giá trị này từ khoảng 0,93 ở T = 19 xuống còn 0,66 đến 0,70 ở T = 150, vì ở T lớn ít cặp bị trượt hơn và các cặp trượt giống các cặp được phủ hơn. Ở T = 19 với thiếu hoặc đảo cạnh, cờ cũ gần như vô dụng (0,48 đến 0,67) trong khi cờ mới đạt 0,92 đến 0,98. AUROC gần như không phụ thuộc vào mức hỏng (0,2 so với 0,5). Ở lag 2 và 3, xu hướng tương tự (chi tiết ở `results/ext_p4h8_flag_v2/test_eval_v2.md`). Các bảng trên bỏ qua những ô mà phương pháp từ chối đưa ra đảm bảo (lag 2 với T = 30, lag 3 với T = 40), vì ở đó không có khoảng cuối cùng để chấm.
+Ngưỡng nhóm đặt trước là cờ mới hơn cờ cũ ít nhất 0,03 AUROC (khoảng tin cậy 95% theo cluster bootstrap trên topology nằm trên 0) trong mỗi nhóm T. Ngưỡng này đạt ở lag 3 nhưng không đạt ở lag 1 và lag 2, vì ở T = 40 mức tăng chỉ là +0,015 (lag 1) và +0,028 (lag 2).
