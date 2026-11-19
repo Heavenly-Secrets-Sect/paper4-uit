@@ -12,7 +12,7 @@ Bảng~\ref{tab:guarantee} báo kết quả của mệnh đề~\ref{prop:rank} t
 \caption{Tỉ lệ topology thỏa điều kiện trên tập kiểm tra, trung bình trên các ô có hệ số hữu hạn. ``Luật cũ'' là phân vị gộp mức cặp tính lại trên cùng tập hiệu chỉnh. Cột ``Ô đạt $0.90$'' đếm số ô mà cận trên của khoảng tin cậy nhị thức chính xác $95\%$ đạt $0.90$.}\label{tab:guarantee}
 \end{table}
 
-\emph{Cách đọc.} Luật cũ chỉ đạt khoảng $0.80$ ở cả ba lag: cứ năm topology thì một có hơn $10\%$ cặp bị trượt. Hệ số theo thống kê hạng đưa tỉ lệ này lên $0.89$--$0.90$ (biên) hoặc $0.91$--$0.92$ (PAC), đúng mức mục tiêu chứ không dư. Cái giá là khoảng rộng hơn $10$--$18\%$ và interval score cao hơn $3$--$11\%$ so với luật cũ.
+Luật cũ chỉ đạt khoảng $0.80$ ở cả ba lag, nghĩa là cứ năm topology thì có một topology với hơn $10\%$ cặp bị trượt. Hệ số theo thống kê hạng đưa tỉ lệ này lên $0.89$--$0.90$ (biên) hoặc $0.91$--$0.92$ (PAC), sát mức mục tiêu và không dư. Đổi lại, khoảng tin cậy rộng hơn $10$--$18\%$ và interval score cao hơn $3$--$11\%$ so với luật cũ.
 
 Theo tiêu chí ghi trước (khoảng tin cậy của tỉ lệ chạm $0.90$ ở ít nhất $80\%$ số ô có hệ số hữu hạn, và không ô nào có cận trên dưới $0.85$), kết quả đạt ở lag 1 ($17/20$ ô) và lag 3 ($8/8$ ô) và \textbf{không đạt ở lag 2} ($9/12$ ô, tức $75\%$). Theo quy tắc đã ghi, tuyên bố đảm bảo bị rút ở ba ô lag 2 không đạt: $T=80$ thừa cạnh, $T=80$ đảo cạnh và $T=150$ đảo cạnh. Cận trên nhỏ nhất ở lag 2 vẫn là $0.880$.
 
@@ -21,7 +21,7 @@ Phương pháp \emph{từ chối} đưa ra đảm bảo ở lag 2 với $T=30$ v
 \subsection{Vùng dùng được theo $T$ và số lag (xác nhận)}\label{sec:vung}
 Hệ số bảo đảm hữu hạn từ $T=19$ ở lag 1, $T=40$ ở lag 2 và $T=80$ ở lag 3. Dưới các ngưỡng đó phương pháp từ chối. Như vậy $T$ tối thiểu tăng theo số lag, khớp với bản đồ thăm dò cũ (bảng~\ref{tab:vung}, mục~\ref{sec:vung-cu}) dùng tiêu chí khác.
 
-Quét mức hỏng từ $10\%$ đến $80\%$ ở lag 1 (thăm dò, $60$ topology thiết kế; một ô dùng được nếu $\ge95\%$ lượt fit thành công và coverage cặp tại hệ số hiệu chỉnh $\ge0.90$): thiếu cạnh dùng được ở mọi $T$ thử, kể cả $T=19$ ở mức hỏng $80\%$; thừa cạnh và đảo cạnh dùng được ở $T\ge30$ ở mọi mức đến $80\%$, còn ở $T=19$ thất bại từ mức $70\%$ (thừa) và $50\%$ (đảo). Hạn chế: ``thành công'' chỉ là bước fit hoàn tất, coverage chỉ tính trên các lần fit thành công.
+Quét mức hỏng từ $10\%$ đến $80\%$ ở lag 1 (thăm dò, $60$ topology thiết kế; một ô dùng được nếu $\ge95\%$ lượt fit thành công và coverage cặp tại hệ số hiệu chỉnh $\ge0.90$): thiếu cạnh dùng được ở mọi $T$ thử, kể cả $T=19$ ở mức hỏng $80\%$; thừa cạnh và đảo cạnh dùng được ở $T\ge30$ ở mọi mức đến $80\%$, còn ở $T=19$ thất bại từ mức $70\%$ (thừa) và $50\%$ (đảo). Cần lưu ý rằng ``thành công'' ở đây chỉ có nghĩa là bước fit hoàn tất, và coverage chỉ được tính trên các lần fit thành công.
 
 \subsection{Residual Bootstrap khi skeleton có lỗi (kiểm chứng)}\label{sec:rb}
 Bảng~\ref{tab:full} so sánh RB (cắm skeleton như đúng) với \ours{} ở mọi loại lỗi và mọi cỡ mẫu, mỗi ô là coverage / interval score trên 60 bộ dữ liệu.
@@ -48,7 +48,7 @@ Skeleton do GES$^{\dagger}$ & 0.38 / 22.8 & 0.98 / 9.19 & 0.34 / 23.0 & 0.95 / 3
 \caption{Coverage / interval score của RB và \ours{}. $^{\dagger}$Skeleton học bằng GES từ chính dữ liệu; khai báo là mức lỗi GES trung bình đo trên tập hiệu chỉnh, và cột \ours{} của dòng này là phiên bản trước chọn lọc lag (chưa chạy \ours{}).}\label{tab:full}
 \end{table}
 
-\emph{Cách đọc bảng.} Mỗi ô có dạng coverage / interval score (IS). Coverage là tỉ lệ khoảng tin cậy chứa giá trị thật, mức danh nghĩa là $0.95$. IS cộng độ rộng của khoảng với một khoản phạt tỉ lệ với mức trượt giá trị thật, nên một khoảng hẹp mà sai bị phạt nặng; IS càng thấp càng tốt. Cột RB là residual bootstrap cắm skeleton như thể đúng, cột \ours{} là phương pháp đề xuất; mỗi hàng là một loại và mức lỗi của skeleton, mỗi cặp cột là một cỡ mẫu $T$.
+Mỗi ô của bảng có dạng coverage / interval score (IS). Coverage là tỉ lệ khoảng tin cậy chứa giá trị thật, mức danh nghĩa là $0.95$. IS cộng độ rộng của khoảng với một khoản phạt tỉ lệ với mức trượt giá trị thật, nên một khoảng hẹp mà sai bị phạt nặng; IS càng thấp càng tốt. Cột RB là residual bootstrap cắm skeleton như thể đúng, cột \ours{} là phương pháp đề xuất; mỗi hàng là một loại và mức lỗi của skeleton, mỗi cặp cột là một cỡ mẫu $T$.
 
 Ba nhận xét:
 \begin{itemize}
@@ -66,9 +66,9 @@ Ba nhận xét:
 \caption{Interval score trung bình ở cùng mức đảm bảo (thấp hơn là tốt hơn; đậm là thấp nhất trong các phương pháp mà khoảng tin cậy của tỉ lệ topology chạm $0.90$). $^{*}$: phương pháp không đạt mức đảm bảo ở ô đó. PSel-U: PSel-Union với ngân sách bootstrap gấp $32$ lần.}\label{tab:cmp}
 \end{table}
 
-\emph{Cách đọc.} Mỗi hàng là một ô $(T,\text{loại lỗi})$. Trên $8$ ô, BVAR-Minnesota thắng $4$ ô, \ours{} $3$ ô và PSel-Union $1$ ô. \ours{} thắng ở các ô thiếu cạnh và đảo cạnh ($T=40$ cả hai loại; $T=150$ đảo cạnh) tức các loại hỏng cần mở cấu trúc; BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh ở cả hai $T$, nơi mở cấu trúc không có ích; PSel-Union thắng ở $T=150$ thiếu cạnh với ngân sách tính toán gấp $32$ lần. So cặp với \ours{} (cluster bootstrap theo topology): \ours{} tốt hơn PSel, Full VAR và TLP ở $8/8$ ô và PSel-Union ở $7/8$ ô; với BVAR-Minnesota là $4$ ô mỗi bên. Hai phương pháp không đạt mức đảm bảo ở một ô (BVAR-Minnesota ở $T=150$ thiếu cạnh, PSel-Union ở $T=150$ đảo cạnh).
+Mỗi hàng của bảng là một ô $(T,\text{loại lỗi})$. Trên $8$ ô, BVAR-Minnesota thắng $4$ ô, \ours{} $3$ ô và PSel-Union $1$ ô. \ours{} thắng ở các ô thiếu cạnh và đảo cạnh ($T=40$ cả hai loại; $T=150$ đảo cạnh) tức các loại hỏng cần mở cấu trúc; BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh ở cả hai $T$, nơi mở cấu trúc không có ích; PSel-Union thắng ở $T=150$ thiếu cạnh với ngân sách tính toán gấp $32$ lần. So cặp với \ours{} (cluster bootstrap theo topology): \ours{} tốt hơn PSel, Full VAR và TLP ở $8/8$ ô và PSel-Union ở $7/8$ ô; với BVAR-Minnesota là $4$ ô mỗi bên. Hai phương pháp không đạt mức đảm bảo ở một ô (BVAR-Minnesota ở $T=150$ thiếu cạnh, PSel-Union ở $T=150$ đảo cạnh).
 
-\textbf{Điều này làm yếu kết luận trước đây} rằng \ours{} tốt hơn ở $27/28$ so sánh: khi mỗi phương pháp dùng hệ số riêng, lợi thế nhìn thấy được một phần đến từ chênh lệch mức coverage. Ở cùng mức đảm bảo, lợi thế của \ours{} có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Hạn chế: chỉ lag 1, hai giá trị $T$, $200$ topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng $\pm0.04$); một số phương pháp là bản do nhóm chuyển thể; \ours{} nhận số cạnh thiếu khai báo, còn các phương pháp tham chiếu thì hầu như không.
+Kết quả này làm yếu kết luận trước đây rằng \ours{} tốt hơn ở $27/28$ so sánh: khi mỗi phương pháp dùng hệ số riêng, lợi thế nhìn thấy được một phần đến từ chênh lệch mức coverage. Ở cùng mức đảm bảo, lợi thế của \ours{} có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Phép so sánh còn hạn chế ở chỗ chỉ có lag 1, hai giá trị $T$, $200$ topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng $\pm0.04$); một số phương pháp là bản do nhóm chuyển thể; \ours{} nhận số cạnh thiếu khai báo, còn các phương pháp tham chiếu thì hầu như không.
 
 \subsubsection*{Phần lợi thế do thông tin khai báo}
 \ours{} nhận số cạnh thiếu khai báo để quyết định số cặp được mở, còn hầu hết phương pháp tham chiếu thì không. Để đo phần lợi thế này, chúng tôi chạy một biến thể không dùng số cạnh khai báo (cổng và ngân sách mở lag do dữ liệu quyết định), hiệu chỉnh bằng cùng quy tắc trên $150$ topology và chạy một lần trên $200$ topology kiểm tra. Hệ số vẫn được chọn theo loại lỗi khai báo, nên \emph{loại} lỗi (không phải số cạnh) vẫn được dùng qua hệ số.
@@ -98,7 +98,7 @@ Mở lag có chọn lọc, chọn lại trong từng lần bootstrap & Giảm IS
 \caption{Đóng góp của từng thành phần của \ours{} trên tập phát triển.}
 \end{table}
 
-\emph{Cách đọc bảng.} Mỗi hàng là một thành phần; cột phải là thay đổi IS đo được khi có thành phần đó so với khi bỏ nó, trên tập phát triển. Bổ sung cạnh cùng kỳ và rút chiều là nguồn lợi thế chính so với chỉ mở mọi lag; mở lag có chọn lọc giảm IS ở cả sáu ô thiếu cạnh và không làm tệ ô nào; hiệu chỉnh hai phía chỉ có tác dụng rõ ở $T=40$ khi thiếu cạnh. Đây là kết quả thăm dò, không phải kiểm chứng.
+Mỗi hàng là một thành phần; cột phải là thay đổi IS đo được khi có thành phần đó so với khi bỏ nó, trên tập phát triển. Bổ sung cạnh cùng kỳ và rút chiều là nguồn lợi thế chính so với chỉ mở mọi lag; mở lag có chọn lọc giảm IS ở cả sáu ô thiếu cạnh và không làm tệ ô nào; hiệu chỉnh hai phía chỉ có tác dụng rõ ở $T=40$ khi thiếu cạnh. Kết quả này chỉ mang tính thăm dò.
 
 \subsection{Tác động của loại và mức hỏng (RQ4.1)}\label{sec:rq41}
 Chúng tôi đánh giá RQ4.1 bằng bốn tiêu chí, kiểm tra trên ba tập kiểm chứng độc lập (lần 1, 2, 3), mỗi tập gồm 20 topology mới:
@@ -123,7 +123,7 @@ Lần & Quy tắc & (a) & (b) & (c) & (d) & Kết luận\\
 \caption{Ba lần kiểm chứng RQ4.1.}
 \end{table}
 
-\emph{Cách đọc bảng.} Mỗi hàng là một lần kiểm chứng trên $20$ topology mới; các cột (a)--(d) là bốn tiêu chí ghi trước và ``Quy tắc'' cho biết tiêu chí gốc hay bản đã sửa. Theo quy tắc gốc RQ4.1 không đạt; bản đạt là bản đã sửa sau khi thấy kết quả, như nói ở đoạn dưới.
+Mỗi hàng là một lần kiểm chứng trên $20$ topology mới; các cột (a)--(d) là bốn tiêu chí ghi trước và ``Quy tắc'' cho biết tiêu chí gốc hay bản đã sửa. Theo quy tắc gốc RQ4.1 không đạt; bản đạt là bản đã sửa sau khi thấy kết quả, như nói ở đoạn dưới.
 \begin{itemize}
   \item \textbf{Lần 1:} tiêu chí (a) trượt vì hai cell $T=40$ không tách được cạnh đảo khỏi cạnh thừa (khoảng tin cậy của hiệu chứa 0). Coverage của RB khi thiếu 50\% là $0.349/0.336/0.315$ ở $T=40/80/150$.
   \item \textbf{Lần 2:} (a$'$) đạt $4/4$. (c) trượt ở một cell: coverage của \ours{} trên cặp bị hỏng ở $T=80$, thiếu 20\% là $0.899$, thiếu $0.001$ so với ngưỡng $0.90$ (khoảng $[0.872,0.926]$ chứa $0.90$); coverage trên mọi cặp non-null là $0.953$--$0.967$. Coverage của RB khi thiếu 50\% là $0.373/0.350/0.335$.
@@ -194,7 +194,7 @@ $p$ & $T$ tối thiểu, \ours{} & $T$ tối thiểu, phiên bản không chọn
 \caption{$T$ tối thiểu khi thiếu cạnh.}\label{tab:vung}
 \end{table}
 
-\emph{Cách đọc bảng.} Mỗi hàng là số lag $p$; hai cột là $T$ nhỏ nhất mà từ đó trở lên phương pháp dùng được (đủ ba điều kiện (i)--(iii) ở trên) ở cả hai mức hỏng. \ours{} dùng được từ $T=19$ khi $p=1$, từ $40$ khi $p=2$ và từ $80$ khi $p=4$; phiên bản không chọn lọc lag đòi $T$ lớn hơn ở $p=1$ ($25$) và $p=4$ ($150$).
+Mỗi hàng là số lag $p$; hai cột là $T$ nhỏ nhất mà từ đó trở lên phương pháp dùng được (đủ ba điều kiện (i)--(iii) ở trên) ở cả hai mức hỏng. \ours{} dùng được từ $T=19$ khi $p=1$, từ $40$ khi $p=2$ và từ $80$ khi $p=4$; phiên bản không chọn lọc lag đòi $T$ lớn hơn ở $p=1$ ($25$) và $p=4$ ($150$).
 Với $p=1$, một panel $14\times19$ nằm trong vùng dùng được của \ours{} ở các ô không hỏng, thiếu $0.2$ và $0.5$, đảo $0.2$; ô đảo $0.5$ thì không. Ở $T=19$, phiên bản không chọn lọc lag không chạy được lượt nào ($0/60$). Với $p=2$ và $T<40$, nhiều phương trình không ước lượng được, kể cả với RB, do số biến hồi quy vượt số dòng dữ liệu.
 
 \subsection{Thảo luận}\label{sec:thao-luan}
