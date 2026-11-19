@@ -19,6 +19,6 @@ Kết quả:
 1. **Tái lập đúng**: hệ số gộp mức cặp tính lại khớp hệ số đóng băng ở cả 12 ô (T ∈ {40, 80, 150} × 4 loại).
 2. **Không vô nghĩa với v5.1**: không có cặp bị mất (lost pair) nào, độ phủ gộp tối đa trên lưới là 1,000, không đơn vị nào có S = vô cực ở β = 0,05 hay 0,10. Dự đoán của nhóm tranh luận về hệ số vô cực không áp dụng cho v5.1.
 3. **Hệ số đóng băng xấp xỉ trung vị của điểm đơn vị**: trung vị S(0,05) từ 2,2 đến 2,8, gần hệ số đóng băng 2,3 đến 2,8. Phân vị gộp mức cặp bảo đảm độ phủ trung bình khoảng 0,95, không phải mỗi đơn vị.
-4. **Giá của bảo đảm mức topology**: điểm lớn nhất trên 20 đơn vị (luật max, β = 0,05) là từ 3,3 đến 6,5, tức gấp 1,3 đến 2,4 lần hệ số đóng băng (hệ số hiệu dụng sau tiền co 0,5 khoảng 1,65 đến 3,25, so với 1,15 đến 1,40 hiện tại). Ô rộng nhất: T = 80 reversed (6,5), T = 40 reversed (5,6), T = 40 extra (5,2).
+4. **Giá của bảo đảm mức topology**: điểm lớn nhất trên 20 đơn vị (luật max, β = 0,05) là từ 3,3 đến 6,5, tức gấp 1,3 đến 2,4 lần hệ số đóng băng (hệ số hiệu dụng sau hệ số co trước hiệu chỉnh 0,5 khoảng 1,65 đến 3,25, so với 1,15 đến 1,40 hiện tại). Ô rộng nhất: T = 80 reversed (6,5), T = 40 reversed (5,6), T = 40 extra (5,2).
 
 Giới hạn: một replicate mỗi topology (20 đơn vị); lag_max = 2 (panel thật dùng lag 1); khoảng 29 cặp phi-null mỗi run nên β = 0,05 tương đương tối đa 1 cặp trượt, thang điểm thô; ĉ của luật max do một đơn vị xấu nhất quyết định nên nhiễu. Chưa chạy V2 đến V12.

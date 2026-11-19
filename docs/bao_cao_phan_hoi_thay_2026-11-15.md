@@ -50,11 +50,11 @@ Cần nói thẳng:
 
 ## 3. Điểm 3: hệ số 0,5
 
-Hệ số 0,5 nhân vào nửa độ rộng *trước* bước hiệu chỉnh; lưới hiệu chỉnh cũ chỉ cho phép nới (từ 1,0), mà ở T nhỏ khoảng bootstrap đã quá rộng. Không có lý thuyết nào dẫn tới đúng giá trị 0,5. Nếu cố định và áp giống nhau ở hiệu chỉnh và kiểm tra, khoảng cuối cùng chỉ phụ thuộc tích 0,5·c, nên bảo đảm ở mục 2 không bị ảnh hưởng.
+**Hệ số co (pre-shrink) κ** là hằng số nhân vào nửa độ rộng của khoảng bootstrap *trước* bước hiệu chỉnh, nên khoảng cuối là trung điểm ± κ·c·(nửa độ rộng). Giá trị đang dùng κ = 0,5 *co* nửa độ rộng xuống một nửa; về bản chất κ là hệ số tỉ lệ (κ lớn hơn 1 sẽ nới, không co). Hằng số này được thêm vì lưới hiệu chỉnh cũ chỉ cho phép nới (từ 1,0), mà ở T nhỏ khoảng bootstrap đã quá rộng. Không có lý thuyết nào dẫn tới đúng giá trị 0,5. Nếu cố định và áp giống nhau ở hiệu chỉnh và kiểm tra, khoảng cuối cùng chỉ phụ thuộc tích 0,5·c, nên bảo đảm ở mục 2 không bị ảnh hưởng.
 
 Kiểm độ nhạy (hiệu chỉnh trên split hiệu chỉnh, đánh giá trên split thiết kế):
 
-| Tiền co κ | Hệ số hiệu dụng | Sàn lưới chạm | Coverage | Interval score |
+| Hệ số co trước hiệu chỉnh κ | Hệ số hiệu dụng | Sàn lưới chạm | Coverage | Interval score |
 |---|---|---|---|---|
 | 0,25 | 1,424 | 0/20 | 0,951 | 5,24 |
 | 0,5 | 1,435 | 0/20 | 0,952 | 5,26 |

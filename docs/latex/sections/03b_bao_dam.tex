@@ -47,7 +47,7 @@ Kết quả là một sự kiện chuẩn về thống kê hạng; điều mới
 \end{itemize}
 
 \subsection{Hệ số co $0.5$}\label{sec:prescale}
-Nửa độ rộng của khoảng bootstrap được nhân với $\kappa=0.5$ \emph{trước} bước hiệu chỉnh. Hằng số này không có cơ sở lý thuyết: nó được thêm vì lưới hiệu chỉnh cũ chỉ cho phép nới ($c\ge1$), trong khi ở $T$ nhỏ khoảng bootstrap đã quá rộng. Nếu $\kappa$ được áp dụng \emph{giống hệt} cho hiệu chỉnh và kiểm tra (H2), khoảng cuối chỉ phụ thuộc vào tích $\kappa c$, nên mệnh đề~\ref{prop:rank} không phụ thuộc vào giá trị của nó; hệ số theo thống kê hạng ở trên là chính xác (không qua lưới) nên $\kappa$ không còn vai trò. Bảng~\ref{tab:prescale} kiểm độ nhạy: hiệu chỉnh theo quy tắc cũ trên tập hiệu chỉnh và đánh giá trên tập thiết kế.
+Nửa độ rộng của khoảng bootstrap được nhân với một hệ số $\kappa$ \emph{trước} bước hiệu chỉnh, nên khoảng cuối cùng là $m\pm\kappa c\,h$. Giá trị dùng là $\kappa=0.5$, tức \emph{co} nửa độ rộng xuống một nửa (từ đó có tên ``hệ số co); về bản chất $\kappa$ là một hệ số tỉ lệ, và $\kappa>1$ sẽ nới chứ không co (bảng~\ref{tab:prescale}). Hằng số này không có cơ sở lý thuyết: nó được thêm vì lưới hiệu chỉnh cũ chỉ cho phép nới ($c\ge1$), trong khi ở $T$ nhỏ khoảng bootstrap đã quá rộng. Nếu $\kappa$ được áp dụng \emph{giống hệt} cho hiệu chỉnh và kiểm tra (H2), khoảng cuối chỉ phụ thuộc vào tích $\kappa c$, nên mệnh đề~\ref{prop:rank} không phụ thuộc vào giá trị của nó; hệ số theo thống kê hạng ở trên là chính xác (không qua lưới) nên $\kappa$ không còn vai trò. Bảng~\ref{tab:prescale} kiểm độ nhạy: hiệu chỉnh theo quy tắc cũ trên tập hiệu chỉnh và đánh giá trên tập thiết kế.
 
 \begin{table}[H]
 \centering\small
