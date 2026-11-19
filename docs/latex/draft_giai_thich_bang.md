@@ -4,7 +4,7 @@ Mỗi mục dưới đây là đoạn "cách đọc bảng" đề xuất đặt 
 
 ## Bảng `tab:full`: RB và SRCI theo loại lỗi và cỡ mẫu
 
-**Cách đọc.** Mỗi ô có dạng *coverage / interval score* (IS), tính trên 60 bộ dữ liệu. Coverage là tỉ lệ khoảng tin cậy chứa giá trị thật; mức danh nghĩa là 0,95. IS gộp độ rộng và mức trượt giá trị thật vào một thước đo, càng thấp càng tốt. Cột RB là residual bootstrap dùng nguyên skeleton như đúng; cột SRCI là phương pháp đề xuất. Mỗi hàng là một loại và mức lỗi của skeleton, mỗi cặp cột là một cỡ mẫu T.
+**Cách đọc.** Mỗi ô có dạng *coverage / interval score* (IS), tính trên 60 bộ dữ liệu. Coverage là tỉ lệ khoảng tin cậy chứa giá trị thật; mức danh nghĩa là 0,95. IS gộp độ rộng và mức trượt giá trị thật vào một thước đo, càng thấp càng tốt. Cột RB là residual bootstrap plug-in; cột SRCI là phương pháp đề xuất. Mỗi hàng là một loại và mức lỗi của skeleton, mỗi cặp cột là một cỡ mẫu T.
 
 **Điều bảng cho thấy.** Đọc theo hàng "Thiếu 50%": RB phủ khoảng 0,33 ở cả ba T với IS gần 29, tức khoảng của RB hẹp mà sai; SRCI phủ 0,95 đến 0,97 với IS từ 4,99 (T = 40) xuống 1,99 (T = 150). Đọc theo hàng "Không hỏng": RB chỉ phủ 0,86, 0,88, 0,91 ở T = 40, 80, 150, nghĩa là một phần cải thiện của SRCI đến từ hiệu chỉnh độ rộng, không riêng do xử lý cấu trúc.
 

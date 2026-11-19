@@ -24,7 +24,7 @@ Hệ số bảo đảm hữu hạn từ $T=19$ ở lag 1, $T=40$ ở lag 2 và $
 Quét mức hỏng từ $10\%$ đến $80\%$ ở lag 1 (thăm dò, $60$ topology thiết kế; một ô dùng được nếu $\ge95\%$ lượt fit thành công và coverage cặp tại hệ số hiệu chỉnh $\ge0.90$): thiếu cạnh dùng được ở mọi $T$ thử, kể cả $T=19$ ở mức hỏng $80\%$; thừa cạnh và đảo cạnh dùng được ở $T\ge30$ ở mọi mức đến $80\%$, còn ở $T=19$ thất bại từ mức $70\%$ (thừa) và $50\%$ (đảo). Cần lưu ý rằng ``thành công'' ở đây chỉ có nghĩa là bước fit hoàn tất, và coverage chỉ được tính trên các lần fit thành công.
 
 \subsection{Residual Bootstrap khi skeleton có lỗi (kiểm chứng)}\label{sec:rb}
-Bảng~\ref{tab:full} so sánh RB (dùng nguyên skeleton như đúng) với \ours{} ở mọi loại lỗi và mọi cỡ mẫu, mỗi ô là coverage / interval score trên 60 bộ dữ liệu.
+Ở đây RB plug-in là phương pháp đối chứng: residual bootstrap (RB) cắm thẳng (plug-in) skeleton khai báo vào mô hình như thể nó đúng, không kiểm tra và không sửa cấu trúc, còn \ours{} xem skeleton là giả thuyết có thể sai và sửa nó trước khi dựng khoảng tin cậy. Bảng~\ref{tab:full} so sánh RB plug-in với \ours{} ở mọi loại lỗi và mọi cỡ mẫu, mỗi ô là coverage / interval score trên 60 bộ dữ liệu.
 
 \begin{table}[H]
 \centering\footnotesize
@@ -48,7 +48,7 @@ Skeleton do GES$^{\dagger}$ & 0.38 / 22.8 & 0.98 / 9.19 & 0.34 / 23.0 & 0.95 / 3
 \caption{Coverage / interval score của RB và \ours{}. $^{\dagger}$Skeleton học bằng GES từ chính dữ liệu; khai báo là mức lỗi GES trung bình đo trên tập hiệu chỉnh, và cột \ours{} của dòng này là phiên bản trước chọn lọc lag (chưa chạy \ours{}).}\label{tab:full}
 \end{table}
 
-Mỗi ô của bảng có dạng coverage / interval score (IS). Coverage là tỉ lệ khoảng tin cậy chứa giá trị thật, mức danh nghĩa là $0.95$. IS cộng độ rộng của khoảng với một khoản phạt tỉ lệ với mức trượt giá trị thật, nên một khoảng hẹp mà sai bị phạt nặng; IS càng thấp càng tốt. Cột RB là residual bootstrap dùng nguyên skeleton như thể đúng, cột \ours{} là phương pháp đề xuất; mỗi hàng là một loại và mức lỗi của skeleton, mỗi cặp cột là một cỡ mẫu $T$.
+Mỗi ô của bảng có dạng coverage / interval score (IS). Coverage là tỉ lệ khoảng tin cậy chứa giá trị thật, mức danh nghĩa là $0.95$. IS cộng độ rộng của khoảng với một khoản phạt tỉ lệ với mức trượt giá trị thật, nên một khoảng hẹp mà sai bị phạt nặng; IS càng thấp càng tốt. Cột RB là residual bootstrap plug-in, cột \ours{} là phương pháp đề xuất; mỗi hàng là một loại và mức lỗi của skeleton, mỗi cặp cột là một cỡ mẫu $T$.
 
 Ba nhận xét:
 \begin{itemize}
