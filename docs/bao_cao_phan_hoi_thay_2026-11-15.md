@@ -176,12 +176,33 @@ Trên panel hiện có (14 biến, 19 quý, skeleton 21 cạnh, hệ số mới,
 
 Mỗi phương pháp được hiệu chỉnh bằng cùng một quy tắc (thống kê hạng theo topology, β = 10%, δ = 10%) trên cùng 150 topology hiệu chỉnh, rồi chạy một lần trên 200 topology kiểm tra (lag 1, T = 40 và 150, bốn loại hỏng). Khi đó các phương pháp đạt cùng mức đảm bảo (tỉ lệ topology đạt ngưỡng quanh 0,90) và có thể so sánh bằng độ rộng và interval score.
 
-| Phương pháp | Số ô (trên 8) có IS thấp nhất | So cặp với STRIDE (8 ô): STRIDE tốt hơn / phương pháp đó tốt hơn |
-|---|---|---|
-| BVAR-Minnesota | 4 | 4 / 4 |
-| STRIDE | 3 | không áp dụng |
-| PSel-Union (ngân sách bootstrap gấp 32) | 1 | 7 / 1 |
-| PSel, Full VAR, TLP | 0 | 8 / 0 cho mỗi phương pháp |
+Interval score trung bình (IS, càng thấp càng tốt) theo từng ô (T, loại hỏng) ở lag 1; in đậm là giá trị thấp nhất trong số các phương pháp đạt mức đảm bảo, dấu † là phương pháp không đạt mức đảm bảo ở ô đó (cận trên của khoảng tin cậy 95% của tỉ lệ topology đạt ngưỡng thấp hơn 0,90), nên không được xét để xếp hạng thấp nhất.
+
+| T | Loại hỏng | STRIDE | BVAR-Minnesota | PSel-Union | PSel | Full VAR | TLP |
+|---|---|---|---|---|---|---|---|
+| 40 | Không hỏng | 4,15 | **3,83** | 5,10 | 5,24 | 4,67 | 4,46 |
+| 40 | Thừa cạnh | 4,39 | **4,11** | 5,34 | 5,42 | 4,78 | 4,58 |
+| 40 | Thiếu cạnh | **4,69** | 6,13 | 5,19 | 5,99 | 5,08 | 5,34 |
+| 40 | Đảo cạnh | **4,66** | 4,94 | 5,59 | 5,81 | 5,26 | 4,95 |
+| 150 | Không hỏng | 1,64 | **1,58** | 1,85 | 1,91 | 1,97 | 1,89 |
+| 150 | Thừa cạnh | 1,74 | **1,65** | 1,90 | 1,96 | 1,97 | 1,94 |
+| 150 | Thiếu cạnh | 2,12 | 3,92† | **2,00** | 3,13 | 2,99 | 2,51 |
+| 150 | Đảo cạnh | **2,30** | 3,14 | 3,10† | 3,19 | 3,06 | 2,94 |
+
+Tỉ lệ topology đạt ngưỡng của cùng các ô (mục tiêu 0,90):
+
+| T | Loại hỏng | STRIDE | BVAR-Minnesota | PSel-Union | PSel | Full VAR | TLP |
+|---|---|---|---|---|---|---|---|
+| 40 | Không hỏng | 0,925 | 0,900 | 0,900 | 0,890 | 0,905 | 0,880 |
+| 40 | Thừa cạnh | 0,915 | 0,895 | 0,900 | 0,890 | 0,915 | 0,880 |
+| 40 | Thiếu cạnh | 0,915 | 0,880 | 0,875 | 0,890 | 0,930 | 0,910 |
+| 40 | Đảo cạnh | 0,910 | 0,935 | 0,884 | 0,905 | 0,930 | 0,915 |
+| 150 | Không hỏng | 0,890 | 0,880 | 0,905 | 0,935 | 0,920 | 0,915 |
+| 150 | Thừa cạnh | 0,905 | 0,855 | 0,905 | 0,905 | 0,895 | 0,905 |
+| 150 | Thiếu cạnh | 0,860 | 0,840† | 0,875 | 0,880 | 0,915 | 0,900 |
+| 150 | Đảo cạnh | 0,905 | 0,869 | 0,809† | 0,884 | 0,884 | 0,889 |
+
+Trên 8 ô, BVAR-Minnesota có IS thấp nhất ở 4 ô, STRIDE ở 3 ô và PSel-Union ở 1 ô. So cặp với STRIDE (cluster bootstrap theo topology trên cùng topology kiểm tra), STRIDE tốt hơn PSel, Full VAR và TLP ở cả 8 ô và tốt hơn PSel-Union ở 7 ô; với BVAR-Minnesota là 4 ô mỗi bên.
 
 STRIDE có interval score thấp nhất ở các ô thiếu cạnh và đảo cạnh (T = 40 cho cả hai loại, T = 150 cho đảo cạnh). BVAR-Minnesota thấp nhất ở các ô không hỏng và thừa cạnh ở cả hai giá trị T. PSel-Union thấp nhất ở T = 150 với thiếu cạnh, nhưng dùng ngân sách tính toán gấp 32 lần. Hai phương pháp không đạt mức đảm bảo ở một ô: BVAR-Minnesota ở T = 150 thiếu cạnh (0,84) và PSel-Union ở T = 150 đảo cạnh (0,81). Kết quả này không ủng hộ nhận định trước đây rằng STRIDE tốt hơn ở 27/28 so sánh, vì khi đó mỗi phương pháp dùng hệ số riêng. Ở cùng mức đảm bảo, lợi thế của STRIDE vẫn có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Phép so sánh chỉ gồm lag 1, hai giá trị T và 200 topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng ±0,04); một số phương pháp tham chiếu là bản do nhóm chuyển thể, và STRIDE nhận số cạnh thiếu khai báo.
 
