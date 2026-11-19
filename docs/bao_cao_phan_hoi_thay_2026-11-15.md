@@ -137,7 +137,7 @@ Phiên bản 1 là một mô hình gradient boosting dùng các đặc trưng qu
 | 40 | 0,882 | 0,868 | +0,014 |
 | 80–150 | 0,776 | 0,744 | +0,032 |
 
-Khoảng tin cậy 95% (cluster bootstrap theo topology) của cả bốn chênh lệch đều nằm trên 0. Ngưỡng nhóm đặt trước là tăng ít nhất 0,03 AUROC ở cả ba nhóm T. Ngưỡng này không đạt vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cờ mới cải thiện rõ ở T nhỏ và cải thiện vừa phải ở T lớn, nơi AUROC vẫn chỉ khoảng 0,78.
+Các giá trị T được gộp thành ba nhóm (19–30, 40, 80–150) vì ở mỗi giá trị T riêng lẻ chỉ có rất ít cặp bị trượt (khoảng 3%), nên AUROC từng T dao động mạnh; gộp các T gần nhau cho khoảng tin cậy ổn định hơn. T = 40 được giữ riêng vì là mốc trung gian mà cờ cũ đã mạnh. Số liệu từng T nằm ở hai bảng phía dưới. Khoảng tin cậy 95% (cluster bootstrap theo topology) của cả bốn chênh lệch đều nằm trên 0. Ngưỡng nhóm đặt trước là tăng ít nhất 0,03 AUROC ở cả ba nhóm T. Ngưỡng này không đạt vì nhóm T = 40 chỉ tăng 0,014, do cờ cũ ở đó vốn đã mạnh (0,868). Cờ mới cải thiện rõ ở T nhỏ và cải thiện vừa phải ở T lớn, nơi AUROC vẫn chỉ khoảng 0,78.
 
 Phiên bản 2 sửa hai lỗi đặc trưng của phiên bản 1 (số cạnh khai báo bị ghi bằng 0, và skeleton chỉ tính cạnh cùng kỳ), dùng một mô hình chung cho lag 1, 2 và 3, và được chấm một lần cho mỗi lag trên tập chưa dùng cho cờ. Đặc tả được viết trước khi đọc dữ liệu.
 
@@ -149,14 +149,29 @@ Phiên bản 2 sửa hai lỗi đặc trưng của phiên bản 1 (số cạnh k
 
 Mỗi ô ghi AUROC của cờ mới / cờ cũ. Cờ mới hơn cờ cũ ở mọi nhóm T với khoảng tin cậy nằm trên 0, nhưng mức tăng ở T = 40 nhỏ vì cờ cũ ở đó đã đạt khoảng 0,87. Việc sửa hai lỗi đặc trưng không làm đổi kết luận của phiên bản 1.
 
-Bảng sau cho AUROC theo từng kịch bản ở lag 1 (cờ mới / cờ cũ); trong mỗi ô thừa, thiếu và đảo cạnh, hai giá trị lần lượt ứng với mức hỏng 0,2 và 0,5.
+Hai bảng sau cho AUROC theo từng T ở lag 1, mỗi ô ghi cờ mới / cờ cũ. Bảng đầu là trường hợp skeleton không hỏng.
 
-| T | Không hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh |
+| T | Không hỏng |
+|---|---|
+| 19 | 0,932 / 0,918 |
+| 30 | 0,894 / 0,878 |
+| 40 | 0,892 / 0,875 |
+| 80 | 0,808 / 0,771 |
+| 150 | 0,660 / 0,609 |
+
+Bảng thứ hai là trường hợp skeleton bị hỏng, theo loại hỏng và mức hỏng (tỉ lệ cạnh bị hỏng).
+
+| T | Mức hỏng | Thừa cạnh | Thiếu cạnh | Đảo cạnh |
 |---|---|---|---|---|
-| 19 | 0,932 / 0,918 | 0,943 / 0,938; 0,940 / 0,921 | 0,915 / 0,840; 0,954 / 0,530 | 0,981 / 0,477; 0,966 / 0,667 |
-| 30 | 0,894 / 0,878 | 0,888 / 0,872; 0,889 / 0,875 | 0,875 / 0,861; 0,856 / 0,848 | 0,907 / 0,897; 0,912 / 0,901 |
-| 40 | 0,892 / 0,875 | 0,869 / 0,854; 0,907 / 0,881 | 0,868 / 0,852; 0,859 / 0,858 | 0,889 / 0,872; 0,910 / 0,892 |
-| 80 | 0,808 / 0,771 | 0,828 / 0,798; 0,840 / 0,803 | 0,796 / 0,775; 0,781 / 0,772 | 0,877 / 0,841; 0,865 / 0,839 |
-| 150 | 0,660 / 0,609 | 0,696 / 0,631; 0,696 / 0,635 | 0,686 / 0,661; 0,702 / 0,671 | 0,796 / 0,759; 0,815 / 0,773 |
+| 19 | 0,2 | 0,943 / 0,938 | 0,915 / 0,840 | 0,981 / 0,477 |
+| 19 | 0,5 | 0,940 / 0,921 | 0,954 / 0,530 | 0,966 / 0,667 |
+| 30 | 0,2 | 0,888 / 0,872 | 0,875 / 0,861 | 0,907 / 0,897 |
+| 30 | 0,5 | 0,889 / 0,875 | 0,856 / 0,848 | 0,912 / 0,901 |
+| 40 | 0,2 | 0,869 / 0,854 | 0,868 / 0,852 | 0,889 / 0,872 |
+| 40 | 0,5 | 0,907 / 0,881 | 0,859 / 0,858 | 0,910 / 0,892 |
+| 80 | 0,2 | 0,828 / 0,798 | 0,796 / 0,775 | 0,877 / 0,841 |
+| 80 | 0,5 | 0,840 / 0,803 | 0,781 / 0,772 | 0,865 / 0,839 |
+| 150 | 0,2 | 0,696 / 0,631 | 0,686 / 0,661 | 0,796 / 0,759 |
+| 150 | 0,5 | 0,696 / 0,635 | 0,702 / 0,671 | 0,815 / 0,773 |
 
 AUROC giảm mạnh khi T lớn: khi không hỏng, giá trị này từ khoảng 0,93 ở T = 19 xuống còn 0,66 đến 0,70 ở T = 150, vì ở T lớn ít cặp bị trượt hơn và các cặp trượt giống các cặp được phủ hơn. Ở T = 19 với thiếu hoặc đảo cạnh, cờ cũ gần như vô dụng (0,48 đến 0,67) trong khi cờ mới đạt 0,92 đến 0,98. AUROC gần như không phụ thuộc vào mức hỏng (0,2 so với 0,5). Ở lag 2 và 3, xu hướng tương tự (chi tiết ở `results/ext_p4h8_flag_v2/test_eval_v2.md`). Các bảng trên bỏ qua những ô mà phương pháp từ chối đưa ra đảm bảo (lag 2 với T = 30, lag 3 với T = 40), vì ở đó không có khoảng cuối cùng để chấm.
