@@ -39,7 +39,7 @@ Phương pháp có tên STRIDE (Skeleton-Tolerant Re-selecting Intervals for Dyn
 
 \section{Điều kiện đủ để coverage đúng}
 
-Trước đây hệ số nới độ rộng là một phân vị gộp ở mức cặp trên khoảng 20 topology. Nó nhắm tới độ phủ trung bình 0,95 nhưng không bảo đảm gì cho từng topology: kiểm tra cho thấy nó xấp xỉ trung vị của điểm theo topology, tức khoảng một nửa số topology vẫn trượt nhiều hơn mức mong muốn.
+Luật cũ là cách chọn hệ số nới $c$ trước khi có phần này. Với mỗi cặp non-null của mỗi topology hiệu chỉnh, ta tính hệ số nới nhỏ nhất để khoảng tin cậy của cặp đó chứa giá trị thật. Luật cũ gộp tất cả các cặp của mọi topology hiệu chỉnh vào một danh sách rồi lấy $c$ là phân vị 95\% của danh sách này (khoảng 20 topology trong các thực nghiệm trước đây), không phân biệt cặp nào thuộc topology nào. Nó nhắm tới độ phủ trung bình 0,95 trên mọi cặp, nhưng không bảo đảm gì cho từng topology: kiểm tra cho thấy $c$ xấp xỉ trung vị của điểm theo topology, tức khoảng một nửa số topology vẫn trượt nhiều hơn mức mong muốn. Trong các bảng dưới đây, cột ``luật cũ'' là luật này, chạy trên cùng tập hiệu chỉnh 550 topology với mức tin cậy 0,95.
 
 Các khái niệm dùng trong phần này:
 
