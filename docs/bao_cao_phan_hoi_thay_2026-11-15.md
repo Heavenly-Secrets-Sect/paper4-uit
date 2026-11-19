@@ -9,6 +9,7 @@ Phương pháp có tên STRIDE (Skeleton-Tolerant Re-selecting Intervals for Dyn
 Trước đây hệ số nới độ rộng là một phân vị gộp ở mức cặp trên khoảng 20 topology. Nó nhắm tới độ phủ trung bình 0,95 nhưng không bảo đảm gì cho từng topology: kiểm tra cho thấy nó xấp xỉ trung vị của điểm theo topology, tức khoảng một nửa số topology vẫn trượt nhiều hơn mức mong muốn.
 
 Các khái niệm dùng trong phần này:
+
 - Cặp non-null: cặp (biến nguồn, biến đích) có hiệu ứng thật khác 0 trong mô hình sinh dữ liệu; coverage chỉ đo trên các cặp này. Cặp bị trượt (missed) khi giá trị thật nằm ngoài khoảng tin cậy.
 - Điểm của topology (unit score): hệ số nới nhỏ nhất để không quá β = 10% số cặp non-null bị trượt, lấy giá trị lớn nhất trên hai mức hỏng. Topology "đạt ngưỡng" (hit) nếu điểm không vượt hệ số đang dùng.
 - Tỉ lệ topology đạt ngưỡng (topology hit rate): phần trăm topology kiểm tra đạt ngưỡng; đây là đại lượng mà bảo đảm nhắm tới, mục tiêu 0,90.
