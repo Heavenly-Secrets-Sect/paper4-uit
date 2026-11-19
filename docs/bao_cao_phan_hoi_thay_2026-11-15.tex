@@ -143,7 +143,7 @@ Nhóm đã viết bộ sinh tập topology có tham số (số topology, kích t
 \centering
 \caption{Tỉ lệ topology đạt ngưỡng khi nhiễu động học không phải Gaussian (lag 1, hệ số Gaussian đóng băng).}\label{tab:noise}
 {\small
-\begin{tabular}{lrrr}
+\begin{tabular}{lp{4.2cm}rr}
 \toprule
 Nhiễu & Tỉ lệ topology đạt ngưỡng: luật cũ / biên / PAC & Số ô chạm 0,90 & Độ rộng trung bình (biên) \\
 \midrule
@@ -164,7 +164,7 @@ Kết quả khác hẳn khi thêm sai số đo, tức nhiễu cộng thêm vào 
 \centering
 \caption{Tỉ lệ topology đạt ngưỡng khi dữ liệu có sai số đo (lag 1, hệ số Gaussian đóng băng).}\label{tab:me}
 {\small
-\begin{tabular}{lrrr}
+\begin{tabular}{lp{4.2cm}rr}
 \toprule
 Sai số đo & Tỉ lệ đạt ngưỡng: luật cũ / biên / PAC & Dải giữa các ô (biên) & Coverage theo cặp (biên) \\
 \midrule
@@ -195,16 +195,16 @@ Trên panel hiện có (14 biến, 19 quý, skeleton 21 cạnh, hệ số mới,
 \centering
 \caption{Mô phỏng theo panel ($T=19$, $n=14$, 400 chuỗi) với hai phương pháp.}\label{tab:panel}
 {\small
-\begin{tabular}{llp{2.5cm}p{3.2cm}rr}
+\begin{tabular}{llp{2.3cm}p{2.9cm}rr}
 \toprule
 Khai báo & Phương pháp & Coverage theo cặp non-null & Tỉ lệ lần sinh có $\leq$10\% cặp trượt & Độ rộng trung vị & Fit thành công \\
 \midrule
 Không hỏng & RB plug-in & 0,904 & 0,620 & 1,87 & 400/400 \\
-Không hỏng & STRIDE & 0,990 & 0,990 & 3,64 & 400/400 \\
+Không hỏng & STRIDE (ours) & 0,990 & 0,990 & 3,64 & 400/400 \\
 Thiếu 20\% & RB plug-in & 0,663 & 0,000 & 1,70 & 400/400 \\
-Thiếu 20\% & STRIDE & 0,981 & 0,959 & 5,09 & 390/400 \\
+Thiếu 20\% & STRIDE (ours) & 0,981 & 0,959 & 5,09 & 390/400 \\
 Thiếu 50\% & RB plug-in & 0,291 & 0,000 & 1,45 & 400/400 \\
-Thiếu 50\% & STRIDE & 0,993 & 0,978 & 13,94 & 359/400 \\
+Thiếu 50\% & STRIDE (ours) & 0,993 & 0,978 & 13,94 & 359/400 \\
 \bottomrule
 \end{tabular}
 }

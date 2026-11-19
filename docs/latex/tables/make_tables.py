@@ -38,7 +38,7 @@ write("tab_guarantee.tex", "\\begin{tabular}{cccccccccc}\n\\toprule\n"
 
 # 2. equal-guarantee comparison
 c = json.loads((R / "ext_p4h8_cmp/test_eval.json").read_text())["cells"]
-M = [("tolerant_v5_1", "STRIDE"), ("pselect_union_v3", "PSel-U"), ("pselect_cal", "PSel"), ("fullvar_cal", "Full VAR"),
+M = [("tolerant_v5_1", "STRIDE (ours)"), ("pselect_union_v3", "PSel-U"), ("pselect_cal", "PSel"), ("fullvar_cal", "Full VAR"),
      ("targeted_lp_cal", "TLP"), ("bvar_minnesota_v2_cal", "BVAR")]
 KN = {"none": "Không hỏng", "extra": "Thừa", "missing": "Thiếu", "reversed": "Đảo"}
 lines = []
@@ -105,7 +105,7 @@ write("tab_violation.tex", "\\begin{tabular}{lccccc}\n\\toprule\nKịch bản & 
 ps = json.loads((R / "ext_case_study/panel_calibrated_sim.json").read_text())["rows"]
 lines = []
 for case, nm in [("none-0.0", "Không hỏng"), ("missing-0.2", "Thiếu 20\\%"), ("missing-0.5", "Thiếu 50\\%")]:
-    for meth, mn in [("plugin", "RB plug-in"), ("srci", "STRIDE")]:
+    for meth, mn in [("plugin", "RB plug-in"), ("srci", "STRIDE (ours)")]:
         rs = [r for r in ps if r["case"] == case and r["method"] == meth]
         ok = [r for r in rs if r["status"] == "ok"]
         cov = sum(r["n_covered_nonnull"] for r in ok) / sum(r["n_nonnull"] for r in ok)

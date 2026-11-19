@@ -94,7 +94,7 @@ def flag():
 
 
 def comparison(col, boldmin, caption, label):
-    meths = [("SRCI", "STRIDE"), ("BVAR-Minnesota", "BVAR-Minnesota"), ("PSel-Union (32x)", "PSel-Union"),
+    meths = [("SRCI", "STRIDE (ours)"), ("BVAR-Minnesota", "BVAR-Minnesota"), ("PSel-Union (32x)", "PSel-Union"),
              ("PSel", "PSel"), ("Full VAR", "Full VAR"), ("TLP", "TLP")]
     d = {}
     for line in open(ROOT / "results/ext_p4h8_cmp/test_eval.md"):
