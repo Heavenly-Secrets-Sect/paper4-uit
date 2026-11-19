@@ -122,9 +122,72 @@ def comparison(col, boldmin, caption, label):
     return plain("llrrrrrr", header, "\n".join(body), caption, label)
 
 
+def compact_table(colspec, header, body, caption, label):
+    return ("\\begin{table}[H]\n\\centering\n\\caption{" + caption + "}\\label{" + label + "}\n{\\footnotesize\n\\setlength{\\tabcolsep}{3.5pt}\n"
+            "\\begin{tabular}{" + colspec + "}\n\\toprule\n" + header + "\n\\midrule\n" + body + "\n\\bottomrule\n\\end{tabular}\n}\n\\end{table}\n")
+
+
+def guarantee_compact():
+    body = []
+    lags = (1, 2, 3)
+    for li, lag in enumerate(lags):
+        d = {}
+        for line in open(ROOT / f"results/ext_p4h8_test_lag{lag}/test_eval.md"):
+            c = [x.strip() for x in line.strip().strip("|").split("|")]
+            if c[0] == "tolerant_v5_1" and c[3] in ("pooled", "marginal b0.1", "PAC b0.1"):
+                d[(int(c[1]), c[2], c[3])] = c
+        Ts = sorted({t for t, _, _ in d})
+        for ti, T in enumerate(Ts):
+            cells = []
+            for k in ORDER:
+                old, mg, pc = d[(T, k, "pooled")], d[(T, k, "marginal b0.1")], d[(T, k, "PAC b0.1")]
+                if mg[4] == "abstain":
+                    cells.append(f"{fm(old[5])} / từ chối")
+                else:
+                    ci = re.findall(r"[\d.]+", mg[6])
+                    mark = "" if float(ci[1]) >= 0.90 else "$^{\\dagger}$"
+                    cells.append(f"{fm(old[5])} / {fm(mg[5])}{mark} / {fm(pc[5])}")
+            c1 = mr(len(Ts), lag) if ti == 0 else ""
+            body.append(" & ".join([c1, str(T)] + cells) + " \\\\")
+        if li < len(lags) - 1:
+            body.append("\\midrule")
+    header = "Lag & $T$ & Không hỏng & Thừa cạnh & Thiếu cạnh & Đảo cạnh \\\\"
+    cap = ("Tỉ lệ topology đạt ngưỡng trên 550 topology kiểm tra (mục tiêu $0{,}90$). Mỗi ô gồm ba số: luật cũ / phiên bản biên / phiên bản PAC. "
+           "$^{\\dagger}$: cận trên của khoảng tin cậy 95\\% của phiên bản biên thấp hơn $0{,}90$. ``từ chối'': không có hệ số hữu hạn nên không đưa ra bảo đảm. "
+           "Hệ số $c$ và khoảng tin cậy từng ô nằm ở Phụ lục.")
+    return compact_table("llcccc", header, "\n".join(body), cap, "tab:guarantee-compact")
+
+
+def flag_compact():
+    res = (ROOT / "results/ext_p4h8_flag_v2/test_eval_v2.md").read_text()
+    body = []
+    lags = (1, 2, 3)
+    for li, lag in enumerate(lags):
+        blk = res.split(f"## Lag {lag} ")[1].split("\n## Lag")[0]
+        d = {}
+        for T, k, l, n, o in re.findall(r"^\| (\d+) \| (\w+) \| (\S+) \| \d+ \| [\d.]+ \| ([\d.]+) \| ([\d.]+) \|", blk, flags=re.M):
+            d[(int(T), k, l)] = f"{fm(n)}/{fm(o)}"
+        Ts = sorted({t for t, _, _ in d})
+        for ti, T in enumerate(Ts):
+            cells = [d[(T, "none", "-")]]
+            for k in ("extra", "missing", "reversed"):
+                cells += [d[(T, k, "low")], d[(T, k, "high")]]
+            c1 = mr(len(Ts), lag) if ti == 0 else ""
+            body.append(" & ".join([c1, str(T)] + cells) + " \\\\")
+        if li < len(lags) - 1:
+            body.append("\\midrule")
+    header = ("\\multirow{2}{*}{Lag} & \\multirow{2}{*}{$T$} & Không hỏng & \\multicolumn{2}{c}{Thừa cạnh} & \\multicolumn{2}{c}{Thiếu cạnh} & \\multicolumn{2}{c}{Đảo cạnh} \\\\\n"
+              "\\cmidrule(lr){4-5}\\cmidrule(lr){6-7}\\cmidrule(l){8-9}\n & & & 0,2 & 0,5 & 0,2 & 0,5 & 0,2 & 0,5 \\\\")
+    cap = ("AUROC của cờ mới / cờ cũ theo lag, $T$, loại hỏng và mức hỏng (0,2 hoặc 0,5). "
+           "Các ô lag 2 với $T=30$ và lag 3 với $T=40$ không có vì phương pháp từ chối bảo đảm.")
+    return compact_table("llccccccc", header, "\n".join(body), cap, "tab:flag-compact")
+
+
 OUT.mkdir(exist_ok=True)
 (OUT / "guarantee.tex").write_text(guarantee())
 (OUT / "flag.tex").write_text(flag())
+(OUT / "guarantee_compact.tex").write_text(guarantee_compact())
+(OUT / "flag_compact.tex").write_text(flag_compact())
 (OUT / "cmp_is.tex").write_text(comparison(7, True, "Interval score trung bình ở lag 1 (càng thấp càng tốt). In đậm là giá trị thấp nhất trong các phương pháp đạt mức đảm bảo; $^{\\dagger}$ là phương pháp không đạt mức đảm bảo ở ô đó.", "tab:cmp-is"))
 (OUT / "cmp_hit.tex").write_text(comparison(4, False, "Tỉ lệ topology đạt ngưỡng của các phương pháp ở lag 1 (mục tiêu $0{,}90$).", "tab:cmp-hit"))
 print("wrote", sorted(p.name for p in OUT.glob("*.tex")))

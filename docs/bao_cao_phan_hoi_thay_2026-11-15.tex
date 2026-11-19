@@ -69,21 +69,9 @@ Mệnh đề chỉ áp dụng cho topology mới cùng họ bộ sinh, trong k�
 
 Kết quả xác nhận đo trên 550 topology kiểm tra cho từng lag, với hệ số đóng băng và tiêu chí ghi trước.
 
-Bảng dưới đây cho kết quả theo từng ô (cell), tức từng tổ hợp (lag, $T$, loại hỏng): lag 1 có 5 giá trị $T$ $\times$ 4 loại hỏng = 20 ô, lag 2 có 16 ô và lag 3 có 12 ô. Các cột là:
+Bảng~\ref{tab:guarantee-compact} cho kết quả theo từng ô (cell), tức từng tổ hợp (lag, $T$, loại hỏng): lag 1 có 5 giá trị $T$ $\times$ 4 loại hỏng = 20 ô, lag 2 có 16 ô và lag 3 có 12 ô. Mỗi ô ghi tỉ lệ topology đạt ngưỡng của luật cũ, phiên bản biên và phiên bản PAC, đo trên 550 topology kiểm tra; mục tiêu là 0,90. Dấu $^{\dagger}$ cho biết cận trên của khoảng tin cậy 95\% của phiên bản biên thấp hơn 0,90, tức ô đó không chạm mục tiêu. ``Từ chối'' nghĩa là bước hiệu chỉnh không tìm được hệ số hữu hạn nên phương pháp không đưa ra bảo đảm (abstain). Phụ lục có bảng đầy đủ hơn với hệ số hiệu chỉnh $c$ (hạng 496 trong 550 điểm của phiên bản biên) và khoảng tin cậy từng ô.
 
-\begin{itemize}
-\tightlist
-\item
-  Hệ số $c$ (biên): hệ số hiệu chỉnh $c$ của phiên bản biên, tức hạng $k_0$ trong $N$ điểm của topology hiệu chỉnh (hạng 496 trong 550 điểm), là bội số mà nửa độ rộng của khoảng bootstrap được nhân lên. ``Từ chối'' nghĩa là bước hiệu chỉnh không tìm được hệ số hữu hạn nên phương pháp không đưa ra bảo đảm (abstain).
-\item
-  Tỉ lệ đạt: luật cũ, Biên và PAC: tỉ lệ topology đạt ngưỡng trên 550 topology kiểm tra khi dùng luật cũ, hệ số biên và hệ số PAC. Mục tiêu là 0,90.
-\item
-  Biên {[}CI 95\%{]}: khoảng tin cậy 95\% của tỉ lệ đạt ngưỡng ở phiên bản biên.
-\item
-  Chạm 0,90: ``có'' nếu cận trên của khoảng tin cậy đó không thấp hơn 0,90, tức kết quả phù hợp với mục tiêu.
-\end{itemize}
-
-\input{report_tables/guarantee.tex}
+\input{report_tables/guarantee_compact.tex}
 
 Kết quả: 17/20 ô chạm 0,90 ở lag 1 (85\%), 9/12 ô có hệ số ở lag 2 (75\%) và 8/8 ô có hệ số ở lag 3. Tiêu chí ghi trước là ít nhất 80\% số ô có hệ số phải chạm 0,90, nên đạt ở lag 1 và lag 3, không đạt ở lag 2.
 
@@ -237,12 +225,23 @@ Cờ độ tin cậy là một bộ phân loại: với mỗi cặp non-null, n�
 
 Phiên bản 1 là một mô hình gradient boosting dùng các đặc trưng quan sát được (độ rộng, tỉ lệ \textbar trung điểm\textbar{} trên nửa độ rộng, khoảng có chứa 0 hay không, mức hỏng khai báo, đường đi trong skeleton khai báo, độ rộng trung vị theo hàng và cột, thứ hạng độ rộng trong lượt chạy, tỉ lệ số dòng trên số biến hồi quy, v.v.). Mô hình được huấn luyện chỉ trên tập hiệu chỉnh (kiểm định chéo theo topology), đóng băng rồi chấm một lần trên tập kiểm tra. Phiên bản 2 sửa hai lỗi đặc trưng của phiên bản 1 (số cạnh khai báo bị ghi bằng 0, và skeleton chỉ tính cạnh cùng kỳ), dùng một mô hình chung cho lag 1, 2 và 3, và được chấm một lần cho mỗi lag trên tập chưa dùng cho cờ; đặc tả được viết trước khi đọc dữ liệu. Phiên bản 1 và 2 cho kết luận giống nhau, nên báo cáo chỉ trình bày phiên bản 2.
 
-Bảng dưới đây ghi AUROC của cờ mới và cờ cũ theo từng lag, $T$, loại hỏng và mức hỏng (tỉ lệ cạnh bị hỏng; mức 0 là skeleton không hỏng). Các ô mà phương pháp từ chối đưa ra bảo đảm (lag 2 với $T=30$, lag 3 với $T=40$) không có khoảng cuối cùng để chấm nên không xuất hiện.
+Bảng~\ref{tab:flag-compact} ghi AUROC của cờ mới và cờ cũ theo từng lag, $T$, loại hỏng và mức hỏng (tỉ lệ cạnh bị hỏng; mức 0 là skeleton không hỏng). Các ô mà phương pháp từ chối đưa ra bảo đảm (lag 2 với $T=30$, lag 3 với $T=40$) không có khoảng cuối cùng để chấm nên không xuất hiện.
 
-\input{report_tables/flag.tex}
+\input{report_tables/flag_compact.tex}
 
 Cờ mới cao hơn hoặc bằng cờ cũ ở mọi dòng của bảng. Mức cải thiện lớn nhất ở $T=19$, nơi cờ cũ kém: với thiếu cạnh mức 0,5 và đảo cạnh mức 0,2 và 0,5, cờ cũ chỉ đạt 0,53, 0,48 và 0,67 trong khi cờ mới đạt 0,95 đến 0,98. Ở $T=40$ mức cải thiện nhỏ, vì cờ cũ ở đó đã đạt khoảng 0,84 đến 0,89. AUROC của cả hai cờ giảm khi $T$ tăng: ở skeleton không hỏng, cờ mới từ 0,93 ở $T=19$ xuống 0,66--0,70 ở $T=150$. AUROC gần như không phụ thuộc vào mức hỏng (0,2 so với 0,5).
 
 Ngưỡng nhóm đặt trước là cờ mới hơn cờ cũ ít nhất 0,03 AUROC (khoảng tin cậy 95\% theo cluster bootstrap trên topology nằm trên 0) trong mỗi nhóm $T$. Ngưỡng này đạt ở lag 3 nhưng không đạt ở lag 1 và lag 2, vì ở $T=40$ mức tăng chỉ là +0,015 (lag 1) và +0,028 (lag 2).
+
+\appendix
+\section{Bảng đầy đủ}
+
+Bảng~\ref{tab:guarantee} bổ sung vào Bảng~\ref{tab:guarantee-compact} hệ số hiệu chỉnh $c$ của phiên bản biên (hạng 496 trong 550 điểm, là bội số nhân vào nửa độ rộng của khoảng bootstrap) và khoảng tin cậy 95\% của tỉ lệ đạt ngưỡng; cột ``Chạm 0,90 là ``có nếu cận trên của khoảng này không thấp hơn 0,90.
+
+\input{report_tables/guarantee.tex}
+
+Bảng~\ref{tab:flag} là dạng dài của Bảng~\ref{tab:flag-compact}.
+
+\input{report_tables/flag.tex}
 
 \end{document}
