@@ -4,22 +4,7 @@ Cập nhật ngày 19/11/2026. Báo cáo này trình bày những gì nhóm đã
 
 Phương pháp được gọi là STRIDE (Skeleton-Tolerant Re-selecting Intervals for Dynamic Effects), kèm bước hiệu chỉnh độ rộng ở mức topology. Trong các tài liệu đã đóng băng trước đó, phương pháp mang tên SRCI.
 
-## 1. Tóm tắt trạng thái
-
-| # | Phản hồi | Trạng thái |
-|---|---|---|
-| 1 | Áp dụng dữ liệu thực tế (Việt Nam) | Làm một phần: đã chạy trên panel hiện có (chỉ để minh họa) và trên mô phỏng theo panel có ground truth; việc thu số liệu ngân hàng thật từ nguồn công khai không khả thi (mục 8) |
-| 2 | Điều kiện đủ để coverage đúng | Đã có phát biểu, bản phác thảo chứng minh và kiểm chứng độc lập trên 1.200 topology, lag 1–3: đạt ở lag 1 và 3, không đạt ở lag 2 (mục 2) |
-| 3 | Hệ số 0,5 | Xong (thăm dò): đã giải thích và kiểm độ nhạy (mục 3) |
-| 4 | Mở rộng mô phỏng | Xong phần chính: 1.200 topology, lag 1–3, nhiễu đuôi dày và sai số đo; chưa thêm trường hợp số nút khác 14 (mục 6) |
-| 5 | AUROC của RQ4.4 | Đã làm: cờ mới hơn cờ cũ ở mọi nhóm T, nhưng chỉ vượt ngưỡng +0,03 của nhóm ở lag 3 (mục 12) |
-| 6 | Rà soát phần so sánh chính | Đã chạy so sánh ở cùng mức đảm bảo: STRIDE có interval score thấp nhất ở 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8 (mục 11) |
-| 7 | Vẽ architecture | Xong (mục 5) |
-| 8 | Giải thích số liệu trong các bảng | Xong: đã chèn đoạn hướng dẫn đọc vào từng bảng của bản thảo |
-| 9 | Tài liệu từ 2021 | Xong: 79 mục đã kiểm chứng và đã đưa vào bản thảo (mục 7) |
-| 10 | Ablation theo T và mức hỏng | Xong (mục 4) |
-
-## 2. Điểm 2: điều kiện đủ để coverage đúng
+## điều kiện đủ để coverage đúng
 
 Trước đây hệ số nới độ rộng là một phân vị gộp ở mức cặp, tính trên khoảng 20 topology. Hệ số này nhắm tới độ phủ trung bình quanh 0,95 trên mọi cặp, nhưng không bảo đảm điều gì cho từng topology. Kiểm tra trên 20 topology cũ cho thấy hệ số đó xấp xỉ trung vị của điểm theo đơn vị, nghĩa là khoảng một nửa số topology vẫn vượt mức trượt mong muốn.
 
@@ -41,7 +26,7 @@ So với luật cũ, trên cùng các ô có hệ số hữu hạn, khoảng tin
 
 Ở lag 2, tiêu chí ghi trước không đạt (75% so với 80%). Theo đặc tả, nhóm rút tuyên bố bảo đảm ở ba ô không đạt: T = 80 thừa cạnh, T = 80 đảo cạnh và T = 150 đảo cạnh; cận trên nhỏ nhất ở lag 2 vẫn là 0,880. Ở lag 2 với T = 30 và lag 3 với T = 40, phương pháp từ chối đưa ra đảm bảo (abstain) vì từ 9% đến 92% số lượt fit thất bại. Ngay tại các ô này, luật cũ vẫn trả về một khoảng tin cậy nhưng chỉ 7% đến 76% topology đạt ngưỡng (thấp nhất là 7% ở lag 3, T = 40, thiếu cạnh). Vì vậy hệ số mới đồng thời đóng vai trò một chỉ báo cho biết khi nào không nên tin khoảng tin cậy. Ở các ô đạt, tỉ lệ topology đạt ngưỡng nằm quanh 0,89–0,90, xấp xỉ mục tiêu và không dư, với sai số lấy mẫu của 550 topology khoảng ±0,025. Toàn bộ kết quả này dùng một bộ sinh, 14 nút, 21 cạnh và nhiễu Gaussian sạch.
 
-## 3. Điểm 3: hệ số 0,5
+## hệ số 0,5
 
 Hệ số co (pre-shrink) κ là hằng số nhân vào nửa độ rộng của khoảng bootstrap trước bước hiệu chỉnh, nên khoảng cuối cùng là trung điểm ± κ·c·(nửa độ rộng). Với κ = 0,5, nửa độ rộng bị co xuống một nửa; về bản chất κ là một hệ số tỉ lệ, và κ lớn hơn 1 sẽ làm khoảng rộng ra thay vì co lại. Hằng số này được thêm vào vì lưới hiệu chỉnh cũ chỉ cho phép nới (từ 1,0), trong khi ở T nhỏ khoảng bootstrap vốn đã quá rộng. Không có cơ sở lý thuyết nào dẫn tới đúng giá trị 0,5. Nếu κ được áp dụng giống hệt nhau ở hiệu chỉnh và kiểm tra thì khoảng cuối cùng chỉ phụ thuộc vào tích κ·c, nên bảo đảm ở mục 2 không phụ thuộc vào giá trị này.
 
@@ -56,7 +41,7 @@ Nhóm kiểm độ nhạy bằng cách hiệu chỉnh theo quy tắc cũ trên t
 
 Với κ từ 0,25 đến 1,0, kết quả gần như trùng nhau và chênh lệch chủ yếu do làm tròn của lưới. Với κ = 2, lưới chạm sàn nên khoảng tin cậy quá rộng. Như vậy giá trị 0,5 không quan trọng miễn là sàn của lưới không bị chạm, và nhóm đề xuất bỏ hằng số này, dùng hệ số là thống kê hạng chính xác (không qua lưới) như ở mục 2.
 
-## 4. Điểm 10: T nhỏ nhất và mức hỏng mà phương pháp còn chạy được
+## T nhỏ nhất và mức hỏng mà phương pháp còn chạy được
 
 Trên tập 1.200 topology (mục 2), hệ số bảo đảm hữu hạn từ T = 19 ở lag 1, từ T = 40 ở lag 2 và từ T = 80 ở lag 3. Dưới các ngưỡng này (lag 2 với T = 30, lag 3 với T = 40), tỉ lệ fit thất bại nằm trong khoảng 9% đến 92% và phương pháp từ chối đưa ra đảm bảo. Như vậy T tối thiểu tăng theo số lag, phù hợp với bản đồ thăm dò đã có từ trước (19, 40 và 80 cho lag 1, 2 và 4).
 
@@ -64,13 +49,11 @@ Phần quét theo mức hỏng chỉ được chạy ở lag 1, trên 60 topolog
 
 Kết quả quét này có một số hạn chế. "Thành công" chỉ có nghĩa là bước fit hoàn tất, coverage chỉ được tính trên các lần fit thành công, và interval score chưa được so với oracle. Coverage cao (0,96 đến 0,99) là hệ quả của việc hệ số được chọn thận trọng ở mức topology. Đơn vị có số cạnh đảo bằng 0 ở mức hỏng thấp được xếp vào ô không hỏng và được loại khỏi phép tính tỉ lệ thành công. Dữ liệu từ một nhánh phát triển khác của nhóm (khai báo sai mức hỏng) cho thấy khi khai báo gấp đôi số cạnh thiếu ở mức 50%, chỉ có 5 đến 11 trong 60 lượt chạy được; nhóm đã tái lập một phần kết quả này nhưng chưa đưa vào bài.
 
-## 5. Điểm 7: sơ đồ phương pháp
+## sơ đồ phương pháp
 
 ![Sơ đồ phương pháp STRIDE](latex/figures/architecture_srci.png){width=100%}
 
-Sơ đồ gồm phần đầu vào (dữ liệu, skeleton và mức hỏng khai báo), sáu bước (chấm bằng chứng cho từng cặp không nối, mở khối lag có chọn lọc, bổ sung cạnh cùng kỳ bằng Benjamini–Hochberg, đảo chiều có chọn lọc, bootstrap có chọn lại cấu trúc, hiệu chỉnh độ rộng) và phần đầu ra, cùng luật chuyển nhánh theo tỉ số giữa số dòng và số biến hồi quy. Tệp hình nằm ở `docs/latex/figures/architecture_srci.png` (có thêm bản .pdf).
-
-## 6. Điểm 4: mô phỏng
+## mô phỏng
 
 Nhóm đã viết bộ sinh tập topology có tham số (số topology, kích thước từng phần) và tạo hai tập mới gồm 360 và 1.200 topology, so với 40 topology trước đây. Các thực nghiệm đã chạy ở lag 1, 2 và 3 (mục 2).
 
@@ -94,11 +77,11 @@ Kết quả khác hẳn khi thêm sai số đo, tức nhiễu cộng thêm vào 
 
 Bảo đảm không chịu được sai số đo, và tình hình xấu hơn khi T lớn (với nhiễu 10%, T = 150 chỉ còn 0,53 đến 0,59), vì sai lệch do sai số đo không giảm khi có thêm dữ liệu. Kết quả này nhất quán với các thử nghiệm sơ bộ của một nhóm khác, trong đó coverage giảm xuống 0,66 đến 0,75. Đây là một hạn chế thật của phương pháp và bài cần nêu rõ. Hướng khắc phục (chẳng hạn ước lượng tỉ lệ nhiễu đo rồi nới khoảng, như nhánh adapt của kho mã gốc) chưa được đánh giá đầy đủ nên chưa đưa vào. Nhóm mong nhận ý kiến của các thầy về việc có nên thêm một tập topology với số nút khác 14 hay không.
 
-## 7. Điểm 9: tài liệu từ 2021 trở đi
+## tài liệu từ 2021 trở đi
 
 Nhóm đã kiểm chứng 79 mục (trong đó 69 mục từ 2021 trở đi), phân bố theo chủ đề như sau: conformal (17), IRF và SVAR (18), suy luận sau khi chọn mô hình hoặc khi đồ thị sai (10), học cấu trúc chuỗi thời gian (10), FDR (9), interval score (5), VAR trên dữ liệu Việt Nam (7) và sai số đo (3). Hai chủ đề còn mỏng là sai số đo trong mô hình nhân quả chuỗi thời gian và các nghiên cứu về Việt Nam. Việc kiểm chứng chủ yếu dựa trên Crossref; nhóm chưa đọc từng bài. Danh mục nằm ở `docs/latex/references_2021.bib` và đã được nối vào bản thảo.
 
-## 8. Điểm 1: dữ liệu thực tế
+## dữ liệu thực tế
 
 Việc thu số liệu thật từ nguồn công khai không khả thi với công sức hợp lý. Một thăm dò nhỏ (3 ngân hàng × 2 quý) chỉ mở được 1 trong 6 tài liệu: báo cáo ACB quý 3/2024 là ảnh quét nên phải OCR (số đọc khá tốt, nhãn bị méo), MBB chặn truy cập bằng cơ chế chống bot, và trang nhà đầu tư của VCB tải danh sách bằng JavaScript nên không có đường dẫn trực tiếp. Ước tính thu đủ 14 ngân hàng × 19 quý mất 80 đến 150 giờ (dựa trên một tài liệu, chưa đo), tự động hóa được tối đa khoảng 30%, và điều khoản sử dụng chưa được kiểm chứng. Vì vậy phần ngân hàng của panel vẫn là dữ liệu mô phỏng hiệu chỉnh (7 biến) và bài phải khai báo rõ điều này. Nếu nhà trường có cơ sở dữ liệu tài chính trả phí, việc xuất dữ liệu một lần có thể thay thế cho cách làm thủ công.
 
@@ -119,15 +102,15 @@ STRIDE giữ coverage ở mức 0,98 đến 0,99 trong khi RB giảm xuống 0,2
 
 Phương án bán mô phỏng neo vào số thật mà nhóm từng cân nhắc chưa được xây dựng. Vì các cột của panel được chuẩn hóa z-score, việc neo mức trung bình và độ lệch chuẩn không làm thay đổi kết quả của phương pháp; chỉ cấu trúc theo thời gian mới có ảnh hưởng, mà số điểm thật để neo lại rất ít. Mô phỏng theo panel ở trên đã thay thế phương án này.
 
-## 9. Cấu trúc bài đề xuất
+## 1. Cấu trúc bài đề xuất
 
 Nhóm đề xuất thứ tự sau: Giới thiệu, Công trình liên quan, Bài toán, Phương pháp (kèm hình architecture), Bảo đảm lý thuyết, Thiết lập mô phỏng, Kết quả chính (so sánh, tác động của mức hỏng, ablation), Case study (dữ liệu thật), Thảo luận và Kết luận. Khảo sát khoảng 80 bài ở Computational Statistics (qua bản arXiv) cho thấy mẫu phổ biến nhất là phần mô phỏng chiếm tỉ trọng chính, kèm một section ứng dụng dữ liệu thật ngắn. Nhóm chưa thấy bài về SVAR nào ở tạp chí này, nên mức độ phù hợp phạm vi cần các thầy xác nhận.
 
-## 10. Các điểm cần ý kiến của các thầy
+## 2. Các điểm cần ý kiến của các thầy
 
 Nhóm mong các thầy cho ý kiến về năm điểm. Thứ nhất, mức bảo đảm mong muốn: phiên bản biên hay phiên bản PAC (PAC rộng hơn khoảng 5% so với biên ở các ô đạt). Thứ hai, dữ liệu ngân hàng: có nên đầu tư 80 đến 150 giờ để thu số liệu thật, hay chấp nhận dữ liệu bán mô phỏng với khai báo rõ ràng. Thứ ba, có nên mở rộng sang kích thước khác (số nút, số cạnh) hay không. Thứ tư, tên phương pháp và thứ tự các section. Thứ năm, mức phù hợp với phạm vi của Computational Statistics, vì chưa thấy bài về SVAR cùng tạp chí.
 
-## 11. Điểm 6: so sánh với các phương pháp tham chiếu ở cùng mức đảm bảo
+## so sánh với các phương pháp tham chiếu ở cùng mức đảm bảo
 
 Mỗi phương pháp được hiệu chỉnh bằng cùng một quy tắc (thống kê hạng theo topology, β = 10%, δ = 10%) trên cùng 150 topology hiệu chỉnh, rồi chạy một lần trên 200 topology kiểm tra (lag 1, T = 40 và 150, bốn loại hỏng). Khi đó các phương pháp đạt cùng mức đảm bảo (tỉ lệ topology đạt ngưỡng quanh 0,90) và có thể so sánh bằng độ rộng và interval score.
 
@@ -142,7 +125,7 @@ STRIDE có interval score thấp nhất ở các ô thiếu cạnh và đảo c�
 
 Để đo riêng phần lợi thế đến từ thông tin khai báo, nhóm chạy thêm một biến thể không dùng số cạnh thiếu khai báo, hiệu chỉnh theo cùng quy tắc và chạy một lần trên 200 topology kiểm tra. Ở bảy trong tám ô, interval score của biến thể chênh với STRIDE trong khoảng từ −0,10 đến +0,17; riêng ô T = 40 với thiếu cạnh, interval score tăng từ 4,69 lên 9,95, kém cả BVAR-Minnesota (6,13). Như vậy số cạnh thiếu khai báo là thông tin có giá trị chủ yếu khi T nhỏ và có cạnh thiếu; ở các ô còn lại, kết quả so sánh không phụ thuộc nhiều vào thông tin đó. Khoảng tin cậy của tỉ lệ topology đạt ngưỡng chạm 0,90 ở bảy trong tám ô, trừ T = 150 đảo cạnh (0,834, khoảng [0,775; 0,883]).
 
-## 12. Điểm 5: cờ độ tin cậy
+## cờ độ tin cậy
 
 Cờ độ tin cậy là một bộ phân loại: với mỗi cặp phi-null, nó dự đoán xem khoảng tin cậy cuối cùng có trượt giá trị thật hay không. AUROC là xác suất cờ cho một cặp bị trượt điểm cao hơn một cặp được phủ, chọn ngẫu nhiên; giá trị 0,5 tương đương đoán ngẫu nhiên và 1 là phân loại hoàn hảo. Nhóm dùng AUROC vì chỉ khoảng 3% số cặp bị trượt, nên độ chính xác thông thường không có nhiều ý nghĩa.
 
