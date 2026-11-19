@@ -2,7 +2,7 @@
 
 Ngày 15/11/2026. Mục đích: để các thầy xem xét **trước khi viết bài**. Kết quả thực nghiệm là **thăm dò (exploratory)** trừ phần ghi rõ "xác nhận" ở mục 2, đã chạy một lần trên tập topology kiểm tra chưa dùng, theo đặc tả và tiêu chí ghi trước.
 
-Tên phương pháp trong báo cáo: **SRCI** (Skeleton-Robust Calibrated Intervals), tên đề xuất, chưa tra trùng với tài liệu có sẵn.
+Tên phương pháp trong báo cáo: **STRIDE** (Skeleton-Tolerant Re-selecting Intervals for Dynamic Effects), kèm hiệu chỉnh độ rộng ở mức topology. Tên cũ trong các tài liệu đã đóng băng là STRIDE.
 
 ## 1. Tóm tắt trạng thái
 
@@ -13,7 +13,7 @@ Tên phương pháp trong báo cáo: **SRCI** (Skeleton-Robust Calibrated Interv
 | 3 | Hệ số 0,5 | **Xong (thăm dò):** giải thích và kiểm độ nhạy |
 | 4 | Mở rộng mô phỏng | **Xong phần chính:** tập 1.200 topology, lag 1–3, nhiễu đuôi dày (t4, Laplace) ở lag 1; chưa thêm số nút khác 14 |
 | 5 | AUROC của RQ4.4 | **Đã làm: tiêu chí đạt ở lag 3, không đạt ở lag 1 và 2** (T = 40 chỉ hơn cờ cũ +0,015 và +0,028); xem mục 12 |
-| 6 | Rà phần so sánh chính | **Đã chạy so sánh ở cùng mức đảm bảo:** SRCI thắng 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8 (xem mục 11) |
+| 6 | Rà phần so sánh chính | **Đã chạy so sánh ở cùng mức đảm bảo:** STRIDE thắng 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8 (xem mục 11) |
 | 7 | Vẽ architecture | **Xong** (hình đính kèm) |
 | 8 | Giải thích số liệu trong bảng | **Có bản nháp** (`docs/latex/draft_giai_thich_bang.md`), chưa chèn vào bài |
 | 9 | Tài liệu từ 2021 | **Xong phần tìm và kiểm chứng:** 79 mục; chưa đưa vào bài |
@@ -79,7 +79,7 @@ Hạn chế: "thành công" chỉ là bước fit hoàn tất; coverage chỉ t�
 
 ## 5. Điểm 7: sơ đồ phương pháp
 
-![Sơ đồ phương pháp SRCI](latex/figures/architecture_srci.png){width=100%}
+![Sơ đồ phương pháp STRIDE](latex/figures/architecture_srci.png){width=100%}
 
 Hình: `docs/latex/figures/architecture_srci.png` (và .pdf). Gồm đầu vào, 6 bước (chấm bằng chứng, mở lag có chọn lọc, bổ sung cạnh cùng kỳ bằng Benjamini–Hochberg, đảo chiều có chọn lọc, bootstrap có chọn lại cấu trúc, hiệu chỉnh độ rộng) và đầu ra, kèm luật chuyển nhánh theo tỉ số hàng trên số biến hồi quy.
 
@@ -122,13 +122,13 @@ Bảo đảm **không chịu được sai số đo**, và tệ hơn khi T lớn 
 | Khai báo | Phương pháp | Coverage cặp phi-null | Tỉ lệ lần sinh có ≤10% cặp trượt | Độ rộng trung vị | Fit thành công |
 |---|---|---|---|---|---|
 | Không hỏng | RB cắm skeleton | 0,904 | 0,620 | 1,87 | 400/400 |
-| Không hỏng | SRCI | 0,990 | 0,990 | 3,64 | 400/400 |
+| Không hỏng | STRIDE | 0,990 | 0,990 | 3,64 | 400/400 |
 | Thiếu 20% | RB cắm skeleton | 0,663 | 0,000 | 1,70 | 400/400 |
-| Thiếu 20% | SRCI | 0,981 | 0,959 | 5,09 | 390/400 |
+| Thiếu 20% | STRIDE | 0,981 | 0,959 | 5,09 | 390/400 |
 | Thiếu 50% | RB cắm skeleton | 0,291 | 0,000 | 1,45 | 400/400 |
-| Thiếu 50% | SRCI | 0,993 | 0,978 | 13,94 | 359/400 |
+| Thiếu 50% | STRIDE | 0,993 | 0,978 | 13,94 | 359/400 |
 
-SRCI giữ coverage rất cao (0,98 đến 0,99) trong khi RB tụt xuống 0,29 khi thiếu 50% cạnh. **Hạn chế quan trọng:** khi thiếu cạnh, một số lần sinh cho khoảng rộng đột biến (độ rộng trung bình lên tới vài trăm đến vài nghìn, trong khi trung vị là 5 đến 14) và 10% lần fit thất bại ở mức thiếu 50%. Ở T = 19 với 11 cạnh thiếu, bài toán gần vô định; các thầy cần biết điều này khi đọc phần ứng dụng. Đây là mô hình từ một ground truth duy nhất, không phải bảo đảm theo topology, và panel gốc có 7 biến mô phỏng.
+STRIDE giữ coverage rất cao (0,98 đến 0,99) trong khi RB tụt xuống 0,29 khi thiếu 50% cạnh. **Hạn chế quan trọng:** khi thiếu cạnh, một số lần sinh cho khoảng rộng đột biến (độ rộng trung bình lên tới vài trăm đến vài nghìn, trong khi trung vị là 5 đến 14) và 10% lần fit thất bại ở mức thiếu 50%. Ở T = 19 với 11 cạnh thiếu, bài toán gần vô định; các thầy cần biết điều này khi đọc phần ứng dụng. Đây là mô hình từ một ground truth duy nhất, không phải bảo đảm theo topology, và panel gốc có 7 biến mô phỏng.
 
 **Phương án bán mô phỏng neo vào số thật** mà tôi đã đề xuất chưa được xây; mô phỏng theo panel ở trên là phiên bản đơn giản hơn, và phần ngân hàng vẫn phải được khai báo.
 
@@ -148,14 +148,14 @@ Giới thiệu; Công trình liên quan; Bài toán; Phương pháp (hình archi
 
 Mỗi phương pháp được hiệu chỉnh bằng **cùng một quy tắc** (thống kê hạng theo topology, β = 10%, δ = 10%) trên cùng 150 topology hiệu chỉnh, rồi chạy một lần trên 200 topology kiểm tra (lag 1, T = 40 và 150, bốn loại hỏng). Khi đó các phương pháp đạt cùng mức đảm bảo (tỉ lệ topology thỏa điều kiện quanh 0,90) và so sánh được bằng độ rộng và interval score.
 
-| Phương pháp | Số ô (trên 8) có IS thấp nhất | So cặp với SRCI (8 ô): SRCI tốt hơn / phương pháp đó tốt hơn |
+| Phương pháp | Số ô (trên 8) có IS thấp nhất | So cặp với STRIDE (8 ô): STRIDE tốt hơn / phương pháp đó tốt hơn |
 |---|---|---|
 | BVAR-Minnesota | 4 | 4 / 4 |
-| SRCI | 3 | , |
+| STRIDE | 3 | , |
 | PSel-Union (ngân sách bootstrap gấp 32) | 1 | 7 / 1 |
 | PSel, Full VAR, TLP | 0 | 8 / 0 mỗi phương pháp |
 
-Đọc đúng: SRCI thắng ở các ô thiếu cạnh và đảo cạnh (T = 40 cả hai loại, T = 150 đảo cạnh); BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh ở cả hai T; PSel-Union thắng ở T = 150 thiếu cạnh với ngân sách tính toán gấp 32 lần. Hai phương pháp không đạt mức đảm bảo ở một ô (BVAR-Minnesota ở T = 150 thiếu cạnh: 0,84; PSel-Union ở T = 150 đảo cạnh: 0,81). **Điều này làm yếu kết luận cũ** (SRCI tốt hơn ở 27/28 so sánh khi mỗi phương pháp dùng hệ số riêng): ở cùng mức đảm bảo, lợi thế của SRCI có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Hạn chế: chỉ lag 1, hai giá trị T, 200 topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng ±0,04); một số phương pháp là bản do nhóm chuyển thể; SRCI dùng số cạnh thiếu khai báo.
+Đọc đúng: STRIDE thắng ở các ô thiếu cạnh và đảo cạnh (T = 40 cả hai loại, T = 150 đảo cạnh); BVAR-Minnesota thắng ở các ô không hỏng và thừa cạnh ở cả hai T; PSel-Union thắng ở T = 150 thiếu cạnh với ngân sách tính toán gấp 32 lần. Hai phương pháp không đạt mức đảm bảo ở một ô (BVAR-Minnesota ở T = 150 thiếu cạnh: 0,84; PSel-Union ở T = 150 đảo cạnh: 0,81). **Điều này làm yếu kết luận cũ** (STRIDE tốt hơn ở 27/28 so sánh khi mỗi phương pháp dùng hệ số riêng): ở cùng mức đảm bảo, lợi thế của STRIDE có thật nhưng hẹp hơn và tập trung ở các loại hỏng cần mở cấu trúc. Hạn chế: chỉ lag 1, hai giá trị T, 200 topology kiểm tra (khoảng tin cậy của tỉ lệ khoảng ±0,04); một số phương pháp là bản do nhóm chuyển thể; STRIDE dùng số cạnh thiếu khai báo.
 
 ## 12. Điểm 5: cờ độ tin cậy
 

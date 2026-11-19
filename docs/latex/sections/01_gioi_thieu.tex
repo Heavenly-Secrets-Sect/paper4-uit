@@ -6,7 +6,7 @@ Cách làm thông thường là coi skeleton như đúng, fit mô hình rồi d�
 
 \paragraph{Đóng góp.}
 \begin{enumerate}
-  \item Một phương pháp ước lượng chịu lỗi skeleton, gọi tắt là \ours{} (Skeleton-Robust Calibrated Intervals). Phương pháp chỉ mở khối lag cho các cặp biến có bằng chứng từ dữ liệu, số cặp mở dựa trên số cạnh thiếu khai báo, chạy lại việc chọn cấu trúc trong từng lần bootstrap để khoảng tin cậy gộp được bất định về cấu trúc, và hiệu chỉnh độ rộng.
+  \item Một phương pháp ước lượng chịu lỗi skeleton, gọi tắt là \ours{} (Skeleton-Tolerant Re-selecting Intervals for Dynamic Effects), kèm hiệu chỉnh độ rộng ở mức topology. Phương pháp chỉ mở khối lag cho các cặp biến có bằng chứng từ dữ liệu, số cặp mở dựa trên số cạnh thiếu khai báo, chạy lại việc chọn cấu trúc trong từng lần bootstrap để khoảng tin cậy gộp được bất định về cấu trúc, và hiệu chỉnh độ rộng.
   \item Một bảo đảm coverage hữu hạn mẫu \emph{ở mức topology} dựa trên thống kê hạng, kèm điều kiện cần, một cách giải thích cho hệ số co $0.5$ (không có cơ sở lý thuyết và có thể bỏ), và một xác nhận thực nghiệm trên $1200$ topology với số lag từ $1$ đến $3$, trong đó có ô mà bảo đảm không đạt tiêu chí và ô mà phương pháp từ chối.
   \item Một quy trình thực nghiệm có ground truth: sinh SVAR từ các topology cho trước, làm hỏng skeleton có kiểm soát, chấm khoảng tin cậy bằng coverage ở cả mức cặp và mức topology, và bằng interval score; quy tắc kết luận được ghi trước cùng giá trị băm.
   \item So sánh \ours{} với các phương pháp tham chiếu \emph{ở cùng mức đảm bảo}, trong đó \ours{} thắng ở các ô thiếu và đảo cạnh nhưng không thắng ở các ô không hỏng và thừa cạnh.

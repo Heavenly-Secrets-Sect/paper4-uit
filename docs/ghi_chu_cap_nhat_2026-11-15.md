@@ -23,7 +23,7 @@ Cấu trúc bài đề xuất: Giới thiệu; Công trình liên quan; Bài to�
 
 | File | Thay đổi |
 |---|---|
-| `main.tex` | Tên phương pháp đổi thành **SRCI** (macro `\ours`); `.bib` nối thêm `references_2021` |
+| `main.tex` | Tên phương pháp đổi thành **STRIDE** (macro `\ours`); `.bib` nối thêm `references_2021` |
 | `references.bib` | Sửa 2 mục lỗi thời (`montiel2024double` đã đăng ở Econometrica; `ballarin2021ridge`) |
 | `references_2021.bib` (mới) | 79 mục đã kiểm chứng, 69 từ 2021 trở đi |
 | `sections/01_gioi_thieu.tex` | Thêm 2 đoạn Công trình liên quan: conformal và bảo đảm hữu hạn mẫu; bootstrap cho IRF |
@@ -32,12 +32,12 @@ Cấu trúc bài đề xuất: Giới thiệu; Công trình liên quan; Bài to�
 
 **Cập nhật ngày 16/11 (bản thảo đã viết lại theo kết quả mới):** thêm section "Bảo đảm coverage ở mức topology" (mệnh đề, phác thảo chứng minh, giải thích hệ số 0,5 và bảng độ nhạy); mô tả tập 1.200 topology, lưới lag và quy trình hiệu chỉnh/kiểm tra trong phần thiết lập; viết lại phần Kết quả (xác nhận bảo đảm, vùng dùng được, so sánh ở cùng mức đảm bảo, phần lợi thế do thông tin khai báo, cờ độ tin cậy, độ bền với nhiễu đuôi dày và sai số đo, thảo luận); thêm section Case study (khai báo nguồn dữ liệu, 10 cặp chọn trước, mô phỏng theo panel); đổi đóng góp, câu hỏi nghiên cứu và kết luận; thay hình sơ đồ bằng hình architecture mới. Các bảng mới sinh tự động từ file kết quả (`latex/tables/make_tables.py`). Bản PDF: `latex/Paper4-Bao-cao-day-du-2026-11-16.pdf` (27 trang).
 
-**Vẫn chưa làm:** hướng khắc phục sai số đo; so sánh ở lag 2 và T khác; thu số liệu ngân hàng thật; thẩm định ngoài bản chứng minh; tra trùng tên SRCI đầy đủ.
+**Vẫn chưa làm:** hướng khắc phục sai số đo; so sánh ở lag 2 và T khác; thu số liệu ngân hàng thật; thẩm định ngoài bản chứng minh; tra trùng tên STRIDE đầy đủ.
 
 ## C. Hai kết quả làm yếu kết luận cũ
 
 1. **Nhiễu đo làm hỏng bảo đảm:** tỉ lệ topology thỏa điều kiện còn 0,776 (nhiễu 10%) và 0,501 (nhiễu 30%), tệ hơn khi T lớn.
-2. **So sánh ở cùng mức đảm bảo:** SRCI thắng 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8. Kết luận cũ "27/28 so sánh có lợi cho SRCI" dùng hệ số riêng cho từng phương pháp nên không còn là kết luận chính.
+2. **So sánh ở cùng mức đảm bảo:** STRIDE thắng 3/8 ô, BVAR-Minnesota 4/8, PSel-Union 1/8. Kết luận cũ "27/28 so sánh có lợi cho STRIDE" dùng hệ số riêng cho từng phương pháp nên không còn là kết luận chính.
 
 Ngoài ra lag 2 không đạt tiêu chí (9/12 ô, cần 80%); phương pháp từ chối đưa ra đảm bảo ở lag 2 với T = 30 và lag 3 với T = 40.
 
